@@ -1,4 +1,6 @@
-// app/vicomtes/page.tsx
+'use client';
+
+import { useState, useMemo } from 'react';
 import Card from '@/components/Card';
 
 const vicomtes = [
@@ -13,11 +15,11 @@ const vicomtes = [
   },
   {
     slug: "gaston-iv",
-    titre: "Gaston IV le Croisé", 
+    titre: "Gaston IV le Croisé",
     description: "Héros de la première croisade, il renforce les institutions et développe l'administration.",
     image: "/images/vicomtes/gaston-iv.jpg",
     periode: "1090-1131",
-    lignee: "Centulle", 
+    lignee: "Centulle",
     badge: "Croisé"
   },
   {
@@ -33,14 +35,58 @@ const vicomtes = [
     slug: "henri-iv",
     titre: "Henri IV de France",
     description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
-    image: "/images/vicomtes/henri-iv.jpg", 
+    image: "/images/vicomtes/henri-iv.jpg",
     periode: "1572-1610",
     lignee: "Navarre",
     badge: "Roi de France"
   }
 ];
 
+// 👇 petits outils de parsing pour comparer les périodes
+const getYears = (periode: string) => {
+  const [start, end] = periode.split('-').map(Number);
+  return { start, end };
+};
+
+// bornes de siècles pour le filtre
+const periodeRanges: Record<string, [number, number]> = {
+  "X-XIe siècle": [900, 1099],
+  "XIIe siècle": [1100, 1199],
+  "XIIIe-XIVe siècle": [1200, 1399],
+  "XV-XVIe siècle": [1400, 1599],
+};
+
 export default function VicomtesPage() {
+  const [search, setSearch] = useState('');
+  const [lignee, setLignee] = useState('Toutes les lignées');
+  const [periode, setPeriode] = useState('Toutes les périodes');
+
+  // Filtrage intelligent
+  const filteredVicomtes = useMemo(() => {
+    return vicomtes.filter((v) => {
+      const matchesSearch =
+        v.titre.toLowerCase().includes(search.toLowerCase()) ||
+        v.description.toLowerCase().includes(search.toLowerCase());
+
+      const matchesLignee =
+        lignee === 'Toutes les lignées' || v.lignee === lignee;
+
+      const matchesPeriode =
+        periode === 'Toutes les périodes' ||
+        (() => {
+          const range = periodeRanges[periode];
+          if (!range) return true;
+          const { start, end } = getYears(v.periode);
+          return (
+            (start >= range[0] && start <= range[1]) ||
+            (end >= range[0] && end <= range[1])
+          );
+        })();
+
+      return matchesSearch && matchesLignee && matchesPeriode;
+    });
+  }, [search, lignee, periode]);
+
   return (
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
@@ -63,25 +109,35 @@ export default function VicomtesPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
             <div className="flex gap-4">
-              <select className="font-corps bg-white border border-or-patine rounded px-4 py-2">
+              <select
+                value={lignee}
+                onChange={(e) => setLignee(e.target.value)}
+                className="font-corps bg-white border border-or-patine rounded px-4 py-2"
+              >
                 <option>Toutes les lignées</option>
                 <option>Centulle</option>
                 <option>Gabarret</option>
                 <option>Moncade</option>
-                <option>Foix</option>
+                <option>Foix-Béarn</option>
                 <option>Navarre</option>
               </select>
-              <select className="font-corps bg-white border border-or-patine rounded px-4 py-2">
+              <select
+                value={periode}
+                onChange={(e) => setPeriode(e.target.value)}
+                className="font-corps bg-white border border-or-patine rounded px-4 py-2"
+              >
                 <option>Toutes les périodes</option>
-                <option>IXe-XIe siècle</option>
-                <option>XIIe-XIIIe siècle</option>
-                <option>XIVe-XVe siècle</option>
-                <option>XVIe-XVIIe siècle</option>
+                <option>X-XIe siècle</option>
+                <option>XIIe siècle</option>
+                <option>XIIIe-XIVe siècle</option>
+                <option>XV-XVIe siècle</option>
               </select>
             </div>
             <div className="relative">
               <input 
-                type="text" 
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 placeholder="Rechercher un vicomte..."
                 className="font-corps bg-white border border-or-patine rounded pl-10 pr-4 py-2 w-64"
               />
@@ -96,42 +152,24 @@ export default function VicomtesPage() {
       {/* Grille des vicomtes */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {vicomtes.map((vicomte, index) => (
-              <Card
-                key={index}
-                titre={vicomte.titre}
-                description={vicomte.description}
-                image={vicomte.image}
-                lien={`/vicomtes/${vicomte.slug}`}
-                badge={vicomte.badge}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Statistiques */}
-      <section className="py-16 bg-parchemin-fonce">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="font-titre text-3xl text-or-patine mb-2">32</div>
-              <div className="font-corps text-gray-700">Vicomtes répertoriés</div>
+          {filteredVicomtes.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {filteredVicomtes.map((vicomte, index) => (
+                <Card
+                  key={index}
+                  titre={vicomte.titre}
+                  description={vicomte.description}
+                  image={vicomte.image}
+                  lien={`/vicomtes/${vicomte.slug}`}
+                  badge={vicomte.badge}
+                />
+              ))}
             </div>
-            <div>
-              <div className="font-titre text-3xl text-or-patine mb-2">5</div>
-              <div className="font-corps text-gray-700">Lignées différentes</div>
+          ) : (
+            <div className="text-center text-brun-terre font-corps text-lg">
+              Aucun vicomte ne correspond à votre recherche.
             </div>
-            <div>
-              <div className="font-titre text-3xl text-or-patine mb-2">+600</div>
-              <div className="font-corps text-gray-700">Ans d'histoire</div>
-            </div>
-            <div>
-              <div className="font-titre text-3xl text-or-patine mb-2">1</div>
-              <div className="font-corps text-gray-700">Roi de France</div>
-            </div>
-          </div>
+          )}
         </div>
       </section>
     </div>

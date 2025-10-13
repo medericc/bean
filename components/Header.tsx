@@ -1,10 +1,18 @@
-// components/Header.tsx
 'use client';
 
 import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // 🧠 Liste des éléments de menu + slugs personnalisés
+  const menuItems = [
+    { label: 'Accueil', href: '/' },
+    { label: 'Histoire', href: '/histoire' },
+    { label: 'Lignées', href: '/lignees' }, // <-- ici la correction
+    { label: 'Vicomtes', href: '/vicomtes' },
+    { label: 'À propos', href: '/a-propos' },
+  ];
 
   return (
     <header className="bg-parchemin-fonce border-b-2 border-or-patine sticky top-0 z-50">
@@ -17,13 +25,13 @@ export default function Header() {
           
           {/* Menu desktop */}
           <nav className="hidden md:flex space-x-8">
-            {['Accueil', 'Histoire', 'Lignées', 'Vicomtes', 'À propos'].map((item) => (
-              <a 
-                key={item}
-                href={item === 'Accueil' ? '/' : `/${item.toLowerCase().replace('à ', 'a-')}`}
+            {menuItems.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
                 className="font-corps text-brun-terre hover:text-or-patine transition-colors font-medium"
               >
-                {item}
+                {label}
               </a>
             ))}
           </nav>
@@ -49,14 +57,14 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-or-patine/30">
             <nav className="flex flex-col space-y-4">
-              {['Accueil', 'Histoire', 'Lignées', 'Vicomtes', 'À propos'].map((item) => (
-                <a 
-                  key={item}
-                  href={item === 'Accueil' ? '/' : `/${item.toLowerCase().replace('à ', 'a-')}`}
+              {menuItems.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
                   className="font-corps text-brun-terre hover:text-or-patine transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item}
+                  {label}
                 </a>
               ))}
             </nav>
