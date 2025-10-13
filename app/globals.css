@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Vos couleurs personnalisées */
+  --parchemin: #f5f1e6;
+  --parchemin-fonce: #e8dfca;
+  --vert-mousse: #556b2f;
+  --brun-terre: #8b4513;
+  --or-patine: #b8860b;
+  --pierre: #d8cfc4;
 }
 
 @theme inline {
@@ -10,6 +17,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Votre thème personnalisé */
+  --color-parchemin: var(--parchemin);
+  --color-parchemin-fonce: var(--parchemin-fonce);
+  --color-vert-mousse: var(--vert-mousse);
+  --color-brun-terre: var(--brun-terre);
+  --color-or-patine: var(--or-patine);
+  --color-pierre: var(--pierre);
+  
+  --font-titre: 'Crimson Text', serif;
+  --font-corps: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +40,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-corps);
 }
