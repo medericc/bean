@@ -60,7 +60,7 @@ export default function HistoirePage() {
                 </div>
                 <div className="flex justify-between border-b border-gray-200 py-2">
                   <span>Vicomtes répertoriés</span>
-                  <span className="font-semibold">32 vicomtes</span>
+                  <span className="font-semibold">30 vicomtes</span>
                 </div>
                 <div className="flex justify-between border-b border-gray-200 py-2">
                   <span>Lignées principales</span>

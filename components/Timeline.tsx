@@ -1,34 +1,55 @@
 // components/Timeline.tsx
-const periodes = [
+'use client';
+
+import Link from 'next/link';
+
+type Periode = {
+  annee: string;
+  titre: string;
+  description: string;
+  slug: string;
+};
+
+
+const periodes: Periode[] = [
   {
     annee: "Antiquité",
     titre: "Peuple des Venarni", 
-    description: "Les premières traces de peuplement dans les Pyrénées béarnaises"
+    description: "Les premières traces de peuplement dans les Pyrénées béarnaises",
+    slug: 'antiquite',
   },
-  {
-    annee: "IXe siècle", 
-    titre: "Haut Moyen Âge",
-    description: "Formation des premières entités territoriales"
-  },
+
   {
     annee: "Xe siècle",
     titre: "Formation du Béarn médiéval", 
-    description: "Émergence de la vicomté de Béarn"
+    description: "Émergence de la vicomté de Béarn",
+    slug: 'haut-moyen',
   },
   {
-    annee: "XIIe-XIIIe",
+    annee: "XIe-XIIe siècle",
     titre: "Montée des Vicomtés",
-    description: "Expansion territoriale et affirmation du pouvoir"
+    description: "Le Béarn s'affirme comme une puissance autonome"
+ ,
+    slug: 'moyen-age',
   },
   {
-    annee: "XVe siècle",
-    titre: "Union avec la Navarre", 
-    description: "Alliances dynastiques et extension de l'influence"
+    annee: "XIIe-XIIIe siècle",
+    titre: "Tutelle Aragonaise", 
+    description: "Rapprochement avec l'Aragon face à l’influence gasconne",
+    slug: 'aragon',
+  
   },
   {
-    annee: "1553-1610", 
-    titre: "Règne d'Henri IV",
-    description: "Apogée et rattachement à la France"
+    annee: "XIVe-XVe siècle", 
+    titre: "Souveraineté Béarnaise",
+    description: "Le Béarn atteint son indépendance politique maximale",
+    slug: 'souverainete',
+  },
+  {
+    annee: "XVe-XVIe siècle", 
+    titre: "Union avec la Navarre",
+    description: "Cette union prépare l’avènement d’Henri de Navarre, futur roi de France",
+    slug: 'union-navarre',
   }
 ];
 
@@ -40,7 +61,12 @@ export default function Timeline() {
       
       <div className="space-y-8 md:space-y-12">
         {periodes.map((periode, index) => (
-          <div key={index} className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row ${
+              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            } items-center`}
+          >
             {/* Contenu */}
             <div className="w-full md:w-1/2 p-4 md:p-6">
               <div className="bg-parchemin p-6 rounded-lg shadow-lg border border-or-patine hover:shadow-xl transition-shadow">
@@ -49,19 +75,24 @@ export default function Timeline() {
                 </span>
                 <h3 className="font-titre text-2xl text-brun-terre mb-3">{periode.titre}</h3>
                 <p className="text-gray-700 font-corps leading-relaxed">{periode.description}</p>
-                <button className="mt-4 text-or-patine hover:text-brun-terre font-corps font-medium transition-colors">
+
+                {/* 🔗 Lien dynamique */}
+                <Link
+                  href={`/histoire/${periode.slug}`}
+                  className="mt-4 inline-block text-or-patine hover:text-brun-terre font-corps font-medium transition-colors"
+                >
                   En savoir plus →
-                </button>
+                </Link>
               </div>
             </div>
-            
+
             {/* Point sur la timeline */}
             <div className="w-full md:w-1/2 flex justify-center items-center py-4 md:py-0">
               <div className="w-6 h-6 bg-or-patine rounded-full border-4 border-white shadow-lg flex items-center justify-center">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
             </div>
-            
+
             {/* Espace vide pour l'alternance */}
             <div className="hidden md:block w-1/2"></div>
           </div>

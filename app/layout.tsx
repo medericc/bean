@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Inter, Crimson_Text } from "next/font/google"
 import "./globals.css"
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,7 +61,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${crimsonText.variable}`}>
       <body className="antialiased bg-background text-foreground font-[var(--font-inter)]">
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

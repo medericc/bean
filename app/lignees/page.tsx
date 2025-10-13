@@ -5,10 +5,10 @@ const lignees = [
   {
     slug: "centulle",
     titre: "Maison de Centulle",
-    description: "Fondateurs de la vicomté de Béarn, ils établissent les premières institutions et étendent le territoire.",
+    description: "La première lignée des vicomtes de Béarn, issue du Vic-Bilh, remontant au Xe siècle.",
     image: "/images/lignees/centulle.jpg",
-    periode: "IXe - XIe siècle",
-    vicomtes: "12 vicomtes",
+    periode: "Xe - XIIe siècle",
+    vicomtes: "10 vicomtes",
     badge: "Fondateurs"
   },
   {
@@ -16,7 +16,7 @@ const lignees = [
     titre: "Maison de Gabarret", 
     description: "Brève mais importante lignée qui consolide le pouvoir vicomtal face aux voisins aquitains.",
     image: "/images/lignees/gabarret.jpg",
-    periode: "XIe siècle",
+    periode: "XIIe siècle",
     vicomtes: "3 vicomtes",
     badge: "Consolidation"
   },
@@ -26,7 +26,7 @@ const lignees = [
     description: "Puissante famille qui étend l'influence du Béarn en Catalogne et renforce l'administration.",
     image: "/images/lignees/moncade.jpg",
     periode: "XIIe - XIIIe siècle", 
-    vicomtes: "8 vicomtes",
+    vicomtes: "5 vicomtes",
     badge: "Expansion"
   },
   {
@@ -34,8 +34,8 @@ const lignees = [
     titre: "Maison de Foix-Béarn",
     description: "Union stratégique avec le comté de Foix, période d'apogée politique et culturelle.",
     image: "/images/lignees/foix.jpg",
-    periode: "XIVe - XVe siècle",
-    vicomtes: "6 vicomtes", 
+    periode: "XIIe - XVe siècle",
+    vicomtes: "8 vicomtes", 
     badge: "Apogée"
   },
   {
@@ -43,8 +43,8 @@ const lignees = [
     titre: "Maison d'Albret-Navarre",
     description: "Alliance avec la Navarre, menant au règne d'Henri IV et au rattachement à la France.",
     image: "/images/lignees/navarre.jpg", 
-    periode: "XVe - XVIIe siècle",
-    vicomtes: "3 vicomtes",
+    periode: "XVe - XVIe siècle",
+    vicomtes: "4 vicomtes",
     badge: "Couronnement"
   }
 ];
