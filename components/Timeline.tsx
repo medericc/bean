@@ -46,6 +46,12 @@ const periodes: Periode[] = [
     slug: 'aragon',
   
   },
+    {
+    annee: "XIVe-XVe siècle", 
+    titre: "Souveraineté Béarnaise",
+    description: "Le Béarn atteint son indépendance politique maximale",
+    slug: 'autre',
+  },
   {
     annee: "XIVe-XVe siècle", 
     titre: "Souveraineté Béarnaise",
