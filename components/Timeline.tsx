@@ -12,12 +12,12 @@ type Periode = {
 
 
 const periodes: Periode[] = [
-  {
-    annee: "Antiquité",
-    titre: "Peuple des Venarni", 
-    description: "Les premières traces de peuplement dans les Pyrénées béarnaises",
-    slug: 'antiquite',
-  },
+  // {
+  //   annee: "Antiquité",
+  //   titre: "Peuple des Venarni", 
+  //   description: "Les premières traces de peuplement dans les Pyrénées béarnaises",
+  //   slug: 'antiquite',
+  // },
 
   {
     annee: "Xe siècle",
@@ -26,13 +26,20 @@ const periodes: Periode[] = [
     slug: 'haut-moyen',
   },
   {
-    annee: "XIe-XIIe siècle",
-    titre: "Montée des Vicomtés",
+    annee: "XIe siècle",
+    titre: "Montée de la Vicomté",
     description: "Le Béarn s'affirme comme une puissance autonome"
  ,
     slug: 'moyen-age',
   },
   {
+    annee: "XIIe siècle",
+    titre: "Pélerinage Armé", 
+    description: "Participation aux croisades et renforcement des liens chrétiens",
+    slug: 'pelerin',
+  
+  },
+   {
     annee: "XIIe-XIIIe siècle",
     titre: "Tutelle Aragonaise", 
     description: "Rapprochement avec l'Aragon face à l’influence gasconne",

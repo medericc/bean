@@ -1,7 +1,7 @@
 // components/Hero.tsx
 export default function Hero() {
   return (
-    <section className="min-h-[80vh] bg-parchemin relative overflow-hidden">
+    <section className="min-h-[80vh] bg-parchemin relative overflow-hidden flex items-center">
       {/* Texture de fond subtile */}
       <div className="absolute inset-0 bg-[url('/textures/papier-ancien.jpg')] opacity-5"></div>
       

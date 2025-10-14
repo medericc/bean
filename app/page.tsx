@@ -7,7 +7,7 @@ export default function Home() {
   const highlights = [
     {
       titre: "Histoire Chronologique",
-      description: "Parcourez les grandes périodes du Béarn, de l'Antiquité à Henri IV",
+      description: "Parcourez les grandes périodes du Béarn",
       image: "/images/histoire-cover.jpg",
       lien: "/histoire",
       badge: "Timeline"

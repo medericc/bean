@@ -19,9 +19,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="font-titre text-2xl md:text-3xl text-vert-mousse">
+            <a 
+            href="/" 
+            className="font-titre text-2xl md:text-3xl text-vert-mousse hover:text-or-patine transition-colors"
+          >
             Mémoire du Béarn
-          </div>
+          </a>
           
           {/* Menu desktop */}
           <nav className="hidden md:flex space-x-8">
