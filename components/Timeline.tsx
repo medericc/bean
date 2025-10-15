@@ -48,7 +48,7 @@ const periodes: Periode[] = [
   },
     {
     annee: "XIVe-XVe siècle", 
-    titre: "Souveraineté Béarnaise",
+    titre: "Vers la Souveraineté",
     description: "Le Béarn atteint son indépendance politique maximale",
     slug: 'autre',
   },
