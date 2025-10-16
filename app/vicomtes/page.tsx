@@ -7,11 +7,20 @@ const vicomtes = [
   {
     slug: "centulle-iv",
     titre: "Centulle IV le Vieux",
-    description: "Vicomte de 1058 à 1088, il consolide le pouvoir béarnais et étend l'influence de la vicomté.",
+    description: "Vicomte de 1020 à 1058, il consolide le pouvoir béarnais et étend l'influence de la vicomté.",
     image: "/images/vicomtes/centulle-iv.jpg",
-    periode: "1058-1088",
+    periode: "1020-1058",
     lignee: "Centulle",
     badge: "Bâtisseur"
+  },
+   {
+    slug: "centulle-v",
+    titre: "Centulle V le Jeune",
+    description: "Vicomte de 1058 à 1088, réformateur et bâtisseur de l’indépendance béarnaise",
+    image: "/images/vicomtes/centulle-iv.jpg",
+    periode: "1058–1090",
+    lignee: "Centulle",
+    badge: "Réformateur"
   },
   {
     slug: "gaston-iv",
@@ -22,6 +31,111 @@ const vicomtes = [
     lignee: "Centulle",
     badge: "Croisé"
   },
+   {
+    slug: "talese-d-aragon",
+    titre: "Talèse d'Aragon",
+    description: "Princesse d’Aragon, elle renforça durablement les liens avec l’Aragon par la diplomatie.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1090-1137",
+    lignee: "Centulle",
+    badge: "Pieuse"
+  },
+  {
+    slug: "marie",
+    titre: "Marie de Béarn",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Gabarret",
+    badge: "Religieuse"
+  },
+
+  {
+    slug: "gaston-vi",
+    titre: "Gaston VI",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Moncade",
+    badge: "Religieuse"
+  },
+
+  {
+    slug: "guillaume-raymond",
+    titre: "Guillaume-Raymond",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Moncade",
+    badge: "Religieuse"
+  },
+
+  {
+    slug: "guillaule-ii",
+    titre: "Guillaume II",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Moncade",
+    badge: "Religieuse"
+  },
+  {
+    slug: "gaston-vii",
+    titre: "Gaston VII",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Moncade",
+    badge: "Religieuse"
+  },
+
+  {
+    slug: "roger-beranrd",
+    titre: "Roger-Bernard",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Foix-Béarn",
+    badge: "Religieuse"
+  },
+  {
+    slug: "marguerite",
+    titre: "Marguerite Moncade",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Foix-Béarn",
+    badge: "Religieuse"
+  },
+  {
+    slug: "gaston-viii",
+    titre: "Gaston VIII",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Foix-Béarn",
+    badge: "Religieuse"
+  },
+
+ {
+    slug: "gaston-ix",
+    titre: "Gaston IX",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Foix-Béarn",
+    badge: "Religieuse"
+  },
+
+  {
+    slug: "jeanne-dartois",
+    titre: "Jeanne d'Artois",
+    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    image: "/images/vicomtes/gaston-iv.jpg",
+    periode: "1070-1173",
+    lignee: "Foix-Béarn",
+    badge: "Religieuse"
+  },
   {
     slug: "gaston-febus",
     titre: "Gaston Fébus",
@@ -31,9 +145,55 @@ const vicomtes = [
     lignee: "Foix-Béarn",
     badge: "Mécène"
   },
+   {
+    slug: "archambaud",
+    titre: "Archambaud de Grailly",
+    description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
+    image: "/images/vicomtes/gaston-febus.jpg",
+    periode: "1343-1391",
+    lignee: "Foix-Béarn",
+    badge: "Mécène"
+  },
+   {
+    slug: "jean",
+    titre: "Jean de Grailly",
+    description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
+    image: "/images/vicomtes/gaston-febus.jpg",
+    periode: "1343-1391",
+    lignee: "Foix-Béarn",
+    badge: "Mécène"
+  },
+   {
+    slug: "gaston-xi",
+    titre: "Gaston XI",
+    description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
+    image: "/images/vicomtes/gaston-febus.jpg",
+    periode: "1343-1391",
+    lignee: "Foix-Béarn",
+    badge: "Mécène"
+  },
+  
+    {
+    slug: "catherine",
+    titre: "Catherine de Navarre",
+    description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
+    image: "/images/vicomtes/henri-iv.jpg",
+    periode: "1572-1610",
+    lignee: "Navarre",
+    badge: "Roi de France"
+  },
+    {
+    slug: "henri-i",
+    titre: "Henri d'Albret",
+    description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
+    image: "/images/vicomtes/henri-iv.jpg",
+    periode: "1572-1610",
+    lignee: "Navarre",
+    badge: "Roi de France"
+  },
   {
-    slug: "henri-iv",
-    titre: "Henri IV de France",
+    slug: "jeanne",
+    titre: "Jeanne d'Albret",
     description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
     image: "/images/vicomtes/henri-iv.jpg",
     periode: "1572-1610",
