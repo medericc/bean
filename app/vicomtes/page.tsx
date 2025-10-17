@@ -45,7 +45,7 @@ const vicomtes = [
     titre: "Marie de Béarn",
     description: "Humble femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
+    periode: "1170-1173",
     lignee: "Gabarret",
     badge: "Religieuse"
   },
@@ -55,7 +55,7 @@ const vicomtes = [
     titre: "Gaston VI",
     description: "Il place le Béarn au cœur des enjeux pyrénéens tout en préservant son autonomie.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1073-1214",
+    periode: "1173-1214",
     lignee: "Moncade",
     badge: "Fidèle"
   },
