@@ -276,16 +276,13 @@ const vicomtesData = {
   "lignee": "Maison d'Albret",
   "description": "Sœur de François Phébus, Catherine hérite du Béarn et de la Navarre et épouse Jean d’Albret. Elle défend vigoureusement la souveraineté du Béarn contre la France et l’Espagne, affirmant le rôle indépendant des États et le pouvoir royal propre sur son territoire.",
   "image": "/images/vicomtes/catherine-foix-detail.jpg",
-  "biographie": "À la mort de son frère François Phébus en 1483, Catherine de Foix hérite de ses biens et est reconnue par les États de Béarn comme héritière légitime en 1484. Mariée à Jean d’Albret, elle conserve la souveraineté du Béarn et de la Navarre. Elle défend activement l’indépendance de son territoire face aux pressions françaises et espagnoles, conteste la compétence du Parlement de Toulouse, et fait reconnaître le Béarn comme une entité distincte. En 1512, elle perd la majeure partie de la Navarre envahie par la Castille, mais obtient un succès partiel au jugement de Blois qui confirme la souveraineté du Béarn. Catherine meurt en 1517, laissant une héritière qui rapproche la Navarre de la France par le mariage d’Henri II d’Albret avec Marguerite d’Angoulême.",
+  "biographie": "À la mort de son frère François Phébus en 1483, Catherine de Foix hérite de ses biens et est reconnue par les États de Béarn comme héritière légitime en 1484. Mariée à Jean d’Albret, elle conserve la souveraineté du Béarn et de la Navarre. Elle défend activement l’indépendance de son territoire face aux pressions françaises et espagnoles, conteste la compétence du Parlement de Toulouse, et fait reconnaître le Béarn comme une entité distincte. En 1512, elle perd la majeure partie de la Navarre envahie par la Castille, mais obtient un succès partiel au jugement de Blois qui confirme la souveraineté du Béarn.",
   "faitsMarquants": [
-    "1484 : Reconnue par les États de Béarn comme héritière légitime après la mort de son frère François Phébus.",
-    "1484 : Mariage avec Jean d’Albret, consolidant la souveraineté sur le Béarn et la Navarre.",
     "1502 : Prêt de serment à Louis XII sans mention du Béarn, affirmant l’indépendance de la vicomté.",
     "1510-1512 : Défense active de la souveraineté du Béarn contre la France et négociation avec la Castille.",
     "1512 : Perte de la majeure partie de la Navarre au profit des troupes espagnoles, mais maintien partiel de la souveraineté béarnaise.",
-    "1517 : Décès, laissant le Béarn et la Basse-Navarre sous le contrôle de son fils Henri II d’Albret."
-  ],
-  "alliances": "Maison d'Albret', mariage avec Jean d’Albret, relations diplomatiques avec la France et la Castille.",
+],
+  "alliances": "Maison d'Albret, mariage avec Jean d’Albret, relations diplomatiques avec la France et la Castille.",
   "contexte": "Son règne se déroule dans un contexte de rivalités entre la France et l’Espagne, et de consolidation de la souveraineté béarnaise et navarraise, avec la menace permanente de l’ingérence extérieure.",
   "heritage": "Catherine de Foix laisse un Béarn et une Basse-Navarre souverains et organisés, ayant défendu l’indépendance de ses territoires malgré les pressions extérieures, et prépare le terrain pour l’union future avec la France via son fils Henri II d’Albret."
 }
@@ -298,15 +295,12 @@ const vicomtesData = {
   "lignee": "Maison d'Albret",
   "description": "Fils de Catherine de Foix, Henri II d’Albret hérite du Béarn à 14 ans et épouse Marguerite d’Angoulême, sœur de François Ier. Il renforce la souveraineté béarnaise, introduit des réformes administratives et fait du Béarn un refuge pour les protestants, tout en restant impliqué dans la cour et les guerres françaises.",
   "image": "/images/vicomtes/henri2-albret-detail.jpg",
-  "biographie": "Henri II d’Albret succède à sa mère Catherine de Foix en 1517 sous la régence de son grand-père Alain jusqu’en 1522. Il est reconnu comme seigneur souverain du Béarn par les États locaux, affirmant l’autonomie de la vicomté malgré l’influence croissante de la France. Capturé à la bataille de Pavie en 1525, il s’évade rapidement et poursuit ses réformes, créant notamment le Conseil souverain et la Chambre des comptes à Pau. Entre 1538 et 1547, il transforme la bastide de Navarrenx en forteresse bastionnée, suscitant l’inquiétude de Charles Quint. Henri administre le Béarn avec l’aide de sa sœur Anne d’Albret et de Jacques de Foix en son absence, tout en consolidant son territoire et son rôle de refuge pour les protestants. Il meurt en 1555, laissant le trône à sa fille Jeanne d’Albret, héritière du Béarn et future reine protestante.",
+  "biographie": "Henri II d’Albret est sous la régence de son grand-père Alain jusqu’en 1522. Capturé à la bataille de Pavie en 1525, il s’évade rapidement et poursuit ses réformes, créant notamment le Conseil souverain et la Chambre des comptes à Pau. Entre 1538 et 1547, il renforce la bastide de Navarrenx, suscitant l’inquiétude de Charles Quint. Henri administre le Béarn avec l’aide de sa sœur Anne d’Albret et de Jacques de Foix en son absence, tout en consolidant son territoire et son rôle de refuge pour les protestants. ",
   "faitsMarquants": [
-    "1517 : Succède à sa mère Catherine de Foix sous régence de son grand-père Alain jusqu’en 1522.",
-    "1519 : Création du Conseil souverain de Pau, inspiré du modèle navarrais.",
+   "1519 : Création du Conseil souverain de Pau, inspiré du modèle navarrais.",
     "1525 : Capturé à la bataille de Pavie contre François Ier, s’évade rapidement.",
-    "1527 : Mariage avec Marguerite d’Angoulême, renforçant les liens avec la cour de France.",
     "1538-1547 : Transformation de Navarrenx en forteresse bastionnée, inquiétant Charles Quint.",
     "1551-1552 : Validation et adoption par les États des nouvelles fortifications, imprimé en bearnais.",
-    "1555 : Décès, laissant le trône à sa fille Jeanne d’Albret."
   ],
   "alliances": "Maison d’Albret, mariage avec Marguerite d’Angoulême, relations avec la cour de France et diplomatie avec les puissances voisines.",
   "contexte": "Son règne se déroule dans un contexte de guerres françaises et de menaces espagnoles, tout en consolidant la souveraineté et les institutions béarnaises, et en affirmant le rôle du Béarn comme refuge pour les protestants.",
@@ -317,6 +311,16 @@ const vicomtesData = {
 
   // ... autres vicomtes
 };
+function getLigneeSlug(lignee: string): string {
+  const normalized = lignee.toLowerCase();
+
+  if (normalized.includes("albret")) return "navarre";
+  if (normalized.includes("foix-béarn") || normalized.includes("foix-bearn")) return "foix";
+
+  // par défaut : dernier mot de la lignée (ex: "Maison de Centulle" → "centulle")
+  const mots = lignee.split(' ');
+  return mots[mots.length - 1].toLowerCase();
+}
 
 export default function VicomteDetailPage({ params }: Props) {
   const vicomte = vicomtesData[params.slug as keyof typeof vicomtesData];
@@ -404,7 +408,7 @@ export default function VicomteDetailPage({ params }: Props) {
                   <a href="/vicomtes" className="block font-corps text-gray-700 hover:text-or-patine transition-colors">
                     ← Retour aux vicomtes
                   </a>
-                  <a href={`/lignees/${vicomte.lignee.split(' ').pop()?.toLowerCase()}`} 
+                  <a href={`/lignees/${getLigneeSlug(vicomte.lignee)}`} 
                      className="block font-corps text-gray-700 hover:text-or-patine transition-colors">
                     Voir la lignée {vicomte.lignee.split(' ').pop()} →
                   </a>

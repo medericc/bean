@@ -56,7 +56,7 @@ const ligneesData = {
     periode: "XIIIe - XVe siècle",
     description: "La lignée des Foix-Béarn, issue de Gaston VII, s’impose au tournant du XIVᵉ siècle avec une consolidation du pouvoir face aux Armagnac et aux Capétiens. Après de violents conflits familiaux et politiques, le Béarn sous Fébus devient un État indépendant, riche et centralisé,qui s'étendra sur la Navarre.",
     image: "/images/lignees/centulle-detail.jpg",
-    vicomtes: ["Roger-Bernard de Béarn", "Gaston VIII", "Gaston IX","Gaston X","Mathieu de Castelbon","Archambaud de Grailly","Jean de Grailly","Gaston XI"],
+    vicomtes: ["Roger-Bernard de Béarn", "Gaston VIII", "Gaston IX","Gaston X","Mathieu de Castelbon","Isabelle de Castetbon","Jean de Grailly","Gaston XI"],
     faitsMarquants: [
       "Luttes internes mais aussi l’ancrage féodal du pouvoir",
       "Souveraineté affirmée en pleine Guerre de 100 ans",
@@ -82,6 +82,35 @@ const ligneesData = {
   },
   // ... autres lignees
 };
+// Liste des vicomtes ayant une page dédiée dans /vicomtes/[slug]
+const vicomtesExistants: Record<string, string> = {
+  "centulle iv": "centulle-iv",
+  "centulle v": "centulle-v",
+  "gaston iv": "gaston-iv",
+ 
+  "talese d'aragon": "talese-d-aragon",
+  "marie de bearn": "marie",
+  "gaston vi": "gaston-vi",
+  "guillaume-raymond": "guillaume-raymond",
+  "guillaume ii": "guillaume-ii",
+  "gaston vii": "gaston-vii",
+  "marguerite de bearn": "marguerite",
+  "gaston fébus": "gaston-febus",
+  "mathieu de castelbon": "mathieu",
+   "isabelle de castetbon": "isabelle",
+    "jean de grailly": "jean",
+     "gaston xi": "gaston-xi",
+      "catherine de foix": "catherine",
+       "henri ie de bearn": "henri",
+  "jeanne d'albret": "jeanne-dalbret",
+  
+  // tu peux compléter ici à mesure que tu crées les pages
+};
+function normalizeName(name: string) {
+  return name.toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""); // supprime les accents
+}
 
 export default function LigneeDetailPage({ params }: Props) {
   const lignee = ligneesData[params.slug as keyof typeof ligneesData];
@@ -140,16 +169,29 @@ export default function LigneeDetailPage({ params }: Props) {
               {/* Vicomtes de la lignée */}
               <div className="bg-parchemin-fonce p-6 rounded-lg border border-or-patine">
                 <h3 className="font-titre text-xl text-vert-mousse mb-4">Vicomtes de cette lignée</h3>
-                <ul className="font-corps text-gray-700 space-y-2">
-                  {lignee.vicomtes.map((vicomte, index) => (
-                    <li key={index}>
-                      <a href={`/vicomtes/${vicomte.toLowerCase().replace(' ', '-')}`} 
-                         className="hover:text-or-patine transition-colors">
-                        {vicomte}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+               <ul className="font-corps text-gray-700 space-y-2">
+  {lignee.vicomtes.map((vicomte, index) => {
+    const slug = vicomtesExistants[normalizeName(vicomte)];
+
+    const isLink = Boolean(slug);
+
+    return (
+      <li key={index}>
+        {isLink ? (
+          <a
+            href={`/vicomtes/${slug}`}
+            className="hover:text-or-patine transition-colors"
+          >
+            {vicomte}
+          </a>
+        ) : (
+          <span className="cursor-default">{vicomte}</span>
+        )}
+      </li>
+    );
+  })}
+</ul>
+
               </div>
               
               {/* Période */}

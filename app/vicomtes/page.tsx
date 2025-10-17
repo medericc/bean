@@ -230,8 +230,8 @@ export default function VicomtesPage() {
               Les Vicomtes de Béarn
             </h1>
             <p className="font-corps text-xl text-brun-terre leading-relaxed">
-              Découvrez les hommes qui ont gouverné le Béarn, de ses origines 
-              à son rattachement à la couronne de France.
+              Découvrez les grandes personnalités qui ont gouverné le Béarn, de 
+              ses origines à son rattachement à couronne la France.
             </p>
           </div>
         </div>
