@@ -16,7 +16,7 @@ const vicomtes = [
    {
     slug: "centulle-v",
     titre: "Centulle V le Jeune",
-    description: "Vicomte de 1058 à 1088, réformateur et bâtisseur de l’indépendance béarnaise",
+    description: "Successeur de Centulle le Vieux, il réforme et bâtit l’indépendance béarnaise",
     image: "/images/vicomtes/centulle-iv.jpg",
     periode: "1058–1090",
     lignee: "Centulle",
@@ -43,7 +43,7 @@ const vicomtes = [
   {
     slug: "marie",
     titre: "Marie de Béarn",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    description: "Humble femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
     image: "/images/vicomtes/gaston-iv.jpg",
     periode: "1070-1173",
     lignee: "Gabarret",
@@ -53,59 +53,50 @@ const vicomtes = [
   {
     slug: "gaston-vi",
     titre: "Gaston VI",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    description: "Il place le Béarn au cœur des enjeux pyrénéens tout en préservant son autonomie.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
+    periode: "1073-1214",
     lignee: "Moncade",
-    badge: "Religieuse"
+    badge: "Fidèle"
   },
 
   {
     slug: "guillaume-raymond",
     titre: "Guillaume-Raymond",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    description: "Seigneur parfois brutal, il marque la vicomté par des réformes institutionnelles.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
+    periode: "1214-1224",
     lignee: "Moncade",
-    badge: "Religieuse"
+    badge: "Pénitent"
   },
 
   {
-    slug: "guillaule-ii",
+    slug: "guillaume-ii",
     titre: "Guillaume II",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    description: "Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
+    periode: "1224-1229",
     lignee: "Moncade",
-    badge: "Religieuse"
+    badge: "Chevalier"
   },
   {
     slug: "gaston-vii",
     titre: "Gaston VII",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    description: "Il consolida le pouvoir béarnais tout en jonglant entre Angleterre, Castille et Aragon.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
+    periode: "1229-1290",
     lignee: "Moncade",
-    badge: "Religieuse"
+    badge: "Indomptable"
   },
 
   {
-    slug: "roger-beranrd",
-    titre: "Roger-Bernard",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
-    lignee: "Foix-Béarn",
-    badge: "Religieuse"
-  },
-  {
     slug: "marguerite",
-    titre: "Marguerite Moncade",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
+    titre: "Marguerite",
+    description: "Elle unit Foix-Béarn, en maintenant l'indépendance du Béarn face aux anglais et français.",
     image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
-    lignee: "Foix-Béarn",
-    badge: "Religieuse"
+    periode: "1290–1319",
+    lignee: "Moncade",
+    badge: "Stratège"
   },
   {
     slug: "gaston-viii",

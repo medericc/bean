@@ -103,9 +103,101 @@ const vicomtesData = {
   "alliances": "Alliance matrimoniale et politique avec la Maison de Montcada et le royaume d’Aragon sous Alphonse II.",
   "contexte": "Le XIIᵉ siècle est une période d’intenses rivalités féodales dans le sud-ouest de la France. Le Béarn, pris entre l’influence anglaise d’Aquitaine et la puissance montante du royaume d’Aragon, cherche à garantir sa sécurité. Par son mariage et son serment, Marie oriente résolument la vicomté vers la sphère catalano-aragonaise, renforçant les liens au-delà des Pyrénées.",
   "heritage": "Marie de Béarn laisse un héritage durable : elle scelle l’alliance entre le Béarn et l’Aragon et fonde la dynastie des Moncade. Son geste politique inaugure une période de coopération et de tutelle aragonaise qui marquera profondément les vicomtes de Béarn jusqu’au XIIIᵉ siècle."
+},
+"gaston-vi": {
+  "titre": "Gaston VI",
+  "dates": "1173– 1214",
+  "surnom": "le Bon",
+  "lignee": "Maison de Moncade",
+ "description": "Vicomte diplomate pris entre Aragon, Aquitaine et la Croisade albigeoise, Gaston VI défend l’indépendance béarnaise tout en servant la politique aragonaise.",
+  "image": "/images/vicomtes/gaston-vi-detail.jpg",
+  "biographie": "En 1187, il rend hommage au roi Alphonse II d’Aragon pour le Béarn. Il se marie avec Pétronille de Comminges, héritière de Bigorre, réorganise ses domaines en échangeant Mixe et Ostabarret contre Orthez et assure la paix avec la Soule. Aux côtés de son suzerain Pierre II d’Aragon, il prend part à la croisade albigeoise. Accusé d’alliance avec les hérétiques, il est deux fois excommunié, mais reste fidèle à la foi catholique et veille à l’ordre ecclésiastique en Béarn. Après pénitence, le pape l’absout. Il meurt sans héritier direct ; la Bigorre revient alors à son épouse, et le Béarn à son frère Guillaume-Raymond.",
+  "faitsMarquants": [
+   "Échange territorial : Orthez contre Mixe et Ostabarret.",
+    "Participe à la croisade albigeoise, défenseur de Toulouse.",
+    "Excommunié politiquement mais jamais hérétique.",
+  ],
+  "alliances": "Alliance aragonaise forte (Alphonse II et Pierre II d’Aragon) ; relations avec Toulouse et Comminges ; tensions avec Simon de Montfort et la papauté.",
+  "contexte": "Début du XIIIe siècle marqué par l’expansion des croisés du Nord en Occitanie, la puissance du royaume d’Aragon dans les Pyrénées et la montée de la papauté contre les princes méridionaux.",
+  "heritage": "Dernier grand vicomte béarnais impliqué dans la politique occitane ; il défend l’autonomie du Béarn durant la tourmente de la croisade albigeoise et prépare l’ascension de son frère Guillaume-Raymond puis de Gaston VII."
+}
+,
+"guillaume-raymond": {
+  "titre": "Guillaume-Raymond",
+  "dates": "1214 – 1224",
+  "surnom": "le Repenti",
+  "lignee": "Maison de Moncade",
+  "description": "Frère jumeau de Gaston VI de Béarn, Guillaume-Raymond de Moncade incarne la transition du Béarn vers la maison catalane des Moncade. Seigneur énergique et parfois brutal, il marque la vicomté par d’importantes réformes institutionnelles et par son rôle dans les luttes d’influence entre la France et l’Aragon au début du XIIIe siècle.",
+  "image": "/images/vicomtes/guillaume-raymond-moncade.jpg",
+  "biographie": "Il épouse Guillemette de Castelviel, héritière de Rosanès et Martorell, et hérite des droits de sa famille sur Lérida et Tarragone. En 1194, il assassine l’archevêque de Tarragone, son oncle par alliance, ce qui provoque son excommunication et son exil. Après des années de pénitence, il obtient le pardon du pape Innocent III en 1215. Ensuite, il s’allie à la Couronne d’Aragon contre les Montfort et défend les intérêts béarnais. En 1216, il reprend Lourdes aux croisés et soutient Pétronille de Bigorre. En Béarn, il consolide l’autorité vicomtale en réformant les Fors. Fatigué et décidé à expier définitivement son crime, il prépare un pèlerinage en Terre Sainte mais meurt à Oloron, léguant la vicomté à son fils.",
+  "faitsMarquants": [
+   "1194 : assassinat de l’archevêque de Tarragone et exil prolongé en France.",
+    "1216 : reprend le château de Lourdes aux troupes de Simon de Montfort et défend la Bigorre.",
+    "1220–1221 : codifie les Fors de Morlaàs et d’Ossau, stabilisant la législation béarnaise."
+  ],
+  "alliances": "Marié à Guillemette de Castelviel (Maison de Castelviel de Rosanès). Alliances politiques avec la Couronne d’Aragon et le comte Sanche de Roussillon.",
+  "contexte": "Le Béarn se trouve alors à la croisée des ambitions aragonaises, anglaises et françaises. Après la défaite de Muret (1213), Guillaume-Raymond tente de maintenir l’autonomie béarnaise tout en s’appuyant sur les rois d’Aragon pour contrer la mainmise des Croisés de Montfort.",
+  "heritage": "Guillaume-Raymond laisse au Béarn une structure juridique consolidée et une tradition d’autonomie. Son fils, Guillaume II de Moncade, poursuit cette politique dans un contexte d’apaisement et de recentrage aragonais vers la Méditerranée."
 }
 
- 
+ ,"guillaume-ii": {
+  "titre": "Guillaume II",
+  "dates": "1224-1229",
+  "surnom": "le Croisé des Baléares",
+  "lignee": "Maison de Moncade",
+  "description": "Fils de Guillaume-Raymond Ier de Moncade et de Guillemette de Castelviel, Guillaume II fut à la fois seigneur catalan et vicomte de Béarn. Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée, partagée entre Catalogne et Béarn.",
+  "image": "/images/vicomtes/guillaume2-detail.jpg",
+  "biographie": "En 1225, il prit possession de la vicomté tout en restant actif dans la politique aragonaise. Impliqué dans les intrigues autour de Jacques Iᵉʳ, il combattit à Valence en 1226 avant de se réconcilier avec la Couronne. En 1228, il rendit hommage à Henri III d’Angleterre pour ses terres gasconnes, marquant le retour du Béarn dans la mouvance gasconne. Peu après, il rejoignit la flotte de Jacques Iᵉʳ et mena l’assaut sur les Baléares. À la tête du navire amiral, il tomba héroïquement lors du débarquement de Portopi en 1229. Son corps fut inhumé à Santes-Creus, sous un tombeau orné des armes des Moncade et des vaches du Béarn.",
+  "faitsMarquants": [
+ "1226 : Participe à la campagne contre les musulmans de Valence et aux troubles de cour d’Aragon.",
+    "1228 : Rend hommage à Henri III d’Angleterre à Captieux pour ses terres gasconnes.",
+    "1229 : Dirige le navire amiral lors de la conquête des Baléares ; meurt héroïquement à Portopi.",
+    "Inhumé à Santes-Creus, panthéon royal d’Aragon-Catalogne."
+  ],
+  "alliances": "Maison d’Aragon, Couronne d’Angleterre (hommage féodal, 1228), lignage catalan des Moncade et Castelviel.",
+  "contexte": "Sous son règne, la France capétienne consolide son pouvoir au sud, tandis que la Couronne d’Aragon oriente sa politique vers la Méditerranée (conquête de Majorque et Valence). Le Béarn retrouve une position intermédiaire entre Gascogne anglaise et royaumes ibériques.",
+  "heritage": "Guillaume II de Moncade, dernier vicomte catalan du Béarn, symbolise la fin du rêve d’un État trans-pyrénéen. Sa mort à Portopi consacre le passage du Béarn d’un espace aragonais vers une autonomie gasconne."
+},
+"gaston-vii": {
+  "titre": "Gaston VII",
+  "dates": "1229 – 1290",
+  "surnom": "le Révolté",
+  "lignee": "Maison de Moncade",
+  "description": "Dernier grand vicomte indépendant du Béarn médiéval, Gaston VII consolida le pouvoir béarnais tout en jonglant entre la suzeraineté anglaise, aragonaise et castillane. Chef énergique et orgueilleux, il affirma durablement l’autonomie du Béarn dans un contexte de rivalités féodales intenses.",
+  "image": "/images/vicomtes/marie-detail.jpg",
+  "biographie": "Né vers 1229, Gaston VII de Béarn, issu de la maison de Moncade, succéda à son père et hérita d’un Béarn lourdement endetté. Il vendit ses domaines catalans, transféra la capitale de Morlaàs à Orthez et y installa son administration. En 1240, il rend hommage au roi d’Angleterre pour confirmer la vassalité du Béarn tout en gardant son autonomie. Il sert Henri III lors de la campagne du Poitou, puis se révolte pendant la guerre gasconne. Il cherche l’appui de la Castille, s’y rallie un temps, puis revient aux Anglais après le traité de Tolède. Il livre sa fille en otage pour prouver sa fidélité, reçoit des faveurs royales, puis se soulève encore. Fait prisonnier, il doit jurer loyauté, mais recommence, insultant même Édouard Iᵉʳ au Parlement de Paris avant d’être enfermé à Winchester et voir le Béarn saisi. Finalement pardonné, il sert loyalement la couronne anglaise, combat les Gallois et accueille Édouard Iᵉʳ en Béarn. Il participe au traité d’Oloron, organise la succession de ses filles et confirme la vassalité du Béarn. Il meurt en 1290 à Sauveterre, laissant un État fort et farouchement indépendant.",
+  "faitsMarquants": [
+    "Transfert de la capitale béarnaise de Morlaàs à Orthez et fortification du pays (Sauveterre, Bellocq, Roquefort).",
+    "Participation à la campagne du Poitou (1242) et à la guerre gasconne contre Henri III (1245-1254).",
+    "Multiples révoltes contre la tutelle anglaise : 1255, 1273, 1274, 1276 et 1279.",
+    "Fondation du couvent des Cordeliers à Mont-de-Marsan (1260) et signature du traité d’Oloron (1289)."
+  ],
+  "alliances": "Lié successivement aux rois d’Angleterre Henri III et Édouard Iᵉʳ, à Alphonse X de Castille et à Alphonse III d’Aragon. Alliances matrimoniales avec les maisons de Foix, d’Allemagne et de Moncade.",
+  "contexte": "XIIIᵉ siècle marqué par les luttes féodales entre Plantagenêts, Capétiens et royaumes ibériques. Le Béarn se trouve entre Gascogne anglaise et Aragon, cherchant à préserver son autonomie politique et judiciaire (Fors de Béarn).",
+  "heritage": "Son règne consolida la centralisation du pouvoir vicomtal, fixa Orthez comme capitale et assura l’indépendance de fait du Béarn malgré la vassalité anglaise. Par ses filles, la dynastie se rattacha à la maison de Foix, ouvrant la voie à l’union future du Béarn et du Comté de Foix."
+},
+
+
+  "marguerite": {
+    "titre": "Marguerite de Béarn",
+    "dates": "1290 – 1319",
+    "surnom": "la Diplomate",
+    "lignee": "Maison de Moncade",
+    "description": "Héritière des Moncade et fille de Gaston VII de Béarn, Marguerite de Béarn fut l’une des plus fortes personnalités politiques du Béarn médiéval. Par son mariage avec Roger-Bernard III de Foix, elle unit durablement le Béarn et le comté de Foix, tout en maintenant l’indépendance du pays face aux rois de France et d’Angleterre.",
+    "image": "/images/vicomtes/marie-detail.jpg",
+    "biographie": "Marguerite épousa en 1257 Roger-Bernard III de Foix. À la mort de son père, elle dut défendre sa succession contre sa sœur. Le partage de 1286 lui attribua le Béarn et le Marsan, mais ce testament fut contesté, déclenchant de longues guerres entre Foix-Béarn et Armagnac. Ensuite veuve, elle est administratrice du Béarn et de Foix. Refusant l’arbitrage royal, elle fit appel au pape et au roi d’Angleterre Édouard Iᵉʳ, obtenant son soutien contre les Capétiens. Elle régla aussi les successions familiales en Catalogne et négocia pour restituer les domaines des Moncade à son fils. Marguerite refusa toujours l'hommage promis par son père aux anglais, préservant l’autonomie du Béarn.",
+    "faitsMarquants": [
+      "Union du Béarn et du comté de Foix par son mariage avec Roger-Bernard III (1287)",
+      "Refus de toute vassalité formelle envers les rois de France et d’Angleterre",
+      "Conflit avec son fils Gaston Ier (1312), arbitré en sa faveur par les barons béarnais",
+      "Maintien du Béarn comme puissance autonome entre Capétiens, Armagnacs et Plantagenêts"
+    ],
+    "alliances": "Épouse de Roger-Bernard III de Foix ; mère de Gaston Ier de Foix-Béarn ; alliée des rois d’Angleterre Édouard Ier et Édouard II ; en relation diplomatique avec Jacques II d’Aragon.",
+    "contexte": "Marguerite vécut à une époque où le sud-ouest de la France était le théâtre d’une lutte d’influence entre la monarchie capétienne et la couronne d’Angleterre. Le Béarn, juridiquement autonome, servait de zone tampon entre ces deux puissances et les royaumes ibériques. La politique de Marguerite fut guidée par la préservation des libertés béarnaises et par un jeu d’équilibre diplomatique face à ces grandes monarchies.",
+    "heritage": "Marguerite de Moncade laissa un héritage décisif : elle consolida l’union du Béarn et du comté de Foix, renforça les liens avec l’Aragon grâce à ses origines catalanes, et affermit la souveraineté béarnaise."
+  }
+
+
   // ... autres vicomtes
 };
 
