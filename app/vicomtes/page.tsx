@@ -2,6 +2,8 @@
 
 import { useState, useMemo } from 'react';
 import Card from '@/components/Card';
+import PageTitle from "@/components/PageTitle"
+
 
 const vicomtes = [
   {
@@ -220,7 +222,7 @@ export default function VicomtesPage() {
     });
   }, [search, lignee, periode]);
 
-  return (
+  return (   <> <PageTitle title="Vicomtes de Béarn – Mémoire du Béarn" />
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
       <section className="bg-pierre py-16">
@@ -306,5 +308,5 @@ export default function VicomtesPage() {
         </div>
       </section>
     </div>
-  );
+</>  );
 }

@@ -1,5 +1,20 @@
 // app/vicomtes/[slug]/page.tsx
 import { notFound } from 'next/navigation';
+import type { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const data = vicomtesData[params.slug as keyof typeof vicomtesData]
+
+  if (!data) {
+    return {
+      title: "Page non trouvée – Mémoire du Béarn",
+    }
+  }
+
+  return {
+    title: `${data.titre} – ${data.lignee} | Mémoire du Béarn`,
+  }
+}
 
 interface Props {
   params: {

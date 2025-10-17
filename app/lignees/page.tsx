@@ -1,6 +1,9 @@
 // app/lignees/page.tsx
 import Card from '@/components/Card';
 
+export const metadata = {
+  title: "Lignées du Béarn",
+}
 const lignees = [
   {
     slug: "centulle",

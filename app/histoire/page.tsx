@@ -1,6 +1,11 @@
 // app/histoire/page.tsx
 import Timeline from '@/components/Timeline';
 
+
+export const metadata = {
+  title: "Histoire du Béarn",
+}
+
 export default function HistoirePage() {
   return (
     <div className="min-h-screen bg-parchemin">

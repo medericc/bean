@@ -1,6 +1,20 @@
 // app/lignees/[slug]/page.tsx
 import { notFound } from 'next/navigation';
+import type { Metadata } from "next"
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const data = ligneesData[params.slug as keyof typeof ligneesData]
+
+  if (!data) {
+    return {
+      title: "Page non trouvée – Mémoire du Béarn",
+    }
+  }
+
+  return {
+    title: `${data.titre} – ${data.periode} | Mémoire du Béarn`,
+  }
+}
 interface Props {
   params: {
     slug: string;

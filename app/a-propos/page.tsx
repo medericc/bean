@@ -1,7 +1,9 @@
 // app/a-propos/page.tsx
 'use client';
-
+import PageTitle from "@/components/PageTitle"
 import { useState } from 'react';
+
+
 
 // Composant Card pour les ressources
 interface ResourceCardProps {
@@ -26,7 +28,7 @@ function ResourceCard({ titre, auteur, type, description, annee, lien, details }
 
   const config = typeConfig[type];
 
-  return (
+  return ( <> <PageTitle title="Sources – Mémoire du Béarn" />
     <div className="bg-parchemin rounded-lg border border-or-patine overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
       {/* En-tête de la carte */}
       <div className={`${config.color} text-white p-4`}>
@@ -107,7 +109,7 @@ function ResourceCard({ titre, auteur, type, description, annee, lien, details }
         </div>
       </div>
     </div>
-  );
+</>  );
 }
 
 export default function AProposPage() {

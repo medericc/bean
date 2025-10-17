@@ -1,6 +1,22 @@
 import { notFound } from 'next/navigation';
 import ExpandableSection from './ExpandableSection';
 
+import type { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const data = histoireData[params.slug as keyof typeof histoireData]
+
+  if (!data) {
+    return {
+      title: "Page non trouvée – Mémoire du Béarn",
+    }
+  }
+
+  return {
+    title: `${data.titre} – ${data.periode} | Mémoire du Béarn`,
+  }
+}
+
 const histoireData = {
   // 'antiquite': {
   //   titre: "Peuple des Venarni",
