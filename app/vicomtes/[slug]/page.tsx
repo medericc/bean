@@ -161,7 +161,7 @@ const vicomtesData = {
 "gaston-vii": {
   "titre": "Gaston VII",
   "dates": "1229 – 1290",
-  "surnom": "le Révolté",
+  "surnom": "le Grand",
   "lignee": "Maison de Moncade",
   "description": "Dernier grand vicomte indépendant du Béarn médiéval, Gaston VII consolida le pouvoir béarnais tout en jonglant entre la suzeraineté anglaise, aragonaise et castillane. Chef énergique et orgueilleux, il affirma durablement l’autonomie du Béarn dans un contexte de rivalités féodales intenses.",
   "image": "/images/vicomtes/marie-detail.jpg",
@@ -199,7 +199,7 @@ const vicomtesData = {
 "mathieu": {
   "titre": "Mathieu de Castelbon",
   "dates": "1391-1398",
-  "surnom": "Vicomte de Béarn",
+  "surnom": "le Conservateur",
   "lignee": "Maison de Foix-Béarn",
   "description": "Cousin de Gaston Fébus, Mathieu de Castelbon fut reconnu vicomte de Béarn grâce au soutien des États de Béarn. Son règne, bien que bref, permit de consolider l’indépendance et les institutions du Béarn face aux ambitions française et anglaise.",
   "image": "/images/vicomtes/mathieu-castelbon-detail.jpg",
@@ -234,7 +234,7 @@ const vicomtesData = {
 "jean": {
   "titre": "Jean de Grailly",
   "dates": "1412-1436",
-  "surnom": "Vicomte de Béarn et Comte de Foix",
+  "surnom": "le Navigateur",
   "lignee": "Maison de Foix-Béarn",
   "description": "Fils d’Archambaud de Grailly et d’Isabelle de Castelbon, Jean Ier succède à sa mère en 1412 et dirige le Béarn tout en composant avec la France et l’Angleterre. Il maintient la neutralité du Béarn tout en étendant son influence militaire et diplomatique dans le sud de la France.",
   "image": "/images/vicomtes/jean1-detail.jpg",
@@ -253,7 +253,7 @@ const vicomtesData = {
 "gaston-xi": {
   "titre": "Gaston XI",
   "dates": "1436-1472",
-  "surnom": "Vicomte de Béarn et Comte de Foix",
+  "surnom": "Le Souverain",
   "lignee": "Maison de Foix-Béarn",
   "description": "Fils de Jean Ier, Gaston IV accède au pouvoir encore enfant sous tutelle, puis devient un chef militaire et diplomate de premier plan. Il consolide la souveraineté du Béarn, participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
   "image": "/images/vicomtes/gaston4-detail.jpg",
@@ -272,7 +272,7 @@ const vicomtesData = {
 "catherine": {
   "titre": "Catherine de Foix",
   "dates": "1483-1517",
-  "surnom": "Reine de Navarre et Dame souveraine de Béarn",
+  "surnom": "la Tenace",
   "lignee": "Maison d'Albret",
   "description": "Sœur de François Phébus, Catherine hérite du Béarn et de la Navarre et épouse Jean d’Albret. Elle défend vigoureusement la souveraineté du Béarn contre la France et l’Espagne, affirmant le rôle indépendant des États et le pouvoir royal propre sur son territoire.",
   "image": "/images/vicomtes/catherine-foix-detail.jpg",
@@ -291,7 +291,7 @@ const vicomtesData = {
 "henri": {
   "titre": "Henri II d’Albret",
   "dates": "1517-1555",
-  "surnom": "Seigneur souverain de Béarn",
+  "surnom": "l'Évadé",
   "lignee": "Maison d'Albret",
   "description": "Fils de Catherine de Foix, Henri II d’Albret hérite du Béarn à 14 ans et épouse Marguerite d’Angoulême, sœur de François Ier. Il renforce la souveraineté béarnaise, introduit des réformes administratives et fait du Béarn un refuge pour les protestants, tout en restant impliqué dans la cour et les guerres françaises.",
   "image": "/images/vicomtes/henri2-albret-detail.jpg",

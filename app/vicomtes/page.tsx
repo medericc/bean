@@ -116,7 +116,7 @@ const vicomtes = [
     image: "/images/vicomtes/gaston-febus.jpg",
     periode: "1391-1398",
     lignee: "Foix-Béarn",
-    badge: "Mécène"
+    badge: "Gardien"
   },
    {
     slug: "isabelle",
@@ -125,7 +125,7 @@ const vicomtes = [
     image: "/images/vicomtes/gaston-febus.jpg",
     periode: "1398-1412",
     lignee: "Foix-Béarn",
-    badge: "Mécène"
+    badge: "Majoresse"
   },
    {
     slug: "jean",
@@ -134,7 +134,7 @@ const vicomtes = [
     image: "/images/vicomtes/gaston-febus.jpg",
     periode: "1412-1436",
     lignee: "Foix-Béarn",
-    badge: "Mécène"
+    badge: "Tacticien"
   },
    {
     slug: "gaston-xi",
@@ -143,7 +143,7 @@ const vicomtes = [
     image: "/images/vicomtes/gaston-febus.jpg",
     periode: "1436-1472",
     lignee: "Foix-Béarn",
-    badge: "Mécène"
+    badge: "Forgeur"
   },
   
     {
@@ -153,7 +153,7 @@ const vicomtes = [
     image: "/images/vicomtes/henri-iv.jpg",
     periode: "1483-1517",
     lignee: "Navarre",
-    badge: "Roi de France"
+    badge: "Résiliente"
   },
     {
     slug: "henri",
@@ -162,7 +162,7 @@ const vicomtes = [
     image: "/images/vicomtes/henri-iv.jpg",
     periode: "1517-1555",
     lignee: "Navarre",
-    badge: "Roi de France"
+    badge: "Architecte"
   },
   {
     slug: "jeanne",
@@ -171,7 +171,7 @@ const vicomtes = [
     image: "/images/vicomtes/henri-iv.jpg",
     periode: "1555-1572",
     lignee: "Navarre",
-    badge: "Roi de France"
+    badge: "Réformatrice"
   }
 ];
 
