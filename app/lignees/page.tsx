@@ -40,7 +40,7 @@ const lignees = [
   },
   {
     slug: "navarre",
-    titre: "Maison d'Albret",
+    titre: "Maison de Navarre",
     description: "Alliance avec la Navarre, menant au règne d'Henri IV et au rattachement à la France.",
     image: "/images/lignees/navarre.jpg", 
     periode: "XVe - XVIe siècle",
