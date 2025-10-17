@@ -11,17 +11,20 @@ const ligneesData = {
   centulle: {
     titre: "Maison de Centulle",
     periode: "Xe - XIIe siècle",
-    description: "La première lignée des vicomtes de Béarn, issue du Vic-Bilh, remontant au Xe siècle. Sous Centulle IV et V, puis Gaston IV, elle étend son influence du Béarn à la Bigorre et jusqu’aux Pyrénées aragonaises. Par alliances, réformes et fidélités croisées entre Aquitaine, Aragon et Rome, cette dynastie transforme le Béarn en un état structuré autour de Morlaàs et Lescar.",
+    description: "Première grande lignée vicomtale du Béarn, la Maison de Centulle naît dans le Vic-Bilh au cœur du Moyen Âge gascon. Héritière d’une noblesse locale enracinée, elle incarne la lente construction d’un pouvoir territorial indépendant face aux ducs d’Aquitaine et aux comtes de Bigorre. Sous les règnes de Centulle IV, Centulle V et Gaston IV, la dynastie transforme un fief montagnard en une principauté organisée autour de Morlaàs et Lescar. Fidèles à la réforme grégorienne et alliés à Cluny, les Centulle instaurent un gouvernement original mêlant foi, droit et autonomie. Par leurs mariages avec la noblesse aragonaise et bigourdane, ils projettent le Béarn au-delà des Pyrénées, affirmant une identité à la fois gasconne et transfrontalière.",
     image: "/images/lignees/centulle-detail.jpg",
     vicomtes: ["Gaston Ier", "Centulle III", "Gaston II", "Centulle IV","Gaston III", "Centulle V","Gaston IV","Talèse d'Aragon","Centule VI","Guiscarde"],
     faitsMarquants: [
       "Fondation de la vicomté de Béarn",
-      "Établissement des Fors de Béarn",
-      "Extension territoriale vers l'Aragon",
       "Unification du Béarn avec Oloron",
-      "Mise en place d'un pouvoir régalier"
+      "Établissement des Fors de Béarn",
+      "Mise en place d'un pouvoir régalier",
+       "Gaston IV héros de la Première Croisade et de la Reconquista en Aragon",
+      "Extension territoriale vers l'Aragon",
+       
+      
     ],
-    heritage: "Les Centulle et Gaston ont fait du Béarn un territoire à part, souverain dans les faits, structuré par ses lois (les Fors), sa monnaie et ses institutions locales. Leur politique d’équilibre entre Aquitaine, Rome et Aragon a ancré durablement l’identité béarnaise. Héritiers d’une tradition casalère et d’une autonomie ancienne, ils ont posé les bases de la liberté et de la cohésion du Béarn médiéval."
+    heritage: "La Maison de Centulle a donné au Béarn sa première véritable souveraineté politique et spirituelle. En posant les bases d’un pouvoir régalien, elle a façonné un territoire libre, gouverné selon ses propres lois (les Fors), doté d’une monnaie et d’institutions locales solides. Leur alliance avec Rome et Cluny a ancré le Béarn dans le grand mouvement réformateur de la chrétienté, tandis que leurs liens avec l’Aragon ont ouvert la voie à une diplomatie pyrénéenne originale. Héritiers d’une tradition de liberté communautaire, les Centulle ont transmis à leurs successeurs un Béarn cohérent, stable et fier de son indépendance — un modèle d’équilibre entre foi, coutume et souveraineté."
   },
    gabarret: {
     titre: "Maison de Gabarret",
@@ -40,10 +43,11 @@ const ligneesData = {
     moncade: {
     titre: "Maison de Moncade",
     periode: "XIIe - XIIIe siècle",
-    description: "La dynastie des Moncade, d’origine catalane, s’impose au Béarn au XIIᵉ siècle par alliance avec la lignée des vicomtes de Béarn. Elle joue un rôle majeur entre la France, l’Aragon et l’Angleterre. La lignée s’éteint avec Marguerite de Moncade, qui transmet ses droits à la maison de Foix, unissant ainsi Béarn et Foix.",
+    description: "Issue d’une illustre lignée catalane apparentée aux comtes de Barcelone, la Maison de Moncade s’impose au Béarn par le mariage de Guillaume-Raymond avec Guillemette de Castelviel et par la succession de Gaston VI le Bon. À partir de la fin du XIIe siècle, elle incarne une nouvelle ère pour la vicomté : celle d’un pouvoir féodal trans-pyrénéen, partagé entre fidélité à la Couronne d’Aragon, négociation avec les Plantagenêts et résistance à l’emprise capétienne. Les Moncade font du Béarn un acteur diplomatique de premier plan, tout en consolidant ses institutions internes. Sous Gaston VII le Grand, Orthez devient capitale politique, administrative et militaire, symbole d’un pouvoir centralisé et indépendant.",
     image: "/images/lignees/centulle-detail.jpg",
     vicomtes: ["Gaston VI", "Guillaume-Raymond", "Guillaume II","Gaston VII","Marguerite de Béarn"],
     faitsMarquants: [
+      "Réformation des Fors de Morlaàs et d’Ossau (1220–1221)",
       "Orthez devient la capitale du Béarn",
       "Jeu diplomatique avec les Capétiens et les Plantagenêts",
       "Marguerite résiste devant la France",
@@ -54,9 +58,9 @@ const ligneesData = {
    foix: {
     titre: "Maison de Foix-Béarn",
     periode: "XIIIe - XVe siècle",
-    description: "La lignée des Foix-Béarn, issue de Gaston VII, s’impose au tournant du XIVᵉ siècle avec une consolidation du pouvoir face aux Armagnac et aux Capétiens. Après de violents conflits familiaux et politiques, le Béarn sous Fébus devient un État indépendant, riche et centralisé,qui s'étendra sur la Navarre.",
+    description: "Issue de l’union de Marguerite de Moncade et de Roger-Bernard III de Foix, la maison de Foix-Béarn marque l’entrée du Béarn dans une nouvelle ère politique. Héritière des Moncade, elle conserve l’esprit d’indépendance féodale tout en s’affirmant face aux grandes puissances du temps, Capétiens, Plantagenêts et Aragonais. De Gaston VIII à Gaston IV (dit Gaston XI dans ta numérotation), les vicomtes de cette lignée transforment le Béarn en un véritable petit État souverain, administré, diplomatique et culturellement brillant. Sous Gaston Fébus, la vicomté atteint son apogée : puissance militaire, prospérité économique et prestige littéraire font du Béarn une principauté respectée dans toute l’Europe médiévale.",
     image: "/images/lignees/centulle-detail.jpg",
-    vicomtes: ["Roger-Bernard de Béarn", "Gaston VIII", "Gaston IX","Gaston X","Mathieu de Castelbon","Isabelle de Castetbon","Jean de Grailly","Gaston XI"],
+    vicomtes: ["Gaston VIII", "Gaston IX","Gaston X","Mathieu de Castelbon","Isabelle de Castetbon","Jean de Grailly","Gaston XI"],
     faitsMarquants: [
       "Luttes internes mais aussi l’ancrage féodal du pouvoir",
       "Souveraineté affirmée en pleine Guerre de 100 ans",
@@ -64,21 +68,22 @@ const ligneesData = {
       "Union Béarn-Navarre",
       
     ],
-    heritage: "La lignée des Foix-Béarn laisse un territoire politiquement autonome, solidement administré et culturellement rayonnant. Elle incarne la résistance à la domination capétienne et la naissance d’une identité béarnaise affirmée. Par son union avec la maison de Navarre, le Béarn devient un pivot entre France, Gascogne et Pyrénées."
+    heritage: "La maison de Foix-Béarn lègue un Béarn politiquement autonome, administrativement organisé et profondément enraciné dans une culture de liberté. Sa diplomatie prudente, son équilibre entre neutralité et affirmation souveraine, ainsi que son sens de la centralisation préparent la transition vers une principauté moderne. Par l’union dynastique avec la Navarre, le Béarn devient un acteur incontournable entre France, Gascogne et péninsule Ibérique, jetant les bases du futur royaume de Navarre-Béarn. Cette lignée incarne la maturité politique du Béarn, capable de résister aux rois de France tout en tissant des alliances durables."
   },
    navarre: {
     titre: "Maison de Navarre",
     periode: "XVe - XVIe siècle",
-    description: "La lignée béarnaise, issue des Gabarret et unie aux maisons de Barcelone et de Moncade, s’est formée au XIIᵉ siècle dans un contexte de luttes entre Aragon, Toulouse et l’Aquitaine. Par alliances et fidélités successives, elle passa de la mouvance aragonaise à la gasconne, tout en préservant son autonomie politique.",
+    description: "Dernière grande dynastie souveraine du Béarn, la Maison de Navarre hérite à la fois de l’esprit des Foix-Béarn et de la légitimité royale issue de la Navarre pyrénéenne. Sous Catherine de Foix, Henri II d’Albret et Jeanne d’Albret, cette lignée défend avec acharnement l’indépendance du Béarn face aux ambitions des royaumes de France et de Castille. Tout en affirmant une autorité monarchique propre, elle consolide les institutions locales, modernise l’administration et fait du Béarn un État de droit reconnu pour sa neutralité et son rayonnement culturel.",
     image: "/images/lignees/centulle-detail.jpg",
     vicomtes: ["François Fébus", "Catherine de Foix", "Henri Ie de Béarn","Jeanne d'Albret"],
     faitsMarquants: [
-      "Intégration du Béarn dans la mouvance aragonaise",
-      "Hommage scellant la tutelle aragonaise",
-      "Alliances du Béarn, du Marsan et de la Bigorre",
+   "1512 : Invasion de la Haute-Navarre par la Castille ; maintien de la souveraineté béarnaise",
+    "1519 : Création du Conseil souverain et de la Chambre des comptes à Pau par Henri II",
+    "1538-1547 : Fortification de Navarrenx, bastion symbolique de l’autonomie béarnaise",
+    "1560 : Jeanne d’Albret introduit la Réforme Protestante",
       
     ],
-    heritage: "Cette lignée a transmis un héritage d’indépendance politique et d’équilibre entre les puissances voisines. Elle a ancré le Béarn dans une identité fière, autonome et tournée vers la diplomatie plutôt que la conquête. Le système féodal local, fondé sur la Cout Majour et le serment collectif, a laissé une trace durable dans l’histoire institutionnelle du Sud-Ouest."
+    heritage: "La Maison de Navarre marque l’apogée politique et culturelle du Béarn médiéval devenu principauté souveraine. Elle laisse un héritage de fermeté politique, d’humanisme et d’autonomie, qui fera du Béarn un modèle unique de souveraineté."
   },
   // ... autres lignees
 };
