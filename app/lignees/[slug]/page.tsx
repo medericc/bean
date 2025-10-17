@@ -67,11 +67,11 @@ const ligneesData = {
     heritage: "La lignée des Foix-Béarn laisse un territoire politiquement autonome, solidement administré et culturellement rayonnant. Elle incarne la résistance à la domination capétienne et la naissance d’une identité béarnaise affirmée. Par son union avec la maison de Navarre, le Béarn devient un pivot entre France, Gascogne et Pyrénées."
   },
    navarre: {
-    titre: "Maison de Navarre",
+    titre: "Maison d'Albret",
     periode: "XVe - XVIe siècle",
     description: "La lignée béarnaise, issue des Gabarret et unie aux maisons de Barcelone et de Moncade, s’est formée au XIIᵉ siècle dans un contexte de luttes entre Aragon, Toulouse et l’Aquitaine. Par alliances et fidélités successives, elle passa de la mouvance aragonaise à la gasconne, tout en préservant son autonomie politique.",
     image: "/images/lignees/centulle-detail.jpg",
-    vicomtes: ["François Fébus", "Catherine de Navarre", "Henri Ie de Béarn","Jeanne d'Albret"],
+    vicomtes: ["François Fébus", "Catherine de Foix", "Henri Ie de Béarn","Jeanne d'Albret"],
     faitsMarquants: [
       "Intégration du Béarn dans la mouvance aragonaise",
       "Hommage scellant la tutelle aragonaise",

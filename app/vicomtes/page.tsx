@@ -98,35 +98,8 @@ const vicomtes = [
     lignee: "Moncade",
     badge: "Stratège"
   },
-  {
-    slug: "gaston-viii",
-    titre: "Gaston VIII",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
-    lignee: "Foix-Béarn",
-    badge: "Religieuse"
-  },
 
- {
-    slug: "gaston-ix",
-    titre: "Gaston IX",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
-    lignee: "Foix-Béarn",
-    badge: "Religieuse"
-  },
 
-  {
-    slug: "jeanne-dartois",
-    titre: "Jeanne d'Artois",
-    description: "Femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/images/vicomtes/gaston-iv.jpg",
-    periode: "1070-1173",
-    lignee: "Foix-Béarn",
-    badge: "Religieuse"
-  },
   {
     slug: "gaston-febus",
     titre: "Gaston Fébus",
@@ -137,48 +110,57 @@ const vicomtes = [
     badge: "Mécène"
   },
    {
-    slug: "archambaud",
-    titre: "Archambaud de Grailly",
-    description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
+    slug: "mathieu",
+    titre: "Mathieu de Castelbon",
+    description: "Son règne, bref, permit de consolider l’indépendance et les institutions du Béarn.",
     image: "/images/vicomtes/gaston-febus.jpg",
-    periode: "1343-1391",
+    periode: "1391-1398",
+    lignee: "Foix-Béarn",
+    badge: "Mécène"
+  },
+   {
+    slug: "isabelle",
+    titre: "Isabelle de Castelbon",
+    description: "Elle préserve la neutralité et la prospérité du Béarn durant une période troublée.",
+    image: "/images/vicomtes/gaston-febus.jpg",
+    periode: "1398-1412",
     lignee: "Foix-Béarn",
     badge: "Mécène"
   },
    {
     slug: "jean",
     titre: "Jean de Grailly",
-    description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
+    description: "Il maintient la neutralité du Béarn en étendant son influence diplomatique dans le sud de la France.",
     image: "/images/vicomtes/gaston-febus.jpg",
-    periode: "1343-1391",
+    periode: "1412-1436",
     lignee: "Foix-Béarn",
     badge: "Mécène"
   },
    {
     slug: "gaston-xi",
     titre: "Gaston XI",
-    description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
+    description: "Il participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
     image: "/images/vicomtes/gaston-febus.jpg",
-    periode: "1343-1391",
+    periode: "1436-1472",
     lignee: "Foix-Béarn",
     badge: "Mécène"
   },
   
     {
     slug: "catherine",
-    titre: "Catherine de Navarre",
-    description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
+    titre: "Catherine de Foix",
+    description: "Elle défend vigoureusement la souveraineté du Béarn affirmant son pouvoir royal propre.",
     image: "/images/vicomtes/henri-iv.jpg",
-    periode: "1572-1610",
+    periode: "1483-1517",
     lignee: "Navarre",
     badge: "Roi de France"
   },
     {
-    slug: "henri-i",
+    slug: "henri",
     titre: "Henri d'Albret",
-    description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
+    description: "Il introduit des réformes administratives et fait un refuge pour les réformés, en restant dans la cour française.",
     image: "/images/vicomtes/henri-iv.jpg",
-    periode: "1572-1610",
+    periode: "1517-1555",
     lignee: "Navarre",
     badge: "Roi de France"
   },
@@ -187,7 +169,7 @@ const vicomtes = [
     titre: "Jeanne d'Albret",
     description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
     image: "/images/vicomtes/henri-iv.jpg",
-    periode: "1572-1610",
+    periode: "1555-1572",
     lignee: "Navarre",
     badge: "Roi de France"
   }

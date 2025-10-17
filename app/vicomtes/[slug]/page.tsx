@@ -195,7 +195,124 @@ const vicomtesData = {
     "alliances": "Épouse de Roger-Bernard III de Foix ; mère de Gaston Ier de Foix-Béarn ; alliée des rois d’Angleterre Édouard Ier et Édouard II ; en relation diplomatique avec Jacques II d’Aragon.",
     "contexte": "Marguerite vécut à une époque où le sud-ouest de la France était le théâtre d’une lutte d’influence entre la monarchie capétienne et la couronne d’Angleterre. Le Béarn, juridiquement autonome, servait de zone tampon entre ces deux puissances et les royaumes ibériques. La politique de Marguerite fut guidée par la préservation des libertés béarnaises et par un jeu d’équilibre diplomatique face à ces grandes monarchies.",
     "heritage": "Marguerite de Moncade laissa un héritage décisif : elle consolida l’union du Béarn et du comté de Foix, renforça les liens avec l’Aragon grâce à ses origines catalanes, et affermit la souveraineté béarnaise."
-  }
+  },
+"mathieu": {
+  "titre": "Mathieu de Castelbon",
+  "dates": "1391-1398",
+  "surnom": "Vicomte de Béarn",
+  "lignee": "Maison de Foix-Béarn",
+  "description": "Cousin de Gaston Fébus, Mathieu de Castelbon fut reconnu vicomte de Béarn grâce au soutien des États de Béarn. Son règne, bien que bref, permit de consolider l’indépendance et les institutions du Béarn face aux ambitions française et anglaise.",
+  "image": "/images/vicomtes/mathieu-castelbon-detail.jpg",
+  "biographie": "En 1391, les États de Béarn désignèrent Mathieu comme héritier universel. Il obtint la renonciation de la France au traité de Toulouse et refusa l’hommage anglais, maintenant ainsi la neutralité du Béarn. Marié à Jeanne d’Aragon, il revendiqua la couronne d’Aragon mais fut écarté au profit de Martin Ier, perdant ses domaines catalans. Reçu officiellement vicomte en 1393, il laissa la gestion du pays aux États, consolidant leur autorité. Mort sans héritier en 1398, il transmit la vicomté à sa sœur Isabelle.",
+  "faitsMarquants": [
+   "20 décembre 1391 : La France renonce au traité de Toulouse, confirmant l’autonomie béarnaise.",
+    "12 septembre 1391 : Refuse l’hommage au roi d’Angleterre, préservant la neutralité du Béarn.",
+    "1392-1393 : Perd ses ambitions aragonaises et ses terres catalanes au profit de Martin Ier.",
+    "1393 : Reçu solennellement vicomte de Béarn et laisse la direction effective aux États.",
+  ],
+  "alliances": "Maison de Castelbon, mariage avec Jeanne d’Aragon, relations diplomatiques avec la France et l’Angleterre.",
+  "contexte": "Son règne se situe dans un contexte de rivalités franco-anglaises et de crises dynastiques, où le Béarn cherche à préserver son autonomie et à renforcer ses institutions.",
+  "heritage": "Mathieu de Castelbon assure la continuité de l’indépendance béarnaise et consolide les États comme garants de la souveraineté."
+},
+"isabelle": {
+  "titre": "Isabelle de Castelbon",
+  "dates": "1398-1412",
+  "surnom": "Done et majoresse",
+  "lignee": "Maison de Foix-Béarn",
+  "description": "À la mort de son frère Mathieu de Castelbon, Isabelle hérita de la vicomté de Béarn et, par son mariage avec Archambaud de Grailly, captura l'attention des États de Béarn. Elle incarna une autorité politique pleine et entière, préservant la neutralité et la prospérité du Béarn durant une période troublée.",
+  "image": "/images/vicomtes/isabelle-castelbon-detail.jpg",
+  "biographie": "En 1398, Isabelle et Archambaud de Grailly furent reconnus par les États de Béarn comme nouveaux détenteurs du pouvoir vicomtal. Après la mort d’Archambaud en 1412, Isabelle conserva le contrôle effectif de la vicomté, dirigeant en tant que « done et majoresse » jusqu’à sa mort. Durant la guerre civile et la rivalité franco-anglaise (1412–1436), elle maintint une politique indépendante, s’opposant parfois à son fils Jean Ier. En 1425, elle négocia un traité de neutralité avec l’Angleterre, ratifié par les États de Guyenne, garantissant la libre circulation commerciale et une prospérité durable. En 1427, elle renouvela le traité avec l’accord de son fils. ",
+  "faitsMarquants": [
+  "1425 : Négocie un traité de neutralité avec l’Angleterre, ratifié par les États de Guyenne.",
+    "1427 : Renouvelle le traité de neutralité avec l’accord de Jean Ier.",
+ ],
+  "alliances": "Maison de Grailly par mariage, lignage Castelbon, relations diplomatiques avec l’Angleterre et les États de Béarn.",
+  "contexte": "Son règne se déroule dans un contexte de guerre civile et de rivalité franco-anglaise, où le Béarn tente de préserver son autonomie et sa prospérité malgré les pressions extérieures.",
+  "heritage": "Isabelle de Castelbon laisse l’image d’une dirigeante habile, qui sut maintenir l’autonomie et la neutralité du Béarn, consolidant la cohésion interne et la prospérité commerciale avant que le pays ne soit de nouveau entraîné dans les grands conflits européens."
+},
+
+"jean": {
+  "titre": "Jean de Grailly",
+  "dates": "1412-1436",
+  "surnom": "Vicomte de Béarn et Comte de Foix",
+  "lignee": "Maison de Foix-Béarn",
+  "description": "Fils d’Archambaud de Grailly et d’Isabelle de Castelbon, Jean Ier succède à sa mère en 1412 et dirige le Béarn tout en composant avec la France et l’Angleterre. Il maintient la neutralité du Béarn tout en étendant son influence militaire et diplomatique dans le sud de la France.",
+  "image": "/images/vicomtes/jean1-detail.jpg",
+  "biographie": "Jean Ier succède à sa mère Isabelle en 1412, mais il ne dirige pas encore les affaires du pays. Durant la crise franco-anglaise, il change plusieurs fois d’alliance : d’abord avec les Armagnacs, puis les Bourguignons, et enfin avec les Anglais après le traité de Troyes. Lieutenant général de Charles VII en Languedoc et en Guyenne, il refuse de prêter hommage à Henri V pour le Béarn, affirmant son indépendance. Il épouse Jeanne d’Albret en 1422 et reçoit plusieurs domaines, notamment la Bigorre, Lautrec, Mauléon et Guiche. Il signe des traités garantissant la neutralité et la libre circulation commerciale du Béarn avec l’Angleterre. ",
+  "faitsMarquants": [
+   "1420 : Après le traité de Troyes, se rallie aux Anglais sans compromettre la neutralité du Béarn.",
+    "1422 : Épouse Jeanne d’Albret et reçoit de nouveaux domaines en Foix et Béarn.",
+    "1425 : Maintien de la neutralité commerciale et diplomatique du Béarn avec l’Angleterre.",
+    "1431 : Nouveau traité à Montaner confirmant la neutralité et la prospérité du commerce béarnais.",
+ ],
+  "alliances": "Maison de Grailly, mariage avec Jeanne d’Albret, relations diplomatiques avec la France et l’Angleterre.",
+  "contexte": "Son règne se déroule durant la guerre civile et la guerre de Cent Ans, où il doit naviguer entre la France et l’Angleterre tout en protégeant l’autonomie et le commerce du Béarn.",
+  "heritage": "Jean Ier laisse un Béarn neutre et prospère, avec des institutions renforcées et une diplomatie habile."
+}
+,
+"gaston-xi": {
+  "titre": "Gaston XI",
+  "dates": "1436-1472",
+  "surnom": "Vicomte de Béarn et Comte de Foix",
+  "lignee": "Maison de Foix-Béarn",
+  "description": "Fils de Jean Ier, Gaston IV accède au pouvoir encore enfant sous tutelle, puis devient un chef militaire et diplomate de premier plan. Il consolide la souveraineté du Béarn, participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
+  "image": "/images/vicomtes/gaston4-detail.jpg",
+  "biographie": "Au début sous la tutelle de son oncle Mathieu de Comminges. Il prête serment aux États pour maintenir la neutralité et le commerce avec l’Angleterre. Libéré en 1440, il combat pour Charles VII contre les Anglais. Il respecte la neutralité du Béarn et devient lieutenant-général en Guyenne et Gascogne. Il participe à des campagnes, consolidant la victoire française. En 1455, marié à Éléonore d’Aragon, il devient héritier du royaume de Navarre. Gaston IV instaure Pau comme capitale du Béarn et reçoit la reconnaissance implicite de la souveraineté béarnaise par Louis XI.",
+  "faitsMarquants": [
+  "1441-1442 : Combat les Anglais à Saint-Sever et Dax ; reçoit la chevalerie de Charles VII.",
+    "1451-1453 : Participe aux campagnes de Bayonne, Castillon et Bordeaux, contribuant à la victoire française.",
+   "1462-1463 : Accueille Louis XI et Jean II d’Aragon à Sauveterre-de-Béarn, consolidant la souveraineté du Béarn.",
+    "1468 : Siège à la droite du roi lors des États généraux et représente Louis XI en Aragon.",
+ ],
+  "alliances": "Maison de Grailly, mariage avec Éléonore d’Aragon, relations diplomatiques avec la France, la Navarre et l’Aragon.",
+  "contexte": "Son règne se déroule durant la fin de la guerre de Cent Ans et la consolidation de l’influence française dans le sud-ouest, tout en maintenant la neutralité commerciale et la souveraineté du Béarn.",
+  "heritage": "Gaston IV laisse un Béarn puissant et respecté, unissant influence militaire, diplomatie et alliances dynastiques, et prépare la voie pour la dynastie béarnaise sur le trône de Navarre."
+}
+,
+"catherine": {
+  "titre": "Catherine de Foix",
+  "dates": "1483-1517",
+  "surnom": "Reine de Navarre et Dame souveraine de Béarn",
+  "lignee": "Maison d'Albret",
+  "description": "Sœur de François Phébus, Catherine hérite du Béarn et de la Navarre et épouse Jean d’Albret. Elle défend vigoureusement la souveraineté du Béarn contre la France et l’Espagne, affirmant le rôle indépendant des États et le pouvoir royal propre sur son territoire.",
+  "image": "/images/vicomtes/catherine-foix-detail.jpg",
+  "biographie": "À la mort de son frère François Phébus en 1483, Catherine de Foix hérite de ses biens et est reconnue par les États de Béarn comme héritière légitime en 1484. Mariée à Jean d’Albret, elle conserve la souveraineté du Béarn et de la Navarre. Elle défend activement l’indépendance de son territoire face aux pressions françaises et espagnoles, conteste la compétence du Parlement de Toulouse, et fait reconnaître le Béarn comme une entité distincte. En 1512, elle perd la majeure partie de la Navarre envahie par la Castille, mais obtient un succès partiel au jugement de Blois qui confirme la souveraineté du Béarn. Catherine meurt en 1517, laissant une héritière qui rapproche la Navarre de la France par le mariage d’Henri II d’Albret avec Marguerite d’Angoulême.",
+  "faitsMarquants": [
+    "1484 : Reconnue par les États de Béarn comme héritière légitime après la mort de son frère François Phébus.",
+    "1484 : Mariage avec Jean d’Albret, consolidant la souveraineté sur le Béarn et la Navarre.",
+    "1502 : Prêt de serment à Louis XII sans mention du Béarn, affirmant l’indépendance de la vicomté.",
+    "1510-1512 : Défense active de la souveraineté du Béarn contre la France et négociation avec la Castille.",
+    "1512 : Perte de la majeure partie de la Navarre au profit des troupes espagnoles, mais maintien partiel de la souveraineté béarnaise.",
+    "1517 : Décès, laissant le Béarn et la Basse-Navarre sous le contrôle de son fils Henri II d’Albret."
+  ],
+  "alliances": "Maison d'Albret', mariage avec Jean d’Albret, relations diplomatiques avec la France et la Castille.",
+  "contexte": "Son règne se déroule dans un contexte de rivalités entre la France et l’Espagne, et de consolidation de la souveraineté béarnaise et navarraise, avec la menace permanente de l’ingérence extérieure.",
+  "heritage": "Catherine de Foix laisse un Béarn et une Basse-Navarre souverains et organisés, ayant défendu l’indépendance de ses territoires malgré les pressions extérieures, et prépare le terrain pour l’union future avec la France via son fils Henri II d’Albret."
+}
+,
+
+"henri": {
+  "titre": "Henri II d’Albret",
+  "dates": "1517-1555",
+  "surnom": "Seigneur souverain de Béarn",
+  "lignee": "Maison d'Albret",
+  "description": "Fils de Catherine de Foix, Henri II d’Albret hérite du Béarn à 14 ans et épouse Marguerite d’Angoulême, sœur de François Ier. Il renforce la souveraineté béarnaise, introduit des réformes administratives et fait du Béarn un refuge pour les protestants, tout en restant impliqué dans la cour et les guerres françaises.",
+  "image": "/images/vicomtes/henri2-albret-detail.jpg",
+  "biographie": "Henri II d’Albret succède à sa mère Catherine de Foix en 1517 sous la régence de son grand-père Alain jusqu’en 1522. Il est reconnu comme seigneur souverain du Béarn par les États locaux, affirmant l’autonomie de la vicomté malgré l’influence croissante de la France. Capturé à la bataille de Pavie en 1525, il s’évade rapidement et poursuit ses réformes, créant notamment le Conseil souverain et la Chambre des comptes à Pau. Entre 1538 et 1547, il transforme la bastide de Navarrenx en forteresse bastionnée, suscitant l’inquiétude de Charles Quint. Henri administre le Béarn avec l’aide de sa sœur Anne d’Albret et de Jacques de Foix en son absence, tout en consolidant son territoire et son rôle de refuge pour les protestants. Il meurt en 1555, laissant le trône à sa fille Jeanne d’Albret, héritière du Béarn et future reine protestante.",
+  "faitsMarquants": [
+    "1517 : Succède à sa mère Catherine de Foix sous régence de son grand-père Alain jusqu’en 1522.",
+    "1519 : Création du Conseil souverain de Pau, inspiré du modèle navarrais.",
+    "1525 : Capturé à la bataille de Pavie contre François Ier, s’évade rapidement.",
+    "1527 : Mariage avec Marguerite d’Angoulême, renforçant les liens avec la cour de France.",
+    "1538-1547 : Transformation de Navarrenx en forteresse bastionnée, inquiétant Charles Quint.",
+    "1551-1552 : Validation et adoption par les États des nouvelles fortifications, imprimé en bearnais.",
+    "1555 : Décès, laissant le trône à sa fille Jeanne d’Albret."
+  ],
+  "alliances": "Maison d’Albret, mariage avec Marguerite d’Angoulême, relations avec la cour de France et diplomatie avec les puissances voisines.",
+  "contexte": "Son règne se déroule dans un contexte de guerres françaises et de menaces espagnoles, tout en consolidant la souveraineté et les institutions béarnaises, et en affirmant le rôle du Béarn comme refuge pour les protestants.",
+  "heritage": "Henri II d’Albret laisse un Béarn fort, souverain et réformé, préparant l’accession de sa fille Jeanne d’Albret et la future orientation protestante de son royaume."
+}
+
 
 
   // ... autres vicomtes
@@ -230,13 +347,7 @@ export default function VicomteDetailPage({ params }: Props) {
             {/* Colonne principale */}
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none">
-                <div className="float-right ml-8 mb-4 w-64">
-                  <img 
-                    src={vicomte.image} 
-                    alt={vicomte.titre}
-                    className="w-full rounded-lg shadow-lg"
-                  />
-                </div>
+            
                 
                 <h2 className="font-titre text-3xl text-vert-mousse mb-6">Biographie</h2>
                 <p className="font-corps text-gray-700 leading-relaxed mb-6">
