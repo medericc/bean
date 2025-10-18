@@ -61,7 +61,7 @@ export default function HistoirePage() {
               <div className="space-y-3 font-corps">
                 <div className="flex justify-between border-b border-gray-200 py-2">
                   <span>Période couverte</span>
-                  <span className="font-semibold">+ de 2000 ans</span>
+                  <span className="font-semibold ">+ de 2000 ans</span>
                 </div>
                 <div className="flex justify-between border-b border-gray-200 py-2">
                   <span>Vicomtes répertoriés</span>

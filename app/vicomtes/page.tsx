@@ -239,49 +239,51 @@ export default function VicomtesPage() {
       </section>
       
       {/* Filtres et recherche */}
-      <section className="py-8 bg-parchemin-fonce">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
-            <div className="flex gap-4">
-              <select
-                value={lignee}
-                onChange={(e) => setLignee(e.target.value)}
-                className="font-corps bg-white border border-or-patine rounded px-4 py-2"
-              >
-                <option>Toutes les lignées</option>
-                <option>Centulle</option>
-                <option>Gabarret</option>
-                <option>Moncade</option>
-                <option>Foix-Béarn</option>
-                <option>Navarre</option>
-              </select>
-              <select
-                value={periode}
-                onChange={(e) => setPeriode(e.target.value)}
-                className="font-corps bg-white border border-or-patine rounded px-4 py-2"
-              >
-                <option>Toutes les périodes</option>
-                <option>X-XIe siècle</option>
-                <option>XIIe siècle</option>
-                <option>XIIIe-XIVe siècle</option>
-                <option>XV-XVIe siècle</option>
-              </select>
-            </div>
-            <div className="relative">
-              <input 
-                type="text"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Rechercher un vicomte..."
-                className="font-corps bg-white border border-or-patine rounded pl-10 pr-4 py-2 w-64"
-              />
-              <svg className="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
+   <section className="py-8 bg-parchemin-fonce">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
+      <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+        <select
+          value={lignee}
+          onChange={(e) => setLignee(e.target.value)}
+          className="font-corps bg-white border border-or-patine rounded px-4 py-2 w-full sm:w-auto"
+        >
+          <option>Toutes les lignées</option>
+          <option>Centulle</option>
+          <option>Gabarret</option>
+          <option>Moncade</option>
+          <option>Foix-Béarn</option>
+          <option>Navarre</option>
+        </select>
+        <select
+          value={periode}
+          onChange={(e) => setPeriode(e.target.value)}
+          className="font-corps bg-white border border-or-patine rounded px-4 py-2 w-full sm:w-auto"
+        >
+          <option>Toutes les périodes</option>
+          <option>X-XIe siècle</option>
+          <option>XIIe siècle</option>
+          <option>XIIIe-XIVe siècle</option>
+          <option>XV-XVIe siècle</option>
+        </select>
+      </div>
+
+      <div className="relative w-full md:w-auto">
+        <input 
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Rechercher un vicomte..."
+          className="font-corps bg-white border border-or-patine rounded pl-10 pr-4 py-2 w-full sm:w-64"
+        />
+        <svg className="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
       
       {/* Grille des vicomtes */}
       <section className="py-16">
