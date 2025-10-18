@@ -118,79 +118,80 @@ export default function AProposPage() {
       titre: "Gaston Fébus: Prince des Pyrénées",
       auteur: "Pierre Tucoo-Chala",
       type: 'livre' as const,
-      description: "Biographie exhaustive de Gaston III de Foix-Béarn, dit Fébus, prince emblématique du Béarn médiéval. L'ouvrage couvre son règne, sa politique et son héritage culturel.",
+      description: "Biographie exhaustive de Gaston Fébus, prince emblématique du Béarn médiéval, couvrant son règne, sa politique et son héritage culturel.",
       annee: "1991",
       details: [
-        "Analyse détaillée du Livre de la Chasse",
-        "Politique d'indépendance face à la France et l'Angleterre",
-        "Relations avec la cour de Navarre",
-        "Administration et gouvernement du Béarn"
+             "Son administration du Béarn",
+  
+         "Sa politique d’indépendance",
+     
+  "Relations diplomatiques avec Navarre et Aragon",
+ "Son rôle dans l’affirmation de l’identité béarnaise"
       ]
     },
     {
       titre: "L'Islam Près des Pyrénées",
       auteur: "Pierre Tucoo-Chala",
       type: 'livre' as const,
-      description: "Étude approfondie de la sœur d'Henri IV et son rôle dans l'histoire du Béarn. L'ouvrage explore son influence politique et culturelle.",
+      description: "L’ouvrage retrace la défense de la foi et des libertés béarnaises face à l’islam, à la monarchie et aux bouleversements religieux.",
       annee: "1994",
       details: [
-        "Régence pendant les guerres de religion",
-        "Correspondance avec Henri IV",
-        "Influence sur la cour de Nérac",
-        "Patronage artistique et littéraire"
+        "Rôle de Gaston IV et de Talèse",
+  "Origine et portée des Fors du Béarn",
+  "Frontière chrétienne face à l’expansion de l'islam",
+  "Lien entre croisades extérieures et albigeoise"
       ]
     },
     {
       titre: "Nouvelle Histoire du Béarn",
       auteur: "Laurent Jalabert",
       type: 'livre' as const,
-      description: "Ouvrage de référence sur la maison de Foix-Béarn, explorant les liens dynastiques et l'administration des territoires.",
+      description: "Histoire pluridisciplinaire du Béarn des origines à nos jours. L’ouvrage met en lumière les continuités et transformations de l’identité béarnaise.",
       annee: "2024",
       details: [
-        "Généalogie détaillée des Foix-Béarn",
-        "Stratégies matrimoniales et alliances",
-        "Gestion des domaines pyrénéens",
-        "Relations avec la couronne d'Aragon"
+        "Origines du Béarn et évolution des institutions locales",
+  "Les mutations sociales, culturelles et territoriales",
+  "Le rôle des élites et des forêts dans la construction béarnaise",
+  "Connexions avec les espaces pyrénéens franco-espagnol"
       ]
     },
     {
       titre: "Conférence - Les Comtes de Foix ",
       auteur: "Claudine Pailhès",
       type: 'video' as const,
-      description: "Documentaire historique complet sur YouTube retraçant la vie et l'œuvre de Gaston Fébus, avec des interventions d'experts et des reconstitutions.",
+      description: "Conférence retraçant la généalogie, le pouvoir et l’influence des comtes de Foix, ainsi que leurs liens étroits avec Rome, le Béarn et la Navarre.",
       lien: "https://www.youtube.com/watch?v=uWDQv7m8uS8",
       details: [
-        "Interviews avec des historiens spécialistes",
-        "Visite des châteaux fébusiens",
-        "Analyse du manuscrit du Livre de la Chasse",
-        "Contextualisation historique du XIVe siècle"
+       "Origines et ascension des comtes de Foix",
+  "Alliances et rivalités avec le Béarn et la Navarre",
+  "Rôle politique de Gaston Fébus dans la région",
+  "Transmission du pouvoir et héritage féodal"
       ]
     },
     {
      titre: "La Béarn et sa Souveraineté",
       auteur: "Pierre Tucoo-Chala",
       type: 'livre' as const,
-      description: "Édition critique des Fors anciens de Béarn, textes fondamentaux qui ont structuré l'organisation juridique et sociale de la vicomté.",
+      description: "Ouvrage fondateur qui retrace les relations avec la France et la Navarre, jusqu’à l’affirmation progressive d’une souveraineté locale originale.",
       annee: "1961",
       details: [
-        "Transcription des manuscrits médiévaux",
-        "Analyse comparative des différentes versions",
-        "Commentaires historiques et juridiques",
-        "Glossaire des termes béarnais"
+        "Évolution du pouvoir des vicomtes et princes béarnais",
+  "Naissance et consolidation des Fors du Béarn",
+  "Les nombreux rapports diplomatiques",
+  "La formation d’une identité béarnaise autonome"
       ]
     },
        {
       titre: "Conférence - Les Vicomtes de Béarn",
       auteur: "Thierry Issartel",
       type: 'video' as const,
-      description: "Documentaire historique complet sur YouTube retraçant la vie et l'œuvre de Gaston Fébus, avec des interventions d'experts et des reconstitutions.",
+      description: "Conférence consacrée à la formation et à l’évolution de la vicomté de Béarn, des origines carolingiennes jusqu’aux grands lignages médiévaux.",
       lien: "https://www.youtube.com/watch?v=V2rK9e50cV0",
       details: [
-        "Interviews avec des historiens spécialistes",
-        "Visite des châteaux fébusiens",
-        "Analyse du manuscrit du Livre de la Chasse",
-        "Contextualisation historique du XIVe siècle"
-      ]
+        "Présentation des vicomtes et de la naissance du Béarn",
+    "Étude portant sur des sources médiévales",
+    "Mise en contexte des liens féodaux régionaux",
+   "Analyse de Lescar et de son rôle dans le Béarn" ]
     }
   ];
 
