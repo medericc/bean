@@ -21,7 +21,7 @@ function ResourceCard({ titre, auteur, type, description, annee, lien, details }
   
   const typeConfig = {
     livre: { color: 'bg-vert-mousse', icon: '📚', label: 'Ouvrage' },
-    video: { color: 'bg-red-600', icon: '🎥', label: 'Vidéo' },
+    video: { color: 'bg-yellow-900', icon: '🎥', label: 'Vidéo' },
     document: { color: 'bg-or-patine', icon: '📄', label: 'Document' },
     article: { color: 'bg-blue-600', icon: '📖', label: 'Article' }
   };
@@ -115,7 +115,7 @@ function ResourceCard({ titre, auteur, type, description, annee, lien, details }
 export default function AProposPage() {
   const ressources = [
     {
-      titre: "Gaston Fébus",
+      titre: "Gaston Fébus: Prince des Pyrénées",
       auteur: "Pierre Tucoo-Chala",
       type: 'livre' as const,
       description: "Biographie exhaustive de Gaston III de Foix-Béarn, dit Fébus, prince emblématique du Béarn médiéval. L'ouvrage couvre son règne, sa politique et son héritage culturel.",
@@ -128,11 +128,11 @@ export default function AProposPage() {
       ]
     },
     {
-      titre: "Catherine de Bourbon",
+      titre: "L'Islam Près des Pyrénées",
       auteur: "Pierre Tucoo-Chala",
       type: 'livre' as const,
       description: "Étude approfondie de la sœur d'Henri IV et son rôle dans l'histoire du Béarn. L'ouvrage explore son influence politique et culturelle.",
-      annee: "2002",
+      annee: "1994",
       details: [
         "Régence pendant les guerres de religion",
         "Correspondance avec Henri IV",
@@ -141,11 +141,11 @@ export default function AProposPage() {
       ]
     },
     {
-      titre: "Le Comte de Foix",
-      auteur: "Claudine Pailhès",
+      titre: "Nouvelle Histoire du Béarn",
+      auteur: "Laurent Jalabert",
       type: 'livre' as const,
       description: "Ouvrage de référence sur la maison de Foix-Béarn, explorant les liens dynastiques et l'administration des territoires.",
-      annee: "2007",
+      annee: "2024",
       details: [
         "Généalogie détaillée des Foix-Béarn",
         "Stratégies matrimoniales et alliances",
@@ -154,11 +154,11 @@ export default function AProposPage() {
       ]
     },
     {
-      titre: "Gaston Fébus - Le Prince des Pyrénées",
-      auteur: "Francis Pailhès",
+      titre: "Conférence - Les Comtes de Foix ",
+      auteur: "Claudine Pailhès",
       type: 'video' as const,
       description: "Documentaire historique complet sur YouTube retraçant la vie et l'œuvre de Gaston Fébus, avec des interventions d'experts et des reconstitutions.",
-      lien: "https://youtube.com/...",
+      lien: "https://www.youtube.com/watch?v=uWDQv7m8uS8",
       details: [
         "Interviews avec des historiens spécialistes",
         "Visite des châteaux fébusiens",
@@ -167,10 +167,11 @@ export default function AProposPage() {
       ]
     },
     {
-      titre: "Les Fors de Béarn",
-      auteur: "Archives Départementales des Pyrénées-Atlantiques",
-      type: 'document' as const,
+     titre: "La Béarn et sa Souveraineté",
+      auteur: "Pierre Tucoo-Chala",
+      type: 'livre' as const,
       description: "Édition critique des Fors anciens de Béarn, textes fondamentaux qui ont structuré l'organisation juridique et sociale de la vicomté.",
+      annee: "1961",
       details: [
         "Transcription des manuscrits médiévaux",
         "Analyse comparative des différentes versions",
@@ -178,17 +179,17 @@ export default function AProposPage() {
         "Glossaire des termes béarnais"
       ]
     },
-    {
-      titre: "Henri IV et le Béarn",
-      auteur: "Société des Sciences de Pau",
-      type: 'article' as const,
-      description: "Étude sur les relations entre Henri IV et sa terre natale, analysant l'impact du rattachement à la couronne de France.",
-      annee: "2010",
+       {
+      titre: "Conférence - Les Vicomtes de Béarn",
+      auteur: "Thierry Issartel",
+      type: 'video' as const,
+      description: "Documentaire historique complet sur YouTube retraçant la vie et l'œuvre de Gaston Fébus, avec des interventions d'experts et des reconstitutions.",
+      lien: "https://www.youtube.com/watch?v=V2rK9e50cV0",
       details: [
-        "Édit de rattachement de 1620",
-        "Maintenance des institutions béarnaises",
-        "Influence des conseillers béarnais à la cour",
-        "Impact sur l'identité régionale"
+        "Interviews avec des historiens spécialistes",
+        "Visite des châteaux fébusiens",
+        "Analyse du manuscrit du Livre de la Chasse",
+        "Contextualisation historique du XIVe siècle"
       ]
     }
   ];
@@ -196,7 +197,7 @@ export default function AProposPage() {
   const stats = [
     { nombre: "12+", label: "Ouvrages de référence" },
     { nombre: "6", label: "Archives consultées" },
-    { nombre: "3", label: "Années de recherche" },
+    { nombre: "3", label: "Semaines de recherche" },
     { nombre: "200+", label: "Documents analysés" }
   ];
 
