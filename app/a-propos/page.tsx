@@ -1,6 +1,6 @@
 // app/a-propos/page.tsx
 'use client';
-import PageTitle from "@/components/PageTitle"
+
 import { useState } from 'react';
 
 
@@ -28,7 +28,7 @@ function ResourceCard({ titre, auteur, type, description, annee, lien, details }
 
   const config = typeConfig[type];
 
-  return ( <> <PageTitle title="Sources – Mémoire du Béarn" />
+  return ( <> 
     <div className="bg-parchemin rounded-lg border border-or-patine overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
       {/* En-tête de la carte */}
       <div className={`${config.color} text-white p-4`}>
