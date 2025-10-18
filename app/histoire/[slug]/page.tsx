@@ -604,7 +604,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
 
   
      'autre': {
-    titre: "Souveraineté Béarnaise",
+    titre: "Vers la Souveraineté",
     periode: "Moyen Age",
     resume: "Les premières traces de peuplement dans les Pyrénées béarnaises.",
     introduction: "Le Béarn antique voit naître les premières communautés organisées...",
