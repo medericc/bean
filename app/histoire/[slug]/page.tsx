@@ -50,9 +50,9 @@ const histoireData = {
   //   ]
   // },
     'haut-moyen': {
-    titre: "Formation du Béarn médiéval", 
+    titre: "Formation du Béarn", 
     periode: "Moyen Age",
-    resume: "Le Béarn naît d’une autonomie ancienne, forgée entre foi et féodalité.",
+    resume: "Le Béarn naît d’une autonomie ancienne, forgée entre foi et féodalité",
     introduction: "Aux origines du Béarn, une autonomie singulière…",
     image: "/images/histoire/antiquite.jpg",
     sections: [
@@ -138,7 +138,7 @@ Dès le XIᵉ siècle, Barcelone s’impose comme puissance régionale grâce à
   'moyen-age': {
     titre: "Montée des Vicomtés",
     periode: "Moyen Age",
-    resume: "Le Béarn s’affirme entre alliances, réformes et indépendance souveraine.",
+    resume: "Le Béarn s’affirme entre alliances, réformes et indépendance",
     introduction: "Entre foi, pouvoir et conquêtes, le Béarn s’élève…",
     image: "/images/histoire/antiquite.jpg",
     sections: [
@@ -241,8 +241,8 @@ Alphonse VI exploite habilement la rivalité entre les taifas, s’alliant à ce
   'pelerin': {
     titre: "Pélerinage Armé", 
     periode: "Moyen Age",
-     resume: "Le Béarn s’affirme entre alliances, réformes et indépendance souveraine.",
-    introduction: "Entre foi, pouvoir et conquêtes, le Béarn s’élève…",
+     resume: "Foi, pouvoir et croisade au cœur du Béarn médiéval",
+    introduction: "Gaston IV unit ferveur et indépendance souveraine...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
@@ -476,8 +476,8 @@ Influencé par le précédent du Cid à Valence, Alphonse vit dans cette opportu
    'aragon': {
     titre: "Tutelle Aragonaise",
     periode: "Moyen Age",
-    resume: "Les premières traces de peuplement dans les Pyrénées béarnaises.",
-    introduction: "Le Béarn antique voit naître les premières communautés organisées...",
+    resume: "Le Béarn évolue sous l’influence des rois d’Aragon",
+    introduction: "La vicomté s’inscrit dans la sphère aragonaise...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
@@ -606,8 +606,8 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
      'autre': {
     titre: "Vers la Souveraineté",
     periode: "Moyen Age",
-    resume: "Les premières traces de peuplement dans les Pyrénées béarnaises.",
-    introduction: "Le Béarn antique voit naître les premières communautés organisées...",
+    resume: "Le Béarn s’émancipe et affirme son équilibre politique",
+    introduction: "De Marguerite à Fébus, l’indépendance devient diplomatie maîtrisée...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
@@ -789,10 +789,10 @@ Vers le milieu du XIVᵉ siècle, le Béarn se trouvait dans une situation compl
 
   
      'souverainete': {
-    titre: "Souveraineté Béarnaise",
+    titre: "Souveraineté",
     periode: "Moyen Age",
-    resume: "Les premières traces de peuplement dans les Pyrénées béarnaises.",
-    introduction: "Le Béarn antique voit naître les premières communautés organisées...",
+    resume: "Le Béarn souverain sous Gaston Fébus",
+    introduction: "Puissance, art et liberté définissent l’État fébusien...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
@@ -822,8 +822,8 @@ Vers le milieu du XIVᵉ siècle, le Béarn se trouvait dans une situation compl
   'union-navarre': {
     titre: "Union avec la Navarre",
     periode: "Renaissance",
-    resume: "Les premières traces de peuplement dans les Pyrénées béarnaises.",
-    introduction: "Le Béarn antique voit naître les premières communautés organisées...",
+    resume: "Le Béarn s’unit à la couronne navarraise indépendante.",
+    introduction: "Entre héritage et réforme, Jeanne d’Albret gouverne libre....",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
