@@ -39,6 +39,13 @@ const periodes: Periode[] = [
     slug: 'pelerin',
   
   },
+  {
+    annee: "XIIe siècle",
+    titre: "En pleine Reconquista", 
+    description: "Engagement dans la Reconquista aux côtés des royaumes chrétiens.",
+    slug: 'reconquista',
+  
+  },
    {
     annee: "XIIe-XIIIe siècle",
     titre: "Tutelle Aragonaise", 
@@ -46,23 +53,35 @@ const periodes: Periode[] = [
     slug: 'aragon',
   
   },
+   {
+    annee: "XIVe-XVe siècle", 
+    titre: "Fin de la Tutelle",
+    description: "Le Béarn s’affranchit de la tutelle et affirme peu à peu son autonomie",
+    slug: 'autre',
+  },
     {
     annee: "XIVe-XVe siècle", 
     titre: "Vers la Souveraineté",
-    description: "Le Béarn atteint son indépendance politique maximale",
-    slug: 'autre',
+    description: "Le Béarn se consolide, posant les bases d’une véritable indépendance",
+    slug: 'marguerite',
   },
   {
     annee: "XIVe-XVe siècle", 
     titre: "Souveraineté Béarnaise",
-    description: "Le Béarn atteint son indépendance politique maximale",
+    description: "Sous Fébus, le Béarn atteint son apogée politique",
     slug: 'souverainete',
   },
   {
     annee: "XVe-XVIe siècle", 
     titre: "Union avec la Navarre",
-    description: "Cette union prépare l’avènement d’Henri de Navarre, futur roi de France",
+    description: "Ils consolident le Béarn, perdent du territoire mais affermissent leur pouvoir",
     slug: 'union-navarre',
+  },
+  {
+    annee: "XVIe siècle", 
+    titre: "Tournée vers Paris",
+    description: "Animée par la vertu, Jeanne d’Albret impose avec fermeté la Réforme",
+    slug: 'navarre',
   }
 ];
 
