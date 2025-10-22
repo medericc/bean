@@ -1,0 +1,23 @@
+{
+  "name": "Mémoire du Béarn",
+  "short_name": "Béarn",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#952626",
+  "theme_color": "#b33030",
+  "description": "Explorez l’histoire du Béarn de l’Antiquité à Henri IV : lignées, vicomtés et patrimoine béarnais.",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
