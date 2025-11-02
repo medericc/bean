@@ -886,7 +886,7 @@ Vers le milieu du XIVᵉ siècle, le Béarn se trouvait dans une situation compl
         )
       },
       {
-        titre: "Le Béarn, entre France et Navarre",
+        titre: "Petite république des Pyrénées",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
