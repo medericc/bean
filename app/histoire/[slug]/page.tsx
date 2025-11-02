@@ -1288,14 +1288,17 @@ export default function HistoireDetailPage({ params }: Props) {
           </div>
 
           <div className="space-y-6">
-            {pageData.sections.map((section, index) => (
-              <ExpandableSection
-                key={index}
-                titre={section.titre}
-                enfants={section.contenu}
-                defaultOpen={index === 0}
-              />
-            ))}
+          {pageData.sections?.map((section, index) => (
+  section && (
+    <ExpandableSection
+      key={index}
+      titre={section.titre}
+      enfants={section.contenu}
+      defaultOpen={index === 0}
+    />
+  )
+))}
+
           </div>
         </div>
       </section>
