@@ -211,6 +211,22 @@ const vicomtesData = {
     "contexte": "Marguerite vécut à une époque où le sud-ouest de la France était le théâtre d’une lutte d’influence entre la monarchie capétienne et la couronne d’Angleterre. Le Béarn, juridiquement autonome, servait de zone tampon entre ces deux puissances et les royaumes ibériques. La politique de Marguerite fut guidée par la préservation des libertés béarnaises et par un jeu d’équilibre diplomatique face à ces grandes monarchies.",
     "heritage": "Marguerite de Moncade laissa un héritage décisif : elle consolida l’union du Béarn et du comté de Foix, renforça les liens avec l’Aragon grâce à ses origines catalanes, et affermit la souveraineté béarnaise."
   },
+
+"gaston-febus": {
+    "titre": "Gaston Fébus",
+    "dates": "1343-1391",
+    "surnom": "le Prince",
+    "lignee": "Maison de Foix-Béarn",
+    "description": "",
+    "image": "/images/vicomtes/febus.jpg",
+    "biographie": "",
+    "faitsMarquants": [
+    ],
+    "alliances": "",
+    "contexte": "",
+    "heritage": ""
+  },
+
 "mathieu": {
   "titre": "Mathieu de Castelbon",
   "dates": "1391-1398",
@@ -320,8 +336,21 @@ const vicomtesData = {
   "alliances": "Maison d’Albret, mariage avec Marguerite d’Angoulême, relations avec la cour de France et diplomatie avec les puissances voisines.",
   "contexte": "Son règne se déroule dans un contexte de guerres françaises et de menaces espagnoles, tout en consolidant la souveraineté et les institutions béarnaises, et en affirmant le rôle du Béarn comme refuge pour les protestants.",
   "heritage": "Henri II d’Albret laisse un Béarn fort, souverain et réformé, préparant l’accession de sa fille Jeanne d’Albret et la future orientation protestante de son royaume."
-}
-
+},
+"jeanne": {
+    "titre": "Jeanne d'Albret",
+    "dates": "1555-1572",
+    "surnom": "la Souveraine",
+    "lignee": "Maison de Navarre",
+    "description": "",
+    "image": "/images/vicomtes/febus.jpg",
+    "biographie": "",
+    "faitsMarquants": [
+    ],
+    "alliances": "",
+    "contexte": "",
+    "heritage": ""
+  },
 
 
   // ... autres vicomtes
