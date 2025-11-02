@@ -32,10 +32,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/centulle-iv-detail.jpg",
   "biographie": "Centulle IV renforça l’unité territoriale du Béarn en intégrant Oloron et en développant un axe d’échanges religieux et commerciaux vers la péninsule Ibérique. Son action, à la charnière du monde gascon et des royaumes espagnols, fit du Béarn un acteur stratégique du piémont pyrénéen. Son assassinat par les Souletins en 1058 mit fin à un règne d’expansion et de transition politique.",
   "faitsMarquants": [
-    "Succède à Gaston II vers 1020 et gouverne jusqu’à sa mort en 1058.",
-    "Récupère la vicomté d’Oloron sans conflit, puis l’intègre pleinement au Béarn.",
-    "Oriente le Béarn vers les sociétés hispano-chrétiennes et les routes de Compostelle.",
-    "Entre en guerre contre Dax et ses alliés ; détache le vassal de Salies en 1056.",
+    "Succède à Gaston II vers 1020 et gouverne jusqu’à sa mort en 1058",
+    "Récupère la vicomté d’Oloron sans conflit, puis l’intègre pleinement au Béarn",
+    "Oriente le Béarn vers les sociétés hispano-chrétiennes et les routes de Compostelle",
+    "Entre en guerre contre Dax et ses alliés ; détache le vassal de Salies en 1056",
   ],
   "alliances": "Partenariats politiques avec les seigneurs d’Oloron et ouverture vers les royaumes chrétiens d’Espagne.",
  
@@ -51,10 +51,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/centulle-v-detail.jpg",
   "biographie": "Fils de Gaston III, mort avant de régner seul, et marié d’abord à Gisla, il épouse en 1079 Béatrix de Bigorre, avec l’appui du pape Grégoire VII. Partisan de la réforme grégorienne, il réside à Lescar pour pénitence, fonde un prieuré à Morlaàs, favorise l’ordre clunisien et bat monnaie. Il étend son autorité sur la Soule, accorde des franchises à Montory et rattache Saint-Pé à Tarbes. Militairement, il soutient puis affronte Sanche Ramírez d’Aragon, participe aux campagnes pyrénéennes. ",
   "faitsMarquants": [
-    "Partisan de la réforme grégorienne et allié du pape Grégoire VII.",
-    "Fonde Morlaàs et y introduit l’ordre clunisien.",
-    "Fait battre monnaie, symbole de souveraineté béarnaise.",
-    "Participe à des campagnes aragonaises, meurt assassiné en 1090."
+    "Partisan de la réforme grégorienne et allié du pape Grégoire VII",
+    "Fonde Morlaàs et y introduit l’ordre clunisien",
+    "Fait battre monnaie, symbole de souveraineté béarnaise",
+    "Participe à des campagnes aragonaises, meurt assassiné en 1090"
   ],
   "alliances": "Marié à Béatrix de Bigorre (alliance Béarn–Bigorre) ; alliance religieuse avec Cluny et politique avec le Saint-Siège.",
   "contexte": "Période d’affaiblissement du pouvoir comtal aquitain et montée des principautés pyrénéennes autonomes. L’influence clunisienne et la réforme grégorienne renforcent les liens entre religion et politique dans le sud-ouest.",
@@ -70,12 +70,12 @@ const vicomtesData = {
   "image": "/images/vicomtes/gaston-iv-detail.jpg",
   "biographie": "Marié avec une princesse aragonaise, il reçut probablement la vicomté de Montaner en dot. Il répondit à l’appel du pape Urbain II, aux côtés de Raymond de Saint-Gilles. Il dirigea les troupes gasconnes lors du siège de Jérusalem et protégea la population locale après la victoire. À son retour, il fonda à Lescar des bâtiments religieux pour remercier Dieu. Lors de la reconquista, à Saragosse, il organisa le siège et fut nommé seigneur de la ville. Il prit part à la conquête de Tarazona, Calatayud et Daroca, fondant la Militia Christi. Il établit la ville de Monreal et assura son développement. En 1131, il est décapité par les Almoravides près de Grenade, sa tête fut exposée à Valence, puis restituée à Saragosse.",
   "faitsMarquants": [
-    "Épouse Talèse d’Aragon (1085) et renforce les liens entre Béarn et Aragon.",
-    "Participe à la première croisade : Nicée, Antioche, Jérusalem (1096–1099).",
-    "Fonde des établissements religieux à Lescar, Sauvelade et Mifaget.",
-    "Dirige le siège de Saragosse (1118) et devient seigneur de la ville.",
-    "Crée la Militia Christi, confrérie militaire inspirée du Saint-Sépulcre.",
-    "Poursuit la Reconquista : prend Tarazona, Calatayud et Daroca (1120–1130).",
+    "Épouse Talèse d’Aragon (1085) et renforce les liens entre Béarn et Aragon",
+    "Participe à la première croisade : Nicée, Antioche, Jérusalem (1096–1099)",
+    "Fonde des établissements religieux à Lescar, Sauvelade et Mifaget",
+    "Dirige le siège de Saragosse (1118) et devient seigneur de la ville",
+    "Crée la Militia Christi, confrérie militaire inspirée du Saint-Sépulcre",
+    "Poursuit la Reconquista : prend Tarazona, Calatayud et Daroca (1120–1130)",
   ],
   "alliances": "Son mariage avec Talèse d’Aragon lia durablement le Béarn à la couronne d’Aragon. Proche d’Alphonse Ier le Batailleur, il devint l’un des principaux soutiens de la Reconquista et un médiateur entre les royaumes chrétiens d’Espagne.",
 "contexte": "Le tournant des XIe et XIIe siècles correspond à l'époque des croisades, un moment où l’Europe féodale se consolide tout en s’ouvrant à une dimension spirituelle et guerrière sans précédent. Le Béarn, jusque-là principauté montagnarde aux marges du duché de Gascogne, s’intègre alors pleinement aux grands courants de la chrétienté occidentale. La vicomté s’ouvre vers le sud et participe à la défense de la foi sur deux fronts. Dans le même temps, les réformes ecclésiastiques issues de Cluny pénètrent le Béarn, réorganisant la vie religieuse autour des chapitres, des prieurés et des hôpitaux pour pèlerins. Le Béarn devient un carrefour d’influences entre la Gascogne, l’Aragon et la Navarre, où se croisent marchands, chevaliers et pèlerins de Compostelle."
@@ -110,10 +110,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/marie-detail.jpg", 
   "biographie": "À la mort de son frère Gaston V, Marie de Béarn se rendit humblement à Jaca, tête nue, le 30 avril 1170, pour prêter serment de fidélité au roi d’Aragon pour le Béarn. En échange, celui-ci lui promit sa protection contre tous hommes et toutes femmes qui se dresseraient contre elle. En garantie, Marie lui remit plusieurs forteresses en gage. Restant fidèle à son engagement, elle épousa Guillaume-Raymond III de Montcada en 1171. En 1173, elle se retira de la vie politique et entra en religion.", 
   "faitsMarquants": [
-    "1170 : Serment de fidélité prêté à Alphonse II d’Aragon à Jaca, acte qui rattache officiellement le Béarn à la sphère aragonaise.",
-    "1171 : Mariage avec Guillaume-Raymond III de Montcada, puissant seigneur catalan choisi par le roi d’Aragon.",
-    "1173 : Retrait de la vie publique et entrée au monastère de Sainte-Croix de Montesquieu-Volvestre, confiant la régence à l’Aragon.",
-    "Fondation de la lignée des Moncade de Béarn, qui dominera la politique trans-pyrénéenne des décennies suivantes."
+    "1170 : Serment de fidélité prêté à Alphonse II d’Aragon à Jaca, acte qui rattache officiellement le Béarn à la sphère aragonaise",
+    "1171 : Mariage avec Guillaume-Raymond III de Montcada, puissant seigneur catalan choisi par le roi d’Aragon",
+    "1173 : Retrait de la vie publique et entrée au monastère de Sainte-Croix de Montesquieu-Volvestre, confiant la régence à l’Aragon",
+    "Fondation de la lignée des Moncade de Béarn, qui dominera la politique trans-pyrénéenne des décennies suivantes"
   ],
   "alliances": "Alliance matrimoniale et politique avec la Maison de Montcada et le royaume d’Aragon sous Alphonse II.",
   "contexte": "Le XIIᵉ siècle est une période d’intenses rivalités féodales dans le sud-ouest de la France. Le Béarn, pris entre l’influence anglaise d’Aquitaine et la puissance montante du royaume d’Aragon, cherche à garantir sa sécurité. Par son mariage et son serment, Marie oriente résolument la vicomté vers la sphère catalano-aragonaise, renforçant les liens au-delà des Pyrénées.",
@@ -128,9 +128,9 @@ const vicomtesData = {
   "image": "/images/vicomtes/gaston-vi-detail.jpg",
   "biographie": "En 1187, il rend hommage au roi Alphonse II d’Aragon pour le Béarn. Il se marie avec Pétronille de Comminges, héritière de Bigorre, réorganise ses domaines en échangeant Mixe et Ostabarret contre Orthez et assure la paix avec la Soule. Aux côtés de son suzerain Pierre II d’Aragon, il prend part à la croisade albigeoise. Accusé d’alliance avec les hérétiques, il est deux fois excommunié, mais reste fidèle à la foi catholique et veille à l’ordre ecclésiastique en Béarn. Après pénitence, le pape l’absout. Il meurt sans héritier direct ; la Bigorre revient alors à son épouse, et le Béarn à son frère Guillaume-Raymond.",
   "faitsMarquants": [
-   "Échange territorial : Orthez contre Mixe et Ostabarret.",
-    "Participe à la croisade albigeoise, défenseur de Toulouse.",
-    "Excommunié politiquement mais jamais hérétique.",
+   "Échange territorial : Orthez contre Mixe et Ostabarret",
+    "Participe à la croisade albigeoise, défenseur de Toulouse",
+    "Excommunié politiquement mais jamais hérétique",
   ],
   "alliances": "Alliance aragonaise forte (Alphonse II et Pierre II d’Aragon) ; relations avec Toulouse et Comminges ; tensions avec Simon de Montfort et la papauté.",
   "contexte": "Début du XIIIe siècle marqué par l’expansion des croisés du Nord en Occitanie, la puissance du royaume d’Aragon dans les Pyrénées et la montée de la papauté contre les princes méridionaux.",
@@ -146,9 +146,9 @@ const vicomtesData = {
   "image": "/images/vicomtes/guillaume-raymond-moncade.jpg",
   "biographie": "Il épouse Guillemette de Castelviel, héritière de Rosanès et Martorell, et hérite des droits de sa famille sur Lérida et Tarragone. En 1194, il assassine l’archevêque de Tarragone, son oncle par alliance, ce qui provoque son excommunication et son exil. Après des années de pénitence, il obtient le pardon du pape Innocent III en 1215. Ensuite, il s’allie à la Couronne d’Aragon contre les Montfort et défend les intérêts béarnais. En 1216, il reprend Lourdes aux croisés et soutient Pétronille de Bigorre. En Béarn, il consolide l’autorité vicomtale en réformant les Fors. Fatigué et décidé à expier définitivement son crime, il prépare un pèlerinage en Terre Sainte mais meurt à Oloron, léguant la vicomté à son fils.",
   "faitsMarquants": [
-   "1194 : assassinat de l’archevêque de Tarragone et exil prolongé en France.",
-    "1216 : reprend le château de Lourdes aux troupes de Simon de Montfort et défend la Bigorre.",
-    "1220–1221 : codifie les Fors de Morlaàs et d’Ossau, stabilisant la législation béarnaise."
+   "1194 : assassinat de l’archevêque de Tarragone et exil prolongé en France",
+    "1216 : reprend le château de Lourdes aux troupes de Simon de Montfort et défend la Bigorre",
+    "1220–1221 : codifie les Fors de Morlaàs et d’Ossau, stabilisant la législation béarnaise"
   ],
   "alliances": "Marié à Guillemette de Castelviel (Maison de Castelviel de Rosanès). Alliances politiques avec la Couronne d’Aragon et le comte Sanche de Roussillon.",
   "contexte": "Le Béarn se trouve alors à la croisée des ambitions aragonaises, anglaises et françaises. Après la défaite de Muret (1213), Guillaume-Raymond tente de maintenir l’autonomie béarnaise tout en s’appuyant sur les rois d’Aragon pour contrer la mainmise des Croisés de Montfort.",
@@ -164,10 +164,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/guillaume2-detail.jpg",
   "biographie": "En 1225, il prit possession de la vicomté tout en restant actif dans la politique aragonaise. Impliqué dans les intrigues autour de Jacques Iᵉʳ, il combattit à Valence en 1226 avant de se réconcilier avec la Couronne. En 1228, il rendit hommage à Henri III d’Angleterre pour ses terres gasconnes, marquant le retour du Béarn dans la mouvance gasconne. Peu après, il rejoignit la flotte de Jacques Iᵉʳ et mena l’assaut sur les Baléares. À la tête du navire amiral, il tomba héroïquement lors du débarquement de Portopi en 1229. Son corps fut inhumé à Santes-Creus, sous un tombeau orné des armes des Moncade et des vaches du Béarn.",
   "faitsMarquants": [
- "1226 : Participe à la campagne contre les musulmans de Valence et aux troubles de cour d’Aragon.",
-    "1228 : Rend hommage à Henri III d’Angleterre à Captieux pour ses terres gasconnes.",
-    "1229 : Dirige le navire amiral lors de la conquête des Baléares ; meurt héroïquement à Portopi.",
-    "Inhumé à Santes-Creus, panthéon royal d’Aragon-Catalogne."
+ "1226 : Participe à la campagne contre les musulmans de Valence et aux troubles de cour d’Aragon",
+    "1228 : Rend hommage à Henri III d’Angleterre à Captieux pour ses terres gasconnes",
+    "1229 : Dirige le navire amiral lors de la conquête des Baléares ; meurt héroïquement à Portopi",
+    "Inhumé à Santes-Creus, panthéon royal d’Aragon-Catalogne"
   ],
   "alliances": "Maison d’Aragon, Couronne d’Angleterre (hommage féodal, 1228), lignage catalan des Moncade et Castelviel.",
   "contexte": "Sous son règne, la France capétienne consolide son pouvoir au sud, tandis que la Couronne d’Aragon oriente sa politique vers la Méditerranée (conquête de Majorque et Valence). Le Béarn retrouve une position intermédiaire entre Gascogne anglaise et royaumes ibériques.",
@@ -182,10 +182,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/marie-detail.jpg",
   "biographie": "Né vers 1229, Gaston VII de Béarn, issu de la maison de Moncade, succéda à son père et hérita d’un Béarn lourdement endetté. Il vendit ses domaines catalans, transféra la capitale de Morlaàs à Orthez et y installa son administration. En 1240, il rend hommage au roi d’Angleterre pour confirmer la vassalité du Béarn tout en gardant son autonomie. Il sert Henri III lors de la campagne du Poitou, puis se révolte pendant la guerre gasconne. Il cherche l’appui de la Castille, s’y rallie un temps, puis revient aux Anglais après le traité de Tolède. Il livre sa fille en otage pour prouver sa fidélité, reçoit des faveurs royales, puis se soulève encore. Fait prisonnier, il doit jurer loyauté, mais recommence, insultant même Édouard Iᵉʳ au Parlement de Paris avant d’être enfermé à Winchester et voir le Béarn saisi. Finalement pardonné, il sert loyalement la couronne anglaise, combat les Gallois et accueille Édouard Iᵉʳ en Béarn. Il participe au traité d’Oloron, organise la succession de ses filles et confirme la vassalité du Béarn. Il meurt en 1290 à Sauveterre, laissant un État fort et farouchement indépendant.",
   "faitsMarquants": [
-    "Transfert de la capitale béarnaise de Morlaàs à Orthez et fortification du pays (Sauveterre, Bellocq, Roquefort).",
-    "Participation à la campagne du Poitou (1242) et à la guerre gasconne contre Henri III (1245-1254).",
-    "Multiples révoltes contre la tutelle anglaise : 1255, 1273, 1274, 1276 et 1279.",
-    "Fondation du couvent des Cordeliers à Mont-de-Marsan (1260) et signature du traité d’Oloron (1289)."
+    "Transfert de la capitale béarnaise de Morlaàs à Orthez et fortification du pays (Sauveterre, Bellocq, Roquefort)",
+    "Participation à la campagne du Poitou (1242) et à la guerre gasconne contre Henri III (1245-1254)",
+    "Multiples révoltes contre la tutelle anglaise : 1255, 1273, 1274, 1276 et 1279",
+    "Fondation du couvent des Cordeliers à Mont-de-Marsan (1260) et signature du traité d’Oloron (1289)"
   ],
   "alliances": "Lié successivement aux rois d’Angleterre Henri III et Édouard Iᵉʳ, à Alphonse X de Castille et à Alphonse III d’Aragon. Alliances matrimoniales avec les maisons de Foix, d’Allemagne et de Moncade.",
   "contexte": "XIIIᵉ siècle marqué par les luttes féodales entre Plantagenêts, Capétiens et royaumes ibériques. Le Béarn se trouve entre Gascogne anglaise et Aragon, cherchant à préserver son autonomie politique et judiciaire (Fors de Béarn).",
@@ -236,10 +236,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/mathieu-castelbon-detail.jpg",
   "biographie": "En 1391, les États de Béarn désignèrent Mathieu comme héritier universel. Il obtint la renonciation de la France au traité de Toulouse et refusa l’hommage anglais, maintenant ainsi la neutralité du Béarn. Marié à Jeanne d’Aragon, il revendiqua la couronne d’Aragon mais fut écarté au profit de Martin Ier, perdant ses domaines catalans. Reçu officiellement vicomte en 1393, il laissa la gestion du pays aux États, consolidant leur autorité. Mort sans héritier en 1398, il transmit la vicomté à sa sœur Isabelle.",
   "faitsMarquants": [
-   "20 décembre 1391 : La France renonce au traité de Toulouse, confirmant l’autonomie béarnaise.",
-    "12 septembre 1391 : Refuse l’hommage au roi d’Angleterre, préservant la neutralité du Béarn.",
-    "1392-1393 : Perd ses ambitions aragonaises et ses terres catalanes au profit de Martin Ier.",
-    "1393 : Reçu solennellement vicomte de Béarn et laisse la direction effective aux États.",
+   "20 décembre 1391 : La France renonce au traité de Toulouse, confirmant l’autonomie béarnaise",
+    "12 septembre 1391 : Refuse l’hommage au roi d’Angleterre, préservant la neutralité du Béarn",
+    "1392-1393 : Perd ses ambitions aragonaises et ses terres catalanes au profit de Martin Ier",
+    "1393 : Reçu solennellement vicomte de Béarn et laisse la direction effective aux États",
   ],
   "alliances": "Maison de Castelbon, mariage avec Jeanne d’Aragon, relations diplomatiques avec la France et l’Angleterre.",
   "contexte": "Son règne se situe dans un contexte de rivalités franco-anglaises et de crises dynastiques, où le Béarn cherche à préserver son autonomie et à renforcer ses institutions.",
@@ -254,8 +254,8 @@ const vicomtesData = {
   "image": "/images/vicomtes/isabelle-castelbon-detail.jpg",
   "biographie": "En 1398, Isabelle et Archambaud de Grailly furent reconnus par les États de Béarn comme nouveaux détenteurs du pouvoir vicomtal. Après la mort d’Archambaud en 1412, Isabelle conserva le contrôle effectif de la vicomté, dirigeant en tant que « done et majoresse » jusqu’à sa mort. Durant la guerre civile et la rivalité franco-anglaise (1412–1436), elle maintint une politique indépendante, s’opposant parfois à son fils Jean Ier. En 1425, elle négocia un traité de neutralité avec l’Angleterre, ratifié par les États de Guyenne, garantissant la libre circulation commerciale et une prospérité durable. En 1427, elle renouvela le traité avec l’accord de son fils. ",
   "faitsMarquants": [
-  "1425 : Négocie un traité de neutralité avec l’Angleterre, ratifié par les États de Guyenne.",
-    "1427 : Renouvelle le traité de neutralité avec l’accord de Jean Ier.",
+  "1425 : Négocie un traité de neutralité avec l’Angleterre, ratifié par les États de Guyenne",
+    "1427 : Renouvelle le traité de neutralité avec l’accord de Jean Ier",
  ],
   "alliances": "Maison de Grailly par mariage, lignage Castelbon, relations diplomatiques avec l’Angleterre et les États de Béarn.",
   "contexte": "Son règne se déroule dans un contexte de guerre civile et de rivalité franco-anglaise, où le Béarn tente de préserver son autonomie et sa prospérité malgré les pressions extérieures.",
@@ -271,10 +271,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/jean1-detail.jpg",
   "biographie": "Jean Ier succède à sa mère Isabelle en 1412, mais il ne dirige pas encore les affaires du pays. Durant la crise franco-anglaise, il change plusieurs fois d’alliance : d’abord avec les Armagnacs, puis les Bourguignons, et enfin avec les Anglais après le traité de Troyes. Lieutenant général de Charles VII en Languedoc et en Guyenne, il refuse de prêter hommage à Henri V pour le Béarn, affirmant son indépendance. Il épouse Jeanne d’Albret en 1422 et reçoit plusieurs domaines, notamment la Bigorre, Lautrec, Mauléon et Guiche. Il signe des traités garantissant la neutralité et la libre circulation commerciale du Béarn avec l’Angleterre. ",
   "faitsMarquants": [
-   "1420 : Après le traité de Troyes, se rallie aux Anglais sans compromettre la neutralité du Béarn.",
-    "1422 : Épouse Jeanne d’Albret et reçoit de nouveaux domaines en Foix et Béarn.",
-    "1425 : Maintien de la neutralité commerciale et diplomatique du Béarn avec l’Angleterre.",
-    "1431 : Nouveau traité à Montaner confirmant la neutralité et la prospérité du commerce béarnais.",
+   "1420 : Après le traité de Troyes, se rallie aux Anglais sans compromettre la neutralité du Béarn",
+    "1422 : Épouse Jeanne d’Albret et reçoit de nouveaux domaines en Foix et Béarn",
+    "1425 : Maintien de la neutralité commerciale et diplomatique du Béarn avec l’Angleterre",
+    "1431 : Nouveau traité à Montaner confirmant la neutralité et la prospérité du commerce béarnais",
  ],
   "alliances": "Maison de Grailly, mariage avec Jeanne d’Albret, relations diplomatiques avec la France et l’Angleterre.",
   "contexte": "Son règne se déroule durant la guerre civile et la guerre de Cent Ans, où il doit naviguer entre la France et l’Angleterre tout en protégeant l’autonomie et le commerce du Béarn.",
@@ -290,10 +290,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/gaston4-detail.jpg",
   "biographie": "Au début sous la tutelle de son oncle Mathieu de Comminges. Il prête serment aux États pour maintenir la neutralité et le commerce avec l’Angleterre. Libéré en 1440, il combat pour Charles VII contre les Anglais. Il respecte la neutralité du Béarn et devient lieutenant-général en Guyenne et Gascogne. Il participe à des campagnes, consolidant la victoire française. En 1455, marié à Éléonore d’Aragon, il devient héritier du royaume de Navarre. Gaston IV instaure Pau comme capitale du Béarn et reçoit la reconnaissance implicite de la souveraineté béarnaise par Louis XI.",
   "faitsMarquants": [
-  "1441-1442 : Combat les Anglais à Saint-Sever et Dax ; reçoit la chevalerie de Charles VII.",
-    "1451-1453 : Participe aux campagnes de Bayonne, Castillon et Bordeaux, contribuant à la victoire française.",
-   "1462-1463 : Accueille Louis XI et Jean II d’Aragon à Sauveterre-de-Béarn, consolidant la souveraineté du Béarn.",
-    "1468 : Siège à la droite du roi lors des États généraux et représente Louis XI en Aragon.",
+  "1441-1442 : Combat les Anglais à Saint-Sever et Dax ; reçoit la chevalerie de Charles VII",
+    "1451-1453 : Participe aux campagnes de Bayonne, Castillon et Bordeaux, contribuant à la victoire française",
+   "1462-1463 : Accueille Louis XI et Jean II d’Aragon à Sauveterre-de-Béarn, consolidant la souveraineté du Béarn",
+    "1468 : Siège à la droite du roi lors des États généraux et représente Louis XI en Aragon",
  ],
   "alliances": "Maison de Grailly, mariage avec Éléonore d’Aragon, relations diplomatiques avec la France, la Navarre et l’Aragon.",
   "contexte": "Son règne se déroule durant la fin de la guerre de Cent Ans et la consolidation de l’influence française dans le sud-ouest, tout en maintenant la neutralité commerciale et la souveraineté du Béarn.",
@@ -309,9 +309,9 @@ const vicomtesData = {
   "image": "/images/vicomtes/catherine-foix-detail.jpg",
   "biographie": "À la mort de son frère François Phébus en 1483, Catherine de Foix hérite de ses biens et est reconnue par les États de Béarn comme héritière légitime en 1484. Mariée à Jean d’Albret, elle conserve la souveraineté du Béarn et de la Navarre. Elle défend activement l’indépendance de son territoire face aux pressions françaises et espagnoles, conteste la compétence du Parlement de Toulouse, et fait reconnaître le Béarn comme une entité distincte. En 1512, elle perd la majeure partie de la Navarre envahie par la Castille, mais obtient un succès partiel au jugement de Blois qui confirme la souveraineté du Béarn.",
   "faitsMarquants": [
-    "1502 : Prêt de serment à Louis XII sans mention du Béarn, affirmant l’indépendance de la vicomté.",
-    "1510-1512 : Défense active de la souveraineté du Béarn contre la France et négociation avec la Castille.",
-    "1512 : Perte de la majeure partie de la Navarre au profit des troupes espagnoles, mais maintien partiel de la souveraineté béarnaise.",
+    "1502 : Prêt de serment à Louis XII sans mention du Béarn, affirmant l’indépendance de la vicomté",
+    "1510-1512 : Défense active de la souveraineté du Béarn contre la France et négociation avec la Castille",
+    "1512 : Perte de la majeure partie de la Navarre au profit des troupes espagnoles, mais maintien partiel de la souveraineté béarnaise",
 ],
   "alliances": "Maison d'Albret, mariage avec Jean d’Albret, relations diplomatiques avec la France et la Castille.",
   "contexte": "Son règne se déroule dans un contexte de rivalités entre la France et l’Espagne, et de consolidation de la souveraineté béarnaise et navarraise, avec la menace permanente de l’ingérence extérieure.",
@@ -328,10 +328,10 @@ const vicomtesData = {
   "image": "/images/vicomtes/henri2-albret-detail.jpg",
   "biographie": "Henri II d’Albret est sous la régence de son grand-père Alain jusqu’en 1522. Capturé à la bataille de Pavie en 1525, il s’évade rapidement et poursuit ses réformes, créant notamment le Conseil souverain et la Chambre des comptes à Pau. Entre 1538 et 1547, il renforce la bastide de Navarrenx, suscitant l’inquiétude de Charles Quint. Henri administre le Béarn avec l’aide de sa sœur Anne d’Albret et de Jacques de Foix en son absence, tout en consolidant son territoire et son rôle de refuge pour les protestants. ",
   "faitsMarquants": [
-   "1519 : Création du Conseil souverain de Pau, inspiré du modèle navarrais.",
-    "1525 : Capturé à la bataille de Pavie contre François Ier, s’évade rapidement.",
-    "1538-1547 : Transformation de Navarrenx en forteresse bastionnée, inquiétant Charles Quint.",
-    "1551-1552 : Validation et adoption par les États des nouvelles fortifications, imprimé en bearnais.",
+   "1519 : Création du Conseil souverain de Pau, inspiré du modèle navarrais",
+    "1525 : Capturé à la bataille de Pavie contre François Ier, s’évade rapidement",
+    "1538-1547 : Transformation de Navarrenx en forteresse bastionnée, inquiétant Charles Quint",
+    "1551-1552 : Validation et adoption par les États des nouvelles fortifications, imprimé en bearnais",
   ],
   "alliances": "Maison d’Albret, mariage avec Marguerite d’Angoulême, relations avec la cour de France et diplomatie avec les puissances voisines.",
   "contexte": "Son règne se déroule dans un contexte de guerres françaises et de menaces espagnoles, tout en consolidant la souveraineté et les institutions béarnaises, et en affirmant le rôle du Béarn comme refuge pour les protestants.",
@@ -342,14 +342,19 @@ const vicomtesData = {
     "dates": "1555-1572",
     "surnom": "la Souveraine",
     "lignee": "Maison de Navarre",
-    "description": "",
+    "description": "Nièce de François Ier et souveraine du Béarn et de la Navarre, elle fit du Béarn un bastion du protestantisme français et défendit farouchement son indépendance.",
     "image": "/images/vicomtes/febus.jpg",
-    "biographie": "",
+    "biographie": "Convertie à la Réforme, elle entreprit d’organiser un État protestant modèle, s’inspirant de Genève. Sa modération, souvent critiquée par les pasteurs, se manifesta dans son refus d’imposer brutalement la Réforme et son attachement à la tolérance. Elle visita l’imprimerie d’Estienne, fit publier des textes de piété destinés à ses enfants et soutint la traduction du Psautier en béarnais et du Nouveau Testament en basque. Habile diplomate, elle négocia directement avec Catherine de Médicis et Charles IX, puis rejoignit Condé et Coligny à La Rochelle, dont elle fit le centre du parti huguenot.",
     "faitsMarquants": [
-    ],
-    "alliances": "",
-    "contexte": "",
-    "heritage": ""
+        "1560 : Elle veut faire du Béarn un état protestant",
+    "Elle fonde une académie protestante pour former les pasteurs",
+    "Ordonnances limitant les pratiques catholiques mais sans persécution",
+    "Victoire de ses troupes à Orthez (1569) sous le commandement de Montgommery",
+    "1571 : Proclamation du calvinisme comme religion officielle du Béarn",
+   ],
+    "alliances": "Épouse d’Antoine de Bourbon, roi de Navarre ; alliée de Condé, Coligny, Élisabeth et des princes protestants allemands ; en opposition diplomatique constante avec les Guise.",
+    "contexte": "Elle vécut au cœur des guerres de Religion qui déchirèrent la France. Souveraine indépendante, elle défendit l’autonomie du Béarn. Son règne fut marqué par la confrontation entre les partisans de la Réforme et ceux de Rome, dans un Sud-Ouest instable où chaque ville oscillait entre les deux confessions. ",
+    "heritage": " Son œuvre politique et religieuse fit du Béarn un modèle d’État protestant et de tolérance. Protectrice des lettres et des traducteurs, elle contribua à l’essor du basque et du béarnais écrits."
   },
 
 
