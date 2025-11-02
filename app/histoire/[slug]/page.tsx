@@ -1178,7 +1178,7 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
       },
     
        {
-        titre: "Jeanne triomphe à Orthez",
+        titre: "La forteresse de Navarrenx",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
