@@ -346,8 +346,6 @@ const vicomtesData = {
     "image": "/images/vicomtes/febus.jpg",
     "biographie": "Convertie à la Réforme, elle entreprit d’organiser un État protestant modèle, s’inspirant de Genève. Sa modération, souvent critiquée par les pasteurs, se manifesta dans son refus d’imposer brutalement la Réforme et son attachement à la tolérance. Elle visita l’imprimerie d’Estienne, fit publier des textes de piété destinés à ses enfants et soutint la traduction du Psautier en béarnais et du Nouveau Testament en basque. Habile diplomate, elle négocia directement avec Catherine de Médicis et Charles IX, puis rejoignit Condé et Coligny à La Rochelle, dont elle fit le centre du parti huguenot.",
     "faitsMarquants": [
-        "1560 : Elle veut faire du Béarn un état protestant",
-    "Elle fonde une académie protestante pour former les pasteurs",
     "Ordonnances limitant les pratiques catholiques mais sans persécution",
     "Victoire de ses troupes à Orthez (1569) sous le commandement de Montgommery",
     "1571 : Proclamation du calvinisme comme religion officielle du Béarn",
