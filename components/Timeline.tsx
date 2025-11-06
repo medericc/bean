@@ -83,6 +83,34 @@ const periodes: Periode[] = [
     description: "Animée par la vertu, Jeanne d’Albret impose avec fermeté la Réforme",
     slug: 'navarre',
   }
+   ,
+  {
+    annee: "XVIe-XVIIe siècle", 
+    titre: "Entre Béarn et Paris",
+    description: "Le Béarn dirigeait depuis la région parisienne",
+    slug: 'france',
+  }
+  ,
+  {
+    annee: "XVIIe siècle", 
+    titre: "Sous la Monarchie Absolu",
+    description: "Après la mort d'Henri IV, le Béarn rejoint la fleur de Lys",
+    slug: 'france2',
+  }
+  ,
+  {
+    annee: "XVIIIe siècle", 
+    titre: "Vers la Terreur",
+    description: "Des idées nouvelles s'emparent de Londres, Paris, Boston...",
+    slug: 'france3',
+  }
+  ,
+  {
+    annee: "XVIIIe siècle", 
+    titre: "Le Béarn sous la Terreur",
+    description: "Des Peuplicides se mettent en place au nom de la tolérance",
+    slug: 'france4',
+  }
 ];
 
 export default function Timeline() {
