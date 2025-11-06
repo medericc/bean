@@ -1871,7 +1871,7 @@ En 1764, la loge maçonnique St. Andrew’s Lodge de Boston acquiert le Green Dr
       },
     
        {
-        titre: "La mise en place de l'indépendance Américaine",mais
+        titre: "La mise en place de l'indépendance Américaine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
