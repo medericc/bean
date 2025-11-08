@@ -940,6 +940,20 @@ Vers le milieu du XIVᵉ siècle, le Béarn se trouvait dans une situation compl
           </div>
         )
       },
+
+
+         {
+        titre: "L'inquisition espagnole'",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    L’Inquisition espagnole, fondée en 1478 par Isabelle de Castille et Ferdinand d’Aragon, était directement placée sous le contrôle de la monarchie. Son objectif premier était de protéger la vérité révélée au sein d’un royaume marqué par une grande diversité religieuse. En cela, elle se distinguait de l’Inquisition médiévale, davantage dépendante de l’Église. En Espagne, cette Inquisition royale avait le pouvoir de prononcer directement des sentences pouvant aller jusqu’à la peine de mort (2 % des cas au XVIIᵉ siècle). L’exécution de ces condamnations relevait ensuite du bras séculier, c’est-à-dire du pouvoir civil, tandis que les biens des condamnés étaient confisqués au profit de la couronne. Dès ses débuts, l’institution s’attacha principalement à poursuivre les conversos (juifs convertis au christianisme) et les moriscos (musulmans convertis), soupçonnés de continuer à pratiquer en secret leur ancienne religion. Ces soupçons se confirmés par la découverte, lors des premiers procès à Séville, Tolède ou Ciudad Real, de certains rites domestiques tels que l’allumage des bougies du sabbat, l’abstention de porc, ou la célébration de fêtes et de prières spécifiques. Cette surveillance accrue visait aussi à contrer la présence de juifs faussement convertis ayant intégré les ordres religieux, une « infiltration » de l’Église. Ces tensions, combinées à la crainte que les juifs non convertis n’influencent les conversos, aboutirent au décret de l’Alhambra en 1492. Ce texte ordonnait l’expulsion de tous les juifs refusant le baptême. En conséquence, entre 70 000 et 100 000 personnes quittèrent le royaume pour le Portugal (où la conversion fut imposée en 1497), l’Afrique du Nord, l’Empire ottoman, l’Italie ou encore le sud de la France. Plus tard, certaines de ces communautés s’établirent dans des villes européennes comme Hambourg, Francfort ou en Angleterre (après 1655). Cette décision permit à la monarchie d’affirmer l’unité religieuse et politique du royaume, ouvrant la voie à ce que l’on appellera son « Âge d’or », de 1492 à 1681. Après 1492, l’Inquisition poursuivit la traque des conversos jusque dans les années 1530, avant de concentrer ses efforts sur les moriscos, jusqu’à leur expulsion définitive en 1609. Par la suite, elle devint un organe général de contrôle de l’orthodoxie religieuse, s’attaquant aux protestants, aux mystiques jugés suspects, les alumbrados, ainsi qu’aux lecteurs d’ouvrages figurant à l’Index, la liste officielle des livres interdits. À titre de comparaison, l’Inquisition médiévale, notamment en France, fonctionnait de manière sensiblement différente. La peine était prononcée par le bras séculier après une condamnation de l’Inquisition (qui menait au préalable une véritable enquête comme en Espagne). Contrairement aux tribunaux civils de l’époque, souvent expéditifs, cette Inquisition (créée pour modérer les excès de justice) privilégiait des peines telles que la prison, les pèlerinages ou les pénitences, plutôt que la mort.
+       </p>
+          </div>
+        )
+      },
+
+
         {
         titre: "La Castille menace Pampelune",
         contenu: (
