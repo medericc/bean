@@ -689,6 +689,21 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
           </div>
         )
       },
+
+
+  {
+        titre: "La 7e croisade",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Lors de la septième croisade, le roi de France Saint Louis entreprend une expédition vers l’Égypte pour libérer les lieux saints des mains musulmanes. Il connaît cependant un échec militaire : capturé à Mansourah en 1250, il est libéré contre rançon. Plutôt que de rentrer aussitôt en France, il choisit de rester au Proche-Orient, notamment à Saint-Jean-d’Acre, en Syrie et en Palestine, pendant près de quatre ans. Là, il s’emploie à reconstruire et fortifier les cités chrétiennes, à aider les populations locales et à soutenir les communautés chrétiennes d’Orient. C’est durant ce séjour qu’il a formulé une promesse solennelle, celle que la France protégerait toujours les chrétiens d’Orien. Cette mission de “fille aînée de l’Église” sera honorée par la France pendant des siècles jusqu’à la Révolution française. Aujourd'hui 380 millions de chrétiens sont persécutés à travers le monde, 1 sur 7.
+      </p>
+          </div>
+        )
+      },
+
+
+
        {
         titre: "Entre vassalité anglaise et autonomie béarnaise",
         contenu: (
