@@ -1729,12 +1729,12 @@ Après la victoire américaine de 1783, les réseaux commerciaux juifs et protes
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Le 15 juillet 1789, au lendemain de la prise de la Bastille, Jean-Sylvain Bailly est élu maire de Paris. Son élection, est acquise par 4 % des Parisiens et fait de lui le premier chef civil de la Révolution. Franc maçon, Bailly incarne la bourgeoisie éclairée qui prend le pouvoir au nom du peuple, mais sans lui.  Les femmes élues ou qui votaient comme chefs de maison dans les assemblées, perdent ce droit et sont exclus par des gens auto-élus. La République ne reconnaît ni les femmes, ni les familles, mais seulement des individus soumis à l’État (objets). Les communautés religieuses sont dissoutes, les couvents pillés, les prêtres chassés, les sœurs dispersées. Certaines, comme les seize SAINTES carmélites de Compiègne, sont guillotinées, montant à l’échafaud en chantant le Veni Creator. Leur seul crime : avoir refusé de renier leur vœu et leur foi catholique. La fidélité religieuse est un motif de mort. Entre 1789 et 1799, la République entraîna un effondrement du clergé français : le nombre de religieuses passa de 50 000 à 2 000, et celui des prêtres de 125 000 à 25 000.
+Le 15 juillet 1789, au lendemain de la prise de la Bastille, Jean-Sylvain Bailly est élu maire de Paris. Son élection, est acquise par 4 % des Parisiens et fait de lui le premier chef civil de la Révolution. Franc maçon, Bailly incarne la bourgeoisie éclairée qui prend le pouvoir au nom du peuple, mais sans lui.  Les femmes élues ou qui votaient comme chefs de maison dans les assemblées, perdent ce droit et sont exclus par des gens auto-élus. La République ne reconnaît ni les femmes, ni les familles, mais seulement des individus soumis à l’État (objets). Les communautés religieuses sont dissoutes, les couvents pillés, les prêtres chassés, les sœurs dispersées. Certaines, comme les seize SAINTES carmélites de Compiègne, sont guillotinées, montant à l’échafaud en chantant le Veni Creator. Leur seul crime : avoir refusé de renier leur vœu et leur foi catholique. La fidélité religieuse est un motif de mort. Entre 1789 et 1799, le nombre de religieuses passa de 50 000 à 2 000, et celui des prêtres de 125 000 à 25 000.
  </p>
           </div>
         )
       },
-
+  
         {
         titre: "Les langues régionales",
         contenu: (
@@ -1742,6 +1742,16 @@ Le 15 juillet 1789, au lendemain de la prise de la Bastille, Jean-Sylvain Bailly
             <p>
 Bertrand Barère, député montagnard et orateur du Comité de salut public, propose d’interdire l’usage des langues régionales : breton, basque, alsacien, corse sauf le gascon car c’est la sienne. Dans la foulée, l’abbé Henri Grégoire, évêque constitutionnel de Blois, publie son célèbre Rapport sur la nécessité et les moyens d’anéantir les patois. Sous prétexte d’unité nationale, il préconise la disparition des langues locales, assimilées à l’ignorance et au fanatisme car seule la langue française peut incarner la République donc pas de gascon. Alors que depuis l’ordonnance de Villers-Cotterêts, en 1539, François Ier avait imposé le français pour les actes administratifs, mais aucun roi n’avait jamais voulu effacer les langues du peuple. Ce qui fut une richesse devient un crime.
   </p>
+          </div>
+        )
+      },
+        {
+        titre: "La DDHC",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La Déclaration des droits de l’homme et du citoyen est signée le 26 août 1789, « en présence et sous les auspices de l’Être suprême ». À la suite de cet événement, on assiste à l’émergence du culte de la Raison et à la transformation de Notre-Dame de Paris en Temple de la Raison. Cette déclaration possède aujourd’hui une valeur constitutionnelle, au même titre que la Constitution de 1958. Le Conseil constitutionnel, institution française créée par la Constitution de la Cinquième République du 4 octobre 1958, a pour premier secrétaire général Michel Debré, d'origine juive. Son fils, Jean-Louis Debré, deviendra même plus tard président du Conseil constitutionnel. Il exprimera une profonde admiration pour celle qu’il appelle « Sainte Marianne », symbole de la République, « fruit de ses entrailles, aussi bénie ». Jean-Louis Debré n’hésite pas à user de déclaration pour rendre hommage aux soldats de l’an II, les héros de la nation avec leur Génocide Vendéen.
+ </p>
           </div>
         )
       },
