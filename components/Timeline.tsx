@@ -65,12 +65,37 @@ const periodes: Periode[] = [
     description: "Le Béarn se consolide, posant les bases d’une véritable indépendance",
     slug: 'marguerite',
   },
-  {
+   {
     annee: "XIVe-XVe siècle", 
-    titre: "Souveraineté Béarnaise",
+    titre: "L'Apogée Militaire",
     description: "Sous Fébus, le Béarn atteint son apogée politique",
     slug: 'souverainete',
   },
+  {
+    annee: "XIVe-XVe siècle", 
+    titre: "L'Apogée Militaire",
+    description: "Le Béarn s'impose militairement et diplomatiquement",
+    slug: 'souverainete2',
+  },
+  {
+    annee: "XIVe-XVe siècle", 
+   titre: "L'Affirmation Béarnaise",
+    description: "Le Béarn sous la Menace du Prince Noir",
+    slug: 'souverainete3',
+  },
+   {
+    annee: "XIVe-XVe siècle", 
+    titre: "Les Drames de Fébus",
+    description: "Le Béarn entre Guerre et Tragédie",
+    slug: 'souverainete4',
+  },
+  {
+    annee: "XIVe-XVe siècle", 
+    titre: "Le Béarn Post-Fébus",
+    description: "Les États en affirmation définitivement l'indépendance",
+    slug: 'souverainete5',
+  },
+ 
   {
     annee: "XVe-XVIe siècle", 
     titre: "Union avec la Navarre",

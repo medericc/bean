@@ -998,10 +998,10 @@ Pour tenter d’apaiser le conflit, Jean II chercha à médiatiser la querelle p
 
 
      'souverainete2': {
-    titre: "Souveraineté",
+    titre: "L'Apogée Militaire",
     periode: "Moyen Age",
-    resume: "Le Béarn souverain sous Gaston Fébus",
-    introduction: "Puissance, art et liberté définissent l’État fébusien...",
+    resume: "Fébus en héros de l'Occident",
+    introduction: "Fébus forge s'impose militairement et diplomatiquement....",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
@@ -1158,10 +1158,10 @@ En 1388, Gaston Fébus, comte de Foix, remporta une victoire décisive contre le
   },
 
    'souverainete3': {
-    titre: "Souveraineté",
+    titre: "L'Affirmation Béarnaise",
     periode: "Moyen Age",
-    resume: "Le Béarn souverain sous Gaston Fébus",
-    introduction: "Puissance, art et liberté définissent l’État fébusien...",
+    resume: "La neutralité du Béarn",
+    introduction: "Gaston Fébus face au Prince Noir...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
 
@@ -1340,10 +1340,10 @@ L’expédition du Prince Noir débuta par un triomphe, le 3 avril 1366, à Náj
 
 
  'souverainete4': {
-    titre: "Souveraineté",
+    titre: "Les Drames de Fébus",
     periode: "Moyen Age",
-    resume: "Le Béarn souverain sous Gaston Fébus",
-    introduction: "Puissance, art et liberté définissent l’État fébusien...",
+    resume: "Conflits et Tragédie",
+    introduction: "Guerre contre le Comminges et Médiation...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
 
@@ -1532,8 +1532,8 @@ Quatre ans plus tard, le 17 août 1380, Gaston Fébus règle son hommage au châ
 'souverainete5': {
     titre: "Souveraineté",
     periode: "Moyen Age",
-    resume: "Le Béarn souverain sous Gaston Fébus",
-    introduction: "Puissance, art et liberté définissent l’État fébusien...",
+    resume: "Les derniers actes de Fébus",
+    introduction: "Les États en affirmation définitivement l'indépendance...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
 
