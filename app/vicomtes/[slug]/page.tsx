@@ -219,14 +219,14 @@ const vicomtesData = {
   "lignee": "Maison de Foix-Béarn",
   "description": "Figure majeure du XIVᵉ siècle, Gaston Fébus fut un chef de guerre redouté (victoire de Launac), un diplomate habile (neutralité franco-anglaise) et un bâtisseur d'État. Il transforma ses domaines en une véritable principauté pyrénéenne souveraine, marquant l'apogée de la puissance béarnaise.",
   "image": "/images/vicomtes/febus.jpg",
-  "biographie": "Héros de la croisade de Prusse (1357) et sauveur des dames de Meaux (1358), Fébus consacre son règne à l'affirmation de sa souveraineté. Il écrase son rival, le comte d'Armagnac, à la bataille de Launac (1362). Par une diplomatie habile, il maintient le Béarn en neutralité entre la France et l'Angleterre, refusant l'hommage au Prince Noir. Sa vie est marquée par le drame d'Orthez (1380), où il tue son propre fils Gaston. Devenu l'arbitre du Midi, il reçoit fastueusement Charles VI à Toulouse (1390) mais meurt subitement en 1391, laissant un trésor immense et un État indépendant.",
+  "biographie": "Héros de la croisade de Prusse et sauveur des dames de Meaux, Fébus consacre son règne à l'affirmation de sa souveraineté. Il écrase son rival, le comte d'Armagnac, à la bataille de Launac (1362). Par une diplomatie habile, il maintient le Béarn en neutralité entre la France et l'Angleterre, refusant l'hommage au Prince Noir. Sa vie est marquée par le drame d'Orthez (1380), où il tue son propre fils Gaston. Devenu l'arbitre du Midi, il reçoit fastueusement Charles VI à Toulouse.",
   "faitsMarquants": [
     "Participe à la Croisade de Prusse",
     "Victoire totale sur la coalition Armagnac-Albret",
     "Refus de prêter hommage au Prince Noir",
     "1387-1388 : Rédige le 'Livre de la Chasse' et le 'Livre des Oraisons'",
   ],
-  "alliances": "Mariage avec Agnès de Navarre (sœur de Charles le Mauvais). Rivalité à mort avec la Maison d'Armagnac. Neutralité et alliances de circonstance avec la France (Charles V, Charles VI) et l'Angleterre (Prince Noir, Duc de Lancastre). Alliances avec l'Aragon.",
+  "alliances": "Mariage avec Agnès de Navarre, sœur de Charles le Mauvais. Rivalité à mort avec la Maison d'Armagnac. Neutralité et alliances de circonstance avec la France (Charles V, Charles VI) et l'Angleterre (Prince Noir, Duc de Lancastre). Alliances avec l'Aragon.",
   "contexte": "Son règne se déroule en pleine Guerre de Cent Ans, profitant de l'affaiblissement des couronnes de France et d'Angleterre pour bâtir un État pyrénéen. C'est une ère de troubles (Jacquerie, Tuchins, Grand Schisme) où Fébus impose son ordre.",
   "heritage": "Laisse un Béarn souverain de fait, doté d'un trésor colossal et d'institutions solides (États de Béarn) qui survivront à la crise de succession. Il lègue une œuvre littéraire majeure ('Livre de la Chasse') et l'image d'un prince de la Renaissance avant l'heure."
 },
