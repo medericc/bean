@@ -86,7 +86,7 @@ const periodes: Periode[] = [
    {
     annee: "XIVe-XVe siècle", 
     titre: "Les Drames de Fébus",
-    description: "Le Béarn entre Guerre et Tragédie",
+    description: "Le Pays de Béarn entre Guerre et Tragédie",
     slug: 'souverainete4',
   },
   {
@@ -133,7 +133,7 @@ const periodes: Periode[] = [
   {
     annee: "XVIIIe siècle", 
     titre: "Le Béarn sous la Terreur",
-    description: "Des Peuplicides se mettent en place au nom de la tolérance",
+    description: "Des Peuplicides se mettent en place au nom de la Tolérance",
     slug: 'france4',
   }
 ];
