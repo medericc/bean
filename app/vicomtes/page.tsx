@@ -168,11 +168,20 @@ const vicomtes = [
   {
     slug: "jeanne",
     titre: "Jeanne d'Albret",
-    description: "Dernier vicomte souverain de Béarn avant son accession au trône de France.",
+    description: "Dernier vicomte souverain de Béarn avant l'accession d'Henri IV au trône de France.",
     image: "/images/vicomtes/henri-iv.jpg",
     periode: "1555-1572",
     lignee: "Navarre",
     badge: "Réformatrice"
+  },
+   {
+    slug: "catherine2",
+    titre: "Catherine de Bourbon",
+    description: "Nommé par son frère Henri 3 de Navarre, elle assure la régence et gouvernance du Béarn.",
+    image: "/images/vicomtes/henri-iv.jpg",
+    periode: "1577-1592",
+    lignee: "Navarre",
+    badge: "Vertueuse"
   }
 ];
 
