@@ -67,7 +67,7 @@ const periodes: Periode[] = [
   },
    {
     annee: "XIVe-XVe siècle", 
-    titre: "L'Apogée Militaire",
+    titre: "La Souveraineté",
     description: "Sous Fébus, le Béarn atteint son apogée politique",
     slug: 'souverainete',
   },
