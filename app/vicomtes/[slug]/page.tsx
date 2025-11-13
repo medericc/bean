@@ -358,10 +358,33 @@ const vicomtesData = {
     "contexte": "Elle vécut au cœur des guerres de Religion qui déchirèrent la France. Souveraine indépendante, elle défendit l’autonomie du Béarn. Son règne fut marqué par la confrontation entre les partisans de la Réforme et ceux de Rome, dans un Sud-Ouest instable où chaque ville oscillait entre les deux confessions. ",
     "heritage": " Son œuvre politique et religieuse fit du Béarn un modèle d’État protestant et de tolérance. Protectrice des lettres et des traducteurs, elle contribua à l’essor du basque et du béarnais écrits."
   },
+  
+"catherine2":  {
+    "titre": "Catherine de Bourbon",
+   "dates": "1577-1592",
+    "surnom": "La Princesse des Vertus", 
+    "lignee": "Maison de Navarre",
+    "description": "Sœur du roi Henri IV, Catherine de Bourbon assura la régence du Béarn pendant les guerres de Religion. Elle défendit la souveraineté du Béarn et la cause royale contre la Ligue et l'Espagne, tout en maintenant un équilibre religieux et en affirmant son autorité administrative.", 
+    "image": "/images/vicomtes/febus.jpg",
+  "biographie": "Nommée régente et gouvernante du Béarn par son frère Henri de Navarre en 1577, après avoir elle-même ré-abjuré le catholicisme (1576). Pendant que son frère combat en France, elle administre le Béarn : elle convoque les États, gère les finances, supervise les ateliers monétaires et introduit le français comme langue administrative. Elle mène la défense militaire contre les incursions de la Ligue et de l'Espagne, notamment en Soule et en Bigorre. Elle accueille le fugitif espagnol Antonio Pérez à Pau en 1591. Sa régence est marquée par sa volonté d'épouser le comte de Soissons, un projet auquel Henri IV s'oppose fermement pour des raisons dynastiques. L'intervention du Conseil Souverain de Pau pour empêcher cette union (l'affaire de Pau, 1592) la place en conflit ouvert avec l'autorité de son frère. Elle quitte le Béarn en octobre 1592, utilisant la menace d'une invasion espagnole comme prétexte pour organiser son départ.", 
+    "faitsMarquants": [ 
+      "31 mai 1576 : Déclare son abjuration forcée au catholicisme 'nulle et non avenue' à Palaiseau", 
+      "Janvier 1577 : Nommée régente des domaines du sud-ouest et gouvernante du Béarn", "1585-1588 : Se réfugie à Navarrenx pour organiser la défense face à la menace de la Ligue", 
+      "19 août 1589 : Ordonne la proclamation solennelle de son frère comme roi de France (Henri IV)", 
+      "Février-Mars 1591 : Voyage officiel à Bayonne où elle exige et reçoit les honneurs souverains", 
+      "26 novembre 1591 : Reçoit et protège le fugitif espagnol Antonio Pérez au château de Pau", 
+      "6 avril 1592 : 'Affaire de Pau' : le Conseil Souverain intervient pour l'empêcher d'épouser le comte de Soissons", 
+      "26 octobre 1592 : Quitte le Béarn, mettant fin à sa régence effective" ], 
+   "alliances": "Henri IV (son frère, roi de France et de Navarre), Comte de Soissons (projet de mariage politique), États de Béarn, Maréchal de Matignon (allié militaire), Antonio Pérez (protégé).",
+    "contexte": "Son action se situe en pleines guerres de Religion, durant la lutte entre Henri IV, la Ligue catholique et l'Espagne de Philippe II. Le Béarn, bastion protestant, est une enclave stratégique convoitée.",
+  "heritage": "Elle a assuré la stabilité et la défense du Béarn pendant l'absence d'Henri IV, consolidé le rôle des États du Béarn, modernisé l'administration (monnaie, langue française) et affirmé la souveraineté béarnaise face aux menaces extérieures." 
+}
 
 
-  // ... autres vicomtes
+
 };
+
+
 function getLigneeSlug(lignee: string): string {
   const normalized = lignee.toLowerCase();
 
