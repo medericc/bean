@@ -177,7 +177,7 @@ const vicomtes = [
    {
     slug: "catherine2",
     titre: "Catherine de Bourbon",
-    description: "Nommé par son frère Henri 3 de Navarre, elle assure la régence et gouvernance du Béarn.",
+    description: "Nommé par son frère Henri III de Navarre, elle assure la régence et gouvernance du Béarn.",
     image: "/images/vicomtes/henri-iv.jpg",
     periode: "1577-1592",
     lignee: "Navarre",
