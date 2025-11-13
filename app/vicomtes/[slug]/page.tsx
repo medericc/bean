@@ -219,7 +219,7 @@ const vicomtesData = {
   "lignee": "Maison de Foix-Béarn",
   "description": "Figure majeure du XIVᵉ siècle, Gaston Fébus fut un chef de guerre redouté (victoire de Launac), un diplomate habile (neutralité franco-anglaise) et un bâtisseur d'État. Il transforma ses domaines en une véritable principauté pyrénéenne souveraine, marquant l'apogée de la puissance béarnaise.",
   "image": "/images/vicomtes/febus.jpg",
-  "biographie": "Héros de la croisade de Prusse et sauveur des dames de Meaux, Fébus consacre son règne à l'affirmation de sa souveraineté. Il écrase son rival, le comte d'Armagnac, à la bataille de Launac (1362). Par une diplomatie habile, il maintient le Béarn en neutralité entre la France et l'Angleterre, refusant l'hommage au Prince Noir. Sa vie est marquée par le drame d'Orthez (1380), où il tue son propre fils Gaston. Devenu l'arbitre du Midi, il reçoit fastueusement Charles VI à Toulouse.",
+  "biographie": "Héros de la croisade de Prusse et sauveur des dames de Meaux, Fébus consacre son règne à l'affirmation de sa souveraineté. Il écrase son rival, le comte d'Armagnac, à la bataille de Launac (1362). Par une diplomatie habile, il maintient le Béarn en neutralité entre la France et l'Angleterre, refusant l'hommage au Prince Noir. Devenu l'arbitre du Midi, il reçoit fastueusement Charles VI à Toulouse.",
   "faitsMarquants": [
     "Participe à la Croisade de Prusse",
     "Victoire totale sur la coalition Armagnac-Albret",
