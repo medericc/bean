@@ -372,8 +372,7 @@ const vicomtesData = {
       "19 août 1589 : Ordonne la proclamation solennelle de son frère comme roi de France (Henri IV)", 
       "Février-Mars 1591 : Voyage officiel à Bayonne où elle exige et reçoit les honneurs souverains", 
       "26 novembre 1591 : Reçoit et protège le fugitif espagnol Antonio Pérez au château de Pau", 
-      "6 avril 1592 : 'Affaire de Pau' : le Conseil Souverain intervient pour l'empêcher d'épouser le comte de Soissons", 
-      "26 octobre 1592 : Quitte le Béarn, mettant fin à sa régence effective" ], 
+    ], 
    "alliances": "Henri IV (son frère, roi de France et de Navarre), Comte de Soissons (projet de mariage politique), États de Béarn, Maréchal de Matignon (allié militaire), Antonio Pérez (protégé).",
     "contexte": "Son action se situe en pleines guerres de Religion, durant la lutte entre Henri IV, la Ligue catholique et l'Espagne de Philippe II. Le Béarn, bastion protestant, est une enclave stratégique convoitée.",
   "heritage": "Elle a assuré la stabilité et la défense du Béarn pendant l'absence d'Henri IV, consolidé le rôle des États du Béarn, modernisé l'administration (monnaie, langue française) et affirmé la souveraineté béarnaise face aux menaces extérieures." 
