@@ -25,7 +25,7 @@ interface Props {
 const vicomtesData = {
   "centulle-iv": {
   "titre": "Centulle IV",
-  "surnom": "le Vieux",
+  "surnom": "Le Vieux",
   "dates": "vers 1020 – 1058",
   "lignee": "Maison de Centulle",
   "description": "Vicomte de Béarn entre 1020 et 1058, Centulle IV, dit le Vieux, consolida durablement la puissance béarnaise en s’appuyant sur un solide patrimoine centré sur le Vic-Bilh, foyer ancestral de sa lignée. Héritier de Gaston II, il récupéra pacifiquement la vicomté d’Oloron, d’abord co-dirigée avec un bâtard local, avant d’en devenir seul maître à la mort de celui-ci. Son règne marqua un tournant : la seigneurie béarnaise, jadis tournée vers Toulouse, s’ouvrit désormais vers l’Espagne et les royaumes hispano-chrétiens, suivant les routes de Compostelle et de Vézelay. Engagé dans des conflits constants avec les Dacquois et les seigneurs voisins, il détacha en 1056 le vassal de Salies pour affermir son autorité. Il fut finalement tué par les Souletins en 1058.",
@@ -45,7 +45,7 @@ const vicomtesData = {
 "centulle-v": {
   "titre": "Centulle V le Jeune",
   "dates": "1058–1090",
-  "surnom": "le Jeune",
+  "surnom": "Le Jeune",
   "lignee": "Maison de Centulle",
   "description": "Vicomte réformateur et bâtisseur de l’indépendance béarnaise, Centulle V consolide le pouvoir local, réforme l’administration et renforce l’alliance religieuse et politique avec Cluny et Rome.",
   "image": "/images/vicomtes/centulle-v-detail.jpg",
@@ -63,7 +63,7 @@ const vicomtesData = {
 ,
 "gaston-iv": {
   "titre": "Gaston IV",
-  "surnom": "le Croisé",
+  "surnom": "Le Croisé",
   "dates": "1090 – 1131",
   "lignee": "Maison de Centulle",
   "description": "Vicomte de Béarn entre la fin du XIe et le début du XIIe siècle, Gaston IV, surnommé le Croisé, incarna la puissance féodale et spirituelle du Béarn médiéval. Guerrier, diplomate et homme de foi, il sut allier croisade, réforme et expansion territoriale tout en maintenant la cohésion de ses terres.",
@@ -84,7 +84,7 @@ const vicomtesData = {
 
 "talese-d-aragon": {
   titre: "Talèse d’Aragon",
-  surnom: "la Régente",
+  surnom: "La Régente",
   dates: "1090 – 1137",
   lignee: "Maison de Centulle",
   description: "Sœur du roi Sanche Ramírez d’Aragon et épouse de Gaston IV de Béarn, Talèse d’Aragon fut une figure majeure du XIe–XIIe siècle, liant durablement le Béarn au royaume d’Aragon par le mariage, la diplomatie et la religion.",
@@ -104,7 +104,7 @@ const vicomtesData = {
 "marie": { 
   "titre": "Marie de Béarn", 
   "dates": "1170 – 1173",
-  "surnom": "la Pieuse",
+  "surnom": "La Pieuse",
   "lignee": "Maison de Gabarret", 
   "description": "Fille de Pierre III de Gabarret et sœur de Gaston V, Marie de Béarn fut la première vicomtesse à placer durablement le Béarn sous l’influence du royaume d’Aragon. Femme de devoir et de piété, elle servit de lien décisif entre les traditions gasconnes et la culture catalano-aragonaise. Son règne, bien que bref, marqua un tournant dans l’histoire féodale du Béarn.", 
   "image": "/images/vicomtes/marie-detail.jpg", 
@@ -122,7 +122,7 @@ const vicomtesData = {
 "gaston-vi": {
   "titre": "Gaston VI",
   "dates": "1173– 1214",
-  "surnom": "le Bon",
+  "surnom": "Le Bon",
   "lignee": "Maison de Moncade",
  "description": "Vicomte diplomate pris entre Aragon, Aquitaine et la Croisade albigeoise, Gaston VI défend l’indépendance béarnaise tout en servant la politique aragonaise.",
   "image": "/images/vicomtes/gaston-vi-detail.jpg",
@@ -140,7 +140,7 @@ const vicomtesData = {
 "guillaume-raymond": {
   "titre": "Guillaume-Raymond",
   "dates": "1214 – 1224",
-  "surnom": "le Repenti",
+  "surnom": "Le Repenti",
   "lignee": "Maison de Moncade",
   "description": "Frère jumeau de Gaston VI de Béarn, Guillaume-Raymond de Moncade incarne la transition du Béarn vers la maison catalane des Moncade. Seigneur énergique et parfois brutal, il marque la vicomté par d’importantes réformes institutionnelles et par son rôle dans les luttes d’influence entre la France et l’Aragon au début du XIIIe siècle.",
   "image": "/images/vicomtes/guillaume-raymond-moncade.jpg",
@@ -158,7 +158,7 @@ const vicomtesData = {
  ,"guillaume-ii": {
   "titre": "Guillaume II",
   "dates": "1224-1229",
-  "surnom": "le Croisé des Baléares",
+  "surnom": "Le Croisé des Baléares",
   "lignee": "Maison de Moncade",
   "description": "Fils de Guillaume-Raymond Ier de Moncade et de Guillemette de Castelviel, Guillaume II fut à la fois seigneur catalan et vicomte de Béarn. Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée, partagée entre Catalogne et Béarn.",
   "image": "/images/vicomtes/guillaume2-detail.jpg",
@@ -176,7 +176,7 @@ const vicomtesData = {
 "gaston-vii": {
   "titre": "Gaston VII",
   "dates": "1229 – 1290",
-  "surnom": "le Grand",
+  "surnom": "Le Grand",
   "lignee": "Maison de Moncade",
   "description": "Dernier grand vicomte indépendant du Béarn médiéval, Gaston VII consolida le pouvoir béarnais tout en jonglant entre la suzeraineté anglaise, aragonaise et castillane. Chef énergique et orgueilleux, il affirma durablement l’autonomie du Béarn dans un contexte de rivalités féodales intenses.",
   "image": "/images/vicomtes/marie-detail.jpg",
@@ -196,7 +196,7 @@ const vicomtesData = {
   "marguerite": {
     "titre": "Marguerite de Béarn",
     "dates": "1290 – 1319",
-    "surnom": "la Diplomate",
+    "surnom": "La Diplomate",
     "lignee": "Maison de Moncade",
     "description": "Héritière des Moncade et fille de Gaston VII de Béarn, Marguerite de Béarn fut l’une des plus fortes personnalités politiques du Béarn médiéval. Par son mariage avec Roger-Bernard III de Foix, elle unit durablement le Béarn et le comté de Foix, tout en maintenant l’indépendance du pays face aux rois de France et d’Angleterre.",
     "image": "/images/vicomtes/marie-detail.jpg",
@@ -215,7 +215,7 @@ const vicomtesData = {
 "gaston-febus": {
   "titre": "Gaston Fébus",
   "dates": "1343-1391",
-  "surnom": "le Prince",
+  "surnom": "Le Prince",
   "lignee": "Maison de Foix-Béarn",
   "description": "Figure majeure du XIVᵉ siècle, Gaston Fébus fut un chef de guerre redouté (victoire de Launac), un diplomate habile (neutralité franco-anglaise) et un bâtisseur d'État. Il transforma ses domaines en une véritable principauté pyrénéenne souveraine, marquant l'apogée de la puissance béarnaise.",
   "image": "/images/vicomtes/febus.jpg",
@@ -234,7 +234,7 @@ const vicomtesData = {
 "mathieu": {
   "titre": "Mathieu de Castelbon",
   "dates": "1391-1398",
-  "surnom": "le Conservateur",
+  "surnom": "Le Conservateur",
   "lignee": "Maison de Foix-Béarn",
   "description": "Cousin de Gaston Fébus, Mathieu de Castelbon fut reconnu vicomte de Béarn grâce au soutien des États de Béarn. Son règne, bien que bref, permit de consolider l’indépendance et les institutions du Béarn face aux ambitions française et anglaise.",
   "image": "/images/vicomtes/mathieu-castelbon-detail.jpg",
@@ -269,7 +269,7 @@ const vicomtesData = {
 "jean": {
   "titre": "Jean de Grailly",
   "dates": "1412-1436",
-  "surnom": "le Navigateur",
+  "surnom": "Le Navigateur",
   "lignee": "Maison de Foix-Béarn",
   "description": "Fils d’Archambaud de Grailly et d’Isabelle de Castelbon, Jean Ier succède à sa mère en 1412 et dirige le Béarn tout en composant avec la France et l’Angleterre. Il maintient la neutralité du Béarn tout en étendant son influence militaire et diplomatique dans le sud de la France.",
   "image": "/images/vicomtes/jean1-detail.jpg",
@@ -307,7 +307,7 @@ const vicomtesData = {
 "catherine": {
   "titre": "Catherine de Foix",
   "dates": "1483-1517",
-  "surnom": "la Tenace",
+  "surnom": "La Tenace",
   "lignee": "Maison de Navarre",
   "description": "Sœur de François Phébus, Catherine hérite du Béarn et de la Navarre et épouse Jean d’Albret. Elle défend vigoureusement la souveraineté du Béarn contre la France et l’Espagne, affirmant le rôle indépendant des États et le pouvoir royal propre sur son territoire.",
   "image": "/images/vicomtes/catherine-foix-detail.jpg",
@@ -326,7 +326,7 @@ const vicomtesData = {
 "henri": {
   "titre": "Henri II d’Albret",
   "dates": "1517-1555",
-  "surnom": "l'Évadé",
+  "surnom": "L'Évadé",
   "lignee": "Maison de Navarre",
   "description": "Fils de Catherine de Foix, Henri II d’Albret hérite du Béarn à 14 ans et épouse Marguerite d’Angoulême, sœur de François Ier. Il renforce la souveraineté béarnaise, introduit des réformes administratives et fait du Béarn un refuge pour les protestants, tout en restant impliqué dans la cour et les guerres françaises.",
   "image": "/images/vicomtes/henri2-albret-detail.jpg",
@@ -344,7 +344,7 @@ const vicomtesData = {
 "jeanne": {
     "titre": "Jeanne d'Albret",
     "dates": "1555-1572",
-    "surnom": "la Souveraine",
+    "surnom": "La Souveraine",
     "lignee": "Maison de Navarre",
     "description": "Nièce de François Ier et souveraine du Béarn et de la Navarre, elle fit du Béarn un bastion du protestantisme français et défendit farouchement son indépendance.",
     "image": "/images/vicomtes/febus.jpg",
@@ -369,8 +369,7 @@ const vicomtesData = {
   "biographie": "Régente et gouvernante du Béarn après avoir ré-abjuré le catholicisme, elle convoque les États, gère les finances, supervise les ateliers monétaires et introduit le français comme langue administrative. Elle mène la défense militaire contre les incursions de la Ligue et de l'Espagne, notamment en Soule et en Bigorre.", 
     "faitsMarquants": [ 
      "Janvier 1577 : Nommée régente des domaines du sud-ouest et gouvernante du Béarn", "1585-1588 : Se réfugie à Navarrenx pour organiser la défense face à la menace de la Ligue", 
-      "19 août 1589 : Ordonne la proclamation solennelle de son frère comme roi de France (Henri IV)", 
-      "Février-Mars 1591 : Voyage officiel à Bayonne où elle exige et reçoit les honneurs souverains", 
+    "Février-Mars 1591 : Voyage officiel à Bayonne où elle exige et reçoit les honneurs souverains", 
       "26 novembre 1591 : Reçoit et protège le fugitif espagnol Antonio Pérez au château de Pau", 
     ], 
    "alliances": "Henri IV (son frère, roi de France et de Navarre), Comte de Soissons (projet de mariage politique), États de Béarn, Maréchal de Matignon (allié militaire), Antonio Pérez (protégé).",
