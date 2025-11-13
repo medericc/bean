@@ -26,7 +26,7 @@ const vicomtesData = {
   "centulle-iv": {
   "titre": "Centulle IV",
   "surnom": "Le Vieux",
-  "dates": "vers 1020 – 1058",
+  "dates": "1020 – 1058",
   "lignee": "Maison de Centulle",
   "description": "Vicomte de Béarn entre 1020 et 1058, Centulle IV, dit le Vieux, consolida durablement la puissance béarnaise en s’appuyant sur un solide patrimoine centré sur le Vic-Bilh, foyer ancestral de sa lignée. Héritier de Gaston II, il récupéra pacifiquement la vicomté d’Oloron, d’abord co-dirigée avec un bâtard local, avant d’en devenir seul maître à la mort de celui-ci. Son règne marqua un tournant : la seigneurie béarnaise, jadis tournée vers Toulouse, s’ouvrit désormais vers l’Espagne et les royaumes hispano-chrétiens, suivant les routes de Compostelle et de Vézelay. Engagé dans des conflits constants avec les Dacquois et les seigneurs voisins, il détacha en 1056 le vassal de Salies pour affermir son autorité. Il fut finalement tué par les Souletins en 1058.",
   "image": "/images/vicomtes/centulle-iv-detail.jpg",
