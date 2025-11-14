@@ -2397,7 +2397,7 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
     titre: "Vers la Terreur",
     periode: "Renaissance",
     resume: "La monarchie française devant la mondialisation",
-    introduction: "Des idées nouvelles s'emparent de Londres, Paris, Boston...",
+    introduction: "Des idées noahides s'emparent de Londres, Paris, Boston...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
 

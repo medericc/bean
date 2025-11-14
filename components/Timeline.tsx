@@ -126,7 +126,7 @@ const periodes: Periode[] = [
   {
     annee: "XVIIIe siècle", 
     titre: "Vers la Terreur",
-    description: "Des idées nouvelles s'emparent de Londres, Paris, Boston...",
+    description: "Des idées noahides s'emparent de Londres, Paris, Boston...",
     slug: 'france3',
   }
   ,
