@@ -119,7 +119,7 @@ const periodes: Periode[] = [
   {
     annee: "XVIIe siècle", 
     titre: "Sous la Monarchie Absolue",
-    description: "Après la mort d'Henri IV, le Béarn rejoint la fleur de Lys",
+    description: "Après la mort d'Henri IV, le Béarn rejoint la Fleur de Lys",
     slug: 'france2',
   }
   ,
