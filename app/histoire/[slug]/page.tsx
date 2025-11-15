@@ -2480,7 +2480,16 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
     introduction: "Des idées noahides s'emparent de Londres, Paris, Boston...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
-
+{
+        titre: "Les Dönmeh",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sabbataï Tsevi se proclame Messie au sein du judaïsme sépharade, en 1666, il est arrêté par les Ottomans, pour ne pas mourir il choisit l’islam, publiquement, sous le nom de Mehmed Efendi. Pour ses disciples, cette “apostasie” n’est pas une trahison mais un acte mystique conforme à leur théologie car le Messie doit descendre dans le mal pour libérer les étincelles divines (descendre dans Ishmaël). Donc une partie de ses disciples font la même chose. 
+ </p>
+          </div>
+        )
+      },
  {
         titre: "Les relations en Europe",
         contenu: (
