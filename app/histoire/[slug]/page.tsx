@@ -2490,6 +2490,7 @@ Sabbataï Tsevi se proclame Messie au sein du judaïsme sépharade, en 1666, il 
           </div>
         )
       },
+
  {
         titre: "Les relations en Europe",
         contenu: (
@@ -2500,6 +2501,19 @@ Samuel Oppenheimer, important juif de cour, finance les Habsbourg, notamment les
           </div>
         )
       },
+
+ {
+        titre: "La Franc-Maçonnerie",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+John Theophilus Desaguliers et James Anderson sont les fondateurs de la franc-maçonnerie moderne. Les Constitutions d’Anderson, rédigées en 1723 puis révisées en 1738 par James Anderson, pasteur presbytérien écossais, avec l’approbation de la Grande Loge de Londres fondée en 1717, forment le texte fondateur du mouvement. Dans ces Constitutions, la Loi morale que tout maçon doit suivre est présentée comme celle que tous les hommes acceptent, c’est la version protestante des sept lois noachides de la tradition juive, “recyclées” en morale universelle. L’introduction historique du texte (la partie mythique) explique d’ailleurs que Noé est le second fondateur de l’humanité, qu’il transmet les devoirs moraux universels et que ses fils diffusent ces lois à toutes les nations : c’est exactement la structure du noachisme. Ce choix permettait de contourner le christianisme dogmatique (pas de Trinité, pas de divinité du Christ, pas de Rédemption ni de sacrements) et de construire une fraternité ouverte à des juifs, protestants, déistes autour d’une morale minimale : interdiction du meurtre, de l’idolâtrie grossière, du blasphème, du vol, des relations sexuelles désordonnées, de la cruauté envers les animaux, et obligation d’un système judiciaire sous la forme protestante appelée Loi Noachique universelle, assimilée par Anderson à la Loi morale des maçons. C’est précisément pour cette raison théologique que l’Église catholique condamna immédiatement la franc-maçonnerie : dans In eminenti (1738), Clément XII comprit que les Constitutions remplaçaient la foi chrétienne par un déisme noachique, c’est-à-dire une morale pré-chrétienne, minimaliste et rationalisée.
+</p>
+          </div>
+        )
+      },
+
+
 
        {
         titre: "La franc-maçonnerie russe",
