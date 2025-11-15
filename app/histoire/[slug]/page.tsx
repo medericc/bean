@@ -142,6 +142,15 @@ Dès le XIᵉ siècle, Barcelone s’impose comme puissance régionale grâce à
     introduction: "Entre foi, pouvoir et conquêtes, le Béarn s’élève…",
     image: "/images/histoire/antiquite.jpg",
     sections: [
+        {
+        titre: "En Angleterre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Autour de l’an 1000, la monarchie anglo-saxonne se stabilise après les raids vikings. En janvier 1066, à la mort d’Édouard le Confesseur, Guillaume le Conquérant revendique le trône d’Angleterre et bat Harold à Hastings, le roi d'Angleterre est aussi vassal du roi de France pour ses terres gauloises. </p>
+          </div>
+        )
+      },
       {
         titre: "Action du comte",
         contenu: (
@@ -613,6 +622,17 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
             <p>
  Cette défaite marqua un tournant majeur : l’Aragon renonça à toute expansion au nord des Pyrénées pour se tourner vers la Méditerranée, tandis que le Béarn passa progressivement sous influence anglaise. Malgré l’absence de Cathares en Béarn, Gaston VI fut de nouveau condamné pour hérésie au concile de Lavaur, accusé d’avoir offert asile à des hérétiques et à l’assassin du légat pontifical. Pierre II étant mort, Gaston chercha la réconciliation : le légat pontifical Pierre de Bénévent transmit son pardon à l’évêque d’Oloron, Bernard de Morlanne. Il restitua à l’évêché les bourgs de Sainte-Marie et de Saint-Pé, puis fut absous et rétabli dans ses terres. Gaston VI demeura fidèle à la maison d’Aragon : il apparaît encore aux côtés du jeune roi Jacques Ier lors du siège de Tamarite de Litera. Il mourut sans descendance directe en 1214 (ou 1215 selon certaines sources), laissant pour héritier son frère jumeau Guillaume-Raymond, qui hérita des vicomtés de Béarn, Gabardan et Brulhois, ainsi que des droits sur Lérida et Tarragone. Du côté du comté de Foix, Raymond-Roger et son fils Roger-Bernard II prirent part activement à la résistance languedocienne. Versés en théologie, Raymond-Roger et sa sœur Escarmonde débattirent avec les Vaudois, les Cathares et les catholiques, ce qui valut à leur famille des soupçons d’hérésie. Lors du concile de Latran, le comté de Foix fut accusé, comme celui de Toulouse, de protéger les hérétiques. Malgré tout, Roger-Bernard II, époux de l’héritière de Castelbon et d’Andorre, poursuivit la lutte contre les Croisés. Foix, tout comme Montségur, devint un refuge pour les persécutés. En 1240, Saverdun et le Bas-Foix furent contraints de rendre hommage à Toulouse, désormais sous domination capétienne, mais à la mort de Raymond IV en 1265, les comtes de Foix restaient les seuls seigneurs occitans encore indépendants. Leur politique, souvent téméraire, consistait à jouer de la rivalité entre la France et l’Aragon, chacun convoitant ce comté stratégique. Après Muret, Simon de Montfort poursuivit son offensive. Il assiégea Lourdes en Bigorre, mais les Bigourdans résistèrent vaillamment et l’obligèrent à se retirer. La comtesse Pétronille de Bigorre, veuve de Gaston VI, se remaria successivement avec Nuno Sanche, Aymar de Rançon puis Boson de Matha, qui administra fermement le comté. Sous son autorité, la justice fut appliquée avec rigueur : tout homicide commis à Vic entraînait pour le coupable la peine d’être enterré vivant sous sa victime. Pour apaiser les tensions, le pape envoya le cardinal Pierre de Bénévent comme légat chargé de rétablir la paix et d’absoudre les seigneurs repentants. Le Béarn, la Bigorre et le Comminges furent progressivement réintégrés dans l’obéissance à Rome.
   </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La bataille de Bouvines",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Jean sans Terre avec Otton IV affronte Philippe Auguste à Bouvines mais perd, empêchant la constitution d’un bloc anglo-germanique ; les paysans ont tous soutenus Philippe Auguste, l’Aquitaine restent colonies anglaises. En 1215, les anglais se soulèvent contre Jean sans Terre et limite son autorité fiscale par la Magna Carta, tandis que Londres possède déjà un maire élu depuis 1189. Les juifs vivent en Angleterre sous protection royale et sont mentionnés dans la Magna Carta, mais en 1290, Édouard Iᵉʳ promulgue leur expulsion définitive.
+ </p>
           </div>
         )
       },
@@ -1770,8 +1790,8 @@ Le 17 août 1391, à l’Hôpital d’Orion, près d’Orthez, après une journ�
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-    L’Inquisition espagnole, fondée en 1478 par Isabelle de Castille et Ferdinand d’Aragon, était directement placée sous le contrôle de la monarchie. Son objectif premier était de protéger la vérité révélée au sein d’un royaume marqué par une grande diversité religieuse. En cela, elle se distinguait de l’Inquisition médiévale, davantage dépendante de l’Église. En Espagne, cette Inquisition royale avait le pouvoir de prononcer directement des sentences pouvant aller jusqu’à la peine de mort (2 % des cas au XVIIᵉ siècle). L’exécution de ces condamnations relevait ensuite du bras séculier, c’est-à-dire du pouvoir civil, tandis que les biens des condamnés étaient confisqués au profit de la couronne. Dès ses débuts, l’institution s’attacha principalement à poursuivre les conversos (juifs convertis au christianisme) et les moriscos (musulmans convertis), soupçonnés de continuer à pratiquer en secret leur ancienne religion. Ces soupçons se confirmés par la découverte, lors des premiers procès à Séville, Tolède ou Ciudad Real, de certains rites domestiques tels que l’allumage des bougies du sabbat, l’abstention de porc, ou la célébration de fêtes et de prières spécifiques. Cette surveillance accrue visait aussi à contrer la présence de juifs faussement convertis ayant intégré les ordres religieux, une « infiltration » de l’Église. Ces tensions, combinées à la crainte que les juifs non convertis n’influencent les conversos, aboutirent au décret de l’Alhambra en 1492. Ce texte ordonnait l’expulsion de tous les juifs refusant le baptême. En conséquence, entre 70 000 et 100 000 personnes quittèrent le royaume pour le Portugal (où la conversion fut imposée en 1497), l’Afrique du Nord, l’Empire ottoman, l’Italie ou encore le sud de la France. Plus tard, certaines de ces communautés s’établirent dans des villes européennes comme Hambourg, Francfort ou en Angleterre (après 1655). Cette décision permit à la monarchie d’affirmer l’unité religieuse et politique du royaume, ouvrant la voie à ce que l’on appellera son « Âge d’or », de 1492 à 1681. Après 1492, l’Inquisition poursuivit la traque des conversos jusque dans les années 1530, avant de concentrer ses efforts sur les moriscos, jusqu’à leur expulsion définitive en 1609. Par la suite, elle devint un organe général de contrôle de l’orthodoxie religieuse, s’attaquant aux protestants, aux mystiques jugés suspects, les alumbrados, ainsi qu’aux lecteurs d’ouvrages figurant à l’Index, la liste officielle des livres interdits. À titre de comparaison, l’Inquisition médiévale, notamment en France, fonctionnait de manière sensiblement différente. La peine était prononcée par le bras séculier après une condamnation de l’Inquisition (qui menait au préalable une véritable enquête comme en Espagne). Contrairement aux tribunaux civils de l’époque, souvent expéditifs, cette Inquisition (créée pour modérer les excès de justice) privilégiait des peines telles que la prison, les pèlerinages ou les pénitences, plutôt que la mort.
-       </p>
+  L’Inquisition espagnole, fondée en 1478 par Isabelle de Castille et Ferdinand d’Aragon, était directement placée sous le contrôle de la monarchie. Son objectif premier était de protéger la vérité révélée au sein d’un royaume marqué par une grande diversité religieuse. En cela, elle se distinguait de l’Inquisition médiévale, davantage dépendante de l’Église. En Espagne, cette Inquisition royale avait le pouvoir de prononcer directement des sentences pouvant aller jusqu’à la peine de mort (2 % des cas au XVIIᵉ siècle). L’exécution de ces condamnations relevait ensuite du bras séculier, c’est-à-dire du pouvoir civil, tandis que les biens des condamnés étaient confisqués au profit de la couronne. Dès ses débuts, l’institution s’attacha principalement à poursuivre les conversos (juifs convertis au christianisme) et les moriscos (musulmans convertis), soupçonnés de continuer à pratiquer en secret leur ancienne religion. Ces soupçons se confirmés par la découverte, lors des premiers procès à Séville, Tolède ou Ciudad Real, de certains rites domestiques tels que l’allumage des bougies du sabbat, l’abstention de porc, ou la célébration de fêtes et de prières spécifiques. Cette surveillance accrue visait aussi à contrer la présence de juifs faussement convertis ayant intégré les ordres religieux, une « infiltration » de l’Église. Ces tensions, combinées à la crainte que les juifs non convertis n’influencent les conversos, aboutirent au décret de l’Alhambra en 1492. Ce texte ordonnait l’expulsion de tous les juifs refusant le baptême. En conséquence, entre 70 000 et 100 000 personnes quittèrent le royaume pour le Portugal (où la conversion fut imposée en 1497), l’Afrique du Nord, l’Empire ottoman, l’Italie ou encore le sud de la France. Plus tard, certains de ces juifs s’établirent surtout aux Provinces Unis et dans l’Empire Ottoman, là-bas ils atteindront des hauts grades comme Joseph Nassi, conversos, qui a appris la gestion financière par ses oncles dirigeant la Banque Mendes. Ensuite, Joseph s’enfuit aux Pays-Bas, à Anvers, avec sa tante, veuve et héritière d’une immense fortune. Plus tard, il épouse Reyna, sa cousine. Joseph étudie à l’université de Louvain, mais est expulsé des Pays-bas puis aussi de Venise. En 1554, ils trouvent enfin refuge à Constantinople. Il soutient Sélim contre son frère Bajazet dans la lutte pour le trône. Quand Sélim II devient sultan (1566), il devient conseiller diplomatique du sultan et gère une partie de la politique étrangère. Grâce à ses relais financiers et politiques, il influence l’élection d’Henri de Valois au trône de Pologne. Il aide les insurgés néerlandais contre l’Espagne (Philippe II). Cela affaiblit les Habsbourg, ennemis des Ottomans. Voulant se venger de la République de Venise qui l’avait persécuté, il encourage la Sublime Porte à entrer en guerre et défaite de Venise donc Chypre devient ottomane. Joseph reçoit le titre de Duc de Naxos, la seigneurie de l’île d’Andros (il gouverne depuis son palais du Belvédère à Constantinople, où il installe même une imprimerie hébraïque). En 1561, il devient Seigneur de Tibériade, ville de Galilée en Palestine ottomane. Puis, Joseph veut créer une colonisation juive organisée en Terre d’Israël. Isaac Luria a fait de Safed un centre spirituel mondial avec Shelomo Alkabetz ou encore Rabbi Yosef Karo grâce à la tolérance Ottomane. Mais pour l’Espagne, cette décision permit d’affirmer l’unité religieuse et politique du royaume, ouvrant la voie àson « Âge d’or », de 1492 à 1681. Après 1492, l’Inquisition poursuivit la traque des conversos jusque dans les années 1530, avant de concentrer ses efforts sur les moriscos, jusqu’à leur expulsion définitive en 1609. Par la suite, elle devint un organe général de contrôle de l’orthodoxie religieuse, s’attaquant aux protestants, aux mystiques jugés suspects, les alumbrados, ainsi qu’aux lecteurs d’ouvrages figurant à l’Index, la liste officielle des livres interdits. À titre de comparaison, l’Inquisition médiévale, notamment en France, fonctionnait de manière sensiblement différente. La peine était prononcée par le bras séculier après une condamnation de l’Inquisition (qui menait au préalable une véritable enquête comme en Espagne). Contrairement aux tribunaux civils de l’époque, souvent expéditifs, cette Inquisition (créée pour modérer les excès de justice) privilégiait des peines telles que la prison, les pèlerinages ou les pénitences, plutôt que la mort.
+     </p>
           </div>
         )
       },
@@ -1851,6 +1871,19 @@ En juillet 1527, un édit royal publié à Garris plaça sous tutelle les juridi
 </p>       </div>
         )
       },
+
+ {
+        titre: "Le Schisme Anglais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Henri VIII rompt avec Rome en 1534, après que le pape refuse d’annuler son mariage avec Catherine d’Aragon. Pour pouvoir épouser Anne Boleyn, il proclame l’Acte de Suprématie, qui fait de lui le chef de l’Église d’Angleterre, future Église anglicane. Il se marie six fois, fait exécuter deux de ses épouses, et confisque les richesses de l’Église catholique en dissolvant les monastères. Sa fille Elisabeth fera exécutée Marie Stuart, Reine d'Ecosse et de France. Elle avait d'ailleurs un espion kaballyste Jon Dee (007) qui publie en 1564 la Monas Hieroglyphica, un traité ésotérique mêlant mathématiques, alchimie et symbolisme kabbalistique. Son fils, Arthur Dee, médecin et alchimiste devientmédecin à la cour de Russie et sert comme conseiller du premier tsar Romanov, Michel Ier, à partir de 1621 ; il y reste environ 14 ans. Connu pour ses intérêts alchimiques et kabbalistiques, Arthur Dee joue un rôle savant important au sein de la cour moscovite tout en poursuivant l’héritage ésotérique de son père.
+</p>       </div>
+        )
+      },
+
+
+
   {
         titre: "Entre foi nouvelle et liberté du Béarn",
         contenu: (
@@ -1860,7 +1893,13 @@ Au début du XVIᵉ siècle, un profond mouvement de réforme morale et spiritue
 </p>       </div>
         )
       },
-     ,
+     
+{ titre: "Les Médicis", 
+  contenu: ( <div className="space-y-4 font-corps text-gray-700 leading-relaxed"> <p> Jeanne d’Arc incarne un pouvoir, fondée sur la volonté divine et hiérarchisé. Pico della Mirandola, lui, tente d’unifier toutes les traditions, grecque, arabe, juive, chrétienne, et fait de la Kabbale juive une clé théologique chrétienne : c’est précisément cela que Rome condamne en 1487-1488 (treize thèses jugées hérétiques par Innocent VIII, arrestation, puis libération grâce aux Médicis), car il subordonne la Révélation à une sagesse universelle antérieure ; ses sources kabbalistiques viennent surtout de Flavius Mithridate. Les Médicis, Cosme, Laurent, puis les papes Léon X et Clément VII, protègent Ficin, Pico et les courants hermético-platoniciens : ils ne sont pas kabbalistes, mais créent un milieu syncrétique où magie naturelle, néoplatonisme, astrologie et Kabbale chrétienne sont tenues pour des sciences sacrées compatibles avec le christianisme tant qu’elles ne violent pas ouvertement le dogme ; ce climat éclaire l’éducation de Catherine et de Marie de Médicis, qui importent ensuite en France une culture d’astrologie, de correspondances symboliques et d’hermétisme savant, sans pratique juive du Zohar mais avec un usage politique et cosmologique de schémas kabbalisants. Dans l’Église, la règle officielle condamne divination, magie invocatoire, astrologie judiciaire et manipulation des noms divins comme superstitions ou pratiques démoniaques : seule une astrologie « naturelle » est tolérée, et la magie rituelle reste interdite. Pourtant, entre XVe et début XVIIᵉ siècle, la pratique est plus ambiguë : Ficin, Pico, humanistes, cardinaux et princes protègent ou lisent Kabbale chrétienne, hermétisme et alchimie spirituelle sans être immédiatement condamnés ; le concile de Trente ne condamne ni Ficin ni Pico, mais la Contre-Réforme durcit ensuite la ligne. </p>       </div> ) },
+
+
+
+      
   {
         titre: "Jeanne d’Albret, l’enfance d’une reine",
         contenu: (
@@ -2272,6 +2311,16 @@ En 1588, tandis que son frère Henri de Navarre combat sur les champs de bataill
           </div>
         )
       },
+       {
+        titre: "L’Invincible Armada",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1588, le conflit entre l’Angleterre protestante d’Élisabeth Iʳᵉ et l’Espagne catholique de Philippe II atteint son apogée avec la préparation de l’Invincible Armada. Mais grâce à l’action décisive de ses conseillers, Walsingham ou Dudley, averties grace au réseau de Hector Nuñez (médecin juif), la couronne anglaise a pu se préparer à l’attaque et renforcer sa défense contre la flotte espagnole. 
+</p>
+          </div>
+        )
+      },
      {
         titre: "Henri IV et la Bigorre",
         contenu: (
@@ -2281,9 +2330,40 @@ En 1585, la formation de la Ligue catholique ranima les tensions : les États de
 </p>
           </div>
         )
+      },
+       {
+        titre: "Jean Bodin",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Bodin rompt avec la légitimation miraculeuse incarnée par Jeanne : il définit la souveraineté comme pouvoir absolu, perpétuel et indivisible de l’État, capable de légiférer, lever l’impôt, réguler la religion et garantir la paix civile. La religion reste utile mais devient subordonnée à l’ordre politique, ce qui marque une sécularisation relative. Cette théorie permet la centralisation monarchique : Henri IV s’en sert pour arbitrer les conflits confessionnels après l’Édit de Nantes ; Richelieu radicalise ce modèle en brisant les pouvoirs nobiliaires et en plaçant le clergé sous l’État ; Louis XIV en réalise l’aboutissement avec l’absolutisme, la subordination des parlements, le contrôle de l’Église et la Révocation de l’Édit de Nantes. Bodin lui-même évolue dans un contexte de diffusion européenne des textes hermétiques, kabbalistiques et néoplatoniciens (Italie, Hollande, Angleterre), qu’il connaît par lectures et réseaux humanistes : sans être kabbaliste ni rosicrucien, il absorbe des idées d’unité cosmique, d’ordre universel et de symbolisme qui se combinent avec son projet d’un pouvoir souverain unifié.
+</p>
+          </div>
+        )
+      },
+      {
+        titre: "La République Anglaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dans les années 1630, le “collège invisible” réunit savants, alchimistes et biblistes puritains qui cherchent à découvrir des “lois divines de la nature” comme dans les textes sacrés ; certains, influencés par la kabbale juive, pensent même que la création scientifique doit imiter la lecture mystique de l’Ancien Testament. Ce milieu est étroitement lié à l’atmosphère religieuse radicale qui accompagne la montée des puritains, dont le chef militaire, Oliver Cromwell, voit l’histoire d’Angleterre comme une répétition des récits bibliques : pour eux, l’Angleterre est un “nouvel Israël” et les rois impies doivent être jugés comme dans la Bible. Cela aboutit à la capture du roi Charles Ier, trop catholique, après une guerre civile entre les Royalistes et les parlementaires, puis à sa décapitation en 1649. L’Angleterre devient alors une république puritaine, gouvernée par Cromwell, qui impose une discipline morale stricte inspirée de leur lecture littérale de l’Ancien Testament. En 1660, à la restauration de la monarchie, plusieurs membres de ces réseaux savants (dont des puritains, des alchimistes, et des correspondants passionnés d’hébraïsme) se regroupent dans une institution nouvelle : la Royal Society. Henry Oldenburg, juif d’origine allemande converti au protestantisme, en devient le premier secrétaire et transforme la société en un immense réseau d’échanges intellectuels européens. Oldenburg s’intéresse aux traditions juives, correspond avec des rabbins et des érudits, et collecte des manuscrits hébreux : il est un relais majeur de la kabbale chrétienne érudite dans le monde savant anglais. Plusieurs savants de la Royal Society cherchaient à extraire des “messages secrets” de la nature en utilisant des méthodes d’interprétation proches de la kabbale juive pour déchiffrer “le livre de la création”. Le Tsar Pierre 1e, rencontra Isaac Newton, un membre de la Royal Society.  
+</p>
+          </div>
+        )
+      },
+       {
+        titre: "La Glorieuse Révolution",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1642 Antonio de Montezinos navigateur juif revient d Amérique du Sud, il aurait retrouvé les tribus perdues ( Ruben et Lévi), il raconta son histoire à Menasseh ben Israël, un rabbin d’Amsterdam, qui en fit un livre : “La Esperanza de Israel” (1650). En 1655, Menasseh ben Israël part lui-même à Londres pour présenter à Cromwell une pétition célèbre (Cromwell profondément influencé par l’Ancien Testament), où il demande : la permission pour les Juifs de revenir vivre en Angleterre, la liberté de culte et la possibilité de commercer librement. Cromwell accepta pour relancer l'économie anglaise. Jacques 2, catholique essaie de résister avec la Glorieuse Révolution (1688) qui aboutit à un prince protestant Guillaume d’Orange, soutenu par des riches commerçants juifs qui permet d’anéantir les espoirs de Jacques 2 qui va se réfugier auprès de Louis XIV. Et 6 ans plus tard, création de la banque d’Angleterre, puis pour être roi d’Angleterre il faut être protestant. Puis ensuite, Solomon de Medina, juif anglais finance les guerres anglaises vs Louis 14 avec le duc de Marlborough (comme Rothschild plus tard contre Napoléon).
+</p>
+          </div>
+        )
       }
     ]
   },
+  
    'france2': {
     titre: "Sous la monarchie absolue",
     periode: "Renaissance",
@@ -2401,7 +2481,16 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
     image: "/images/histoire/antiquite.jpg",
     sections: [
 
-
+ {
+        titre: "Les relations en Europe",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Samuel Oppenheimer, important juif de cour, finance les Habsbourg, notamment les campagnes du prince Eugène de Savoie contre... l’Empire ottoman. Son fils, Simon Oppenheimer, poursuit l’activité bancaire et s’installe dans l’électorat de Hanovre, alors dirigé par la maison de Brunswick-Lunebourg. En 1714, à la mort d’Anne Stuart, l’électeur George de Hanovre devient roi de Grande-Bretagne sous le nom de George Iᵉʳ, ce qui ouvre aux Oppenheimer un accès privilégié au marché financier londonien. Samuel aura un fils Jacob Wolf Oppenheimer, prés de Georges II, qui remarque le jeune Mayer Amschel Rothschild à Francfort dans les années 1750 : celui-ci bénéficiera du réseau de Jacob en Allemagne et en Angleterre. Rothschild devient notamment le banquier du landgrave Guillaume IX de Hesse-Kassel (petit fils par sa mère du roi Georges II), l’un des princes les plus riches du Saint-Empire et frère de Charles, un illuminé de Bavière.
+ </p>
+          </div>
+        )
+      },
 
     {
         titre: "La franc-maçonnerie auscitaines",
@@ -2456,7 +2545,26 @@ Au XVIIIᵉ siècle, Tarbes connaît une forte expansion : sa population triple,
           </div>
         )
       },
-    
+       {
+        titre: "Jacob Frank",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jacob Frank, mystique juif, se réclamait de Sabbataï Tsevi, faux messie du XVIIᵉ siècle, et fonda un mouvement dissident appelé le frankisme, qui mêlait des éléments du judaïsme kabbalistique, du sabbataïsme et du mysticisme chrétien. Vers 1755, lui et ses disciples furent violemment rejetés par les autorités rabbiniques traditionnelles, accusés d’hérésie, d’orgies rituelles et de blasphèmes. Frank enseignait que la vérité divine se révélait par la “transgression”, prônant ainsi une inversion des valeurs religieuses dans un mysticisme antinomien rejetant les lois traditionnelles. En 1759, dans une tentative d’élargir son mouvement et dans une stratégie d’infiltration, il feignit une conversion au catholicisme, estimant que le catholicisme polonais pouvait lui offrir une protection politique ; il fut baptisé à Lviv avec plusieurs centaines de fidèles, certains parrainés par de puissants nobles polonais. Mais cette conversion servait aussi un but doctrinal : Frank enseignait que le catholicisme représentait une étape de la révélation divine, une “seconde loi” succédant à celle de Moïse et annonçant une “troisième loi”, une religion universelle censée dépasser à la fois le judaïsme et le christianisme.  Après sa mort, ses disciples les Frankistes, se sont dispersés en Europe centrale. Certains d’entre eux ont effectivement cherché à s’intégrer dans la société chrétienne, en se fondant dans la noblesse ou la bourgeoisie.Dans l’Empire austro-hongrois, la descendance de familles frankistes (comme les Dobruschka ou les Fränkel) a parfois rejoint les milieux maçonniques ou intellectuels ; l’un d’eux, Moses Dobruschka, converti sous le nom de Franz Thomas von Schönfeld, a même été anobli à Vienne, il crée en 1780 les frères asiatiques qui va accueillir le duc de brounswitch don’t le neaveau a la tete de l’armée Prusse à valmy en 1792 ou encore banquier juif Daniel Isaac Piznic banquier perso du roi de prusse et donenra le pouvoir a charles de hesse kassel, il redige un docuemen encourager revolution pour detruire royaute meur en 1794. Leur conversion au catholicisme render les frankistes éligibles à certaines fonctions interdites aux juifs. 
+  </p>
+          </div>
+        )
+      },
+ {
+        titre: "Le Convent de Wilhelmsbad",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le duc de Brunswick présida le Convent de Wilhelmsbad, un congrès maçonnique international en 1782 car la maçonnerie était extrêmement fragmentée entre de nombreuses obédiences. Le convent  avait pour but la réforme morale et spirituelle de l’homme.  Lors de ce convent, des désaccords profonds opposèrent notamment Joseph de Maistre, représentant du royaume de Savoie, à Charles de Hesse-Kassel : de Maistre, catholique mystique, souhaitait maintenir une maçonnerie sur une base chrétienne traditionnelle proche des idées de Willermoz, tandis que Charles de Hesse-Kassel incarnait un courant plus rationaliste.  Joseph de Maistre évoqua après Wilhelmsbad la confusion et la “profonde inquiétude” qu’il avait ressenties, affirmant que le convent avait ouvert une ère nouvelle en raison de décisions vagues et ambiguës, et parce que certains participants semblaient vouloir “retirer à la maçonnerie son âme chrétienne”. C’est cette ambiguïté qui le poussa plus tard à écrire : « Ce qui est sorti de Wilhelmsbad est plus redoutable qu’on ne le croit. » On sait avec certitude que plusieurs familles nobles européennes du XIXᵉ siècle, notamment celles de Hesse, du Danemark, de la Russie impériale (les Romanov) ou encore des cercles brunswickois, montraient un intérêt marqué pour les symboles anciens comme les svastikas, des croix à branches courbes, des rosaces solaires ou des motifs templier. Le duc de Hesse-Kassel, la famille de Hesse-Darmstadt ou la maison de Danemark participaient à ce courant intellectuel, d’où la présence de motifs solaires comme la svastika dans leurs décors De ces lignées descendent notamment Dagmar de Danemark, épouse d’Alexandre III et mère de Nicolas II, ainsi que les membres de Hesse-Kassel et de Hesse-Darmstadt, eux aussi portés vers l’ésotérisme, et qui apprécièrent des personnages comme Raspoutine, considéré comme un malade comparable à Frank, ainsi que les Papous aussi. 
+ </p>
+          </div>
+        )
+      },
 
 
 
@@ -2578,12 +2686,22 @@ La Déclaration des droits de l’homme et du citoyen est signée le 26 août 17
           </div>
         )
       },
+          {
+        titre: "Les Juifs de Bayonne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Grâce à des lettres patentes, les juifs séfarades de Bayonne avaient eu le droit de résider officiellement, le droit de commerce maritime, la protection du roi, et encore la quasi-citoyenneté locale donc quand la Révolution abolit les privilèges les Séfarades perdent juridiquement les droits que les rois leur avaient accordés. Par contre le 27 septembre 1791, sous la pression des Girondins et du franc-maçon Clermont-Tonnerre, l’Assemblée vote « Les Juifs sont citoyens, comme tous les autres. ». Un an plus tard, Jean-Baptiste de Cloots, dit Anacharsis Cloots, révolutionnaire athée, militant pour une république universelle et assassiné pour athéisme par Robespierre (qui est pour une France vertueuse et non une république mondiale) précise dans son ouvrage 'La République Universelle' que les juifs d’Europe soutiennent la Révolution et que les princes allemands seront effrayés que les juifs de leurs États soutiennent la République car l’économie allemande dépend de la finance juive surtout pour les concessions de fournitures militaires.
+</p>
+          </div>
+        )
+      },
        {
         titre: "Les Marseillais",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Fin juillet 1792, des prisonniers de Marseilles appelés à Paris par le maire Pétion, défilent dans les rues. En marchant, ils entonnent un chant nouveau composé par le franc-maçon Rouget de Lisle : la Marseillaise. « Qu’un sang impur abreuve nos sillons » : le vers claque comme une menace contre Dieu, contre le roi, contre les fidèles, directement contre l'Église Catholique. Quelques semaines plus tard, du 2 au 6 septembre, alors que Verdun tombe aux mains des Prussiens. La désinformation républicaine se propagent : les prisons abriteraient une contre-révolution, un complot de prêtres, de nobles, de royalistes. Des bandes armées envahissent les geôles et massacrent sans distinction. En quelques jours, des milliers de catholiques sont tués à coups de sabre ou de pique. Les prêtres sont égorgés dans leurs cellules, les femmes décapitées, les corps mutilés, jetés dans les couloirs, les puits, les fontaines. C’est une boucherie collective, présentée comme une « justice du peuple ». Parmi les victimes figure la princesse de Lamballe, déjà recadré par la reine pour son « féminisme », elle dût quitter la franc-maçonnerie qu'elle avait rejoint. Son procès dura que quelques secondes, refusant de renier son amie elle est jugée « ennemie de la République », battue, mutilée, démembrée ; ses poils pubiens découpés, sa tête portée au bout d’une pique est promenée sous les fenêtres du Temple où est enfermée la reine. Le 21 septembre 1792, la Convention nationale nouvellement élue abolit la monarchie. Le calendrier révolutionnaire est proclamé : désormais, tout recommence à zéro, c’est l’an I de la République.
+Fin juillet 1792, des prisonniers de Marseilles appelés à Paris par le maire Pétion, défilent dans les rues. En marchant, ils entonnent un chant nouveau composé par le franc-maçon Rouget de Lisle : la Marseillaise (qui sera reprise par les Bolcheviks). « Qu’un sang impur abreuve nos sillons » : le vers claque comme une menace contre Dieu, contre le roi, contre les fidèles, directement contre l'Église Catholique. Quelques semaines plus tard, du 2 au 6 septembre, alors que Verdun tombe aux mains des Prussiens. La désinformation républicaine se propagent : les prisons abriteraient une contre-révolution, un complot de prêtres, de nobles, de royalistes. Des bandes armées envahissent les geôles et massacrent sans distinction. En quelques jours, des milliers de catholiques sont tués à coups de sabre ou de pique. Les prêtres sont égorgés dans leurs cellules, les femmes décapitées, les corps mutilés, jetés dans les couloirs, les puits, les fontaines. C’est une boucherie collective, présentée comme une « justice du peuple ». Parmi les victimes figure la princesse de Lamballe, déjà recadré par la reine pour son « féminisme », elle dût quitter la franc-maçonnerie qu'elle avait rejoint. Son procès dura que quelques secondes, refusant de renier son amie elle est jugée « ennemie de la République », battue, mutilée, démembrée ; ses poils pubiens découpés, sa tête portée au bout d’une pique est promenée sous les fenêtres du Temple où est enfermée la reine. Le 21 septembre 1792, la Convention nationale nouvellement élue abolit la monarchie. Le calendrier révolutionnaire est proclamé : désormais, tout recommence à zéro, c’est l’an I de la République.
   </p>
           </div>
         )
@@ -2594,7 +2712,7 @@ Fin juillet 1792, des prisonniers de Marseilles appelés à Paris par le maire P
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Le 17 janvier 1793, après des jours de débats, la décision tombe : la mort pour le roi, à une seule voix de majorité. Une voix, celle de son propre cousin, Philippe d’Orléans, dit Égalité, grand maître du Grand Orient de France. La Navarre entière avait voté la survie du roi. Louis XVI, dans sa dernière dignité, demande un appel au peuple, le droit pour la nation entière de confirmer ou d’infirmer la sentence. Il est refusé, la République décide pour le peuple. Le roi de Navarre est assassiné par les parisiens. Après l’exécution de Louis XVI, la reine est enfermée au Temple avec ses deux enfants et Madame Élisabeth. En juillet 1793, les gardiens lui arrachent son fils, le dauphin Louis-Charles, âgé de huit ans. L’enfant est confié à un cordonnier, Simon, chargé de le « rééduquer » selon les principes républicains. Sous la contrainte, battu, affamé, isolé, le petit roi est forcé de signer un faux témoignage accusant sa mère d’inceste, avant d'être assassiné dans cette même cave par la République. Ce document, dicté par ses tortionnaires, servira à l’accusation lors du procès de la reine. Transférée à la Conciergerie, la prison la plus sombre de Paris (Marie-Antoinette y demeure soixante-seize jours, sans voir la lumière du jour) . Son procès, tenu en octobre 1793, est un simulacre de justice : on l’y accuse de trahison, de complot contre la République et, comble de l’ignominie, du viol de son propre fils. L’accusation est d’autant plus abjecte que la loi sur le viol, venait d’être perverti par les républicains. Ayant tout perdu, son mari, ses enfants, sa couronne, la reine se tient droite jusqu’au bout. À l’insulte, elle répond par le silence et la dignité. Le 16 octobre, elle est condamnée à mort. Quelques heures plus tard, la veuve Capet monte à l’échafaud, pâle mais calme, ayant comme son mari, pardonné à ses juges.
+Le 17 janvier 1793, après des jours de débats, la décision tombe : la mort pour le roi, à une seule voix de majorité. Une voix, celle de son propre cousin, Philippe d’Orléans, dit Égalité, grand maître du Grand Orient de France. La Navarre entière avait voté la survie du roi. Louis XVI, dans sa dernière dignité, demande un appel au peuple, le droit pour la nation entière de confirmer ou d’infirmer la sentence. Il est refusé, la République décide pour le peuple. Le roi de Navarre est assassiné par les parisiens, Thomas-Marie Raby asperge la fouel de son sang (un rituel de sang ? détruire la souillure ? Une volonté de revenir à l'antiquité). Après l’exécution de Louis XVI, la reine est enfermée au Temple avec ses deux enfants et Madame Élisabeth. En juillet 1793, les gardiens lui arrachent son fils, le dauphin Louis-Charles, âgé de huit ans. L’enfant est confié à un cordonnier, Simon, chargé de le « rééduquer » selon les principes républicains. Sous la contrainte, battu, affamé, isolé, le petit roi est forcé de signer un faux témoignage accusant sa mère d’inceste, avant d'être assassiné dans cette même cave par la République. Ce document, dicté par ses tortionnaires, servira à l’accusation lors du procès de la reine. Transférée à la Conciergerie, la prison la plus sombre de Paris (Marie-Antoinette y demeure soixante-seize jours, sans voir la lumière du jour) . Son procès, tenu en octobre 1793, est un simulacre de justice : on l’y accuse de trahison, de complot contre la République et, comble de l’ignominie, du viol de son propre fils. L’accusation est d’autant plus abjecte que la loi sur le viol, venait d’être perverti par les républicains. Ayant tout perdu, son mari, ses enfants, sa couronne, la reine se tient droite jusqu’au bout. À l’insulte, elle répond par le silence et la dignité. Le 16 octobre, elle est condamnée à mort. Quelques heures plus tard, la veuve Capet monte à l’échafaud, pâle mais calme, ayant comme son mari, pardonné à ses juges.
 </p>
           </div>
         )
