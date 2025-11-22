@@ -2520,11 +2520,33 @@ John Theophilus Desaguliers et James Anderson sont les fondateurs de la franc-ma
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-John Phillips maçon anglais arrivé à Saint-Pétersbourg dans les années 1730, est le premier porteur officiel de la franc-maçonnerie en Russie. James Keith écossais, officier, puis maréchal au service de la tsarine Élisabeth Petrovna. Franc-maçon actif en Prusse et en Russie. Il contribue à ancrer la maçonnerie militaire dans la noblesse russe. Ivan Yelagin, noble russe, qui devient Grand Maître de la maçonnerie russe à partir de 1772. Reçoit des patentes anglaises et structure les loges selon le modèle anglais. C’est avec Yelagin et Novikov (introducteur en Russie des courants rosicruciens et de la maçonnerie mystique allemande, plus ésotérique que l'anglaise,Catherine II le réprimera par la suite) que la maçonnerie russe devient ésotérique, mystique, kabbalisante et alchimique, influencée par Martinès de Pasqually, Louis-Claude de Saint-Martin, Willermoz, les Rose-Croix allemands, la Kabbale chrétienne héritée de Pico – Reuchlin – Agrippa – Kircher.
+John Phillips maçon anglais arrivé à Saint-Pétersbourg dans les années 1730, est le premier porteur officiel de la franc-maçonnerie en Russie. James Keith écossais, officier, puis maréchal au service de la tsarine Élisabeth Petrovna. Franc-maçon actif en Prusse et en Russie. Il contribue à ancrer la maçonnerie militaire dans la noblesse russe. Ivan Yelagin, noble russe, qui devient Grand Maître de la maçonnerie russe à partir de 1772. Reçoit des patentes anglaises et structure les loges selon le modèle anglais. C’est avec Yelagin et Novikov (introducteur en Russie des courants rosicruciens et de la maçonnerie mystique allemande, plus ésotérique que l'anglaise, Catherine II le réprimera par la suite) que la maçonnerie russe devient ésotérique, mystique, kabbalisante et alchimique, influencée par Martinès de Pasqually, Louis-Claude de Saint-Martin, Willermoz, les Rose-Croix allemands, la Kabbale chrétienne héritée de Pico – Reuchlin – Agrippa – Kircher.
 </p>
           </div>
         )
       },
+
+   {
+        titre: "La naissance des lumières",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XVIIIᵉ siècle émergent les Lumières, structurées autour de ce qu’on appelle la République des Lettres, véritable réseau social avant l’heure. Elles s’appuient sur de nombreux centres d’imprimerie clandestine, tenus par des protestants : Marc-Michel Rey, Prosper Marchand, les Wetstein, Jean-Frédéric Bernard, Desbordes, Pierre Mortier, Arkstee & Merkus, Samuel Fauche, les frères Cramer, J. Nourse, Samuel Richardson, Dunoyer ou encore Lackington. Amsterdam devient alors la capitale protestante de cette imprimerie clandestine. L’influence des Lumières est aussi soutenue par certaines figures politiques : Catherine II, très portée sur l’ésotérisme, rachète la bibliothèque de Diderot pour le financer ; Frédéric II de Prusse, agnostique, autorise la publication de textes anticatholiques de Voltaire ; ou encore Madame du Châtelet, salope de Voltaire. Les salons tenus par des femmes, Madame Geoffrin, Julie de Lespinasse, Madame du Deffand, Madame Helvétius, réunissent penseurs, savants, aristocrates et francs-maçons, comme l’abbé Sieyès, les Rolland, Buffon, Napoléon, Franklin ou Suzanne Necker. Ces cercles intellectuels annoncent les bouleversements à venir et seront prolongés plus tard par celui de Madame de Staël, à Coppet, en Suisse. Parallèlement, le Grand Orient de France, dirigé par le duc d’Orléans, cousin du roi, devient un centre d’influence majeur.
+</p>
+          </div>
+        )
+      },
+ {
+        titre: "Guerre Interne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Il existait de fortes divergences internes entre penseurs des Lumières. Rousseau écrit qu’il n’est pas d’accord avec d’Alembert, et ses échanges avec François-Marie Arouet au sujet de la vertu révèlent un Rousseau bien plus strict. Voltaire, quant à lui, décrit le Dieu de l’Ancien Testament comme un tyran favorisant un “peuple élu” destiné, selon lui, à détruire les autres. Il met en doute la véracité des violences décrites dans ces textes et invite même les Juifs à abandonner ce qu’il considère comme des croyances superstitieuses. Voltaire rejette également avec force l’accusation de déicide portée contre les Juifs : selon lui, Jésus n’a été considéré comme Dieu que tardivement, au concile de Nicée (c'est le cas depuis l'an 33). Et même si une partie des Juifs (pharisiens) ont livré Jésus, cela ne saurait justifier la punition des Juifs contemporains (le judaïsme actuel vient.... des pharisiens). Dans un texte de 1776, il dis observer que tous les peuples, Juifs comme chrétiens, ont traversé des périodes de barbarie mais ont fini par évoluer, appelant ainsi à “oublier les abominations passées”. Il précise d’ailleurs à Pinto que ses critiques visent la superstition, non les personnes juives. Pour Voltaire, la plupart des religieux sont surtout attirés par l’argent (opinion contraire à l'islam ou au catéchisme). Sa vision est essentiellement noachide, et il finira d’ailleurs par rejoindre la franc-maçonnerie à la fin de sa vie.
+</p>
+          </div>
+        )
+      },
+
 
     {
         titre: "La franc-maçonnerie auscitaines",
