@@ -25,7 +25,7 @@ const vicomtes = [
   },
 
 
-  
+
   {
     slug: "gaston-iv",
     titre: "Gaston IV le Croisé",
@@ -105,7 +105,7 @@ const vicomtes = [
     slug: "marguerite",
     titre: "Marguerite",
     description: "Elle unit Foix-Béarn, en maintenant l'indépendance du Béarn face aux anglais et français.",
-    image: "/gaston-iv.jpg",
+    image: "/margue.png",
     periode: "1290–1319",
     lignee: "Moncade",
     badge: "Stratège"
