@@ -132,7 +132,7 @@ const vicomtes = [
     slug: "jean",
     titre: "Jean de Grailly",
     description: "Il maintient la neutralité du Béarn en étendant son influence diplomatique dans le sud de la France.",
-    image: "/gaston-febus.jpg",
+    image: "/jean.jpg",
     periode: "1412-1436",
     lignee: "Foix-Béarn",
     badge: "Tacticien"
