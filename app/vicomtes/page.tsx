@@ -23,6 +23,9 @@ const vicomtes = [
     lignee: "Centulle",
     badge: "Réformateur"
   },
+
+
+  
   {
     slug: "gaston-iv",
     titre: "Gaston IV le Croisé",
@@ -64,11 +67,13 @@ const vicomtes = [
     badge: "Fidèle"
   },
 
+
+
   {
     slug: "guillaume-raymond",
     titre: "Guillaume-Raymond",
     description: "Seigneur parfois brutal, il marque la vicomté par des réformes institutionnelles.",
-    image: "/gaston-iv.jpg",
+    image: "/guillaume.jpg",
     periode: "1214-1224",
     lignee: "Moncade",
     badge: "Pénitent"
@@ -83,6 +88,9 @@ const vicomtes = [
     lignee: "Moncade",
     badge: "Chevalier"
   },
+
+
+
   {
     slug: "gaston-vii",
     titre: "Gaston VII",
