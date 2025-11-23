@@ -27,7 +27,7 @@ const vicomtes = [
     slug: "gaston-iv",
     titre: "Gaston IV le Croisé",
     description: "Héros de la première croisade, il renforce les institutions et développe l'administration.",
-    image: "/gaston-iv.jpg",
+    image: "/croise.png",
     periode: "1090-1131",
     lignee: "Centulle",
     badge: "Croisé"
@@ -36,7 +36,7 @@ const vicomtes = [
     slug: "talese-d-aragon",
     titre: "Talèse d'Aragon",
     description: "Princesse d’Aragon, elle renforça durablement les liens avec l’Aragon par la diplomatie.",
-    image: "/gaston-iv.jpg",
+    image: "/talse.jpg",
     periode: "1090-1137",
     lignee: "Centulle",
     badge: "Pieuse"
@@ -55,7 +55,7 @@ const vicomtes = [
     slug: "gaston-vi",
     titre: "Gaston VI",
     description: "Il place le Béarn au cœur des enjeux pyrénéens tout en préservant son autonomie.",
-    image: "/gaston.png",
+    image: "/gaston-vi.png",
     periode: "1173-1214",
     lignee: "Moncade",
     badge: "Fidèle"
