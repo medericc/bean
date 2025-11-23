@@ -51,7 +51,7 @@ const vicomtes = [
     slug: "marie",
     titre: "Marie de Béarn",
     description: "Humble femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/gaston-iv.jpg",
+    image: "/marieb.png",
     periode: "1170-1173",
     lignee: "Gabarret",
     badge: "Religieuse"
