@@ -175,7 +175,7 @@ const vicomtes = [
     badge: "Réformatrice"
   },
    {
-    slug: "catherine2",
+    slug: "bourbon",
     titre: "Catherine de Bourbon",
     description: "Nommé par son frère Henri III de Navarre, elle assure la régence et gouvernance du Béarn.",
     image: "/catherine_bourbon.png",

@@ -359,7 +359,7 @@ const vicomtesData = {
     "heritage": " Son œuvre politique et religieuse fit du Béarn un modèle d’État protestant et de tolérance. Protectrice des lettres et des traducteurs, elle contribua à l’essor du basque et du béarnais écrits."
   },
   
-"catherine2":  {
+"bourbon":  {
     "titre": "Catherine de Bourbon",
    "dates": "1577-1592",
     "surnom": "La Princesse des Vertus", 
