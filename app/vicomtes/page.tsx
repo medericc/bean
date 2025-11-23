@@ -55,7 +55,7 @@ const vicomtes = [
     slug: "gaston-vi",
     titre: "Gaston VI",
     description: "Il place le Béarn au cœur des enjeux pyrénéens tout en préservant son autonomie.",
-    image: "/gaston-iv.jpg",
+    image: "/gaston.png",
     periode: "1173-1214",
     lignee: "Moncade",
     badge: "Fidèle"
