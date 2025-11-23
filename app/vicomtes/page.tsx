@@ -114,7 +114,7 @@ const vicomtes = [
     slug: "mathieu",
     titre: "Mathieu de Castelbon",
     description: "Son règne, bref, permit de consolider l’indépendance et les institutions du Béarn.",
-    image: "/gaston-febus.jpg",
+    image: "/mathieu.jpg",
     periode: "1391-1398",
     lignee: "Foix-Béarn",
     badge: "Gardien"
@@ -123,7 +123,7 @@ const vicomtes = [
     slug: "isabelle",
     titre: "Isabelle de Castelbon",
     description: "Elle préserve la neutralité et la prospérité du Béarn durant une période troublée.",
-    image: "/gaston-febus.jpg",
+    image: "/isabelle.jpg",
     periode: "1398-1412",
     lignee: "Foix-Béarn",
     badge: "Majoresse"
@@ -141,7 +141,7 @@ const vicomtes = [
     slug: "gaston-xi",
     titre: "Gaston XI",
     description: "Il participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
-    image: "/gaston-febus.jpg",
+    image: "/gaston.png",
     periode: "1436-1472",
     lignee: "Foix-Béarn",
     badge: "Forgeur"
