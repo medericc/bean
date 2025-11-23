@@ -9,7 +9,7 @@ const vicomtes = [
     slug: "centulle-iv",
     titre: "Centulle IV le Vieux",
     description: "Vicomte de 1020 à 1058, il consolide le pouvoir béarnais et étend l'influence de la vicomté.",
-    image: "/images/vicomtes/centulle-iv.jpg",
+    image: "/centulle-iv.jpg",
     periode: "1020-1058",
     lignee: "Centulle",
     badge: "Bâtisseur"
@@ -18,7 +18,7 @@ const vicomtes = [
     slug: "centulle-v",
     titre: "Centulle V le Jeune",
     description: "Successeur de Centulle le Vieux, il réforme et bâtit l’indépendance béarnaise",
-    image: "/images/vicomtes/centulle-iv.jpg",
+    image: "/centulle-iv.jpg",
     periode: "1058–1090",
     lignee: "Centulle",
     badge: "Réformateur"
@@ -27,7 +27,7 @@ const vicomtes = [
     slug: "gaston-iv",
     titre: "Gaston IV le Croisé",
     description: "Héros de la première croisade, il renforce les institutions et développe l'administration.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1090-1131",
     lignee: "Centulle",
     badge: "Croisé"
@@ -36,7 +36,7 @@ const vicomtes = [
     slug: "talese-d-aragon",
     titre: "Talèse d'Aragon",
     description: "Princesse d’Aragon, elle renforça durablement les liens avec l’Aragon par la diplomatie.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1090-1137",
     lignee: "Centulle",
     badge: "Pieuse"
@@ -45,7 +45,7 @@ const vicomtes = [
     slug: "marie",
     titre: "Marie de Béarn",
     description: "Humble femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1170-1173",
     lignee: "Gabarret",
     badge: "Religieuse"
@@ -55,7 +55,7 @@ const vicomtes = [
     slug: "gaston-vi",
     titre: "Gaston VI",
     description: "Il place le Béarn au cœur des enjeux pyrénéens tout en préservant son autonomie.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1173-1214",
     lignee: "Moncade",
     badge: "Fidèle"
@@ -65,7 +65,7 @@ const vicomtes = [
     slug: "guillaume-raymond",
     titre: "Guillaume-Raymond",
     description: "Seigneur parfois brutal, il marque la vicomté par des réformes institutionnelles.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1214-1224",
     lignee: "Moncade",
     badge: "Pénitent"
@@ -75,7 +75,7 @@ const vicomtes = [
     slug: "guillaume-ii",
     titre: "Guillaume II",
     description: "Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1224-1229",
     lignee: "Moncade",
     badge: "Chevalier"
@@ -84,7 +84,7 @@ const vicomtes = [
     slug: "gaston-vii",
     titre: "Gaston VII",
     description: "Il consolida le pouvoir béarnais tout en jonglant entre Angleterre, Castille et Aragon.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1229-1290",
     lignee: "Moncade",
     badge: "Indomptable"
@@ -94,7 +94,7 @@ const vicomtes = [
     slug: "marguerite",
     titre: "Marguerite",
     description: "Elle unit Foix-Béarn, en maintenant l'indépendance du Béarn face aux anglais et français.",
-    image: "/images/vicomtes/gaston-iv.jpg",
+    image: "/gaston-iv.jpg",
     periode: "1290–1319",
     lignee: "Moncade",
     badge: "Stratège"
@@ -105,7 +105,7 @@ const vicomtes = [
     slug: "gaston-febus",
     titre: "Gaston Fébus",
     description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
-    image: "/images/vicomtes/gaston-febus.jpg",
+    image: "/gaston-febus.jpg",
     periode: "1343-1391",
     lignee: "Foix-Béarn",
     badge: "Mécène"
@@ -114,7 +114,7 @@ const vicomtes = [
     slug: "mathieu",
     titre: "Mathieu de Castelbon",
     description: "Son règne, bref, permit de consolider l’indépendance et les institutions du Béarn.",
-    image: "/images/vicomtes/gaston-febus.jpg",
+    image: "/gaston-febus.jpg",
     periode: "1391-1398",
     lignee: "Foix-Béarn",
     badge: "Gardien"
@@ -123,7 +123,7 @@ const vicomtes = [
     slug: "isabelle",
     titre: "Isabelle de Castelbon",
     description: "Elle préserve la neutralité et la prospérité du Béarn durant une période troublée.",
-    image: "/images/vicomtes/gaston-febus.jpg",
+    image: "/gaston-febus.jpg",
     periode: "1398-1412",
     lignee: "Foix-Béarn",
     badge: "Majoresse"
@@ -132,7 +132,7 @@ const vicomtes = [
     slug: "jean",
     titre: "Jean de Grailly",
     description: "Il maintient la neutralité du Béarn en étendant son influence diplomatique dans le sud de la France.",
-    image: "/images/vicomtes/gaston-febus.jpg",
+    image: "/gaston-febus.jpg",
     periode: "1412-1436",
     lignee: "Foix-Béarn",
     badge: "Tacticien"
@@ -141,7 +141,7 @@ const vicomtes = [
     slug: "gaston-xi",
     titre: "Gaston XI",
     description: "Il participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
-    image: "/images/vicomtes/gaston-febus.jpg",
+    image: "/gaston-febus.jpg",
     periode: "1436-1472",
     lignee: "Foix-Béarn",
     badge: "Forgeur"
@@ -151,7 +151,7 @@ const vicomtes = [
     slug: "catherine",
     titre: "Catherine de Foix",
     description: "Elle défend vigoureusement la souveraineté du Béarn affirmant son pouvoir royal propre.",
-    image: "/images/vicomtes/henri-iv.jpg",
+    image: "/henri-iv.jpg",
     periode: "1483-1517",
     lignee: "Navarre",
     badge: "Résiliente"
@@ -160,7 +160,7 @@ const vicomtes = [
     slug: "henri",
     titre: "Henri d'Albret",
     description: "Il introduit des réformes administratives et fait un refuge pour les réformés, en restant dans la cour française.",
-    image: "/images/vicomtes/henri-iv.jpg",
+    image: "/henri-iv.jpg",
     periode: "1517-1555",
     lignee: "Navarre",
     badge: "Architecte"
@@ -169,7 +169,7 @@ const vicomtes = [
     slug: "jeanne",
     titre: "Jeanne d'Albret",
     description: "Dernier vicomte souverain de Béarn avant l'accession d'Henri IV au trône de France.",
-    image: "/images/vicomtes/henri-iv.jpg",
+    image: "/jeanne.jpg",
     periode: "1555-1572",
     lignee: "Navarre",
     badge: "Réformatrice"
