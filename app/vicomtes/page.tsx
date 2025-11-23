@@ -151,7 +151,7 @@ const vicomtes = [
     slug: "catherine",
     titre: "Catherine de Foix",
     description: "Elle défend vigoureusement la souveraineté du Béarn affirmant son pouvoir royal propre.",
-    image: "/henri-iv.jpg",
+    image: "/catherine.jpg",
     periode: "1483-1517",
     lignee: "Navarre",
     badge: "Résiliente"
