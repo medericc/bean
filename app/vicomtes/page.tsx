@@ -41,6 +41,9 @@ const vicomtes = [
     lignee: "Centulle",
     badge: "Pieuse"
   },
+
+
+
   {
     slug: "marie",
     titre: "Marie de Béarn",
@@ -75,7 +78,7 @@ const vicomtes = [
     slug: "guillaume-ii",
     titre: "Guillaume II",
     description: "Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée.",
-    image: "/gaston-iv.jpg",
+    image: "/guillaumeii.png",
     periode: "1224-1229",
     lignee: "Moncade",
     badge: "Chevalier"
@@ -110,6 +113,10 @@ const vicomtes = [
     lignee: "Foix-Béarn",
     badge: "Mécène"
   },
+
+
+
+
    {
     slug: "mathieu",
     titre: "Mathieu de Castelbon",
