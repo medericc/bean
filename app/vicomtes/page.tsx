@@ -160,7 +160,7 @@ const vicomtes = [
     slug: "henri",
     titre: "Henri d'Albret",
     description: "Il introduit des réformes administratives et fait un refuge pour les réformés, en restant dans la cour française.",
-    image: "/henri-iv.jpg",
+    image: "/henri.png",
     periode: "1517-1555",
     lignee: "Navarre",
     badge: "Architecte"
