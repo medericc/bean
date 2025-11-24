@@ -38,6 +38,7 @@ const ligneesData = {
        
       
     ],
+    descriptionCourte: "Pionniers du Béarn, entre foi et pouvoir",
     heritage: "La Maison de Centulle a donné au Béarn sa première véritable souveraineté politique et spirituelle. En posant les bases d’un pouvoir régalien, elle a façonné un territoire libre, gouverné selon ses propres lois (les Fors), doté d’une monnaie et d’institutions locales solides. Leur alliance avec Rome et Cluny a ancré le Béarn dans le grand mouvement réformateur de la chrétienté, tandis que leurs liens avec l’Aragon ont ouvert la voie à une diplomatie pyrénéenne originale. Héritiers d’une tradition de liberté communautaire, les Centulle ont transmis à leurs successeurs un Béarn cohérent, stable et fier de son indépendance — un modèle d’équilibre entre foi, coutume et souveraineté."
   },
    gabarret: {
@@ -52,6 +53,7 @@ const ligneesData = {
       "Alliances du Béarn, du Marsan et de la Bigorre",
       
     ],
+    descriptionCourte: "Lignée née des rivalités pyrénéennes",
     heritage: "Cette lignée a transmis un héritage d’indépendance politique et d’équilibre entre les puissances voisines. Elle a ancré le Béarn dans une identité fière, autonome et tournée vers la diplomatie plutôt que la conquête. Le système féodal local, fondé sur la Cout Majour et le serment collectif, a laissé une trace durable dans l’histoire institutionnelle du Sud-Ouest."
   },
     moncade: {
@@ -67,6 +69,7 @@ const ligneesData = {
       "Marguerite résiste devant la France",
       
     ],
+   descriptionCourte: "Pouvoir catalan forgeant l’État béarnais",
     heritage: "Les Moncade lèguent un Béarn autonome, administrativement structuré et jaloux de ses libertés féodales. Leur politique prépare la montée d’une identité béarnaise forte, indépendante du roi de France"
   },
    foix: {
@@ -82,6 +85,7 @@ const ligneesData = {
       "Union Béarn-Navarre",
       
     ],
+    descriptionCourte: "Maison unifiant Béarn et puissance féodale",
     heritage: "La maison de Foix-Béarn lègue un Béarn politiquement autonome, administrativement organisé et profondément enraciné dans une culture de liberté. Sa diplomatie prudente, son équilibre entre neutralité et affirmation souveraine, ainsi que son sens de la centralisation préparent la transition vers une principauté moderne. Par l’union dynastique avec la Navarre, le Béarn devient un acteur incontournable entre France, Gascogne et péninsule Ibérique, jetant les bases du futur royaume de Navarre-Béarn. Cette lignée incarne la maturité politique du Béarn, capable de résister aux rois de France tout en tissant des alliances durables."
   },
    navarre: {
@@ -97,6 +101,7 @@ const ligneesData = {
     "1560 : Jeanne d’Albret introduit la Réforme Protestante",
       
     ],
+   descriptionCourte: "Dynastie garante de l’autonomie du Béarn",
     heritage: "La Maison de Navarre marque l’apogée politique et culturelle du Béarn médiéval devenu principauté souveraine. Elle laisse un héritage de fermeté politique, d’humanisme et d’autonomie, qui fera du Béarn un modèle unique de souveraineté."
   },
   // ... autres lignees
@@ -141,18 +146,22 @@ export default function LigneeDetailPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-parchemin">
       {/* En-tête avec image */}
-      <section className="relative h-96 bg-gray-800">
-        <img 
-          src={lignee.image} 
-          alt={lignee.titre}
-          className="w-full h-full object-cover opacity-70"
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute bottom-8 left-8 text-white">
-          <h1 className="font-titre text-4xl md:text-5xl mb-2">{lignee.titre}</h1>
-          <p className="font-corps text-xl">{lignee.periode}</p>
-        </div>
-      </section>
+    <section className="bg-pierre py-16">
+  <div className="container mx-auto px-4">
+    <div className="text-center max-w-4xl mx-auto">
+      <h1 className="font-titre text-4xl md:text-5xl text-vert-mousse mb-4">
+        {lignee.titre}
+      </h1>
+      <p className="font-corps text-2xl text-brun-terre mb-2">
+        {lignee.periode}
+      </p>
+      <p className="font-corps text-lg text-gray-700">
+        {lignee.descriptionCourte}
+      </p>
+    </div>
+  </div>
+</section>
+
       
       {/* Contenu principal */}
       <section className="py-16">
