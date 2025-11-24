@@ -169,7 +169,7 @@ const vicomtes = [
     slug: "gaston-xi",
     titre: "Gaston XI",
     description: "Il participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
-    image: "/gaston11.webp",
+    image: "/gastonfb.webp",
     periode: "1436-1472",
     lignee: "Foix-Béarn",
     badge: "Forgeur"
