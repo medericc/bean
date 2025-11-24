@@ -57,6 +57,11 @@ const vicomtes = [
     badge: "Religieuse"
   },
 
+
+
+
+
+
   {
     slug: "gaston-vi",
     titre: "Gaston VI",
@@ -95,11 +100,16 @@ const vicomtes = [
     slug: "gaston-vii",
     titre: "Gaston VII",
     description: "Il consolida le pouvoir béarnais tout en jonglant entre Angleterre, Castille et Aragon.",
-    image: "/gaston-iv.jpg",
+    image: "/anglais.png",
     periode: "1229-1290",
     lignee: "Moncade",
     badge: "Indomptable"
   },
+
+
+
+
+
 
   {
     slug: "marguerite",
@@ -116,7 +126,7 @@ const vicomtes = [
     slug: "gaston-febus",
     titre: "Gaston Fébus",
     description: "Prince emblématique, auteur du Livre de la Chasse, il incarne l'apogée culturel du Béarn.",
-    image: "/gaston-febus.jpg",
+    image: "/febus.jpg",
     periode: "1343-1391",
     lignee: "Foix-Béarn",
     badge: "Mécène"
