@@ -9,7 +9,7 @@ const lignees = [
     slug: "centulle",
     titre: "Maison de Centulle",
     description: "La première lignée des vicomtes de Béarn, issue du Vic-Bilh, remontant au Xe siècle.",
-    image: "/images/lignees/centulle.jpg",
+    image: "/centulle-cover.jpg",
     periode: "Xe - XIIe siècle",
     vicomtes: "10 vicomtes",
     badge: "Fondateurs"
@@ -18,7 +18,7 @@ const lignees = [
     slug: "gabarret",
     titre: "Maison de Gabarret", 
     description: "Brève mais importante lignée qui consolide le pouvoir vicomtal face aux voisins aquitains.",
-    image: "lignee-cover.jpg",
+    image: "/lignee-cover.jpg",
     periode: "XIIe siècle",
     vicomtes: "3 vicomtes",
     badge: "Consolidation"
