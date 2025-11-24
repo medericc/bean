@@ -2836,12 +2836,8 @@ export default function HistoireDetailPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
-      <section className="relative h-96 bg-gray-800">
-        <img 
-          src={pageData.image} 
-          alt={pageData.titre}
-          className="w-full h-full object-cover opacity-60"
-        />
+      <section className="relative h-96 bg-gray-900">
+        
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-white w-full px-4">
           <span className="inline-block bg-or-patine text-white px-4 py-2 rounded-full font-corps text-sm mb-4">
