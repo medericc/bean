@@ -15,7 +15,7 @@ export default function Home() {
     {
       titre: "Lignées Vicomtales",
       description: "Découvrez les grandes familles qui ont façonné le Béarn",
-      image: "/lignees-cover.jpg",
+      image: "/lignee-cover.jpg",
       lien: "/lignees",
       badge: "Familles"
     },

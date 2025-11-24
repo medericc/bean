@@ -18,7 +18,7 @@ const lignees = [
     slug: "gabarret",
     titre: "Maison de Gabarret", 
     description: "Brève mais importante lignée qui consolide le pouvoir vicomtal face aux voisins aquitains.",
-    image: "/images/lignees/gabarret.jpg",
+    image: "lignee-cover.jpg",
     periode: "XIIe siècle",
     vicomtes: "3 vicomtes",
     badge: "Consolidation"
