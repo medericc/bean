@@ -2775,7 +2775,7 @@ Le 17 janvier 1793, après des jours de débats, la décision tombe : la mort po
       },
     
        {
-        titre: "La Machine Social de la République",
+        titre: "La Machine Sociale de la République",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
