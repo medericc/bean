@@ -45,7 +45,7 @@ const lignees = [
     slug: "navarre",
     titre: "Maison de Navarre",
     description: "Alliance avec la Navarre, menant au règne d'Henri IV et au rattachement à la France.",
-    image: "/images/lignees/navarre.jpg", 
+    image: "/vicomtes-cover.jpg", 
     periode: "XVe - XVIe siècle",
     vicomtes: "4 vicomtes",
     badge: "Couronnement"
