@@ -9,7 +9,7 @@ const vicomtes = [
     slug: "centulle-iv",
     titre: "Centulle IV le Vieux",
     description: "Vicomte de 1020 à 1058, il consolide le pouvoir béarnais et étend l'influence de la vicomté.",
-    image: "/centulle.png",
+    image: "/centulle.jpg",
     periode: "1020-1058",
     lignee: "Centulle",
     badge: "Bâtisseur"
@@ -21,7 +21,7 @@ const vicomtes = [
     slug: "centulle-v",
     titre: "Centulle V le Jeune",
     description: "Successeur de Centulle le Vieux, il réforme et bâtit l’indépendance béarnaise",
-    image: "/centulle-.jpg",
+    image: "/centulle2.jpg",
     periode: "1058–1090",
     lignee: "Centulle",
     badge: "Réformateur"
@@ -33,7 +33,7 @@ const vicomtes = [
     slug: "gaston-iv",
     titre: "Gaston IV le Croisé",
     description: "Héros de la première croisade, il renforce les institutions et développe l'administration.",
-    image: "/croise.png",
+    image: "/croise.jpg",
     periode: "1090-1131",
     lignee: "Centulle",
     badge: "Croisé"
@@ -42,7 +42,7 @@ const vicomtes = [
     slug: "talese-d-aragon",
     titre: "Talèse d'Aragon",
     description: "Princesse d’Aragon, elle renforça durablement les liens avec l’Aragon par la diplomatie.",
-    image: "/talse.jpg",
+    image: "/talese.png",
     periode: "1090-1137",
     lignee: "Centulle",
     badge: "Pieuse"
@@ -54,7 +54,7 @@ const vicomtes = [
     slug: "marie",
     titre: "Marie de Béarn",
     description: "Humble femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/marieb.png",
+    image: "/mariebearn.png",
     periode: "1170-1173",
     lignee: "Gabarret",
     badge: "Religieuse"
@@ -69,7 +69,7 @@ const vicomtes = [
     slug: "gaston-vi",
     titre: "Gaston VI",
     description: "Il place le Béarn au cœur des enjeux pyrénéens tout en préservant son autonomie.",
-    image: "/six.png",
+    image: "/sixe.png",
     periode: "1173-1214",
     lignee: "Moncade",
     badge: "Fidèle"
@@ -81,7 +81,7 @@ const vicomtes = [
     slug: "guillaume-raymond",
     titre: "Guillaume-Raymond",
     description: "Seigneur parfois brutal, il marque la vicomté par des réformes institutionnelles.",
-    image: "/guillaume.jpg",
+    image: "/guilhem.png",
     periode: "1214-1224",
     lignee: "Moncade",
     badge: "Pénitent"
@@ -91,7 +91,7 @@ const vicomtes = [
     slug: "guillaume-ii",
     titre: "Guillaume II",
     description: "Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée.",
-    image: "/guillaume2.png",
+    image: "/guillaumedeux.png",
     periode: "1224-1229",
     lignee: "Moncade",
     badge: "Chevalier"
@@ -103,7 +103,7 @@ const vicomtes = [
     slug: "gaston-vii",
     titre: "Gaston VII",
     description: "Il consolida le pouvoir béarnais tout en jonglant entre Angleterre, Castille et Aragon.",
-    image: "/anglais.png",
+    image: "/gastonanglais.png",
     periode: "1229-1290",
     lignee: "Moncade",
     badge: "Indomptable"
@@ -142,7 +142,7 @@ const vicomtes = [
     slug: "mathieu",
     titre: "Mathieu de Castelbon",
     description: "Son règne, bref, permit de consolider l’indépendance et les institutions du Béarn.",
-    image: "/mathieu.jpg",
+    image: "/matieu.png",
     periode: "1391-1398",
     lignee: "Foix-Béarn",
     badge: "Gardien"
@@ -151,7 +151,7 @@ const vicomtes = [
     slug: "isabelle",
     titre: "Isabelle de Castelbon",
     description: "Elle préserve la neutralité et la prospérité du Béarn durant une période troublée.",
-    image: "/isabelle.jpg",
+    image: "/jsp.png",
     periode: "1398-1412",
     lignee: "Foix-Béarn",
     badge: "Majoresse"
@@ -160,7 +160,7 @@ const vicomtes = [
     slug: "jean",
     titre: "Jean de Grailly",
     description: "Il maintient la neutralité du Béarn en étendant son influence diplomatique dans le sud de la France.",
-    image: "/jean.jpg",
+    image: "/jeangrailly.png",
     periode: "1412-1436",
     lignee: "Foix-Béarn",
     badge: "Tacticien"
@@ -169,7 +169,7 @@ const vicomtes = [
     slug: "gaston-xi",
     titre: "Gaston XI",
     description: "Il participe activement à la guerre de Cent Ans et renforce les alliances avec la France et la Navarre.",
-    image: "/gaston.png",
+    image: "/gaston11.jpg",
     periode: "1436-1472",
     lignee: "Foix-Béarn",
     badge: "Forgeur"
@@ -179,7 +179,7 @@ const vicomtes = [
     slug: "catherine",
     titre: "Catherine de Foix",
     description: "Elle défend vigoureusement la souveraineté du Béarn affirmant son pouvoir royal propre.",
-    image: "/catherine.jpg",
+    image: "/cat.jpg",
     periode: "1483-1517",
     lignee: "Navarre",
     badge: "Résiliente"
@@ -197,7 +197,7 @@ const vicomtes = [
     slug: "jeanne",
     titre: "Jeanne d'Albret",
     description: "Dernier vicomte souverain de Béarn avant l'accession d'Henri IV au trône de France.",
-    image: "/jeanne.jpg",
+    image: "/jeannedal.png",
     periode: "1555-1572",
     lignee: "Navarre",
     badge: "Réformatrice"
@@ -206,7 +206,7 @@ const vicomtes = [
     slug: "bourbon",
     titre: "Catherine de Bourbon",
     description: "Nommé par son frère Henri III de Navarre, elle assure la régence et gouvernance du Béarn.",
-    image: "/catherine_bourbon.png",
+    image: "/bourbon.png",
     periode: "1577-1592",
     lignee: "Navarre",
     badge: "Vertueuse"
