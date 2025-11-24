@@ -9,16 +9,19 @@ const vicomtes = [
     slug: "centulle-iv",
     titre: "Centulle IV le Vieux",
     description: "Vicomte de 1020 à 1058, il consolide le pouvoir béarnais et étend l'influence de la vicomté.",
-    image: "/centulle-iv.jpg",
+    image: "/centulle.png",
     periode: "1020-1058",
     lignee: "Centulle",
     badge: "Bâtisseur"
   },
+
+
+
    {
     slug: "centulle-v",
     titre: "Centulle V le Jeune",
     description: "Successeur de Centulle le Vieux, il réforme et bâtit l’indépendance béarnaise",
-    image: "/centulle-iv.jpg",
+    image: "/centulle-.jpg",
     periode: "1058–1090",
     lignee: "Centulle",
     badge: "Réformateur"
@@ -88,7 +91,7 @@ const vicomtes = [
     slug: "guillaume-ii",
     titre: "Guillaume II",
     description: "Élevé à la cour d’Aragon, il incarna la double identité pyrénéenne de sa lignée.",
-    image: "/guillaumeii.png",
+    image: "/guillaume2.png",
     periode: "1224-1229",
     lignee: "Moncade",
     badge: "Chevalier"
