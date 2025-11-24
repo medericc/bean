@@ -8,21 +8,21 @@ export default function Home() {
     {
       titre: "Histoire Chronologique",
       description: "Parcourez les grandes périodes du Béarn",
-      image: "/images/histoire-cover.jpg",
+      image: "/histoire-cover.jpg",
       lien: "/histoire",
       badge: "Timeline"
     },
     {
       titre: "Lignées Vicomtales",
       description: "Découvrez les grandes familles qui ont façonné le Béarn",
-      image: "/images/lignees-cover.jpg",
+      image: "/lignees-cover.jpg",
       lien: "/lignees",
       badge: "Familles"
     },
     {
       titre: "Les Vicomtes",
       description: "Explorez les biographies des vicomtes de Béarn",
-      image: "/images/vicomtes-cover.jpg", 
+      image: "/vicomtes-cover.jpg", 
       lien: "/vicomtes",
       badge: "Biographies"
     }
