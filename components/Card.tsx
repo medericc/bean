@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // components/Card.tsx
 interface CardProps {
   titre: string;
@@ -12,11 +14,12 @@ export default function Card({ titre, description, image, lien, badge }: CardPro
     <div className="bg-parchemin rounded-lg overflow-hidden shadow-lg border border-or-patine transition-all duration-300 hover:shadow-xl hover:scale-105 group">
       {/* Image */}
       <div className="relative overflow-hidden h-48">
-        <img 
-          src={image} 
-          alt={titre}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-        />
+       <Image
+  src={image}
+  alt={titre}
+  fill
+  className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
         {badge && (
           <span className="absolute top-3 left-3 bg-vert-mousse text-white px-2 py-1 rounded text-xs font-corps">
             {badge}
