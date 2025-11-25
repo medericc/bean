@@ -642,7 +642,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
 
 
   
-     'autre': {
+     'tutelle': {
     titre: "Vers la Souveraineté",
     periode: "Moyen Age",
     resume: "Le Béarn s’émancipe et affirme son équilibre politique",
@@ -1017,7 +1017,7 @@ Pour tenter d’apaiser le conflit, Jean II chercha à médiatiser la querelle p
   },
 
 
-     'souverainete2': {
+     'apogee': {
     titre: "L'Apogée Militaire",
     periode: "Moyen Age",
     resume: "Fébus en héros de l'Occident",
@@ -1177,7 +1177,7 @@ En 1388, Gaston Fébus, comte de Foix, remporta une victoire décisive contre le
     ]
   },
 
-   'souverainete3': {
+   'affirmation': {
     titre: "L'Affirmation Béarnaise",
     periode: "Moyen Age",
     resume: "La neutralité du Béarn",
@@ -1359,7 +1359,7 @@ L’expédition du Prince Noir débuta par un triomphe, le 3 avril 1366, à Náj
   },
 
 
- 'souverainete4': {
+ 'drames': {
     titre: "Les Drames de Fébus",
     periode: "Moyen Age",
     resume: "Conflits et Tragédie",
@@ -1549,7 +1549,7 @@ Quatre ans plus tard, le 17 août 1380, Gaston Fébus règle son hommage au châ
 
 
 
-'souverainete5': {
+'apres-febus': {
     titre: "Souveraineté",
     periode: "Moyen Age",
     resume: "Les derniers actes de Fébus",
@@ -1939,7 +1939,7 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
       }
     ]
   },
-   'navarre': {
+   'vers-paris': {
     titre: "Tournée vers Paris",
     periode: "Renaissance",
     resume: "Le Béarn embrasse la Réforme protestante",
@@ -2364,7 +2364,7 @@ En 1642 Antonio de Montezinos navigateur juif revient d Amérique du Sud, il aur
     ]
   },
   
-   'france2': {
+   'monarchie': {
     titre: "Sous la monarchie absolue",
     periode: "Renaissance",
     resume: "Le Béarn et la monarchie française",
@@ -2473,7 +2473,7 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
 
     ]
   },
-   'france3': {
+   'lumieres': {
     titre: "Vers la Terreur",
     periode: "Renaissance",
     resume: "La monarchie française devant la mondialisation",
@@ -2701,7 +2701,7 @@ Après la victoire américaine de 1783, les réseaux commerciaux juifs et protes
 
     ]
   },
-   'france4': {
+   'terreur': {
     titre: "Le Béarn sous la Terreur",
     periode: "Époque Moderne",
     resume: "L'entrée de la France dans l'obscurantisme",

@@ -57,7 +57,7 @@ const periodes: Periode[] = [
     annee: "XIVe-XVe siècle", 
     titre: "Fin de la Tutelle",
     description: "Le Béarn s’affranchit de la tutelle et affirme peu à peu son autonomie",
-    slug: 'autre',
+    slug: 'tutelle',
   },
     {
     annee: "XIVe-XVe siècle", 
@@ -75,25 +75,25 @@ const periodes: Periode[] = [
     annee: "XIVe-XVe siècle", 
     titre: "L'Apogée Militaire",
     description: "Le Béarn s'impose militairement et diplomatiquement",
-    slug: 'souverainete2',
+    slug: 'apogee',
   },
   {
     annee: "XIVe-XVe siècle", 
    titre: "L'Affirmation Béarnaise",
     description: "Le Béarn sous la Menace du Prince Noir",
-    slug: 'souverainete3',
+    slug: 'affirmation',
   },
    {
     annee: "XIVe-XVe siècle", 
     titre: "Les Drames de Fébus",
     description: "Le Pays de Béarn entre Guerre et Tragédie",
-    slug: 'souverainete4',
+    slug: 'drames',
   },
   {
     annee: "XIVe-XVe siècle", 
     titre: "Le Béarn Post-Fébus",
     description: "Les États en affirmation définitivement l'indépendance",
-    slug: 'souverainete5',
+    slug: 'apres-febus',
   },
  
   {
@@ -106,7 +106,7 @@ const periodes: Periode[] = [
     annee: "XVIe siècle", 
     titre: "Tournée vers Paris",
     description: "Animée par la vertu, Jeanne d’Albret impose avec fermeté la Réforme",
-    slug: 'navarre',
+    slug: 'vers-paris',
   }
    ,
   {
@@ -120,21 +120,21 @@ const periodes: Periode[] = [
     annee: "XVIIe siècle", 
     titre: "Sous la Monarchie Absolue",
     description: "Après la mort d'Henri IV, le Béarn rejoint la Fleur de Lys",
-    slug: 'france2',
+    slug: 'monarchie',
   }
   ,
   {
     annee: "XVIIIe siècle", 
     titre: "Vers la Terreur",
     description: "Des idées noahides s'emparent de Londres, Paris, Boston...",
-    slug: 'france3',
+    slug: 'lumieres',
   }
   ,
   {
     annee: "XVIIIe siècle", 
     titre: "Le Béarn sous la Terreur",
     description: "Des Peuplicides se mettent en place au nom de la Tolérance",
-    slug: 'france4',
+    slug: 'terreur',
   }
 ];
 
