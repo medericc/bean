@@ -8,7 +8,7 @@ export default function Home() {
     {
       titre: "Histoire Chronologique",
       description: "Parcourez les grandes périodes du Béarn",
-      image: "/histoire-coverx.jpg",
+      image: "/histoire-cover.jpg",
       lien: "/histoire",
       badge: "Timeline"
     },
@@ -22,7 +22,7 @@ export default function Home() {
     {
       titre: "Les Vicomtes",
       description: "Explorez les biographies des vicomtes de Béarn",
-      image: "/vicomtes-cover.jpg", 
+      image: "/vicomtes-coverx.jpg", 
       lien: "/vicomtes",
       badge: "Biographies"
     }
