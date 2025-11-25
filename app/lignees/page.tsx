@@ -9,7 +9,7 @@ const lignees = [
     slug: "centulle",
     titre: "Maison de Centulle",
     description: "La première lignée des vicomtes de Béarn, issue du Vic-Bilh, remontant au Xe siècle.",
-    image: "/centulle-cov.jpg",
+    image: "/centulle-cov.png",
     periode: "Xe - XIIe siècle",
     vicomtes: "10 vicomtes",
     badge: "Fondateurs"
