@@ -27,7 +27,7 @@ const lignees = [
     slug: "moncade",
     titre: "Maison de Moncade",
     description: "Puissante famille qui étend l'influence du Béarn en Catalogne et renforce l'administration.",
-    image: "/images/lignees/moncade.jpg",
+    image: "/moncade-cover.jpg",
     periode: "XIIe - XIIIe siècle", 
     vicomtes: "5 vicomtes",
     badge: "Expansion"
