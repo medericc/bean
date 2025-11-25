@@ -2385,7 +2385,7 @@ En 1642 Antonio de Montezinos navigateur juif revient d Amérique du Sud, il aur
       },
 
        {
-        titre: "Le rattachement du Béarn à la France",
+        titre: "Le Rattachement du Béarn à la France",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2396,7 +2396,7 @@ En 1642 Antonio de Montezinos navigateur juif revient d Amérique du Sud, il aur
       },
     
        {
-        titre: "Les mousquetaires béarnais",
+        titre: "Les Mousquetaires Béarnais",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2406,7 +2406,7 @@ En 1622, Louis XIII créa la Compagnie des mousquetaires à cheval, héritiers d
         )
       },
  {
-        titre: "Un royaume dans le royaume",
+        titre: "Un Royaume dans le Royaume",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2446,7 +2446,7 @@ Au XVIIᵉ siècle, la Contre-Réforme marque profondément la Soule, menée par
         )
       },
         {
-        titre: "La traite des corsaires sarrasins",
+        titre: "La Traite des Corsaires Sarrasins",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2492,7 +2492,7 @@ Sabbataï Tsevi se proclame Messie au sein du judaïsme sépharade, en 1666, il 
       },
 
  {
-        titre: "Les relations en Europe",
+        titre: "Les Relations en Europe",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2516,7 +2516,7 @@ John Theophilus Desaguliers (huguenot réfugié en Angleterre) et James Anderson
 
 
        {
-        titre: "La franc-maçonnerie russe",
+        titre: "La Franc-Maçonnerie Russe",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2527,7 +2527,7 @@ John Phillips maçon anglais arrivé à Saint-Pétersbourg dans les années 1730
       },
 
    {
-        titre: "La naissance des lumières",
+        titre: "La Naissance des Lumières",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2549,7 +2549,7 @@ Il existait de fortes divergences internes entre penseurs des Lumières. Roussea
 
 
     {
-        titre: "La franc-maçonnerie auscitaines",
+        titre: "La Franc-Maçonnerie Auscitaines",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2560,7 +2560,7 @@ L’idéal de la franc-maçonnerie française au XVIIIᵉ siècle, à l’époqu
       },
 
         {
-        titre: "La loge Saint-Jean-des-Arts",
+        titre: "La Loge Saint-Jean-des-Arts",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2570,7 +2570,7 @@ En 1776, la loge d’Auch, alors en perte de vitalité, rejoignit l’obédience
         )
       },
        {
-        titre: "La franc-maçonnerie basque",
+        titre: "La Franc-Maçonnerie Basque",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2581,7 +2581,7 @@ En 1776, la loge d’Auch, alors en perte de vitalité, rejoignit l’obédience
       },
     
   {
-        titre: "La franc-maçonnerie tarbaise",
+        titre: "La Franc-Maçonnerie Tarbaise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2592,7 +2592,7 @@ Au XVIIIᵉ siècle, Tarbes connaît une forte expansion : sa population triple,
       },
     
        {
-        titre: "La franc-maçonnerie béarnaise",
+        titre: "La Franc-Maçonnerie Béarnaise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2625,7 +2625,7 @@ Le duc de Brunswick présida le Convent de Wilhelmsbad, un congrès maçonnique 
 
 
  {
-        titre: "Le mythe de l'Indépendance Américaine",
+        titre: "Le Mythe de l'Indépendance Américaine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2636,7 +2636,7 @@ Les mythes fondateurs jouèrent un rôle déterminant dans la cohésion des colo
       },
 
        {
-        titre: "Le début de l'Indépendance Américaine",
+        titre: "Le Début de l'Indépendance Américaine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2647,7 +2647,7 @@ En 1764, la loge maçonnique St. Andrew’s Lodge de Boston acquiert le Green Dr
       },
     
        {
-        titre: "La mise en place de l'indépendance Américaine",
+        titre: "La Mise en Place de l'Indépendance Américaine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2657,7 +2657,7 @@ Juif polonais installé en Amérique, Haym Salomon s’engage dans la branche ne
         )
       },
  {
-        titre: "Au tour de la France",
+        titre: "Au Tour de la France",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2680,7 +2680,7 @@ Le 23 juin 1789, Louis XVI convoque une séance solennelle à laquelle Necker es
 
 
  {
-        titre: "La continuité des réseaux",
+        titre: "La Continuité des Réseaux",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2712,7 +2712,7 @@ Après la victoire américaine de 1783, les réseaux commerciaux juifs et protes
 
 
     {
-        titre: "L'autoproclamation",
+        titre: "L'Autoproclamation",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2723,7 +2723,7 @@ Le 15 juillet 1789, au lendemain de la prise de la Bastille, Jean-Sylvain Bailly
       },
   
         {
-        titre: "Les langues régionales",
+        titre: "Les Langues Régionales",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
