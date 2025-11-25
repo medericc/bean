@@ -36,7 +36,7 @@ const lignees = [
     slug: "foix",
     titre: "Maison de Foix-Béarn",
     description: "Union stratégique avec le comté de Foix, période d'apogée politique et culturelle.",
-    image: "/histoire-cover.jpg",
+    image: "/histoire-coverx.jpg",
     periode: "XIIe - XVe siècle",
     vicomtes: "8 vicomtes", 
     badge: "Apogée"
