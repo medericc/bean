@@ -375,16 +375,16 @@ export default function AProposPage() {
             Votre contribution est la bienvenue pour enrichir ce travail collectif.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact"
-              className="bg-or-patine text-white px-8 py-3 rounded-lg font-corps font-medium hover:bg-brun-terre transition-colors"
-            >
+            <a
+        href="mailto:febusdalbret@gmail.com?subject=Proposition de correction - Projet Béarn"
+        className="bg-or-patine text-white px-8 py-3 rounded-lg font-corps font-medium hover:bg-brun-terre transition-colors"
+      >
               Proposer une correction
             </a>
-            <a 
-              href="/suggestions"
-              className="border-2 border-brun-terre text-brun-terre px-8 py-3 rounded-lg font-corps font-medium hover:bg-brun-terre hover:text-white transition-colors"
-            >
+          <a
+        href="mailto:febusdalbret@gmail.com?subject=Soumission de ressource - Projet Béarn"
+        className="border-2 border-brun-terre text-brun-terre px-8 py-3 rounded-lg font-corps font-medium hover:bg-brun-terre hover:text-white transition-colors"
+      >
               Soumettre une ressource
             </a>
           </div>
