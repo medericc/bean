@@ -110,12 +110,23 @@ const periodes: Periode[] = [
   }
    ,
   {
-    annee: "XVIe-XVIIe siècle", 
+    annee: "XVIe siècle", 
     titre: "Entre Béarn et Paris",
     description: "Le Béarn dirigeait depuis la région parisienne",
     slug: 'france',
   }
   ,
+
+
+   {
+    annee: "XVIe-XVIIe siècle", 
+    titre: "Le Béarn Post-Henri",
+    description: "Le départ de la dernière gouvernante",
+    slug: 'le-depart',
+  }
+  ,
+
+
   {
     annee: "XVIIe siècle", 
     titre: "Sous la Monarchie Absolue",

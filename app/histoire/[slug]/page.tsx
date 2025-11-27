@@ -2164,12 +2164,24 @@ En février et mars 1572, Jeanne d’Albret se rendit à Chenonceaux pour négoc
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-   Henri, marié, se rendit en Guyenne pour sécuriser le Béarn, la Bigorre et le Foix. Les catholiques de Bigorre, espérant un règne favorable, rentrèrent à Tarbes avec les huguenots, mais la haine entre les deux partis demeura vive. En avril 1573, Raymond de Cardaillac, seigneur de Sarlabous, tenta d’enlever Gaza, juge-mage protestant de Tarbes, en envoyant son homme Dominique Abadie ouvrir les portes de nuit. À son signal, Sarlabous entra dans la ville, mais Gaza s’enfuit en chemise jusqu’à Gayan, puis se réfugia à Pau. Sa maison et celles de ses coreligionnaires furent pillées. La rumeur d’une vengeance béarnaise effraya tant les habitants qu’ils passaient leurs nuits hors des murs. Ce n’est qu’en juin, lorsque La Valette envoya en garnison la compagnie de Gramont, renforcée par celles de Montesquiou et de Larboust, que le calme revint. Toutefois, les Béarnais reprirent Lourdes, massacrèrent les défenseurs, incendièrent vingt maisons, pillèrent la ville et emmenèrent plusieurs habitants prisonniers à Pau, libérés ensuite contre rançon. La prise de Lourdes par les protestants alarma tout le Lavedan ; les capitaines locaux, dont Ourout et Estivaire, organisèrent la résistance et mirent en fuite le baron d’Arros, retranché ensuite en Béarn.  En Bigorre, après plusieurs années d’incertitude, la rumeur d’une reprise des armes par les huguenots béarnais en 1574 poussa les Tarbais à solliciter la médiation de Gramont, gouverneur catholique, qui obtint une trêve fragile. Peu après, le capitaine Lizier, châtelain du roi de Navarre à Barbazan-Dessus, s’empara de Tarbes par ruse et dévasta le pays. Gramont réagit aussitôt, fortifiant Lourdes, regroupant ses troupes et, au printemps 1574, menant un siège décisif qui permit la reprise de Tarbes et la pacification du comté. Les États réunis à Bagnères réorganisèrent alors l’administration, nommant Mansan gouverneur et réparant les places fortes. Malgré un nouvel accord tenté en 1575 entre Bigordains et Béarnais, les hostilités reprirent : Mirande fut assiégée, Vic et Lescurry brièvement occupées, puis la région finalement pacifiée sous la protection du roi de Navarre et de sa sœur, inaugurant près de neuf ans de paix. 
+   Henri, marié, se rendit en Guyenne pour sécuriser le Béarn, la Bigorre et le Foix. Les catholiques de Bigorre, espérant un règne favorable, rentrèrent à Tarbes avec les huguenots, mais la haine entre les deux partis demeura vive. En avril 1573, Raymond de Cardaillac, seigneur de Sarlabous, tenta d’enlever Gaza, juge-mage protestant de Tarbes, en envoyant son homme Dominique Abadie ouvrir les portes de nuit. À son signal, Sarlabous entra dans la ville, mais Gaza s’enfuit en chemise jusqu’à Gayan, puis se réfugia à Pau. Sa maison et celles de ses coreligionnaires furent pillées. La rumeur d’une vengeance béarnaise effraya tant les habitants qu’ils passaient leurs nuits hors des murs. Ce n’est qu’en juin, lorsque La Valette envoya en garnison la compagnie de Gramont, renforcée par celles de Montesquiou et de Larboust, que le calme revint. Toutefois, les Béarnais reprirent Lourdes, massacrèrent les défenseurs, incendièrent vingt maisons, pillèrent la ville et emmenèrent plusieurs habitants prisonniers à Pau, libérés ensuite contre rançon. La prise de Lourdes par les protestants alarma tout le Lavedan ; les capitaines locaux, dont Ourout et Estivaire, organisèrent la résistance et mirent en fuite le baron d’Arros, retranché ensuite en Béarn. En Bigorre, après plusieurs années d’incertitude, la rumeur d’une reprise des armes par les huguenots béarnais () en 1574 poussa les Tarbais à solliciter la médiation de Gramont, gouverneur catholique, qui obtint une trêve fragile. Peu après, le capitaine Lizier, châtelain du roi de Navarre à Barbazan-Dessus, s’empara de Tarbes par ruse et dévasta le pays. Gramont réagit aussitôt, fortifiant Lourdes, regroupant ses troupes et, au printemps 1574, menant un siège décisif qui permit la reprise de Tarbes et la pacification du comté. Les États réunis à Bagnères réorganisèrent alors l’administration, nommant Mansan gouverneur et réparant les places fortes. Malgré un nouvel accord tenté en 1575 entre Bigordains et Béarnais, les hostilités reprirent : Mirande fut assiégée, Vic et Lescurry brièvement occupées, puis la région finalement pacifiée sous la protection du roi de Navarre et de sa sœur, inaugurant près de neuf ans de paix. 
       </p>
           </div>
         )
       },
-    
+       {
+        titre: "Une Guerre Nationale",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Madeleine de Saint-Nectaire, fille d'un bailli des montagnes d'Auvergne et de Marguerite d'Étampes. Née en 1526, elle épousa le 29 mai 1548 Guy de Miremont, seigneur de Saint-Exupéry. Devenue veuve assez tôt, elle dédaigna les hommages pour se consacrer à d'autres vertus. Elle se montra comme l'un des "plus intrépides champions du parti protestant". Elle se signala tout particulièrement dans la guerre qu'elle mena contre François de Rosières, le seigneur de Montal, qui était lieutenant du roi dans la haute Auvergne. Devenue Madeleine de Miremont, elle marchait à la tête d'une troupe de soixante gentilshommes et battit à plusieurs reprises les troupes de Montal. Vers 1574, ce dernier rassembla une armée et vint ravager les environs du château de Miremont. La comtesse réunit ses propres forces, marcha contre lui et lança à ses soldats : "Faites comme moi!...". Suivie de seulement quelques cavaliers, elle se précipita sur l'ennemi mais se laissa "témérairement entraîner" loin de son château. Montal profita de cette imprudence et fit "investir le château" avant qu'elle ne puisse y retourner. Bloquée à l'extérieur, elle partit chercher du secours à Turenne, mais ne réussit à obtenir que quatre compagnies d'arquebusiers. En attendant plus de renforts, elle décida d'introduire secrètement cinquante hommes dans la forteresse. Montal fut averti de ce projet et s'avança contre elle. Après "une escarmouche des plus vives", Madeleine saisit "l'instant favorable", chargea la cavalerie ennemie et la "mit en déroute". C'est durant cette bataille que périt son grand adversaire, François de Rosières, "blessé de la main de Madeleine". Ces exploits furent tels qu'Henri de Navarre (le futur roi Henri IV) se serait écrié : "Ventre saint-gris! ... si je n'étais pas roi, je voudrais être Madeleine de Saint-Nectaire!...". Madeleine se distingua encore par sa valeur plus tard, en tant que partisan du roi Henri III contre la Ligue. Elle mourut en ne laissant qu'une fille, Françoise de Miremont, qui épousa le 19 mars 1571, Henri de Bourbon, vicomte de Lavedan.
+      </p>
+          </div>
+        )
+      },
+
+
+
        {
         titre: "Navarrenx, refuge et pouvoir",
         contenu: (
@@ -2236,6 +2248,29 @@ En 1588, tandis que son frère Henri de Navarre combat sur les champs de bataill
         )
       },
     
+
+
+
+    ]
+  },
+
+
+
+
+
+  'le-depart': {
+    titre: "Le Départ de la Gouvernante",
+    periode: "Renaissance",
+    resume: "Le Béarn sans seigneur",
+    introduction: "Entre France et Béarn, le départ de Catherine....",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+
+
+
+
        {
         titre: "Catherine et la gestion urbaine",
         contenu: (
@@ -2361,6 +2396,8 @@ En 1642 Antonio de Montezinos navigateur juif revient d Amérique du Sud, il aur
           </div>
         )
       }
+
+
     ]
   },
   
