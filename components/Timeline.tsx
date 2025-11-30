@@ -136,9 +136,17 @@ const periodes: Periode[] = [
   ,
   {
     annee: "XVIIIe siècle", 
-    titre: "Vers la Terreur",
-    description: "Des idées noahides s'emparent de Londres, Paris, Boston...",
+    titre: "Le Siècle des Lumières",
+    description: "Des idées noahides s'emparent de Londres, Paris, Pau...",
     slug: 'lumieres',
+  }
+  ,
+
+   {
+    annee: "XVIIIe siècle", 
+    titre: "Vers la Terreur",
+    description: "Jusqu'à la convocation des États généraux en 1789...",
+    slug: 'revolution',
   }
   ,
   {

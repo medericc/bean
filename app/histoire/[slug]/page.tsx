@@ -2512,10 +2512,10 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
     ]
   },
    'lumieres': {
-    titre: "Vers la Terreur",
+    titre: "Le Siècle des Lumières",
     periode: "Renaissance",
     resume: "La monarchie française devant la mondialisation",
-    introduction: "Des idées noahides s'emparent de Londres, Paris, Boston...",
+    introduction: "Des idées noahides s'emparent de Londres, Paris, Pau...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
 {
@@ -2638,7 +2638,26 @@ Au XVIIIᵉ siècle, Tarbes connaît une forte expansion : sa population triple,
   </p>
           </div>
         )
-      },
+      }
+
+
+
+     
+
+
+
+
+    ]
+  },
+
+ 'revolution': {
+    titre: "Vers la Terreur",
+    periode: "Renaissance",
+    resume: "Le Royaume de France est chamboulé",
+    introduction: "Jusqu'à la convocation des États généraux en 1789...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
        {
         titre: "Jacob Frank",
         contenu: (
@@ -2729,9 +2748,6 @@ Après la victoire américaine de 1783, les réseaux commerciaux juifs et protes
       }
      
     
-
-
-
      
 
 
@@ -2739,6 +2755,9 @@ Après la victoire américaine de 1783, les réseaux commerciaux juifs et protes
 
     ]
   },
+
+
+  
    'terreur': {
     titre: "Le Béarn sous la Terreur",
     periode: "Époque Moderne",
