@@ -1738,7 +1738,7 @@ Le 1er août 1391, à l’Hôpital d’Orion, près d’Orthez, après une journ
     titre: "Union avec la Navarre",
     periode: "Renaissance",
     resume: "Le Béarn s’unit à la couronne navarraise indépendante.",
-    introduction: "Entre héritage et rapprochement avec Paris....",
+    introduction: "Entre héritage et pou entre deux singes...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
 
@@ -1884,7 +1884,24 @@ En juillet 1527, un édit royal publié à Garris plaça sous tutelle les juridi
         )
       },
 
- {
+ 
+    ]
+  },
+
+
+
+
+
+
+   'l-humanisme': {
+    titre: "L'Humanisme en Béarn",
+    periode: "Renaissance",
+    resume: "Le Béarn se modernise sous les Albret.",
+    introduction: "Entre héritage et rapprochement avec Paris...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+        {
         titre: "Le Schisme Anglais",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
@@ -1949,13 +1966,15 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
 </p>       </div>
         )
       }
+
+ 
     ]
   },
-   'vers-paris': {
-    titre: "Tournée vers Paris",
+   'bearn-protestant': {
+    titre: "L'Arrivée du Protestantisme",
     periode: "Renaissance",
     resume: "Le Béarn embrasse la Réforme protestante",
-    introduction: "Entre héritage et réforme, Jeanne d’Albret gouverne libre....",
+    introduction: "Entre héritage et réforme, Jeanne d’Albret gouverne libre...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
@@ -2057,7 +2076,19 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
         )
       },
     
-       {
+      
+    ]
+  },
+
+
+   'vers-paris': {
+    titre: "Tournée vers Paris",
+    periode: "Renaissance",
+    resume: "Le Béarn défend sa souveraineté",
+    introduction: "La bastide de Navarrenx face au Royaume de France...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      {
         titre: "Entre prudence et révolte",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
@@ -2143,6 +2174,7 @@ En février et mars 1572, Jeanne d’Albret se rendit à Chenonceaux pour négoc
           </div>
         )
       }
+      
     ]
   },
   

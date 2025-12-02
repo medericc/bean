@@ -99,13 +99,30 @@ const periodes: Periode[] = [
   {
     annee: "XVe-XVIe siècle", 
     titre: "Union avec la Navarre",
-    description: "Ils consolident le Béarn, perdent du territoire mais affermissent leur pouvoir",
+    description: "Union, perte de territoire mais affermissement leur pouvoir",
     slug: 'union-navarre',
+  }
+  
+  ,
+
+   {
+    annee: "XVIe siècle", 
+    titre: "L'Humanisme en Béarn",
+    description: "Ils consolident le Béarn, qui est un pou entre deux singes",
+    slug: 'l-humanisme',
+  }
+  
+  ,
+  {
+    annee: "XVIe siècle", 
+    titre: "Entre Pau et Genève",
+    description: "Animée par la vertu, Jeanne d’Albret impose avec fermeté la Réforme",
+    slug: 'bearn-protestant',
   },
   {
     annee: "XVIe siècle", 
     titre: "Tournée vers Paris",
-    description: "Animée par la vertu, Jeanne d’Albret impose avec fermeté la Réforme",
+    description: "Face au Royaume de France, la survie du Pays de Béarn est en jeu",
     slug: 'vers-paris',
   }
    ,
