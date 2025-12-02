@@ -99,7 +99,7 @@ const periodes: Periode[] = [
   {
     annee: "XVe-XVIe siècle", 
     titre: "Union avec la Navarre",
-    description: "Union, perte de territoire mais affermissement leur pouvoir",
+    description: "Union, perte de territoire mais affermissement de leur pouvoir",
     slug: 'union-navarre',
   }
   
@@ -108,7 +108,7 @@ const periodes: Periode[] = [
    {
     annee: "XVIe siècle", 
     titre: "L'Humanisme en Béarn",
-    description: "Ils consolident le Béarn, qui est un pou entre deux singes",
+    description: "Ils consolident le Béarn, en étant un pou entre deux singes",
     slug: 'l-humanisme',
   }
   
