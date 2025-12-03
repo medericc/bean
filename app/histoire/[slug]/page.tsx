@@ -51,7 +51,7 @@ const histoireData = {
   // },
     'haut-moyen': {
     titre: "Formation du Béarn", 
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Le Béarn naît d’une autonomie ancienne, forgée entre foi et féodalité",
     introduction: "Aux origines du Béarn, une autonomie singulière…",
     image: "/images/histoire/antiquite.jpg",
@@ -135,9 +135,9 @@ Dès le XIᵉ siècle, Barcelone s’impose comme puissance régionale grâce à
       },
     ]
   },
-  'moyen-age': {
+  'temps-feodaux': {
     titre: "Montée des Vicomtés",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Le Béarn s’affirme entre alliances, réformes et indépendance",
     introduction: "Entre foi, pouvoir et conquêtes, le Béarn s’élève…",
     image: "/images/histoire/antiquite.jpg",
@@ -249,7 +249,7 @@ Alphonse VI exploite habilement la rivalité entre les taifas, s’alliant à ce
   },
   'pelerin': {
     titre: "Pélerinage Armé", 
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
      resume: "Foi, pouvoir et croisade au cœur du Béarn médiéval",
     introduction: "Gaston IV unit ferveur et indépendance souveraine...",
     image: "/images/histoire/antiquite.jpg",
@@ -335,7 +335,7 @@ En route, les croisés sont attaqués par des populations locales. À Salonique,
   },
    'reconquista': {
     titre: "Le Béarn en mode Reconquista", 
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
      resume: "Entre piété et ambition, le Béarn s’engage dans la Reconquista",
     introduction: "Gaston IV poursuit son élan de foi affirmant le rayonnement du Béarn...",
     image: "/images/histoire/antiquite.jpg",
@@ -503,7 +503,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
   },
    'aragon': {
     titre: "Tutelle Aragonaise",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Le Béarn évolue sous l’influence des rois d’Aragon",
     introduction: "La vicomté s’inscrit dans la sphère aragonaise...",
     image: "/images/histoire/antiquite.jpg",
@@ -655,7 +655,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
   
      'tutelle': {
     titre: "Vers la Souveraineté",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Le Béarn s’émancipe et affirme son équilibre politique",
     introduction: "Des Guillaume à Gaston VII, le Béarn s'extirpe de l'Aragon...",
     image: "/images/histoire/antiquite.jpg",
@@ -772,7 +772,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
 
  'marguerite': {
     titre: "Vers la Souveraineté",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Le Béarn s’unit un comté vassal de la France",
     introduction: "De Marguerite à Fébus, l’indépendance devient diplomatie maîtrisée...",
     image: "/images/histoire/antiquite.jpg",
@@ -890,7 +890,7 @@ Vers le milieu du XIVᵉ siècle, le Béarn se trouvait dans une situation compl
   
      'souverainete': {
     titre: "Souveraineté",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Le Béarn souverain sous Gaston Fébus",
     introduction: "Puissance, art et liberté définissent l’État fébusien...",
     image: "/images/histoire/antiquite.jpg",
@@ -1030,7 +1030,7 @@ Pour tenter d’apaiser le conflit, Jean II chercha à médiatiser la querelle p
 
      'apogee': {
     titre: "L'Apogée Militaire",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Fébus en héros de l'Occident",
     introduction: "Fébus forge s'impose militairement et diplomatiquement....",
     image: "/images/histoire/antiquite.jpg",
@@ -1191,7 +1191,7 @@ Le 5 décembre 1362, Gaston Fébus, comte de Foix, remporta une victoire décisi
 
    'affirmation': {
     titre: "L'Affirmation Béarnaise",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "La neutralité du Béarn",
     introduction: "Gaston Fébus face au Prince Noir...",
     image: "/images/histoire/antiquite.jpg",
@@ -1382,7 +1382,7 @@ L'affrontement redouté est finalement épargné au Béarn car la situation se d
 
  'drames': {
     titre: "Les Drames de Fébus",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Conflits et Tragédie",
     introduction: "Guerre contre le Comminges et Médiation...",
     image: "/images/histoire/antiquite.jpg",
@@ -1574,7 +1574,7 @@ Le 17 août 1380, Gaston Fébus règle son hommage au château de Pau avec Guill
 
 'apres-febus': {
     titre: "Le Béarn Post Gaston Fébus",
-    periode: "Moyen Age",
+    periode: "Temps Féodaux",
     resume: "Les derniers actes de Gaston X",
     introduction: "Les États en affirmation définitivement l'indépendance...",
     image: "/images/histoire/antiquite.jpg",
@@ -2645,11 +2645,11 @@ John Phillips maçon anglais arrivé à Saint-Pétersbourg dans les années 1730
       },
 
    {
-        titre: "La Naissance des Lumières",
+        titre: "La Naissance des 'Lumières'",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Au XVIIIᵉ siècle émergent les Lumières, structurées autour de ce qu’on appelle la République des Lettres, véritable réseau social avant l’heure. Elles s’appuient sur de nombreux centres d’imprimerie clandestine, tenus par des protestants : Marc-Michel Rey, Prosper Marchand, les Wetstein, Jean-Frédéric Bernard, Desbordes, Pierre Mortier, Arkstee & Merkus, Samuel Fauche, les frères Cramer, J. Nourse, Samuel Richardson, Dunoyer ou encore Lackington. Amsterdam devient alors la capitale protestante de cette imprimerie clandestine. L’influence des Lumières est aussi soutenue par certaines figures politiques : Catherine II, très portée sur l’ésotérisme, rachète la bibliothèque de Diderot pour le financer ; Frédéric II de Prusse, agnostique, autorise la publication de textes anticatholiques de Voltaire ; ou encore Madame du Châtelet, salope de Voltaire. Les salons tenus par des femmes, Madame Geoffrin, Julie de Lespinasse, Madame du Deffand, Madame Helvétius, réunissent penseurs, savants, aristocrates et francs-maçons, comme l’abbé Sieyès, les Rolland, Buffon, Napoléon, Franklin ou Suzanne Necker. Ces cercles intellectuels annoncent les bouleversements à venir et seront prolongés plus tard par celui de Madame de Staël, à Coppet, en Suisse. Parallèlement, le Grand Orient de France, dirigé par le duc d’Orléans, cousin du roi, devient un centre d’influence majeur.
+Au XVIIIᵉ siècle émergent les 'Lumières', structurées autour de ce qu’on appelle la République des Lettres, véritable réseau social avant l’heure. Elles s’appuient sur de nombreux centres d’imprimerie clandestine, tenus par des protestants : Marc-Michel Rey, Prosper Marchand, les Wetstein, Jean-Frédéric Bernard, Desbordes, Pierre Mortier, Arkstee & Merkus, Samuel Fauche, les frères Cramer, J. Nourse, Samuel Richardson, Dunoyer ou encore Lackington. Amsterdam devient alors la capitale protestante de cette imprimerie clandestine. L’influence des 'Lumières' est aussi soutenue par certaines figures politiques : Catherine II, très portée sur l’ésotérisme, rachète la bibliothèque de Diderot pour le financer ; Frédéric II de Prusse, agnostique, autorise la publication de textes anticatholiques de Voltaire ; ou encore Madame du Châtelet, salope de Voltaire. Les salons tenus par des femmes, Madame Geoffrin, Julie de Lespinasse, Madame du Deffand, Madame Helvétius, réunissent penseurs, savants, aristocrates et francs-maçons, comme l’abbé Sieyès, les Rolland, Buffon, Napoléon, Franklin ou Suzanne Necker. Ces cercles intellectuels annoncent les bouleversements à venir et seront prolongés plus tard par celui de Madame de Staël, à Coppet, en Suisse. Parallèlement, le Grand Orient de France, dirigé par le duc d’Orléans, cousin du roi, devient un centre d’influence majeur.
 </p>
           </div>
         )
@@ -2659,7 +2659,7 @@ Au XVIIIᵉ siècle émergent les Lumières, structurées autour de ce qu’on a
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Il existait de fortes divergences internes entre penseurs des Lumières. Rousseau écrit qu’il n’est pas d’accord avec d’Alembert, et ses échanges avec François-Marie Arouet au sujet de la vertu révèlent un Rousseau bien plus strict. Voltaire, quant à lui, décrit le Dieu de l’Ancien Testament comme un tyran favorisant un “peuple élu” destiné, selon lui, à détruire les autres. Il met en doute la véracité des violences décrites dans ces textes et invite même les Juifs à abandonner ce qu’il considère comme des croyances superstitieuses. Voltaire rejette également avec force l’accusation de déicide portée contre les Juifs : selon lui, Jésus n’a été considéré comme Dieu que tardivement, au concile de Nicée (c'est le cas depuis l'an 33). Et même si une partie des Juifs (pharisiens) ont livré Jésus, cela ne saurait justifier la punition des Juifs contemporains (le judaïsme actuel vient.... des pharisiens). Dans un texte de 1776, il dis observer que tous les peuples, Juifs comme chrétiens, ont traversé des périodes de barbarie mais ont fini par évoluer, appelant ainsi à “oublier les abominations passées”. Il précise d’ailleurs à Pinto que ses critiques visent la superstition, non les personnes juives. Pour Voltaire, la plupart des religieux sont surtout attirés par l’argent (opinion contraire à l'islam ou au catéchisme). Sa vision est essentiellement noachide, et il finira d’ailleurs par rejoindre la franc-maçonnerie à la fin de sa vie.
+Il existait de fortes divergences internes entre penseurs des 'Lumières'. Rousseau écrit qu’il n’est pas d’accord avec d’Alembert, et ses échanges avec François-Marie Arouet au sujet de la vertu révèlent un Rousseau bien plus strict. Voltaire, quant à lui, décrit le Dieu de l’Ancien Testament comme un tyran favorisant un “peuple élu” destiné, selon lui, à détruire les autres. Il met en doute la véracité des violences décrites dans ces textes et invite même les Juifs à abandonner ce qu’il considère comme des croyances superstitieuses. Voltaire rejette également avec force l’accusation de déicide portée contre les Juifs : selon lui, Jésus n’a été considéré comme Dieu que tardivement, au concile de Nicée (c'est le cas depuis l'an 33). Et même si une partie des Juifs (pharisiens) ont livré Jésus, cela ne saurait justifier la punition des Juifs contemporains (le judaïsme actuel vient.... des pharisiens). Dans un texte de 1776, il dis observer que tous les peuples, Juifs comme chrétiens, ont traversé des périodes de barbarie mais ont fini par évoluer, appelant ainsi à “oublier les abominations passées”. Il précise d’ailleurs à Pinto que ses critiques visent la superstition, non les personnes juives. Pour Voltaire, la plupart des religieux sont surtout attirés par l’argent (opinion contraire à l'islam ou au catéchisme). Sa vision est essentiellement noachide, et il finira d’ailleurs par rejoindre la franc-maçonnerie à la fin de sa vie.
 </p>
           </div>
         )
@@ -2701,7 +2701,7 @@ En 1776, la loge d’Auch, alors en perte de vitalité, rejoignit l’obédience
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-À Bayonne, la loge maçonnique La Zélée rassemblait des membres issus de milieux socialement privilégiés : commerçants, armateurs, parlementaires ou encore procureurs du Roi. Fait remarquable, elle comptait également parmi ses frères des Juifs séfarades établis dans le quartier de Saint-Esprit, alors même qu’ils étaient encore privés de la citoyenneté française. Cette ouverture suscita cependant des désaccords au sein de l’obédience : certains frères, opposés à la présence de membres juifs, furent expulsés et fondèrent en 1783 une nouvelle loge, L’Amitié, qui ne subsista qu’environ trois ans. D’orientation libérale, les membres de La Zélée jouèrent un rôle actif dans la rédaction des Cahiers des États généraux, témoignant de leur engagement dans le mouvement des Lumières et les débats politiques. L’un des plus illustres frères bayonnais de cette époque, Joseph Garat, député du Labourd, fut d’ailleurs élu ministre de la Justice, puis ministre de l’Intérieur. C’est lui qui annonça à Louis XVI, roi de France et descendant de Marguerite de Moncade, sa condamnation à mort. Sous l’Empire, la franc-maçonnerie, et notamment des loges comme La Zélée, fut perçue par Napoléon III comme un instrument de contrôle de la bourgeoisie aisée, mais aussi comme un vecteur de diffusion des idéaux révolutionnaires à l’étranger.
+À Bayonne, la loge maçonnique La Zélée rassemblait des membres issus de milieux socialement privilégiés : commerçants, armateurs, parlementaires ou encore procureurs du Roi. Fait remarquable, elle comptait également parmi ses frères des Juifs séfarades établis dans le quartier de Saint-Esprit, alors même qu’ils étaient encore privés de la citoyenneté française. Cette ouverture suscita cependant des désaccords au sein de l’obédience : certains frères, opposés à la présence de membres juifs, furent expulsés et fondèrent en 1783 une nouvelle loge, L’Amitié, qui ne subsista qu’environ trois ans. D’orientation libérale, les membres de La Zélée jouèrent un rôle actif dans la rédaction des Cahiers des États généraux, témoignant de leur engagement dans le mouvement des 'Lumières' et les débats politiques. L’un des plus illustres frères bayonnais de cette époque, Joseph Garat, député du Labourd, fut d’ailleurs élu ministre de la Justice, puis ministre de l’Intérieur. C’est lui qui annonça à Louis XVI, roi de France et descendant de Marguerite de Moncade, sa condamnation à mort. Sous l’Empire, la franc-maçonnerie, et notamment des loges comme La Zélée, fut perçue par Napoléon III comme un instrument de contrôle de la bourgeoisie aisée, mais aussi comme un vecteur de diffusion des idéaux révolutionnaires à l’étranger.
    </p>
           </div>
         )
@@ -2807,7 +2807,7 @@ Dès les années 1760, plusieurs communautés juives participent activement au m
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-             Louis XVI nomme Jacques Necker, banquier issu de la haute bourgeoisie, directeur du Trésor royal, puis l’année suivante directeur général des finances. Deux ans plus tard, sous l’influence de ses conseillers comme Savalette de Langes (maçon), le roi engage la France dans la guerre d’indépendance américaine contre une monarchie étrangère. Aux côtés du marquis de La Fayette, jeune aristocrate franc-maçon devenu héros de cette guerre, se trouve Benjamin Franklin, membre de la prestigieuse loge des Neuf Sœurs avec Voltaire. Franklin, Condorcet ou le duc de La Rochefoucauld incarnent cette alliance entre noblesse, bourgeoisie éclairée et idéaux républicains. Mais derrière le visage réformateur et moraliste de Necker se cache la réalité d’un système financier profondément lié à la bourgeoisie montante. Les rentes royales, principal instrument de placement des élites, liaient la monarchie à ses créanciers. La couronne, constamment endettée, empruntait auprès de banquiers et négociants issus du tiers état enrichi, leur versant en échange des rentes viagères ou perpétuelles garanties par le Trésor royal. C’était un lien d’intérêt réciproque : le roi dépendait de ceux qui vivaient de ses dettes, et cette bourgeoisie financière voyait dans l’État non un adversaire, mais un débiteur rentable. Necker symbolise parfaitement cette double position : banquier prospère devenu ministre, il finançait le roi tout en profitant des rentes royales détenues au nom de sa femme et de sa fille. Ainsi, l’homme présenté comme le sauveur des finances publiques incarnait en réalité la contradiction même du système : un serviteur de l’État nourri par les revenus de sa dette. Lorsque la bourgeoisie réclamera plus tard le pouvoir politique, ce sera aussi pour défendre ce modèle : abolir les privilèges fiscaux de la noblesse et du clergé, mais préserver les rentes qui garantissaient leurs profits. La Révolution, en ce sens, préparait déjà son propre paradoxe : une révolte contre les privilèges au profit d’une nouvelle aristocratie, celle de l’argent. En 1781, Necker publie le Compte rendu au roi, un document inédit rendant publiques les finances de l’État. Il y affirme, à tort, que le royaume n’est pas en déficit. Cette manœuvre populiste sape les réformes fiscales du roi, notamment la taxation de la noblesse et du clergé. Necker gagne ainsi la faveur de l’opinion et des loges maçonniques, mais affaiblit la monarchie. Renvoyé en mai 1781, il se retire à Coppet, en Suisse, tout en entretenant un vaste réseau d’influence auprès des élites et en publiant des ouvrages qui renforcent son image de réformateur victime du pouvoir royal. Pendant ce temps, la situation financière de la France se dégrade (la période de l'éruption du Laki). Les milieux libéraux, protestants et bourgeois réclament son retour, le présentant comme un « ami du peuple ». Malgré ses origines étrangères et sa fortune considérable, Necker est rappelé en 1787, après l’édit de tolérance signé par Louis XVI sous l’influence de conseillers comme Loménie de Brienne ou Malesherbes. De retour à Paris, il est acclamé par la presse et les salons bourgeois. Pour résoudre la crise, Louis XVI, sur les conseils de Loménie de Brienne (Archévêque de Toulouse, proche des Lumières et certainement déiste ou mécréant) convoque les États généraux en 1789, une assemblée qui n’avait pas été réunie depuis 1614. Trois ordres y siègent : clergé, noblesse et tiers état (bourgeoisie).  Sur le conseil de Necker, le roi double la représentation du tiers, qui exige ensuite que son vote compte double. Ces revendications, présentées comme une quête d’égalité, visent en réalité à accroître le pouvoir bourgeois au nom de notions abstraites comme la nation, le peuple et la souveraineté. En juin, les députés du tiers se proclament Assemblée nationale, sans mandat royal ni soutien populaire réel. Le roi ferme leur salle de réunion, mais 576 députés prêtent alors le serment du Jeu de paume, jurant de ne pas se séparer avant d’avoir donné une constitution à la France. En quelques jours, cette élite bourgeoise, s’arroge le droit de parler au nom du peuple et affirme que désormais l’homme, et non Dieu, est la source de l’autorité. 
+             Louis XVI nomme Jacques Necker, banquier issu de la haute bourgeoisie, directeur du Trésor royal, puis l’année suivante directeur général des finances. Deux ans plus tard, sous l’influence de ses conseillers comme Savalette de Langes (maçon), le roi engage la France dans la guerre d’indépendance américaine contre une monarchie étrangère. Aux côtés du marquis de La Fayette, jeune aristocrate franc-maçon devenu héros de cette guerre, se trouve Benjamin Franklin, membre de la prestigieuse loge des Neuf Sœurs avec Voltaire. Franklin, Condorcet ou le duc de La Rochefoucauld incarnent cette alliance entre noblesse, bourgeoisie éclairée et idéaux républicains. Mais derrière le visage réformateur et moraliste de Necker se cache la réalité d’un système financier profondément lié à la bourgeoisie montante. Les rentes royales, principal instrument de placement des élites, liaient la monarchie à ses créanciers. La couronne, constamment endettée, empruntait auprès de banquiers et négociants issus du tiers état enrichi, leur versant en échange des rentes viagères ou perpétuelles garanties par le Trésor royal. C’était un lien d’intérêt réciproque : le roi dépendait de ceux qui vivaient de ses dettes, et cette bourgeoisie financière voyait dans l’État non un adversaire, mais un débiteur rentable. Necker symbolise parfaitement cette double position : banquier prospère devenu ministre, il finançait le roi tout en profitant des rentes royales détenues au nom de sa femme et de sa fille. Ainsi, l’homme présenté comme le sauveur des finances publiques incarnait en réalité la contradiction même du système : un serviteur de l’État nourri par les revenus de sa dette. Lorsque la bourgeoisie réclamera plus tard le pouvoir politique, ce sera aussi pour défendre ce modèle : abolir les privilèges fiscaux de la noblesse et du clergé, mais préserver les rentes qui garantissaient leurs profits. La Révolution, en ce sens, préparait déjà son propre paradoxe : une révolte contre les privilèges au profit d’une nouvelle aristocratie, celle de l’argent. En 1781, Necker publie le Compte rendu au roi, un document inédit rendant publiques les finances de l’État. Il y affirme, à tort, que le royaume n’est pas en déficit. Cette manœuvre populiste sape les réformes fiscales du roi, notamment la taxation de la noblesse et du clergé. Necker gagne ainsi la faveur de l’opinion et des loges maçonniques, mais affaiblit la monarchie. Renvoyé en mai 1781, il se retire à Coppet, en Suisse, tout en entretenant un vaste réseau d’influence auprès des élites et en publiant des ouvrages qui renforcent son image de réformateur victime du pouvoir royal. Pendant ce temps, la situation financière de la France se dégrade (la période de l'éruption du Laki). Les milieux libéraux, protestants et bourgeois réclament son retour, le présentant comme un « ami du peuple ». Malgré ses origines étrangères et sa fortune considérable, Necker est rappelé en 1787, après l’édit de tolérance signé par Louis XVI sous l’influence de conseillers comme Loménie de Brienne ou Malesherbes. De retour à Paris, il est acclamé par la presse et les salons bourgeois. Pour résoudre la crise, Louis XVI, sur les conseils de Loménie de Brienne (Archévêque de Toulouse, proche des 'Lumières' et certainement déiste ou mécréant) convoque les États généraux en 1789, une assemblée qui n’avait pas été réunie depuis 1614. Trois ordres y siègent : clergé, noblesse et tiers état (bourgeoisie).  Sur le conseil de Necker, le roi double la représentation du tiers, qui exige ensuite que son vote compte double. Ces revendications, présentées comme une quête d’égalité, visent en réalité à accroître le pouvoir bourgeois au nom de notions abstraites comme la nation, le peuple et la souveraineté. En juin, les députés du tiers se proclament Assemblée nationale, sans mandat royal ni soutien populaire réel. Le roi ferme leur salle de réunion, mais 576 députés prêtent alors le serment du Jeu de paume, jurant de ne pas se séparer avant d’avoir donné une constitution à la France. En quelques jours, cette élite bourgeoise, s’arroge le droit de parler au nom du peuple et affirme que désormais l’homme, et non Dieu, est la source de l’autorité. 
  
   </p>
           </div>
