@@ -23,14 +23,14 @@ const periodes: Periode[] = [
     annee: "Xe siècle",
     titre: "Formation du Béarn médiéval", 
     description: "Émergence de la vicomté de Béarn",
-    slug: 'haut-moyen',
+    slug: 'centulle',
   },
   {
     annee: "XIe siècle",
     titre: "Montée de la Vicomté",
     description: "Le Béarn s'affirme comme une puissance autonome"
  ,
-    slug: 'moyen-age',
+    slug: 'temps-feodaux',
   },
   {
     annee: "XIIe siècle",
@@ -153,9 +153,9 @@ const periodes: Periode[] = [
   ,
   {
     annee: "XVIIIe siècle", 
-    titre: "Le Siècle des Lumières",
+    titre: "Le Siècle des Ténèbres",
     description: "Des idées noahides s'emparent de Londres, Paris, Pau...",
-    slug: 'lumieres',
+    slug: 'tenebres',
   }
   ,
 

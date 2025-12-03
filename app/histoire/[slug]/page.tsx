@@ -49,7 +49,7 @@ const histoireData = {
   //     },
   //   ]
   // },
-    'haut-moyen': {
+    'centulle': {
     titre: "Formation du Béarn", 
     periode: "Temps Féodaux",
     resume: "Le Béarn naît d’une autonomie ancienne, forgée entre foi et féodalité",
@@ -2591,8 +2591,8 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
 
     ]
   },
-   'lumieres': {
-    titre: "Le Siècle des Lumières",
+   'tenebres': {
+    titre: "Le Siècle des Ténèbres",
     periode: "Renaissance",
     resume: "La monarchie française devant la mondialisation",
     introduction: "Des idées noahides s'emparent de Londres, Paris, Pau...",
