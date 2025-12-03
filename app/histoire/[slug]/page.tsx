@@ -269,7 +269,7 @@ Alphonse VI exploite habilement la rivalité entre les taifas, s’alliant à ce
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-           En 1085, Gaston IV épouse Talèse d’Aragon, sœur du roi Sanche Ramírez, recevant probablement en dot la vicomté de Montaner.
+           En 1085, Gaston IV épouse Talèse d’Aragon, nièce du roi Sanche Ramírez, recevant probablement en dot la vicomté de Montaner.
 En 1090, il affronte les seigneurs de Dax et de Soule.
 Homme de foi, il manifeste sa piété en assistant à la dédicace de l’église de Saint-Pé-de-Geyres, suivant l’exemple paternel prônant « justice et paix ». Son mariage le rapproche de la famille royale d’Aragon : sa cousine est l’épouse de Pierre Ier d’Aragon, qui scelle une alliance politique. </p>
           </div>
@@ -596,7 +596,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
       },
 
          {
-        titre: "L'Hérésie'",
+        titre: "L'Hérésie",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
