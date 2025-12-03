@@ -2443,17 +2443,7 @@ Dans les années 1630, le “collège invisible” réunit savants, alchimistes 
         )
       },
 
-  {
-        titre: "L'Éducation Moderne'",
-        contenu: (
-          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
-            <p>
-Jan Amos Komenský, dit Comenius, est évêque protestant de l'Unité des Frères Moraves et le véritable père de l'éducation moderne. Sa vie fut tragiquement bouleversée par la Guerre de Trente Ans. Mais c'est de ce chaos que naquit son projet grandiose de "Pansophie", une réforme visant à "tout enseigner à tous", une volonté éducative influencée par les Rose-Croix et Jacob Böhme, où l'Homme est vu comme un microcosme (un petit monde) contenant en lui tout l'Univers (le macrocosme) et fait à l'image d'un Dieu esprit androgyne, l'éducation servant alors à "réparer" la chute originelle pour retrouver cette unité divine. Ce rêve utopique manqua de peu de devenir une réalité politique lorsqu'il fut invité à Londres en 1641 par Samuel Hartlib pour créer un "Collège Pansophique", sorte de centre mondial du savoir, mais si la Guerre Civile anglaise fit capoter le projet immédiat, l'idéal survécut à travers le secret "Collège Invisible" de ses disciples qui, appliquant ses méthodes de collaboration, finirent par fonder la prestigieuse Royal Society, une filiation spirituelle que Comenius reconnut lui-même en leur dédiant son livre Via Lucis à la fin de sa vie. À l’UNESCO, Comenius jouit aujourd'hui d’un statut presque iconique.
-</p>
-          </div>
-        )
-      },
-
+ 
 
        {
         titre: "La Glorieuse Révolution",
@@ -2521,6 +2511,8 @@ Au XVIIᵉ siècle, après son union à la France, le Béarn connaît une profon
           </div>
         )
       },
+     
+
       {
         titre: "L'union Béarn-France en Soule",
         contenu: (
@@ -2548,6 +2540,26 @@ Entre 1639 et 1662, la Soule traverse une période d’agitation populaire née 
             <p>
 Au XVIIᵉ siècle, la Contre-Réforme marque profondément la Soule, menée par une lignée d’évêques d’Oloron issus de Mauléon : Arnaud Iᵉʳ de Maytie (1599–1622), Arnaud II (1622–1646) et Arnaud III François (1660–1681). Trois membres d’une même famille souletine relèvent ainsi le diocèse béarnais. Leur action permet la reconstruction des églises détruites lors des guerres de Religion, dotées alors de tribunes pour les hommes et de rétables dorés. C’est aussi l’époque où apparaissent les clochers-calvaires (ou trinitaires), typiques de la Soule, représentant le Golgotha : la croix du Christ plus haute que celles des deux larrons. Arnaud II restaure la collégiale de Sainte-Engrâce, sauvée des flammes calvinistes, et y rétablit douze chanoines et un abbé. Son neveu Arnaud III fonde, à la demande des habitants, le couvent des capucins de Mauléon. Obtenant les lettres patentes du roi, il fait venir les capucins de Pau qui plantent la croix le 3 mai 1669. Le couvent, construit sur la rive droite du Saison (à l’emplacement de l’actuel collège Saint-François), est financé par les dons des habitants et un legs du marquis de Moneins (1678). Arnaud III y laisse sa bibliothèque et son portrait ; les capucins y demeureront jusqu’à la Révolution. Mais cette piété populaire côtoie des superstitions persistantes. Froidour note qu’il y avait alors « quantité de sorciers et de sorcières » en Soule. Dès 1599, la Cour de Licharre interroge sous la torture deux femmes accusées de sorcellerie. Comme au Labourd, la peur et la délation alimentent une véritable chasse aux sorcières, reflet des tensions religieuses et sociales du temps. La Soule, pays d’États, conserve cependant une large autonomie. La Cour d’Ordre, composée du syndic et du secrétaire, assure le lien entre le peuple et le roi. La justice est d’abord rendue par le capitaine-châtelain de Mauléon, lieutenant du roi et président de la Cour de Licharre, avant la création en 1550 du poste de lieutenant général de robe longue. Plusieurs figures locales occupent ces charges : Bertrand de Salha, Charles de Luxe, Jean de Sponde, ou encore Jean de Belonce, dont le gendre Gérard de Béla sépare les fonctions civiles et criminelles en 1588. Cette même année est bâtie la salle de Mauléon, abritant la justice au rez-de-chaussée et l’hôtel de ville à l’étage. Au XVIIᵉ siècle, la famille de Maytie domine encore ces fonctions, Pierre Arnaud de Maytie, écolâtre d’Oloron, achète la charge de lieutenant en 1600, tandis que d’autres lignées influentes, comme les Sponde, Casamajor et Troisvilles, marquent la vie politique. Les relations avec le Béarn et la Couronne restent complexes. En 1601, la Soule rejette un projet d’union avec la Basse-Navarre, préférant le Parlement de Bordeaux. Finalement, Louis XIV rattache la province au Parlement de Navarre en 1691. Un an plus tard, la déclaration royale de mai 1692 impose que tous les appels de la Cour de Licharre soient jugés à Pau, scellant l’intégration de la Soule au système judiciaire béarnais. Cette organisation restera stable jusqu’à la fin de l’Ancien Régime, malgré la tentative du Parlement de Navarre, en 1787, d’imposer la taille aux Souletins, tentative qui échouera face à leur attachement séculaire à leurs libertés locales.
  </p>
+          </div>
+        )
+      },
+        {
+        titre: "L'Éducation Moderne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jan Amos Komenský, dit Comenius, est évêque protestant de l'Unité des Frères Moraves et le véritable père de l'éducation moderne. Sa vie fut tragiquement bouleversée par la Guerre de Trente Ans. Mais c'est de ce chaos que naquit son projet grandiose de "Pansophie", une réforme visant à "tout enseigner à tous", une volonté éducative influencée par les Rose-Croix et Jacob Böhme, où l'Homme est vu comme un microcosme (un petit monde) contenant en lui tout l'Univers (le macrocosme) et fait à l'image d'un Dieu esprit androgyne, l'éducation servant alors à "réparer" la chute originelle pour retrouver cette unité divine. Ce rêve utopique manqua de peu de devenir une réalité politique lorsqu'il fut invité à Londres en 1641 par Samuel Hartlib pour créer un "Collège Pansophique", sorte de centre mondial du savoir, mais si la Guerre Civile anglaise fit capoter le projet immédiat, l'idéal survécut à travers le secret "Collège Invisible" de ses disciples qui, appliquant ses méthodes de collaboration, finirent par fonder la prestigieuse Royal Society, une filiation spirituelle que Comenius reconnut lui-même en leur dédiant son livre Via Lucis à la fin de sa vie. À l’UNESCO, Comenius jouit aujourd'hui d’un statut presque iconique.
+</p>
+          </div>
+        )
+      },
+          {
+        titre: "La Glorieuse Révolution",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1623, Paris est secouée par un scandale intellectuel majeur lorsque des affiches signées par les "Députés du Collège Invisible" apparaissent, proclamant "nous demeurons visibles et invisibles" pour instruire les hommes, un événement mystérieux qui fait écho au parcours de René Descartes débuté en 1618. Engagé alors aux Pays-Bas dans l'armée de Maurice de Nassau (allié du "Roi d'un hiver" Frédéric V, figure rosicrucienne déclenchant la Guerre de Trente Ans), Descartes évolue dans une effervescence où gravitent des hermétistes comme Michael Maier (proche de la cour de Prague sous Rodolphe II, alchimie forte) ou le mystique Jacob Böhme (connu pour sa théosophie sur la lutte du bien et du mal), mais c'est sa rencontre décisive à Breda avec le physicien Isaac Beeckman (son mentor anti-mystique à qui il dédie le Compendium Musicae) qui le pousse vers la science mathématique, une vocation confirmée en 1619 à Neubourg par ses fameux "trois songes" inspirant sa science universelle. Des décennies plus tard, cette imbrication entre politique et savoir se répète avec John Locke qui, accusé de complot en 1683, s'exile en Hollande (où il fréquente les Remonstrants) avant de revenir en Angleterre en 1689 sur le navire de la princesse Marie lors de la "Glorieuse Révolution" menée par les Whigs et Guillaume d'Orange (financé par des banquiers comme Suasso, juif). Ce nouveau régime de Guillaume et Marie consolide son pouvoir grâce au soutien intellectuel massif de la Royal Society et de figures comme Locke ou Isaac Newton (chrétien ésotérique devenu député après s'être opposé à Jacques II), le roi offrant en retour protection et légitimité à l'institution scientifique.
+</p>
           </div>
         )
       },
