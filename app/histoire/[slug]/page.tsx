@@ -538,7 +538,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
         )
       },
       {
-        titre: "L’influence des Almohades",
+        titre: "Raimond-Bérenger IV et la Reconquista",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
