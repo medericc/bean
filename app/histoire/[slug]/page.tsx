@@ -727,8 +727,8 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-  Lors de la septième croisade, le roi de France Saint Louis entreprend une expédition vers l’Égypte pour libérer les lieux saints des mains musulmanes. Il connaît cependant un échec militaire : capturé à Mansourah en 1250, il est libéré contre rançon. Plutôt que de rentrer aussitôt en France, il choisit de rester au Proche-Orient, notamment à Saint-Jean-d’Acre, en Syrie et en Palestine, pendant près de quatre ans. Là, il s’emploie à reconstruire et fortifier les cités chrétiennes, à aider les populations locales et à soutenir les communautés chrétiennes d’Orient. C’est durant ce séjour qu’il a formulé une promesse solennelle, celle que la France protégerait toujours les chrétiens d’Orient. Cette mission de “fille aînée de l’Église” sera honorée par la France pendant des siècles jusqu’à la Révolution française.
-      </p>
+ Lors de la septième croisade, le roi de France Saint Louis entreprend une expédition vers l’Égypte pour libérer les lieux saints des mains musulmanes. Il connaît cependant un échec militaire : capturé à Mansourah en 1250, il est libéré contre rançon. Plutôt que de rentrer aussitôt en France, il choisit de rester au Proche-Orient, notamment à Saint-Jean-d’Acre, en Syrie et en Palestine, pendant près de quatre ans. Là, il s’emploie à reconstruire et fortifier les cités chrétiennes, à aider les populations locales et à soutenir les communautés chrétiennes d’Orient. C’est durant ce séjour qu’il a formulé une promesse solennelle, celle que la France protégerait toujours les chrétiens d’Orient. Cette mission de “fille aînée de l’Église” sera honorée par la France pendant des siècles jusqu’à la Révolution française. À la même époque, la France est aussi marquée par le procès du Talmud (1240). Celui-ci est déclenché par Nicolas Donin, un ancien juif devenu frère dominicain, qui accuse le Talmud de contenir des passages problématiques. Sur son initiative, un grand débat public s’ouvre à Paris, opposant Donin à plusieurs rabbins renommés, dont Rabbi Yéhiel de Paris. Le Talmud est jugé coupable. Cette décision entraîne, en 1242, la saisie et la destruction par le feu de plusieurs charretées de manuscrits du Talmud. Les Juifs, considérés comme usuriers, seront ensuite expulsés par Philippe IV, puis définitivement sous Charles VI.
+    </p>
           </div>
         )
       },
@@ -2109,7 +2109,7 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Entre prudence et révolte",
+        titre: "Entre Prudence et Révolte",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2120,7 +2120,7 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
       },
     
        {
-        titre: "Complots et menaces sur le Béarn",
+        titre: "Complots et Menaces sur le Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2131,29 +2131,29 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
       },
     
        {
-        titre: "Jeanne face à l’Europe catholique",
+        titre: "Jeanne face à l’Europe Catholique",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-    Charles mit alors la pression sur le jeune Henri : après avoir pris de ses nouvelles à la suite d’une fièvre, il lui recommanda de ne pas suivre sa mère ni les huguenots. Il remercia également Caumont d’avoir tenté de dissuader Jeanne de rejoindre les protestants en armes. Après la bataille de Jarnac et l’assassinat du prince de Condé, Jeanne d’Albret devint la cheffe politique des réformés. En septembre 1568, elle se rendit à La Rochelle, où elle ranima le courage de ses partisans, sacrifia ses biens et présenta son fils Henri, âgé de quinze ans, comme l’espoir du parti protestant. Accusée de rébellion, Jeanne prouva au contraire que c’était la couronne qui, dès octobre 1568, avait ordonné la saisie de ses domaines (15 octobre 1568) et nommé, le 4 mars 1569, le seigneur de Terride gouverneur de ses États, avec mission d’extirper l’hérésie et de confisquer les biens des protestants. En réalité, ce n’était donc pas Jeanne qui s’était rebellée contre Charles IX, mais bien la cour de France qui, avant même les événements de La Rochelle, complotait pour soulever ses sujets, confisquer ses terres et livrer son royaume à d’autres puissances, dont l’Espagne. Jeanne ne choisit pas La Rochelle par esprit de rébellion, mais parce qu’elle n’avait plus d’autre issue pour sauver sa vie et celle de ses enfants. Jean de Losses et Montluc auraient d’ailleurs reçu mission d’enlever la reine ou au moins ses enfants, confirmant la réalité d’une tentative de capture. Dans une lettre adressée à Charles IX le 16 septembre 1568, depuis Bergerac, Jeanne précisa que ses armes ne servaient qu’à trois fins : éviter l’extermination (« qu’on ne nous rase de dessus la terre »), servir loyalement le roi et protéger les princes de son sang.  La Mothe-Fénelon, ambassadeur du roi de France, avait obtenu d’elle qu’elle pardonne les révoltés de Basse-Navarre, puis tenta de la convaincre de se rendre à la cour, ce qui revenait, pour elle, à se livrer à ses pires ennemis : les Guise et Catherine de Médicis. Jeanne refusa. Jean de Losses, capitaine gascon fidèle à la couronne, aurait reçu l’ordre d’enlever Jeanne ou ses enfants, tandis que Montluc, gouverneur catholique de Guyenne, aurait reçu une commission similaire selon Poeydavant. Les sources divergent, mais toutes confirment l’existence d’un véritable projet d’arrestation ou d’enlèvement. À cela s’ajoutait une menace internationale : en 1568, le pape Pie V projeta de déposer Jeanne et chargea le roi d’Espagne, Philippe II, de s’emparer du Béarn, tout en faisant comparaître la Reine de Navarre devant l'Inquisition Espagnole. Le pape Pie V qui avait émis une bulle ordonnant une croisade contre les protestants avec aide financière et envoie d'un contingent militaire. Face à ces périls, Jeanne joua un rôle diplomatique majeur, multipliant manifestes, lettres et négociations. Pendant ce temps, la terreur s’abattit sur le Béarn : les réformés, privés de défense, furent livrés à leurs ennemis, tandis que son lieutenant-général, le comte de Gramont, oscillait entre les deux camps.
+   Charles mit alors la pression sur le jeune Henri : après avoir pris de ses nouvelles à la suite d’une fièvre, il lui recommanda de ne pas suivre sa mère ni les huguenots. Il remercia également Caumont d’avoir tenté de dissuader Jeanne de rejoindre les protestants en armes. Après la bataille de Jarnac et l’assassinat du prince de Condé, Jeanne d’Albret devint la cheffe politique des réformés. En septembre 1568, elle se rendit à La Rochelle, où elle ranima le courage de ses partisans, sacrifia ses biens et présenta son fils Henri, âgé de quinze ans, comme l’espoir du parti protestant. Accusée de rébellion, Jeanne prouva au contraire que c’était la couronne qui, dès octobre 1568, avait ordonné la saisie de ses domaines (15 octobre 1568) et nommé, le 4 mars 1569, le seigneur de Terride gouverneur de ses États, avec mission d’extirper l’hérésie et de confisquer les biens des protestants. En réalité, ce n’était donc pas Jeanne qui s’était rebellée contre Charles IX, mais bien la cour de France qui, avant même les événements de La Rochelle, complotait pour soulever ses sujets, confisquer ses terres et livrer son royaume à d’autres puissances, dont l’Espagne. Jeanne ne choisit pas La Rochelle par esprit de rébellion, mais parce qu’elle n’avait plus d’autre issue pour sauver sa vie et celle de ses enfants. Dans une lettre adressée à Charles IX le 16 septembre 1568, depuis Bergerac, Jeanne précisa que ses armes ne servaient qu’à trois fins : éviter l’extermination (« qu’on ne nous rase de dessus la terre »), servir loyalement le roi et protéger les princes de sang (défendre un royaume menacé). Elle s’attaque à la maison de Guise, et surtout au cardinal de Lorraine (perfide et manipulateur). Elle rappela la trahison de ses adversaires lors de la surprise de Meaux, comparant leurs manœuvres à celles d’un peintre qui efface et refait sans cesse son tableau, et accusa encore le cardinal de « jouer à la pelote de sa foi et de son honneur ».   La Mothe-Fénelon, ambassadeur du roi de France, avait obtenu d’elle qu’elle pardonne les révoltés de Basse-Navarre, puis tenta de la convaincre de se rendre à la cour, ce qui revenait, pour elle, à se livrer à ses pires ennemis : les Guise et Catherine de Médicis. Jeanne refusa. Jean de Losses, capitaine gascon fidèle à la couronne, aurait reçu l’ordre d’enlever Jeanne ou ses enfants, tandis que Montluc, gouverneur catholique de Guyenne, aurait reçu une commission similaire selon Poeydavant. Les sources divergent, mais toutes confirment l’existence d’un véritable projet d’arrestation ou d’enlèvement. À cela s’ajoutait une menace internationale :en 1568, le pape Pie V projeta de déposer Jeanne et chargea le roi d’Espagne, Philippe II, de s’emparer du Béarn, tout en faisant comparaître la Reine de Navarre devant l'Inquisition Espagnole. Le pape Pie V qui avait émis une bulle ordonnant une croisade contre les protestants avec aide financière et envoie d'un contingent militaire. Face à ces périls, Jeanne joua un rôle diplomatique majeur, multipliant manifestes, lettres et négociations. Pendant ce temps, la terreur s’abattit sur le Béarn : les réformés, privés de défense, furent livrés à leurs ennemis, tandis que son lieutenant-général, le comte de Gramont, oscillait entre les deux camps.
 
        </p>
           </div>
         )
       },
     
-       {
-        titre: "La forteresse de Navarrenx",
-        contenu: (
-          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
-            <p>
-    La troisième guerre de Religion (1568-1570) toucha directement le Béarn lorsque Charles IX, jugeant Jeanne d’Albret prisonnière, ordonna la saisie de toutes ses possessions, y compris sa seigneurie souveraine, confiée à Antoine de Lomagne, comte de Luxe. Fidèle à sa foi, la reine résista avec le soutien des protestants français et de leurs alliés anglais et néerlandais, notamment depuis La Rochelle. Rapidement accusée de préparer la guerre sous couvert de paix, elle répondit dans ses Mémoires qu’en tant qu’autorité temporelle des réformés et belle-sœur de Condé, elle devait se défendre de l’accusation de rébellion. Sa stratégie consista à attaquer directement la maison de Guise, et surtout le cardinal de Lorraine, qu’elle décrivit comme perfide et manipulateur, afin de justifier la prise d’armes protestante. Elle rappela la trahison de ses adversaires lors de la surprise de Meaux, comparant leurs manœuvres à celles d’un peintre qui efface et refait sans cesse son tableau, et accusa encore le cardinal de « jouer à la pelote de sa foi et de son honneur ». Justifiant l’armement de 1568, elle affirma que les princes du sang, suivis de la noblesse et du peuple, avaient le devoir de défendre un royaume menacé. La crise éclata entre 1568 et 1571. En 1568, Jeanne obtint des États leur appui pour sa politique religieuse et ses ordonnances de 1566, qui interdisaient la prédication et le culte catholique. Partie rejoindre Coligny et Condé à La Rochelle, elle provoqua la réaction de Charles IX, qui envoya des troupes commandées par le baron de Terride. Les Béarnais, unis malgré leurs différences religieuses, se déclarèrent prêts à combattre. Les forces royales occupèrent le pays, mais Navarrenx résista héroïquement. Grâce à Mongomery, Jeanne leva une armée dans l’Albigeois et le Quercy, libéra Navarrenx le 6 août 1569, puis remporta la bataille d’Orthez le 15 août. Des représailles frappèrent les catholiques et, en 1571, les Ordonnances ecclésiastiques firent du calvinisme la religion officielle du Béarn. L’Académie protestante d’Orthez devint alors un centre intellectuel majeur, la cause de la souveraineté s’identifiant à celle de la Réforme. En 1568, les habitants de Soule se révoltèrent contre l’autorité de Jeanne d’Albret, reine de Navarre. Catherine de Médicis envoya un émissaire, La Mothe, pour apaiser la situation, mais les troubles persistèrent : des bandes armées pillèrent, saccagèrent des maisons et s’en prirent aux représentants du pouvoir. En 1567-1568, les Soulétins rejoignirent les ligueurs catholiques révoltés en Basse-Navarre et attaquèrent plusieurs localités. Jeanne d’Albret réagit en envoyant des troupes commandées par son fils Henri (le futur Henri IV), qui repoussèrent les insurgés. Ceux-ci, chassés, se vengèrent en ravageant le village de Montory. Malgré les interventions, l’anarchie régna encore un mois en Soule, où la reine ne put rétablir l’ordre sans risquer d’aggraver la crise. La paix mit du temps à s’installer en Soule, malgré les tentatives de réconciliation.
-       </p>
-          </div>
-        )
-      },
+    //    {
+    //     titre: "La forteresse de Navarrenx",
+    //     contenu: (
+    //       <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+    //         <p>
+    // La troisième guerre de Religion (1568-1570) toucha directement le Béarn lorsque Charles IX, jugeant Jeanne d’Albret prisonnière, ordonna la saisie de toutes ses possessions, y compris sa seigneurie souveraine, confiée à Antoine de Lomagne, comte de Luxe. Fidèle à sa foi, la reine résista avec le soutien des protestants français et de leurs alliés anglais et néerlandais, notamment depuis La Rochelle. Rapidement accusée de préparer la guerre sous couvert de paix, elle répondit dans ses Mémoires qu’en tant qu’autorité temporelle des réformés et belle-sœur de Condé, elle devait se défendre de l’accusation de rébellion. Sa stratégie consista à attaquer directement la maison de Guise, et surtout le cardinal de Lorraine, qu’elle décrivit comme perfide et manipulateur, afin de justifier la prise d’armes protestante. Elle rappela la trahison de ses adversaires lors de la surprise de Meaux, comparant leurs manœuvres à celles d’un peintre qui efface et refait sans cesse son tableau, et accusa encore le cardinal de « jouer à la pelote de sa foi et de son honneur ». Justifiant l’armement de 1568, elle affirma que les princes du sang, suivis de la noblesse et du peuple, avaient le devoir de défendre un royaume menacé. La crise éclata entre 1568 et 1571. En 1568, Jeanne obtint des États leur appui pour sa politique religieuse et ses ordonnances de 1566, qui interdisaient la prédication et le culte catholique. Partie rejoindre Coligny et Condé à La Rochelle, elle provoqua la réaction de Charles IX, qui envoya des troupes commandées par le baron de Terride. Les Béarnais, unis malgré leurs différences religieuses, se déclarèrent prêts à combattre. Les forces royales occupèrent le pays, mais Navarrenx résista héroïquement. Grâce à Mongomery, Jeanne leva une armée dans l’Albigeois et le Quercy, libéra Navarrenx le 6 août 1569, puis remporta la bataille d’Orthez le 15 août. Des représailles frappèrent les catholiques et, en 1571, les Ordonnances ecclésiastiques firent du calvinisme la religion officielle du Béarn. L’Académie protestante d’Orthez devint alors un centre intellectuel majeur, la cause de la souveraineté s’identifiant à celle de la Réforme. En 1568, les habitants de Soule se révoltèrent contre l’autorité de Jeanne d’Albret, reine de Navarre. Catherine de Médicis envoya un émissaire, La Mothe, pour apaiser la situation, mais les troubles persistèrent : des bandes armées pillèrent, saccagèrent des maisons et s’en prirent aux représentants du pouvoir. En 1567-1568, les Soulétins rejoignirent les ligueurs catholiques révoltés en Basse-Navarre et attaquèrent plusieurs localités. Jeanne d’Albret réagit en envoyant des troupes commandées par son fils Henri (le futur Henri IV), qui repoussèrent les insurgés. Ceux-ci, chassés, se vengèrent en ravageant le village de Montory. Malgré les interventions, l’anarchie régna encore un mois en Soule, où la reine ne put rétablir l’ordre sans risquer d’aggraver la crise. La paix mit du temps à s’installer en Soule, malgré les tentatives de réconciliation.
+    //    </p>
+    //       </div>
+    //     )
+    //   },
      {
-        titre: "La reconquête du Béarn",
+        titre: "La Forteresse de Navarrenx",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2164,7 +2164,7 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
       },
 
         {
-        titre: "Entre guerre et pardon",
+        titre: "Entre Guerre et Pardon",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2175,7 +2175,7 @@ En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étra
       },
 
        {
-        titre: "La tolérance assiégée",
+        titre: "La Tolérance Assiégée",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2185,7 +2185,7 @@ En mars 1571, Jeanne d’Albret se félicita du vote des trois États du Béarn,
         )
       },
         {
-        titre: "La dernière reine de Navarre",
+        titre: "La Dernière Reine de Navarre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
