@@ -54,37 +54,37 @@ const periodes: Periode[] = [
   
   },
    {
-    annee: "XIVe-XVe siècle", 
+    annee: "XIIIe siècle", 
     titre: "Fin de la Tutelle",
     description: "Le Béarn s’affranchit de la tutelle et affirme peu à peu son autonomie",
     slug: 'tutelle',
   },
     {
-    annee: "XIVe-XVe siècle", 
+    annee: "XIIIe-XIVe siècle", 
     titre: "Vers la Souveraineté",
     description: "Le Béarn se consolide, posant les bases d’une véritable indépendance",
     slug: 'marguerite',
   },
    {
-    annee: "XIVe-XVe siècle", 
+    annee: "XIVe siècle", 
     titre: "La Souveraineté",
     description: "Sous Fébus, le Béarn atteint son apogée politique",
     slug: 'souverainete',
   },
   {
-    annee: "XIVe-XVe siècle", 
+    annee: "XIVe siècle", 
     titre: "L'Apogée Militaire",
     description: "Le Béarn s'impose militairement et diplomatiquement",
     slug: 'apogee',
   },
   {
-    annee: "XIVe-XVe siècle", 
+    annee: "XIVe siècle", 
    titre: "L'Affirmation Béarnaise",
     description: "Le Béarn sous la Menace du Prince Noir",
     slug: 'affirmation',
   },
    {
-    annee: "XIVe-XVe siècle", 
+    annee: "XIVe siècle", 
     titre: "Les Drames de Fébus",
     description: "Le Pays de Béarn entre Guerre et Tragédie",
     slug: 'drames',

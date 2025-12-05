@@ -1,4 +1,6 @@
 // app/lignees/[slug]/page.tsx
+export const dynamic = "force-dynamic";
+
 import { notFound } from 'next/navigation';
 import type { Metadata } from "next"
 

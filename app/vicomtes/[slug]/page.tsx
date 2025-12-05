@@ -1,6 +1,8 @@
 // app/vicomtes/[slug]/page.tsx
+export const dynamic = "force-dynamic";
 import { notFound } from 'next/navigation';
 import type { Metadata } from "next"
+
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const data = vicomtesData[params.slug as keyof typeof vicomtesData]

@@ -654,7 +654,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
 
   
      'tutelle': {
-    titre: "Vers la Souveraineté",
+    titre: "Fin de la Tutelle",
     periode: "Temps Féodaux",
     resume: "Le Béarn s’émancipe et affirme son équilibre politique",
     introduction: "Des Guillaume à Gaston VII, le Béarn s'extirpe de l'Aragon...",
