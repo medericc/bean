@@ -34,7 +34,7 @@ export default function Home() {
       <Hero />
       
       {/* Section Carte Interactive */}
-      <section className="py-16 bg-pierre">
+      {/* <section className="py-16 bg-pierre">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-titre text-3xl md:text-4xl text-vert-mousse mb-4">
@@ -46,10 +46,10 @@ export default function Home() {
           </div>
           <CarteBearn />
         </div>
-      </section>
+      </section> */}
       
       {/* Section Highlights */}
-      <section className="py-16 bg-parchemin">
+      <section className="py-16 bg-pierre">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-titre text-3xl md:text-4xl text-vert-mousse mb-4">

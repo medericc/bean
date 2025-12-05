@@ -15,7 +15,7 @@ export default function CarteBearn() {
       {/* Carte stylisée */}
      <div
   className="absolute inset-8 bg-pierre rounded-lg border border-brun-terre/20 bg-cover bg-center"
-  style={{ backgroundImage: "url('/carteb.jpg')" }}
+  style={{ backgroundImage: "url('/car.jpg')" }}
 >
   {/* Points interactifs */}
         {regions.map((region, index) => (
