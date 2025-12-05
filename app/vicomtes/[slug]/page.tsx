@@ -1,21 +1,26 @@
 // app/vicomtes/[slug]/page.tsx
+// app/vicomtes/[slug]/page.tsx
 export const dynamic = "force-dynamic";
-import { notFound } from 'next/navigation';
-import type { Metadata } from "next"
 
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const data = vicomtesData[params.slug as keyof typeof vicomtesData]
+export async function generateMetadata(
+  props: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const data = vicomtesData[slug as keyof typeof vicomtesData];
 
   if (!data) {
     return {
       title: "Page non trouvée – Mémoire du Béarn",
-    }
+    };
   }
 
   return {
     title: `${data.titre} – ${data.lignee} | Mémoire du Béarn`,
-  }
+  };
 }
 
 interface Props {
@@ -395,12 +400,17 @@ function getLigneeSlug(lignee: string): string {
   return mots[mots.length - 1].toLowerCase();
 }
 
-export default function VicomteDetailPage({ params }: Props) {
-  const vicomte = vicomtesData[params.slug as keyof typeof vicomtesData];
-  
+export default async function VicomteDetailPage(
+  props: { params: Promise<{ slug: string }> }
+) {
+  const { slug } = await props.params;
+
+  const vicomte = vicomtesData[slug as keyof typeof vicomtesData];
+
   if (!vicomte) {
     notFound();
   }
+
 
   return (
     <div className="min-h-screen bg-parchemin">

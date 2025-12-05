@@ -1,21 +1,25 @@
 // app/lignees/[slug]/page.tsx
 export const dynamic = "force-dynamic";
 
-import { notFound } from 'next/navigation';
-import type { Metadata } from "next"
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const data = ligneesData[params.slug as keyof typeof ligneesData]
+export async function generateMetadata(
+  props: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const data = ligneesData[slug as keyof typeof ligneesData];
 
   if (!data) {
     return {
       title: "Page non trouvée – Mémoire du Béarn",
-    }
+    };
   }
 
   return {
     title: `${data.titre} – ${data.periode} | Mémoire du Béarn`,
-  }
+  };
 }
 interface Props {
   params: {
@@ -138,9 +142,13 @@ function normalizeName(name: string) {
     .replace(/[\u0300-\u036f]/g, ""); // supprime les accents
 }
 
-export default function LigneeDetailPage({ params }: Props) {
-  const lignee = ligneesData[params.slug as keyof typeof ligneesData];
-  
+export default async function LigneeDetailPage(
+  props: { params: Promise<{ slug: string }> }
+) {
+  const { slug } = await props.params;
+
+  const lignee = ligneesData[slug as keyof typeof ligneesData];
+
   if (!lignee) {
     notFound();
   }

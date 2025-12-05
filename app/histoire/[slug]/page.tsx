@@ -1,20 +1,26 @@
-import { notFound } from 'next/navigation';
-import ExpandableSection from './ExpandableSection';
+// app/histoire/[slug]/page.tsx
+export const dynamic = "force-dynamic";
 
-import type { Metadata } from "next"
+import { notFound } from "next/navigation";
+import ExpandableSection from "./ExpandableSection";
+import type { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const data = histoireData[params.slug as keyof typeof histoireData]
+export async function generateMetadata(
+  props: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const data = histoireData[slug as keyof typeof histoireData];
 
   if (!data) {
     return {
       title: "Page non trouvée – Mémoire du Béarn",
-    }
+    };
   }
 
   return {
     title: `${data.titre} – ${data.periode} | Mémoire du Béarn`,
-  }
+  };
 }
 
 const histoireData = {
@@ -3022,12 +3028,13 @@ interface Props {
   params: { slug: string };
 }
 
-export default function HistoireDetailPage({ params }: Props) {
-  const pageData = histoireData[params.slug as keyof typeof histoireData];
+export default async function HistoireDetailPage(props: { params: Promise<{ slug: string }> }) {
+  const { slug } = await props.params;
 
-  if (!pageData) {
-    notFound();
-  }
+  const pageData = histoireData[slug as keyof typeof histoireData];
+
+  if (!pageData) notFound();
+
 
   return (
     <div className="min-h-screen bg-parchemin">
