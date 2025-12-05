@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
     description:
       "Plongez au cœur de l’histoire du Béarn, des origines antiques aux rois de Navarre. Un site dédié aux vicomtés, lignées et héritages du Béarn.",
-    url: "https://bearn.vercel.app",
+    url: "https://www.histoirebearn.fr/",
     siteName: "Mémoire du Béarn",
     locale: "fr_FR",
     type: "website",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-title": "Béarn",
   },
 
-  metadataBase: new URL("https://bearn.vercel.app"),
+  metadataBase: new URL("https://www.histoirebearn.fr/"),
   themeColor: "#e2d3b7",
 };
 
@@ -90,7 +90,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Mémoire du Béarn",
-    "url": "https://bearn.vercel.app",
+    "url": "https://www.histoirebearn.fr/",
     "publisher": {
       "@type": "Organization",
       "name": "Mémoire du Béarn"
