@@ -54,7 +54,7 @@ const vicomtes = [
     slug: "marie",
     titre: "Marie de Béarn",
     description: "Humble femme de devoir et de piété, elle servit de lien décisif entre Béarn et Aragon.",
-    image: "/mariebearn.webp",
+    image: "/mariebe.webp",
     periode: "1170-1173",
     lignee: "Gabarret",
     badge: "Religieuse"
@@ -118,7 +118,7 @@ const vicomtes = [
     slug: "marguerite",
     titre: "Marguerite",
     description: "Elle unit Foix-Béarn, en maintenant l'indépendance du Béarn face aux anglais et français.",
-    image: "/margue.webp",
+    image: "/marguerite.webp",
     periode: "1290–1319",
     lignee: "Moncade",
     badge: "Stratège"

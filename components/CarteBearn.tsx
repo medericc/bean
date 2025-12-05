@@ -1,7 +1,7 @@
 // components/CarteBearn.tsx
 export default function CarteBearn() {
   const regions = [
-    { nom: "Oloron", x: "30%", y: "40%" },
+    { nom: "Morlaas", x: "30%", y: "40%" },  
     { nom: "Orthez", x: "20%", y: "60%" },
     { nom: "Pau", x: "40%", y: "50%" },
     { nom: "Navarrenx", x: "25%", y: "55%" }
@@ -13,8 +13,11 @@ export default function CarteBearn() {
       <div className="absolute inset-0 bg-[url('/textures/papier-ancien.jpg')] opacity-10"></div>
       
       {/* Carte stylisée */}
-      <div className="absolute inset-8 bg-pierre rounded-lg border border-brun-terre/20">
-        {/* Points interactifs */}
+     <div
+  className="absolute inset-8 bg-pierre rounded-lg border border-brun-terre/20 bg-cover bg-center"
+  style={{ backgroundImage: "url('/carteb.jpg')" }}
+>
+  {/* Points interactifs */}
         {regions.map((region, index) => (
           <button
             key={index}
