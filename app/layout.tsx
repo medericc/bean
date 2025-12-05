@@ -3,8 +3,8 @@ import { Inter, Crimson_Text } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Head from "next/head";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -36,11 +36,22 @@ export const metadata: Metadata = {
   authors: [{ name: "Mémoire du Béarn" }],
   creator: "Mémoire du Béarn",
   publisher: "Mémoire du Béarn",
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" }
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }]
+  },
+
   openGraph: {
     title: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
     description:
       "Plongez au cœur de l’histoire du Béarn, des origines antiques aux rois de Navarre. Un site dédié aux vicomtés, lignées et héritages du Béarn.",
-    url: "https://memoiredubearn.fr",
+    url: "https://bearn.vercel.app",
     siteName: "Mémoire du Béarn",
     locale: "fr_FR",
     type: "website",
@@ -53,6 +64,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Mémoire du Béarn",
@@ -60,20 +72,12 @@ export const metadata: Metadata = {
       "Découvrez l’histoire, les lignées et le patrimoine du Béarn à travers les siècles.",
     images: ["/og-image.jpg"],
   },
-icons: {
-  icon: [
-    { url: "/favicon.ico", type: "image/x-icon" },
-    { url: "/favicon.svg", type: "image/svg+xml" },
-    { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
-    { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" }
-  ],
-  apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }]
-},
 
   other: {
     "apple-mobile-web-app-title": "Béarn",
   },
-  metadataBase: new URL("https://memoiredubearn.fr"),
+
+  metadataBase: new URL("https://bearn.vercel.app"),
   themeColor: "#e2d3b7",
 };
 
@@ -82,21 +86,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mémoire du Béarn",
+    "url": "https://bearn.vercel.app",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mémoire du Béarn"
+    }
+  };
+
   return (
     <html lang="fr" className={`${inter.variable} ${crimsonText.variable}`}>
-           <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="Béarn" />
-        <meta name="theme-color" content="#e2d3b7" />
-      </Head>
       <body className="antialiased bg-background text-foreground font-[var(--font-inter)]">
+        {/* JSON-LD Schema.org */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <Header />
         {children}
         <Footer />
-          <Analytics />
+        <Analytics />
       </body>
     </html>
   );
