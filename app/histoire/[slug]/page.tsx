@@ -2583,7 +2583,7 @@ Au XVIIᵉ siècle, la Contre-Réforme marque profondément la Soule, menée par
       },
 
        {
-        titre: "La Conférence de Fontaineblea",
+        titre: "La Conférence de Fontainebleau",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
