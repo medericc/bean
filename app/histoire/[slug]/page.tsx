@@ -2581,6 +2581,20 @@ Au XVIIᵉ siècle, la Contre-Réforme marque profondément la Soule, menée par
           </div>
         )
       },
+
+       {
+        titre: "La Conférence de Fontaineblea",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Parallèlement, lors de son mariage avec le duc de Bar, Catherine de Bourbon avait vaguement promis de « se faire instruire » dans la foi catholique, tout comme son frère. Son instruction commence alors le 7 octobre 1600, le maître d’œuvre étant le cardinal Du Perron. Les protestants craignent que Du Perron ne convainque Catherine ; le maréchal de Bouillon (Henri de La Tour d'Auvergne, grand chef protestant et ancien prétendant de Catherine) intervient donc pour saboter la conversion. Il dit à Catherine : « Si vous avez envie de quitter le protestantisme, pas besoin de débat. Si vous ne le voulez pas, ce débat est un piège dangereux pour nos Églises ». Catherine lui répond que son mari prie à genoux pour sa conversion toutes les nuits. De ce fait, le parti calviniste accepte le principe d'une controverse, mais à ses conditions : pas de “un contre un”, car Du Perron est trop fort ; ils constituent donc une équipe de cinq de leurs meilleurs théologiens (Daniel Tilenus, François Gordon, Pierre Du Moulin, M. de Beaulieu, M. de Feugeray) et exigent que tout se fasse par mémoires écrits, afin de ne jamais donner à Du Perron l’occasion de montrer sa rhétorique orale, pour « discuter indéfiniment ». Et la stratégie fonctionne : le débat devient une « partie de jeu de paume » interminable. La controverse n’aura donc jamais lieu.
+
+
+ </p>
+          </div>
+        )
+      },
+
        {
         titre: "Le Roi d'un Hiver",
         contenu: (
