@@ -1818,7 +1818,7 @@ Le 1er août 1391, à l’Hôpital d’Orion, près d’Orthez, après une journ
         )
       },
       {
-        titre: "Petite république des Pyrénées",
+        titre: "Petite République des Pyrénées",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1828,7 +1828,7 @@ Le 1er août 1391, à l’Hôpital d’Orion, près d’Orthez, après une journ
         )
       },
         {
-        titre: "Succession navarraise",
+        titre: "Succession Navarraise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1861,7 +1861,7 @@ Le 1er août 1391, à l’Hôpital d’Orion, près d’Orthez, après une journ
 
 
          {
-        titre: "L'inquisition espagnole",
+        titre: "L'Inquisition Espagnole",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1883,7 +1883,7 @@ En 1494, Jean III d’Albret et Catherine arrivèrent à Pampelune dont les port
         )
       },
         {
-        titre: "Devant le parlement de Toulouse",
+        titre: "Devant le Parlement de Toulouse",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1893,7 +1893,7 @@ Dans le même temps, au Béarn, Gaston de Foix, petit-fils de Gaston IX et neveu
         )
       },
         {
-        titre: "Le plaidoyer de Pierre de Fundères",
+        titre: "Le Plaidoyer de Pierre de Fundères",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1902,7 +1902,7 @@ Dans sa défense, Pierre de Fundères affirma que Jean et Catherine « tiennent 
         )
       },
         {
-        titre: "Ferdinand d’Aragon et la résistance du Béarn",
+        titre: "Ferdinand d’Aragon et la Résistance du Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1911,7 +1911,7 @@ Le 15 juillet 1512, les arbitres réunis à Blois cassèrent les arrêts du Parl
         )
       },
   {
-        titre: "La régence d’Alain et la défense du Béarn",
+        titre: "La Régence d’Alain et la Défense du Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1920,7 +1920,7 @@ Le 15 juillet 1512, les arbitres réunis à Blois cassèrent les arrêts du Parl
         )
       },
        {
-        titre: "La chute de Noain",
+        titre: "La Chute de Noain",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1929,7 +1929,7 @@ En 1521, Henri II d’Albret lança la reconquête de la Haute-Navarre, confiée
         )
       },
  {
-        titre: "La Navarre déchirée",
+        titre: "La Navarre Déchirée",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1938,7 +1938,7 @@ En 1523, Charles Quint lança une nouvelle campagne contre la Basse-Navarre et l
         )
       },
       {
-        titre: "La paix des Dames",
+        titre: "La Paix des Dames",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
