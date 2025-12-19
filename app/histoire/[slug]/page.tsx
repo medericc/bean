@@ -260,8 +260,20 @@ Alphonse VI exploite habilement la rivalité entre les taifas, s’alliant à ce
     introduction: "Gaston IV unit ferveur et indépendance souveraine...",
     image: "/images/histoire/antiquite.jpg",
     sections: [
+
+
+       {
+        titre: "Mathilde de Toscane, la \"Nouvelle Débora\"",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Mathilde de Toscane reçut une éducation complète mêlant l'étude des langues (latin, germain, français) au maniement des armes et à l'équitation. Dès son plus jeune âge, elle accompagna sa mère, Béatrice de Bar, sur les terrains de conflit, et finit par répudier son mari. Son existence s'inscrit dans le cadre de la querelle des investitures qui secoue le XIe siècle. À cette époque, les évêques sont de véritables seigneurs qui possèdent des terres, lèvent des impôts et dirigent des armées. L'Empereur tient à choisir lui-même ses évêques afin de disposer de vassaux fidèles pour gérer son empire (l'investiture laïque). De son côté, le Pape veut mettre fin à ces pratiques, dénonçant la simonie (l'achat des charges ecclésiastiques) et le fait que certains prélats soient plus soumis aux rois qu’à Dieu. En 1075, Grégoire VII publie le Dictatus Papae, affirmant que seul le pape peut nommer les évêques, déposer les empereurs et qu'il ne peut être jugé par quiconque. L'empereur Henri IV réagit en déclarant que Grégoire n'est plus pape, ce à quoi ce dernier répond par une excommunication. Se retrouvant totalement isolé, Henri IV parvient, grâce à l'intercession de sa cousine Mathilde, à accomplir la « Pénitence de Canossa » en 1077. Il passe alors trois jours dans la neige, pieds nus et en robe de bure, pour demander pardon au souverain pontife. Cependant, Henri IV revient par la suite en Italie avec une armée pour se venger. Mathilde, qui contrôle des forteresses stratégiques barrant les passages des Alpes et des Apennins, adapte sa tactique : en infériorité numérique, elle évite les batailles rangées en plaine. Toujours à cheval, en armure et l'épée à la main, elle pratique la terre brûlée et multiplie les embuscades. Elle va jusqu'à faire fondre le trésor de son abbaye et ses propres bijoux d'or et d'argent pour payer les mercenaires et les soldats du Pape lorsque celui-ci se trouve sans ressources. Lors de la bataille de Sorbara (1084), elle décide de lancer une attaque surprise nocturne contre le campement impérial. Haranguant ses troupes, elle met en déroute l'armée d'Henri IV, capture ses généraux et sauve la cause papale. Après la mort de son beau-père et de sa mère, Mathilde s'est retrouvée à la tête d'un immense territoire s'étendant de la Lombardie à la Toscane, constituant une zone stratégique cruciale entre l'Empire et Rome. Son autorité était telle qu'à 68 ans, alors qu'elle était malade, la simple menace de son arrivée avec une armée suffit à faire rentrer les rebelles de Mantoue dans l'ordre. Elle est enterrée dans la basilique Saint-Pierre au Vatican.
+            </p>
+          </div>
+        )
+      },
       {
-        titre: "Contexte historiques",
+        titre: "Contexte Historiques",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -271,7 +283,7 @@ Alphonse VI exploite habilement la rivalité entre les taifas, s’alliant à ce
         )
       },
       {
-        titre: "Mariage et alliances politiques",
+        titre: "Mariage et Alliances Politiques",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -282,7 +294,7 @@ Homme de foi, il manifeste sa piété en assistant à la dédicace de l’églis
         )
       },
        {
-        titre: "Contexte religieux et appel à la croisade",
+        titre: "Contexte Religieux et Appel à la Croisade",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -294,7 +306,7 @@ L’Église tente de canaliser leur violence par la paix de Dieu (protection des
         )
       },
        {
-        titre: "Départ en croisade et itinéraire",
+        titre: "Départ en Croisade et Itinéraire",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -305,7 +317,7 @@ En route, les croisés sont attaqués par des populations locales. À Salonique,
         )
       },
        {
-        titre: "Les grandes batailles",
+        titre: "Les Grandes Batailles",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -315,7 +327,7 @@ En route, les croisés sont attaqués par des populations locales. À Salonique,
         )
       },
       {
-        titre: "Siège et prise d’Antioche",
+        titre: "Siège et Prise d’Antioche",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -325,7 +337,7 @@ En route, les croisés sont attaqués par des populations locales. À Salonique,
         )
       },
        {
-        titre: "Fin de la croisade et retour en Béarn",
+        titre: "Fin de la Croisade et Retour en Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
