@@ -3134,7 +3134,7 @@ Sous l'impulsion de Danton et de la Commune de Paris, une délégation se prése
         )
       },
         {
-        titre: "la Bataille de Valmy",
+        titre: "La Bataille de Valmy",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
