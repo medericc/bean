@@ -546,7 +546,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
         )
       },
       {
-        titre: "Crise de succession en Aragon",
+        titre: "Crise de Succession en Aragon",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -555,7 +555,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
           </div>
         )
       },  {
-        titre: "Le Béarn et la maison de Gabarret",
+        titre: "Le Béarn et la Maison de Gabarret",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -574,7 +574,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
           </div>
         )
       },  {
-        titre: "Le Béarn dans la couronne d'Aragon et la Gascogne",
+        titre: "Le Béarn dans la Couronne d'Aragon et la Gascogne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -583,7 +583,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
           </div>
         )
       },  {
-        titre: "L'alliance anglo-aragonaise et les tensions avec Toulouse",
+        titre: "Les Tensions avec Toulouse",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -593,7 +593,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
         )
       },
        {
-        titre: "La naissance de la maison de Moncade-Béarn",
+        titre: "La Naissance des Moncade-Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -602,7 +602,7 @@ Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu�
         )
       },
        {
-        titre: "Les alliances politiques sous Gaston VI",
+        titre: "Les Alliances sous Gaston VI",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -627,7 +627,7 @@ Juif hellénisé d'Alexandrie (comme Arius) du 1er siècle, Philon appartient à
         )
       },
         {
-        titre: "La troisème croisade et le Midi",
+        titre: "La Troisème Croisade et le Midi",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -639,7 +639,7 @@ Juif hellénisé d'Alexandrie (comme Arius) du 1er siècle, Philon appartient à
 
        
        {
-        titre: "La double vassalité",
+        titre: "La Double Vassalité",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -649,7 +649,7 @@ Juif hellénisé d'Alexandrie (comme Arius) du 1er siècle, Philon appartient à
         )
       },
        {
-        titre: "La croisade albigeoise",
+        titre: "La Croisade Albigeoise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -660,7 +660,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
       },
 
        {
-        titre: "Après Muret : défaite aragonaise",
+        titre: "Après Muret : Défaite Aragonaise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -671,7 +671,7 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
       },
 
        {
-        titre: "La bataille de Bouvines",
+        titre: "La Bataille de Bouvines",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -680,6 +680,17 @@ Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gi
           </div>
         )
       },
+
+       {
+        titre: "La Création du Portugal",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Après la résistance de Viriate, l’Édit de Caracalla, les Suèves et les Wisigoths et les Musulmans, la Reconquista voit la création du Comté de Portucale (Alphonse VI, roi de Léon et Galice le donne à Henri de Bourgogne, qui se marie ave sa fille Thérèse de Léon). À la mort d'Henri, Thérèse assure la régence mais elle se rapproche de la noblesse galicienne (via son amant Fernão Peres de Trava). Le fils de Thérèse et Henri, Afonso Henriques, entre en conflit ouvert avec sa mère pour protéger l'autonomie du comté. Près de Guimarães (São Mamede,1128), Afonso bat les troupes de sa mère et de la noblesse galicienne, il prend le pouvoir et expulse l'influence galicienne. En 1139 à Ourique, il bat les Musulmans et se proclame Roi des Portugais mais pour être reconnu roi, Afonso doit s'émanciper de la suzeraineté du roi de Léon. A Zamora (1143), sous la médiation du légat du Pape, les deux cousins se rencontrent. Alphonse VII de Léon reconnaît l’autonomie politique d'Afonso Henriques. En échange, le Portugal reste dans la sphère d'influence impériale de Léon, mais Afonso Henriques joue un coup de maître et se déclare vassal direct du Pape. En 1147, Lisbonne est conquise. Pendant des décennies, le Portugal paie un tribut annuel en or à l'Église, le Pape Alexandre III publie la bulle Manifestis Probatum en 1179 et Portugal devient un royaume indépendant. Ensuite, Alphonse III achève la conquête de l'Algarve et Lisbonne en position centrale devient la capitale à la place de Coimbra.
+ </p>
+          </div>
+        )
+      }
     ]
   },
 
@@ -3180,7 +3191,7 @@ Sous l'impulsion de Danton et de la Commune de Paris, une délégation se prése
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Le 17 janvier 1793, après des jours de débats, la décision tombe : la mort pour le roi, à une seule voix de majorité. Une voix, celle de son propre cousin, Philippe d’Orléans, dit Égalité, grand maître du Grand Orient de France. La Navarre entière avait voté la survie du roi. Louis XVI, dans sa dernière dignité, demande un appel au peuple, le droit pour la nation entière de confirmer ou d’infirmer la sentence. Il est refusé, la République décide pour le peuple. Le roi de Navarre est assassiné par les parisiens, Thomas-Marie Raby asperge la fouel de son sang (un rituel de sang ? détruire la souillure ? Une volonté de revenir à une époque sans Révélation). Après l’exécution de Louis XVI, la reine est enfermée au Temple avec ses deux enfants et Madame Élisabeth. En juillet 1793, les gardiens lui arrachent son fils, le dauphin Louis-Charles, âgé de huit ans. L’enfant est confié à un cordonnier, Simon, chargé de le « rééduquer » selon les principes républicains. Sous la contrainte, battu, affamé, isolé, le petit roi est forcé de signer un faux témoignage accusant sa mère de viol, avant d'être assassiné dans cette même cave par la République. Ce document, dicté par ses tortionnaires, servira à l’accusation lors du procès de la reine. Transférée à la Conciergerie, la prison la plus sombre de Paris (Marie-Antoinette y demeure 76 jours, sans voir la lumière du jour) . Son procès, tenu en octobre 1793, est un simulacre de justice : on l’y accuse de trahison, de complot contre la République et, comble de l’ignominie, du viol de son propre fils. L’accusation est d’autant plus abjecte que la loi sur le viol, venait d’être perverti par les républicains. Ayant tout perdu, son mari, ses enfants, sa couronne, la reine se tient droite jusqu’au bout. À l’insulte, elle répond par le silence et la dignité. Le 16 octobre, elle est condamnée à mort. Quelques heures plus tard, la veuve Capet monte à l’échafaud, pâle mais calme, ayant comme son mari, pardonné à ses juges.
+Le 17 janvier 1793, après des jours de débats, la décision tombe : la mort pour le roi, à une seule voix de majorité. Une voix, celle de son propre cousin, Philippe d’Orléans, dit Égalité, grand maître du Grand Orient de France. La Navarre entière avait voté la survie du roi. Louis XVI, dans sa dernière dignité, demande un appel au peuple, le droit pour la nation entière de confirmer ou d’infirmer la sentence. Il est refusé, la République décide pour le peuple. Le roi de Navarre est assassiné par les parisiens, Thomas-Marie Raby asperge la fouel de son sang (un rituel de sang ? détruire la souillure ? Une volonté de revenir à une époque sans Révélation). Après l’exécution de Louis XVI, la reine est enfermée au Temple avec ses deux enfants et Madame Élisabeth. En juillet 1793, les gardiens lui arrachent son fils, le dauphin Louis-Charles, âgé de huit ans. L’enfant est confié à un cordonnier, Simon, chargé de le « rééduquer » selon les principes républicains. Sous la contrainte, battu, affamé, isolé, le petit roi est forcé de signer un faux témoignage accusant sa mère de viol, avant d'être assassiné dans cette même cave par la République. Ce document, dicté par ses tortionnaires, servira à l’accusation lors du procès de la reine. Transférée à la Conciergerie, la prison la plus sombre de Paris (Marie-Antoinette y demeure 76 jours, sans voir la lumière du jour) . Son procès, tenu en octobre 1793, est un simulacre de justice : on l’y accuse de trahison, de complot contre la République et, comble de l’ignominie, du viol de son propre fils. L’accusation est d’autant plus abjecte que la loi sur le viol, venait d’être perverti par les républicains. Ayant tout perdu, son mari, ses enfants, sa couronne, la reine se tient droite jusqu’au bout. À l’insulte, elle répond par le silence et la dignité. Le 16 octobre, elle est condamnée à mort. Quelques heures plus tard, la veuve Capet monte à l’échafaud, pâle mais calme, ayant comme son mari, pardonné à ses juges.  
 </p>
           </div>
         )
