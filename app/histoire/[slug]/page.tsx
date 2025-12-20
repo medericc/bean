@@ -952,6 +952,18 @@ L'élément central de la société béarnaise n'est pas uniquement la classe so
           </div>
         )
       },
+ {
+        titre: "Alliance Portugal-Angleterre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la mort de Ferdinand Ier du Portugal en 1383, sa fille unique, Béatrice, est mariée au roi Jean Ier de Castille. Ce mariage sonne comme une annexion par la Castille. Jean, Grand Maître de l'Ordre d'Aviz (fils illégitime du roi Pierre Ier), est soutenu par la bourgeoisie et le génie militaire de Nuno Álvares Pereira. Et à Aljubarrota (1385), les Portugais (aidés par des archers anglais) écrasent l'armée castillane, et installe la maison d'Aviz sur le trône. En 1386, le traité de Windsor est signé il permet aux Anglais d'éviter que la Castille contrôle l’Atlantique ibérique.
+  </p>
+          </div>
+        )
+      },
+
+
     ]
   },
 
@@ -1914,6 +1926,16 @@ En 1494, Jean III d’Albret et Catherine arrivèrent à Pampelune dont les port
           </div>
         )
       },
+      {
+        titre: "L'Église en Arbitre de Paix",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Face à la rivalité entre l'Espagne (portée par Colomb en 1493) et le Portugal, le Vatican arbitre le premier partage global de l'histoire pour éviter la Guerre. A Tordesillas (1495), sous l'égide du pape Alexandre VI, un méridien est tracé dans l'Atlantique. Le Portugal obtient tout ce qui est à l'Est, l'Espagne tout ce qui est à l'Ouest. En faisant décaler la ligne de 100 à 370 lieues des Açores, le roi Jean II de Portugal sécurise le Brésil (découvert en 1500). La rivalité se déplace en Asie (Moluques, les "Îles aux Épices"). Au Traité de Saragosse, Charles Quint vend ses droits sur les Moluques au Portugal pour 350 000 ducats. Un "anti-méridien" est tracé : le Portugal garde le monopole des épices, tandis que l'Espagne conserve les Philippines. M'Angleterre protestante et la France (en gallicanisation) rejettent ce monopole papal. Ne pouvant bloquer les routes du Sud, les souverains (Élisabeth Ière, François Ier) délivrent des lettres de marque à des corsaires comme Jean Fleury ou Francis Drake pour piller les galions ibériques. Ils cherchent les passages du "Nord-Ouest" (Cartier au Canada) et du "Nord-Est". Ils s'installent là où l'Espagne est absente : Vallée du Saint-Laurent (Québec), côte Est américaine (13 colonies) et Antilles. Le sucre remplace alors les épices comme marchandise la plus précieuse, provoquant 150 ans de conflits pour des îles comme la Guadeloupe ou la Jamaïque.
+</p>
+          </div>
+        )
+      },
         {
         titre: "Devant le Parlement de Toulouse",
         contenu: (
@@ -2729,7 +2751,18 @@ Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le thé
  </p>
           </div>
         )
+      },
+        {
+        titre: "Le Portugal et l'Union Ibérique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sous le règne de Manuel Ier "le Fortuné", Vasco de Gama ouvre la route des Indes en 1498, le Brésil est découvert par Pedro Álvares Cabral en 1500, les richesses et l'architecture manuéline affluent à Lisbonne. Mais en 1578, Sébastien Ier disparaît lors de la bataille d'Alcácer Quibir au Maroc. Sans héritier, le trône passe à son grand-oncle, le cardinal Henri, qui meurt deux ans plus tard. Philippe II d'Espagne (fils d'Isabelle de Portugal) envahit le pays et se fait couronner roi du Portugal sous le nom de Philippe Ier (1580). C'est le début de l'Union Ibérique. Mais, l'Espagne, en guerre contre l'Angleterre et les Pays-Bas, n'aide pas le Portugal à défendre ses colonies. Donc sous Philippe IV, le 1er décembre, un groupe de conjurés s'empare du palais de Lisbonne et proclame le duc de Bragance comme souverain. Jean IV devient le premier roi de la Maison de Bragance. En 1668, par le traité de Lisbonne le Portugal est à nouveau un royaume totalement indépendant.
+ </p>
+          </div>
+        )
       }
+
 
 
      
