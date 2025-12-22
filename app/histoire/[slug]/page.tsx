@@ -2110,7 +2110,7 @@ En 1558, Jeanne d’Albret et Antoine de Bourbon n’assistent pas aux États g�
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Mourir sans baptême est une catastrophe absolue. Henri II et Catherine de Médicis (dix enfants après avoir eu beaucoup de mal à en avoir) veulent sauver ces âmes. L’édit d’Henri II de février 1556 déclare que si une femme, hors mariage, n’a pas déclaré sa grossesse et que l’enfant meurt sans avoir reçu le baptême, la loi considère d’office qu’il y a eu infanticide et que la femme sera donc condamnée à mort. L’orgueil (péché) devient moins important que la vie (et l’âme) de l’enfant : la société, dans son ensemble, doit empêcher qu’il soit supprimé. Cet édit ne sera aboli qu’à la Révolution française....
+Le Roi de France était considéré comme le "père du peuple" et avait pour mission de protéger ses sujets. Mourir sans baptême est une catastrophe absolue. Henri II et Catherine de Médicis (dix enfants après avoir eu beaucoup de mal à en avoir) veulent sauver ces âmes. L’édit d’Henri II de février 1556 déclare que si une femme, hors mariage, n’a pas déclaré sa grossesse et que l’enfant meurt sans avoir reçu le baptême, la loi considère d’office qu’il y a eu infanticide et que la femme sera donc condamnée à mort. L’orgueil (péché) devient moins important que la vie (et l’âme) de l’enfant : la société, dans son ensemble, doit empêcher qu’il soit supprimé. Cet édit ne sera aboli qu’à la Révolution française....
 </p>       </div>
         )
       },
