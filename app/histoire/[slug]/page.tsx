@@ -3196,6 +3196,18 @@ La Déclaration des droits de l’homme et du citoyen est signée le 26 août 17
           </div>
         )
       },
+       {
+        titre: "La Presse Républicaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jean-Paul Marat né à Neuchâtel dans une famille calviniste (son père ancien moine). À 16 ans, il quitte sa famille pour Bordeaux et il devient précepteur dans une riche famille de négociants et commence à étudier la médecine sérieusement. Puis il va à Paris et y passe quelques années à étudier en autodidacte puis il se dirige vers le centre de la liberté de pensée, Londres. Le 15 juillet 1774, Marat aurait été reçu au grade de maître à la loge "King's Head, Gerard Street" (Loge de la Paix et de la Bonne Union) à Londres. Le 30 juin 1775, il obtient son doctorat en médecine à l'Université de St Andrews, en Écosse (on n'obtient pas toujours ce diplôme par examen, mais sur recommandation de deux médecins certifiés et Marat avait d'excellents appuis dans le milieu). Ophtalmologue et médecin vénérien, Marat rentre en France en 1777, il décroche le poste de  Médecin des gardes du corps du Comte d'Artois (le frère du roi Louis XVI, futur Charles X). Marat veut devenir le plus grand physicien du monde mais l'Académie des Sciences, et notamment Lavoisier qui le considère comme un charlatan, rejette ses théories. Ensuite, il n'est plus médecin chez le Comte d'Artois, sa maladie de peau apparaît et il déteste l'élite qui l'a rejeté puis fonde en septembre 1789 son journal, "Le Publiciste Parisien", qui devient très vite "L'Ami du Peuple".
+</p>
+          </div>
+        )
+      }
+
+,
         {
         titre: "La Presse Républicaine",
         contenu: (
