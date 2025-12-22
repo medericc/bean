@@ -3197,7 +3197,7 @@ La Déclaration des droits de l’homme et du citoyen est signée le 26 août 17
         )
       },
        {
-        titre: "La Presse Républicaine",
+        titre: "Jean-Paul Marat",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
