@@ -2042,7 +2042,7 @@ L'affaire Reuchlin-Pfefferkorn du Talmud a initialement cristallisé les positio
 
 
   {
-        titre: "Entre foi nouvelle et liberté du Béarn",
+        titre: "Entre Foi et Liberté du Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2058,7 +2058,7 @@ Au début du XVIᵉ siècle, un profond mouvement de réforme morale et spiritue
 
       
   {
-        titre: "Jeanne d’Albret, l’enfance d’une reine",
+        titre: "Jeanne d’Albret, L’Enfance d’une Reine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2068,7 +2068,7 @@ Jeanne d’Albret naquit en novembre 1528 à Saint-Germain-en-Laye, fille de Mar
       },
 
        {
-        titre: "la France Promet de Protéger L’enfant à Naître",
+        titre: "La France Promet de Protéger L’Enfant à Naître",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2077,7 +2077,7 @@ En 1548, Jeanne d’Albret épouse à Moulins Antoine de Bourbon, qu’elle avai
         )
       },
   {
-        titre: "la France Promet de Protéger L’enfant à Naître",
+        titre: "La France Promet de Protéger L’Enfant à Naître",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2088,7 +2088,7 @@ En 1548, Jeanne d’Albret épouse à Moulins Antoine de Bourbon, qu’elle avai
 
 
        {
-        titre: "Jeanne d’Albret, l’enfance d’une reine",
+        titre: "Jeanne d’Albret, L’Enfance d’une Reine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2097,7 +2097,7 @@ Jeanne d’Albret naquit en novembre 1528 à Saint-Germain-en-Laye, fille de Mar
         )
       },
        {
-        titre: "La conversion de Jeanne d’Albret",
+        titre: "La Conversion de Jeanne d’Albret",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2105,9 +2105,17 @@ En 1558, Jeanne d’Albret et Antoine de Bourbon n’assistent pas aux États g�
 </p>       </div>
         )
       },
-
+{
+        titre: "Le Baptême de l'Enfant à Naître",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Mourir sans baptême est une catastrophe absolue. Henri II et Catherine de Médicis (dix enfants après avoir eu beaucoup de mal à en avoir) veulent sauver ces âmes. L’édit d’Henri II de février 1556 déclare que si une femme, hors mariage, n’a pas déclaré sa grossesse et que l’enfant meurt sans avoir reçu le baptême, la loi considère d’office qu’il y a eu infanticide et que la femme sera donc condamnée à mort. L’orgueil (péché) devient moins important que la vie (et l’âme) de l’enfant : la société, dans son ensemble, doit empêcher qu’il soit supprimé. Cet édit ne sera aboli qu’à la Révolution française....
+</p>       </div>
+        )
+      },
        {
-        titre: "La conjuration d'Ambroise",
+        titre: "La Conjuration d'Ambroise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -2116,7 +2124,7 @@ Au retour de Roncevaux en 1559, Antoine se déclare prêt à aider l’Espagne �
         )
       },
        {
-        titre: "Jeanne d’Albret, la réformatrice du Béarn",
+        titre: "Jeanne d’Albret, la Réformatrice du Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
