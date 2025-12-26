@@ -3000,7 +3000,23 @@ Joachim Martinez de Pasqually de l'Ordre des Chevaliers Maçons Élus Coëns de 
           </div>
         )
       },
-    {
+ 
+     
+
+
+
+
+    ]
+  },
+ 'revolution': {
+    titre: "Vers la Révolution",
+    periode: "Renaissance",
+    resume: "Le Royaume de France est chamboulé",
+    introduction: "Jusqu'à la convocation des États généraux en 1789...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+         {
         titre: "La Franc-Maçonnerie Auscitaines",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
@@ -3055,7 +3071,7 @@ Au XVIIIᵉ siècle, Tarbes connaît une forte expansion : sa population triple,
       },
     
        {
-        titre: "L'Instruction Béarnaise'",
+        titre: "L'Instruction Béarnaise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -3063,27 +3079,7 @@ Aux XVIIᵉ et XVIIIᵉ siècles, Paris ne fonctionne pas comme une « usine à 
  </p>
           </div>
         )
-      }
-
-
-
-
-     
-
-
-
-
-    ]
-  },
-
- 'revolution': {
-    titre: "Vers la Terreur",
-    periode: "Renaissance",
-    resume: "Le Royaume de France est chamboulé",
-    introduction: "Jusqu'à la convocation des États généraux en 1789...",
-    image: "/images/histoire/antiquite.jpg",
-    sections: [
-
+      },
        {
         titre: "Jacob Frank",
         contenu: (
@@ -3186,7 +3182,25 @@ Dès les années 1760, plusieurs communautés juives participent activement au m
   </p>
           </div>
         )
-      },
+      }
+
+
+
+
+
+
+    ]
+  },
+
+ 'la-republique': {
+    titre: "Le Béarn sous la Terreur",
+    periode: "Époque Moderne",
+    resume: "Les Sacrilèges s'abattent sur la France",
+    introduction: "Jusqu'à la mort de Maximilien de Robespierre...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+      
  {
         titre: "La Continuité des Réseaux",
         contenu: (
@@ -3278,23 +3292,7 @@ Grâce à des lettres patentes, les juifs séfarades de Bayonne avaient eu le dr
 </p>
           </div>
         )
-      }
-
-
-    ]
-  },
-
-
-  
-   'terreur': {
-    titre: "Le Béarn sous la Terreur",
-    periode: "Époque Moderne",
-    resume: "L'entrée de la France dans l'obscurantisme",
-    introduction: "Des Peuplicides se mettent en place au nom de la tolérance",
-    image: "/images/histoire/antiquite.jpg",
-    sections: [
-
-
+      },
 
        {
         titre: "Manon Rolland",
@@ -3367,6 +3365,23 @@ Marie-Anne-Charlotte de Corday d’Armont, arrière-arrière-arrière-petite-fil
           </div>
         )
       },
+
+
+    ]
+  },
+
+
+  
+   'terreur': {
+    titre: "Le Monde sous la Terreur",
+    periode: "Époque Moderne",
+    resume: "L'Entrée du Monde dans l'Obscurantisme",
+    introduction: "Des Peuplicides se mettent en place au nom de la tolérance",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+
        {
         titre: "La Machine Sociale de la République",
         contenu: (

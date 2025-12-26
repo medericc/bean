@@ -169,6 +169,13 @@ const periodes: Periode[] = [
   {
     annee: "XVIIIe siècle", 
     titre: "Le Béarn sous la Terreur",
+    description: "Jusqu'à l'Assassinat de Maximilien de Robespierre...",
+    slug: 'la-republique',
+  }
+   ,
+  {
+    annee: "XIXe-XXe siècle", 
+    titre: "L'Entrée du Monde dans l'Obscurantisme",
     description: "Des Peuplicides se mettent en place au nom de la Tolérance",
     slug: 'terreur',
   }
