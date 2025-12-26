@@ -175,7 +175,7 @@ const periodes: Periode[] = [
    ,
   {
     annee: "XIXe-XXe siècle", 
-    titre: "L'Entrée du Monde dans l'Obscurantisme",
+    titre: "Le Monde dans l'Obscurantisme",
     description: "Des Peuplicides se mettent en place au nom de la Tolérance",
     slug: 'terreur',
   }
