@@ -3419,7 +3419,7 @@ En pleine première guerre mondiale (1756-1763), dans une lettre à d’Alembert
       }
 ,
 {
-        titre: "L'Instruction Mondiale'",
+        titre: "L'Instruction Mondiale",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
