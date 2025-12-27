@@ -3477,6 +3477,16 @@ En 1917, en plein milieu de la Deuxième Guerre mondiale, trois petits bergers v
       }
 ,
 {
+        titre: "Le Génocide de L'Holodomor",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Inspirés par l’idéologie de Karl Marx (juif protestant puis athée), les bolcheviks s’emparent du pouvoir après la révolution d’Octobre. Lénine, de retour d'exil dans son célèbre wagon plombé, est accueilli à la gare de Petrograd au son de La Marseillaise (hymne des révolutionnaires russes). Il prend la direction du pays au sein du Politburo, un noyau restreint de dirigeants comprenant notamment en 1921, Staline ou encore Trotski, Kamenev, Zinoviev (juifs). À sa mort en 1924, son corps est placé dans un mausolée sur la place Rouge, dont l'architecture de pierre s'inspire de formes antiques comme l'autel de Pergame (dédié à Zeus). Ensuite, l'Ukraine, surnommée le grenier à blé de l'URSS, occupait une place centrale dans l'approvisionnement en céréales. Avec la collectivisation, les terres furent regroupées dans des fermes d'État, provoquant résistance et répression. Malgré la baisse des récoltes, le pouvoir soviétique imposa des quotas impossibles à atteindre et confisqua jusqu'aux semences et réserves des paysans, allant même jusqu'à des déportations dans les goulags. Cette politique, doublée d'une volonté de briser toute autonomie ukrainienne, plongea en 1932 des millions de foyers dans la famine. Chargé de superviser les quotas en Ukraine, le juif Lazar Kaganovitch se montre inflexible face aux paysans. Il s'assure que les rapports envoyés à Staline donnent l'illusion que les objectifs peuvent être atteints alors qu'ils sont irréalisables. Staline accuse donc les paysans ukrainiens d'être des saboteurs et des ennemis de classe, ce qui conduit à un renforcement de la répression. La loi du 7 août 1932, dite loi des épis, punit de mort le simple fait de ramasser quelques épis dans un champ collectif. Des villages entiers sont placés sur des listes noires, privés de commerce et d'approvisionnement. La famine provoque des cadavres dans les rues, des maisons abandonnées et même du cannibalisme. Les frontières internes de l'Ukraine sont fermées pour empêcher la population de fuir tandis que les élites intellectuelles, culturelles et religieuses sont massivement arrêtées et réprimées. À partir de l'été 1933, la nouvelle récolte met fin au pic de mortalité. Elle aurait causé 7 millions de morts en quelques mois.
+  </p>   </div>
+        )
+      }
+,
+{
         titre: "La Franc-Maçonnerie Espagnole",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
