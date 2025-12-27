@@ -3383,7 +3383,7 @@ Marie-Anne-Charlotte de Corday d’Armont, arrière-arrière-arrière-petite-fil
 
 
        {
-        titre: "La Machine Sociale de la République",
+        titre: "Le Génocide Vendéen",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
