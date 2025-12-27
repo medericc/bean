@@ -3434,6 +3434,26 @@ En pleine première guerre mondiale (1756-1763), dans une lettre à d’Alembert
       }
 ,
 {
+        titre: "La Semaine Sanglante",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au balcon de l'Hôtel de Ville, Jules Favre (protestant franc-maçon), Adolphe Crémieux (juif franc-maçon) et Léon Gambetta (franc-maçon) proclament la troisième république. Alors que Paris est assiégé par les Prussiens, Jules Ferry occupe la fonction de maire de la capitale du 15 novembre 1870 au 18 mars 1871. Une rupture profonde s'installe entre le peuple parisien armé au sein de la Garde nationale et le gouvernement d'Adolphe Thiers, replié à Versailles. Le 18 mars 1871, Paris se soulève et proclame la Commune, une expérience de démocratie directe de 72 jours qui devient un véritable laboratoire social et décrète la séparation de l'Église et de l'État, la suppression du budget des cultes et l'éducation laïque, tout en instaurant des mesures ouvrières radicales comme l'interdiction du travail de nuit dans les boulangeries, la création de coopératives dans les ateliers abandonnés et le mandat impératif pour les élus. Sous l'impulsion de figures comme Louise Michel (bâtarde, anticléricale radicale et anarchiste) ou Elisabeth Dmitrieff (envoyée par Karl Marx), il est revendiqué l'égalité salariale et le droit au divorce. Cette confrontation culmine lors de la Semaine sanglante faisant entre 10 000 et 30 000 morts côté insurgés contre environ 900 côté Versaillais, suivis de 40 000 arrestations et de déportations massives vers la Nouvelle-Calédonie. Bienheureux Henri Planchat ou encore Monseigneur Georges Darboy sont fusillés.
+</p>        </div>
+        )
+      }
+,
+{
+        titre: "Adolphe Crémieux",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Adolphe Crémieux juif et franc-maçon militant pour l'éducation laïque qui oriente l'action politique des loges vers une lutte révolutionnaire pour une République "démocratique et sociale". Avocat, il sauve trois femmes ayant empoisonné leurs maris (produits achetés chez le spirite "Joye"), en plaidant la misère et l'impulsivité sans préméditation. Dans le Sud-Est d'où il vient, l'endogamie juive de la fin du XIXe siècle bat son plein pour préserver le patrimoine économique, 86 % des mariages (en opposé à la politique qui sera mise en place par la République..). Ces mariages croisés (les Valabrègue d’Avignon s'allient même aux puissants Rothschild), il se forme un "clan" où le pouvoir est donc détenu par le réseau plutôt que par des individus isolés. Ce maillage permet d'occuper des sièges importants aux niveaux économique (soie), social (le dramaturge à succès Albin Valabrègue) et politique, avec des maires comme Salomon Bédarrides (franc-maçon et frère du premier maire d’Aix, homonyme du banquier du XIVe siècle) ou ensuite Benjamin Abram (avocat juif franc-maçon, maire d'Aix sous l’affaire Dreyfus). Ce système de "poussée" sociale par le "clan" ouvre l'accès à de prestigieux postes parisiens (Conseil d'État, Ministères). La franc-maçonnerie a ainsi servi de vecteur d'ascension aux juifs provençaux, bien qu'après leur intégration sociale, la plupart aient abandonné loges et judaïsme (David Mossé, franc-maçon et... frère du rabbin Benjamin Mossé). Ensuite, sous l'influence de Jules Ferry (initié à la loge La Clémente Amitié en 1875 comme Rambaud, son chef de cabinet), de figures comme Macé, Catois ou Steeg (tous maçons et anticatholiques) et après que le Grand Orient de France (GODF) devient athée en 1877. Ce climat est alimenté par les « tenues blanches » et les convents sur ces sujets (comme en 1896), mais aussi par l'affaire de Panama (Reinach, chef de cabinet de Gambetta et défenseur de Dreyfus, brûle des papiers dans la cheminée suite à la mort du banquier juif Jacques Reinach) ou l'affaire des fiches (e ministère de la Guerre, soutenu par le GODF, écarte des promotions les officiers allant à la messe. Y est impliqué, entre autres, Pelletan (franc-maçon héréditaire et ministre de la Marine). Les religieuses et prêtres seront interdit d'enseignement, des religieuses comme Sainte Léonie Aviat sont chassées. Sous la direction d'Émile Combes (Parti Radical, franc-maçon), on aboutit au dogme d'Aristide Briand (franc-maçon) sur la laïcité. La loi de 1905 est finalement faite voter par Maurice Rouvier (franc-maçon), avec le soutien d'Alexandre Zévaès (député socialiste et maçon). À ce sujet, le 1er juillet 1904, Zévaès répondait au marquis de Rosanbo : « C’est le plus grand éloge que vous puissiez en faire », une position dont se vantait également François Henry Jumel de la loge Les Zélés Philanthropes du GODF. Il s'en suivra, le temple du bicentenaire, orné de symboles anticatholiques, construit par Chirac après le suicide/meurtre de son rival Boulin (ancien prochde de Pierre Simon) qui rappelle l'affaire Marleix/Denécé du citoyen Macron.
+</p>        </div>
+        )
+      }
+,
+{
         titre: "L'Instruction Mondiale",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
