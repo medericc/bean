@@ -175,9 +175,15 @@ const periodes: Periode[] = [
    ,
   {
     annee: "XIXe-XXe siècle", 
-    titre: "Le Monde dans l'Obscurantisme",
+    titre: "Le Monde sous la Terreur",
     description: "Des peuplicides se mettent en place au nom de la tolérance",
     slug: 'terreur',
+  },
+  {
+    annee: "XXe siècle", 
+    titre: "Le Monde dans l'Obscurantisme",
+    description: "Une dynamique d'unification mondiale s'installe...",
+    slug: 'moderne',
   }
 ];
 
