@@ -3558,6 +3558,17 @@ Le véritable architecte du dispositif anti-vie et donc anti-baptême (technique
 </p>        </div>
         )
       }
+,
+
+ {
+        titre: "Le Génocide Rwandais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+François de Grossouvre est un acteur central et discret de l’entourage et de l’ascension de François Mitterrand. Leur alliance scellée en 1959 permet à un Mitterrand alors discrédité de reconquérir le pouvoir grâce aux réseaux et aux financements de Grossouvre (issus notamment de la concession Coca-Cola). Pendant trente ans, Grossouvre (franc-maçon) gère tout ce qui ne doit pas apparaître au grand jour : missions sensibles, de diplomatie parallèle, de sécurité personnelle, de logistique privée et même de nombreux secrets privés. Cependant, Au Rwanda, pays à 90 % chrétien, la Belgique a d'abord créé une élite Tutsi en instaurant des cartes d'identité ethniques, avant de renverser son alliance au profit des Hutu en 1959, installant une République qui a progressivement exclu les Tutsi de la société. Dès 1981, lors des apparitions de Kibeho, la Vierge Marie avait prévenu d’un futur « fleuve de sang » et de scènes de décapitations si les cœurs ne changeaient pas, mais ces avertissements prophétiques furent ignorés. Le basculement survient le 6 avril 1994 lorsque l’avion du président Habyarimana est abattu. Dans le même temps, Grossouvre en conflit avec le fils du Président sur les réseaux africains (il aurait été témoin des dérives de la Françafrique, proche de la GLNF, et du rôle de la France dans le meurtre d’Habyarimana), refuse de rendre ses archives et est écarté par le "clan" Mitterrand (les socialistes). Il meurt en avril 1994 dans son bureau de l'Élysée (officiellement suicide). Tandis que la France lance l’Opération Amaryllis pour évacuer les expatriés et les proches du régime, tout en abandonnant cruellement son personnel Tutsi à une mort certaine, les milices Interahamwe et la Garde présidentielle lancent le génocide. Ils éliminent d'abord l'opposition Hutu modérée, dont la Première ministre Agathe Uwilingiyimana, ce qui entraîne le retrait des troupes de l'ONU après le meurtre de dix Casques bleus belges. Pendant 100 jours, le pays devient un abattoir à ciel ouvert. La Radio RTLM déshumanise les Tutsi en les traitant de « cafards » et incite les civils à tuer. Le bilan atteint un million de morts et ne s'arrête que le 4 juillet 1994 grâce à la victoire militaire du FPR de Paul Kagame, provoquant la fuite massive des génocidaires et de millions de Hutu vers le Zaïre dans un chaos humanitaire total.
+</p>        </div>
+        )
+      }
 
      
      
