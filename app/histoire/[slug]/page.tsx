@@ -3511,8 +3511,26 @@ En 1917, en plein milieu de la Deuxième Guerre mondiale, trois petits bergers v
     introduction: "Une dynamique d'unification mondiale s'installe",
     image: "/images/histoire/antiquite.jpg",
     sections: [
-
-
+{
+        titre: "L'Église Mormone",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le père de Joseph Smith et son frère Hyrum étaient francs-maçons à Canandaigua lorsque Joseph fonde l'Église mormonne à Fayette le 6 avril 1830, avant de l'installer en 1839 à Nauvoo, en Illinois, où ils bâtissent une ville immense s'apparentant à un véritable État dans l'État. C'est dans ce contexte qu'en mars 1842, Joseph Smith est lui-même initié à la franc-maçonnerie à Nauvoo, recevant les trois premiers grades d'Apprenti, de Compagnon et de Maître en seulement deux jours « à vue » par le Grand Maître de l'Illinois, Abraham Jonas, qui convoitait alors les votes mormons et était proche d'Abraham Lincoln. Face aux persécutions, Smith voyait dans l'alliance avec ce réseau maçonnique influent chez les politiciens et les juges une protection juridique et physique indispensable, l'obligeant à s'intégrer aux réseaux de pouvoir pour diriger Nauvoo. Ainsi, juste après son initiation, il introduit les rituels secrets du Temple mormon, comme la cérémonie de l'Entérinement; inspirés des rites maçonniques qu'il vient de découvrir, tout en expliquant que la maçonnerie n'était qu'une version corrompue d'un sacerdoce ancien qu'il « restaurait » en version pure via ses révélations. À cette époque, presque tous les hauts dirigeants mormons, tels que Brigham Young, Heber C. Kimball ou James Adams, juge et grand maître adjoint de la loge de Springfield, étaient maçons, faisant de la loge de Nauvoo la plus importante de l'État sous l'impulsion du maire John C. Bennett, médecin et franc-maçon ayant fait passer la Charte de la ville au Parlement, ce qui provoqua des tensions avec les maçons non-mormons craignant leur poids politique. Ne se limitant pas à la religion, Joseph Smith côtoyait l'élite américaine pour instaurer un « Royaume de Dieu » sur terre, il côtoie le sénateur Stephen A. Douglas, rival de Lincoln, et de l'avocat Thomas L. Kane, fils d'un juge fédéral influent et protecteur secret des mormons à Washington, tout en créant le Conseil des Cinquante, une élite théocratique composée de dirigeants de l'église et de non-mormons influents.
+ </p>   </div>
+        )
+      }
+,
+{
+        titre: "Les Témoins de Jéhovah",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la fin du XIXe siècle, une partie de l'élite britannique, souvent issue du protestantisme évangélique, est convaincue que le retour des Juifs en Palestine est une condition nécessaire pour provoquer le retour de Jésus. Ce mouvement, le Sionisme chrétien, est porté par des figures politiques majeures comme Lord Shaftesbury, Arthur Balfour (The Souls) et Lloyd George (franc-maçon). Au-delà de l'aspect religieux, ces dirigeants de l'Empire britannique y voient un intérêt hautement stratégique : le contrôle de la Palestine est crucial pour sécuriser la route vers l'Inde via le canal de Suez. Dès 1882, le Baron Edmond de Rothschild commence d'ailleurs à racheter des terres dans la région. Parallèlement, des structures d'influence se mettent en place pour modeler l'opinion publique et promouvoir une hégémonie culturelle anglo-saxonne, Cecil Rhodes (franc-maçon) exprime dans son « Testament » la volonté de placer le monde sous domination britannique. De cette vision naît la Round Table, un cercle puissant influençant la réflexion géopolitique anglo-américaine. Dans ce cadre, Charles Taze Russell apparaît comme un vecteur de communication exceptionnel. Grâce à son immense réseau de « colporteurs » (distributeurs de livres), il diffuse gratuitement et massivement l’idée que le sort du monde se joue en Palestine. Russell utilise ses publications (traduites en des dizaines de langues) pour soutenir le retour des juifs. La logistique de Russell est inédite pour l'époque. En 1914, il crée le « Photo-Drame de la Création », un film pionnier avec son et couleur. Russell enseigne dans ses Ét1udes des Écritures que le rétablissement d'Israël est une prophétie littérale. Il fixe l'année 1914 comme la fin du « Temps des Gentils », date qui coïncide effectivement avec le déclenchement d'une guerre mondiale et en 1917, lors de la publication de la Déclaration Balfour (signée par Arthur Balfour dans le gouvernement de David Lloyd George et adressée à Lionel Walter Rothschild), le lien est total. Nonobstant, en 1932, son successeur, le juge Joseph Franklin Rutherford, déclare que les prophéties concernant Israël ne concernent plus le peuple juif littéral et est réinterprété de façon symbolique pour désigner uniquement l'« Israël spirituel », composé des 144 000 membres oints des Témoins de Jéhovah. 
+  </p>   </div>
+        )
+      }
+,
 {
         titre: "Le Génocide Arménien",
         contenu: (
