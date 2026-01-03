@@ -3534,8 +3534,8 @@ En 1917, en plein milieu de la Deuxième Guerre mondiale, trois petits bergers v
   },
 
 
-  'moderne': {
-    titre: "Le Monde Moderne",
+  'technologique': {
+    titre: "Antiquité Technologique",
     periode: "Époque Moderne",
     resume: "Le Monde Plongé dans l'Obscurantisme",
     introduction: "Une dynamique d'unification mondiale s'installe",

@@ -181,9 +181,9 @@ const periodes: Periode[] = [
   },
   {
     annee: "XXe siècle", 
-    titre: "Le Monde dans l'Obscurantisme",
+    titre: "Antiquité Technologique",
     description: "Une dynamique d'unification mondiale s'installe...",
-    slug: 'moderne',
+    slug: 'technologique',
   }
 ];
 
