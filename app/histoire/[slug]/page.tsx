@@ -2370,7 +2370,7 @@ Le 6 janvier 1570, Charles IX confia à Charles de Luxe la charge de lieutenant 
 
 
        {
-        titre: "La Vertu, Clé de la Liberté du Béarn",
+        titre: "La Vertu, Clé de la Liberté du Béarnais",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
