@@ -1340,7 +1340,16 @@ Le 5 décembre 1362, Gaston Fébus, comte de Foix, remporta une victoire décisi
     image: "/images/histoire/antiquite.jpg",
     sections: [
 
-
+ {
+        titre: "L'Équité sous la Vigne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Pour affirmer son rôle de protecteur, Gaston Fébus rendait justice en plein air, sous le préau de sa vigne au château de Moncade, affirmant juger « le pauvre comme le riche ». Sa justice était un outil de stabilité sociale, mais aussi un moyen de rappeler que sa volonté primait sur toute autre institution. Fébus n'hésitait pas à casser des décisions locales pour protéger ses sujets ou affirmer son pouvoir, Il annula la nomination d'un tailleur au poste de jurat car l'élection s'était faite contre sa volonté, il éprimanda sévèrement le bailli d'Oloron qui tentait d'interdire aux habitants l'usage de leurs propres four, face à une mère de famille chargée de six enfants dont les biens étaient hypothéqués (mort de son mari), il ordonna la suspension immédiate de la vente pour éviter la ruine de la famille. De plus, Lorsqu'un marchand d'Orthez fut dépouillé de sa cargaison par des commerçants du Languedoc, Fébus appliqua la loi du talion économique : il fit saisir des marchandises provenant du Languedoc pour compenser la perte de son sujet. L'un des jugements les plus célèbres concerne une femme « chef de maison » (épouse d'un cadet ayant pris le nom de sa femme) coupable d'adultère avec le baron d'Arros. Alors que ce crime était passible de mort dans une grande partie de l'Europe, Fébus préféra une solution pragmatique : Gaston demanda au mari de reprendre son épouse et le mari accepta, le baron d'Arros fut donc condamné à une lourde amende et la femme, quant à elle, dut verser le double de sa dot à son mari à titre de réparation.
+   </p>
+          </div>
+        )
+      },
  {
         titre: "La Répudiation d'Agnès",
         contenu: (
@@ -1773,7 +1782,28 @@ Dès 1381, Constance, une veuve quadragénaire résidant à Rabastens-sur-Tarn, 
         )
       },
 
+{
+        titre: "La Bataille d'Aljubarrota",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la mort de Ferdinand Ier du Portugal, une crise de succession éclate : Jean Ier de Castille, allié de Fébus, revendique le trône, tandis que les Portugais soutiennent Jean d’Aviz. Malgré ses liens avec la Castille, Gaston Fébus refuse d'intervenir, sachant que le duc de Lancastre (Anglais) soutient le camp portugais. Pourtant, au mépris de ses ordres, de nombreux chevaliers béarnais décident de partir au combat. Fébus les avertit solennellement qu'ils ne reviendront pas. Sa prophétie se réalise le 14 août 1385 lors de la bataille d'Aljubarrota : placés en première ligne, 300 Béarnais sont massacrés. La célèbre abbaye de Batalha sera d'ailleurs édifiée pour commémorer cette victoire portugaise. Accablé, Fébus s'enferme pendant trois jours avant de confier à son frère, Arnaud Guilhem de Morlanne : « Jamais le pays de Béarn n’a perdu autant d’hommes en un jour, alors que je les avais prévenus ». Le conflit s' déplace vers la Galice, que le duc de Lancastre convoite désormais. Pour contrer les Anglais, Charles VI envoie une armée commandée par le duc de Bourbon. Maître des passages pyrénéens, Fébus impose ses conditions : il indique que la Soule est sous sa protection, interdisant tout pillage sur ses terres. De plus, Fébus profite de la présence de cette armée royale pour régler ses propres comptes de manière magistrale, le duc de Bourbon cherchait un lieu où frapper, Fébus lui désigne Brassempouy, où s'est retranché Perrot le Béarnais, un routier pro-anglais et ennemi personnel du comte. Le duc rase le château. Ensuite, au retour de l'expédition, Fébus suggère au duc de laisser ses troupes se « défouler » sur les terres de l’évêque de Lectoure, situées en dans le comté d’Armagnac.
 
+    </p>
+          </div>
+        )
+      },
+      {
+        titre: "Le Génie Financier de Fébus",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1385, Gaston Fébus fait recenser précisément les foyers du Béarn et impose une taxe de 2 francs par an et par feu. Sur les 12 500 feux répertoriés, il tire ainsi une recette annuelle de 25 000 francs. Pour garantir le paiement, il instaure une solidarité villageoise : les plus riches doivent compenser les défaillances des plus pauvres afin que le village atteigne toujours son quota. Contrairement aux autres du royaume, Fébus refuse d'instaurer la gabelle (taxe sur le sel), car elle ruinerait l'économie vitale des salines de Salies. À la place, il multiplie les sources de revenus intelligentes comme la taxe de transit (des péages sont installés, notamment sur le pont d’Orthez), l'impôt sur la croissance (prélèvant 4 % sur l'accroissement de fortune des bourgeois, estimant que leur enrichissement découle directement de sa politique de stabilité), l'usure institutionnalisée (bravant l'interdiction chrétienne, il autorise et pratique l'usure avec des taux montant jusqu'à 43 %., lui permettant de saisir les biens des nobles incapables de rembourser leurs dettes) ou encore le rachat des corvées (les sujets peuvent payer une taxe pour être exemptés de travaux publics (ponts, bâtiments)). Fébus transforme sa puissance militaire en produit financier, louant par exemple ses services à la Soule pour 4 000 francs. Ce trésor de guerre lui permet d'acheter la loyauté de seigneurs alliés. Pour gouverner, il ne se fie pas uniquement à la haute noblesse. Il promeut des hommes issus de la bourgeoisie, comme Bernard de Luntz, ou récompense des serviteurs comme Pierre de Latapie en lui offrant des terres, l'élevant ainsi au rang de noble. Son autorité est telle qu'à Navarrenx, les jurats en retard d'impôts allaient d'eux-mêmes se constituer prisonniers à Orthez. Enfin, pour être le seul maître à bord, Fébus paralyse les assemblées d’États. S'il maintient la Cour Major et les communautés locales, il réduit leur rôle à une simple fonction consultative. En privant ses sujets de tout pouvoir de décision, il s'assure d'exercer une souveraineté absolue et sans partage sur ses terres.
+
+    </p>
+          </div>
+        )
+      },
       {
         titre: "Fébus et les Marmousets",
         contenu: (
@@ -1901,6 +1931,17 @@ La mort soudaine de Gaston Fébus provoqua une crise immédiate en Béarn. Des r
             <p>
     Après la folie de Charles VI (août 1392), le Béarn resta stable sous une « monarchie contractuelle ». Reconnu vicomte en 1393, Mathieu laissa le pouvoir aux États et partit combattre avec les Génois. Yvain mourut à Paris au Bal des Ardents (28 janvier 1393) et Gratien participa à l’expédition de Tunis. À son retour en 1395, Mathieu dut jurer fidélité aux Fors. Un accord final en 1396 régla la rente d'Agnès de Navarre. Mathieu mourut sans héritier après avoir perdu ses terres catalanes. La succession revint à sa sœur Isabelle de Castelbon et son époux Archambaud de Grailly (allié anglais). Acceptés par les États en 1398 sous un serment strict, ils durent négocier avec la France. L’accord de Tarbes (10 mai 1399) fut un compromis : Archambaud prêta hommage pour Foix et Nébouzan, mais non pour le Béarn, dont la souveraineté de fait fut reconnue. Dès août 1399, la chancellerie béarnaise utilisa les termes « sobiraa » (souveraineté). Archambaud, affirmant « ne reconnaître aucun souverain si ce n’est Dieu », poursuivit la politique de Fébus mais se heurta aux Palois et Ossalois, défendus par les États ; la chancellerie le nommait « señor ». À sa mort (1412), Isabelle gouverna avec son fils Jean Iᵉʳ (jusqu’en 1428). Jean Iᵉʳ, vassal en Foix mais souverain en Béarn, prêta hommage à la France (1406), épousa Jeanne de Navarre puis Jeanne d’Albret (1422), et navigua entre les partis avant de rallier Charles VII. Henri V tenta en vain de falsifier d’anciens hommages, et le Traité de Troyes (1420) ignora le Béarn. Sous surveillance des États, Jean Ier signa des traités de neutralité (Bordeaux 1425, Montaner 1431) et étendit son territoire (Castelbon 1412, Bigorre 1425). Il mourut en 1436, ayant maintenu l'équilibre et la prospérité du Béarn.
        </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Tradition Béarnaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Dans les campagnes béarnaises, l'ordre social repose sur une règle absolue : le premier-né, qu'il soit garçon ou fille, hérite de l'intégralité du patrimoine. Ce système garantit l'unité de la « maison » et évite le morcellement des terres. Le cas de Mariette de Suberbielle illustre parfaitement ce droit d'aînesse intégral. En tant que premier enfant, elle devient la Daune (la patronne) de la maison Suberbielle, propriétaire légale de tous les biens familiaux. Lorsqu'elle épouse Arnautuc, un cadet (ne possédant donc rien) issu de la ferme Cami, Arnautuc perd son nom d'origine pour celui de sa femme (la maison) et devient « Arnaud aperat de Soberbiele » (Arnaud dit de Suberbielle). Même après le mariage, Arnautuc ne dirige rien. C’est Mariette qui gère seule la propriété et prend les décisions financières. Les nobles et les bourgeois doivent respecter cette hiérarchie, garante de l’ordre social, reposant sur une égalité de principe dans les règles et sur des statuts distincts assurant la vie en société. Le chroniqueur Froissart, frappé par cette organisation, affirmera d'ailleurs que sous la protection de Fébus, le peuple vit dans une telle liberté et une telle harmonie que le Béarn ressemble à un véritable « paradis sur terre ».
+      </p>
           </div>
         )
       },
