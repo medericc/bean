@@ -1,0 +1,3975 @@
+// app/histoire/[slug]/page.tsx
+export const dynamic = "force-dynamic";
+
+import { notFound } from "next/navigation";
+import ExpandableSection from "./ExpandableSection";
+import type { Metadata } from "next";
+
+export async function generateMetadata(
+  props: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const data = histoireData[slug as keyof typeof histoireData];
+
+  if (!data) {
+    return {
+      title: "Page non trouvée – Mémoire du Béarn",
+    };
+  }
+
+  return {
+    title: `${data.titre} – ${data.periode} | Mémoire du Béarn`,
+  };
+}
+
+const histoireData = {
+  // 'antiquite': {
+  //   titre: "Peuple des Venarni",
+  //   periode: "Antiquité",
+  //   resume: "Les premières traces de peuplement dans les Pyrénées béarnaises.",
+  //   introduction: "Le Béarn antique voit naître les premières communautés organisées...",
+  //   image: "/images/histoire/antiquite.jpg",
+  //   sections: [
+  //     {
+  //       titre: "Conquête du Béarn",
+  //       contenu: (
+  //         <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+  //           <p>
+  //             Les populations protohistoriques vivaient de chasse, d’élevage et de commerce
+  //             trans-pyrénéen. Leur culture se rattache aux peuples aquitains.
+  //           </p>
+  //         </div>
+  //       )
+  //     },
+  //     {
+  //       titre: "Arrivée des Vicomtes",
+  //       contenu: (
+  //         <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+  //           <p>
+  //             Le territoire était structuré autour de clans, avec des échanges avec la
+  //             Gascogne et la Navarre.
+  //           </p>
+  //         </div>
+  //       )
+  //     },
+  //   ]
+  // },
+    'centulle': {
+    titre: "Formation du Béarn", 
+    periode: "Temps Féodaux",
+    resume: "Le Béarn naît d’une autonomie ancienne, forgée entre foi et féodalité",
+    introduction: "Aux origines du Béarn, une autonomie singulière…",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      {
+        titre: "Béarn – Préhistoire et Origines",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Le Béarn reposait historiquement sur deux diocèses : Lescar, héritière de l’ancienne cité gallo-romaine de Beneharnum, et Oloron, issue d'Illuro, qui avaient une existence fragile durant le haut Moyen Âge. Ils furent même absorbés entre le VIIIᵉ et le XIᵉ siècle dans un « évêché des Gascons ».  Cette période troublée fut marquée par deux luttes majeures. D'une part, l'affirmation des Vascons face à l'empire carolingien, illustrée par leur participation aux batailles de Roncevaux (778 et 824) contre les armées de Charlemagne puis de Louis le Pieux près de Pampelune. D'autre part, les invasions normandes, auxquelles le duc de Gascogne Guillaume Sanche mit un coup d'arrêt décisif en 982 lors de la bataille de Taller. Suite à cette stabilisation, lors de la restructuration épiscopale, le titre d’évêque de Lescar remplaça celui de Beneharnum : le Béarn était désormais considéré comme une entité territoriale cohérente.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "Création de la Vicomté",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+             Vers 980, le vicomte de Béarn est très probablement assassiné dans la viguerie de Pau–Lescar par Loup Fort, chevalier de Serre-Castet. Celui-ci agit par obligation de serment envers le comte, mais étant aussi lié par serment au vicomte, il doit ensuite faire pénitence.
+Après cet épisode, Guillaume Sanche confie volontairement le titre de vicomte non pas au puissant viguier de Pau, mais au viguier du Vic-Bilh, jugé moins urbain et donc moins dangereux politiquement.
+On peut penser qu’un accord a été trouvé entre Loup Fort et Gaston/Centulle : l’un devient viguier urbain, l’autre vicomte.
+Après son meurtre et sa repentance, Loup Fort est probablement envoyé en mission vers la fin du millénaire par le duc de Gascogne et l’évêque Artus Racca. Il fonde alors un monastère à Lescar, futur évêché.
+            </p>
+          </div>
+        )
+      },
+       {
+        titre: "Qu’est-ce qu’une Vicomté ?",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Entre le Xe et le XIIᵉ siècle, le titre de vicomte ne désigne pas un souverain autonome, mais un délégué du comte, dépourvu de pouvoir territorial propre.
+Il agit par délégation comtale, comme le viguier, qui représente lui aussi le comte. Le vicomte n’est alors que le premier parmi ses pairs, sans autorité militaire ni frontière définie : il coordonne plus qu’il ne gouverne.
+Quand certaines vicomtés deviennent trop puissantes, les comtes imposent des baillis pour limiter leur autonomie, comme à Toulouse.
+Lorsqu’il n’y a qu’un seul viguier, il devient de fait vicomte, sans que cela change réellement son statut.
+À Tartas, par exemple, le viguier cumule le titre de vicomte tout en restant inférieur à celui de Dax, qui dispose pourtant de plusieurs viguiers.
+Certains viguiers font des choix diplomatiques en se rapprochant d’une vicomté plus puissante, parfois par guerre, pour renforcer leur influence.  </p>
+          </div>
+        )
+      },
+       {
+        titre: "Béarn Féodal",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+           Après les incursions vikings du IXᵉ siècle, les Francs cessent d’intervenir en Gascogne.
+En 977, Guillaume Sanche renforce son pouvoir par son mariage avec une princesse de Pampelune qui réside à Palestrion à Saint-Sever.
+Son frère Gombaud, comte d’Agen et évêque de toute la Gascogne occidentale (regroupant les évêchés de Bayonne, Oloron, Lescar, Dax) joue un rôle central.
+Austinde, archevêque d’Auch, agit indépendamment de Cluny, réformant la partie orientale.
+Le centre politique se déplace vers Saint-Sever et le Tursan, où se tiennent les plaids (assemblées judiciaires et politiques).
+À la même époque, la vicomté de Dax fonctionne avec un viguier mais sans vicomte local.
+Après la bataille de Taller (vers 982), les seigneurs gascons forment une fédération militaire pour résister aux derniers raids normands.
+Le chef gascon siège à Saint-Sever, au château Palestrion, capitale régionale.
+Certaines institutions s’écartent du modèle féodal classique comme la cour d’Escoures à Lembeye,  la cour Desaldour à Licharre.
+Ces cours rurales refusent le schéma féodal hiérarchisé et restent attachées à la tradition casalaire (autonomie des maisons et communautés, sans hommage rendu dans un château).
+Ces structures, parfois qualifiées d’“abbayes laïques”, conservent un fonctionnement particulier, surtout au sud de l’Adour.  </p>
+          </div>
+        )
+      },
+       {
+        titre: "Social",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Le Béarn se distingue par une forte identité casalaire, fondée sur l’autonomie des maisons (casaux). Cette particularité pousse souvent la Gascogne à surveiller de près la région.
+Contrairement à d’autres territoires centralisés, le Béarn présente une dispersion institutionnelle avec le vicomte qui réside à Morlaàs, l’évêque à Lescar, le viguier à Pau. Cette répartition reflète un équilibre social et politique original, caractéristique du Béarn médiéval. </p>
+          </div>
+        )
+      },
+      {
+        titre: "La France",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Avant le baptême de Clovis, acte fondateur de la France, les Francs étaient un peuple germanique soumis aux démons. La femme y jouait un rôle de "chef d'entreprise" : elle gérait les récoltes, la confection des vêtements et dirigeait la maisonnée (esclaves et serfs). L'homme, quant à lui, était un guerrier chargé de partir au combat et de rapporter du butin. Le nouveau-né n'était pas automatiquement considéré comme une personne. Les parents décidaient de l'élever ou non : s'il était trop chétif, il pouvait être mis à mort avant d'avoir reçu sa première nourriture car il fallait des femmes fortes pour travailler aux champs et des hommes forts pour la guerre. Le baptême de Clovis, par l'intermédiaire de sainte Clotilde, change la donne, l'Église instaure l'idée que la vie est sacrée (dès la conception). L’infanticide devient alors un crime (et ce jusqu’en 1975). S'ensuit la dynastie mérovingienne, avec Frédégonde (ancienne esclave) qui accède au pouvoir en provoquant la disgrâce d’Audovère et en faisant assassiner Galswinthe, la sœur de Brunehaut, pour devenir reine. Prête à tout pour protéger son rang, elle élimine les fils du premier mariage de son époux, organise l’assassinat du roi Sigebert Ier et fait tuer l’évêque Prétextat en pleine messe à Rouen, et certainement son propre mari, le roi Chilpéric. Face à elle, Brunehaut s'impose comme une reine cultivée et intelligente, conversant avec le pape et l’Empire byzantin. Animée par une soif de vengeance (la faide, l'Église utilisera plus tard le wergild pour moraliser la société) après l'assassinat de sa sœur, elle cherche à moderniser le royaume en développant les routes et en centralisant l'administration. Nonobstant, sa volonté de renforcer le pouvoir royal se heurte à la violente opposition des grands nobles. Cette période mouvementée est également marquée par le roi Dagobert (point culminant des Mérovingiens), jusqu'à sainte Bathilde, une autre ancienne esclave devenue reine qui, contrairement à Frédégonde, marqua l'histoire par sa lutte contre l'esclavage et la pauvreté. Puis vinrent les "rois fainéants", laissant le pouvoir aux maires du palais comme Ébroïn, puis aux Pippinides. Parmi eux, Pépin le Bref sauve l'Église des Lombards, confirmant le rôle de la France comme "fille aînée de l'Église". Son fils, Charlemagne, devient empereur et développe l'école avec le soutien de la reine-mère Bertrade de Laon. À sa mort, son fils Louis le Pieux lui succède alors que débutent les premières invasions vikings.
+
+     </p>     </div>
+        )
+      },
+
+      {
+        titre: "Barcelone",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          La région de Barcelone, première cité reprise aux musulmans par les Carolingiens à la fin du VIIIᵉ siècle, faisait partie de l’Empire carolingien puis du royaume de France. Au IXᵉ siècle, le comté de Barcelone, centre de la Marca Hispanica, se fragmente en petites unités. Menacé par al-Mansur, le comte Borell fit appel à Hugues Capet (élu roi en 987), mais ce dernier ne répondit pas : Barcelone fut détruite en 989.
+Borell reconstruit la ville et rompt toute dépendance envers les rois de France, posant les bases de l’autonomie catalane.
+Dès le XIᵉ siècle, Barcelone s’impose comme puissance régionale grâce à sa prospérité économique et à son influence politique, absorbant progressivement les autres comtés catalans. </p>
+          </div>
+        )
+      },
+    ]
+  },
+  'temps-feodaux': {
+    titre: "Montée des Vicomtés",
+    periode: "Temps Féodaux",
+    resume: "Le Béarn s’affirme entre alliances, réformes et indépendance",
+    introduction: "Entre foi, pouvoir et conquêtes, le Béarn s’élève…",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+        {
+        titre: "En Angleterre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Autour de l’an 1000, la monarchie anglo-saxonne se stabilise après les raids vikings. En janvier 1066, à la mort d’Édouard le Confesseur, Guillaume le Conquérant revendique le trône d’Angleterre et bat Harold à Hastings. Donc, le roi d'Angleterre est aussi vassal du roi de France pour ses terres gauloises. </p>
+          </div>
+        )
+      },
+      {
+        titre: "Action du comte",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         En 1022, Sanche Guillaume fonde un monastère à Saint-Pé de Générès, en Béarn près de la Bigorre. Il y réunit comtes et vicomtes, dont celui de Bigorre, tourné vers l’Aragon et la Navarre, puis place le monastère, la ville et le château sous l’autorité de l’Église de Lescar.
+À ce moment, le viguier de Lescar est déplacé à Pau, probablement parce que son influence devenait trop forte.
+En 1032, Sanche Guillaume Mitarra meurt sans héritier direct et est enterré à Saint-Julien de Lescar. Une grande lutte de succession éclate alors entre les Armagnacs (alliés au Béarn) et les Poitiers, qui finissent par l’emporter, étendant encore leur influence sur la région. </p>
+          </div>
+        )
+      },
+      {
+        titre: "Alliance Gasco-Catalane",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+             De l’autre côté des Pyrénées, Sancho el Mayor meurt à son tour : l’Aragon revient à Ramire Ier (1035), tandis que la Castille échoue à Ferdinand Ier (1037).
+Sanche VI Guillaume, issu de la même famille que Sancho el Mayor, roi d’Aragon, de León, de Castille et lié à Toulouse, accompagna à plusieurs reprises ce dernier dans ses campagnes contre les musulmans.
+Après Ramire Ier d’Aragon, qui avait allié sa dynastie aux Catalans du comté d’Urgell, l’expansion vers Barbastro débute au début des années 1060.
+Huesca devient alors un enjeu majeur : son évêque y est assassiné traîtreusement par un musulman.
+Sous son successeur, Sanche Ramírez, une grande expédition est lancée en 1064, prêchée par le pape Alexandre II : c’est la croisade de Barbastro.
+Dans ce contexte, le Béarn, grâce au col du Somport, devient une plaque tournante essentielle assurant la liaison entre la France et les royaumes chrétiens d’Espagne.
+Guillaume VIII d’Aquitaine, allié aux Catalans et au comte d’Urgell, participe à l’expédition, mais elle se solde par un échec.
+            </p>
+          </div>
+        )
+      },
+        {
+        titre: "Relations avec l'Espagne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Le roi de Castille, de son côté, adopte une autre stratégie : il préfère soumettre les musulmans par tribut plutôt que par conquête.
+Sanche Ramírez, pour renforcer son autorité, fait de l’Aragon un vassal de Saint-Pierre, impose la liturgie romaine et, à la demande du pape, épouse Félicie de Roussillon.
+Toutefois, il refuse une guerre systématique contre les musulmans, privilégiant la négociation et traitant même avec Guillaume VIII d’Aquitaine, pourtant favorable à une nouvelle croisade.
+En 1076, Sanche Ramírez récupère la plus grande partie du royaume de Navarre.
+En Castille, après une crise de succession, Alphonse VI monte sur le trône.
+Éduqué auprès d’un prince musulman, il écrivait parfois en arabe et se présentait comme « l’empereur des deux religions ».
+Une fois roi, il relance l’expansion castillane, soutenu par Cluny, puissant ordre religieux, et par les parias, tributs versés par les rois musulmans pour acheter la paix.
+Alphonse VI exploite habilement la rivalité entre les taïfas, s’alliant à certains pour en affaiblir d’autres, ce qui lui permet de pousser la frontière castillane du Duero jusqu’au Tage.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "Consolidation du pouvoir",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Entre 1020 et 1058, Centulle IV s’appuie sur un solide patrimoine familial centré sur le Vic-Bilh, foyer d’origine de sa lignée, notamment autour d’Escures. Il récupère sans guerre la vicomté d’Oloron, dirigée conjointement avec un bâtard jusqu’à la mort de ce dernier, moment où la vicomté revient totalement au seigneur béarnais. Cette unification oriente désormais le Béarn, jusque-là tourné vers Toulouse, vers les royaumes hispano-chrétiens au sud.
+            </p>
+          </div>
+        )
+      },
+        {
+        titre: "Politique ecclésiastique et alliances matrimoniales",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Fils d’Adélaïs et de Gaston III, Centulle V (règne 1058–1090) consolide le pouvoir du Béarn. Marié d’abord à Gisla, il a un fils, Gaston IV, avant d’épouser en 1079 Béatrix de Bigorre, jeune héritière du comté. Ce mariage, arrangé par l’abbé Amat et Bernard de Marseille, légat du pape, vise à étendre l’influence béarnaise. Le pape Grégoire VII, partisan de la réforme grégorienne, oblige Centulle à répudier Gisla pour consanguinité. Il salue cependant Centulle comme défenseur des pauvres et propagateur de la paix. Grâce à cette union, Centulle devient comte de Bigorre et obtient le soutien militaire du roi d’Aragon Sanche Ramírez, qui préfère renforcer cette alliance plutôt que voir la Bigorre passer sous l’autorité d’un rival plus puissant. Installé au château de la Hourquie, Centulle contrôle ainsi les cols pyrénéens, véritable atout stratégique.
+            </p>
+          </div>
+        )
+      },
+
+
+
+
+      {
+        titre: "Expansion territoriale et affirmation du pouvoir",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Profitant de la disparition d’Étienne de Mauléon, Centulle s’impose en Soule, obtenant du duc Guillaume VIII les honores souletins et concluant une conventio d’inféodation. La justice béarnaise s’étend à ce territoire : le Souletin promet son aide et accepte cette suzeraineté. Centulle, désormais aussi vicomte de Mauléon, accorde des franchises à Montory sur le modèle du for d’Oloron. Vers 1079, il fonde un prieuré à Morlaàs, qu’il remet à Cluny, acte de pénitence pour son mariage consanguin. Ce geste marque aussi la naissance de Morlaàs comme centre religieux et politique. Parallèlement, Centulle fait construire un château à Lescar, où il s’installe, transformant la ville en capitale du Béarn entre 1079 et 1110.
+            </p>
+          </div>
+        )
+      },
+       {
+        titre: "Indépendance politique et conflits ecclésiastiques",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Sous l’influence clunisienne et grâce à la Reconquista, Centulle fait battre monnaie, la monnaie centullienne, symbole d’une souveraineté régalienne. Cette émission, réalisée sans l’accord d’un comte supérieur, affirme l’indépendance béarnaise. Mais ses relations avec l’Église se tendent : il expulse l’évêque Bernard de Basse de Lescar (mort en 1080), transfère Saint-Pé de l’évêché de Lescar à celui de Tarbes, et entre en conflit sur plusieurs affaires religieuses, notamment l’inhumation de Raymond de Bartrès (1083). Il impose son autorité en Bigorre, après la soumission de Sanche de Labarthe, et obtient treize otages en garantie de fidélité. En 1082, il subit une défaite face à Dax, mais conserve l’essentiel de son influence. Entre-temps, Oloron gagne en importance avec un viguier local et la création d’une poblacion (1080).
+            </p>
+          </div>
+        )
+      },
+       {
+        titre: "Dernières campagnes et mort de Centulle",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Vers la fin de son règne, Centulle entre en guerre contre le roi d’Aragon Sanche Ramírez. Les troupes aragonaises ravagent la région, tandis que Richard et Guillaume de Soulom occupent Cauterets. Un duel judiciaire ordonné par Centulle rétablit les droits du monastère de Saint-Savin. Sous la médiation d’Alphonse VI de Castille et de Gui-Geoffroi de Poitiers (Guillaume VIII d'Aquitaine), Centulle doit finalement prêter hommage au roi d’Aragon (vers 1089), tout en maintenant la suzeraineté française sur la Bigorre. Il obtient du duc douze conduits le long des vallées des gaves, renforçant son contrôle économique. Peu après, il s’éloigne de l’Aquitaine pour se rapprocher davantage de l’Aragon, participant à plusieurs campagnes dans les vallées de Tena et du Gállego. C’est au cours de l’une d’elles, au printemps 1090, qu’il est assassiné dans la vallée de Tena. À sa mort, l’union personnelle Béarn–Bigorre prend fin, Gaston IV hérite de la vicomté de Béarn, tandis que Bernard puis Centulle, fils de Béatrix, gouvernent successivement le comté de Bigorre.
+            </p>
+          </div>
+        )
+      },
+       {
+        titre: "Anne de Kiev et la Rus'",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Sainte Olga voit son mari assassiné par les Drevlianes pour avoir tenté de collecter un double impôt. Pour se venger, elle aurait d’abord demandé aux ambassadeurs de venir en barque pour être honorés, avant de les faire jeter dans une fosse et enterrer vivants. Elle aurait ensuite réclamé les plus hauts dignitaires pour les noces et les aurait invités à se purifier au sauna, avant de faire verrouiller les portes et d'incendier le bâtiment. Enfin, elle se rend chez les Drevlianes et envoie ses soldats, massacrant 5 000 personnes, puis assiège et brûle leur capitale, Iskorosten. Olga transforme la Rus' de Kiev en profondeur. Elle est la véritable créatrice de l'administration slave : elle abolit le système de collecte arbitraire (qui a coûté la vie à Igor) et crée les Pogosti, des centres administratifs fixes pour un impôt régulier. Elle parcourt son territoire pour fixer des frontières claires et établir des postes royaux. En 957, Olga se rend à Constantinople. Reçue par l'empereur Constantin VII, elle se convertit au christianisme sous le nom de baptême d'Hélène. Pour éconduire poliment l'empereur qui souhaitait l'épouser, elle lui demande d'être son parrain de baptême. Une fois l'acte accompli, elle lui rappelle que le droit canonique interdit à un parrain d'épouser sa filleule. Bien qu'Olga ne parvienne pas à convertir son fils Sviatoslav (un guerrier viking dans l'âme), elle éduque son petit-fils, Vladimir Ier. Elle meurt en 969 après avoir défendu Kiev contre les Petchénègues. En 987, Vladimir cherche une religion pour unifier son peuple. Il écarte l'Islam (à cause de l'interdiction de l'alcool) et rejette le Judaïsme ainsi que le Catholicisme. En revanche, ses ambassadeurs reviennent de Sainte-Sophie à Constantinople éblouis par la beauté des chants et des mosaïques. En 988, Vladimir scelle une alliance avec l'empereur Basile II et épouse la princesse Anna. Il se fait baptiser, détruit les idoles païennes (la statue de Peroun est jetée dans le Dniepr) et ordonne à toute la population de Kiev de descendre dans le fleuve pour un baptême de masse. Cette conversion marque la fin des sacrifices, de la polygamie (Vladimir avait des centaines de concubines avant son baptême) et du divorce. Elle signe ainsi la fin d'une certaine liberté sexuelle et le début d'une morale plus restrictive sur la vie domestique. Sous le règne de Iaroslav le Sage, fils de Vladimir Ier, Kiev est un carrefour majeur de la Route des Varègues, surpassant par sa richesse de nombreuses capitales occidentales. Bien que la Rus' soit devenue chrétienne, l'influence du Khaganat khazar voisin (converti au judaïsme) reste forte, au point que certains chefs varègues reprennent le titre de « Khagan ». En 1051, cherchant une alliance prestigieuse après ses luttes contre sa mère Constance d'Arles et son frère Robert, le roi Henri Ier épouse Anne de Kiev, fille de Iaroslav. Femme lettrée et pieuse, elle apporte une culture raffinée à la cour capétienne. Après avoir donné naissance au futur Philippe Ier, elle assiste à son sacre à Reims en 1059. À la mort d'Henri en 1060, elle exerce la régence (ou du moins une tutelle active).
+           </p>
+          </div>
+        )
+      }
+    ]
+  },
+  'pelerin': {
+    titre: "Pélerinage Armé", 
+    periode: "Temps Féodaux",
+     resume: "Foi, pouvoir et croisade au cœur du Béarn médiéval",
+    introduction: "Gaston IV unit ferveur et indépendance souveraine...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+       {
+        titre: "Mathilde de Toscane, la \"Nouvelle Débora\"",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Mathilde de Toscane reçut une éducation complète mêlant l'étude des langues (latin, tudesque, langue d'oïl) au maniement des armes et à l'équitation. Dès son plus jeune âge, elle accompagna sa mère, Béatrice de Bar, sur les terrains de conflit, et finit par répudier son mari. Son existence s'inscrit dans le cadre de la querelle des investitures qui secoue le XIe siècle. À cette époque, les évêques sont de véritables seigneurs qui possèdent des terres, lèvent des impôts et dirigent des armées. L'Empereur tient à choisir lui-même ses évêques afin de disposer de vassaux fidèles pour gérer son empire (l'investiture laïque). De son côté, le Pape veut mettre fin à ces pratiques, dénonçant la simonie (l'achat des charges ecclésiastiques) et le fait que certains prélats soient plus soumis aux rois qu’à Dieu. En 1075, Grégoire VII publie le Dictatus Papae, affirmant que seul le pape peut nommer les évêques, déposer les empereurs et qu'il ne peut être jugé par quiconque. L'empereur Henri IV réagit en déclarant que Grégoire n'est plus pape, ce à quoi ce dernier répond par une excommunication. Se retrouvant totalement isolé, Henri IV parvient, grâce à l'intercession de sa cousine Mathilde, à accomplir la « Pénitence de Canossa » en 1077. Il passe alors trois jours dans la neige, pieds nus et en robe de bure, pour demander pardon au souverain pontife. Cependant, Henri IV revient par la suite en Italie avec une armée pour se venger. Mathilde, qui contrôle des forteresses stratégiques barrant les passages des Alpes et des Apennins, adapte sa tactique : en infériorité numérique, elle évite les batailles rangées en plaine. Toujours à cheval, en armure et l'épée à la main, elle pratique la terre brûlée et multiplie les embuscades. Elle va jusqu'à faire fondre le trésor de son abbaye et ses propres bijoux d'or et d'argent pour payer les mercenaires et les soldats du Pape lorsque celui-ci se trouve sans ressources. Lors de la bataille de Sorbara (1084), elle décide de lancer une attaque surprise nocturne contre le campement impérial. Haranguant ses troupes, elle met en déroute l'armée d'Henri IV, capture ses généraux et sauve la cause papale. Après la mort de son beau-père et de sa mère, Mathilde s'est retrouvée à la tête d'un immense territoire s'étendant de la Lombardie à la Toscane, constituant une zone stratégique cruciale entre l'Empire et Rome. Son autorité était telle qu'à 68 ans, alors qu'elle était malade, la simple menace de son arrivée avec une armée suffit à faire rentrer les rebelles de Mantoue dans l'ordre. Elle est enterrée dans la basilique Saint-Pierre au Vatican.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "Contexte Historique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+              À Alcoraz, où Pierre Ier d’Aragon affronta al-Musta‘în de Saragosse, chaque camp comptait environ 20 000 hommes. Le roi chrétien fit recenser les champions : sept musulmans et huit chrétiens. Voyant l’équilibre, il s’écria que la journée lui serait favorable. Le combat fut acharné, aucun ne reculant ; mais une unique charge chrétienne rompit les rangs musulmans, provoquant leur déroute. Huesca tomba alors aux mains des Aragonais. Al-Turtûshî décrit également une tactique musulmane défensive : des fantassins accroupis, protégés par des écus et des lances fichées au sol, appuyés par des archers d’élite et une cavalerie de soutien. Les assaillants subissent d’abord flèches et javelots, puis se heurtent aux pointes, avant la contre-attaque. Un témoin de Tortosa aurait vu cette formation résister, sauf lorsqu’un soldat rompit la ligne et fut aussitôt abattu par un cavalier chrétien.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "Mariage et Alliances Politiques",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+           En 1085, Gaston IV épouse Talèse d’Aragon, nièce du roi Sanche Ramírez, recevant probablement en dot la vicomté de Montaner.
+En 1090, il affronte les seigneurs de Dax et de Soule.
+Homme de foi, il manifeste sa piété en assistant à la dédicace de l’église de Saint-Pé, suivant l’exemple paternel prônant « justice et paix ». Son mariage le rapproche de la famille royale d’Aragon : sa cousine est l’épouse de Pierre Ier d’Aragon, qui scelle une alliance politique. </p>
+          </div>
+        )
+      },
+       {
+        titre: "Contexte Religieux et Appel à la Croisade",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+           En 1095, le pape Urbain II lance l’appel de Clermont, invitant les chrétiens à un pèlerinage armé. Gaston s’engage, non par ambition, mais par dévotion.
+Pierre Ier, roi d’Aragon, n’y participe pas : le pape considère que lutter contre les musulmans d’Espagne équivaut à partir en Terre sainte. Il refuse même à l’archevêque de Tolède le départ en croisade. Pierre s’empare alors de Huesca (victoire d’Alcoraz, 1096), aidé par des contingents béarnais, un an avant la prise de Tarragone par les Catalans aux côtés d’un certain Alphonse, futur roi, qui soutient ensuite le Cid à Valence. À cette époque, les châtelains dominent la société.
+L’Église tente de canaliser la violence de ses guerriers de nature par la paix de Dieu (protection des femmes, enfants, clercs) et la trêve de Dieu (interdiction de combattre certains jours), une morale qui dure jusqu'à nous. La croisade devient un exutoire religieux et social : les seigneurs peuvent satisfaire leur ardeur guerrière tout en apaisant les tensions internes de l’Europe. Gaston part ainsi avec son frère, le comte de Bigorre, et de nombreux Gascons, rejoignant l’armée du comte de Toulouse Raymond de Saint-Gilles, puisque Guillaume d’Aquitaine renonce à l’expédition. Pendant son absence, son épouse Talèse administre le Béarn avec un conseil de seigneurs.
+ </p>
+          </div>
+        )
+      },
+       {
+        titre: "Départ en Croisade et Itinéraire",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Le légat pontifical Adémar de Monteil conduit l’armée du Midi (1096–1097), tandis que d’autres contingents (Normands, Lotharingiens) partent par la Dalmatie.
+En route, les croisés sont attaqués par des populations locales. À Salonique, Adémar tombe de sa mule, l’expédition continue sans lui. Accueillis hostilement par les Byzantins, les croisés s’emparent des remparts en criant « Toulouse ». Certains refusent de se rendre à Constantinople, malgré les négociations entre l’empereur Alexis Comnène et Raymond. Gaston attend à Rhaedestos avec son frère, puis rejoint Robert de Normandie et Étienne de Blois : leur mot d’ordre, « Nous y allons pour Rome ! ».
+ </p>
+          </div>
+        )
+      },
+       {
+        titre: "Les Grandes Batailles",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Tout d'abord, pendant le siège de Nicée, les croisés trouvent une situation semblable à la Reconquista : les musulmans sont divisés. Les Turcs seldjoukides, fondateurs du sultanat de Rhum, souffrent de rivalités internes. Grâce aux machines de siège byzantines, Nicée capitule le 19 juin 1097. Ensuite, la bataille de Dorylée, où l'avant-garde normande est surprise ; Bohémond envoie un messager à Raymond et Gaston, qui accourent. Par une tactique défensive, les croisés repoussent les Seldjoukides. Cette victoire permet à Constantinople de survivre jusqu’au XVe siècle. Puis, la traversée de l’Anatolie avec les croisés qui souffrent de faim et de soif, se nourrissant de plantes épineuses.
+           </p>
+          </div>
+        )
+      },
+      {
+        titre: "Siège et Prise d’Antioche",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Le 14 octobre 1097, l’armée se scinde. Gaston et Raymond prennent la route de l’Arménie (repos et soutien chrétien). Le 20 octobre, ils atteignent Antioche, immense cité de 400 tours. Le siège dure huit mois ; Gaston assure la garde alternée des fortifications (Malregard, Mahomerie). Gaston et Raymond recrutent des charpentiers à Saint-Siméon pour construire des machines de siège. Grâce à une trahison, Bohémond s’empare de la ville. Le 28 juin 1098, Gaston dirige les troupes de Raymond contre Kerbogha de Mossoul et remporte la victoire.
+           </p>
+          </div>
+        )
+      },
+       {
+        titre: "Fin de la Croisade et Retour en Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Après Antioche, Gaston accompagne Baudouin de Boulogne à Édesse, tandis que Raymond et Bohémond s’affrontent pour le pouvoir. Gaston poursuit ensuite loyalement la route vers Jérusalem. La ville, gouvernée par les Fatimides d’Égypte (vizir Badr), est attaquée en juin 1099. Le 3 juin, Gaston atteint Ramla, puis avance vers Jérusalem. Tancrède s’empare de Bethléem. Le 13 juin, un premier assaut échoue à cause du poison dans les puits. Gaston organise alors les travaux de siège. Les 14 et 15 juillet, les croisés pénètrent dans la ville ; Tancrède et Gaston placent leurs bannières sur les réfugiés pour les protéger du massacre. Après la conquête, Gaston sert Godefroy de Bouillon. Le 12 août 1099, il participe à la victoire d’Ascalon, bien que la ville reste aux musulmans faute d’accord entre Godefroy et Raymond. En septembre 1099, Gaston quitte la Terre sainte, embarque à Laodicée avec le comte de Flandre et le duc de Normandie, regagnant Constantinople, puis le Béarn. À son retour, il fonde une maison hospitalière à Lescar, destinée aux pèlerins de Saint-Jacques, en remerciement à Dieu qui l’a protégé. 
+          </p>
+          </div>
+        )
+      },
+
+      
+
+    ]
+  },
+   'reconquista': {
+    titre: "Le Béarn en mode Reconquista", 
+    periode: "Temps Féodaux",
+     resume: "Entre piété et ambition, le Béarn s’engage dans la Reconquista",
+    introduction: "Gaston IV poursuit son élan de foi affirmant le rayonnement du Béarn...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      
+        {
+        titre: "Piété et Réformes religieuses",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          En 1101, Gaston IV de Béarn et son épouse Talèse installent à la cathédrale de Lescar, autour de l’évêque Sanche, un chapitre de chanoines suivant la règle de Saint-Augustin. Ce geste manifeste leur piété et leur volonté d’affirmer leur foi, notamment après le retour de Gaston de la croisade à Jérusalem. Le 21 avril 1101, sur l’instigation de l’archevêque d’Auch, ils fondent à Lescar, avec l’accord de l’évêque, un hôpital destiné aux pauvres et aux pèlerins. Pour son entretien, ils lui attribuent des redevances dans le Vic-Bilh et les revenus de plusieurs églises locales (Caresse, Assat, Bordes). Le 6 avril 1102, à Pâques, ils renouvellent leur piété en accordant au même hôpital le droit de percevoir un péage sur une passerelle à Lescar. Le propriétaire des terres devait fournir des juments pour le labour et du blé, recevant en échange une rente versée à la Toussaint et à la foire. Le même jour, Gaston et Talèse transfèrent à la cathédrale de Lescar leurs droits de justice et les revenus de toute la paroisse. Au début de 1102, après la naissance de leur fils Centulle V, Gaston effectue une nouvelle donation pour le prieuré clunisien de Sainte-Foy « pro Centullo filio meo » (pour mon fils Centulle). Il confirme ses donations précédentes et y ajoute la dîme sur les ventes de vin et de viande à Morlaàs, le dixième des revenus des vignes vicomtales et les cinq sous morlans perçus lors du « cursus equorum », joute équestre organisée à la Toussaint. Ces dons traduisent une volonté d’unir foi, héritage et prestige seigneurial. Le 19 février 1102, dans le cloître de Sainte-Foy, Gaston et Talèse signent un privilège d’ingénuité en faveur des habitants de Morlaàs, les plaçant sous leur protection directe. Ce geste marque une étape vers la création du futur « For » du Béarn, fondement des libertés locales. Dans cet esprit de dévotion, Gaston se qualifie lui-même de « pécheur Gaston, vicomte de Béarn ».  Face à la violence des chevaliers, l’Église instaure la Paix de Dieu, renforcée par les décisions du concile de Latran. Les combats ne sont désormais autorisés que les mardis et mercredis, sauf jours fériés, tandis que les seigneurs pouvaient toujours traverser les Pyrénées pour lutter contre les infidèles. Gaston, accompagné de ses châtelains, rejoint Bernard, comte d’Armagnac, à l’église de Diusse. En présence de Sanche, évêque de Lescar, ils confirment leur adhésion aux prescriptions de l’archevêque d’Auch en faveur de la paix et de la trêve. Malgré cette pacification religieuse, Gaston poursuivra ses combats contre Dax et Soule, occupant même les régions de Mixe et Ostabaret.
+          </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Croisade et la Péninsule Ibérique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        Pendant ce temps, l’Aragon, jadis comparable au Béarn, s’était fortement accru. Avec la prise de Huesca, la péninsule Ibérique entre véritablement dans l’ère des croisades. Tandis que les chevaliers d’Occident partaient vers Jérusalem, le pape Urbain II rappelle que le combat contre les musulmans en Espagne valait autant spirituellement que celui en Terre sainte. En 1095, les Catalans, menacés de perdre Tarragone, reçoivent cette même indulgence : Urbain II affirme que les croisés espagnols bénéficient des mêmes grâces que ceux de Palestine. Ainsi, le combat sur la péninsule devient une croisade reconnue.  Pierre Ier d’Aragon poursuit ses conquêtes après Huesca : en 1100, il prend Barbastro, puis Bolea. En 1101, il fait vœu de croisade, prêt à partir vers Jérusalem, mais décide finalement de se concentrer sur l’Aragon pour s’emparer de Saragosse et ouvrir un chemin vers la Méditerranée. Il mène un raid dans la haute vallée de l’Èbre, prend Pueyo, et campe devant Saragosse avec deux légats pontificaux. Il baptise son camp Juslibol (déformation de Deus lo volt, « Dieu le veut »), reprenant le cri des croisés. Pour la première fois, la croix devient symbole militaire sur sol ibérique, consacrant Pierre Ier comme « el rey cruzado ». La mort de Pierre Ier en 1104, à seulement 36 ans, bouleverse l’Aragon. Son fils unique, marié à la fille du Cid, est mort sans descendance. Son frère cadet, Alphonse, non destiné au trône (il devait devenir moine à Sahagún), devient roi par hasard. Son mariage en 1109 avec Urraque, héritière de Castille, devait unir les royaumes ibériques, mais cette union échoue : Urraque, veuve du comte de Galice, a déjà un fils, le futur Alphonse VII, et le tempérament autoritaire d’Alphonse Ier mène à une mésentente durable.
+         </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Croisade en Espagne et expansion aragonaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       En 1109, de nombreux seigneurs français, dont Guillaume IX d’Aquitaine et le comte de Toulouse, rejoignent l’Espagne pour combattre les musulmans. Guillaume, désireux de regagner son prestige après avoir refusé la première croisade, rassemble une armée nombreuse de six cents chevaliers issus de Saintonge, Limousin, Périgord et Gascogne : Raimond de Turenne, Aimar d’Archiac, Guillaume d’Heugas, Robert de Tartas, Amanieu d’Albret, Pierre de Mugron, Bertrand de Bayonne, etc. L’expédition échoue à la bataille de Valtierra (1110), face à l’émir almoravide de Cordoue. Malgré cet échec, les liens entre croisés français et royaumes ibériques se renforcent. L’Aragon, sous Alphonse 1er, devient une base arrière pour les croisés restés en Europe, accueillant chevaliers et colons étrangers. Les rois ibériques encouragent cette implantation, offrant terres et privilèges aux nouveaux venus pour défendre les conquêtes chrétiennes. D'ailleurs, la plus grande défaite chrétienne de cette période survient à la bataille d’Uclés en 1108, où Sanche, fils du roi Alphonse VI de Castille, trouve la mort. Cet échec porte un coup très dur à la Castille et renforce la pression musulmane sur la péninsule. Profitant de cette faiblesse, Alphonse Ier d’Aragon, dit le Batailleur, accroît son influence dans la vallée de l’Èbre et lance plusieurs offensives. Ce succès est soutenu par le pape Pascal II, qui, suivant la politique de ses prédécesseurs, accorde aux croisés d’Espagne les mêmes indulgences spirituelles que ceux partant pour Jérusalem. Les conquêtes ibériques prennent alors une valeur religieuse équivalente à celles de la Terre sainte, renforçant la ferveur des combattants. Dans ce contexte de croisade ibérique, les rois, tels qu’Alphonse Ier d’Aragon, favorisent l’installation de nouveaux colons et chevaliers étrangers. En échange d’un service armé, ces hommes reçoivent des terres et des privilèges. Ainsi, en 1106, des Castillans venus de Valladolid apportent leur aide aux Catalans pour verrouiller Balaguer, sur les rives du Segre, renforçant la frontière chrétienne. La mort d’Alphonse VI de Castille bouleverse l’équilibre politique de la péninsule. Son gendre, Alphonse Ier d’Aragon, en profite pour devenir une figure centrale de la Reconquista. Alphonse VI avait laissé son héritage à sa fille Urraca, veuve du comte de Galice, Raymond de Bourgogne. En épousant Alphonse Ier d’Aragon, elle réunit momentanément sous une seule autorité les royaumes de Castille, Léon, Galice, Aragon et Navarre, formant une puissance sans précédent. Face à cette progression chrétienne, le roi musulman al-Musta‘in de Saragosse, inquiet, s’allie aux Almoravides pour freiner l’avance d’Alphonse Ier. Ensemble, ils lancent des raids dévastateurs contre les frontières aragonaises et navarraises, notamment autour de Tudèle et Olite. En réponse, Alphonse Ier organise une contre-attaque vigoureuse vers ces zones frontalières. 
+         </p>
+          </div>
+        )
+      },
+  {
+        titre: "Urraque, la chef de guerre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    À la mort d’Alphonse VI, face à la menace grandissante des Almoravides après la bataille d’Uclés, la nouvelle reine de Castille, Urraque, épouse Alphonse Ier le Batailleur, roi d’Aragon, afin d’unir les forces chrétiennes contre l'Islam. Cependant, n'étant pas Castillan, Alphonse se voit refuser la reconnaissance de la noblesse et du clergé de Castille. Dès 1110, la tension bascule dans un conflit armé opposant les deux royaumes. Urraque prend alors la tête de ses troupes pour défendre ses cités contre l’armée de son mari, résistant notamment lors du siège d’Astorga. En parallèle, elle contient une faction de nobles galiciens qui tente de porter prématurément son fils, le futur Alphonse VII, sur le trône pour briser les ambitions d'Alphonse le Batailleur, qui n'a aucun lien de parenté avec l'héritier, contrairement à elle. En 1112-1114, l'annulation du mariage par le Pape prive définitivement le roi d'Aragon de toute prétention sur la Castille. En tenant tête à l’un des plus grands guerriers de son temps, Urraque a su préserver l’indépendance de son royaume et sécuriser le trône de son fils.
+       </p>
+          </div>
+        )
+      },
+       {
+        titre: "Réseaux féodaux et alliances",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Alphonse Ier s’appuie sur un vaste réseau féodal, constitué de troupes venues de Castille, de Navarre et d’Aragon, mais aussi sur de nombreuses familles nobles franco-ibériques appelées les Francos. Parmi ces alliés, Gaston IV de Béarn occupe une position essentielle. Par ses possessions, ses alliances et son prestige, il fait le lien entre les Pyrénées, la Gascogne et les royaumes d’Espagne. Ce système, fondé sur la féodalité et les lignages imbriqués, forme un réseau politique complexe et efficace comme la fille de Talèse et Gaston qui épouse Pierre, vicomte de Gabaret, seigneur apparenté aux puissantes familles des Miramont. De plus, Gaston IV entretient d’excellents rapports avec son frère Centulle de Bigorre, compagnon d’armes de la Première Croisade. Par ce lien, Gaston garde un contact étroit avec la noblesse des Pyrénées centrales, notamment celle du Lavedan, qu’il peut mobiliser en cas de conflit. Les mariages entre familles béarnaises, aragonaises et castillanes s’inscrivent dans un cadre plus large de coopération entre les royaumes ibériques et la noblesse capétienne française. L’exemple de la reine Urraca de Castille, fille d’Alphonse VI et de Constance de Bourgogne (issue de la haute noblesse française), illustre cette fusion des dynasties. Ces unions créent de véritables ponts politiques et culturels entre la France et les royaumes d’Espagne, consolidant la dimension européenne de la Reconquista.
+          </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Rupture entre Urraca et Alphonse Ier",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         À partir de 1110–1111, la situation politique ibérique change profondément. L’union entre Urraca de Castille et Alphonse Ier d’Aragon, censée unir leurs royaumes, se transforme rapidement en rivalité ouverte. Les deux souverains s’affrontent militairement, chacun cherchant à dominer l’autre. Soutenue par une partie de la noblesse castillane, Urraca lutte pour préserver son autorité face aux ambitions d’Alphonse Ier, qui souhaite maintenir son contrôle sur le Léon et la Galice. Ces affrontements tournent à une quasi guerre civile castillano-aragonaise, affaiblissant durablement les deux royaumes. Entre 1111 et 1114, les combats se multiplient et la noblesse se divise en factions. Le pouvoir d’Alphonse Ier s’en trouve fragilisé, plusieurs de ses alliés se détournant de lui. Dans ce climat de tension, Gaston IV de Béarn joue un rôle de médiateur diplomatique : il tente d’apaiser les conflits tout en défendant les frontières pyrénéennes. Le Béarn devient alors une zone tampon, un espace de stabilité dans un monde fragmenté par la guerre. Vers 1114, Alphonse Ier se détourne des querelles internes pour reprendre la Reconquista contre les royaumes musulmans du sud. Il lance une série de campagnes culminant en 1118 avec la prise de Saragosse, victoire majeure qui renforce son prestige, même si la tension avec Urraca persiste. Dans le même temps, le Béarn continue d’être un modèle de stabilité : Gaston IV maintient un réseau féodal solide fondé sur les casaux, les vesins et les abbayes laïques, institutions propres à la société béarnaise. Ce système assure au vicomte une base sociale stable et bien organisée, contrastant avec l’instabilité du monde féodal environnant.
+          </p>
+          </div>
+        )
+      },
+
+      
+      
+      
+      {
+        titre: "Offensives et préparation de Saragosse",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Après avoir consolidé leur pouvoir sur Valence, les Almoravides cherchent à bloquer la progression d’Alphonse Ier. Valence contrôle alors les principales routes stratégiques : vers l’est (Lérida, Tortosa) et vers l’ouest (Saragosse via Calamocha et Daroca. Mais la prise de Morella en 1117, peut-être suivie de celle de Belchite, affaiblit le dispositif almoravide et ouvre la voie aux troupes chrétiennes. Pour sa nouvelle expédition, Alphonse Ier mobilise l’ensemble de ses forces aragonaises et navarraises, aidé par des contingents catalans et par le vicomte de Béarn, Gaston IV, qui met à sa disposition Centulle de Bigorre et plusieurs chevaliers gascons. Les troupes se rassemblent dans la plaine de l’Èbre, près d’Ayerbe, autour des Mallos de Riglos. Tous les châteaux des environs, jusqu’à Gormaz et Sibirana, sont placés en état d’alerte. Une fois Morella conquise, les chrétiens lancent une offensive vers Lérida (Lleida). C’est alors qu’Ali ben Yusuf, émir almoravide, débarque en Espagne pour la troisième fois le 22 juin 1117. Conscient de la gravité de la situation, il ordonne au gouverneur de Cordoue de rassembler les troupes musulmanes pour soutenir Tamin et Abd-Mazli. Selon certaines chroniques arabes, les Almoravides infligent une lourde défaite aux chrétiens, causant jusqu’à 10 000 morts. D’autres sources estiment toutefois qu’Alphonse Ier aurait évité un affrontement direct, jugeant la bataille trop risquée. Un document d’archives atteste sa présence à Saragosse le 8 juillet 1117, aux côtés de Gaston et Centulle, où il fit don de l’église Santas Missas, située hors des murs, à celle de Jaca. Après cette campagne, l’armée béarno-aragonaise se replie en ravageant la plaine fertile (la huerta) de Saragosse, une ville qui possède des fortifications presque aussi solides que Jérusalem. Gaston IV retourne ensuite en Béarn pour préparer l’offensive décisive de 1118. Cette campagne de 1117, bien que coûteuse, a un rôle stratégique préparatoire : elle isole Saragosse de Valence, mais une simple attaque frontale ne suffit pas : il faut envisager un long siège, avec famine stratégique pour affaiblir les défenseurs. Peu après son élection, le pape Gélase II réunit un concile à Toulouse le 24 janvier 1118. S’y rassemblent prélats des deux versants des Pyrénées : archevêques d’Arles et d’Auch, évêques de Lescar, Bayonne, Pampelune et Barbastro. Le concile confirme que l’expédition contre Saragosse est une croisade, avec les mêmes indulgences que celles d’Orient. Gaston IV, fort de son expérience des croisades orientales, est choisi pour organiser le siège. Il accueille dans le Béarn des contingents venus du nord des Pyrénées, notamment via Somport, passage stratégique entre France et Espagne.
+          </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La conquête de Saragosse",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      L’entrée dans Saragosse fut un exploit, mais la conquête complète s’avéra longue. Très fortifiée, peuplée et déterminée, la cité avait été profondément transformée sous Auguste, dotée d’une muraille solide et d’un plan urbain romain rectangulaire, conservé par les Wisigoths puis renforcé par les musulmans. Ces derniers entretenaient minutieusement l’enceinte, ouverte au nord sur le pont Bab al-Qantarat, qui franchissait l’Èbre avant son confluent avec le Huerva et d’où partaient les routes vers Huesca et Lérida. Le port fluvial s’étendait entre le pont et le confluent. À l’intérieur, les chrétiens mozarabes vivaient au nord-ouest, près de l’ancienne cathédrale Santa Maria Virgen, tandis que les gouverneurs musulmans occupaient deux résidences : la zuda, entre la porte de Tolède et celle du pont, et une autre à l’angle opposé. Malgré le plan romain, la ville avait l’aspect d’une médina : mosquées, bains, alcaicería, maisons en pisé aux patios intérieurs. Les faubourgs s’étendaient hors les murs, notamment au sud vers la route de Daroca, avec caravansérail, mosquée, hôpital et cimetière, protégés par un rempart de terre délimitant l’aljama et l’église des Santas Masas, où les chrétiens honoraient les martyrs saragossains. Près de la route de Tudèle, les Banû Hûd édifièrent au XIᵉ siècle l’Aljafería. Les chroniques françaises exaltent Gaston IV de Béarn, à sa tête, seigneurs gascons et espagnols franchissent les Pyrénées pour libérer l’Église opprimée. Les faubourgs sont vite pris, les Sarrasins se retranchent derrière les murs, abandonnant richesses et vivres. Les chrétiens établissent vingt campements fortifiés encerclant la ville et coupent progressivement l’accès à l’eau et au ravitaillement. Gaston, à la tête des forces françaises et gasconnes, agit de concert avec Alphonse Ier, qui commande les armées aragonaises, navarraises et catalanes, dirigeant l’ensemble militaire et politique, tandis que Gaston joue un rôle spirituel reconnu par la papauté. Malgré les sorties des défenseurs, le blocus les affame. Après dix mois de siège, le 18 décembre 1118, Saragosse capitule. Alphonse Ier entre dans la ville et Gaston IV prend possession du quartier de l’Azuda. La conquête transforme Saragosse en capitale chrétienne, siège d’un nouvel archevêché et symbole de la victoire de la foi en Aragon. Alphonse nomme alors Gaston seigneur de Saragosse.    </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Prise de Tudèle",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Après la prise de Saragosse, le cœur de la moyenne vallée de l’Èbre tombe aux mains des chrétiens, mais les communications vers la Navarre et la Castille restent coupées par des garnisons musulmanes, notamment à Tudèle et Tarazona. Gaston de Béarn, dit le Croisé, participe à la répartition des terres conquises et reçoit un fief à Uncastillo, tandis que son demi-frère et d’autres Béarnais obtiennent également des terres dans la région. Autour de Saragosse, la progression chrétienne se poursuit vers Alcañiz et le bassin du Jiloca, avec la prise de Daroca et de Calatayud. Et il s'ensuit une opération conjointe des vainqueurs de Saragosse, réunissant des Normands (Rotrou du Perche, Robert Burdet, Gautier de Gerville, Rainaud de Bailleul) et des Pyrénéens, dont Gaston IV de Béarn, Gui de Lons (évêque de Lescar), Centulle de Bigorre, Pierre de Gabaret et Arnaud de Lavedan. Et Rotrou prit la ville grâce à une ruse militaire, il aurait feinté une déroute pour attirer les défenseurs hors des murs, mais cette version est discutée, car elle n’est confirmée par aucune source normande. Rotrou conserva Tudèle en fief d’Alphonse Ier d’Aragon, tandis que Gaston reçut Uncastillo, preuve du rôle actif des Béarnais dans les campagnes aragonaises. Un autre Béarnais, Pèlerin, entra au service du roi d’Aragon et reçut lui aussi un fief, établissant une lignée durable en Aragon. Les travaux de Pierre Boissonade confirment la participation importante des Gascons et des Béarnais, bien que l’élite militaire normande domine la chronique.
+          </p>
+          </div>
+        )
+      },
+  {
+        titre: "Campagne contre les Almoravides",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Les campagnes de 1120 et 1121 placent à nouveau les Béarnais au premier plan, après un temps d’éclipse derrière les Normands. Gaston IV de Béarn joue un rôle décisif aux côtés du roi Alphonse Ier le Batailleur : il encourage la poursuite de la Reconquista après la victoire de Cutanda (18 juin 1120), une bataille restée célèbre par l’expression « pire que Cutanda ». Gaston mène personnellement des expéditions en Celtibérie, prend Tarazona, y rétablit la cathédrale, puis conquiert Bilbilis (Calatayud) et Daroca, villes stratégiques au sud de Saragosse. Il repeuple ces cités, accorde des privilèges religieux et fonde un couvent des Chevaliers du Saint-Sépulcre à Montréal, inspiré des ordres de Terre Sainte. Mais, face à ces défaites, Ali ben Yusuf (le Miramolin) rassemble une armée almoravide considérable : Arabes, Zénètes, Berbères, Mesmouda, milices andalouses et chefs venus de tout al-Andalus. Sept rois musulmans y participent, dont le caïd d’Alméria. En réaction, Alphonse Ier fait appel à de nouveaux renforts : Gascons, Béarnais, Bigourdans, Normands. L’arrivée de cette coalition chrétienne précipite la défaite almoravide. Après Cutanda (1120) et la prise de Calatayud, la frontière aragonaise s’étend vers le sud, créant une nouvelle marche appelée « l’Extramadure aragonaise », porte ouverte vers la Castille et Valence. Alphonse Ier consolide son pouvoir : il accorde à Calatayud un fuero (charte) en 1130, administre la région de Barbastro à Uncastillo, et transforme la mosquée de Saragosse en cathédrale (1120), en maintenant toutefois des relations apaisées avec la population musulmane restée sur place et la découverte miraculeuse des reliques de saint Bráulio par l’évêque Pierre de Librana, près de la porte Santa María la Mayor, renforce encore la dimension spirituelle de la reconquête. 
+          </p>
+          </div>
+        )
+      },
+
+        {
+        titre: "Les confréries et la naissance des ordres militaires",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Dans ce climat, Gaston propose la création d’un ordre militaire inspiré des Chevaliers du Saint-Sépulcre, la Militia Christi, qui devait défendre les terres reconquises et favoriser la christianisation. Gaston fonde Monreal, confiée à ces Chevaliers des Palmes, dont le nom et l’emblème rappellent Jérusalem. Le roi d’Aragon leur attribua un vaste territoire montagneux encore peu occupé. Comme les chevaliers du Saint-Sépulcre, ils étaient dispensés de toute autre obligation militaire que la lutte contre l’Islam et conservaient leur butin. En 1122, dans le même esprit, Alphonse Ier fonda la Confrérie des Chevaliers de Belchite, bénie par Gui de Lons, évêque de Lescar et compagnon du roi et de Gaston. Belchite, déjà occupée avant la chute de Saragosse, servit de refuge à des aventuriers devenus défenseurs disciplinés du christianisme. Leur objectif était « d’ouvrir la route de Jérusalem et de libérer l’Église captive », en visant les territoires musulmans de Tortosa, Murcie et Almería. Les membres se divisaient en perpétuels, liés par les vœux de chasteté, pauvreté et obéissance, et en temporaires, engagés pour une durée limitée. L’Église, autrefois méfiante envers la guerre, intégrait désormais l’idée que le combat pouvait servir Dieu. Ce mouvement annonçait la création des Templiers, Hospitaliers et Teutoniques, mais ses racines se trouvent en Aragon et en Béarn. Les projets de Gaston et d’Alphonse anticipaient ce modèle, sans fonder de véritables moines-soldats, ils inventèrent une forme de laïcs voués temporairement à la guerre sainte. Ce n’est qu’en 1119, avec Hugues de Payens, que naquirent les Pauvres Chevaliers du Christ, futurs Templiers. Sous l’influence de Saint Bernard de Clairvaux, en 1128, ils devinrent un véritable ordre religieux, inspirant ensuite les Hospitaliers. Gaston et Alphonse avaient donc précédé cette révolution spirituelle, proposant un modèle ibérique et béarnais du combattant chrétien. Dès 1119, Belchite fut confiée à Galindo Sanchez, qui mena ses « chevaliers des palmes » au combat aux côtés de Gaston le Croisé. Cette organisation s’inscrivait dans le contexte bouillonnant suivant la victoire d’Alphonse Ier à Cutanda, il fallait fortifier les territoires conquis face aux Almoravides. Le roi multiplia alors les campagnes entre Aragon et Castille, fortifia Soria, réorganisa les évêchés et installa des colons à Daroca et Calatayud. La création de l’Hermandad de Belchite, confirmée par une assemblée d’évêques et d’archevêques, témoigne du contrôle ecclésiastique sur cette entreprise.
+         </p>
+          </div>
+        )
+      },
+  {
+        titre: "Relations politiques et dernières campagnes",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          En 1123, Alphonse Ier quitta Belchite pour se rendre en Béarn, après un séjour à Lérida, où ses ambitions s’opposaient à celles du comte de Barcelone, Ramon Bérenguer III.
+Ce dernier avait passé un accord avec le gouverneur musulman Abifilel, plaçant Lérida sous sa protection en échange d’un futur établissement aux Baléares. Alphonse, ne voulant pas compromettre ses alliances, abandonna le projet catalan et se dirigea vers le Somport, où il rendit visite à Gaston de Béarn à Morlaàs. Cette rencontre, à la fois amicale et politique, marqua leur volonté commune de contrer les ambitions de Barcelone et de préserver l’équilibre des forces pyrénéennes. En 1124, Gaston ne résidait plus en Béarn mais en Aragon, accompagné de son épouse Talèse et de leur fils Centulle. Une charte de cette année atteste qu’il céda à Arnaud de Lavedan une propriété à Saragosse, transaction confirmée par Centulle.
+Cette mention situe la famille dans la capitale du royaume aragonais, tandis qu’Alphonse Ier menait encore campagne en Navarre, en Ribagorce, en Castille et jusqu’à l’Extramadure aragonaise. Au printemps 1124, le roi poursuivit ses expéditions : attesté à Daroca en mars, à Logroño en mai, puis à Monreal del Campo en septembre pour installer des colons. En hiver, il lança une audacieuse expédition vers le sud, un raid jusqu’à la Peña Cadiella, reliant les huertas de Valence et Murcie, confirmant son ardeur militaire et la continuité de la reconquête. Le frère du roi d’Aragon, Pierre Ier, avait autrefois assiégé Huesca, aidé par le Cid et le jeune Alphonse. Devenu « roi de l’Extramadure aragonaise », ce dernier concrétisa enfin son projet de confrérie de Belchite : ouvrir au christianisme la route vers la Palestine en sécurisant le littoral de Valence. Il s’y rendit avec Gaston de Béarn, Gui de Lons, Rotrou du Perche, plusieurs chevaliers normands et aragonais, ainsi que l’évêque béarnais de Saragosse, Pierre de Librana. Ce fut sans doute la première expédition de la confrérie, symbole d’une alliance totale entre foi, guerre et fraternité pyrénéenne. Après avoir repoussé une contre-attaque ennemie au col de la Peña Cadiella, les Croisés, menés par Alphonse Ier le Batailleur et accompagnés peut-être de Gaston de Béarn, durent se replier. Revenu à Ayerbe et Uncastillo, dont Gaston restait seigneur en janvier 1125, le roi d’Aragon prépara une ambitieuse expédition vers la Méditerranée, appelée Huestes de España par l’historien Menéndez Pidal. Cette campagne, comparée plus tard à celles du Prince Noir ou même à la chevauchée de Charlemagne, visait à frapper le cœur d’al-Andalus. Les chroniqueurs Ibn-ʿAç-Caifari, Orderic Vital, la Crónica de San Juan de la Peña et la Crónica de los Estados peninsulares en firent un modèle de croisade, soulignant les parallèles entre Charlemagne à Saragosse (778) et Alphonse à Grenade (1125). Dans les deux cas, les souverains furent incités par des émissaires venus d’al-Andalus à intervenir en terre musulmane. 
+       </p>
+          </div>
+        )
+      },
+       {
+        titre: "L'expédition vers la Méditerranée",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Les Mozarabes de Grenade, longtemps tolérés sous domination musulmane, furent brutalement persécutés à partir de 1099 sur ordre de l’émir Yusuf ben Tachfin, exécuté par des alfaquis rigoristes. Ces chrétiens d’al-Andalus appelèrent à l’aide Alphonse Ier, loué pour ses victoires. Ils lui envoyèrent lettres et registres vantant la richesse de Grenade, ses vergers, sa soie, son alcazaba, pour éveiller sa convoitise. Influencé par le précédent du Cid à Valence, Alphonse vit dans cette opportunité un moyen de restaurer la gloire chrétienne et d’établir un territoire vassal dans le sud, attirant des colons du nord. L’Aragon, jusqu’alors éclipsé par la Castille, pouvait enfin affirmer sa puissance et jouer un rôle décisif dans la Reconquista. L’armée, forte de 3 000 à 5 000 cavaliers aragonais, navarrais et castillans, rassemblée à Jalón, comptait parmi ses chefs Gaston IV de Béarn, véritable chef d’état-major, Centulle de Bigorre, et plusieurs évêques, dont Pierre de Saragosse et Étienne de Huesca. Le plan, tenu secret, visait Grenade. Partis de Daroca et Cella, ils atteignirent Valence le 20 octobre. Malgré l’alerte almoravide, de nombreux Mozarabes se joignirent à eux. L’armée contourna Valence, attaqua Denia sans succès, traversa Murcie par les gorges de Játiva et Peña Cadiella, puis marcha vers Vera, Almazoran, Purchena, et fit halte à Tijola avant d’échouer à Baeza, dépourvue de murailles. Cette longue chevauchée démontra la vaillance des croisés, malgré l’absence de résultats décisifs. Arrivés à Guadix, Alphonse et Gaston restèrent un mois avant de marcher sur Grenade. Prévenu, le gouverneur Abou-l-Tahir ibn Yousof mobilisa la défense, renforcée par une armée venue d’Afrique. Un complot chrétien interne, découvert à temps, fut réprimé, ruinant les espoirs d’un soulèvement. Privés de matériel de siège et d’appui maritime, les croisés établirent leur camp le 7 janvier 1126, affrontant froid et manque de vivres. Alphonse espéra une trahison interne, mais les Mozarabes, expulsés ou surveillés, restèrent inactifs. Après dix jours infructueux, la situation se dégrada : pluie, gel, pénurie et isolement contraignirent Alphonse à lever le siège le 23 janvier. Dix mille Mozarabes furent expulsés de Grenade et rejoignirent l’armée chrétienne. Changeant de stratégie, Alphonse ravagea les environs de Grenade et de Cordoue, cherchant l’affrontement. Son itinéraire, attesté à Macarena, Baena, Espejo et Lucena, mena à la bataille d’Anzul le 10 mars 1126 contre les troupes almoravides d’Abu-Bakr, fils de l’émir. Les musulmans, d’abord victorieux, furent pris de panique et battus : leur camp fut pillé, et l’armée chrétienne remporta une victoire éclatante. Cependant, faute de renforts, Alphonse et Gaston durent envisager le retour, non sans mener encore quelques incursions avant leur repli définitif. Traversant les montagnes des Alpujarras jusqu’à Motril, Alphonse et Gaston affirmèrent brièvement la présence chrétienne en Andalousie. Ibn-ʿAç-Caifari rapporte un geste symbolique du roi, jetant un objet du haut d’une falaise avant d’y bâtir une tour, interprété comme un vœu religieux. Le retour fut désastreux : attaques musulmanes, peste, froid, faim. De nombreux chevaliers périrent, dont l’évêque Raymond de Roda, mort d’épuisement le 21 juin à Huesca. Malgré tout, Alphonse et Gaston rentrèrent chargés de butin et de prisonniers, se glorifiant d’avoir infligé de lourdes pertes à l’ennemi.      </p>
+          </div>
+        )
+      },
+
+      {
+        titre: "L’expédition de 1126",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         L’expédition menée par Alphonse Ier le Batailleur et Gaston IV de Béarn en 1126, attestée dans la région de Tudèle, fut une entreprise aussi héroïque que désastreuse. Leur bravoure fut unanimement saluée, mais les pertes humaines et politiques furent lourdes. Plutôt qu’une conquête progressive autour de l’Èbre, cette campagne alarma les Almoravides, qui préparèrent une revanche. Les chroniqueurs, tels que San Juan de la Peña et Orderic Vital, rapportent que malgré la vaillance des chrétiens, aucune ville fortifiée ne fut prise, les campagnes seulement ravagées, et la majorité des guerriers périrent. Cette chevauchée, qui dura plus d’un an sur le territoire musulman, eut aussi des conséquences tragiques pour les Mozarabes : beaucoup furent déportés au Maroc, tandis que les survivants participèrent au repeuplement de la vallée de l’Èbre. L’expédition marqua la fin des grandes campagnes communes d’Alphonse et de Gaston, dont le courage fut reconnu dans la charte d’Alfaro, signée par Gaston comme seigneur d’Uncastillo. Se proclamant « empereur par la grâce de Dieu », Alphonse Ier déclara libres tous les chrétiens mozarabes qu’il avait arrachés à la domination sarrasine. Ils reçurent la protection spéciale des fueros, furent installés sur des terres royales, exemptés d’impôts et de service militaire, et bénéficièrent d’une large autonomie judiciaire. Les litiges internes restaient du ressort de leurs communautés, le roi n’intervenant qu’en cas de conflit externe. Ces privilèges visaient à intégrer les Mozarabes tout en récompensant leur fidélité. À leur retour de campagne, Alphonse et Gaston durent cependant affronter de nombreuses difficultés dans la gestion de leurs domaines, marquant le début de la dernière phase de leur alliance politique.  La mort de la reine Urraca, le 8 mars 1126, provoqua une crise : son fils, Alphonse-Ramírez, devint Alphonse VII de Castille et Léon, déclenchant un conflit avec son beau-père, Alphonse Ier d’Aragon. La paix de Tamara régla la querelle : le roi d’Aragon reconnut la succession et le titre impérial d’Alphonse VII, tout en conservant l’Alava, Soria et la région jusqu’à San Esteban de Gormaz. Durant cette période, Gaston IV de Béarn, demeuré dans ses terres, prit d’importantes initiatives spirituelles. Le 6 avril 1128, avec son épouse Talèse, il fonda le prieuré de Sauvelade, rattaché à Sainte-Christine du Somport, puis, le 13 juin, confia à cet établissement la gestion de l’hôpital de Mifaget, créé entre 1110 et 1114. Ayant perdu leur fils unique, Centulle, le couple rédigea un acte de fondation dédié à la Sainte-Trinité, implorant la grâce d’un nouvel héritier, exaucée peu après par la naissance d’un nouveau fils, nommé lui aussi Centulle.
+          </p>
+          </div>
+        )
+      },
+   {
+        titre: "La mort de Gaston",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Tandis que Gaston gérait ses affaires en Béarn, Alphonse poursuivit ses guerres, lançant en juin 1128 une expédition contre Valence. Après avoir ravagé Alcira et le col de Cullera, il remporta une victoire éphémère qui provoqua la colère de l’émir almoravide Ali ben Yusuf. Sans résultat durable, le roi retourna en Aragon. C’est vers la fin de 1129 qu’Alphonse et Gaston se rencontrèrent pour la dernière fois. Leur dernier acte commun date de septembre 1129, lorsqu’ils accordèrent des privilèges aux Francs installés à Pampelune. Gaston y signa comme seigneur de Saragosse, tandis qu’Alphonse, parti dans le val d’Aran, confia la régence au prélat Étienne de Huesca. Selon les Annales d’Aragon de Zurita, en 1131, les Maures tuèrent Étienne et Gaston, sans précision du lieu. L’historien Marca évoque une trahison, tandis qu’Ibn-Idhari précise qu’en 1130–1131, le chef almoravide Tashfin mena campagne à Jaén et Grenade, où Gaston fut vaincu par Yintan Ali. Sa tête fut exhibée dans les rues de Valence, puis envoyée à l’émir Ali ben Yusuf à Marrakech. Appelé par les musulmans « l’émir des chrétiens », il fut considéré comme un ennemi valeureux. Sa tête, plantée sur une pique et montrée dans les rues de Grenade, symbolisait la revanche musulmane, mais aussi leur respect pour un adversaire redouté. Son corps, restitué après négociation, fut inhumé sous le porche de Santa Maria la Mayor à Saragosse. Le roi d’Aragon apprit la mort de Gaston alors qu’il assiégeait Bayonne (1130–1131). Resté longtemps dans le val d’Aran pour affirmer son autorité, il lança ce siège avec l’aide de ses vassaux du nord des Pyrénées : Pierre, vicomte de Marsan et de Gabarret (gendre de Gaston), Gassion vicomte de Soule, et les Béarnais, dont le jeune Centulle VI, représenté par sa mère Talèse et par Gui de Lons, évêque de Lescar. L’assaut manqué contre Bayonne s’inscrit dans le contexte des rivalités féodales entre Barcelone et Toulouse. Tandis qu’Alphonse-Jourdain, comte de Toulouse, se rapprochait d’Alphonse VII de Castille, une coalition anti-aragonaise se forma. Avant de lever le siège, Gaston, ou son entourage, rédigea un testament prévoyant une nouvelle offensive entre Tortosa, Lérida et Fraga, dirigée contre les Almoravides et les Barcelonais. L’émir Ali ben Yusuf, jugeant Gaston le plus dangereux adversaire d’Alphonse, conclut un pacte avec Barcelone : contre 12 000 dinars annuels, les Catalans se placèrent sous protection musulmane. Outré, le roi d’Aragon accusa Barcelone de trahir la chrétienté, jurant de les soumettre et d’incorporer leur pays à son royaume.   </p>
+          </div>
+        )
+      },
+       {
+        titre: "La bataille de Fraga et Centulle VI",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Depuis plusieurs années, Alphonse Ier d’Aragon, préparait une offensive décisive dans la vallée de l’Èbre, zone stratégique souvent ravagée par la cavalerie musulmane. Dès 1125, Garcia-Ramirez, futur roi de Navarre, avait repris Monzon, ouvrant la voie à une série d’opérations pour sécuriser les confins orientaux du royaume. En novembre 1132, Alphonse fit construire une flottille pour attaquer l’Èbre, s’empara de Mequinenza, transformée en base militaire, et concentra ensuite ses efforts sur Tortosa, espérant qu’en tombant, elle entraînerait Lleida. Âgé d’une soixantaine d’années et marqué par la mort de Gaston de Béarn, il conçut cette campagne comme une ultime croisade, animée par la ferveur et la rédemption. Il réunit ses vassaux et alliés : Aimeri de Narbonne, Garcia-Ramirez de Navarre, Rodrigue des Asturies, et surtout Centulle VI de Béarn, fils de Gaston. La régente Talèse, veuve de Gaston, renforça les liens entre Béarn et Aragon en affiliant l’abbaye de Sauvelade à Sainte-Christine du Somport et en offrant les biens d’Ayerbe. Les Béarnais, conduits par Gui de Lons, évêque de Lescar, participèrent activement, aux côtés de Gassion de Soule et Oger de Miramont. Privés du soutien du comte de Bigorre, demi-frère de Gaston, ils se placèrent sous la direction spirituelle de Gui, gardien du Lignum Crucis de Sahagun. Avant le siège, Alphonse fit prêter à ses chevaliers serment de ne jamais quitter Fraga avant sa conquête. L’entreprise était redoutable : la ville, naturellement protégée, possédait un réseau de souterrains permettant des sorties surprises. La garnison, bien armée, savait qu’aucune pitié ne viendrait d’Alphonse, devenu impitoyable depuis la mort de Gaston, comme l’avait montré l’exécution des défenseurs de Mequinenza. Le gouverneur de Fraga appela alors Ibn Ganya, maître de Valence et Murcie, qui accourut avec une armée de secours. Le 17 juillet 1134, les renforts musulmans encerclèrent les croisés : la bataille tourna à la catastrophe. Deux récits marquèrent les esprits : un moine, promettant l’aide divine, fut tué net par un projectile alors qu’il priait, et, selon Orderic Vital, une caravane almoravide de 200 chameaux chargés d’or attira les chrétiens dans un piège meurtrier. Les musulmans, experts en tactiques andalouses, feignirent une attaque frontale avant de refermer leur tenaille, tandis que la garnison surgissait des galeries pour achever la déroute. Ce qui devait être une victoire devint une défaite totale : le comte Beltran périt, ainsi que Centulle VI, dernier héritier de Gaston. Les musulmans s’emparèrent du camp chrétien et du Lignum Crucis, défendu jusqu’au bout par Gui de Lons, capturé, emmené à Valence, puis libéré contre rançon, mais aveuglé. Ce fut la première et unique défaite d’Alphonse le Batailleur. Tentant d’en limiter les conséquences, il nomma son frère Ramire, évêque de Roda, à la tête du royaume et redistribua des fiefs à Mequinenza et Huesca pour compenser les pertes. Épuisé, Alphonse rédigea son testament le 4 septembre 1134 et mourut trois jours plus tard, inhumé dans le cloître de Saint-Pierre-le-Vieux de Huesca, dans un tombeau simple, fidèle à sa vie de soldat du Christ. Sous son règne, l’Aragon devint une puissance majeure, rivalisant avec la Castille, tandis que le Béarn, bien que lié à l’influence aragonaise, conserva son autonomie féodale. Les fresques romanes de Saint-Lizier (vers 1117), illustrant la Jérusalem céleste, rappelaient que la vie terrestre n’avait de sens qu’orientée vers la foi et la dignité. </p>       </div>
+        )
+      },
+      
+
+    ]
+  },
+   'aragon': {
+    titre: "Tutelle Aragonaise",
+    periode: "Temps Féodaux",
+    resume: "Le Béarn évolue sous l’influence des rois d’Aragon",
+    introduction: "La vicomté s’inscrit dans la sphère aragonaise...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      {
+        titre: "Rivalités et Alliances autour des Pyrénées",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+              En 1112, Raimond-Bérenger III, père du futur fondateur de l’union entre la Catalogne et l’Aragon, épousa Douce de Provence. Cette alliance provoqua une vive rivalité avec la maison de Toulouse, maîtresse du Languedoc et du bas-Rhône. Le conflit se régla en 1125 : Raimond-Bérenger III obtint des compensations, puis son fils Raimond-Bérenger IV (1131–1134) devint prince d’Aragon (1137), réalisant ainsi l’union dynastique entre les deux principautés. La maison de Toulouse, affaiblie, chercha alors le soutien d’Alphonse VII de Castille, tandis que les Catalans s’imposaient. Malgré une trêve, la Provence fut ravagée par les guerres des Baussenques. La crise s’acheva avec la reprise des hostilités par Raimond-Bérenger IV dans la vallée de l’Èbre. En 1135, le comte de Toulouse, Alphonse-Jourdain, allié à Guilhem VI de Montpellier ainsi qu’aux comtes de Foix et de Comminges, tenta de résister à l’expansion aragonaise. Cependant, après la mort du roi de Castille à Pâques 1135, Toulouse se retrouva isolée face aux ambitions catalanes renforcées par le mariage du nouveau vicomte de Béarn avec une fille de Barcelone. Dans le même temps, les Almoravides, après avoir conquis l’Extramadure aragonaise et menacé Saragosse, durent faire face à une double pression : celle de l’opposition du Maghreb et de l’offensive des Almohades, qui les accusaient de déviation juridique et de collusion avec des mercenaires chrétiens. Ces derniers leur déclarèrent le jihad.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "Crise de Succession en Aragon",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+             Avant sa mort, le roi d’Aragon et de Navarre, Alphonse le Batailleur, légua tout son royaume aux ordres militaires, Hospitaliers, Templiers et Chevaliers du Saint-Sépulcre, pour assurer la défense de la Terre sainte et écarter son frère Ramire le Moine de la succession. Cette décision, jugée irréaliste, alarma les seigneurs aragonais, conscients qu’elle priverait le pays d’un souverain au profit d’ordres religieux plus préoccupés par Jérusalem que par les affaires locales. À la mort du Batailleur, une crise éclata : la noblesse reconnut finalement Ramire le Moine comme roi, bien qu’il fût moine, tandis qu’Alphonse VII de Castille tenta d’imposer ses droits sur l’Aragon en invoquant sa descendance royale. Ramire, soutenu par la noblesse, fut couronné en 1135 et dut affronter les ambitions castillanes ainsi que la poussée des Almoravides. Pour rétablir l’ordre, il annula le testament du Batailleur, conclut des compensations avec les ordres militaires et quitta la vie religieuse pour se marier, afin d’assurer une descendance. Sur les conseils des nobles, il épousa Agnès de Poitou, fille de Guillaume IX d’Aquitaine. Grâce à une dispense papale, ils eurent une fille unique, Pétronille d’Aragon, assurant la continuité dynastique.
+            </p>
+          </div>
+        )
+      },  {
+        titre: "Le Béarn et la Maison de Gabarret",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Centulle VI, resté fidèle à Alphonse le Batailleur, fut tué lors du désastre de Fraga. La succession passa à sa sœur Guiscarde, veuve mariée à Pierre II, vicomte de Marsan, garantissant la continuité du pouvoir local malgré les tensions régionales. Leur fils mineur, Pierre III de Gabarret, fut placé sous la tutelle de sa grand-mère Talèse, veuve de Gaston le Croisé. Cependant, Talèse, s’étant opposée à Ramire le Moine, perdit ses droits sur Saragosse et Uncastillo, car les « honores » aragonais, grands fiefs non héréditaires, relevaient du roi à la mort de leur détenteur. En 1137, face aux tensions avec Alphonse VII de Castille, les nobles d’Aragon se tournèrent vers Raimond-Bérenger IV, comte de Barcelone, et décidèrent de fiancer le jeune seigneur à Pétronille d’Aragon, fille de Ramire, dont il devint le tuteur et le régent. Ce mariage permit à Ramire de se retirer du pouvoir et d’assurer la continuité dynastique tout en apaisant la noblesse. Raimond-Bérenger IV, désormais « prince d’Aragon », reprit contact avec Talèse, dernière témoin de la prise de Saragosse, et lui confirma certains fiefs et droits sur Huesca, Bespen et la basilique du Pilar, où reposait son mari. Dans le même temps, le jeune Pierre III de Gabarret, vicomte de Béarn, épousa Mathes des Baux de Provence, cousine du comte de Barcelone. À la mort de Talèse, Guiscarde assura la régence du Béarn.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "Les Chevalières de Tortosa",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Le premier objectif de Raimond-Bérenger IV (comte de Barcelone) fut la prise de Tortosa (1148). Isolé, le gouverneur musulman de la ville fut contraint de capituler, entraînant l'année suivante la reddition de Lleida et de Fraga (1149). Cependant, lors du départ du comte de Tortosa, les Maures tentèrent de reprendre la ville par surprise, profitant de l’absence des soldats. Face à cette menace, les femmes laïques de Tortosa prirent les armes, notamment des haches, et contraignirent les assaillants musulmans à lever le siège. Impressionné par leur bravoure, le Comte fonda en 1149 (ou 1150) l’Ordre de la Hache afin de les honorer. Les chevalières de cet ordre obtinrent également des privilèges, dont l’exemption de certaines taxes. Au même moment, Pierre II de Béarn (Pierre de Gabarret), petit-fils de Talèse, vit dans ces événements la continuité des exploits de Gaston le Croisé. Il conclut un accord avec Raimond-Bérenger IV, échangeant ses droits sur Huesca contre la seigneurie de Fraga, renforçant ainsi l'implication du Béarn dans la Reconquista aragonaise.
+           </p>
+          </div>
+        )
+      },  {
+        titre: "Le Béarn dans la Couronne d'Aragon et la Gascogne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Ducs de Gascogne depuis 1152, les rois d’Angleterre n’eurent pas le loisir de s’occuper du Béarn pendant presque un siècle. Chercher à arracher ce petit fief pyrénéen à la mouvance aragonaise aurait été une aventure périlleuse, au moment où ils devaient concentrer leurs forces contre la puissance capétienne. L’effondrement de l’hégémonie catalane au nord des Pyrénées après Muret créa un vide que les rois d’Angleterre purent prétendre combler en Béarn. Ils attendirent cependant 1228 pour affirmer que cette seigneurie avait toujours fait partie de la Gascogne, et pour réclamer l’hommage de ses vicomtes. Pierre III ne demeura pas longtemps seigneur de Fraga. En 1153, il fonda un hôpital à Ordios pour les pèlerins de Compostelle en route vers Roncevaux. Il mourut peu après, laissant deux jeunes enfants, Gaston et Marie, placés sous la tutelle de leur grand-mère qui mourut à son tour en 1154, l’année où Henri II Plantagenêt devint roi d’Angleterre après son mariage avec Aliénor d’Aquitaine (1152), sans l’accord du roi de France, provoquant un conflit féodal. Louis VII convoqua le couple pour trahison et confisqua leurs terres. Aliénor et ses fils consolidèrent la puissance ducale et transformèrent les institutions aquitaines en faveur du pouvoir central. Ils devaient concentrer leurs forces contre la puissance capétienne, donc dans les régions excentrées comme le Béarn, l’autorité ducale s’affaiblit progressivement, et la vicomté glisse hors de la mouvance gasconne. D'ailleurs en 1154, une délégation béarnaise d’environ 120 personnes franchit le col du Somport pour se rendre à Canfranc et prêter serment à Raimond-Bérenger, comte de Barcelone et prince d’Aragon, accompagné de son vassal Pierre, comte de Bigorre. Cette délégation, réunissant toutes les composantes de la société béarnaise, témoigne de la structure politique et sociale du pays. Tous prêtèrent serment d’hommage et de fidélité à Raimond-Bérenger, devenu tuteur légal de Gaston et Marie, et régent du Béarn, une sorte d’usurpation des droits du duc de Gascogne-Aquitaine.  Cependant, l’hommage ne liait les Béarnais qu’envers Raimond-Bérenger IV et non envers ses successeurs. Les rois d’Aragon ne tinrent pas compte de cette restriction, considérant le Béarn comme un nouvel élément de leur mouvance. Raimond-Bérenger prit à ses côtés le jeune Gaston V et sa sœur Marie, qui résidèrent à Barcelone. Lorsqu’un conflit grave éclatait en Béarn, le roi le réglait depuis la Catalogne, peut-être en déléguant ses pouvoirs à un représentant local. Les Béarnais conservaient probablement une certaine autonomie sous cette tutelle royale. En 1158, Henri II valida la dérive politique du Béarn en signant une alliance avec Raimond-Bérenger IV d’Aragon. Après avoir conquis la basse vallée de l’Èbre, Raimond-Bérenger acheva la Reconquista dans cette région et chercha à renforcer son autorité au nord des Pyrénées, notamment à travers l’hommage de Canfranc. 
+ </p>
+          </div>
+        )
+      },  {
+        titre: "Les Tensions avec Toulouse",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+           Après la chute des Almoravides, les Almohades devinrent les nouveaux maîtres du sud de l’Espagne. Après 1155, Ibn Mardanis, fondateur du royaume de Murcie, ouvre son territoire aux marchands chrétiens suite à un accord avec Raimond-Bérenger IV, tout en luttant contre les Almohades. Pendant ce temps, la Castille s’affaiblissait. Après la mort d’Alphonse VII en 1157, le royaume fut divisé entre ses fils Sanche (Castille) et Ferdinand (Léon). La mort prématurée de Sanche laissa le trône à un enfant, Alphonse VIII, plongeant la région dans les guerres civiles et les rivalités nobiliaires. Cette instabilité freina la reconquête chrétienne et poussa la Navarre et le Léon à attaquer les frontières castillanes. Pour défendre les routes stratégiques, notamment entre Tolède et Cordoue, fut fondé l’ordre militaire de Calatrava. Malgré quelques succès, les Almohades reprirent l’avantage dès 1158. Profitant de ce contexte, Raimond-Bérenger IV chercha à étendre son influence vers le nord, notamment sur le Toulousain. En 1158, il rencontra Henri II Plantagenêt à Blaye pour consolider leur alliance. L’année suivante, en 1159, le comte de Toulouse fut encerclé par une armée anglo-gasconne dirigée par Henri II, soutenue par les Catalans et plusieurs seigneurs méridionaux. Le Quercy fut ravagé et Toulouse assiégée, mais Louis VII intervint pour défendre la ville, empêchant la victoire anglo-aragonaise. Malgré cet échec, Raimond-Bérenger tenta de maintenir son contrôle sur la Bigorre et le Béarn. Ensuite, en 1162, après la mort de Raimond-Bérenger IV, son fils Alphonse II d’Aragon poursuivit sa politique d’expansion, consolidant l’intégration des pays pyrénéens du nord à la Couronne d’Aragon. En 1169, Henri II donna le Poitou et l’Aquitaine en apanage à son second fils Richard. En 1170, sa sœur Aliénor, mariée à Alphonse VIII de Castille, apporta en dot les droits de son père sur la Gascogne, preuve qu’Henri II considérait déjà que le Béarn était sorti de sa mouvance. Cette indifférence anglaise favorisa l’audace d’Alphonse II d’Aragon, qui exigea en 1170 de Marie de Béarn un hommage non seulement pour le Béarn, mais aussi pour le Gavardan et le Brulhois. Ce geste permit au roi d’Aragon de s’affirmer face à son rival castillan, Alphonse VIII, qui, par son mariage avec Aliénor, pouvait avoir des prétentions sur ces fiefs. À la mort de Gaston V de Béarn en 1170, sans héritier direct, sa sœur Marie, célibataire et élevée en Catalogne, lui succéda. Alphonse II d’Aragon réagit aussitôt pour s’imposer comme son suzerain, lui choisissant pour époux un Moncade, puissant seigneur catalan, afin de mieux contrôler la vicomté.
+            </p>
+          </div>
+        )
+      },
+       {
+        titre: "La Naissance des Moncade-Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          La puissance des Moncade découle de la réunion de deux lignages : celui de Castelviel de Rosanes et celui de Montecada, seigneurs de Castelviel, de Vich et de Gérone. Guillaume-Raymond Iᵉʳ (1045–1120), sénéchal de Catalogne, transmit sa charge à son fils Guillaume-Raymond II (1090–1173), proche conseiller et diplomate de Raimond-Bérenger IV de Barcelone. Celui-ci épousa d’abord Béatrice de Montcada, issue d’une autre branche du lignage, ce qui permit la réunion de nombreux domaines autour de Vich, Gérone et Osone, incluant plusieurs châteaux et droits seigneuriaux. Alliés à la famille de Castelviel de Rosanes, les Montcada consolidèrent leurs positions près de Barcelone, notamment autour de Martorell, et entretinrent des liens étroits avec l’abbaye de Montserrat. Guillaume-Raymond II, également sénéchal de Catalogne, renforça l’alliance avec la Couronne en mariant son fils cadet Guillaume-Raymond III à Marie de Béarn vers 1171, avec l’accord du roi d’Aragon. La rencontre décisive eut lieu à Jaca le 30 avril 1170. Marie de Béarn s’y rendit avec une délégation béarnaise, tandis qu’Alphonse II d’Aragon, entouré de nombreux évêques aragonais, fit valoir ses droits sur la vicomté. L’acte d’hommage stipulait explicitement que Marie reconnaissait tenir le Béarn du roi d’Aragon, promettant fidélité et service, et cédant en gage plusieurs châteaux stratégiques : Escurès, Cadillon, Morlaàs, Gabaret. Les évêques de Lescar et d’Oloron jurèrent eux aussi fidélité à Alphonse II, y compris contre leur propre souveraine si elle rompait son serment. Après un nouvel hommage rendu à Saragosse, Marie de Béarn se retira dans un couvent à Montesquieu-Volvestre, après la naissance de ses jumeaux, Gaston et Guillaume-Raymond, nés en 1173. L’aîné, Gaston VI, fut désigné héritier du Béarn. Leur père, Guillaume de Montcada, ne fut pas nommé tuteur afin de ménager la sensibilité des Béarnais ; il perdit de ce fait ses fonctions de vicomte par alliance. La domination aragonaise se renforça alors : le jeune Gaston VI (1173–1214) fut placé sous la tutelle de Pélégrin de Castellarzuelo, seigneur de Barbastro, confirmant la mainmise de la Couronne d’Aragon sur le Béarn. Bien que cette tutelle étrangère ait suscité des réticences, elle fut maintenue grâce à la légitimité du lignage des Gabarret. Gaston VI rendit hommage au roi à Huesca en 1187 pour la vicomté de Béarn. Cependant, les terres de Gabardan et du Brulhois restèrent rattachées au duché d’Aquitaine, selon une clause de réserve. Ainsi, Gaston VI était vassal du roi d’Aragon pour le Béarn, mais demeurait vassal des ducs de Gascogne (notamment Richard de Poitiers) pour ses possessions du nord, préservant ainsi la personnalité politique distincte du Béarn, à une époque où l’expansion catalane s’étendait au Roussillon, à la Cerdagne, au Razès et au Lauragais, sous l’impulsion d’Alphonse II contre Raymond V de Toulouse et avec l’appui d’une alliance avec les Plantagenêt.  </p>
+          </div>
+        )
+      },
+       {
+        titre: "Les Alliances sous Gaston VI",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Centulle III de Bigorre, fils de Pierre et de Béatrix II, petit-fils de Centulle, demi-frère de Gaston le Croisé, épousa Matelle (Hatelle), parente du roi Alphonse II d’Aragon. Ce dernier lui fit en 1175 donation de la vallée d’Aran, située dans le diocèse de Comminges mais sous domination espagnole. Leur fille Étiennette épousa Bernard de Comminges, et leur fille Pétronille fut élevée à la cour du roi d’Aragon, en attente de mariage, renforçant encore les liens entre la Bigorre, le Béarn et la monarchie aragonaise. En 1179, Richard Cœur de Lion chercha à rétablir son autorité sur les marges méridionales de son duché, notamment la Gascogne. Il battit et emprisonna Centulle de Bigorre pour avoir attaqué le vicomte de Dax, allié de Richard. À la demande du roi d’Aragon, désormais allié à Richard après un rapprochement avec le roi de Castille, Centulle fut libéré, scellant ainsi une réconciliation politique. En 1183, lorsque Bertrand de Born souleva une révolte contre Richard, Alphonse II prit son parti, sans aller jusqu’à la rupture totale. En 1181, Gaston VI se rendit à Bordeaux pour sceller une alliance entre la maison de Béarn et les Plantagenêt contre Toulouse, obtenant également celle de Bernard IV de Comminges. Le serment d’hommage de Gaston à Alphonse II, prononcé solennellement à Huesca, affirma sa fidélité et celle de ses successeurs aux rois d’Aragon. Vers 1170, Alphonse II avait prévu le mariage de Guillaume Moncade avec Marie de Béarn, consolidant encore cette union politique et étendant son influence jusqu’au Brulhois et au Gabardan, renforçant ainsi les liens entre le Béarn, l’Aquitaine et l’Aragon. 
+          </p>
+          </div>
+        )
+      },
+
+        {
+        titre: "L'Hérésie",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Juif hellénisé d'Alexandrie (comme Arius) du 1er siècle, Philon appartient à l'élite (son frère est un banquier richissime, l'Alabarch). Pour Philon, Dieu est trop pur pour toucher la matière. Il a donc besoin d'un intermédiaire : le Logos ("second dieu", hypostase);  Il a conduit une ambassade auprès de l'empereur Caligula. Son neveu, Tiberius Julius Alexander, a apostasié (quitté le judaïsme) pour devenir général romain et a même aidé Titus à détruire Jérusalem... L’Église condamnera Arius et le gnosticisme. Au 13e siècle, l'Occitanie est le point d'arrivée de deux influences, l'Espagne qui apporte la philosophie arabe et juive et l'Orient, via l'Italie et les Balkans (Les Bogomiles, ancêtres des Cathares, viennent de Bulgarie/Byzance avec des idées dualistes). On assiste à une résurgence du Gnosticisme antique. Contrairement aux mages qui s'agenouillent devant Jésus, Simon le magicien, lui, veut acheter le pouvoir du Saint-Esprit pour sa propre gloire. Il refuse la soumission. Ce Simon voyageait avec une ancienne prostituée, Hélène, qu'il a trouvée à Tyr ( l'incarnation de la "Pensée Divine" (Ennoia), tombée dans la matière et prostituée à travers les siècles (elle aurait été Hélène de Troie). Lui, Simon, serait la "Grande Puissance" venue la sauver). Cette idée de "l'âme prisonnière de la matière" vient du fond zoroastrien et perse (cœur du gnosticisme), donner naissance est un crime car c’est enfermer quelqu’un dans un cycle de réincarnation, le salut ne vient pas de la foi ou de la loi, mais de la Connaissance et de la réunion magique du masculin et du féminin. Le serpent qui est allé voir la femme lui aurait donné les secrets pour vaincre le “méchant” Dieu (l’éveil vers la connaissance se ferait par la femme sauf que quand il se fait, ce “démiurge”, méchant, provoque par exemple la Tour de Babel). Simon se faisait appeler Zeus, qui dans la mythologie grecque, comme les autres s’étaient détachés de Dieu (en Amérique ils vénéraient des dieux-serpents, les chinois eux, des dragons..), Prométhée vole le savoir à Zeus (le roi des dieux) et le donne aux humains (volonté du diable). Les initiations se sont poursuivies (avec 3 étapes en tout) auprès des élites hellénistes, souvent via des mots de passe secrets (Basilidiens), par des actes horribles proches de ceux de Simon (Débauche), les Pérates (serpent guérisseur), les Caïnites (pro-science) ou les Barbélognostiques (là c'est carrément l'homosexualité, car le serpent aurait pénétré Adam comme Eve, ils consommaient le sperme et le sang menstruel en disant : "Ceci est le corps du Christ" et "Ceci est le sang du Christ"). Pour eux, offrir ces fluides à Dieu permettait de libérer l'âme qu'ils contenaient avant qu'elle ne soit emprisonnée dans un enfant, le monde matériel est une prison créée par le mauvais Dieu, faire des enfants était le pire des crimes (car cela emprisonnait une nouvelle âme, pratique de l'avortement ! ). L'ouvrage juif, Livre de la Clarté apparaît en Provence vers 1180. Il introduit des concepts gnostiques/cathares qui circulaient dans la rue d'à côté avec la Réincarnation pour réparer l’âme (le Bahir), la métempsycose, le Féminin Divin (comme la Sophia des Gnostiques ou l'importance de Marie-Madeleine et de l'Esprit Saint) et théorise le fait que le Mal vient d'une distorsion au sein même de la puissance divine. Les Cathares étaient surnommés les Tisserands. Ils travaillaient de leurs mains, en marge du système féodal, mais étaient très intégrés dans le commerce du textile. Les élites juives de Narbonne et Lunel étaient liées au grand commerce international. Les routes commerciales qui apportaient les soies et les épices d'Orient (héritage Gnostique, Simon le Magicien/Manichéens) apportaient aussi les manuscrits interdits et les idées hérétiques. Le Sefer HaBahir et le Catharisme sont les deux faces d'une même pièce. C'est la réponse d'une élite intellectuelle occitane contre la Révélation. Leur concept est que “Dieu a besoin de moi pour être complet" (monde matériel créé par un sous-dieu malveillant, donner la Vie est un crime), c'est donc placer l'homme comme le sauveur de Dieu. Selon Rome, Dieu n'a aucun "besoin" de créer l'homme pour être Dieu. Vouloir se mettre au niveau de Dieu ou croire que Dieu dépend de nous c’est de l’orgueil.
+
+
+
+
+   </p>
+          </div>
+        )
+      },
+        {
+        titre: "La Troisième Croisade et le Midi",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       Pendant ce temps, en Orient, Saladin conquit l’Égypte et la Syrie, écrasa les Templiers et les Hospitaliers à Hattin, puis prit Jérusalem. Ces événements poussèrent la papauté à lancer la troisième croisade. Trois grands rois y participèrent : Frédéric Barberousse, Philippe Auguste et Richard Cœur de Lion. Mais la mort accidentelle de Barberousse, les rivalités entre Philippe et Richard, et le retrait du roi de France entraînèrent l’échec de la croisade, sans pour autant apaiser les conflits internes entre Aragonais et Toulousains. Profitant de cette situation, Alphonse II d’Aragon poursuivit sa politique d’encerclement du comté de Toulouse en fiançant sa nièce Pétronille de Comminges à Gaston VI de Béarn, qui, en 1194 avait mis fin à son différend avec le vicomte de Dax en renonçant à Mixe et Ostabarret en échange d’Orthez et conclut ensuite la paix avec le vicomte de Soule. Le contrat de mariage était très défavorable car le couple reconnaissait ne rien posséder sur la vallée d’Aran, pourtant donnée autrefois à Centulle III, et Gaston devait remettre Lourdes et d’autres châteaux bigourdans au roi d’Aragon sur simple demande. Malgré ces conditions, Gaston accepta ce mariage prestigieux. Pétronille, héritière de la Bigorre et du Marsan, lia ainsi le Toulousain, le Béarn et une partie de l’Aquitaine à la couronne d’Aragon. Après la mort de Raymond V de Toulouse (1194) puis d’Alphonse II (1196), leurs fils Raymond VI et Pierre II poursuivirent la lutte, sans qu’aucun camp ne prenne l’avantage. Dans ce climat d’anarchie, des mercenaires se multiplièrent entre Toulouse et Montpellier, se transformant souvent en bandes de routiers pillant la région. Les comtes de Foix, changeant fréquemment de camp entre Barcelone et Toulouse, furent excommuniés à plusieurs reprises. Au XIIIᵉ siècle, ils s’attaquèrent à la Catalogne : Raymond Roger s’impliqua dans le conflit entre Urgell et Castelbon, allant jusqu’à saccager la cathédrale d’Urgell et enfermer les chanoines. Ce désordre favorisa la montée de l’hérésie albigeoise : dès 1181, une première expédition ecclésiastique fut menée contre les Trencavel, et en 1195, un concile tenu à Montpellier lança l’anathème contre les hérétiques. La passivité de nombreux seigneurs permit la propagation de cette crise religieuse, affaiblissant l’autorité de Rome. Cette désorganisation politique et spirituelle s’ajouta aux troubles castillans, consolidant la puissance des Almohades en Andalousie. Ce n’est qu’après cette période qu’Alphonse VIII de Castille parvint à reprendre la main sur son royaume et tenta de sortir l’Espagne de la léthargie face à l’Islam. En 1198, Innocent III fut élu pape tandis que la domination musulmane persistait à Jérusalem, que la pression almoravide s’intensifiait sur les royaumes ibériques et que le catharisme gagnait le Languedoc. Le comte de Toulouse, Raymond VI, chercha à apaiser la situation et régla ses différends avec Richard Cœur de Lion, puis conclut le traité de Perpignan avec Pierre II d’Aragon, mettant fin aux guerres inter-pyrénéennes. Ce traité renforça le pouvoir aragonais, le comte de Comminges se soumit, et Pierre II consolida son autorité en épousant Marie de Montpellier. Tandis que Raymond VI demeurait son allié, Pierre II se concentra sur la lutte contre l’hérésie albigeoise. En 1203, Dominique de Guzman (futur saint Dominique) fonda l’ordre des Frères Prêcheurs pour la combattre. Pierre II renforça parallèlement les mesures répressives et se rendit à Rome en 1204, où il fut couronné par Innocent III, confirmant la fidélité de l’Aragon au Saint-Siège. Cette même année, la croisade prêchée pour reprendre Jérusalem échoua, détournée vers Constantinople, tandis que Pierre II demeurait partagé entre son devoir religieux et ses ambitions politiques.
+        </p>
+          </div>
+        )
+      },
+
+       
+       {
+        titre: "La Double Vassalité",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      En 1201, le légat pontifical Pierre de Castelnau visita le Béarn et n’y trouva aucune trace d’hérésie albigeoise, témoignant de la stabilité religieuse locale. En 1204, le roi de Castille Alphonse VIII chercha à contester l’influence aragonaise dans le Béarn et la Gascogne, profitant des difficultés du roi d’Angleterre Jean sans Terre face à Philippe-Auguste. Se prévalant des droits de son épouse Aliénor, fille d’Henri II Plantagenêt, sur la Gascogne, il prit le titre de « duc de Gascogne » et convoqua ses vassaux gascons à Saint-Sébastien le 26 octobre 1204. Lors de cette assemblée, le comte d’Armagnac, le vicomte de Tartas et le vicomte de Béarn, Gaston VI lui-même, lui prêtèrent hommage. Ce geste marqua une reconnaissance momentanée du roi de Castille comme suzerain, sans rupture avec l’Aragon. Gaston cherchait manifestement à ménager les deux puissances voisines pour préserver l’autonomie béarnaise. En 1205, après quelques succès militaires, Alphonse VIII dut se retirer, mais les rois de Castille conservèrent leurs prétentions sur la Gascogne jusqu’en 1254. En 1208, un nouveau conflit éclata entre les rois d’Aragon et de Castille. Gaston VI prit le parti de son suzerain aragonais et lui versa 50 000 sous morlàas, une somme considérable. En échange, Pierre II lui donna en fief le château de Burgui et la vallée de Roncal, situés dans les Pyrénées (actuelle Navarre espagnole). Cette transaction confirma la fidélité du Béarn à la Couronne d’Aragon et marqua la fin de l’épisode castillan. 
+        </p>
+          </div>
+        )
+      },
+       {
+        titre: "La Croisade Albigeoise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Après l’assassinat du légat pontifical Pierre de Castelnau près de Saint-Gilles du Gard en 1208, le pape Innocent III lança une croisade contre l’hérésie cathare, appliquant pour la première fois le concept de croisade à l’intérieur même de la chrétienté. Le roi de France Philippe Auguste refusa d’y participer, préférant concentrer ses efforts contre l’Angleterre, mais il autorisa plusieurs seigneurs d’Île-de-France, dont Simon de Montfort, à s’y engager. Le roi d’Aragon, Pierre II, resta prudent mais obéit au pape en surveillant ses vassaux, notamment les comtes de Foix, de Comminges et le vicomte de Béarn, Gaston VI. Pourtant, les seigneurs pyrénéens, profondément liés au monde occitan, furent inévitablement entraînés dans le conflit : soit comme combattants, soit comme relais logistique pour les armées croisées. La victoire initiale des Croisés au Languedoc, marquée par la prise de Béziers et la capitulation de Carcassonne, entraîna la dépossession de nombreux seigneurs méridionaux au profit des croisés du Nord. Gaston VI de Béarn, comte de Bigorre et vicomte de Béarn, vassal fidèle du roi d’Aragon, soutint ses alliés du Midi malgré les injonctions du pape. En 1210, tandis que les Almohades infligeaient une lourde défaite aux Castillans, l’Église et le royaume d’Aragon se trouvaient affaiblis. Pierre II ne put contenir l’élan de ses vassaux : Gaston VI participa à la défense de Toulouse en 1211, forçant Simon de Montfort à lever le siège, puis prit part à la malheureuse expédition de Castelnaudary. Ce n’était pas par conviction religieuse, car l’hérésie cathare n’avait pas pénétré en Béarn ni en Bigorre, mais par fidélité envers l’Aragon. Le 27 janvier 1213, Gaston renouvela son hommage au roi d’Aragon, aux côtés des comtes de Foix, de Comminges et de Toulouse, dans le cadre du projet de Pierre II de constituer un vaste État trans-pyrénéen. Cependant, le concile de Lavaur condamna Gaston pour son soutien à l’Aragon et aux Toulousains : il fut excommunié, privé temporairement de la vicomté du Brulhois, et ses terres furent déclarées vacantes par le pape. Malgré cela, il obtint rapidement le pardon pontifical après avoir cédé deux quartiers de la ville d’Oloron à l’évêque. Le pape Innocent III, conseillé par l’archevêque de Tolède, prêcha alors une nouvelle croisade contre les Almohades, espérant réunir les rois ibériques. L’armée chrétienne se rassembla à Tolède pour la Pentecôte 1212. La bataille des Navas de Tolosa (15 juillet 1212) se solda par une victoire éclatante des armées ibériques et par un prestige accru de Pierre II, célébré pour sa bravoure. Mais cette gloire fut de courte durée : le 13 septembre 1213, à Muret, Simon de Montfort remporta une victoire décisive, et Pierre II d’Aragon fut tué au combat avant même que Gaston et ses troupes puissent le rejoindre (aile droite).
+ </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Après Muret : Défaite Aragonaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Cette défaite marqua un tournant majeur : l’Aragon renonça à toute expansion au nord des Pyrénées pour se tourner vers la Méditerranée, tandis que le Béarn passa progressivement sous influence anglaise. Malgré l’absence de Cathares en Béarn, Gaston VI fut de nouveau condamné pour hérésie au concile de Lavaur, accusé d’avoir offert asile à des hérétiques et à l’assassin du légat pontifical. Pierre II étant mort, Gaston chercha la réconciliation : le légat pontifical Pierre de Bénévent transmit son pardon à l’évêque d’Oloron, Bernard de Morlanne. Il restitua à l’évêché les bourgs de Sainte-Marie et de Saint-Pé, puis fut absous et rétabli dans ses terres. Gaston VI demeura fidèle à la maison d’Aragon : il apparaît encore aux côtés du jeune roi Jacques Ier lors du siège de Tamarite de Litera. Il mourut sans descendance directe en 1214 (ou 1215 selon certaines sources), laissant pour héritier son frère jumeau Guillaume-Raymond, qui hérita des vicomtés de Béarn, Gabardan et Brulhois, ainsi que des droits sur Lérida et Tarragone. Du côté du comté de Foix, Raymond-Roger et son fils Roger-Bernard II prirent part activement à la résistance languedocienne. Versés en théologie, Raymond-Roger et sa sœur Esclarmonde débattirent avec les Vaudois, les Cathares et les catholiques, ce qui valut à leur famille des soupçons d’hérésie. Lors du concile de Latran, le comté de Foix fut accusé, comme celui de Toulouse, de protéger les hérétiques. Malgré tout, Roger-Bernard II, époux de l’héritière de Castelbon et d’Andorre, poursuivit la lutte contre les Croisés. Foix, tout comme Montségur, devint un refuge pour les persécutés. En 1240, Saverdun et le Bas-Foix furent contraints de rendre hommage à Toulouse, désormais sous domination capétienne, mais à la mort de Raymond IV en 1265, les comtes de Foix restaient les seuls seigneurs occitans encore indépendants. Leur politique, souvent téméraire, consistait à jouer de la rivalité entre la France et l’Aragon, chacun convoitant ce comté stratégique. Après Muret, Simon de Montfort poursuivit son offensive. Il assiégea Lourdes en Bigorre, mais les Bigourdans résistèrent vaillamment et l’obligèrent à se retirer. La comtesse Pétronille de Bigorre, veuve de Gaston VI, se remaria successivement avec Nuno Sanche, Aymar de Rançon puis Boson de Matha, qui administra fermement le comté. Sous son autorité, la justice fut appliquée avec rigueur : tout homicide commis à Vic entraînait pour le coupable la peine d’être enterré vivant sous sa victime. Pour apaiser les tensions, le pape envoya le cardinal Pierre de Bénévent comme légat chargé de rétablir la paix et d’absoudre les seigneurs repentants. Le Béarn, la Bigorre et le Comminges furent progressivement réintégrés dans l’obéissance à Rome.
+  </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Bataille de Bouvines",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1193, Philippe Auguste répudie son épouse Ingeburge de Danemark dès le lendemain de ses noces. Il se remarie ensuite avec Agnès de Méranie. Le pape Innocent III déclare ce second mariage illégal et exige le retour d'Ingeburge. Face au refus du roi, le pape ne se contente pas d'excommunier Philippe Auguste, le 14 janvier 1200, il frappe tout le royaume de France d'interdit ("grève" religieuse forcée, les églises ferment, les cloches se taisent, et il est interdit de célébrer mariages ou enterrements religieux). Cette situation devient vite insupportable pour la population, très pieuse, qui craint pour le salut de son âme. En septembre 1200, Philippe Auguste se soumet. Ensuite, en 1214  Jean sans Terre et Otton IV affrontent Philippe Auguste à Bouvines mais perdent, empêchant la constitution d’un bloc anglo-germanique. Les paysans ont d‘ailleurs tous soutenu Philippe Auguste, et l’Aquitaine reste une colonie anglaise. En 1215, les anglais se soulèvent contre Jean sans Terre et limitent son autorité fiscale par la Magna Carta, tandis que Londres possède déjà un maire élu depuis 1189. Les juifs vivent en Angleterre sous protection royale et sont mentionnés dans la Magna Carta, mais en 1290, Édouard Iᵉʳ promulgue leur expulsion définitive.
+</p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Création du Portugal",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Après la résistance de Viriate, l’Édit de Caracalla, les Suèves et les Wisigoths et les Musulmans, la Reconquista voit la création du Comté de Portucale (Alphonse VI, roi de Léon et Galice le donne à Henri de Bourgogne, qui se marie avec sa fille Thérèse de Léon). À la mort d'Henri, Thérèse assure la régence mais elle se rapproche de la noblesse galicienne (via son amant Fernão Peres de Trava). Le fils de Thérèse et Henri, Afonso Henriques, entre en conflit ouvert avec sa mère pour protéger l'autonomie du comté. Près de Guimarães (São Mamede,1128), Afonso bat les troupes de sa mère et de la noblesse galicienne, il prend le pouvoir et expulse l'influence galicienne. En 1139 à Ourique, il bat les Musulmans et se proclame Roi des Portugais mais pour être reconnu roi, Afonso doit s'émanciper de la suzeraineté du roi de Léon. À Zamora (1143), sous la médiation du légat du Pape, les deux cousins se rencontrent. Alphonse VII de Léon reconnaît l’autonomie politique d'Afonso Henriques. En échange, le Portugal reste dans la sphère d'influence impériale de Léon, mais Afonso Henriques joue un coup de maître et se déclare vassal direct du Pape. En 1147, Lisbonne est conquise. Pendant des décennies, le Portugal paie un tribut annuel en or à l'Église, le Pape Alexandre III publie la bulle Manifestis Probatum en 1179 et Portugal devient un royaume indépendant. Ensuite, Alphonse III achève la conquête de l'Algarve et Lisbonne en position centrale devient la capitale à la place de Coimbra.
+ </p>
+          </div>
+        )
+      }
+    ]
+  },
+
+
+
+  
+     'tutelle': {
+    titre: "Fin de la Tutelle",
+    periode: "Temps Féodaux",
+    resume: "Le Béarn s’émancipe et affirme son équilibre politique",
+    introduction: "Des Guillaume à Gaston VII, le Béarn s'extirpe de l'Aragon...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      {
+        titre: "Conflits et alliances Béarn-Bigorre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+           Boson de Matha, époux de Pétronille de Bigorre, prit en main les affaires familiales de sa femme, notamment ses droits héréditaires sur la maison de Comminges, issus de son père Bernard de Comminges. Faute d’obtenir justice pacifiquement, il entra en guerre contre Bernard, comte de Comminges et beau-frère de Pétronille. Grâce à la médiation d’Amanieu d’Albret, l’affaire fut soumise à un arbitrage conjoint avec le comte de Toulouse. La rencontre se tint sur la lande de Bosc, en Nébouzan, où une paix fut conclue sous la garantie de Bernard II, archevêque d’Auch. Chacun remit des châteaux en gage d’exécution : Salies et Fronsac pour Comminges, Mauvezin et Saint-Plancard pour Bigorre. Pétronille conclut ensuite une « ligue perpétuelle » avec Guillaume-Raymond de Moncade, seigneur de Béarn et frère jumeau de Gaston VI, afin d’assurer une amitié durable entre la Bigorre et le Béarn, unis par leurs intérêts communs : le contrôle des routes pyrénéennes et la défense contre Toulouse et l’Angleterre. En gage, elle donna au vicomte de Béarn la vicomté de Marsan, zone stratégique entre Gascogne et Béarn, ainsi que la seigneurie du quartier de Saragosse, sans doute des droits commerciaux ou fonciers. Elle céda plus tard ses droits sur le comté de Comminges. Connue pour sa piété et sa générosité, Pétronille versa des rentes aux pauvres de Baloc, Larreule, Parrabère et Caixon. Elle fit un legs à Amanieu, archevêque d’Auch, pour le remercier de ses services et rembourser une dette de 5 000 sols envers son prédécesseur Garcias II grâce aux revenus de Bagnères. Elle fit aussi des dons à Boson, son époux, qui administra la Bigorre comme comte jusqu’à remboursement des dettes. De leur union naquit Mathe, réputée pour sa piété, que Pétronille maria à Gaston VII de Moncade, vicomte de Béarn. Mais Gaston revendiqua la succession de la Bigorre, affirmant que le mariage antérieur de Pétronille avec Nuno, comte de Cerdagne, rendait nul son troisième mariage avec Guy de Montfort, rendant ainsi Esquivât, fils de ce dernier, illégitime. Pour se protéger, Esquivât se plaça sous la suzeraineté du roi d’Angleterre Henri III, à qui il rendit hommage pour la Bigorre, un fait inédit. Gaston, maître de Castelnau-de-Rivière-Basse, attaqua alors les terres bigourdanes jusqu’à Tarbes. Acculé, Esquivât fit appel à Simon de Montfort, lieutenant du roi d’Angleterre en Gascogne, et lui donna le comté en garantie, espérant le récupérer une fois la paix revenue. Grâce à la médiation d’Alphonse d’Aragon et de Roger de Foix, les hostilités cessèrent. Le 17 septembre 1257, à Orthez, Roger de Foix rendit sa sentence : Esquivât céderait à Gaston et Mathe la juridiction sur le Marsan et la Rivière-Basse, en échange de leur renoncement au reste du comté de Bigorre. Peu après, Roger maria sa fille Agnès à Esquivât, scellant la réconciliation. Esquivât fut ensuite dédommagé par l’héritage du vicomté de Couserans. Un nouveau conflit l’opposa toutefois au comte de Comminges, qui refusa de lui rendre le château de Cordesque, nécessitant un nouvel arbitrage du comte de Foix. En 1258, à Paris, Esquivât commit une erreur diplomatique en confirmant à Simon de Montfort la donation de Lourdes et Mauvezin. Montfort s’en servit pour se proclamer seigneur de Bigorre et envoya son cousin Philippe de Montfort prendre possession des châteaux. Esquivât reprit les armes, mais une trêve fut conclue : Montfort conserva Lourdes et Tarbes jusqu’à Noël, puis renonça. Reconnaissant la loyauté de Gaston de Béarn, Esquivât s’engagea finalement à ne jamais vendre ni aliéner la Bigorre sans l’accord du Béarn et du Foix.
+            </p>
+          </div>
+        )
+      },
+       {
+        titre: "La Bigorre entre les mains des héritiers",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         Fatiguée des guerres, Pétronille se retira au monastère cistercien de l’Escaladieu, près de Bagnères, où elle rédigea un second testament réglant ses dettes et confia l’exécution de ses volontés à Simon de Montfort, comte de Leicester et son beau-frère, chargé d’administrer les revenus de la Bigorre pour rembourser les dettes de Boson de Matha. Elle désigna pour héritier universel son petit-fils Esquivât de Chabannes, fils d’Alix de Montfort et d’Esquivât II de Chabannes, prévoyant qu’en cas de décès sans descendance, la succession passerait à Jourdain de Chabannes, puis à Mathe et à ses descendants. Avant sa mort, Esquivât de Chabannes, comte de Bigorre, fit de sa sœur Laure, vicomtesse de Turenne, son héritière principale. À sa mort, la succession devint complexe. Gaston VII de Béarn et Mathe de Bigorre, fille de Pétronille, eurent quatre filles, dont Constance, très estimée. Quatre princes, fils ou frères de rois, demandèrent sa main. Son premier mari fut Alphonse, infant d’Aragon, fils du roi Jacques Ier ; elle lui apporta des domaines en Aragon, Catalogne et Majorque, mais il mourut sans enfant. En 1265, Thibaut de Navarre voulut la marier à son frère Henri : un traité fut conclu, Gaston lui donna les vicomtés de Gabardan et de Brulhois, ainsi que des terres en Bigorre (Maubourguet, Castelnau, Auriébat, Ladevèze, Roquefort-de-Marsan), mais l’union échoua en 1266. Un troisième projet lia Henri, fils de Richard, roi des Romains, mais fut annulé ; un quatrième, avec Emmanuel, frère du roi de Castille, fut retardé par la dispense papale. Finalement, le mariage avec Henri d’Allemagne fut consommé à Mont-de-Marsan (Henri sera assassiné en 1271), et Gaston contesta le testament, affirmant que la succession devait revenir à Constance.
+           </p>
+          </div>
+        )
+      },
+      {
+        titre: "Héritage contesté et mainmises étrangères",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        Suivant l’exemple de sa mère Pétronille, Mathe de Bigorre fonda avec son mari Gaston VII, le 12 juillet 1270, le monastère des religieuses de Beyries (ordre de Sainte-Claire) à Mont-de-Marsan, richement doté et validé par Pierre, évêque d’Aire. Selon le testament de Pétronille, la mort sans héritiers d’Esquivât et de Jourdain faisait de Constance l’héritière légitime. Les États de Bigorre la reconnurent comme comtesse : elle prêta serment de fidélité, et Tarbes, Bagnères, Vic et Ibos lui rendirent hommage. Mais Laure, s’estimant lésée, fit appel au roi d’Angleterre Édouard Ier par Jean de Grailly, sénéchal de Gascogne. Édouard profita du litige pour revendiquer la Bigorre, prétendant que son père Henri III avait acheté des droits à l’Église du Puy. Sous ce prétexte, il ordonna à Jean de Grailly de prendre possession du comté. À Tarbes, Gaston de Béarn remit le comté par obéissance, non par justice, et la Bigorre passa sous domination anglaise malgré les droits de Constance. Le testament de Gaston VII reflète sa foi : il fit vœu de croisade et, ne pouvant partir, ordonna l’envoi de cinq hommes d’armes béarnais en Terre sainte. Mathe, dans son propre testament, multiplia les dons charitables et légua 4 000 sols morlaàs pour financer deux pèlerins, perpétuant la piété familiale. Édouard Ier s’empara donc du comté, prétextant un ancien droit de l’Église du Puy, bien que la Bigorre appartînt légitimement à Constance, héritière de Pétronille. Elle intenta un procès devant le sénéchal de Gascogne, représentant du roi d’Angleterre. Mais plusieurs héritiers revendiquèrent des parts du comté : Laure de Turenne, Mathilde de Thyet (par sa mère Alix), Guillaume de Teisson et Mathe d’Armagnac, selon la coutume gasconne du partage. Le procès s’enlisa, et le roi d’Angleterre conserva la Bigorre.  Épuisée, Constance céda ses droits à sa sœur Marguerite, comtesse de Foix, tout en gardant la Rivière-Basse et la vicomté de Marsan. En cas de perte, elle devait être indemnisée par la seigneurie de Saint-Gaudens, et si le Béarn revenait à Marguerite, elle conserverait à vie plusieurs terres (Larreule, Vic, Azereix, Ibos, etc). En 1290, Philippe le Bel voulut reprendre le contrôle du Sud-Ouest. Le Parlement de Paris déclara que l’achat anglais de 1254 ne conférait qu’un droit symbolique d’hommage et reconnut à Constance la possession du comté. Mais en 1292, à la demande de la reine Jeanne de Navarre, un nouvel arrêt plaça la Bigorre sous l’autorité du roi de France jusqu’à résolution du litige. Jean de Longpérier, lieutenant du sénéchal de Toulouse, exécuta l’arrêt, déposant Constance de ses châteaux (sauf Lourdes) et ordonnant aux États de Bigorre d’obéir à l’Église du Puy. L’indignation fut générale. À l’assemblée de Séméac, l’abbé Arnaud Guillaume de Bénac rappela la légitimité de Constance et fit appel au roi. Bien qu’elle plaidât qu’elle n’avait pas été convoquée, ses recours restèrent vains. Longpérier imposa l’autorité royale en affichant les armes du roi et du Puy dans tout le comté. Le 9 octobre 1292, les États de Bigorre réaffirmèrent que Constance était l’unique héritière légitime de Pétronille et supplièrent Philippe le Bel de la rétablir dans ses droits. En vain : la Bigorre passa sous administration royale, marquant la fin de son indépendance.
+           </p>
+          </div>
+        )
+      },
+      {
+        titre: "Entre Aragon et Angleterre : la diplomatie",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Installé à Tarragone, Guillaume-Raymond entra en conflit ouvert avec l’évêque de la ville, finalement assassiné en 1194. Cet acte lui valut l’excommunication et l’exil. Désireux de retrouver sa place dans la chrétienté, il fait pénitence. Devenu vicomte de Béarn, Guillaume-Raymond fit de la défense des intérêts aragonais au nord des Pyrénées sa priorité. Il tenta d’intervenir en Bigorre, mais arriva trop tard pour empêcher le mariage de Pétronille (veuve de Gaston VI) avec Guy de Montfort, fils de Simon IV de Montfort, chef des croisés français combattus par Gaston VI. Guillaume renforça la garnison aragonaise du château de Lourdes, mais la situation ne fut apaisée qu’en 1220, à la mort prématurée de Guy de Montfort. Pétronille se remaria, permettant à la Bigorre d’échapper à la domination française. Souhaitant affermir son autorité, Guillaume publia les Fors de Morlaàs (1220) et d’Ossau (1221), renforçant droits et libertés locales. Ses responsabilités catalanes l’obligèrent à de constants allers-retours entre Morlaàs et Barcelone. Il mourut à Oloron en 1224, sans avoir accompli son vœu de croisade. Guillaume II de Béarn lui succéda. Très engagé en Catalogne-Aragon, il dut gérer les rivalités entre familles nobles autour du jeune roi Jacques Ier d’Aragon et participa activement à la préparation de l’invasion des îles Baléares. Lors de son retour en Béarn, en février 1228, il promit au représentant du roi d’Angleterre de rendre hommage pour ses terres en Aquitaine (Béarn, Gabardan, Brulhois, Captieux). Le 22 février 1228, à Captieux, Guillaume II rencontra Henry de Turberville, sénéchal de Guyenne, et promit, devant la cour, de faire hommage au roi d’Angleterre Henri III lors de son prochain voyage, pour « la terre qu’il tenait en Gascogne ainsi que ses prédécesseurs avaient coutume de le faire ». Cet acte, attesté par des témoins béarnais, fut interprété comme une reconnaissance implicite de la vassalité du Béarn envers le roi d’Angleterre. Les archives anglaises confirmèrent ce fait, notamment en 1365, lorsque Édouard III ordonna de rassembler les preuves de la vassalité béarnaise, l’engagement de Captieux figurant en premier.
+            </p>
+          </div>
+        )
+      },
+      {
+        titre: "La rupture progressive avec l’Aragon",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+         L’attitude de Guillaume II s’explique par son désintérêt pour le Béarn, qu’il considérait comme une contrainte. Souhaitant la paix pour participer à la conquête des Baléares, il accepta la promesse d’hommage sans en mesurer les implications. Le chroniqueur de Jacques Ier rappelle pourtant que Guillaume II tenait Moncade et le Béarn en fief du roi d’Aragon, tandis que Castellon était sa propriété personnelle. Ainsi, trois souverains pouvaient revendiquer des droits sur le Béarn : le roi d’Aragon, le roi d’Angleterre et le roi de Castille. Le Béarn se trouva donc dans une situation juridique très complexe, conséquence des actes de Gaston VI (1204) et de Guillaume II (1228). Réconcilié avec Jacques Ier, Guillaume II se consacra entièrement à la croisade des Baléares. Le 23 janvier 1228, il était aux côtés du roi lors de la proclamation de l’expédition. Dès le débarquement à Majorque, le 11 septembre 1229, il trouva la mort avec son oncle Raymond de Moncade. Leurs corps furent inhumés dans le cloître de Santes Creus. Son tombeau, décoré des deux vaches du Béarn, est le plus ancien témoignage héraldique connu du symbole béarnais. À la fin du XIIᵉ et au début du XIIIᵉ siècle, le Béarn, théoriquement vassal de l’Aragon, n’entretenait plus avec ce royaume qu’un lien purement juridique. Après la défaite de Muret (1213), aucun noble béarnais ne combattit plus pour l’Aragon. L’influence aragonaise, entretenue par des seigneurs catalans attachés à la Méditerranée, n’était plus qu’une survivance. La mort de Guillaume II marqua un tournant : la rupture se fit progressivement sous Gaston VII Moncade (1229–1290), dernier des Moncade en Béarn. Installé à Orthez, dont il fit sa capitale, Gaston VII, endetté par les expéditions de son père, vendit de nombreux domaines catalans et se consacra à la Gascogne, négligeant ses possessions au sud des Pyrénées, administrées par des Béarnais. Parallèlement, les rois d’Aragon, tournés vers la Méditerranée, renoncèrent à leurs ambitions au nord des Pyrénées. Les liens féodaux entre Béarn et Aragon se défirent d’eux-mêmes, sans rupture officielle. Tout était consommé vers 1256, lors du traité de Corbeil, qui mit fin aux visées catalanes dans le Midi. Le Béarn n’y est d’ailleurs pas mentionné, car il relevait alors de la mouvance des rois d’Angleterre, ducs de Gascogne, comme le confirmait déjà le traité de Tolède. Ainsi, une alliance militaire du XIIᵉ siècle devint une vassalité étroite (1154–1214), puis perdit toute réalité après Muret, pour disparaître entre 1230 et 1250.
+           </p>
+          </div>
+        )
+      },
+      {
+        titre: "Gaston VII : For, bastides et révolte",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Malgré la défaite de Muret (1213), le Béarn resta dans la mouvance aragonaise. Guillaume-Raymond et Guillaume II furent avant tout des seigneurs catalans, plus attachés à Moncade qu’au Béarn. Ensuite, les Béarnais, restés à l’écart des expéditions aragonaises, commencèrent à s’administrer eux-mêmes, avec le For Général en 1188 qui donne une charte fondatrice régissant les rapports entre vicomte et sujets, les For d'Ossau et de Barétous puis le renforcement des droits collectifs avec la confirmation du For de Morlaàs (en l’absence de leurs seigneurs catalans, les Béarnais profitèrent du vide politique pour affirmer leur liberté et bâtir les bases d’une identité féodale autonome). La promesse de Captieux fut considérée comme une preuve suffisante de la vassalité du Béarn par l’administration anglaise. Cette « tutelle » anglaise n’est pas encore politique, elle touche d’abord les finances, le contrôle des revenus, impôts, aides militaires, etc. Mais dès 1242, le contexte change. Henri III d’Angleterre vient sur le continent pour tenter de reconquérir le Poitou, alors aux mains des Français. Il convoque tous ses vassaux gascons à se joindre à lui. Gaston VII et sa mère répondent à l’appel : Gaston accompagne fidèlement le roi d’Angleterre pendant toute la campagne. Le 25 décembre 1242, à Bordeaux, Gaston VII rend hommage pour le Béarn à Henri III, reconnaissant officiellement le roi d’Angleterre comme suzerain du Béarn. Cet hommage lui procure des avantages financiers (pensions, aides, terres) et l’espoir de recevoir le comté de Bigorre. Cependant, après la défaite anglaise de Taillebourg, Henri III sort affaibli. En 1245, une vaste révolte éclate en Gascogne, de la Garonne aux Pyrénées. C’est une période d’anarchie féodale : Gaston VII entraîne dans sa ligue Raymond-Arnaud de Tartas, vicomte de Dax, Raymond-Guillaume de Soule, les Avarais et le seigneur de Gramont. Ensemble, ils dévastent le Labourd et s’opposent violemment à l’autorité anglaise. En 1248, Henri III confie à son beau-frère Simon de Montfort, comte de Leicester, la mission de rétablir l’ordre. Montfort tient une cour de justice à Saint-Sever, fait emprisonner le seigneur de Gramont et attaque Raymond-Guillaume V, retranché à Mauléon. Ce dernier finit par capituler et signe la paix avec l’Angleterre en 1252. Si Montfort met fin au soulèvement, son autorité rigoureuse provoque de nouvelles plaintes des députés gascons, si bien qu’Henri III retire sa charge et confie le gouvernement de la Gascogne à son fils aîné, Édouard. Face à cette pression anglaise et conscient de la nécessité de défendre son indépendance, Gaston VII met alors en place une politique ambitieuse de fortifications dont le transfert de la capitale de Morlaàs à Orthez en 1242, le renforcement des places fortes, notamment de Sauveterre, la fondation de plusieurs bastides, dont Bellocq, et la construction du château de Foix à Roquefort. En 1240, il rend officiellement hommage au roi d’Angleterre, confirmant la vassalité du Béarn, mais tout en manœuvrant pour préserver son autonomie. En 1245, il pille Dax et poursuit son implantation politique. En 1260, il fonde le couvent des Cordeliers à Mont-de-Marsan. Malgré l’esprit pactiste, Gaston VII modernisa profondément la vicomté. Vers 1250, il entreprit une réforme administrative divisant le territoire en vics ou bailliages, dirigés par des officiers vicomtaux, les bailes. Ceux-ci assuraient à la fois l’administration, la police et la justice locale. À l’inverse, les anciens viguiers perdirent leurs pouvoirs et devinrent de simples agents locaux. Apparurent aussi des péagers, chargés des saisies de bétail et percepteurs du cens. En 1252, la procédure criminelle adopta l’enquête inquisitoire, menée par quatre jurats et un curé. L’appel devant la Cort Major transforma l’ancienne cour seigneuriale en juridiction souveraine du Béarn. Cette période vit aussi la montée des bourgs, la réorganisation de l’habitat et l’extension des libertés communautaires, visant autant à résoudre des querelles familiales qu’à garantir l’intérêt général et la stabilité politique.
+        </p>
+          </div>
+        )
+      },
+
+
+  {
+        titre: "La 7e croisade",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sous le règne de Louis IX, Blanche de Castille assure la régence face aux ambitions anglaises puis forge le caractère de son fils, elle lui enseigne que le but d'un souverain n'est pas d'être aimé mais de protéger son peuple et qu’elle préférerait le voir mort maintenant que plus tard après un seul péché mortel. Puis, lors de la septième croisade, le roi de France Saint Louis entreprend une expédition vers l’Égypte pour libérer les lieux saints des mains musulmanes et Blanche de Castille dirige à nouveau le royaume. Saint Louis connaît cependant un échec militaire : capturé à Mansourah en 1250, il est libéré contre rançon. Plutôt que de rentrer aussitôt en France, il choisit de rester au Proche-Orient, notamment à Saint-Jean-d’Acre, en Syrie et en Palestine, pendant près de quatre ans. Là, il s’emploie à reconstruire et fortifier les cités chrétiennes, à aider les populations locales et à soutenir les communautés chrétiennes d’Orient. C’est durant ce séjour qu’il a formulé une promesse solennelle, celle que la France protégerait toujours les chrétiens d’Orient. Cette mission de “fille aînée de l’Église” sera honorée par la France pendant des siècles jusqu’à la Révolution française. À la même époque, la France est aussi marquée par le procès du Talmud (1240). Celui-ci est déclenché par Nicolas Donin, un ancien juif devenu frère dominicain, qui accuse le Talmud de contenir des passages problématiques. Sur son initiative, un grand débat public s’ouvre à Paris, opposant Donin à plusieurs rabbins renommés, dont Rabbi Yéhiel de Paris. Le Talmud est jugé coupable. Cette décision entraîne, en 1242, la saisie et la destruction par le feu de plusieurs charretées de manuscrits du Talmud. Les Juifs, considérés comme usuriers, seront ensuite expulsés par Philippe IV, puis définitivement sous Charles VI.
+   </p>
+          </div>
+        )
+      },
+
+
+
+       {
+        titre: "Entre vassalité anglaise et autonomie béarnaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    En conflit avec l'Angleterre, Gaston VII se tourne, en 1252, vers Alphonse X de Castille, tout juste monté sur le trône. Il devient vassal du roi de Castille, trahissant ainsi Henri III. Mais, Henri III négocie avec Alphonse X, et le 22 avril 1254, les deux rois signent le traité de Tolède où Alphonse X renonce à ses droits sur la Gascogne, il libère les Gascons (dont les Béarnais) de leur serment et leur ordonne de rendre hommage au roi d’Angleterre. Pour prouver sa fidélité, en 1255, Gaston VII remet sa fille Mathe comme otage à la cour du prince Édouard, pour quatre ans. Après cette soumission, Gaston VII cesse de se rebeller et collabore loyalement avec l’Angleterre. Cette fidélité est récompensée, il reçoit des avantages financiers, et Henri III cherche à l’attacher davantage à la couronne anglaise par une alliance prestigieuse. En 1270, Constance, fille aînée de Gaston VII et héritière du Béarn, épouse Henri d’Allemagne, fils du roi des Romains et neveu d’Henri III. Le mariage devait ancrer le Béarn dans l’influence anglaise, mais Henri d’Allemagne est assassiné en 1271 à Viterbe par Guy de Montfort, avant d’avoir des enfants avec Constance. La mort d’Henri d’Allemagne, puis celle d’Henri III, offrent à Gaston VII un prétexte pour rompre avec la domination anglaise. Le vieux vicomte se révolte à nouveau, espérant restaurer l’autonomie du Béarn, mais il est rapidement vaincu et capturé.
+         </p>
+          </div>
+        )
+      },
+       {
+        titre: "Gaston, l’insoumis : le procès politique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+     Le 2 octobre 1273, Gaston est jugé à Sault-de-Navailles par une commission royale anglaise. Il doit s'engager à rester à la disposition du roi, ne pas quitter Saint-Sever sans autorisation, reconnaître la validité du jugement ordonnant la saisie de ses biens et remettre la ville et le château d’Orthez en gage. La couronne anglaise contrôle désormais le centre politique de la vicomté. Fidèle à lui-même, Gaston VII ne respecte pas ses engagements et se rebelle une autre fois contre Édouard Iᵉʳ. La révolte échoue rapidement, confirmant la dépendance féodale du Béarn. Une médiation du nonce pontifical Gérard de Roussillon permet finalement une réconciliation. Le 14 janvier 1274, Gaston VII écrit une lettre d’excuses à Édouard Ier, dans laquelle il reconnaît explicitement sa vassalité envers le roi d’Angleterre et ajoute qu’il lui doit hommage lige. Cependant, cette lettre n’était pour Gaston VII qu’une manœuvre politique pour gagner du temps, il refusa ensuite de se soumettre et fit appel au Parlement de Paris contre la sentence de saisie prononcée par la cour de Saint-Sever. Cet appel aurait dû entraîner la suspension des hostilités, mais le vicomte de Béarn utilisa habilement l’attaque de quelques villages béarnais à la frontière du Marsan pour se poser en victime et réclamer réparation. Le 9 mai 1274, deux ambassadeurs béarnais arrivent à Limoges et présentent, le lendemain, leur requête au roi et à sa cour. Une trêve devait s’appliquer automatiquement lorsqu’un vassal faisait appel contre une sentence de son seigneur auprès d’une juridiction supérieure. Ainsi, Gaston reproche à Édouard Ier de ne pas agir en seigneur loyal. Édouard Ier donne alors des instructions à son sénéchal Luc de Tany pour mettre fin aux attaques dirigées contre les sujets de Gaston VII. Refusant de s’avouer vaincu, Gaston comparait en personne devant le Parlement de Paris, où son procès commence en septembre 1274. Il éclate en injures contre Édouard Ier, qu’il qualifie de « traître, menteur, juge inique et déloyal », et jette son gant en signe de défi devant Philippe III le Hardi. Malgré cette violence verbale, Gaston VII persiste dans sa stratégie de défense, il ne conteste pas sa dépendance féodale, mais dénonce le comportement déloyal de son seigneur. Gaston VII pousse ensuite l’audace jusqu’à refuser de se battre contre les 5 chevaliers envoyés par Édouard Ier, prétextant qu’il s’agissait d’une affaire d’honneur personnelle et qu’il ne pouvait affronter que le roi lui-même. Il espérait probablement provoquer un conflit franco-anglais afin de préserver ses positions, mais Philippe III le Hardi refuse de se laisser entraîner et invite Gaston à présenter ses excuses publiques à Édouard Ier. Le vicomte est contraint à l’humiliation, d’abord à Londres, où il présente ses excuses, à Paris, devant le Parlement, puis revenu en Angleterre, il est placé en résidence surveillée au château de Winchester, du 26 janvier au 30 avril 1276. Déterminé à en finir avec ce vassal indocile, Édouard Ier, avec l’accord de Philippe III, décide de faire exécuter l’arrêt de la cour de Saint-Sever. L’arrêt, prévoyant la saisie d’Orthez et du Béarn, devient applicable, l’appel de Gaston VII ayant été annulé après ses excuses publiques, plus rien ne s’oppose à la mise sous séquestre. 
+          </p>
+          </div>
+        )
+      },
+       {
+        titre: "Saisie royale et survie politique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Deux commissaires, Robert Fitzjohn et Itier Brochard, sont désignés à Westminster le 6 février 1276 pour exécuter cette mission, qu’ils accomplissent du 15 mars au 19 avril 1276. Retardés par la tempête, les commissaires débarquent à Bordeaux, gagnent Langon et Mont-de-Marsan, où ils rencontrent Constance, fille aînée de Gaston VII. Veuve d’Henri d’Allemagne, possédant des fiefs en Angleterre, Constance tente de jouer un rôle de médiatrice pour éviter toute violence. Accompagnée du sénéchal de Béarn, elle accepte de faciliter la mission des officiers du roi d’Angleterre, à condition qu’ils respectent les Fors de Béarn, selon ces coutumes, les commissaires doivent notifier leur mission à la Cour Majour de Béarn, et la saisie ne peut être effective qu’après cette formalité. Les Béarnais cherchent à gagner du temps par tous les moyens procéduraux, mais ne contestent jamais la compétence de la cour de Saint-Sever, ni la vassalité du Béarn. Le sénéchal avait donné rendez-vous à Fitzjohn et Brochard à Morlàas, pour les introduire auprès de la Cour Majour. Arrivés sur place, les commissaires ne trouvent ni le sénéchal, ni la Cour Majour. Ils rencontrent alors un représentant appelé « le consul de la Cour de Béarn », à qui ils notifient l’ordre de saisie, puis se rendent à Orthez. Ils y font prendre acte de leur mission par le bailli et le châtelain d’Orthez, à qui ils réclament un serment de fidélité particulier au roi d’Angleterre, nécessaire après la commise. Les officiers béarnais reconnaissent la saisie, mais refusent le serment sans autorisation écrite du vicomte les déliant de leur fidélité envers lui. La fin du document étant illisible, on ignore si les commissaires se contentèrent de cette réponse ou exigèrent le serment. Ainsi, en avril 1276, le Béarn est officiellement saisi et placé dans la main du roi d’Angleterre, duc de Gascogne. Après 4 mois de détention, Gaston VII est libéré mais contraint de se soumettre et de jurer fidélité au roi d’Angleterre. Ensuite, Gaston VII tenta de secouer une tutelle qu’il jugeait trop lourde. Sa révolte se solda par un échec complet ; toutefois, en 1279, il obtint le pardon d’Édouard Iᵉʳ à des conditions avantageuses. Dans ce contexte de dépendance, Gaston VII offrit ses services à Édouard Iᵉʳ lors de la campagne du pays de Galles en 1282. Entre 1287 et 1289, il accueillit 3 fois le roi d’Angleterre en Béarn et soutint sa politique ibérique.  Avec ses conseillers Bernard de Bizanos et Amat de Gayrosse, il contresigna le traité d’Oloron conclu entre Édouard Iᵉʳ et Alphonse III d’Aragon. 
+
+     </p>
+          </div>
+        )
+      },
+     
+    ]
+  },
+
+ 'marguerite': {
+    titre: "Vers la Souveraineté",
+    periode: "Temps Féodaux",
+    resume: "Le Béarn s’unit un comté vassal de la France",
+    introduction: "De Marguerite à Fébus, l’indépendance devient diplomatie maîtrisée...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+       {
+        titre: "La naissance de l’unité Foix-Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+     Dans les actes réglant sa succession en 1286, Gaston VII proposa un partage précis parmi ses filles, Constance conserverait le Marsan à titre viager, avant de le transmettre à sa sœur Marguerite qui recevait le Béarn, Mathe conserverait le Gavardan et le Brulhois et Guillelme hériterait des possessions catalanes, à condition de ne pas se marier, et Gaston réaffirme clairement sa vassalité envers le roi-duc d’Angleterre en recommandant à ses successeurs de continuer à lui prêter hommage. Le 11 mai 1286, la Cour de Béarn, réunie à Morlaàs, en présence de Gaston VII et de ses filles, approuva officiellement le nouveau règlement successoral, et pour rendre l’acte inattaquable, on fit venir le célèbre juriste Arnaud Novelli. Selon ce texte, Roger-Bernard de Foix et Marguerite, à leur succession, devraient prêter hommage au roi d’Angleterre pour le Béarn et pour leurs autres fiefs gascons, dont le Marsan. Toutefois, le Béarn ne peut être assimilé aux autres fiefs gascons, car le roi d’Angleterre n’y nomme aucun administrateur. Le vicomte continue d’y exercer pleinement la potestas, tout en reconnaissant la suzeraineté du roi-duc. En termes modernes, le Béarn est associé, mais non intégré au système féodal anglais. Gaston VII avait d’ailleurs fait préciser que l’union Foix-Béarn serait indissoluble, fondant la nouvelle orientation politique de la vicomté.  Le 11 mai 1290, Roger-Bernard III se présente devant la Cour Majour de Morlàas, accompagné de Marguerite et de Constance, vicomtesse de Marsan. Il jure de respecter l’union Foix-Béarn et toutes les clauses du règlement successoral. Sous la pression de Constance, fidèle soutien de la cause anglaise, il écrit à Édouard Iᵉʳ pour lui renouveler sa fidélité et promet de prêter hommage au plus tôt. Mais ces démarches sont dictées par la nécessité politique, Roger-Bernard a besoin de l’appui du roi d’Angleterre pour asseoir sa succession. Peu après, comprenant que Philippe le Bel étend lentement son influence par une « infiltration progressive », Roger-Bernard décide de se rapprocher du roi de France. À la fin de 1290, il signe à Paris un accord avec Philippe le Bel. Dès lors, la rupture avec Édouard Iᵉʳ est consommée, l’hommage promis n’est jamais rendu, quand éclate la guerre entre France et Angleterre, le comte de Foix combat dans l’armée française, alors qu’Édouard Iᵉʳ l’avait convoqué dans la sienne. Les efforts du roi d’Angleterre, notamment la mission de Jean de Bretagne à Orthez pour le convaincre, restent vains. La rupture est si totale qu’on ne trouve aucune mention du vicomte de Béarn dans les archives anglaises de 1295 à 1302.
+       
+    </p>
+          </div>
+        )
+      },
+      
+ {
+        titre: "Crise de succession et lutte pour la Bigorre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       À la mort sans héritier d’Esquivat en 1283, sa cousine Constance Moncade, petite-fille de Pétronille et fille aînée de Gaston VII, fut reconnue comtesse de Bigorre par les États. Mais lorsqu’en 1286 elle donna la Bigorre à sa sœur Marguerite, cela ralluma immédiatement les tensions. Les Montfort, le roi d’Angleterre et les Armagnac refusèrent cette union Bigorre–Béarn. Édouard Ier d’Angleterre mit le comté sous séquestre en 1285. En 1290, le Parlement de Paris obligea Constance à annuler sa donation. En 1292, Philippe IV le Bel plaça définitivement la Bigorre sous séquestre royal. Le comté fut alors administré par les rois de France, en tant que rois de Navarre, jusqu’en 1425, année où il fut rendu au vicomte de Béarn Jean Ier. Roger-Bernard III, comte de Foix et époux de Marguerite, mena une vie politique et militaire mouvementée. Après avoir rendu hommage à Louis IX à Paris en 1265, il s’allia à Géraud VI d’Armagnac contre Géraud de Casaubon, s’empara du château de Sompuy et fit exécuter ses défenseurs (1271). Cette guerre privée provoqua l’intervention du roi Philippe III le Hardi, qui interdit les conflits entre vassaux et fit emprisonner Roger-Bernard à Carcassonne (1272–1273), après avoir confisqué son comté. Libéré, Roger-Bernard récupéra ses terres à condition de servir le roi dans une expédition contre l’Aragon et la Navarre. En 1278, il entra en conflit avec Pere d’Urtx, évêque d’Urgell, au sujet de la vicomté de Castelbon. Ce différend fut réglé par le traité de paréage du 8 septembre 1278, qui créa la principauté d’Andorre, placée sous une souveraineté partagée entre le comte de Foix et l’évêque d’Urgell. Cependant, la lutte reprit contre Pierre III d’Aragon, et Roger-Bernard fut capturé à Balaguer (22 juillet 1280) puis emprisonné à Siurana jusqu’en 1284. À sa libération, il participa à la croisade d’Aragon aux côtés de Philippe III. Le partage fut contesté par Jacques II d’Aragon, bénéficiaire des terres catalanes données à Guilhelme et Mathe, et par Bernard VI d’Armagnac, fils de Mathe. Tous deux accusèrent Marguerite et Roger-Bernard d’avoir falsifié le testament de Gaston VII après sa mort (26 avril 1290). Ces tensions déclenchèrent deux grandes séries de conflits militaires et diplomatiques, entre Foix-Béarn et Armagnac au sujet de l’héritage gascon et autour de la Bigorre, enjeu distinct mais tout aussi disputé. Ces rivalités engendrèrent plusieurs guerres successives comme la première guerre (1290–1295) qui éclate alors que la France mène déjà des opérations en Normandie et en Gascogne. Face à ces conflits persistants, plusieurs grandes puissances intervinrent, les rois Philippe IV le Bel (France), Jacques II (Aragon), Édouard Ier (Angleterre) et le pape Clément V, ainsi que ses successeurs à Avignon. Dans son testament du 21 avril 1290, Gaston VII de Béarn légua d’abord ses possessions à sa fille aînée Constance, comtesse de Bigorre et de Marsan. Ce dernier s’empara alors par la force de la vicomté de Béarn. Malgré les protestations de l’évêque de Lescar, le roi de France laissa faire, car il avait besoin de Roger-Bernard dans sa lutte contre les Anglais. Il se contenta de confisquer temporairement les châteaux de Lordat et Montréal, exigeant du comte qu’il participe à une expédition en Terre sainte. Mais la chute de Saint-Jean-d’Acre (1291) mit fin aux croisades et rendit cette obligation caduque. Cependant celle-ci mourut sans héritier et transmit ses droits à sa sœur Marguerite de Moncade, épouse de Roger-Bernard III de Foix.
+          </p>
+          </div>
+        )
+      },
+         {
+        titre: "L'Intelligence de Jeanne de Navarre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    En 1295, Philippe IV tenta d’imposer la paix entre Armagnac et Foix-Béarn, mais sans succès durable. Après le départ de Robert II d’Artois de Gascogne, Roger-Bernard prit le commandement des troupes françaises contre les Anglais durant la guerre de Guyenne. Il participa au siège de Saint-Sever (avril 1295) et fut nommé gouverneur des évêchés d’Auch, Dax et Bayonne, ce qui le plaça face à Bernard VI d’Armagnac. En 1296, il entra en conflit avec Bernard Saisset, premier évêque de Pamiers, qui refusa le paréage imposé par le comte. L’évêque l’excommunia et mena une résistance anti-capétienne, ce qui provoqua un affrontement entre Philippe le Bel (soutenant Roger-Bernard) et le pape Boniface VIII. En 1297, Roger-Bernard commanda un des trois escadrons de l’armée française de Robert d’Artois, remportant la bataille de Bonnegarde, mettant fin à la guerre en Guyenne. En 1301, il se rendit à Senlis auprès du roi pour négocier le mariage de son fils Gaston avec Jeanne d’Artois, princesse capétienne. Dans le même temps, Henri de Bar (allié aux Anglais) défie l'autorité de la France et envahit la Champagne. Jeanne lève directement une armée, dirige les troupes face à Henri et le fait prisonnier. Jeanne fonda aussi le Collège de Navarre à Paris. Roger Bernard III servit Philippe le Bel, tandis qu’Édouard Iᵉʳ prit Marguerite sous sa protection en 1304. Roger-Bernard mourut à Tarascon le 3 mars 1302, laissant la vicomté de Béarn à son fils Gaston Ier de Foix-Béarn, époux de Jeanne d’Artois, fille de Philippe d’Artois et petite-fille du puissant Robert II d’Artois. Marguerite de Foix régla la succession familiale en Catalogne après le legs de sa sœur Guilhelme à Gaston de Fezensaguet, et, par un accord avec Jacques II d’Aragon (1303, confirmé en 1310), fit restituer à son fils Gaston Iᵉʳ la majorité des terres catalanes des Moncade et la vicomté de Castelbon. Le 24 décembre 1303 à Toulouse, en présence de la reine Jeanne de Navarre et des princes héritiers Louis, Philippe et Charles, un arbitrage royal fut imposé entre Marguerite et Constance (sœurs Moncade), Mathe et son fils Bernard VI d’Armagnac. L’ordonnance royale de janvier 1304 stipula : « qu’il y ait entre les parties une ferme et stable paix ». Mathe d’Armagnac recevait le Brulhois, le Gabardan, Captieux et les terres d’Eauze et d'Euzan, sans pouvoir rien réclamer sur le reste. Constance et Marguerite conservaient la Bigorre, le Béarn, le Marsan et leurs autres possessions. En cas de mort sans héritier de Guilhelme, la cadette, les terres catalanes devaient revenir à Mathe et ses enfants, mais le Gavardan retournerait à Constance et Marguerite. La Rivière-Basse était attribuée à Guilhelme. 
+        </p>
+          </div>
+        )
+      },
+        {
+        titre: "Marguerite, le bouclier du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Après la mort de Roger Bernard III (1302), Marguerite administra seule le comté de Foix et la tutelle de Gaston Iᵉʳ : elle géra les affaires militaires (conflit du Marsan), la diplomatie, la justice et les alliances locales (elle ne rendra plus d'hommages aux Plantagenêts). Gaston intervint seulement lors des campagnes contre les Armagnac (1303, 1307) et, libéré avant 1309, laissa sa mère gouverner jusqu’à sa mort. Sa belle-fille Jeanne d’Artois prolongea ensuite cette politique conciliatrice durant cinq ans. La paix arbitrée par Philippe IV le Bel en 1304 fut illusoire. Marguerite de Moncade refusa car c'était une atteinte au testament de Gaston VII (l’ordonnance contredisait la volonté paternelle sur l’usufruit du Gavardan), Mathe d’Armagnac continuait à revendiquer le Marsan, malgré le partage de 1286 et l’arbitrage ne réhabilitait pas Roger Bernard III, accusé d’avoir falsifié le testament. Pour résister aux Capétiens, Marguerite reprit la stratégie de son père, exploiter les rivalités entre puissances. Elle fit appel au pape, elle fit remettre le Gavardan entre ses mains par Édouard Ier d’Angleterre, face à sa résistance, les Capétiens durent adoucir leurs exigences. une reprise des hostilités (1303–1307) avec Gaston Ier de Foix-Béarn qui mène deux campagnes ; excommunié, condamné par le Parlement de Paris, il est emprisonné au Châtelet et frappé d’une amende de 40 000 livres tournois (Édouard II fit lever l’excommunication de Gaston Iᵉʳ en 1308). Après les morts de Guilhelme (1309) et de Constance (1310), les luttes reprennent autour du Gavardan et de la Rivière-Basse, détachée du comté de Bigorre En 1329, une nouvelle sentence arbitrale fut rendue par Philippe d’Évreux, roi de Navarre et le comte de Foix-Béarn conserva Gavardan, Moncade et Castelviel, le comte d’Armagnac reçut la Rivière-Basse, le pays d’Eauze et le Brulhois . Marguerite, fille de Gaston VII et veuve de Roger-Bernard, assuma la tutelle de son fils Gaston Ier de Foix-Béarn, puis celle de son petit-fils Gaston II (1314–1319). Elle gouverna le Béarn de 1286 à 1319, d’abord comme tutrice, puis comme véritable souveraine, car les Béarnais lui étaient profondément attachés. Élevée dans une ambiance anglophile, son père étant vassal fidèle du roi Édouard Ier d’Angleterre, Marguerite sut préserver l’indépendance politique du Béarn entre les influences française, anglaise et aragonaise. Sa longévité politique, son habileté diplomatique et sa gestion ferme assurèrent la continuité du pouvoir vicomtal dans une période de guerres incessantes.
+        </p>
+          </div>
+        )
+      },
+        
+         {
+        titre: "Marguerite entre Béarn et Guyenne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+              Dès 1304, Marguerite de Béarn se plaça sous la protection du roi d’Angleterre Édouard Ier, lui demandant de garantir l’exécution du testament de son père Gaston VII, alors que les Armagnac menaçaient d’une guerre générale avec l’appui de la France. Cette protection anglaise se traduisit par une intervention croissante de la cour de Saint-Sever, qui jugea en appel des causes tranchées en première instance par les tribunaux béarnais.
+Entre 1305 et 1314, la cour de Saint-Sever connut presque chaque année des procès impliquant des Béarnais. En 1309, Marguerite se fit représenter officiellement auprès de cette cour par les sires d’Andoins et de Gerderest, et le 2 septembre, Édouard II ordonna à son sénéchal de veiller personnellement à sa sécurité. En 1310, priée de se présenter en personne à la cour, Marguerite informa Jean de Bretagne, comte de Richmond, qu’elle déléguait ses pouvoirs à son chapelain Arnaud et à maître Arnaud-Guillaume. L’année suivante, les officiers du sénéchal de Guyenne provoquèrent des incidents de frontière à Labastide-Villefranche, donnant à la cour anglaise de nouvelles occasions d’intervenir dans les affaires du Béarn. En 1312, alors que le sénéchal voulait la contraindre à comparaître elle-même, Marguerite demanda à être représentée par un procureur, conformément à la coutume, mais finit par se rendre à la cour de Saint-Sever en 1313. De nouveau assignée en 1314, elle refusa de comparaître, invoquant un vice de procédure : elle aurait dû être convoquée par le viguier de Saint-Sever et non par un simple prévôt assisté d’un sergent. Elle alla même jusqu’à faire appel à la cour anglaise contre deux seigneurs béarnais, Arnaud de Doumy et le sire de Lescun. Ces faits montrent que l’administration anglo-gasconne exerçait alors un contrôle judiciaire effectif sur le Béarn, plus fort que jamais auparavant.
+   </p>
+          </div>
+        )
+      },
+ {
+        titre: "Le Béarn à l’épreuve des Foix",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+              Parallèlement, au début du XIVᵉ siècle, une nouvelle élite locale, issue des villages, les prohomis, riches paysans et marchands familiers du droit, accéda aux responsabilités administratives du pays. En 1310, un événement tragique toucha la famille vicomtale : Gaston VIII, son épouse Jeanne d’Artois et leur fils âgé d’un an furent victimes d’une tentative d’empoisonnement de la part de cousins de Roger Bernard. Les coupables, Guillaume de Foix et Guillaume de Loubens, furent immédiatement exécutés. En 1312, Gaston VIII accusa sa mère Marguerite d’avoir aliéné et détourné des terres durant sa curatelle. Une guerre ouverte s’ensuivit : Gaston prit les châteaux de Lembeye et de Sauveterre, mais les barons béarnais s’interposèrent et imposèrent un accord. Selon ce compromis, Marguerite, vicomtesse légitime, conservait la haute main sur le Béarn et les affaires gasconnes. C’est en tant que comte de Foix que Gaston VIII apparaît ensuite, notamment lorsqu’il participe à la guerre en Flandre aux côtés du roi Louis X le Hutin. À son retour, en 1315, il tomba malade et dicta son testament, accordant à son épouse Jeanne d’Artois une rente viagère annuelle de 5 000 livres tournois prélevée sur le bas comté de Foix. Il mourut le 13 décembre 1315 à Maubuisson, à seulement 26 ans.
+   </p>
+          </div>
+        )
+      },
+       {
+        titre: "Marguerite face aux rois français et anglais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+              Les Béarnais redoutaient que l’union du Béarn avec le comté de Foix n’entraîne le pays dans un conflit avec le roi d’Angleterre, ce qui aurait nui à leurs intérêts économiques, notamment à l’accès aux pâturages landais nécessaires à leurs troupeaux. S’il n’existe aucun texte prouvant que Marguerite ait expressément favorisé l’influence anglaise, les faits démontrent son orientation anglophile : elle reconnaissait la cour de Saint-Sever et le roi d’Angleterre comme ses justiciers immédiats, et le roi de France comme arrière-justicier. Cette attitude provoqua la colère des officiers français. En 1312, après que des Béarnais eurent attaqué les possessions des Albret près de Bayonne, les juges royaux intervinrent, soutenant les Albret alliés à Philippe IV le Bel. Marguerite et vingt-quatre communautés béarnaises furent condamnées solidairement à 52 000 livres tournois de dommages envers le roi de France. Philippe le Bel ajouta à cette sanction le bannissement d’une trentaine de Béarnais, dont le bailli d’Oloron. Pour se défendre, Marguerite ne remit pas en cause la compétence de la justice française, mais dénonça la violation des Fors de Béarn : selon eux, les Béarnais devaient d’abord être jugés par leurs propres tribunaux, puis, en appel, par la cour de Saint-Sever, la justice royale n’intervenant qu’en dernier ressort. Peu après, Marguerite fit écarter sa bru Jeanne d’Artois, alors à la cour de France, pour incompétence, prodigalité et inconduite, lui retirant la tutelle du jeune Gaston, âgé de six ans. Le Parlement de Paris, saisi de l’affaire, se prononça en faveur de Jeanne en 1317, mais ce ne fut qu’à la mort de Marguerite, en novembre 1318, que Jeanne d’Artois fut rétablie dans ses droits de curatrice, tutrice et régente.
+   </p>
+          </div>
+        )
+      },
+       {
+        titre: "Procès, ingérences et crise familiale",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jeanne d’Artois semble alors avoir voulu se concilier les forces traditionnelles en Béarn et avoir accueilli favorablement les réclamations des bourgs et des vallées, peut-être moins prises en compte sous Marguerite. Ainsi, Jeanne accorda au bourg d’Orthez le bénéfice du for de Morlaàs le 16 février 1319. À Bielle, le 2 juillet 1319, elle reconnut aux Ossalois les droits immenses, voire exorbitants, qu’ils réclamaient en vain depuis une centaine d’années, au moins sur le Pont Long. Gaston IX, devenu majeur, échangea les serments traditionnels avec les cours à sa majorité en mai 1323. Son mariage avec Aliénor, fille du comte Bernard VIII de Comminges, fut célébré en 1324. À la mort de Marguerite, Jeanne d’Artois, sa bru, gouverna donc le Béarn pendant la minorité de son fils, de 1319 à 1323. L’entourage de Philippe V profita de la présence, à la tête du Béarn, d’une princesse d’origine française pour intervenir avec vigueur dans la vicomté. Deux procès dont le Parlement de Paris fut saisi servirent de prétexte. Cette même année éclata le conflit qui opposa Jeanne d’Artois à son fils Gaston IX. Avec une violence inouïe des mots, la régente et ses officiers furent accusés d’exactions, de blasphèmes, d’injures et de mauvaises pratiques.  Des érudits ont affirmé que la démesure du douaire de Jeanne, le bas comté de Foix, en était la cause. Mais les lettres de rémission que le roi Charles IV le Bel accorda à Jeanne n’en font pas mention. Jeanne d’Artois fut d’abord accusée d’exactions, de mauvaises pratiques, de blasphèmes et d’injures. Ces accusations pourraient relever soit de la calomnie de la part de Gaston IX, soit d’une accusation politique. Jeanne aurait pu rompre une paix antérieure conclue entre 1318 et 1324. Furent également accusés ses « gens et officiers », béarnais eux-mêmes, qui avaient gouverné le Béarn à ses côtés. Peut-être s’opposèrent-ils à Gaston IX parce qu’il s’était engagé dans les rangs français.     </p>
+          </div>
+        )
+      },
+
+
+
+
+
+ {
+        titre: "La diplomatie et le contrôle du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La guerre avait repris entre le roi de France et le roi-duc d’Aquitaine en 1324. Une armée commandée par Charles de Valois, dans laquelle figurait le jeune comte de Foix, occupa la Gascogne (sauf Saint-Sever et Bayonne). Gaston IX se retrouva ensuite aux côtés de Philippe VI de Valois en 1328, en Flandre. Cet engagement rompait avec la politique d’équilibre de Marguerite et allait à l’encontre des intérêts économiques du Béarn, du Marsan et du Gavardan. Au même moment, plusieurs Béarnais, tels Pierre de Gabaston, se trouvaient du côté du roi-duc d’Aquitaine. Les circonstances exactes de l’accusation portée contre Jeanne d’Artois restent inconnues. Jeanne d’Artois vit se dresser contre elle le puissant baron béarnais Garcie-Arnaud de Navailles. Condamné pour trahison par la Cour Majour à la confiscation de ses biens, ce seigneur fit appel directement au Parlement de Paris et non aux cours gasconnes. Le Parlement, après avoir déclaré l’appel recevable, condamna Marguerite et prononça la saisie du Béarn en 1318. C’est à propos de cette affaire que Marca défendit sa théorie : Garcie-Arnaud aurait fait appel au Parlement non comme baron de Béarn, mais comme seigneur de Castelnau-en-Chalosse, fief relevant du roi de France. En prenant le pouvoir, Jeanne hérita de cette situation difficile. Elle protesta, au nom de son fils, contre la sentence du Parlement de Paris et envoya un mémoire réfutant les arguments de Marca. Les juristes chargés de défendre Jeanne ne remirent pas en cause la compétence du Parlement de Paris, mais contestèrent la validité de l’arrêt sur la base de la procédure, le baron de Navailles avait dépassé le délai légal de dix jours pour déposer son appel, l’appel n’avait pas été notifié à la Cour Majour dans le délai de trente jours, les Fors de Béarn et coutumes d’Aquitaine, qui exigeaient que la cour de Saint-Sever fût saisie avant le Parlement de Paris, avaient été violés. Ce mémoire reprend mot pour mot les arguments utilisés auparavant par Marguerite auprès de la cour de Saint-Sever. Jeanne adopta donc une attitude conforme à celle de sa belle-mère. Peut-être fut-ce le prix à payer pour éviter la saisie du Béarn. Peu après, Jeanne changea complètement de politique : elle rompit avec Édouard II, obtint l’appui du Parlement de Paris et du roi de France, qui décida de la protéger contre les entreprises du roi d’Angleterre. Un document isolé (Documents, 23) éclaire cet épisode : un mémoire d’officiers anglais protestant contre l’envoi d’hommes d’armes français en Béarn, censés placer Jeanne sous la sauvegarde du roi de France. Charles IV le Bel avait pris cette décision à la demande de Jeanne, qui avait fait appel au Parlement de Paris contre Édouard II. Le roi d’Angleterre s’éleva vivement contre ce geste, estimant qu’il violait ses droits et faisait du Béarn un État vassal direct du roi de France, ce qui menaçait la paix en Gascogne. Les officiers anglais rassemblèrent tous les textes prouvant que les vicomtes de Béarn avaient prêté hommage aux ducs de Gascogne, mais leur protestation resta sans effet. Le Béarn glissa ainsi dans la mouvance directe des rois de France. Le 20 juillet 1342, Édouard III ordonna à ses officiers de ramener le vicomte de Béarn à l’obéissance et de réclamer son aide contre le roi de France. Le sénéchal d’Aquitaine tenta des négociations, sans succès. Dans son testament de 1343, Gaston IX ne fit aucune allusion au roi d’Angleterre mais mentionna les années de règne du roi de France, soulignant ainsi la rupture.   </p>
+          </div>
+        )
+      },
+        {
+        titre: "Équilibre fragile et aspiration à l’indépendance",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Vers le milieu du XIVᵉ siècle, le Béarn se trouvait dans une situation complexe : les rois d’Angleterre et de France pouvaient prétendre à sa dépendance directe, mais ni l’un ni l’autre n’exerçait un contrôle effectif. Le Béarn semblait sur le point de quitter la mouvance anglaise pour entrer dans celle du roi de France. Cette « oscillation » permit à la vicomté de disposer d’une large autonomie, sans pour autant être indépendante. Les sires de Béarn n’avaient jamais proclamé publiquement qu’ils répudiaient tout lien de dépendance ou qu’ils faisaient du Béarn un franc-alleu. Les changements d’obédience ne posaient jusque-là aucun problème : les populations connaissaient aussi bien le monde aragonais que le monde gascon. Mais le passage sous domination directe des rois de France fut beaucoup plus mal accepté. Gaston IX et son entourage fuxéen, habitués au royaume de France, soutenaient Philippe VI, mais les Béarnais s’y opposaient, se battre contre l’Angleterre c’était se couper des pâturages landais et du port de Bayonne, risquer la confiscation des fiefs du Marsan et du Gavardan, et perdre les avantages économiques et administratifs liés à l’Angleterre. Cette rupture détruisait l’équilibre économique de la vicomté. L’opposition interne apparut clairement au début de la guerre de Cent Ans, alors que Gaston IX combattait aux côtés des Français, des commerçants béarnais finançaient le roi d’Angleterre, des nobles servaient dans ses armées, et des bourgeois administraient des territoires gascons. Une grave crise menaçait donc le Foix-Béarn, dont l’union n’avait qu’un demi-siècle. C’est dans ce contexte que certains conseillers de Gaston IX conçurent un compromis : faire du Béarn un franc-alleu, c’est-à-dire un État neutre et souverain, tout en maintenant l’unité du Foix-Béarn. Ces conseillers restèrent auprès de Gaston X. Grâce à son opportunisme, celui-ci réussit à mettre en pratique cette idée. Au lieu de rejoindre directement la mouvance française, le Béarn tenta de devenir un État souverain. Avec le milieu du XIVᵉ siècle s’achevait une longue période de vassalité commencée en 1154. Durant deux siècles, cette vassalité envers l’Aragon puis l’Angleterre avait empêché les vicomtes de conduire une politique propre. Ils avaient dû combattre dans les Baléares, en Bordelais ou en Toulousain selon les ordres de leurs suzerains.    </p>
+          </div>
+        )
+      },
+        {
+        titre: "Les Corporations",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sous l'impulsion de Saint Louis demandant à son prévôt Étienne Boileau de mettre de l'ordre dans l'activité parisienne, naquit le « Livre des Métiers » en 1268, premier code civil du travail remplaçant la tradition orale par des réglementations strictes qui firent des corporations l'ossature du Tiers-État urbain, offrant statut et identité à ceux qui n'étaient ni nobles ni clercs. L'accès à ces jurandes exigeait impérativement « bonne vie et mœurs », car la réputation constituait le capital suprême ; les fautes graves comme le vol ou l'impudicité entraînaient la perte de l'honneur, le bannissement et souvent la misère par l'interdiction de travailler. Cette structure sociale, souvent tracée dès l'enfance permettant un chemin vers la sainteté simple, s'organisait hiérarchiquement : l'apprenti, débutant vers 12-14 ans par un contrat notarié de 3 à 7 ans, devenait compagnon qualifié pouvant voyager, puis maître propriétaire de son atelier, un modèle qui s'appliquait aux hommes comme aux femmes via des corporations mixtes ou exclusivement féminines dotées de leurs propres statuts. Bien qu'il existât une différence entre les prestigieux « Six Corps » parisiens (tels les orfèvres ou drapiers) et les petits métiers pauvres, toutes fonctionnaient comme des confréries fondées sur une solidarité mutuelle remplaçant l'usure interdite par l'Église : elles géraient des caisses de secours pour les malades, protégeaient l'outil de travail (prolongement sacré de l'homme), et soutenaient les veuves et orphelins, ne couvrant toutefois que les malheurs accidentels et non la négligence. Enfin, ces corps de métier assumaient un rôle de service public, notamment lors d'incendies comme celui de Rennes en 1720, tout en exerçant une police interne rigoureuse via les Jurés-Gardes qui inspectaient les ateliers à l'improviste et sanctionnaient publiquement les malfaçons et les actes d'impudicité. Ces corporations ont été abolies par la loi Le Chapelier en 1791.
+
+</p>         </div>
+        )
+      },
+        {
+        titre: "L'ensemble des voisins",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la différence de Paris où le métier définit l'individu, l'identité en Béarn repose sur l'appartenance à la communauté urbaine : le natif est « Voisin » par héritage, jouissant de l'accès aux pâturages, forêts et au commerce, tandis que l'étranger, simple « Habitant », doit payer un droit d'entrée et recevoir l'aval de l'assemblée des Jurats pour acquérir ce statut et travailler librement. Dans ce système où l'apprentissage dépend d'un contrat notarié privé dont la durée s'ajuste à la rapidité de l'élève, ce sont les Jurats, élus garants du « Bien Commun » et de la richesse de la ville, qui surveillent l'économie sans limiter le nombre d'artisans, s'appuyant sur des experts « prud'hommes » pour trancher les litiges techniques (comme la viande avariée) tout en laissant libre cours à l'activité tant que les taxes sont payées et le client respecté. Parallèlement, la Confrérie n'agit ni comme banque ni comme tribunal professionnel, mais comme une « famille artificielle » sans barrière à l'entrée et placée sous le regard de Dieu, dont le but premier est la fraternité ; elle sanctionne lourdement la discorde, l'insulte ou le scandale public (adultère, violence) par l'amende voire l'exclusion (synonyme de mort sociale pour avoir sali le Saint Patron), mais ignore les fautes techniques de l'artisan. Fonctionnant comme une mutuelle spirituelle interdisant l'usure, elle dispose d'un coffre pour accorder des prêts à taux zéro contre gage en cas de coup dur, ou offrir des aides à fond perdu (nourriture, vêtements, argent) aux « Pauvres Honteux » victimes du sort (maladie, incendie) en distinguant soigneusement ces derniers des paresseux. Cette solidarité culmine lors des moments clés de la vie : du banquet annuel renforçant les liens aux visites au chevet des malades, jusqu'au service le plus crucial et coûteux, le financement complet des funérailles (linceul, cierges, prêtre), assurant que même le membre sans le sou soit porté en terre dignement par ses frères. Nonobstant, à la campagne, le paysan est automatiquement intégré dans le Besiau (l'ensemble des voisins) dès qu'il a le statut de « Voisin ». C'est un pacte de solidarité sacré. Si un paysan tombe malade ou se blesse au moment des moissons, ce sont les voisins du Besiau qui viennent faire le travail à sa place. C'est une obligation morale, pas un choix. Là où la confrérie urbaine payait l'enterrement de l'artisan, à la campagne, c'est le Besiau qui s'en chargeait. C'est le voisin le plus proche (« le premier voisin ») qui devait porter la croix devant le cercueil, creuser la tombe ou préparer le repas des funérailles. Pour les paysans béarnais, l'entité de base est la Maison (la ferme, la terre, les pierres). Chaque Maison a un nom, et le paysan porte le nom de sa maison (l'aînesse intégrale, fille ou garçon). La solidarité se fait de Maison à Maison. Si une Maison brûle, toutes les Maisons du village doivent fournir du bois et des bras pour la reconstruire. Au lieu d'une assemblée de confrérie, les paysans avaient l'Assemblée paroissiale (souvent réunie le dimanche à la sortie de l'église, sous le porche ou un arbre dédié). Ils y décidaient ensemble des dates des moissons, de l'entretien des chemins et de l'usage des terres communes (pâturages gratuits pour tous les Voisins). Jusqu'à la Révolution de 1789, le Béarn a joui d'une autonomie fiscale robuste grâce aux États de Béarn qui négociaient et votaient chaque année le « Don Gratuit » à verser au Roi. De surcroît, l'absence de Gabelle, rendant le sel dix à vingt fois moins cher qu'ailleurs en France. Une fois le montant global du don arrêté, il revenait aux Jurats de le répartir : pour éviter les impôts directs impopulaires, les villes privilégiaient la fiscalité indirecte sur la consommation (vin, viande ou « barrade ») via l'affermage, permettant ainsi à l'artisan citadin de payer de manière diffuse. À l'inverse, la charge était plus visible pour le paysan : en cumulant la dîme ecclésiastique (environ 10 %), les droits seigneuriaux (10 à 15 %) et les contributions municipales, on estime que la pression fiscale représentait entre 20 % et 25 % de sa production brute.
+</p>        </div>
+        )
+      },
+        {
+        titre: "La notion de Maison",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+L'élément central de la société béarnaise n'est pas uniquement la classe sociale, mais la notion de Maison (l'ostau). Dans les registres notariaux, tout maître de maison, qu'il soit noble ou paysan (même serf), est qualifié de senhor (ou dauna pour une dame). La société est vue comme des maisons qui s'emboîtent les unes dans les autres. La maison du paysan est sous l'autorité de celle du seigneur local (l’ostau de Foix et de Bearn), qui englobe elle-même les maisons nobles (domengers). Le statut des individus est complexe et changeant selon le contexte. Un homme peut être "seigneur" de sa maison dans un contrat privé, mais "sujet" (sosmés) lors d'un recensement fiscal. Il existe des paradoxes et des opportunités d'ascension. On voit des fils de serfs épouser des filles de domengers, ou des roturiers devenir notaires généraux (comme Bernard de Luntz). Des notables paysans, appelés abbés laïques, intègrent progressivement la noblesse. La noblesse béarnaise, appelée lo gentiu, représente environ 2 % des foyers (recensement de 1385). Elle est composée des Barons qui sont très puissants et siègent à la Cort Major. On compte deux barons ecclésiastiques (évêques de Lescar et Oloron) et dix barons laïques (dont les sires de Coarraze, d’Andoins, de Navailles, etc.). Puis, les Cavers (chevaliers adoubés) qui portent le titre honorifique de En (Messire) ou Na (Madame). Aussi, les Domengers qui résident dans une maison forte (le domec) et doivent des services honorables au vicomte. Et Les Abbés laïques : La strate inférieure qui grossit avec le temps, souvent issue de l'élite paysanne. L'assise territoriale des seigneuries est souvent exigüe. Les domengers vivent des rentes perçues sur leurs sujets (sosmés), mais cela suffit à peine. Beaucoup sont endettés et ne vivent pas mieux que certains paysans (casalers). Dans les villages, les artisans (meuniers, forgerons, tisserands) répondent aux besoins locaux. Toutefois, certaines familles parviennent à s'élever socialement grâce à l'artisanat, comme les Coterer d'Oloron (couteliers à l'origine) qui intègrent l'élite bourgeoise. Le crédit est omniprésent et vital. Il se fait sous forme de prêts de subsistance (amigables) qui sont souvent gratuits, en grains ou fromages, pour aider les voisins. Ou sous forme de baux à cheptel (gasalha) : les maisons aisées confient leurs troupeaux aux plus pauvres, qui les nourrissent sur les terres communes en échange d'une part du profit (mi-gain). Le culte des morts (obits, prébendes) génère un capital important qui finance les entreprises des vivants. La dîme, souvent détenue par des abbés laïcs, sert aussi de capital d'investissement (moulins, forges, ou prêts à la communauté).
+
+  </p>
+          </div>
+        )
+      },
+ {
+        titre: "Alliance Portugal-Angleterre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la mort de Ferdinand Ier du Portugal en 1383, sa fille unique, Béatrice, est mariée au roi Jean Ier de Castille. Ce mariage sonne comme une annexion par la Castille. Jean, Grand Maître de l'Ordre d'Aviz (fils illégitime du roi Pierre Ier), est soutenu par la bourgeoisie et le génie militaire de Nuno Álvares Pereira. Et à Aljubarrota (1385), les Portugais (aidés par des archers anglais) écrasent l'armée castillane, et installent la maison d'Aviz sur le trône. En 1386, le traité de Windsor est signé il permet aux Anglais d'éviter que la Castille contrôle l’Atlantique ibérique.
+  </p>
+          </div>
+        )
+      },
+
+
+    ]
+  },
+
+
+
+
+
+
+  
+  
+     'souverainete': {
+    titre: "Souveraineté",
+    periode: "Temps Féodaux",
+    resume: "Le Béarn souverain sous Gaston Fébus",
+    introduction: "Puissance, art et liberté définissent l’État fébusien...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+         {
+        titre: "Aliénor de Comminges",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        Aliénor de Comminges, huitième enfant de Bernard VII de Comminges, fut promise à Gaston IX de Béarn grâce à son oncle, Bertrand de l’Isle-Jourdain, qui négocia le mariage. Bien qu’elle eût quatorze ans de plus que son futur époux, elle répondit avec esprit : « S’il doit être le comte de Foix, je n’hésiterais pas même à attendre qu’il naisse. » Très pieuse, Aliénor eut plusieurs enfants morts en bas âge et fonda une œuvre religieuse en leur mémoire ainsi que pour son fils survivant, Gaston. À la mort de son mari, le testament de Gaston IX confia la régence du comté à Aliénor, qui assuma la tutelle de son fils, le jeune Gaston Fébus, jusqu’à ses vingt et un ans. Elle administra les affaires du comté avec prudence et fermeté, remboursant la dette de Burgos et acquérant la seigneurie de Lannemezan. Lorsque Fébus prit les rênes du pouvoir, elle lui remit des comptes impeccables, sans qu’aucune contestation ne fût soulevée. Aliénor et son fils entreprirent ensuite de parcourir le pays pour rencontrer leurs sujets, visitant aussi bien les petits hameaux que les grandes villes, renouant ainsi le lien entre le comté et son peuple après deux régences difficiles.
+          </p>
+          </div>
+        )
+      },
+      {
+        titre: "Fidèle puis Souverain",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+          Dès 1328, lors de l’élection de Philippe VI de Valois, Gaston IX prit parti pour le nouveau roi de France, en participant à une expédition contre les Flamands rebelles qui furent écrasés à Cassel. Édouard III d’Angleterre vint lui-même en 1331 prêter hommage au roi de France pour la Guyenne. Quand la guerre éclata en 1337, Gaston IX soutint sans hésitation Philippe VI et accourut à son secours. Ce soutien au roi de France provoqua rapidement une crise de frontières avec un vassal du roi d’Angleterre, le baron Garcie-Arnaud de Sault-de-Navailles, dont les domaines touchaient ceux du Béarn près d’Orthez, alimentant les tensions déjà existantes dans la région. Ayant prêté de l’argent à Édouard III d’Angleterre sans jamais être remboursé, Gaston II de Foix-Béarn fit appel au Parlement de Paris pour récupérer sa créance. Le Parlement ordonna la saisie des biens du roi-duc, mais refusa finalement d’exécuter cette décision, provoquant la riposte d’Édouard III qui confisqua le duché de Gascogne et, en 1338, reprit le titre de roi de France en Flandre contre Philippe VI, ce qui suscita une révolte de la bourgeoisie flamande. Dès février 1338, Gaston IX mena des opérations militaires dans le camp français, bien que la situation fût complexe : vassal de Philippe VI pour le comté de Foix, il dut assiéger le château d’Aire-sur-l’Adour, tenu par une garnison gasconne sous le commandement d’un seigneur béarnais. Odet de Castetpouey, capitaine du château, se rendit sans combattre, obtenant en échange une rente, ce qui mit fin à cette guerre de façade. La tension diminua lorsque Gaston IX partit combattre en Flandres pour le roi de France : il obtint alors la vicomté de Lautrec et la promesse de la vicomté basque de Soule, à condition d’en expulser les Anglo-Gascons. Les trêves conclues en 1340 furent prolongées jusqu’en 1345, permettant à Gaston IX de participer à une croisade en Andalousie et d’assurer la régence d’Aliénor, sa femme, dans le calme. Après la rupture des trêves par Édouard III, le comte de Derby débarqua à Bayonne le 6 juillet 1345, tandis que le jeune Gaston X Fébus recevait l’hommage d’un seigneur béarnais et affirmait sa volonté de servir le roi de France comme son père. En pratique, il se montra plus prudent : il limita son engagement à la défense du Marsan et du Gabardan, recevant pour cela 300 hommes d’armes et 1 000 fantassins envoyés par le roi Philippe VI, tandis que ses oncles Roger-Bernard de Castelbon et Robert, évêque de Lavaur, combattaient en Limousin auprès du duc de Normandie, futur Jean II le Bon. L’hiver interrompit les combats, qui reprirent au printemps 1346 : le duc de Normandie rejoignit les troupes commandées par Pierre de Bourbon sur la Garonne pour assiéger Aiguillon, siège qui dura quatre mois. Fidèle à sa stratégie de prudence et d’intervention limitée, Gaston X se contenta d’un soutien financier et militaire modéré, maintenant son équilibre entre les deux couronnes sans s’impliquer directement. Alors qu’il se trouvait en Béarn, Gaston X Fébus apprit qu’Édouard III d’Angleterre, après avoir débarqué près de Cherbourg, avait traversé la Normandie et écrasé l’armée française à Crécy-en-Ponthieu le 26 août 1346 avant d’assiéger Calais. Paralysé par cette défaite, Philippe VI convoqua ses vassaux à Amiens pour la Pentecôte de 1347, mais le comte de Foix ne s’y rendit pas, rompant ainsi avec la tradition de fidélité à la couronne. Gaston X saisit cette occasion pour se démarquer du conflit franco-anglais et affirmer publiquement l’indépendance du Béarn en réaction à une demande royale. 
+           </p>
+          </div>
+        )
+      },
+      {
+        titre: "Fébus, l’Architecte",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       La tentative de Philippe VI pour secourir Calais échoua, augmentant la confusion politique. Après la reddition de la ville le 4 août 1347, il chercha à renforcer ses alliances, notamment avec la Castille, et à regagner l’appui du jeune Gaston X. Aliénor de Comminges entama alors des négociations avec Jeanne de Navarre, reine de Navarre et comtesse d’Évreux, pour marier son fils à Agnès, la cadette de la reine de Navarre. Le 25 septembre 1347, Gaston scelle la déclaration de souveraineté du Béarn : « Terre de Béarn, terre que je tiens de Dieu et de nul homme au monde ; il ne découle pour lui aucune obligation si ce n’est de faire ce que bon lui semble ». L’entourage de Gaston X joua probablement un rôle majeur dans la conception de son projet politique d’indépendance. Parmi ses conseillers figurait son oncle naturel, Bernard de Béarn, dit l’Aspois, frère bâtard de Gaston IX, ancien partisan du camp anglais qui avait servi Édouard III et reçu des gages à Westminster en 1343. Bien qu’il eût soutenu l’Angleterre, il accueillit sans déplaisir la rupture du jeune comte avec une politique jusque-là trop favorable à la France. Un autre conseiller influent fut Pierre d’Estiron, bachelier en droit et ancien membre du conseil de régence d’Aliénor de Comminges. Gaston X lui fit confiance et le nomma lieutenant général en Marsan. Entré dans les ordres, Estiron devint chanoine à Lescar en 1346 puis « évêque élu d’Oloron » en 1348. Tout en affirmant la souveraineté du Béarn, Gaston X paraissait satisfaire Philippe VI sur le plan formel. Fidèle vassal pour le pays de Foix, il se disait prêt à ratifier son alliance avec la Castille à condition que les négociations se déroulent sur ses terres, soulignant que le Foix relevait du royaume de France. Ce double langage permettait à Gaston X d’éviter la rupture tout en consolidant son autonomie. Philippe VI, lui-même engagé dans des discussions avec le roi d’Aragon pour une alliance contre la Castille, fut contraint de composer. La chancellerie française nota d’ailleurs avec ironie qu’au lieu de figurer « le bon vassal du roi », la formule officielle nommait Gaston : « gouvernant en Béarn, monseigneur le comte », reconnaissant ainsi implicitement sa souveraineté. Dès ce premier acte politique, Gaston X adopta une méthode qu’il ne renia jamais : affirmer hautement son indépendance tout en laissant toujours une porte ouverte à la conciliation pour ne pas humilier ses interlocuteurs car après la défaite française, Philippe VI n’avait ni les moyens militaires ni politiques de contraindre un vassal puissant sans risquer de le pousser dans le camp anglais, ce qui aurait été désastreux pour la France méridionale et jusqu’à sa mort en 1350, Philippe VI conserva Gaston X dans son camp sans jamais contester son statut juridique particulier. 
+          </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Le Sort de Jeanne d’Artois",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+     Sous la surveillance de Philippe VI, Jeanne d’Artois fut transférée à Lourdes après avoir renoncé à son douaire sur les terres de Foix, au profit de ses petits-fils. Gaston X (Fébus) compensa cet abandon en dédommageant ses cousins de Castelbon et de Lavaur. Le 19 décembre 1347, Jeanne fut installée librement au château de Carbonne avec une rente annuelle de 3 000 livres sur plusieurs villes (Saint-Gaudens, Daumazan, Saint-Ybars, Mas-d’Azil). L’évêque de Lavaur et le vicomte de Castelbon lui accordèrent le pardon au nom du défunt comte de Foix. Elle mourut à Carbonne en 1350, à 66 ans, léguant ses biens à son fils Roger-Bernard de Castelbon. Cet accord réconcilia les branches aînée et cadette de la maison de Foix-Béarn. Après la bataille de Crécy, une trêve s’installa entre la France et l’Angleterre, mais la peste noire (1348) ravagea les royaumes. Depuis Pau, Gaston X demanda au roi d’Aragon un report d’hommage sur ses terres du Roussillon, invoquant « les pestes mortelles ». En décembre, il prêta serment à un émissaire de Philippe VI pour toutes ses terres du sud de la France, confirmant sa vassalité envers la couronne. Cette prudence diplomatique s’expliquait par des négociations matrimoniales entre Foix-Béarn et Navarre. En 1234, Thibaud, comte de Champagne, devint roi de Navarre et sa lignée passa sous domination capétienne quand Philippe le Bel épousa Jeanne, reine de Navarre. Leur fille, Jeanne II, écartée du trône de France mais restée reine de Navarre, épousa Philippe d’Évreux, prince capétien et seigneur normand. Cette union forma une vaste puissance territoriale (Évreux-Champagne) entourant Paris, inquiétant Philippe VI, qui tenta d’échanger leurs terres contre Angoulême. À sa mort en 1350, le différend n’était toujours pas réglé. Le couple laissa plusieurs enfants, dont Charles (futur roi de Navarre) et Agnès.
+        </p>
+          </div>
+        )
+      },
+      {
+        titre: "Le Mariage d’Agnès de Navarre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Aliénor, mère de Gaston Fébus, projeta de marier Gaston à Agnès de Navarre, soutenue par le roi de France qui offrit une rente de 2 000 livres assises sur des terres de la sénéchaussée de Toulouse car il est en bon terme avec Fébus et lui permet de gérer le sandwich de sa tante par alliance. En 1349, la famille royale de Navarre, installée en Île-de-France, prépara l’union. Le 5 mai, la reine Jeanne de Navarre promit une dot de 20 000 livres et un douaire de 5 000 livres. Le mariage fut célébré le 4 juillet à Paris, en l’église du Temple, sous la bénédiction de l’évêque de Laon. Agnès reçut un douaire sur Mazères, Saverdun et Caumont, ainsi que des dons d’Aliénor et des communautés du Béarn, qui offrirent 400 marcs d’argent. Le séjour de Gaston Fébus à Paris, auprès de la cour de Navarre, lui fit découvrir le raffinement artistique et la vie de cour. Jeanne de Navarre lui présenta ses trésors : œuvres d’art, manuscrits précieux et un Livre d’Heures illustré. L’hôtel de Navarre, foyer artistique, accueillait Guillaume de Machaut, auteur du Jugement du roi de Navarre dédié au fils de Jeanne, Charles. Fasciné par ce milieu, Fébus découvrit aussi la chasse à courre auprès de maîtres renommés. Cette passion, née en France, marquera son œuvre future, notamment Le Livre de la chasse, où il évoquera avec émotion les forêts royales et l’art de vivre aristocratique.
+          </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Fébus entre Rois et Pestes",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Lors de son séjour en Île-de-France, Gaston de Foix-Béarn fut témoin d’événements marquants, notamment la progression de la Peste noire. Jeanne de Navarre, mère du nouveau roi de Navarre Charles II, en mourut parmi les premières. Gaston était aussi parent de la reine de France, également emportée par l’épidémie. Le roi Philippe VI se remaria aussitôt avec Blanche de Navarre, sœur d’Agnès, l’épouse de Gaston : ainsi, Gaston devint à la fois beau-frère du roi de France et du roi de Navarre. Mais Philippe VI mourut le 22 août 1350, quelques mois après le couronnement de Charles II de Navarre à Pampelune (27 juin 1350). Gaston et Agnès étaient déjà repartis en Béarn lorsque survint un problème financier : Jeanne de Navarre n’avait pas payé la dot promise à sa fille. Sur les 20 000 livres prévues, seulement 1 000 avaient été versées, et Charles II hérita de cette dette. En 1350, la scène politique française est donc dominée par Jean II le Bon, Charles II de Navarre et Gaston Fébus. Jean II, fils de Philippe VI, avait 31 ans. Surnommé “le Bon” pour sa générosité et son goût du faste, il avait toutefois un caractère instable, parfois indécis ou impulsif, ce qui nuisait à son autorité. La cour était minée par les rivalités entre clans, rendant le gouvernement hésitant et inefficace. Cette situation créait un rapport de force particulier avec Charles II de Navarre, ennemi redoutable. Celui-ci se sentait lésé : la compensation promise à Jeanne de Navarre pour l’abandon de la Champagne et de la Brie ne lui avait jamais été versée et ce disait aussi descendant direct de la lignée capétienne, puisqu’il tenait sa descendance de Philippe d’Évreux et Louis d’Évreux, petits-fils du roi capétien Philippe III le Hardi. Il revendiquait donc des droits légitimes au sein du royaume de France. Charles II de Navarre représentait pour Jean II le Bon un rival potentiel, car il descendait aussi de la dynastie capétienne. Afin d’éviter qu’il ne devienne une alternative politique à la dynastie Valois, Jean II tenta de le neutraliser par un mariage : il lui proposa d’épouser sa jeune fille, encore trop jeune pour être mariée avant plusieurs années, mais en échange d’une dot importante et du comté d’Angoulême. Charles II accepta, espérant récupérer rapidement ce territoire. Cependant, dès avril 1351, la guerre reprit contre les Anglais. Gaston, est nommé lieutenant-général par Charles II, se rangea à ses côtés et participa aux combats contre les Anglo-Gascons dans la région de Condom. Une trêve fut conclue le 11 septembre 1351, suivie bientôt par la signature officielle du contrat de mariage entre Charles II et la fille du roi de France. Après l'arrivée du comte de Stafford à Bayonne en 1352, Jean II nomma Jean Ier d'Armagnac lieutenant-général en Languedoc, choix qui déplut fortement à Gaston X (Gaston Fébus), qui estimait avoir droit à cette fonction.
+       </p>
+          </div>
+        )
+      },
+       {
+        titre: "Gaston l'Arbitre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Pour tenter d’apaiser le retour du conflit Armagnac-Béarn, Jean II chercha à médiatiser la querelle par Gui de Comminges, puis par le sénéchal de Toulouse, en vain. Finalement, il fit appel au pape Clément VI, à Avignon, qui imposa une trêve précaire courant jusqu’aux Pâques suivantes. Cette trêve permit à Gaston X de tirer avantage des circonstances. À Toulouse, les capitouls (magistrats municipaux) craignaient que Lafrancaise, tombée aux mains des Anglais, mette la ville en danger. Ne se sentant plus protégés, ils conclurent un accord financier avec le comte de Foix (une forte compensation pour qu’il contraigne Stafford à se retirer). Gaston X s’imposa de plus en plus comme un véritable arbitre militaire dans le sud-ouest en répétant ce genre d’action. Il agissait comme un entrepreneur de guerre indépendant en intervenant contre paiement, sans s’engager officiellement dans un camp. Puis, avec Gui de Comminges, il reprit Lafrancaise, contraignant Stafford à se retirer. Dans le même temps, il profita de l’éloignement du comte d’Armagnac, occupé contre les Anglo-Gascons, pour rassembler 300 chevaliers et 2 000 fantassins et ravager les terres de son rival à partir d’Aire-sur-l’Adour. La mort du pape Clément VI compliqua la situation, mais son successeur Innocent VI obtint une trêve précaire, grâce notamment à Aliénor de Comminges. Au même moment, Jean II le Bon s’engagea dans un conflit politique avec Charles II de Navarre, lié à une vieille question dynastique. Les rois de France soutenaient depuis longtemps la famille de la Cerda, en concurrence avec les rois de Castille. Jean II avait placé sa confiance en l’un de leurs descendants, Charles d’Espagne, en le mariant et en lui donnant des terres, notamment le comté d’Angoulême en 1353, le territoire que Charles II de Navarre revendiquait pour lui-même. Les deux coteries, celle de Navarre et celle liée à la famille de la Cerda, attendaient l’occasion de s’affronter.
+  </p>
+          </div>
+        )
+      },
+      {
+        titre: "Révolte à Orthez",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Pendant ses absences, Gaston X avait confié le gouvernement du Béarn à Arnaud-Guilhem, son demi-frère. Le 19 octobre 1353, alors qu’Arnaud-Guilhem déjeunait au couvent des Frères Prêcheurs, une émeute éclata : des hommes et des femmes armés attaquèrent le bâtiment. Surpris, Arnaud-Guilhem et ses convives s’enfuirent. Les insurgés occupèrent la ville, mangèrent, burent et se saoulèrent. Arnaud-Guilhem se réfugia au château et fit arrêter les émeutiers dans la soirée. On ignore les causes exactes de cette révolte, mais elle fut la seule à laquelle Gaston Fébus dut faire face. Il n’effectua son retour en Béarn qu’en novembre, reprenant alors le contrôle de sa capitale. En général les meneurs devraient être pendus et les magistrats punis pour servir d’exemple. Le vicomte convoqua les autorités municipales au château Moncade, et après délibération, décida de seulement maintenir les meneurs en prison, de suspendre le For et d’imposer une amende collective. Une fois celle-ci payée, le 4 avril 1354, Orthez retrouva ses privilèges, et Gaston X continua à user de régler les affaires politiques et judiciaires par des amendes plutôt que par la violence, exigeant des compensations financières pour les délits. Ainsi, il restait fidèle à l’esprit des Fors du Béarn, qui ne prévoyaient aucune peine afflictive mais seulement des compensations financières adaptées à la gravité du dommage et à la situation sociale de la victime. Il pardonnera à son ami Arnaud-Guilhem et le gardera toute sa vie auprès de lui.
+
+  </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "L’affaire Pélegrin",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       Au début de 1354, un marchand de Sauveterre-de-Béarn, Pélegrin de Fosse, ayant acheté des marchandises à Bordeaux pour les vendre à Montpellier, fut arrêté par les autorités locales et se vit confisquer une somme de 300 écus destinée à son commerce, sous prétexte qu’un marchand venant de Bordeaux devait être considéré comme anglais et donc ennemi. Informé de l’affaire, Gaston X intervint immédiatement pour obtenir la libération de son sujet et la restitution des biens saisis ; ses premières démarches ne laissèrent pas de traces connues, mais il rédigea ensuite une longue lettre en latin, signée au château d’Orthez le 5 mai 1354, afin de mettre un terme définitif à ce litige. Après avoir salué courtoisement les consuls de Montpellier et exprimé ses vœux de prospérité, il entra dans le vif du sujet en dénonçant l’arrestation injustifiée de son homme. Gaston X défend vigoureusement Pélegrin, « notre sujet relevant directement de notre vicomté », en rappelant que son arrestation est contraire au droit des gens puisque le Béarn est une terre libre possédant souverainement le pouvoir judiciaire « comme le fait tout prince au monde qui possède sa terre ». Il précise fermement qu’on ne reconnaît « aucune supériorité autre que Dieu ». Pélegrin a donc été victime d’un véritable vol : les autorités lui ont « dérobé ou fait dérober son argent » sous un prétexte mensonger affirmant qu'il était Anglais. Gaston réfute cet argument : avoir vécu à Bordeaux ne fait pas d’un homme un Anglais, « puisqu’on peut voir n’importe quel Béarnais y rendre chaque jour pour commercer ». Les Béarnais, sujets d’un pays souverain, doivent être considérés comme marchands neutres bénéficiant d’un privilège d’immunité lié à leur statut juridique. Dès lors, l’arrestation et la confiscation de l’argent constituent une insulte au prince : « un outrage inacceptable » envers un homme reconnu comme son sujet. Gaston X avait obtenu la libération de Pélegrin, mais non la restitution de ses biens : « Néanmoins vous avez conservé… l’argent si bien qu’il n’a plus rien pour vivre. » Dans une adresse habile, il prétend dédouaner les consuls « je vous mets hors de cause… c’est le gouverneur et non vous qui a procédé à cette arrestation » tout en leur reprochant immédiatement leur inefficacité : s’ils l’avaient voulu, ils auraient pu faire restituer l’argent. Il juge « invraisemblable » qu’une ville de cette importance n’ait pu empêcher qu’un outrage aussi grave reste impuni. La conclusion de la lettre est sans ambiguïté : Gaston exige « de rendre et restituer » l’argent du marchand, ainsi que les dépenses occasionnées, rappelant qu’il agit au nom du droit souverain du Béarn. Il achève en offrant « d’être à votre tour serviteur, à vous et à chacun de vous, à l’occasion d’affaires semblables », formule diplomatique mais ferme affirmant à la fois sa supériorité souveraine et sa volonté de maintenir des relations courtoises. Même si l’on ignore si son sujet, Pélegrin, récupéra les 300 écus d’or confisqués, l’épisode marque un tournant : grâce à l’intervention du prince, le Béarn se dégageait peu à peu de la tutelle anglo-gasconne et affirmait un statut de neutralité annonçant sa souveraineté effective. Cette position allait devenir le socle de la politique commerciale et diplomatique conduite par Gaston X.
+
+           </p>
+          </div>
+        )
+      },
+      {
+        titre: "L'Assassinat de Charles d'Espagne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        En 1354, la rivalité entre la famille d’Espagne et Charles II de Navarre culmina dans un drame à la cour de France : le 8 janvier, Charles d’Espagne fut assassiné par des hommes du roi de Navarre, son cadavre portant près de quatre-vingts coups de lame. Jean le Bon, roi de France et beau-père de Charles II, réagit violemment en ordonnant à Comminges et à Armagnac d’envahir les domaines navarrais au nord des Pyrénées. Cependant, cette offensive devait traverser les terres de Gaston X, qui refusait d’y participer, considérant Armagnac comme un ennemi juré. Cet événement marqua la rupture totale entre la couronne de France et celle de Navarre. L’intervention d’Armagnac et de Comminges, retardée par les difficultés de passage en Béarn, coïncida avec le rapprochement de Charles II avec Édouard III d’Angleterre, forçant Jean le Bon à revoir sa stratégie. Jusqu’en 1364, la France devait désormais composer avec la menace d’un parti anglo-navarrais puissant : Charles II, en s’alliant aux Anglais, devenait un acteur aussi redoutable qu’imprévisible, capable d’ouvrir un front en Normandie. Pour apaiser la situation, Jean le Bon conclut un nouveau traité avec son gendre, lui cédant la Champagne et la Brie, en compensation des territoires précédemment repris à sa mère Jeanne d’Évreux. En échange, Charles II restituait ses domaines normands, mais il gardait la possibilité d’exercer un chantage politique en contrôlant le port stratégique de Cherbourg, désormais accessible aux Anglais. Ce chantage porta immédiatement ses fruits : Charles II proposa à Édouard III un partage du royaume de France. De retour en Navarre, il prépara une nouvelle offensive en Gascogne, soutenue par les troupes anglaises du prince de Galles. Édouard III projetait un débarquement à Cherbourg (Gaston était du complot). Jean le Bon, paniqué, conclut la paix de Valognes le 10 septembre 1355, amnistiant les conjurés, parmi lesquels figurait le comte de Foix. Peu après, le prince Édouard de Woodstock (le futur Prince Noir), fils aîné d’Édouard III, débarqua à Bordeaux avec des renforts. Gaston X profita de cette situation pour afficher publiquement sa neutralité et prouver qu’il n’était plus lié au camp français.
+          </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Fébus et Le Prince Noir",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+     Édouard de Woodstock, fils d’Édouard III et prince de Galles, s’était illustré à Crécy en 1346 avant d'être nommé lieutenant général de Gascogne en 1353. Il y était chargé d’une vaste offensive en coordination avec Charles II de Navarre, nonobstant, ce dernier s'étant réconcilié avec Jean le Bon, le prince de Galles débarqua finalement à Bordeaux, le 23 septembre 1355, avec un corps expéditionnaire de 2 000 hommes d’armes qu’il finançait lui-même. Ce chef redoutable, passionné de fêtes et de tournois, menait la guerre comme un véritable entrepreneur, dépensant sans compter mais se remboursant sur le butin. Son armée, crainte pour sa brutalité, ne faisait aucun quartier. Aimé par la noblesse anglaise pour ses victoires et ses largesses, il devint une figure infernale pour les populations du sud de la France, dont il dévasta les campagnes. En 1355, il lança une grande chevauchée à travers le Languedoc, région prospère depuis le règne de Saint Louis. Les faubourgs, nombreux au-delà des murailles, offraient d’abondantes proies à ses razzias. Parti de Bazas, il traversa l’Armagnac en incendiant les terres de Plaisance, Mirande et Samatan, avant d’atteindre la plaine toulousaine. Jean Ier d’Armagnac, impuissant, s’était réfugié dans Toulouse. Édouard, dépourvu de matériel de siège, préféra continuer sa marche vers l’est : après avoir pillé les environs, il arma devant Carcassonne plusieurs chevaliers de la famille d’Albret qui avaient rejoint son camp, puis, le 10 novembre, regagna l’ouest, son butin amassé et la mauvaise saison approchant. Tandis que l’armée anglo-gasconne se retirait, quelques bandes béarnaises profitèrent de l’occasion pour piller à la frontière. Gaston, posté dans le pays de Foix, leur interdit toute incursion et se porta personnellement à la rencontre du Prince Noir le 17 novembre. Il fournit vivres et accueil à Édouard, chevauchant un temps à ses côtés. Cette entrevue marqua une rencontre diplomatique importante : bien que leurs armées eussent des intérêts distincts, elles évitèrent tout affrontement. Le respect mutuel entre les deux hommes fut manifeste, le Prince Noir interdisant même à ses troupes de piller les domaines de Gaston. Pendant que le Prince de Galles célébrait son succès à Bordeaux par de fastueuses fêtes, Charles II de Navarre reprit ses intrigues contre le roi de France. Cette fois, il bénéficia du concours de Gaston Fébus.
+        </p>
+          </div>
+        )
+      },
+    
+
+          {
+        titre: "Le Coup de Poitiers",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   En janvier 1356, Jean le Bon signe des lettres de rémission pour amnistier son fils, le roi de Navarre, ainsi que le comte de Foix. Cette clémence renforce Charles II de Navarre dans la conviction qu’il peut tout se permettre et monte alors un nouveau complot, découvert lors d’un banquet à Rouen le 5 avril 1356. Il y est arrêté, certainement comme Fébus, son complice présumé. Le roi de France exige alors de Fébus un hommage pour le Béarn, mais celui-ci refuse, préférant préserver la souveraineté de ses terres. Alors que le Prince de Galles s’apprête à lancer une chevauchée entre Bordeaux et Calais, le roi finit par libérer Fébus pour éviter qu'il ne change de camp. Gaston regagne alors le Foix, puis le Béarn, après un passage à Perpignan pour y rencontrer le roi d’Aragon, avant de s’installer définitivement à Orthez en septembre. Pendant ce temps, le Prince Noir ( Prince de Galles) lançait une grande chevauchée depuis Bergerac le 4 août 1356, dévastant les régions traversées jusqu’à Bourges. Jean le Bon, soutenu par un effort fiscal exceptionnel voté par les trois États du royaume, marcha contre lui. Le Prince Noir battit en retraite vers Bordeaux, poursuivi par l’armée royale, avant de livrer bataille aux côtés de Jean de Grailly (captal de Buch) à Poitiers, le 19 septembre 1356. Ce fut une victoire écrasante : Jean le Bon fut capturé avec ses chevaliers et de hauts seigneurs influents. Ce désastre se mua en un immense butin pour Édouard III, enrichi par les rançons imposées aux prisonniers. Après la bataille, la situation politique changea totalement pour Gaston Fébus. Son nouvel adversaire était désormais le Prince Noir, maître de l’Aquitaine, qui réclama rapidement l’hommage du Béarn, du Marsan et du Gabardan. Simultanément, Fébus devait gérer les exigences du roi d’Aragon, Pierre IV, qui réclamait l'hommage pour le comté de Foix tout en lui proposant une alliance contre le roi de Castille, avec lequel un conflit semblait imminent.
+      </p>
+          </div>
+        )
+      },
+      {
+        titre: "La Diplomatie Aragonaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       Le 12 juillet 1356, dans le palais des rois de Majorque à Perpignan, Gaston rendit hommage à Pierre IV pour ses terres de Cerdagne et de Conflent, promettant en retour une aide militaire, en échange d’une indemnité confortable pour chaque homme et chaque cheval engagé. Après la défaite française de Poitiers, Pierre IV envoya plusieurs émissaires à Orthez pour obtenir le soutien effectif de son vassal ; mais la réponse de Gaston, en octobre, se limita à de belles paroles : il serait « un bon allié et un bon vassal », tout en précisant qu’il n’entrerait pas encore en guerre. Pendant ce temps, à Bordeaux, le Prince Noir célébrait son triomphe et retenait Jean le Bon prisonnier dans un faste royal, tandis que les seigneurs gascons se disputaient les rançons et les parts du butin. Gaston X, toujours prudent, temporisa encore vis-à-vis du roi d’Aragon, prétextant la lenteur des négociations et la question de la solde de ses hommes. En février 1357, il refusa une nouvelle demande d’aide en réclamant une révision du paiement promis, ce qui prolongea les tractations pendant des semaines. Pierre IV finit par céder, concédant à Gaston un supplément de solde pour chaque soldat. Cette habile manœuvre, sous couvert de fidélité, traduisait surtout la stratégie dilatoire de Fébus, soucieux de préserver son indépendance entre les puissances anglaise, française et aragonaise. Après avoir obtenu l’assurance que le prince de Galles n’entreprendrait aucune action militaire contre le Béarn pendant son absence au sud des Pyrénées, Gaston Fébus profita de la situation pour faire monter les enchères. Il informa le roi de Castille, son allié potentiel, qu’il était prêt à se rapprocher de lui contre une forte somme d’argent. Jouant ainsi un double jeu diplomatique, il fit pression sur le roi d’Aragon en exigeant le paiement intégral des soldes promises avant le début de la campagne militaire, et obtint gain de cause. Gaston Fébus entreprit son expédition en Aragon le 30 mars 1357 à la tête d’environ 1 000 chevaliers lourdement armés, accompagnés de montures de rechange, de bêtes de somme et de 600 hommes de pied, sans compter les valets. Cette démonstration de puissance montrait que son ralliement, selon qu’il pencherait vers la France ou l’Angleterre, pouvait faire basculer l’équilibre des forces dans la région. L’expédition, en réalité, se déroula sans véritable affrontement. Après avoir franchi le Somport et traversé Jaca, l’armée avança lentement jusqu’aux portes de Huesca, puis vers Saragosse. Cette lenteur était délibérée, car Gaston savait que les rois de Castille et d’Aragon négociaient une trêve. En effet, celle-ci fut signée quelques jours avant son arrivée à Saragosse, le 18 mai. L’expédition se conclut donc par une entrée triomphale sans combat : Gaston reçut les honneurs à Saragosse et regagna ensuite le Béarn par le Somport, ayant prouvé sa force sans s’être réellement engagé dans le conflit. Pendant ce temps, le Prince Noir, désormais à Londres avec Jean II le Bon prisonnier, menait fêtes et négociations dans la capitale anglaise. La trêve signée à Bordeaux devait durer jusqu’au printemps 1358. Profitant de ce répit, le comte de Foix envisagea une expédition lointaine pour s’éloigner des intrigues politiques. Il cherchait à éviter d’être impliqué dans les manœuvres des agents navarrais contre le Dauphin, qui faisait face à une grave crise en France. Cette retraite prudente permettait aussi à Gaston de ne pas répondre aux sollicitations du roi d’Aragon, dont la trêve avec la Castille venait d’être rompue.
+          </p>
+          </div>
+        )
+      },
+
+       
+    ]
+  },
+
+
+     'apogee': {
+    titre: "L'Apogée Militaire",
+    periode: "Temps Féodaux",
+    resume: "Fébus en héros de l'Occident",
+    introduction: "Fébus forge s'impose militairement et diplomatiquement....",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      {
+        titre: "La Croisade de Prusse",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        Entre 1357 et 1358, le grand maître de l’Ordre Teutonique était Winrich von Kniprode, qui occupa cette fonction de 1351 à 1382. Profitant de la trêve conclue après la bataille de Poitiers, il encouragea les chevaliers occidentaux à participer régulièrement aux campagnes en Prusse qu’il organisait. Sous sa direction, l’ordre connut son apogée. Fondé en 1198 pour escorter les pèlerins allemands en Terre sainte et défendre les États latins contre les musulmans, l’ordre se replia en Europe dès 1226, quand il reçut des territoires slaves en Prusse orientale. En 1255, les Teutoniques s’implantèrent à Königsberg. Recrutés dans la noblesse germanique, vêtus d’une célèbre robe blanche ornée d’une croix noire, ils devinrent une force redoutée et conquirent progressivement les régions entre la Vistule et le Niémen : d’abord la Livonie avec les chevaliers Porte-Glaive, puis Riga comme centre principal. Cependant, en 1242, ils avaient subi une défaite marquante contre Alexandre Nevski sur la glace du lac Peïpous. Au milieu du XIVᵉ siècle, l’union entre la Prusse et la Livonie restait fragile et les Lituaniens demeuraient une menace constante. En Occident, les Lituaniens étaient souvent assimilés à des « Sarrasins », parce qu’ils n’étaient pas chrétiens, bien qu’une partie de leur noblesse ait déjà adopté le christianisme orthodoxe. La croisade menée en Prusse orientale s’inscrivait donc dans le mouvement allemand de Drang nach Osten, une expansion vers l’est visant à repousser les Slaves vers les plaines russes. Winrich von Kniprode avait gravi un à un les échelons de l’ordre avant d’en devenir le dirigeant. Originaire de Basse-Rhénanie, il avait été d’abord simple chevalier, puis chef du Komtur de Dantzig en 1338, avant d’être nommé Oberster Marschall. Il s’installa à Königsberg à la cour du roi, ville qui portait ce nom en souvenir d’un roi de Bohême. Winrich von Kniprode, chargé d’organiser les expéditions annuelles contre les Lituaniens, poursuivit son ascension dans l’Ordre Teutonique : en 1346, il fut nommé Groskomtur de Marienbourg, responsable d’un grand district centré sur la « ville de Sainte-Marie ». Devenu grand maître, il mena une politique ambitieuse : développement agricole pour augmenter l’exportation de blé, accords commerciaux avec les Polonais, soutien à la Hanse, donnant aux Teutoniques un quasi-monopole dans le commerce baltique. Il chercha aussi à renforcer l’autonomie de chaque district en s’appuyant sur les Komtureien. Tel était l’homme qui reçut Gaston Fébus et le captal de Buch à l’hiver 1357-1358. Le voyage en Prusse devint si populaire qu’en 1382-1384, 478 chevaliers y participèrent, certains arborant dans leurs armes les cimiers les plus célèbres du XIVᵉ siècle. Ces hôtes recevaient des leçons de tactique et de stratégie adaptées à la saison, car Kniprode proposait deux types d’expéditions : d’été ou d’hiver, la seconde étant privilégiée par Fébus selon le contexte politique occidental. 
+      
+       </p>
+          </div>
+        )
+      },
+      {
+        titre: "Départ en Croisade",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Ayant décidé de participer à la croisade des Chevaliers Teutoniques, Gaston X prit toutes les mesures nécessaires pour lever les derniers obstacles qui pourraient encore l’empêcher de partir. Le roi d’Aragon tenta une dernière fois de le détourner de son projet : il envoya un émissaire en Foix afin de lui rappeler leur alliance contre la Castille et l’avertir que la guerre pouvait reprendre à tout moment. Selon cette alliance, Gaston X aurait donc dû renoncer à son voyage en Prusse pour tenir ses engagements, mais l’intervention resta sans effet. Plus confiants que lors de la croisade d’Algésiras, Gaston X et son entourage jugèrent inutile d’organiser une régence officielle. Il nomma seulement un lieutenant-général du Béarn : un chevalier originaire d’Avignonet, Bertrand du Pujols, déjà expérimenté comme Mersan ou Gabarrus de Pamiers. Ni Aliénor ni Agnès, de la famille du comte, ne furent associées à la gestion du pays durant cette absence. Malgré une meilleure entente avec le Prince Noir, Gaston X prit une précaution supplémentaire pour se garantir de sa fidélité pendant le voyage en Prusse. Il choisit pour l’accompagner Jean III de Grailly, captal de Buch, l’un des héros de la bataille de Poitiers et principal représentant de la noblesse gasconne gagnée à la cause anglaise. Originaire de Savoie et installée en Angleterre depuis le XIIIᵉ siècle grâce au mariage avec une princesse de Savoie, la famille de Grailly s’était ensuite implantée en Gascogne, recevant les domaines du pays de Buch et de Castillon. La faveur du roi Édouard III permit à Pierre de Grailly de devenir un des premiers membres de l’Ordre de la Jarretière et d’épouser une riche héritière bordelaise, obtenant notamment les terres du bassin d’Arcachon. Leur fils Jean III de Grailly épousa Blanche de Foix et leur union donna naissance au cousin de Gaston X, Jean III de Grailly, capitaine fidèle du roi d’Angleterre. Réputé pour sa bravoure, sa piété et son courage exemplaire, il avait déjà joué un rôle décisif à Poitiers lors de la capture du roi de France. Sa présence aux côtés de Gaston X constituait donc un atout militaire et une garantie de sécurité pour les domaines de Foix-Béarn en l’absence du comte. 
+         </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Retour et Jacquerie",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Le séjour commençait par de grandes fêtes dans la forteresse de Marienbourg, véritable ville entourée de puissantes murailles, comprenant cuisines, latrines, dortoirs des frères-chevaliers, salle du trésor, maison du grand maître et la célèbre salle des chevaliers aux colonnes en forme de palmiers. S’ensuivaient les chevauchées contre les Lituaniens : combats difficiles, chevaux s’enfonçant dans la boue, adversaires farouches et bien armés, véritables chevaliers maîtrisant les règles guerrières. À la fin du séjour avaient lieu des réjouissances où les écuyers distingués recevaient des armes ; les meilleurs devenaient Chevaliers de la Table : un prestige mêlant idéal littéraire (chevaliers d’Arthur) et gloire militaire bien réelle. En 1355, Fébus n’avait pas encore reçu solennellement l’armement chevaleresque, et il est possible qu’une cérémonie de ce type ait eu lieu durant son passage à l’Est. La chronique du duc Louis de Bourbon, relatant des voyages semblables, souligne que ces expéditions en Prusse permettaient également des activités prestigieuses comme la chasse, notamment au renne, que Fébus pratiquait déjà avec passion. Cependant, la motivation religieuse n’était pas absente : dans une lettre écrite depuis Königsberg le 9 février 1358, Gaston X déclare entreprendre ce « voyage en terre de Prusse » pour lutter contre les ennemis de la « sainte foi orthodoxe », contre les destructeurs de la civilisation, et pour la gloire de Dieu. Son déplacement avait été soigneusement organisé, et il avait prévu de rembourser l’emprunt contracté à Bruges le jour de la Saint-Jean suivante, le 23 juin. Il revient donc en France par voie terrestre, à cheval, à travers l’Allemagne. Selon Froissart, il retrouve ses compagnons à Châlons-sur-Marne, moment où tous apprennent que la France est secouée par de graves troubles, notamment la révolte des Jacques et les violences paysannes en Champagne et en Brie. Tandis qu’ils voyageaient en Prusse, le royaume avait traversé d’importantes épreuves. Le Dauphin Charles, régent du royaume en l’absence de son père retenu prisonnier à Londres, devait affronter une profonde crise institutionnelle. Les États-Généraux de Paris, sous l’influence du prévôt des marchands Étienne Marcel, exigeaient des réformes et critiquaient sa manière de gouverner. Dans le même temps, différentes bandes de mercenaires ravageaient le territoire : les « Navarrais » en Normandie, les « Anglais » en Berry, Poitou et Auvergne, formant ce que l’on appelait les Grandes Compagnies, des hommes d’armes vendant leurs services au plus offrant. Charles II de Navarre profitait de cette situation chaotique pour multiplier les intrigues, tandis que des rumeurs circulaient à propos des négociations de paix menées à Londres. À cela s’ajoutait une montée de colère paysanne contre la noblesse : le 25 mai 1358 éclata, dans le Beauvaisis, une violente jacquerie menée par un certain Jacques Bonhomme, qui se répandit dans le Soissonnais, le Valois et la Brie, donnant lieu à de terribles violences. Au même moment, Étienne Marcel, affaibli, crut pouvoir tirer parti de ce soulèvement, tandis que le Dauphin Charles, pour protéger sa famille, mit à l’abri sa femme Jeanne de Bourbon, sa sœur la duchesse d’Orléans, et leurs dames d’honneur dans la ville fortifiée de Meaux. Depuis 1220, le marché avait été renforcé par l’excavation d’un canal, formant une enceinte défendue par un fossé doublé par la rivière, ne laissant que deux accès : au nord le pont de Roide, protégé par un donjon, et au sud le pont Cornillon, également fortifié. Militairement, Meaux semblait donc presque imprenable ; politiquement, elle était en revanche fragile, car elle se trouvait au cœur d’un territoire récemment repris aux Valois, et où le parti navarrais restait très influent. La bourgeoisie locale, gagnée aux idées d’Étienne Marcel, constituait encore un soutien actif à Charles II de Navarre.
+        </p>
+          </div>
+        )
+      },
+      {
+        titre: "Le Héros de Meaux",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      À son retour de Prusse, Gaston Fébus fut célébré comme un héros. Les princesses enfermées à Meaux avaient fait passer la défense des dames et de la noblesse avant les impératifs politiques. L’épisode prit rapidement la forme d’un véritable récit chevaleresque : Honoré Bouvet, dans une épître, puis Michel du Bernis, prieur de Salon-de-Provence, transformèrent la chevauchée de Fébus en épopée. Selon eux, les princesses auraient pensé que seul le comte de Foix pouvait venir à leur secours et auraient demandé l’envoi d’un émissaire pour le rappeler depuis la Prusse. Fébus, apprenant le péril, serait revenu aussitôt, déclarant : « Par ma foi ce ne sont que des paysans ; je promets à celle que j’aime le plus qu’ils seront prochainement tous morts ». Arrivé sur le marché de Meaux, il aurait annoncé à la Dauphine le cri de guerre « Fébus en avant ! », donnant un tour romanesque à l’assaut lancé à l’aube. Les Jacques, pris au dépourvu, furent massacrés. La Dauphine, voyant la déroute des révoltés, leur aurait adressé en vain un dernier appel : « Fuyez, vilains Jacques, car le comte de Foix marche sur vous ! » Finalement, la ville fut sauvée, les princesses libérées, et de grandes fêtes furent organisées en l’honneur de Fébus et de ses gens, la reine elle-même participant aux réjouissances pendant plusieurs jours. Fébus repartit ensuite avec ses hommes et retourna en Béarn. De cette aventure, il sortit encore plus auréolé de prestige. Un siècle plus tard, Antoine de la Sale, dans son Petit Jehan de Saintré, jugea indispensable de faire accomplir à son héros le « très saint voyage de Prusse » aux côtés du comte de Foix et du captal de Buch. Selon Esquerrier, c’est également lors de cette affaire de Meaux que Fébus aurait confié à la Dauphine sa célèbre devise : « Toque y si gauses », c’est-à-dire « touche-y si tu oses ». Sa principale préoccupation devint le remboursement des 24 000 écus empruntés à Bruges pour financer sa croisade. Dans une lettre envoyée depuis Königsberg à ses sujets du pays de Foix, il leur expliquait avoir donné des otages comme garantie et s’engageait à rembourser la somme à la Saint-Jean-Baptiste. Pour réunir l’argent, Fébus chargea son officier Jourdan de Pérelle, accompagné de son trésorier Jacques Bertrand et de Raymond d’Albi, d’imposer une contribution exceptionnelle à ses vassaux et aux prélats de Foix, Nébouzan et Lautrec, invoquant la coutume féodale qui exigeait des aides financières quand un seigneur partait en croisade. Fébus demandait poliment à ses sujets de contribuer selon leurs moyens, promettant en retour des garanties officielles et des reconnaissances écrites des dettes. Il insistait toutefois sur l’obligation morale et religieuse de leur obéissance. La missive, rédigée en langue d’oc, se terminait par un appel à la loyauté et à la foi envers leur seigneur. Il n’est pas certain que ces sommes aient été versées ; cependant, des documents montrent qu’en juin 1358, alors que Fébus devait se rendre à Châlons-sur-Marne, les consuls de Lézat empruntèrent 110 florins pour répondre à cette demande. Fébus, présent à Mazères fin septembre, tenta encore d’obtenir un prêt de 200 florins, mais il semble que ses ressources demeurèrent limitées. Ses ennuis financiers se mêlaient alors à la complexité de la situation politique : tandis qu’il se trouvait en Béarn, le dauphin de France nommait lieutenant en Languedoc le comte de Poitiers, laissant la région sous la garde de Jean Ier d’Armagnac, gouverneur.
+         </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+
+
+
+
+          {
+        titre: "Fébus contre Armagnac",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Entre 1358 et 1362, les rapports entre Gaston X Fébus et Jean Iᵉʳ d’Armagnac furent marqués par une opposition constante, sur fond de tensions militaires et diplomatiques liées à la guerre de Cent Ans. Le premier épisode débute au printemps 1358, lorsque Gaston X revient d’Angleterre, tandis que les négociations franco-anglaises pour la paix échouent. Profitant du désordre, il engage ses bandes anglo-gasconnes pour s’emparer de territoires et accroître son influence. Le Dauphin Charles (futur Charles V), alors régent du royaume, confia la direction du Languedoc à son frère Jean de Poitiers, comte de Poitiers, âgé de dix-huit ans, sous le conseil de Jean Iᵉʳ d’Armagnac, son parrain. Les trêves locales étant peu respectées, Jean d’Armagnac s’allia à l’Église, prit contact avec le pape Innocent VI et tenta d’imposer l’autorité royale. Le 12 août 1358, à Albi, il fit proclamer un mandement assimilé à une déclaration de guerre contre Fébus, ordonnant au sénéchal de Bigorre de défendre les domaines royaux et reconnaissant ainsi les droits d’Armagnac.
+Fébus protesta auprès du Dauphin, affirmant sa fidélité à la couronne de France, mais dénonçant les atteintes à ses droits menées sous couvert de légitimité royale. Malgré ses protestations, ses troupes envahirent le Toulousain : elles occupèrent Cintegabelle et menacèrent les relations de la ville avec les Pyrénées. Les capitouls de Toulouse adressèrent alors au régent un rapport alarmant décrivant les dangers et les divisions causées par la rivalité entre les comtes de Foix et d’Armagnac. Jean de Poitiers convoqua à Toulouse une assemblée des États Généraux du Languedoc afin de financer la défense régionale. Lors de cette session, en mars 1359, les partisans du comte de Foix se firent entendre et soutinrent la candidature du trésorier toulousain Bernard Guilabert contre un Montpelliérain, révélant la fracture entre un Languedoc occidental favorable à Fébus et un Languedoc oriental aligné sur Carcassonne et hostile au comte de Foix.
+Face à cette guerre larvée, le pape Innocent VI intervint le 26 mars 1359, exhortant Gaston à cesser ses offensives et le menaçant de confiscation s’il persistait. Fébus ignora cet avertissement : en juin, il incendia le faubourg Saint-Cyprien, y compris la léproserie, après avoir écrasé la milice toulousaine sous les murs de la ville. Il se retira ensuite en Béarn pour poursuivre la lutte et réorganiser ses positions.
+   </p>
+          </div>
+        )
+      },
+      {
+        titre: "L'Offensive de 1360",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Au cours de l’hiver 1359-1360, Gaston X Fébus profita de la rupture entre le Dauphin Charles et le roi d’Angleterre Édouard III pour reprendre les hostilités. Depuis le Béarn, il rallia les bandes anglo-gasconnes et lança une vaste chevauchée militaire, attaquant simultanément en Bigorre, dans le pays de Foix, l’Albigeois et le Rouergue. Jean Ier d’Armagnac, également comte de Rouergue, tenta de résister depuis Lautrec, tandis que le comte de Poitiers (Jean, frère du Dauphin) cherchait en vain à négocier la paix. Le contexte était défavorable : les finances du royaume étaient épuisées, les revenus de Champagne faibles, et le prince noir, fils d’Édouard III, menaçait Reims. En janvier 1360, le lieutenant général annonça aux États du Languedoc que Fébus avait traversé la Garonne et progressait jusqu’en pays toulousain, pillant au passage pour solder ses troupes gasconnes. Les exigences de Fébus pour suspendre son offensive furent exorbitantes : il demandait la Bigorre, le remplacement du lieutenant général par un prince orné de fleurs de lys, et le dixième des impôts levés par les États. Jean de Poitiers, désespérant de pouvoir le stopper, tenta de regagner Paris pour défendre sa position auprès du régent. Malgré tout, Jean de Poitiers fit preuve d’une ténacité comparable à celle de Fébus. Il refusa l’affrontement direct, préférant user la force du comte de Foix par une guerre d’usure. Dans une lettre, il exprima sa stupeur devant « les choses incroyables que fait ledit comte de Foix » et jura, avec l’aide de Dieu, de défendre les terres confiées à sa garde. Les opérations militaires de 1359-1360 sont mal connues, mais il est certain que Fébus gagna du terrain : la plaine toulousaine, l’Albigeois et plusieurs places passèrent sous son contrôle. Les arbalétriers génois de Jean de Poitiers furent battus à Cintegabelle, et des villes comme Auterive, Montauban, Carmaux et Albi furent menacées. Le comte de Poitiers craignait particulièrement que Mirepoix, à la jonction du pays de Foix et de la sénéchaussée de Carcassonne, ne tombe aux mains de Fébus. Jean de Lévis rejoignit le camp fuxéen, mais son fils Roger-Bernard resta fidèle au roi de France ; il tint encore Mirepoix, que Jean de Poitiers reprit le 10 avril 1360.
+
+  </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Le Traité de Pamiers",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Au printemps 1360 : la chevauchée d’Édouard III se solda par une défaite, et les négociations de paix aboutirent au traité de Brétigny, signé le 7 mai. Par cet accord, Jean de Poitiers perdit son apanage du Poitou, intégré à la grande Aquitaine cédée aux Anglais. La Bigorre, que possédait Gaston X, fut elle aussi attribuée à cette Aquitaine anglaise, plaçant Fébus dans une position délicate : il se retrouvait désormais entouré d’anciens alliés devenus ennemis. Avant de quitter le Languedoc, Jean, qui devint plus tard duc de Berry, scella, le 24 juin 1360, un contrat de mariage avec Jeanne, fille du comte d’Armagnac, avant de partir pour Londres afin de servir de caution au paiement de la rançon de son père, Jean II le Bon. Le comte de Foix, Gaston X Fébus, révisa alors sa position à la lumière de ces nouveaux événements. Il accepta la médiation proposée par le Dauphin et signa, le 7 juillet 1360, un traité négocié à Pamiers avec les envoyés du roi de France, dont le maréchal Boucicaut, le trésorier des guerres Nicolas Odde et Gontier de Bagneux, secrétaire du roi. Dans cet accord, Fébus s’engageait à évacuer avant le 26 juillet toutes les villes et forteresses qu’il occupait, sauf celles appartenant au comte d’Armagnac et à ses alliés. Boucicaut obtenait la promesse de dissocier définitivement le comte de Foix du clan armagnac. Les places fortes rendues devaient être confiées à des garnisons royales. Cintegabelle et Auterive devaient revenir au roi, tandis que le traité garantissait à Fébus le paiement de rentes provenant de ses anciens revenus sur ces bourgs. En échange, le comte de Foix devait cesser ses attaques contre Jean de Poitiers et ne pas se venger de ses propres vassaux ayant pris parti pour ce dernier. Boucicaut, de son côté, accordait à ces hommes des lettres de rémission et leur rendait les biens confisqués. Une commission devait ensuite trancher la question de la Bigorre : si la province était finalement donnée au roi d’Angleterre, Fébus devait recevoir des compensations équivalentes en Languedoc. Par ailleurs, un second traité, dont le texte n’a pas été conservé, fut signé le 9 juillet 1360 à Pamiers entre Foix-Béarn et Armagnac, en présence des représentants des trois sénéchaussées du Languedoc (Toulouse, Carcassonne, Narbonne, Béziers et Montpellier).
+
+           </p>
+          </div>
+        )
+      },
+  {
+        titre: "La Trêve de 1361",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Avec l’accord du comte de Poitiers, ces communautés scellèrent la paix avec Fébus, qui s’engageait à licencier ses troupes, y compris cinq capitaines anglais à son service, et à ne pas envahir le Languedoc tant que durerait la trêve de Brétigny. Cette paix permit au Languedoc d’espérer un retour durable à la stabilité après les dévastations causées depuis la chevauchée du Prince Noir (1355-1356). Toutefois, elle coûta cher au roi de France : en compensation de la bonne volonté du comte de Foix, celui-ci reçut une indemnité colossale de 200 000 florins, assortie d’avantages en Languedoc. Avec les échéances suivantes : 10 000 florins immédiatement, 90 000 sous trois semaines, 50 000 à Noël et le solde à la Saint-Jean 1361. Des otages furent remis à Gaston X Fébus en garantie, et la paix fut jurée sur les Évangiles dans la chapelle capitulaire du couvent. Gaston pouvait se réjouir du résultat, reconnu comme un « prince excellent et puissant » par ses pairs. Il semblait alors bien loin le temps où Philippe III le Hardi avait pris d’assaut le château de Foix, en 1274, pour punir Roger-Bernard III qui s’était proclamé « comte de Foix par la grâce de Dieu ». Il ne restait plus qu’aux Languedociens à payer leur part du tribut : les 200 000 florins promis à Fébus, auxquels s’ajoutèrent 200 000 autres pour le comte d’Armagnac, en attendant les levées destinées à la rançon de Jean II le Bon. Plusieurs documents conservés à Montpellier montrent combien le Languedoc fut saigné à blanc entre 1361 et 1363. Charles V reçut même une lettre des consuls dénonçant les exactions commises par les « compagnies de voleurs » et les lourds impôts exigés par les comtes de Foix et d’Armagnac. Fébus, dans son autorité grandissante, alla jusqu’à nommer un receveur agissant en son nom dans la sénéchaussée royale de Beaucaire, où il se comporta comme sur ses propres terres. En réalité, Jean Iᵉʳ d’Armagnac et Gaston X de Foix, animés d’une égale méfiance, n’attendaient qu’une occasion pour reprendre les hostilités. Fébus supportait mal l’influence de Jean, duc de Berry, lieutenant général en Languedoc, gendre du comte d’Armagnac. Dès janvier 1361, le pape chargea l’évêque du Puy d’une mission de conciliation afin d’unir les deux rivaux pour chasser les bandes de routiers qui ravageaient la région. Malgré la paix de Brétigny (1360), le calme n’était pas revenu : d’anciens soldats désœuvrés formaient des « bandes de compagnons », bientôt connues sous le nom de Grandes Compagnies, menant désormais la guerre pour leur propre compte. Ainsi, tandis que ces mercenaires semaient le désordre, Fébus et Jean d’Armagnac préparaient chacun leurs forces, chacun guettant le moment de frapper l’autre.
+
+           </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "La Menace Albret-Armagnac",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Jean d’Armagnac parvint à rallier à sa cause le puissant clan des Albret, grande famille gasconne dont les domaines s’étendaient du Médoc à la moyenne Garonne. Longtemps alliés de l’Angleterre, les Albret, après le traité de Brétigny-Calais en 1360, préparèrent un retournement politique et se rapprochèrent du camp français, trouvant en Jean Ier d’Armagnac un nouvel allié. Cette coalition inquiétait Fébus, qui observait avec prudence ces tractations. Le 27 janvier 1362, Jean Ier et Arnaud-Amanieu d’Albret scellèrent leur alliance par un serment solennel, promettant de ne jamais faire la paix avec le comte de Foix sans l’accord explicite de l’autre. Cette entente impliquait leurs fils et préparait la guerre à venir, dont la campagne de Launac serait l’aboutissement. Charles II de Navarre, beau-frère de Fébus, tenta une médiation, mais les trêves conclues, comme celle du 22 mars 1362, jurée à l’église des Cordeliers de Morlaàs, furent vite rompues. Dès le mois d’octobre suivant, Jean Ier relança les hostilités, défiant ouvertement Gaston de Foix. Jean Ier d’Armagnac se croyait alors en position de force grâce à un vaste réseau d’alliances. Il bénéficiait du soutien complet du clan d’Albret, notamment d’Arnaud-Amanieu et de son frère Bérard de Sainte-Bazeille, réputé pour sa bravoure, ainsi que de Bertucat d’Albret, célèbre capitaine de routiers. À ces forces s’ajoutaient celles de nombreuses familles nobles du sud-ouest, Labarthe, Montesquiou, Pardailhan, Casteljaloux, Terride, Barbazan, ou encore Aspet, sans compter le vicomte de Turenne et Jean de Lomagne, vicomte de Fezensaguet. La coalition armagnaco-albretine représentait une menace sérieuse pour Fébus. Mais Gaston X ne se laissa pas surprendre. Informé par un solide réseau d’espions, il intercepta les messages échangés entre ses adversaires et adressa une lettre directe au comte d’Armagnac, révélant sa parfaite connaissance de leurs manœuvres. Dans ce courrier, il le prévient avec fermeté : « Cher frère, nous avons pris connaissance de vos lettres ; elles sont telles que doit les faire un homme à son bon ami. Toutefois, certains de votre parti et tout le monde nous disent que ce n’est pas votre intention de maintenir la paix, mais au contraire… », signe que la rupture était désormais inévitable et que la guerre entre Foix-Béarn et Armagnac-Albret approchait. Il adressa une lettre au comte d’Armagnac pour le mettre en garde contre les intentions belliqueuses de Bertucat d’Albret et d’autres seigneurs cherchant à entraîner le pays dans la guerre. Dans cette lettre, datée du 9 octobre à Pau, Fébus exprime son espoir de voir maintenue la paix et le serment conclu, bien qu’il ait reçu des informations inquiétantes de Jean de Wilh concernant les menaces de ces alliés auprès des Anglais. Il y mentionne aussi l’arrivée prochaine du prieur de Madiran et de Mauri de Biraa, chargés de le tenir informé de la situation.
+     </p>
+          </div>
+        )
+      },
+      {
+        titre: "La Bataille de Launac",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        Dans le but de renforcer sa position, l’une des premières initiatives de Gaston Fébus fut de faire jouer une clause du traité de Clermont, entre le roi de France et les chefs des bandes de routiers. Cette clause visait à fixer les mercenaires, jusque-là actifs en Castille, au service de causes françaises. La Castille, en pleine guerre civile entre Pierre le Cruel et son demi-frère Henri de Trastamare, voyait s’affronter ces troupes instables. Les routiers, interdits de retour au sud des Pyrénées, acceptèrent de se tenir prêts à intervenir si un conflit éclatait entre les comtes de Foix et d’Armagnac. Fébus pouvait également compter sur la fidélité de ses vassaux et alliés en Catalogne et en Gascogne. Le vicomte de Cardonne, le comte de Pallars, ainsi que le vicomte de Couserans se rallièrent à lui, ouvrant la voie à ses forces dans les domaines des Foix-Béarn. Ces alliances permirent à Fébus de pénétrer profondément dans les terres armagnacaises, en particulier vers les seigneuries de Roquelaure, Mirande et Pavie, situées près d’Auch. Bernard-Jourdain II de l’Isle-Jourdain, puissant seigneur du Lauragais, rejoignit aussi sa coalition. Cette vaste alliance offrait à Fébus la possibilité d’encercler et d’attaquer son adversaire sur plusieurs fronts, notamment du nord, tout en exerçant une pression depuis le Béarn et la Gascogne. Tandis que son armée se rassemblait dans le pays de Foix, celle du Béarn gardait la frontière du Marsan, entre Aire-sur-l’Adour et Barcelonne-du-Gers. Fébus progressa ensuite vers la plaine toulousaine pour frapper l’Armagnac depuis l’est. Son entente avec les seigneurs de l’Isle-Jourdain et de Launac lui permit de contrôler Mondonville et les forêts avoisinantes. Le 5 décembre 1362, les deux armées se rencontrèrent près de Launac, où Jean Ier d’Armagnac, venu à la bataille, fut confronté à la puissance militaire de Gaston Fébus.
+          </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Le Triomphe de Launac",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 5 décembre 1362, Gaston Fébus, comte de Foix, remporta une victoire décisive contre les troupes de Jean Ier d'Armagnac à la bataille de Launac, près de Toulouse. Fébus, dont la tactique militaire était reconnue pour sa maîtrise, exploita parfaitement le terrain. Il parvint à piéger son adversaire dans un terrain boisé et à enchaîner un mouvement tournant, une stratégie risquée mais gagnante, comme l’indiquent les récits contemporains, tels que ceux d’Esquerrier et du Bernis. Malgré un désavantage numérique de ses troupes, Fébus réussit à rassembler des archers et des milices spécialisées qui, bien entraînées, affrontèrent la lourde cavalerie armagnacienne. Les combattants d'Armagnac, souvent de mauvaises recrues attirées par l’appât du gain, étaient moins aguerris que l'armée de Fébus. Le combat, bref et brutal, se solda par une écrasante défaite pour l’Armagnac. Fébus sortit victorieux, exploitant immédiatement cette victoire sur le plan politique et propagandiste. Il célébra le succès de Launac en organisant des festivités somptueuses et en faisant organiser des processions religieuses à Orthez, marquant son triomphe personnel tout en consolidant son autorité. Ce succès militaire s’inscrivit dans le cadre de la lutte pour la domination sur le Sud-Ouest de la France, où Fébus et les Armagnacs étaient engagés dans une guerre de prééminence. Les traditionnels conflits de pouvoir entre les maisons rivales, comme celle de Foix et des Armagnacs, se poursuivaient avec des moments de violence et des renversements de forces, chaque bataille jouant un rôle dans l'équilibre fragile de la région. Fébus utilisa ses victoires comme levier pour consolider ses positions, jouant habilement des symboles religieux et sociaux pour asseoir son pouvoir. La victoire de Fébus à Launac, comme toute grande réussite militaire de l’époque, fut enveloppée dans une aura de protection divine et de destin. Les chroniques du XVe siècle entourent cette victoire de récits mystiques, suggérant que Dieu lui-même avait intervenu pour garantir la défaite de l’Armagnac. À Foix, la ville s’était développée autour des reliques de Saint-Volusien, et la veille de la bataille, un rêve prémonitoire du saint annonça à Fébus sa victoire à venir. Cette apparition se traduisit par une promesse de victoire: "Lève-toi, car le moment est venu d’obtenir la gloire que tout homme a encore gagnée avec si peu de gens", message qui renforça la foi et l’esprit de son armée. Lors de la bataille, Jean Ier d'Armagnac fut capturé et fait prisonnier. Selon certaines sources, un chevalier allemand nommé Hans qui cherchait à fuir les troupes de Fébus, se rendit à Saint-Jacques de Compostelle, mais fut capturé par des soldats du comte de Foix. Fébus, toujours empreint de dévotion, attribua son succès à l’aide divine. Il répétait souvent à ses troupes : "Avec l’aide de Dieu et de l’homme blanc", faisant référence à un homme mystérieux qu’il considérait comme un messager de la providence. Dans son Livre des oraisons, Fébus proclama ouvertement sa confiance en Dieu, qu'il associe directement à son succès militaire. Il affirmait avoir toujours agi selon le bon droit, fidèle à sa parole et à la paix qu’il avait jurée. Son credo était celui de la foi en la protection divine qui, selon lui, garantissait la justice de ses actions et la légitimité de ses victoires.
+  </p>
+          </div>
+        )
+      },
+      {
+        titre: "Les Rançonniers de Foix",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Au soir de cette victoire, le problème logistique suivant concernait la mise en sécurité des prisonniers. Gaston X se retrouva avec un grand nombre de captifs, notamment "toute la troupe des Albret avec les frères, les cousins et toute sa baronnie", soit un groupe qu’il fallait répartir dans les différents châteaux de la région. Une décision importante fut prise : les prisonniers seraient envoyés dans plusieurs châteaux du pays de Foix, à Mazères, à Pamiers, à Foix, etc.. Le 24 janvier 1363, au lieu-dit "le champ en plein vent" devant les portes de Foix, les principaux seigneurs captifs furent assignés à divers lieux de détention. Sous peine de voir leur rançon fixée d'office selon leur rang, ils durent jurer de ne pas s'évader. Les négociations, menées avec célérité, aboutirent dès avril 1363 à une mise en résidence surveillée dans l'attente des paiements avec le droit de s’ébattre pour ne pas macérer leur corps. Les montants exigés étaient considérables : Jean, vicomte de Fézensac, et ses compagnons furent taxés à 100 000 florins, tandis que le baron de Labarthe d’Aure devait verser 50 000 florins.  Le 14 avril 1363, l'église Saint-Volusien de Foix, où la messe de la libération fut célébrée, devint le lieu symbolique de la victoire, associée à un acte religieux solennel. Le point culminant de cette cérémonie fut le serment des prisonniers : un acte formel où, à l'autel, les nobles jurèrent de respecter l'accord, avec la promesse solennelle de paix et de loyauté envers leurs vainqueurs. Le 16 avril 1363, après la victoire de Launac, les principaux seigneurs impliqués dans les négociations de paix se réunirent à l'église Saint-Volusien de Foix pour prêter serment de respecter l'accord conclu. Un contraste frappant apparut cependant entre la solennité de la cérémonie et la taille du texte du compromis, qui semblait modeste face à l'ampleur des enjeux. L'accord, pourtant, marquait une étape importante : il avait été élaboré par Philippe d'Évreux, époux de Jeanne de Navarre, en 1329, et consigné un compromis dans lequel la maison d'Armagnac renonçait à ses réclamations territoriales, y compris sur le Béarn et les autres territoires concernant la succession de Gaston VII de Béarn. 
+
+     
+         </p>
+          </div>
+        )
+      },
+          {
+        titre: "Le Prix de la Paix",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      Après la victoire sur la maison d’Armagnac, un accord fut conclu avec des versements échelonnés : 10 000 florins immédiatement, 90 000 sous trois semaines, 50 000 à Noël et le solde à la Saint-Jean 1361. Des otages furent remis à Gaston X Fébus en garantie, et la paix fut jurée sur les Évangiles dans la chapelle capitulaire du couvent. Gaston pouvait se réjouir du résultat, reconnu comme un « prince excellent et puissant » par ses pairs. Il semblait alors bien loin le temps où Philippe III le Hardi avait pris d’assaut le château de Foix, en 1274, pour punir Roger-Bernard III qui s’était proclamé « comte de Foix par la grâce de Dieu ». Il ne restait plus qu’aux Languedociens à payer leur part du tribut : 200 000 florins promis à Fébus, auxquels s’ajoutèrent 200 000 autres pour le comte d’Armagnac, en attendant les levées destinées à la rançon de Jean II le Bon. Plusieurs documents conservés à Montpellier montrent combien le Languedoc fut saigné à blanc entre 1361 et 1363. Charles V reçut même une lettre des consuls dénonçant les exactions commises par les « compagnies de voleurs » et les lourds impôts exigés par les comtes de Foix et d’Armagnac. Fébus, dans son autorité grandissante, alla jusqu’à nommer un receveur agissant en son nom dans la sénéchaussée royale de Beaucaire, où il se comporta comme sur ses propres terres. En réalité, Jean Iᵉʳ d’Armagnac et Gaston X de Foix, animés d’une égale méfiance, n’attendaient qu’une occasion pour reprendre les hostilités. Fébus supportait mal l’influence de Jean, duc de Berry, lieutenant général en Languedoc, gendre du comte d’Armagnac. Dès janvier 1361, le pape chargea l’évêque du Puy d’une mission de conciliation afin d’unir les deux rivaux pour chasser les bandes de routiers qui ravageaient la région. Malgré la paix de Brétigny (1360), le calme n’était pas revenu : d’anciens soldats désœuvrés formaient des « bandes de compagnons », bientôt connues sous le nom de Grandes Compagnies, menant désormais la guerre pour leur propre compte. Ainsi, tandis que ces mercenaires semaient le désordre, Fébus et Jean d’Armagnac préparaient chacun leurs forces, chacun guettant le moment de frapper l’autre. 
+          </p>
+          </div>
+        )
+      },
+   {
+        titre: "Le Trésor des Rançons",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Jean Ier d'Armagnac, désireux de renforcer l'engagement envers la paix, se prépara à dissoudre les alliances qui s'étaient forgées contre le Foix, tandis que Gaston X, de son côté, renonçait à des territoires en Rivière-Basse. Pour sceller l'accord, Jean Ier promettait de faire jurer la paix par son fils aîné dès qu'il atteindrait l'âge de 14 ans. Cet engagement fut d'autant plus symbolique que dans le texte du serment, Gaston X se montrait intransigeant sur la question des rançons, jouant la carte de l'apaisement territorial tout en maintenant des exigences fermes sur la restitution des captifs. Gaston X avait, en effet, séparé complètement la question des rançons de celle des enjeux politiques, et son rôle dans la résolution de cette crise politique fut tout aussi décisif que la mise en place de ces arrangements financiers. La signature de la paix ne signifia pas la libération immédiate des prisonniers : Fébus tenait absolument à conserver ces prisonniers le plus longtemps possible afin d’être sûr de recevoir l’intégralité des rançons, car à l’époque une partie des sommes versées disparaissait souvent entre les mains des intermédiaires. Il exigea donc d’être payé au total et refusa toute remise sur ce qu’il estimait lui être dû. À l’automne 1363, comme rien n’était encore réglé, le pape intervint et tenta un arbitrage concernant l’élargissement des prisonniers et les droits du comte de Foix, mais Charles II de Navarre compliqua la situation, ce qui dégrada les relations entre les deux hommes. Malgré cela, ils se rencontrèrent à Saint-Palais en juin 1364. Par la suite, Gaston X finit par libérer progressivement plusieurs prisonniers importants en échange du paiement total de leur rançon, ou de la remise de territoires. Par exemple, Pierre-Raymond II fut libéré à la fin de 1364 ; le comte de Comminges, Arnaud-Amanieu, passa alliance avec Charles II de Navarre en 1365 pour payer une partie de sa rançon, recevant 60 000 francs mais ne s’acquittant complètement qu’en 1367. Le comte d’Armagnac, lui, dut céder ses seigneuries d’Arrens et de Tournay à Fébus en avril 1365. Cette méthode d’acquisition de terres par paiement de rançons s’avéra plus efficace pour Fébus que les traités de paix. Un document du 24 janvier 1365 montre précisément comment ces transactions étaient menées : le notaire de Morlaàs consigne que le chevalier Arnaud-Guilhem de Béarn, agissant pour le comte, reçut 1 000 florins d’or de Pèlerin d’Ossun et de Berdot de Saucède, au nom du comte de Pardiac, comme part de la rançon pour la prise de sa personne. Une quittance officielle fut alors donnée au comte de Pardiac, certifiant que ces 1 000 florins seraient remis à Fébus et qu’il en serait quittance scellée. Ainsi, Fébus se fit payer méticuleusement chaque rançon jusqu’à la dernière pièce. On estime que les rançons rapportèrent une énorme fortune à Fébus : Jean Ier d’Armagnac fut taxé à 300 000 florins, Arnaud-Amanieu d’Albret à 100 000, le seigneur de Vayres à 10 000, le comte de Pardiac à 3 000, et Bérard à « dix fois cent mille francs » selon Froissart, ce qui évoque un véritable trésor. Le Religieux de Saint-Denis rapporte que Fébus conservait ce magot dans une tour fortifiée inattaquable à Foix, où il exposait fièrement son trésor à ses visiteurs, les vaincus étant représentés en armes sur des portraits placés dans la salle.
+        </p>
+          </div>
+        )
+      },
+      
+    ]
+  },
+
+   'affirmation': {
+    titre: "L'Affirmation Béarnaise",
+    periode: "Temps Féodaux",
+    resume: "La neutralité du Béarn",
+    introduction: "Gaston Fébus face au Prince Noir...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+ {
+        titre: "L'Équité sous la Vigne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Pour affirmer son rôle de protecteur, Gaston Fébus rendait justice en plein air, sous le préau de sa vigne à Moncade, près du gave au pied du château de Pau, affirmant juger « le pauvre comme le riche ». Sa justice était un outil de stabilité sociale, mais aussi un moyen de rappeler que sa volonté primait sur toute autre institution, n'importe qui pouvait demander justice à Gaston. Fébus n'hésitait pas à casser des décisions locales pour protéger ses sujets ou affirmer son pouvoir, Il annula la nomination d'un tailleur au poste de jurat car l'élection s'était faite contre sa volonté, il éprimanda sévèrement le bailli d'Oloron qui tentait d'interdire aux habitants l'usage de leurs propres four, face à une mère de famille chargée de six enfants dont les biens étaient hypothéqués (mort de son mari), il ordonna la suspension immédiate de la vente pour éviter la ruine de la famille. De plus, Lorsqu'un marchand d'Orthez fut dépouillé de sa cargaison par des commerçants du Languedoc, Fébus appliqua la loi du talion économique : il fit saisir des marchandises provenant du Languedoc pour compenser la perte de son sujet. L'un des jugements les plus célèbres concerne une femme « chef de maison » (épouse d'un cadet ayant pris le nom de sa femme) coupable d'adultère avec le baron d'Arros. Alors que ce crime était passible de mort dans une grande partie de l'Europe, Fébus préféra une solution pragmatique : Gaston demanda au mari de reprendre son épouse et le mari accepta, le baron d'Arros fut donc condamné à une lourde amende et la femme, quant à elle, dut verser le double de sa dot à son mari à titre de réparation.
+
+   </p>
+          </div>
+        )
+      },
+ {
+        titre: "La Répudiation d'Agnès",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Le triomphe de Launac eut une conséquence personnelle pour Fébus : au lieu d’associer sa femme Agnès aux célébrations, il décida de rompre avec elle. Il se sentait désormais assez puissant pour se détacher définitivement de la famille de sa femme, en particulier de son beau-frère Charles II de Navarre, avec lequel il avait été lié dans ses intrigues contre la France. Après le séjour en Île-de-France, Agnès semble avoir vécu effacée, n’apparaissant dans aucun document officiel et n’exerçant aucune influence sur son mari. Agnès avait pourtant donné naissance, en septembre 1362, à un fils longtemps attendu, nommé Gaston, avec le roi de Navarre comme parrain. Mais, bien qu’ils aient pu s’entendre au quotidien, Fébus n’aimait plus Agnès, et l’arrivée d’un fils bâtard, Bernard, diminua probablement encore son importance. La venue de l’héritier légitime condamna définitivement Agnès, et le triomphe politique de Launac fut l’occasion de sa disgrâce. Agnès se trouvait à Orthez lorsque Fébus, au lieu de la faire venir pour célébrer la victoire, envoya son demi-frère bâtard, Arnaud-Guilhem de Morlanne, son homme de confiance chargé des missions délicates. Le lendemain de Noël 1362, il notifia à Agnès qu’elle devait quitter Orthez immédiatement. Des ordres stricts de silence absolu furent donnés.  Agnès, convoquée pour témoigner à Pampelune, confirma qu’il n’y avait rien à reprocher à sa conduite. Fébus lui-même le reconnut, mais persista à se dire dans son droit. Il la répudia sous un prétexte financier, arguant que la dot n’avait pas été entièrement payée, alors qu’il s’agissait surtout d’une manœuvre politique. En décembre 1362, leur fils unique, le jeune Gaston, n’avait que trois mois ; il fut laissé à Orthez sous la garde d’une nourrice. Arnaud-Guilhem de Morlanne fut envoyé à la comtesse de Foix pour lui signifier de quitter immédiatement le château de Moncade et de ne revenir qu’après versement complet de la dot. Agnès tenta de négocier un délai pour préparer son départ, mais Morlanne refusa. Elle dut partir sur-le-champ avec interdiction d’emporter ses biens, saisie de ses bagages et confiscation de ses possessions à Orthez en garantie de la dot impayée. Seule sa dignité de princesse lui permit de partir avec un minimum d’effets. Elle déclara plus tard, en 1391, n’avoir sauvé que quelques objets d’argent et une tapisserie. Accompagnée d’Arnaud-Guilhem, elle gagna Pampelune. Cette rupture marquait non seulement un épisode conjugal tragique, mais aussi une affirmation de puissance politique : Fébus prouvait qu’il pouvait défier la maison de Navarre sans en redouter les conséquences. Ainsi libéré, Fébus pouvait concentrer toute son énergie sur la consolidation de son pouvoir et ses rapports stratégiques avec les grands royaumes voisins.
+       </p>
+          </div>
+        )
+      },
+
+  {
+        titre: "Le Contentieux de la Dot",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Le cœur du conflit de la séparation de Gaston et de sa femme réside dans le non-paiement de la dot d'Agnès. Installée à Pampelune, la capitale de son frère le roi Charles II de Navarre, Agnès cherche à récupérer son dû. Une déposition qu'elle fit en 1391 détaille sa version des faits : elle y jure n'avoir jamais agi contre la personne ou l'honneur de Fébus de son plein gré, affirmant avoir envoyé son frère bâtard, Arnaut Guilhem de Morlanne, à Orthez (où résidait Fébus) pour servir le comte et clarifier la situation. Elle soutient que Fébus refusait de payer la dot tant que le roi de Navarre ne lui remboursait pas l'argent qu'il lui devait lui-même au titre de son mariage. Agnès se défend d'avoir comploté contre Fébus, mais admet que son émissaire, Arnaut Guilhem (qui est décédé au moment de la déposition), a pu agir de sa propre initiative. Plusieurs tentatives de médiation ont échoué. En 1364, le pape Urbain V intervint, demandant à Gaston X (Fébus) de reprendre sa femme au nom de la "morale chrétienne". Une seconde tentative, plus sérieuse, fut initiée vers 1368 par Aliénor de Comminges, qui contacta la reine de Navarre, Jeanne de France. Fébus aurait alors formellement promis de reprendre Agnès si la totalité de la dot était versée. Cependant, cet espoir fut anéanti par la mort d'Aliénor de Comminges fin 1368 ou début 1369, la seule personne que Fébus semblait "aimée et respectée".
+      </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "L'Hommage Contesté",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Le traité de Brétigny-Calais visait à mettre fin au long conflit entre la France et l’Angleterre. Par cet accord, Édouard III renonçait à ses prétentions sur le trône de France en échange d’une Aquitaine considérablement agrandie, obtenue en pleine souveraineté. Cette indépendance devait le dispenser de prêter hommage au roi de France pour ses possessions continentales, désormais à l’abri de toute ingérence de la justice française. Jean le Bon, de son côté, devait envoyer des commissaires pour délier les sujets de ces territoires de leur serment de fidélité au roi de France et les inviter à en prêter un nouveau à leur nouveau seigneur anglais. Cependant, les rédacteurs du traité n’avaient pas précisé toutes les terres concernées par la cession, se limitant à mentionner « la cité et le chastel et le pays de Tarbes et la terre, le pays et le comté de Bigorre, la cité et le chastel de Rodès et la terre et le pays de Rouergue ». Le texte reconnaissait aussi qu’il existait des seigneurs possédant des domaines relevant de l’un et l’autre roi : certains resteraient sous l’autorité du roi de France, bien qu’ils détiennent encore des terres relevant de la couronne anglaise. Ces derniers « feraient hommage au roi d’Angleterre et tous autres services et devoirs de leurs terres ou lieux en la manière qu’ils ont fait au temps passé ». Toute la stratégie de Fébus face au Prince Noir reposait sur cette subtile ambiguïté. S’il ne pouvait contester que le Marsan et le Gabardan appartenaient à l’Aquitaine avant 1328, il faisait valoir que le Béarn, proclamé terre indépendante dès 1347, ne devait hommage à personne d’autre qu’à Dieu. Ainsi, en s’appuyant sur cette distinction juridique, il entendait préserver la souveraineté de son comté et éviter toute sujétion directe envers le Prince Noir, malgré les nouvelles délimitations imposées par le traité. Fébus considérait qu’il appartenait au roi d’Angleterre de prouver les droits qu’il revendiquait sur certaines terres, remettant ainsi en question la validité du traité de Brétigny. Avant même que le Prince Noir ne soit officiellement nommé duc d’Aquitaine, Édouard III avait envoyé ses représentants, Chandos, l’évêque de Saint-David et le sénéchal Adam de Houghton, pour prendre possession des territoires nouvellement cédés, notamment l’Agenais, le Quercy, le Périgord et la Bigorre. Arrivés à Tarbes vers la mi-janvier, ils convoquèrent Gaston X afin qu’il prête hommage. Fébus refusa d’abord de s’y soumettre pleinement, prétextant ne pouvoir le faire qu’en simple représentant du roi de France, Édouard III en personne. Cette attitude prudente visait à temporiser, car sa rivalité avec le comte d’Armagnac rendait la situation encore plus délicate. Lorsque le Prince Noir fut nommé à la tête de l’Aquitaine et arriva à Bordeaux, la pression sur Fébus s’intensifia : en juillet 1363, Édouard de Galles commença sa tournée d’hommages. Fébus, pour gagner du temps et donner l’apparence de la bonne foi, laissa le comte d’Armagnac prêter serment avant lui, repoussant l’échéance de quelques jours. Convoqué à Agen pour le 14 janvier 1364, Fébus choisit une stratégie aussi subtile que calculée. Plutôt que de se présenter comme vicecomes Bearnii (vicomte de Béarn), il se proclama dominus Bearnii, c’est-à-dire « seigneur de Béarn » (inspiré du titre béarnais senhor de l’ostau). Toutefois, l’absence du mot « souverain » rendait l’expression volontairement ambiguë, lui permettant d’esquiver tout affrontement direct avec le Prince Noir. Ainsi, après mûre réflexion, Fébus se rendit à Agen prêt à prêter hommage, mais de façon strictement limitée : il le ferait pour certaines terres sans jamais les nommer explicitement. S’il était confronté sur le statut du Béarn, il se déclarerait sans hésitation son seul maître, senhor de Béarn, sauf si quelqu’un pouvait en apporter la preuve contraire.
+     </p>
+          </div>
+        )
+      },
+
+  //     {
+  //       titre: "L'Hommage Contesté",
+  //       contenu: (
+  //         <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+  //           <p>
+  //  Le traité de Brétigny-Calais visait à mettre fin au long conflit entre la France et l’Angleterre. Par cet accord, Édouard III renonçait à ses prétentions sur le trône de France en échange d’une Aquitaine considérablement agrandie, obtenue en pleine souveraineté. Cette indépendance devait le dispenser de prêter hommage au roi de France pour ses possessions continentales, désormais à l’abri de toute ingérence de la justice française. Jean le Bon, de son côté, devait envoyer des commissaires pour délier les sujets de ces territoires de leur serment de fidélité au roi de France et les inviter à en prêter un nouveau à leur nouveau seigneur anglais. Cependant, les rédacteurs du traité n’avaient pas précisé toutes les terres concernées par la cession, se limitant à mentionner « la cité et le chastel et le pays de Tarbes et la terre, le pays et le comté de Bigorre, la cité et le chastel de Rodès et la terre et le pays de Rouergue ». Le texte reconnaissait aussi qu’il existait des seigneurs possédant des domaines relevant de l’un et l’autre roi : certains resteraient sous l’autorité du roi de France, bien qu’ils détiennent encore des terres relevant de la couronne anglaise. Ces derniers « feraient hommage au roi d’Angleterre et tous autres services et devoirs de leurs terres ou lieux en la manière qu’ils ont fait au temps passé ». Toute la stratégie de Fébus face au Prince Noir reposait sur cette subtile ambiguïté. S’il ne pouvait contester que le Marsan et le Gabardan appartenaient à l’Aquitaine avant 1328, il faisait valoir que le Béarn, proclamé terre indépendante dès 1347, ne devait hommage à personne d’autre qu’à Dieu. Ainsi, en s’appuyant sur cette distinction juridique, il entendait préserver la souveraineté de son comté et éviter toute sujétion directe envers le Prince Noir, malgré les nouvelles délimitations imposées par le traité. Fébus considérait qu’il appartenait au roi d’Angleterre de prouver les droits qu’il revendiquait sur certaines terres, remettant ainsi en question la validité du traité de Brétigny. Avant même que le Prince Noir ne soit officiellement nommé duc d’Aquitaine, Édouard III avait envoyé ses représentants, Chandos, l’évêque de Saint-David et le sénéchal Adam de Houghton, pour prendre possession des territoires nouvellement cédés, notamment l’Agenais, le Quercy, le Périgord et la Bigorre. Arrivés à Tarbes vers la mi-janvier, ils convoquèrent Gaston X afin qu’il prête hommage. Fébus refusa d’abord de s’y soumettre pleinement, prétextant ne pouvoir le faire qu’en simple représentant du roi de France, Édouard III en personne. Cette attitude prudente visait à temporiser, car sa rivalité avec le comte d’Armagnac rendait la situation encore plus délicate. Lorsque le Prince Noir fut nommé à la tête de l’Aquitaine et arriva à Bordeaux, la pression sur Fébus s’intensifia : en juillet 1363, Édouard de Galles commença sa tournée d’hommages. Fébus, pour gagner du temps et donner l’apparence de la bonne foi, laissa le comte d’Armagnac prêter serment avant lui, repoussant l’échéance de quelques jours. Convoqué à Agen pour le 14 janvier 1364, Fébus choisit une stratégie aussi subtile que calculée. Plutôt que de se présenter comme vicecomes Bearnii (vicomte de Béarn), il se proclama dominus Bearnii, c’est-à-dire « seigneur de Béarn ». Ce choix terminologique, inspiré du titre béarnais senhor de l’ostau (le maître de la maison), signifiait qu’il se considérait comme un homme libre et propriétaire indépendant, maître souverain de son territoire. En employant cette formule, Fébus affirmait implicitement que le Béarn était une terre franche et souveraine, indépendante de toute suzeraineté étrangère. Toutefois, l’absence du mot « souverain » rendait l’expression volontairement ambiguë, lui permettant d’esquiver tout affrontement direct avec le Prince Noir. Ainsi, après mûre réflexion, Fébus se rendit à Agen prêt à prêter hommage, mais de façon strictement limitée : il le ferait pour certaines terres sans jamais les nommer explicitement. S’il était confronté sur le statut du Béarn, il se déclarerait sans hésitation son seul maître, senhor de Béarn, sauf si quelqu’un pouvait en apporter la preuve contraire, une manière habile de préserver à la fois son indépendance et son apparente loyauté.
+  //     </p>
+  //         </div>
+  //       )
+  //     },
+      {
+        titre: "L'Entrevue d'Agen",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   La rencontre entre le Prince Noir et Fébus, s’est tenue dans le couvent des Frères Prêcheurs d’Agen le 14 janvier 1364 vers neuf heures du matin. Fébus et ses hommes, venus probablement d’Orthez après avoir rencontré un envoyé du roi de Navarre, assistèrent à cette cérémonie solennelle d’hommage. La cérémonie se déroula dans la « chambre de parlement » du couvent des Dominicains, suivant un protocole hérité du XIIᵉ siècle. Le vassal devait se présenter tête nue, sans ceinture ni armes, agenouillé sur un coussin aux pieds de son seigneur, prononcer son serment à haute voix en joignant les mains dans celles du seigneur, puis échanger un baiser de paix. Le seigneur restait muet, laissant un “avant-parler” s’exprimer pour lui. Chandos, choisi pour ce rôle, devait sa sélection à sa réputation de grand capitaine et à la volonté du Prince Noir de ménager Fébus, sachant l’estime que ce dernier lui portait. Chandos introduisit la cérémonie en énumérant solennellement tous les titres du Prince Noir : « le très noble et très puissant seigneur monseigneur Édouard, fils aîné de notre très souverain seigneur le roi d’Angleterre, prince d’Aquitaine et de Galles, duc de Cornouailles et comte de Chester ». Il expliqua que le roi d’Angleterre Édouard III avait délégué à son fils les pouvoirs en Aquitaine, et que Gaston Fébus devait désormais lui rendre hommage pour toutes les terres qu’il détenait dans cette principauté. L’hommage avait donc lieu au nom du roi d’Angleterre et du prince d’Aquitaine, succédant à celui jadis prêté au roi de France. La cérémonie fut répétée deux fois selon le rituel féodal : le comte de Foix s’agenouilla, tête nue et sans armes, posa ses mains dans celles du Prince Noir et lui prêta serment de fidélité et d’hommage lige, jurant sur les Saints Évangiles de rester fidèle pour toujours, avec l’aide de Dieu. Le prince, en retour, scella le lien vassalique en l’embrassant sur la bouche avec l’obligation de le servir en priorité. Cependant, lorsque Chandos, suivant le protocole, salua Fébus comme « noble et très bon sire Gaston, comte de Foix et vicomte de Béarn », il omit volontairement toute précision sur le Béarn. En effet, la chancellerie anglaise savait que Gaston X considérait le Béarn comme une terre souveraine, indépendante de toute suzeraineté et donc dispensée d’hommage. Chandos, connaissant cette position, lui demanda ouvertement s’il avait prêté serment pour la terre de Béarn. La réponse de Fébus fut habile et précise : il déclara avoir bien fait hommage pour les vicomtés de Marsan et de Gabardan, mais affirma ne devoir aucun hommage pour le Béarn, terre qu’il tenait librement et sans dépendance. Il ajouta que, même si la demande lui avait été faite par les puissants seigneurs d’Angleterre, il avait fait tout ce qu’il était tenu de faire, et rien de plus. Enfin, il promit seulement de renouveler ses hommages légitimes, sans jamais compromettre la souveraineté du Béarn. Fébus conclut sa réponse en promettant de faire tout ce qu’il était tenu de faire selon la raison et la coutume, chaque fois que le roi ou le prince le lui demanderaient, mais uniquement si ceux-ci pouvaient prouver qu’il devait tenir le Béarn et la vicomté en hommage. Il précisa que sa soumission dépendait d’une preuve formelle de leur suzeraineté. Cette déclaration, prudente mais ferme, aurait irrité le Prince Noir, prêt à faire arrêter Fébus pour son audace, mais Chandos intervint habilement pour calmer la situation et éviter une rupture avec un seigneur aussi fier.
+        </p>
+          </div>
+        )
+      },
+
+
+
+
+          {
+        titre: "Querelle Juridique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Le conflit se transforma alors en une querelle juridique. Le Prince Noir espérait prouver par les archives anglaises l’obéissance passée du Béarn à la Gascogne anglaise. Fébus, fin stratège, sut gagner du temps en évitant soigneusement toute nouvelle entrevue directe avec le Prince. Celui qu’on connaissait comme un chevalier audacieux devint ici un maître de la ruse et de l’esquive. L’affaire prit un tour presque théâtral, proche d’une comédie plutôt que d’un affrontement héroïque. Convoqué à nouveau, le comte de Foix demanda un sauf-conduit pour garantir sa sécurité et celle de son escorte, craignant d’être arrêté s’il se rendait auprès du prince. Une lettre datée du 28 juillet 1365, signée d’Édouard, fils aîné du roi d’Angleterre, lui accorda cette protection et l’invita à venir le rencontrer à Angoulême ou Périgueux en septembre. Mais Fébus, fidèle à sa stratégie dilatoire, prétexta alors une blessure à la jambe qui l’empêchait de voyager. Le Prince de Galles, qui ne se laissa guère abuser, répondit en envoyant un nouveau sauf-conduit accompagné d’un médecin et de plusieurs émissaires chargés de vérifier l’état du comte. Coincé mais toujours habile, Fébus écrivit le 3 août depuis Arthez-de-Béarn : dans une lettre au ton soigneusement mesuré, il remercia le prince pour l’envoi du médecin, assura que sa jambe guérissait « grâce à Dieu » et promit de se rendre à la rencontre de septembre. Il alla même jusqu’à demander que les Anglais l’accueillent avec leurs chiens de chasse, manière subtile de flatter leurs goûts et d’entretenir une atmosphère cordiale. Le Prince de Galles, toutefois, ne fut pas dupe de ces manœuvres. Dans sa lettre du 8 août, d’une courtoisie ferme, il rappela à Fébus qu’il avait déjà invoqué la maladie pour retarder leur entrevue. Il lui accorda néanmoins un dernier délai jusqu’à la fin septembre pour venir, séjourner et repartir librement entre Angoulême et Périgueux, mettant ainsi un terme aux possibilités d’ajournement supplémentaires.
+    </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+      {
+        titre: "La Rupture Anglaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Le Prince Noir, irrité par les reports successifs de Gaston Fébus, lui reprocha son attitude dilatoire et le somma de respecter enfin le sauf-conduit prévu pour septembre, sans prolongation possible. Dans sa réponse sèche, il affirma ne pas apprécier les lettres « peu agréables » du comte de Foix et s’étonna de ses excuses répétées, rappelant qu’il était désormais en état de venir et qu’il semblait simplement vouloir gagner du temps. Cette résistance subtile de Fébus inquiétait le Prince Noir, car elle pouvait inspirer d’autres seigneurs gascons à contester l’autorité anglaise. Froissart note d’ailleurs que plusieurs d’entre eux, lassés de dépendre d’un pouvoir étranger, se demandaient s’il ne valait pas mieux revenir à la fidélité du roi de France. Certains, comme Roger-Bernard II de Castelbon ou Arnaud-Amanieu d’Albret, finirent toutefois par prêter hommage au Prince Noir à Bordeaux. En revanche, Jean Ier d’Armagnac fit preuve d’une grande prudence et se rallia aux Anglais parce que le Traité de Brétigny (1360) a fait passer ses terres sous domination anglais. De plus, ruiné par la rançon qu'il doit payer à Fébus, Armagnac espère que le Prince Noir l'aidera. Il obtint ensuite leur appui pour se relever financièrement et rembourser ses dettes. Cette fermeté anglaise s’explique aussi par un contexte militaire profondément dégradé depuis la défaite de Cocherel en 1364. En mai 1364, tandis que Charles V était sacré à Reims, Bertrand du Guesclin remportait en Normandie, à Cocherel, une victoire éclatante sur une armée anglo-navarraise commandée par Jean III de Grailly, captal de Buch. Ce dernier fut capturé et enfermé au château de Meaux. Son oncle Archambaud de Grailly, également fait prisonnier, put racheter sa liberté sur-le-champ, mais Jean, faute de moyens, dut apposer son sceau au bas d’un acte promettant de ne pas quitter Meaux tant qu’il n’aurait pas payé sa rançon, ce qu’il ne parvint à faire qu’en 1365. Cette défaite entraîna le déclin de la puissance navarraise, désormais repoussée aux portes de l’Île-de-France, et contraignit Charles II de Navarre à abandonner ses ambitions sur la Normandie pour se recentrer sur les affaires ibériques. Fidèle jusqu’au bout à la cause anglaise, Jean de Grailly connut un destin tragique. Capturé de nouveau en 1375, il mourut sans descendance dans la tour du Temple à Paris. Charles V, admiratif de sa loyauté, lui proposa la liberté en échange de la promesse de ne plus combattre contre la France, mais le capital refusa avec fierté. Impressionné par cette fidélité, le roi fit célébrer pour lui de splendides funérailles à Notre-Dame de Paris. Dans ce climat tendu, le Prince Noir, de plus en plus frustré par la résistance du comte de Foix, sollicita même l’intervention du roi d’Angleterre, Édouard III, auprès du roi de France Charles V pour le contraindre à prêter hommage pour le Béarn. Édouard III écrivit en décembre 1365 pour plaider en faveur d’une action rapide, mais Charles V répondit qu’il fallait « voir la chose en autre appointement », signe qu’il refusait d’agir sous pression anglaise. Fébus, invité à se rendre auprès du Prince Noir à Libourne, il aurait accepté de venir en laissant des otages à Orthez, mais se serait rétracté en apprenant un complot visant à l’assassiner. Il aurait alors envoyé au prince un message énigmatique, 3 figues en peintures, pour lui signifier qu’il ne craignait guère ses menaces. Cet épisode, qu’il soit légendaire ou non, traduit la tension extrême qui régnait entre les deux hommes. Malgré sa prudence, Fébus ne cessait de défier l’autorité anglaise, et la pression du Prince Noir se faisait chaque jour plus forte : le 23 septembre 1366, le chancelier de Gascogne émit un nouvel ordre contre lui, symbole de la rupture désormais consommée.
+      </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+          {
+        titre: "La Guerre de Castille",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    La péninsule Ibérique était alors en proie à une guerre civile opposant Pierre le Cruel, roi de Castille, à son demi-frère Henri de Trastamare. Ce conflit devint le principal foyer d’agitation de la région et attira l’attention de toutes les puissances voisines. Cependant, il faut noter que, dans le même temps, la campagne de Castille mobilisait lourdement les ressources anglaises et entraîna l’établissement de la taxe du foyer en 1367 : cette mesure fiscale, imposée par le Prince Noir pour financer l’expédition, provoqua un profond mécontentement et contribua au soulèvement progressif des barons gascons. Ainsi, les troubles castillans et la montée des tensions en Gascogne étaient étroitement liés. Charles V, encore dauphin lors de la bataille de Launac, soutenait déjà Henri de Trastamare, ce qui liait les affaires du Sud-Ouest aux enjeux castillans. Devenu roi, il poursuivit cette politique avec l’appui de Pierre IV d’Aragon. Le comte de Foix, Gaston Fébus, fut invité à rejoindre cette coalition, mais préféra rester dans l’attente. Bertrand du Guesclin mena brillamment la campagne française : il nettoya le royaume des Grandes Compagnies, rétablit l’ordre et installa Henri sur le trône de Castille. En avril 1366, Pierre le Cruel s’enfuit et trouva refuge auprès du Prince Noir et de Charles de Navarre. Refusant de voir Charles V triompher au sud des Pyrénées, le roi d’Angleterre envoya le Prince Noir soutenir Pierre. En septembre 1366, à Libourne, une alliance fut conclue : en échange de sa reconquête, Pierre promit au Prince Noir la moitié de ses trésors et la Biscaye s’il retrouvait un fils. Conscient de l’ampleur des bouleversements imminents, Fébus reçut alors un sauf-conduit. Le Béarn, coincé entre les deux camps, se retrouva menacé. Une partie des routiers de Du Guesclin, sans emploi en Castille, passa au service de Pierre le Cruel et rejoignit l’armée du Prince Noir dans les Landes. Pour atteindre Orthez, ils durent franchir le col de Roncevaux. Revenant d’Espagne avec son armée, le Prince Noir dut lui aussi négocier le passage : Chandos vint demander officiellement à Fébus l’autorisation de traverser le Béarn, territoire neutre. Fébus accepta le passage, mais en fit payer le prix. Il refusa d’accorder des vivres et imposa des droits de passage considérables pour chaque homme et chaque bête. Cette neutralité « tarifée » était une façon de préserver sa souveraineté tout en profiter de la situation. Par prudence, il informa immédiatement le roi d’Aragon des mouvements de troupes. De leur côté, les Armagnac-Albret, défaits à Launac, rallièrent l’armée du Prince Noir pour retrouver prestige et richesse, espérant tirer profit de la guerre. Pris entre plusieurs forces, Fébus dut manœuvrer habilement : ses intérêts l’inclinaient à soutenir Henri de Trastamare, car la chute de Pierre le Cruel pouvait affaiblir ses adversaires. Il savait également que le Prince Noir, irrité, guettait toute occasion de l’obliger à reconnaître sa suzeraineté pour Marsan et Gabardan. Pendant ce temps, le seigneur de Béarn recevait des sollicitations des deux camps. En janvier-février, l’armée anglo-gasconne du Prince Noir se concentra près de Dax, tandis que Charles V reprenait le contrôle de Buch. Le Prince Noir rentra ensuite à Bordeaux, où il célébra la naissance de son fils, le futur Richard II. Au milieu de cette guerre entre Anglais et Français, Fébus maintint une stricte neutralité, malgré les pressions. Tandis que les troupes anglo-gasconnes du Prince Noir s’alliaient à la Basse-Navarre, Fébus refusa de participer à l’expédition, comme l’atteste un acte notarié. Ses vassaux de Marsan et de Gabardan furent néanmoins intégrés à l’arrière-garde anglaise, sous les ordres de Jean III de Grailly. Se préparant à défendre la neutralité du Béarn, Fébus plaça la région en état d’alerte. Il interdit l’exportation des ravitaillements et réorganisa les circonscriptions militaires : les reculhides, zones où les habitants d’un village devaient se regrouper en cas de menace. Ainsi, ceux d’Artiguelouve étaient rattachés à Morlaàs, ville fortifiée. Le Béarn se tenait prêt à résister à toute violation de sa souveraineté. Froissart rapporte qu’au retour de la guerre de Castille, le Prince Noir entendait soumettre le Béarn à son autorité.
+       </p>
+          </div>
+        )
+      },
+
+
+    {
+        titre: "Le Béarn en Alerte",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   L'expédition espagnole débute par un triomphe éclatant pour le Prince Noir. Le 3 avril 1367, près de Nájera, sur la route de Burgos et à la frontière de la Navarre, l'armée de Du Guesclin et d'Henri de Trastamare, renforcée par des Aragonais, subit un véritable désastre. Comme lors de la bataille de Poitiers, le Prince Noir et le captal de Buch font de nombreux prisonniers de marque, promettant des rançons fructueuses. Parmi eux se trouvent le comte de Denia et Bertrand Du Guesclin lui-même. Par un retournement de situation typique de la guerre de Cent Ans, le captal de Buch, qui avait été pris par Du Guesclin à Cocherel en 1364, tient sa revanche deux ans plus tard. Pierre le Cruel retrouve son trône de Castille, obligeant Henri de Trastamare à s'enfuir. La neutralité du Béarn sert de couverture aux vaincus : guidé par l'Aragonais Pedro de Luna (le futur dernier pape d'Avignon au XVe siècle), Henri franchit le Somport et est accueilli au château Moncade par Fébus, qui l'envoie ensuite en pays de Foix d'où il reprend la lutte en harcelant les garnisons anglo-gasconnes de Bigorre. Pendant ce temps, Gaston Fébus se prépare à l'affrontement décisif, craignant le retour des vainqueurs. Le 8 mai 1367, il promulgue une ordonnance stricte : personne ne doit quitter le Béarn sans sa volonté, et tout homme doit être équipé d'armes, prêt à se rendre jour et nuit là où le seigneur l'ordonnera. Il interdit le pillage et ordonne la mise à l'abri des vivres. Fébus organise une véritable levée en masse, mettant en place une administration efficace pour transformer le pays en camp retranché. Chaque bailli reçoit le mandement seigneurial. Les hommes non convoqués à l'armée forment des milices villageoises, et chaque communauté dotée d'une palissade doit se défendre. Les mobilisables doivent se concentrer à Orthez avec leur équipement (qui leur est fourni s'il est incomplet). Des mesures drastiques sont prises : les moissons sont terminées en urgence, les récoltes stockées dans les châteaux et bourgs fortifiés, et le bétail déplacé vers les points de résistance. Les montagnards restent dans leurs vallées pour harceler l'ennemi, et tout suspect revenant d'Espagne est interdit d'entrée sous peine de haute trahison. 
+   
+           </p>
+          </div>
+        )
+      },
+
+
+
+      {
+        titre: "La Retraite du Prince Noir",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+L'affrontement redouté est finalement épargné au Béarn car la situation se détériore en Castille. Pierre le Cruel justifie son surnom par sa brutalité, obligeant même le Prince Noir à intervenir pour éviter le massacre des prisonniers, non par humanité, mais pour sauver les rançons qu'ils représentent. De plus, le roi restauré se révèle incapable de tenir ses promesses financières fabuleuses. Les Gascons, avides, déchantent : le sire d'Albret, déjà en froid avec le Prince Noir concernant sa solde, ne voit jamais la couleur de l'argent promis. Au lieu de richesses, « ce furent des châteaux en Espagne ». L'armée, qui a gagné Valladolid, est décimée par une épidémie ; selon une chronique, seul un soldat sur cinq survit. Le Prince Noir tombe lui-même malade, contractant le mal qui l'emportera quelques années plus tard. Comme l'écrit Froissart, il revient « tout brisé » de cette expédition. Ruiné, à la tête d'une troupe en débandade plutôt que d'une armée victorieuse prête à occuper le Béarn, le Prince Noir se retrouve en position de faiblesse face à Fébus, qui devient l'arbitre de la situation. Bien renseigné sur l'état piteux du Prince et de ses hommes, Fébus publie une nouvelle ordonnance de mobilisation générale le 27 juillet 1367. Le Prince Noir, battant en retraite début septembre, doit couper au plus court par Roncevaux puis la route de Sauveterre-de-Béarn à Orthez. Il est contraint de solliciter l'autorisation d'emprunter cette route, qu'il obtient contre la promesse de payer son ravitaillement « jusqu'à la moindre poule ». Bien plus tard, en 1385, Fébus racontera avec fierté cet épisode à un envoyé du duc de Bourbon, décrivant la traversée de ses terres par une « belle compagnie » qu'il exagère à 15 000 lances et 70 000 chevaux. Le Prince envoie Jean Chandos et Thomas Felton pour prier « très aimablement » Fébus d'ouvrir sa terre, jurant qu'ils paieraient tout. Les engagements sont tenus : les Anglais paient « courtoisement et sans refus », avertissant même leurs compagnons de ne rien commettre en Béarn, terre où « il n'y a voix sur gosier qui n’ait un bacinet en tête », preuve de la militarisation paysanne. Avec le recul de vingt ans, Fébus conclut qu'il s'agit de son premier grand dessein accompli. Contrairement aux rois de France, le roi d'Angleterre n'a pu lui imposer aucun hommage. Sa déclaration du 25 septembre 1347 se trouve confirmée : il ne tient son Béarn que de Dieu.
+
+  </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+      
+
+
+
+   {
+        titre: "Bernard de Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Charles V, déterminé à reprendre la main en Espagne, envoie son frère Louis d’Anjou en Languedoc comme lieutenant-général afin d’aider Henri de Trastamare à reconquérir la Castille, tandis que Gaston Fébus poursuit sa stratégie habituelle de soutien discret sans engagement officiel : il ne rejoint pas l’armée franco-aragonaise mais permet à Henri et à ses troupes de traverser librement ses terres, le comté de Foix et l’Andorre, pour entrer en Espagne. À ce moment apparaît un nouveau protagoniste, Bernard de Béarn, fils bâtard de Fébus, âgé de 16 ou 17 ans et qui, pour la première fois, entre dans l’histoire lorsque Henri de Trastamare l’adoube chevalier, geste symbolique venant d’un bâtard en lutte contre son frère légitime. La campagne reprend, Bernard se distingue par sa vaillance, participe au siège de Tolède et suit Henri jusqu’au drame de Montiel en mars 1369, où Henri de Trastamare tue son demi-frère Pierre le Cruel sous une tente et devient définitivement le roi Henri II de Castille. Immensément reconnaissant, le nouveau souverain couvre Bernard d’honneurs : dès juillet 1368, il était devenu comte de Medinacelli, un fief extrêmement riche grâce aux foires prospères de Medina-del-Campo, puis en 1370 l’oblige à épouser Isabelle de la Cerda, issue d’une branche aînée de la famille royale, en ordonnant à la jeune femme d’accepter ce mariage prestigieux auquel Bernard apporte une dot énorme de 800 000 maravédis. Ambitieux comme son père, Bernard réclame ensuite toujours davantage : deux navires équipés, le paiement immédiat de sa solde, des viandes pour ses hommes dans tout le royaume, ainsi que la récupération des terres de la maison de Biscaye. C’est ainsi que ce fils bâtard de Gaston Fébus posa les bases de la puissante maison des ducs de Medinaceli, appelée à devenir l’une des plus grandes familles d’Espagne.
+
+           </p>
+          </div>
+        )
+      },
+
+
+
+
+      {
+        titre: "Charles V et les Appelants",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+       Jean II le Bon avait quatre fils, dont Charles (le futur Charles V) et Louis, duc d'Anjou. Tandis que Charles V devenait roi, il nomma Louis lieutenant-général en Languedoc avec pour mission de combattre les bandes de routiers et de reprendre les territoires perdus au traité de Brétigny (comme l'Armagnac, le Quercy, le Périgord et la Bigorre). Louis, arrivé à Toulouse en 1367 à 27 ans, avait lui-même été otage à Londres pour garantir la rançon de son père. Son frère, le duc de Berry, l'ayant remplacé, Louis s'était enfui en 1364. Se sentant déshonoré, Jean II le Bon était retourné en captivité à la cour d'Édouard III, où il mourut. Devenu roi, Charles V, d'une santé fragile, rompit avec l'approche chevaleresque de son père, préférant la tactique et la "guerre d'usure" (confiée à Bertrand Du Guesclin) à la "charge à cheval". Il transforma aussi la fiscalité : pour payer la rançon et financer l'armée, il institua des impôts permanents (fouage, gabelle) sans l'accord des assemblées, constituant un trésor qui lui permit de créer une armée salariée et de racheter la loyauté de seigneurs gascons. Le Prince Noir (Édouard de Woodstock), vainqueur de Poitiers et de Najera, était revenu de son "équipée castillane" ruiné physiquement et financièrement. Son trésor vide le poussa à lever de nouveaux impôts, provoquant la colère de ses vassaux. La situation était critique pour Jean d'Armagnac, désespéré car il devait 200 000 florins à Fébus (Gaston Fébus) pour un prêt concernant la rançon, et il ne recevait plus ses rentes d'Angleterre. Le clan Armagnac-Albret, cherchant un nouveau mécène, se tourna vers Charles V. Arnaud-Amanieu d'Albret épousa Marguerite de Bourbon (belle-sœur de Charles V), recevant une pension de 60 000 francs et 42 000 francs d'arriérés dus par Édouard III. Jean Ier d'Armagnac signa une alliance le 30 juin 1368. Ces seigneurs gascons devinrent alors des "appelants" : en décembre 1368, ils en appelèrent au Parlement de Paris, se plaignant d'Édouard III et du Prince Noir. Bien que le traité de Brétigny-Calais cédait l'Aquitaine en "toute souveraineté" (empêchant tout appel), Charles V utilisa un artifice juridique : il argua que les renonciations finales (le roi d'Angleterre renonçant à la France, le roi de France à la souveraineté sur l'Aquitaine) n'avaient jamais eu lieu, annulant de fait le traité. Le Prince Noir refusa de comparaître, entraînant la confiscation de ses terres et permettant à Charles V d'engager la guerre "avec le droit pour lui". Gaston Fébus vit immédiatement l'ambiguïté de la situation : il se réjouissait de l'élimination du Prince Noir, mais craignait un retour en force du pouvoir royal français qui pourrait menacer sa souveraineté en Béarn et sa neutralité. Lorsque Bertrand Du Guesclin passa sur ses terres en juillet pour prendre le commandement en Castille, Fébus vint lui "faire honneur", mais aussi pour se plaindre que le frère du connétable, Olivier le Jeune, enrôlé chez Armagnac, harcelait ses frontières du Marsan. Les "vaincus de Launac" (Albret et Armagnac) purent alors prendre leur revanche avec l'appui français, déclenchant des opérations en Poitou et dans la vallée de la Garonne. Le Prince Noir, dont la maladie s'aggravait, commit le "pillage meurtrier" de Limoges avant d'être rappelé en Angleterre début 1371. Son frère, Jean de Gand, prit la suite alors que Louis, duc d'Anjou, dirigeait l'assaut sur la Bigorre. Fébus se retrouva isolé, la défense de l'Aquitaine étant confiée au Captal de Buch. Après la mort de son frère Jean de Poitiers, Louis d'Anjou découvrit le "guêpier pyrénéen", désormais dominé par la rivalité intense entre le camp de Foix-Béarn et celui d'Armagnac-Albret-Comminges.
+           </p>
+          </div>
+        )
+      },
+
+          {
+        titre: "Fébus Défie Anjou",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+      L'armée française de Louis d'Anjou commença ses opérations près de Moissac et d'Agen, officiellement pour chasser les Anglo-Gascons. Cependant, Anjou avait reçu des instructions précises de Charles V pour appuyer les revendications de Jean Ier d'Armagnac sur le comté de Bigorre, ce qui impliquait une confrontation directe avec Gaston Fébus. Anjou comprit vite le danger : Fébus était populaire et ses adversaires (les Armagnac) détestés ; le forcer à choisir un camp risquait de le pousser définitivement vers les Anglais. Face à la menace d'Anjou sur la Bigorre, Fébus fit valoir à Charles V que les habitants de Bigorre préféraient sa seigneurie, qu'y installer des juges français était illégitime et que, surtout, un souverain ne pouvait décemment pas déposséder un nouveau conquérant (lui) pour restaurer un ancien seigneur (Armagnac) après une conquête légitime. Pour montrer sa supériorité militaire, Fébus rassembla ses troupes en 1372 dans le Vic-Bilh béarnais, menaçant ouvertement Armagnac. Après une brève trêve négociée par le pape Grégoire XI (signée en mai 1373), Anjou rassembla son armée à Montauban en juin 1373. Celle-ci incluait tout le clan Armagnac (Jean II, Comminges, etc.) et des renforts français (Bretons, Picards). Ses instructions claires étaient de ne pas attaquer Fébus, qui "voulait tenir francs ses gens de Béarn", mais de cibler les "rebelles" de Haute-Gascogne. La campagne se concentra donc sur les châteaux des Compaignons (routiers). Au château de Tuzaguet, le routier Bascot de Mauléon négocia sa reddition et fut autorisé à repartir avec ses biens. Le siège de Mauvezin fut bien plus long (20 mois). Le château appartenait à la complexe famille de Castelbon, une branche cadette des Foix, mais dont le vicomte était aussi vassal du roi d'Angleterre par mariage et entretenait d'excellentes relations avec Fébus. Anjou finit par prendre Mauvezin et le donna à Jean II d'Armagnac. Le cœur du problème était Lourdes, un "véritable nid d'aigle" tenu par les plus célèbres Compaignons. Ironiquement, ces derniers étaient dirigés par deux "cousins bâtards" de Fébus lui-même : Pierre Arnaud et Pierre de Béarn. Ces routiers redoutables protégeaient aussi les pèlerins et étaient en "bonne intelligence" avec les habitants. Le siège, difficile, se conclut par un accord le 5 juillet : les Compagnons purent rester, mais placèrent le château sous l'autorité du roi de France. C'était une reconnaissance tacite de l'influence de Fébus. Peu après, Anjou dut se retirer : le duc de Lancastre (Jean de Gand) débarquait à Calais pour une grande "chevauchée". Charles V rappela Anjou, qui se retira sur Agen, non sans avoir longé les frontières du Béarn (Marsan). Fébus, en alerte mais en sécurité dans son château d'Orthez "sur son trésor en florins", observa l'armée française respecter ses terres. Anjou parti, Fébus, attendant son heure, reprit son harcèlement des frontières d'Armagnac.
+        </p>
+          </div>
+        )
+      },
+      {
+        titre: "Lourdes Contre Castille",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+            Face à la menace d'Anjou, Gaston Fébus s'est rapproché de Jean de Lancastre (Jean de Gand), qui prétendait au trône de Castille par son mariage avec la fille de Pierre le Cruel et avait besoin de soutien. Les deux hommes se rencontrèrent à Dax et signèrent deux accords cruciaux en mars 1374. Le premier était un prêt de 12 000 florins de Fébus à Lancastre, utilisant le château de Lourdes comme "hypothèque". Ce coup de maître plaçait les Compaignons (routiers) de la garnison, jusqu'alors manipulés par Anjou, sous l'autorité légale de Fébus, prouvant à Charles V que Fébus menait sa propre politique. Le second accord était un projet de mariage entre le fils de Fébus, Gaston, et la fille de Lancastre, Philippa. Ce texte, qui reconnaissait Lancastre comme "roi de Castille et de Léon" (sous réserve d'approbation anglaise), fixait une dot de 40 000 francs or et prévoyait des clauses financières détaillées en cas de décès de l'un ou l'autre des futurs époux. L'alliance comprenait des clauses militaires : Fébus aiderait Lancastre en Espagne (après un délai de deux ans) moyennant 12 000 "doubles" annuelles. Forcé de réagir, Charles V s'allia à Henri de Trastamare (rival de Lancastre) et rappela Anjou en Languedoc pour bloquer Bayonne, mais une épidémie à Toulouse en 1374 affaiblit l'armée française. Dans cette "partie d'échecs", Anjou marqua un point en détachant Roger Bernard de Castelbon de l'orbite de Foix. Fébus répliqua en intervenant dans la vallée de Soule : il obtint l'évacuation de la garnison anglo-gasconne du château de Mauléon et y installa, en septembre 1375, ses propres troupes béarnaises pour protéger les Souletins contre 4 000 francs. Le conflit direct entre Fébus et Anjou avait débuté "à fleurets mouchetés". Fébus rencontra Jean II d'Armagnac (allié d'Anjou) à Garos en septembre 1375 pour renouveler les trêves, démontrant l'inefficacité de l'alliance Armagnac-Albret et obtenant le respect de la souveraineté et de la neutralité du Béarn (confirmée par un acte d'Orthez en mai 1375). Parallèlement, Fébus, véritable "entrepreneur de guerre" qui fortifiait Pau, gérait les "routiers" grâce à un système de "conduit" bien rodé. Ce système lui assurait la reconnaissance de sa neutralité et la protection de ses sujets, qui préféraient payer ce passage contrôlé plutôt que de subir le pillage.
+
+            </p>
+          </div>
+        )
+      },
+
+
+
+
+
+    ]
+  },
+
+
+ 'drames': {
+    titre: "Les Drames de Fébus",
+    periode: "Temps Féodaux",
+    resume: "Conflits et Tragédie",
+    introduction: "Guerre contre le Comminges et Médiation...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+      
+          {
+        titre: "Le Nouvel Enjeu",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La mort de Pierre-Raymond II de Comminges le 15 octobre 1375, posa un problème de succession. L'héritage ne revenait pas à sa fille aînée, qui y avait renoncé lors de son second mariage, mais à la cadette, Marguerite, une fillette d'environ dix ans placée sous la tutelle de sa mère. La généalogie de la maison de Comminges révèle que la situation n'était pas simple : en 1339, après la mort d'un garçon en bas âge, le comté aurait pu revenir à la sœur aînée, Cécile. On prétendit cependant aussitôt que le comté devait être un fief masculin ne pouvant tomber aux mains d'une femme. Il en résulta une mêlée générale, dont Pierre-Raymond ne sortit vainqueur qu'avec l'aide de son beau-père, Gui de Comminges, le "redoutable roi de l'Albigeois", et du roi de France Philippe VI. Ce dernier soutenait cette solution pour éviter que le Comminges ne tombe aux mains des Anglais par le mariage de Cécile avec le comte d'Urgel, un seigneur catalan. Les remous ne s'étaient pas calmés en 1350, et après divers marchandages, Pierre-Raymond II, qui avait succédé à son père en 1341, avait épousé sa cousine Jeanne. En 1375, une situation comparable à 1339 se reproduisit donc : le fief pouvait "tomber en quenouille" entre deux femmes. L'héritière Marguerite étant "mince", un prétendant se manifesta : Gaston X, fils d'Aliénor de Comminges. Le voeu de sa mère était d'être inhumée au couvent de Notre-Dame de Salanques, qu'elle avait fondé. Fébus arriva donc avec ses fils, une armée et d'Aliénor, qui fut ramenée d'Orthez au pays de Foix. Gaston Fébus cherchait à attirer les foules sur les routes longeant la Garonne en Comminges et affirma publiquement ses prétentions. La cérémonie religieuse n'était pas encore terminée qu'il trouva Jeanne de Muret pour lui exposer ses revendications. Elle le reçut, non dans un château mais sur le pont traversant la Louge, selon une méthode qui se répandait en ces temps d'insécurité : il valait mieux se rencontrer dans un espace découvert, un pont étant idéal car les accès pouvaient être facilement contrôlés. Cette entrevue n'eut pas de résultat immédiat, si ce n'est l'accord de ne pas laisser dépouiller la "fille" (Marguerite). Le Comminges devient peu à peu un nouvel affrontement entre le Foix-Béarn et l'Armagnac. Dès la mort de Pierre-Raymond II, Jean II d'Armagnac s'était présenté pour "défendre les droits de la petite fille", un geste qui n'était nullement désintéressé : il proposa immédiatement Marguerite en mariage à son propre fils, également nommé Jean, futur comte d'Armagnac. Cette union de l'Armagnac et du Comminges, répondant à celle du Foix et du Béarn, aurait interdit à Fébus de mettre en œuvre son "second grand dessein", qui était de contrôler, directement ou indirectement, les seigneurs séparant le Nébouzan du pays de Foix et de la vicomté de Béarn. Après la Bigorre, le Comminges garonnais devenait l'enjeu de la rivalité séculaire entre les deux maisons. Jeanne se méfiait de ce titre, tout autant que de celui de Jean, fils de Gaston. En étudiant la proposition de mariage, elle remarqua que sa fille n'était pas encore nubile, mais elle n'eut pas la possibilité de refuser son concours militaire. Si l'enquête imminente du duc d'Anjou ne les empêchait pas, les hostilités s'engageraient.
+  </p>
+          </div>
+        )
+      },
+      {
+        titre: "L'Armée de Fébus",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+     Pour mener cette guerre, Fébus convoqua ses troupes en Béarn en juin 1376, en conservant pour lui-même les rôles militaires essentiels. La guerre de Comminges fut un "moment privilégié" pour démontrer les rouages de son armée. Il ne s'agissait pas d'une levée en masse pour une guerre défensive, mais d'une offensive hors de la vicomté, ce qui impliquait des mesures précises dans l'ordre de mobilisation. Celui-ci fut rédigé dans des termes qui différaient peu selon la qualité des destinataires. Gaston disposait de seigneurs qui n'étaient pas ses vassaux directs, mais formaient une clientèle dont il s'était assuré les services contre argent. Il s'adressa à eux avec une politesse raffinée ("Cher ami, nous vous prions...") et leur dit de se trouver à Morlaàs sous huit jours avec tous les gens d'armes en leur pouvoir. Les lettres adressées aux ecclésiastiques ("tenez de nous") et aux vassaux laïcs étaient comparables, mais assorties d'un avertissement ("prenez garde de ne pas être défaillants") sous peine de "prise de corps et de biens". Dès que l'armée était concentrée, des commissaires organisaient une montre pour vérifier les chevaux et les armes. Normalement, chaque noble de tenue devait venir avec montures et équipement au complet. En cas de tenues insuffisantes, ils devaient "se mettre à deux" pour y parvenir. Il était compliqué d'équiper tout le monde, notamment les charges de fourniture, les remontes et les entrepôts d'armes. Fébus se contenta du nécessaire, s'assurant que sa "maison" comprenait environ 200 chevaliers. C'étaient des roturiers qui venaient mettre à la disposition du seigneur leurs chevaux et fournitures, une façon pour eux de participer à l'effort de guerre. Le Béarn fut divisé en circonscriptions appelées "cinquantaine", un groupe de 50 foyers chargés d'émettre un cheval et une armure. À cela s'ajoutait une contribution collective pour les plus fortunés : une pièce d'armure pour un revenu de 100 à 200 florins, un cheval pour 200 à 400 florins, deux chevaux et une armure au-delà de 400, selon une taxation progressive. Les commissaires enquêtaient, notant avec soin la provenance de chaque cheval, son prix, et sa valeur. L'enjeu était d'importance, et Fébus fit revenir son fils naturel, Bernard comte de Medinaceli, pour qu'il équipe une troupe.
+         </p>
+          </div>
+        )
+      },
+  {
+        titre: "Le Jeu de la Guerre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Pour cette guerre de Comminges, Fébus avait soigneusement préparé son affaire. Par exemple, le 6 janvier 1375, à Orthez, plusieurs seigneurs commingeois, contre de fortes sommes d'argent, avaient promis de le servir "contre tous à l'exception de leur seigneur naturel le comte de Comminges", mais si ce dernier "mourait sans enfant mâle ils mettraient tout leur pouvoir" au service du comte de Foix. Après l'échec de son entrevue avec Jeanne de Comminges, Gaston X attaqua dès le mois de juillet. Il commença par s'assurer le contrôle de la vallée de la Garonne en amont de Toulouse (Rieux, Cazères) pour isoler Muret sur la partie méridionale du comté. Il occupa la châtellenie de Saint-Julien, puis revint en Béarn. Profitant de son départ, Menaud de Barbazan prit l'initiative pour le comte de Jean II. Au petit matin, par un brillant assaut, il s'empara de Montesquieu-Volvestre puis de Gousens. Son audace grandissant, il porta la guerre en pays de Foix. En juillet 1376, il franchit les crêtes montagneuses pour tomber sur Pamiers, défendu par les hommes de Pierre-Arnaud de Béarn (chef des Compagnons de Lourdes), mais il fit échouer l'attaque au dernier moment. Menaud de Barbazan commença alors à bloquer Pamiers tout en ravageant le pays. Il pilla l'abbaye de Boulbonne et fit prisonniers les barons béarnais de Miossens et d'Andoins. Ces succès démontrèrent à Fébus qu'il lui fallait agir. Il concentra son armée en Béarn, obtint le concours du nouveau captal de Buch, Archambaud de Grailly, et lança une offensive depuis Barcelonne-du-Gers à partir de Marsan. C'était une feinte pour obliger Jean II d'Armagnac à prélever des troupes aux confins du Foix et du Comminges et l'attirer vers l'Ouest. La manœuvre fut un plein succès et provoqua une véritable guerre de mouvement. Laissant en couverture le captal de Buch à Cazères-sur-l'Adour, Fébus fonça vers l'Est, perça les retranchements adverses à Monpezat, prit à revers Menaud de Barbazan qui fut blessé et fait prisonnier avec 25 de ses compagnons d'armes. Tous furent jetés en prison au château de Foix. La garnison qui avait occupé Montesquieu-Volvestre préféra se retirer avant de subir l'assaut. Selon le récit d'Esquerrier, confus à partir de ce moment, il semblerait que les troupes de la coalition Armagnac-Comminges se seraient installées à Mirepoix pour menacer le bas-pays de Foix et Mazères. Contraintes à la retraite sur Toulouse, Fébus les aurait poursuivies, battues dans les faubourgs de la ville, une nouvelle fois incendiés, à proximité de la porte Narbonnaise. Tentant une sortie, les milices toulousaines auraient été décimées. Répondant au mouvement, Armagnac se trouva sur la parade. Le captal de Buch maintenait sa pression sur Barcelonne-du-Gers à partir de la base de Cazères-sur-l'Adour, où il avait concentré ravitaillement et matériel. Trop sûr de lui, il n'y avait laissé qu'une petite garnison en couverture. Jean II d'Armagnac profita avec habileté de la situation pour pénétrer en Marsan et s'emparer de Cazères par un "hardi coup de main". Il s'y installa. 
+       </p>
+          </div>
+        )
+      },
+         {
+        titre: "Le Piège de Cazères",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Armagnac et Albret étaient donc à Cazères-sur-Adour avec un contingent de 200 chevaliers et leurs hommes d'armes. À cette nouvelle, Fébus revint en hâte en Béarn, s'installa au château de Pau d'où il décida de "prendre l'ennemi à son propre piège", comme Espan du Lion le décrivit à Froissart. Gaston, "âgé, vaillant et déterminé", appela aussitôt deux frères bâtards qu'il avait, chevaliers, messire Arnaud-Guilhem (de Morlanne) et messire Pierre de Béarn. Il leur dit de chevaucher sans tarder vers Cazères, promettant de les rejoindre sous trois jours et leur ordonnant : "Prenez bien garde que personne ne quitte la ville, qu'ils n'aient été battus. Vous en aurez la force." Une fois arrivés à Cazères, en y forçant les gens du pays, ils devaient "faire apporter et charrier des bûches en quantité" et les "faire mettre et charpenter par-devant de bonnes grosses palissades" afin que les portes soient si tellement encloses que ceux qui sont "là-dedans" ne puissent sortir. Fébus conclut : "Je leur ferai prendre un autre chemin". Les deux chevaliers firent ce qu'on leur avait commandé, et "tous les gens de Béarn les suivaient". Ils vinrent devant la ville de Cazères et y prirent leurs quartiers. Ceux qui étaient dedans n'en tinrent pas compte, mais ils réalisèrent bientôt qu'ils étaient "tellement emmurés" qu'ils ne pouvaient sortir ni s'échapper. Le comte de Foix, sitôt arrivé, fit faire des palissades par au moins cent hommes d'armes autour de ses troupes, pour que de nuit ils ne puissent causer dommage. En tel état et sans attaquer, il les tint quinze jours. Ils connurent alors un "très grand manque de vivres" ; quant au vin, ils en avaient assez. Ils ne pouvaient sortir sauf par la rivière, et s'ils s'y jetaient "ils étaient perdus davantage". Quand messire Jehan d'Armagnac, messire Bernard d'Albret et les chevaliers virent cela, ils "ne furent pas rassurés pour leur vie". Ils engagèrent des "tira-lires" (pourparlers?) pour voir si les gens de Foix étaient "très cruels". Fébus "prêta l'oreille" à ces pourparlers, car il semblait vouloir les "tirer de là honteusement de faim". Le comte fit dire que jamais ils ne s'échapperaient par une porte, mais qu'il leur "ferait faire un trou dans le mur" par où ils pourraient "proprement trouver sortir". Il leur fallut bien prendre ce parti, autrement ils ne pouvaient trouver d'issue et auraient "tous péri là-dedans". Le comte de Foix y eut conssenti, "trop grand", par lequel ils sortaient "un par un". Sur le chemin se tenait le comte de Foix en armes et tous ses gens en ordre de bataille. À mesure qu'ils sortaient, il y en avait pour les rassembler et les amener au comte. Celui-ci les distribua en plusieurs lieux et les envoya en plusieurs châtellenies et sénéchaussées. Le vainqueur préféra cette "sorte peu glorieuse" pour l'adversaire. Ce fut pour diverses raisons : son succès n'avait été obtenu qu'au dernier moment, ses pertes avaient été lourdes, et sa cavalerie avait été "saignée à blanc". La situation pouvait encore se retourner. L'essentiel est autre : Louis d'Anjou, qui avait suivi le conflit sans intervenir, imposa sa médiation. Fébus savait que ses forces n'étaient pas "inépuisables" comparées aux siennes. Refuser d'accepter la médiation d'Anjou revenait à perdre la dernière chance d'obtenir une révision de la position prise par Charles V. Avec l'appui du roi, Armagnac-Albret-Comminges étaient sûrs de l'emporter tôt ou tard. Gaston jugea préférable de mettre fin à la guerre pour manœuvrer sur le terrain diplomatique. La signature de la trêve de Cazères fut le point de départ d'un "grand marchandage" entre les deux maisons rivales.
+      </p>
+          </div>
+        )
+      },
+
+ {
+        titre: "Le Mariage de l'Héritier",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Les années 1377-1378 ouvrent une période décisive. Le duc d’Anjou, frère du roi de France, veut reprendre le contrôle de la forteresse de Lourdes, alors tenue par des compagnies mercenaires. Un accord est passé : en échange de 20 100 francs d’or, puis de 40 000 francs supplémentaires, la place doit lui être restituée. L’or est versé, mais le château n’est jamais livré. On affirme que l’argent serait rendu si le roi réclamait personnellement la forteresse, ce qu’il ne fera pas. L’affaire se fige, révélant une conception flexible des engagements, typique d’un temps où un traité n’a de valeur que tant qu’il sert les intérêts du moment. Une autre mésentente renforce les tensions : une campagne devait être menée en soutien au duc d’Anjou contre Bergerac, moyennant cent mille francs. La somme restant impayée, aucune troupe ne se met en marche. Le Béarn conserve ses forces, et le duc se sent trahi. Peu à peu, il se désengage des affaires béarnaises et cesse de contrer les ambitions de la maison d’Armagnac, son autre puissant voisin. C’est précisément dans cette période que se joue le sort du Comminges, territoire stratégique longtemps disputé. Jeanne de Comminges, inquiète pour l’avenir de sa fille Marguerite, envisage de la marier au roi de Navarre. Pour empêcher cette alliance, Jean d’Armagnac agit avec une rapidité brutale : il fait assiéger Muret, où mère et fille se sont réfugiées, puis impose le 18 juin 1378 le mariage de Marguerite avec son propre fils, Jean III. La cérémonie, célébrée de force dans le couvent des Frères Mineurs, scelle le basculement du Comminges sous contrôle armagnacais. Jeanne, arrêtée, est enfermée à Lectoure. Cette victoire donne aux Armagnac une position dominante, mais aussi la responsabilité de stabiliser la région. Ils acceptent alors de reprendre les négociations avec le Béarn, sous la médiation du duc d’Anjou, désormais plus neutre. Le 20 mars 1379, un accord préliminaire est conclu à Orthez, dans la chapelle du château Moncade, véritable centre politique du Béarn. On y pose les bases d’un compromis : les droits sur le Comminges seront abandonnés en échange de compensations substantielles, financières et territoriales. La rencontre formelle a lieu le 3 avril 1379 dans une zone frontalière entre Aire et Barcelonne. Une grande loge en bois, construite spécialement par des charpentiers habitués à ces installations diplomatiques, sert de cadre à la discussion. Les délégations y paraissent nombreuses et représentatives : du côté béarnais, l’héritier, plusieurs cousins chevaliers, et des barons influents comme ceux d’Andoins, de Navailles ou de Gabaston ; du côté armagnacais, le comte Jean II entouré de ses principaux partisans. La messe est célébrée par le Patriarche de Jérusalem. Après avoir juré sur la croix et l’hostie d’honorer les clauses du traité, les représentants échangent le baiser de paix. Le lendemain, le pacte politique est renforcé par un engagement matrimonial : l’héritier béarnais, le jeune prince Gaston, est uni à Béatrix d’Armagnac, dotée de trente mille francs. La cérémonie a lieu le 19 avril au château de Manciet. Les compensations obtenues réorganisent profondément la carte politique du Sud-Ouest. En renonçant au Comminges, le Béarn reçoit un ensemble d’avantages très importants. Certaines terres entrent dans ses domaines de manière héréditaire : les châtellenies de Goudon et de Mauvezin, la vallée du Larboust, ainsi que l’hommage de la Barousse. D’autres sont attribuées à titre viager, comme Saint-Julien ou Montesquieu-Volvestre. Une dizaine de seigneurs du Comminges deviennent ses vassaux directs pour la durée de la vie du seigneur de Béarn, modifiant en profondeur les rapports de force dans la région. Ce nouvel échiquier territorial permet au Béarn de s’étendre solidement. L’emprise sur Lannemezan, Tournay et Mauvezin isole la puissante famille de La Barthe, jusque-là pilier de la domination armagnacaise. Sur la Garonne, plusieurs lignages influents, les Gouze, les Espagne-Montespan, les Noé, les Bérat, se rallient à leur tour au seigneur de Béarn, privant Jean d’Armagnac de son contrôle traditionnel sur presque tout le haut cours du fleuve, à l’exception du secteur de Miramont. Désormais, il devient possible de chevaucher d’un seul trait depuis le château de Mazères jusqu’à celui de Mauvezin en restant constamment sur des terres tenues par le Béarn ou sur des fiefs nouvellement vassalisés. Cette continuité territoriale donne aux domaines béarnais une cohésion inédite, tout en apportant une paix durable après des décennies de rivalités. Ainsi se referme, en 1379, une longue série de conflits, de négociations financières et d’alliances recalculées. Le Béarn renonce à certaines ambitions mais obtient en retour une position renforcée, une paix solide et un réseau territorial cohérent dans un Sud-Ouest où chaque victoire diplomatique pèse aussi lourd qu’un succès militaire.
+   </p>
+          </div>
+        )
+      },
+        {
+        titre: "Fébus et les Compagnies",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Gaston Fébus entretient officiellement une relation de fidélité avec Charles V, se présentant comme un allié sûr du royaume. Mais derrière cette façade respectueuse, il agit comme un prince autonome, jaloux de son indépendance et maître absolu de ses terres. Charles V, conscient de cette réalité, préfère ménager le puissant seigneur plutôt que risquer une rupture : il renonce même à d’anciens droits sur l’Armagnac afin d’éviter un conflit et d’assurer un équilibre fragile dans le sud-ouest. En 1376, une vaste enquête révèle l’étendue réelle de l’influence de Fébus. De nombreux seigneurs de la Bigorre, du Bordelais, de Navarre ou de Gascogne s’adressent directement à lui pour trancher leurs différends, comme s’il était leur suzerain naturel. Parmi eux figurent les seigneurs d’Ossun, de Bénac, d’Asté ou de Laloubère. Leur choix montre qu’au-delà des frontières officielles du Béarn, Fébus exerce déjà un pouvoir concret, reconnu et recherché. La région est alors perturbée par la présence des « compagnons de Lourdes », bandes de mercenaires sans emploi en temps de trêve, installés durablement dans la montagne et les vallées. Leur existence complique lourdement la situation politique. Ces groupes ne sont pas aux ordres de Fébus, mais ils ne s’en prennent jamais directement à lui, ce qui suscite des soupçons. Ils circulent munis de sauf-conduits et de privilèges accordés par le duché d’Anjou, ce qui les rend difficiles à contrôler et presque impossibles à arrêter. Arnaud et Pierre de Béarn, envoyés pour négocier, échouent à obtenir leur départ. Les mercenaires, sûrs de leurs protections juridiques, multiplient les exactions dans les campagnes. Les populations locales du pays de Foix et du Béarn s’en plaignent amèrement. Des rumeurs s’élèvent contre Fébus : on l’accuse de laisser faire ces troupes afin d’affaiblir ses adversaires. Rien ne permet de l’affirmer, mais plusieurs éléments nourrissent ces soupçons. Les Compagnies ravagent les terres voisines, épuisent les ressources, et certains pensent que ce désordre renforce en retour la position politique de Fébus. Un comte de Foix hostile affirme même que les mercenaires auraient installé une garnison d’une trentaine d’hommes avec son accord tacite, insinuant qu’il tolère leur présence lorsqu’elle sert ses intérêts stratégiques. Cette accusation, même non prouvée, alimente l’image d’un seigneur calculateur, capable de tirer parti de n’importe quelle situation. Durant ce temps, Charles V tente de restaurer l’ordre dans le sud-ouest : disperser les Grandes Compagnies, pacifier les zones frontalières, mettre fin aux pillages. Son action vise à stabiliser durablement la région. Pourtant, Fébus échappe largement à cette politique royale. Il joue sur tous les tableaux, collaborant ou se tenant à distance selon les circonstances. Son habileté diplomatique se manifeste dans ses relations tantôt conciliantes, tantôt fermes, avec les représentants de la couronne, tout en entretenant des échanges occasionnels avec l’Angleterre lorsque cela sert ses intérêts. À l’approche de la mort de Charles V, en 1380, la situation change encore : le pouvoir royal s’affaiblit, la régence s’annonce incertaine et les ambitions se réveillent. Fébus profite pleinement de ce moment. Il renforce son autonomie, accroît son influence économique, consolide ses défenses et traite d’égal à égal avec les grandes puissances du temps. Dans un Sud-Ouest troublé, il apparaît comme l’un des maîtres du jeu politique, utilisant les crises, les mercenaires, les alliances et le silence des autorités pour bâtir une souveraineté de fait. 
+   </p>
+          </div>
+        )
+      },
+    
+      {
+        titre: "Le Complot de Navarre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Charles II, roi de Navarre, n'a jamais souhaité le retour de sa sœur Agnès auprès de Fébus, faisant échouer les négociations, y compris une médiation papale en 1373. À la place, Charles II versait des subsides irréguliers à Agnès, installée à Pampelune, pour "soutenir dignement son état", lui octroyant un "hôtel de la comtesse de Foix" avec écuyers et serviteurs. Une partie de l'argent de la dot servit à acheter des pierres précieuses, possiblement liées à une rançon. Pendant ce temps, Agnès ne voyait que rarement son fils, le jeune Gaston, prince héritier, lors de brèves entrevues sous haute tension, comme celle autorisée par Fébus en 1375 lors de manœuvres diplomatiques. Un climat de rancœur s'installa chez le jeune prince Gaston. En 1376, son train de vie était modeste (un chapelain et quelques serviteurs), contrastant fortement avec la faveur grandissante dont jouissait son demi-frère bâtard, Yvain de Béarn. Ce dernier était de plus en plus proche de Fébus et se voyait confier des missions de confiance, comme la protection du comte. L'héritier légitime, se sentant manipulé par son père (notamment sur un projet de mariage avorté avec Philippa de Lancaster), serait devenu le centre d'une "conjonction des mécontents" qui se forma en 1377. Le personnage central de ce complot serait Odon de Mendousse, l'évêque de Lescar et précepteur du jeune Gaston. En mars 1378, cet évêque reçut officiellement 400 florins de la part de Charles II de Navarre pour des "services" rendus. Odon de Mendousse n'était pas un inconnu : il était le premier signataire du précepteur du prince héritier, était à la solde du roi de Navarre et agissait même comme délégué du pape pour les affaires financières de Charles II. Les espions de Fébus notèrent les allées et venues de messagers et l'implication d'Yvain (le bâtard) à Pampelune. Charles II de Navarre jalousait le succès et le "train de vie" supérieur de Fébus et cherchait à se débarrasser de ce beau-frère autoritaire. L'objectif était de déstabiliser le Béarn pour y installer un régime plus docile, "dévoué aux factions de cour". Charles II privilégiait les "solutions expéditives", notant en 1378, un chambellan du roi de France fut accusé d'avoir tenté d'empoisonner ce dernier avec une drogue fournie par le réseau navarrais.
+   </p>
+          </div>
+        )
+      },
+
+     {
+        titre: "Fébus, Arbitre du Midi",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Après le couronnement de Charles VI à l'âge de 12 ans, le pouvoir royal fut exercé par ses oncles, notamment Jean de Berry, qui fut nommé lieutenant-général du sud du royaume (Guyenne et Languedoc) le 19 novembre 1380, lui conférant une autorité quasi-viceroyale sur le Midi. Cette nomination fut très impopulaire en Languedoc, où les populations se méfiaient de Jean de Berry et le jugeaient rapace comme son frère Louis d'Anjou, bien qu'elles eussent accepté de payer les taxes tant qu'il ne cherchait que l'argent, mais sans lui accorder leur confiance. De son côté, Gaston Fébus se méfiait profondément de Berry, craignant que ses alliances familiales et sa nouvelle position ne ravivent la vieille rivalité Foix-Armagnac. À partir de 1378, le Languedoc devint un foyer de troubles généralisé, marqué par des révoltes populaires (comme les Tuchins), des émeutes citadines à Nîmes et Montpellier, la colère populaire due à la non-application de la suspension des impôts décidée par feu Charles V, et la terreur causée par des bandes armées de mercenaires anglo-gascons (routiers), dont la célèbre Tête Noire, qui pillaient, rançonnaient et prenaient des châteaux. Contrastant fortement avec cette anarchie et misère ambiante dans tout le Languedoc, Fébus réussissait à maintenir un ordre et une sécurité absolus sur ses propres terres, faisant régner la "paix béarnaise" grâce à son autorité forte et son organisation rigoureuse.
+   </p>     </div>
+        )
+      },
+
+
+
+          {
+        titre: "La Tragédie d'Orthez",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Le jeune Gaston, âgé de 15 ou 16 ans, rend visite à sa mère Agnès à Pampelune. Là, son oncle, le roi Charles II de Navarre, lui aurait remis une "petite bourse" contenant de la poudre. Selon le chroniqueur Juvénal des Ursins, il s'agissait de "poisons" destinés à éliminer à la fois Fébus et son fils bâtard, Yvain, afin que le jeune Gaston devienne "comte de Foix". Une autre version, plus romanesque et attribuée à Froissart, prétend que Charles II trompa l'adolescent "naïf" en lui faisant croire que c'était une "poudre magique" pour réconcilier ses parents ; il suffirait d'en saupoudrer leur nourriture pour qu'ils "s'aimeront désormais pour toujours". Le complot fut découvert à Orthez. Dans la version de Froissart, le demi-frère bâtard, Yvain, découvrit la bourse lors d'un jeu ou d'une dispute avec Gaston. Après que Gaston l'eut frappé, Yvain courut en pleurant révéler la "mystérieuse petite bourse" à Fébus. Le comte garda le secret jusqu'au dîner dans la grande salle. Là, il appela son fils pour le servir, lui arracha la bourse de son habit d'un coup de couteau et lui demanda ce qu'elle contenait. Le prince, "tout blanc de peur" et se sentant "coupable", resta muet. Fébus prit alors de la poudre, en mit sur une tranche de pain et la donna à un chien lévrier, qui "mourut" aussitôt. Furieux, Fébus voulut tuer son fils sur-le-champ, mais ses chevaliers l'en empêchèrent, le suppliant de "ne faire le moindre mal à votre fils". Le comte se ravisa et fit jeter le prince en prison. Une enquête fut ouverte, menant à l'arrestation de plusieurs serviteurs du prince. Le prince, détenu dans la tour d'Orthez, refusait de s'alimenter. Fébus, apprenant cela et pensant peut-être à lui pardonner, se rendit à sa cellule. Il tenait à la main un "petit coutel" (petit couteau) dont il se servait pour "nettoyer ses ongles". En ouvrant la porte de la prison, il tenait le couteau "par la pointe" et, "par malheur", il frappa la gorge de son fils, touchant une veine. Le jeune homme, effrayé, se "tourna vers le mur et mourut". Comprenant son acte, Fébus s'écria "Mon Dieu, monseigneur, oui !, Gaston est mort !" et "regretta cruellement son fils", maudissant "la mauvaise heure" où il était allé en Navarre (d'autres sources, comme le "Livre des oraisons", suggèrent cependant une exécution après un procès). Des paiements effectués par Charles II à l'évêque de Lescar, Odon de Mendousse (précepteur du jeune Gaston), sont attestés en juin et juillet 1380 pour des "services" navarrais. D'autres nobles béarnais, comme le seigneur d'Andoins, étaient impliqués, ainsi que Roger-Bernard de Castelbon, qui avait un intérêt direct à la mort de l'héritier légitime, car un testament de 1371 le désignait comme successeur en cas d'échec de la lignée de Fébus. Après l'échec du complot (marqué par la mort du prince), l'évêque de Lescar et le seigneur d'Andoins se réfugièrent à Pampelune le 16 août 1380, la veille du départ de Fébus d'Orthez, ce qui marqua la "tragique conclusion de ce complot". Le cardinal Jean de La Grange, envoyé par le pape Clément VII (et non Grégoire XI, comme l'écrit Froissart par erreur), n'arriva à Orthez qu'en août 1380, après le drame.
+   </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+      {
+        titre: "Le Livre des Oraisons",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Profondément bouleversé et ébranlé par le meurtre de son fils, un acte qu’il avoue avoir commis « de sa propre main », Gaston Fébus perdit « sa joie » et quitta Orthez avec précipitation pour s’isoler dans sa résidence de Pau. Huit ans plus tard, en 1387, il commence à dicter son Livre des oraisons (Livre des prières), un recueil de 37 prières rédigées lors d’une chasse avec Philippe le Hardi. Ce texte n’est ni un délire de remords, ni le fruit de la confusion, mais une « pensée réfléchie » : une confession longue et complexe, un dialogue angoissé et parfois désespéré avec Dieu où Fébus cherche l’absolution pour son crime. Il y implore le pardon pour lui et pour son fils, suppliant Dieu afin qu’ils ne soient pas « tous deux au nombre des damnés ». Il reconnaît l’« énormité » de ses fautes et admet sa culpabilité (« Seigneur j’ai commis l’acte pour lequel tu peux me damner »), tout en rappelant « pudiquement » que son fils avait tenté de l’empoisonner (« Facta nostra, nos actions… »). L’ensemble du livre expose une théologie subtile, complexe et audacieuse. Fébus confesse une vie entière de péchés, colère, orgueil, luxure, avarice, et se compare à Sodome et Gomorrhe, affirmant avoir été « mauvais et frivole » au point de faire honte à ses parents. Il reconnaît sa culpabilité mais soutient également que l’homme est esclave du péché par nature. Dans la 21ᵉ oraison, décrite comme la « clef de voûte » de son argumentation, il va jusqu’à rendre Dieu co-responsable : « Tu es le Créateur… tu m’as fait ce que je suis ». Selon lui, Dieu savait pertinemment qu’il pécherait : « Tu savais bien que je pécherais ». Ainsi, sa damnation relèverait de la « bonté [de Dieu] et non [de sa] méchanceté », et Dieu doit lui pardonner pour prouver sa bonté et son « omnipotence ». Pour Fébus, tous les péchés peuvent être pardonnés, y compris les siens, sauf un : la « méconnaissance de Dieu », qu’il considère comme la « folie suprême » menant à la damnation automatique. Il affirme avec force n’y être « jamais tombé », même s’il avoue avoir été « mordu par [la] morsure enragée » de tous les autres maux. Dans la 12ᵉ oraison, il décrit la lutte incessante contre le diable, « plein de venin », qui tend ses pièges dans chaque aspect de la vie. Fébus remercie Dieu de ne pas l’avoir laissé succomber et compare cette lutte à la chasse, qu’il juge vertueuse car elle éloigne l’oisiveté, « source de tous les péchés ». Le Livre de la chasse devient dès lors une métaphore morale : le péché, telle la morsure d’un chien enragé, enfle et détruit l’âme. La 24ᵉ oraison révèle un ton plus humble et méditatif : Fébus contemple la vanité du corps et des plaisirs. Il décrit sa future décomposition avec une précision macabre, concluant que santé, beauté et richesse « s’évanouissent comme un songe ». Malgré son désespoir, Fébus affirme sa foi orthodoxe en un Dieu unique et trinitaire : « Gloire au Père, au Fils et au Saint-Esprit ». Il invoque la Vierge Marie, les saints et les anges, notamment Saint Michel, afin qu’ils intercèdent en sa faveur et l’aident à mourir « d’une mort digne de louange ». L’œuvre se clôt sur une prière finale où Fébus, « indigne serviteur », implore une dernière fois la miséricorde divine et demande que « toutes les générations » prient pour son pardon, suppliant Dieu de le défendre contre le diable afin de ne jamais tomber dans le seul péché qu’il juge véritablement impardonnable.
+   </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+        titre: "La Foi Inquiète de Fébus",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 17 août 1380, Gaston Fébus règle son hommage au château de Pau avec Guillaume-Aner d’Abos. Il reste sur place pour traiter les affaires courantes, prestations d’hommage, nomination de notaires et prêtres, signature de contrats, allant jusqu’à s’occuper lui-même de détails mineurs comme la perception de dix florins sur le pont de Bellocq ou l’affermage du moulin de Sauveterre-de-Béarn. Son itinéraire est ensuite tracé : Morlaàs, Saint-Gaudens (4 janvier 1381), près de Toulouse (15 janvier) puis Mazères (18 janvier). Là débute son plus long séjour en pays de Foix, devenu son centre politique, tandis que le duc de Berry agit comme son lieutenant en Languedoc et qu’il porte le titre de comte de Poitiers. Fébus recherche un contact direct avec Dieu, préférant l’élan du cœur à la logique. Cette attitude rejoint le courant mystique du XIVᵉ siècle, proche de celui des pays rhénans, où les laïcs cherchaient à atteindre Dieu par les sentiments. Ses Oraisons reflètent cette tension entre foi et raison : il y exprime une émotion sincère et une grande détresse, implorant son ange gardien de le défendre du diable et de préserver son âme du désespoir. Appelant Dieu Mon Salut, Ma Sagesse ou Ma Douce Vie, il le prie d’« apaiser ma douleur » et décrit son corps « en grande souffrance » à cause de sa faute : « Je serai rempli des larmes d’orphelin... ». Cette ferveur mystique, rare en Béarn, lui valut d’être accusé d’hérésie, car il rejetait parfois les dogmes de l’Église et préférait s’adresser directement à Dieu, à la Vierge et aux saints. Le texte nuance pourtant cette accusation : Fébus inclut bien le clergé dans ses prières, mais pour s’en plaindre. Il reproche aux religieux de détourner les fidèles, disant : « Les prélats... sont pires que les autres », et demande à Dieu d’apaiser sa vengeance contre eux, certains avaient un comportement inhumain en public, donc Gaston utilisa des taxes pour le masquer (l'Archévêque qui mariera Catherine de Bourbon n'avait jamais célébrer de messe...). Il doute même de l’efficacité des sacrements, observant qu’après avoir partagé l’hostie avec un ennemi, leurs serments furent aussitôt violés. Malgré ce mépris, Fébus continue à nommer des prêtres selon ses intérêts, parfois choisis pour leur « pieuse ignorance ». Certaines de ses offrandes, comme une jambe en argent à Boulbonne, paraissent douteuses. Mais après le drame d’Orthez et la victoire de Launac, il participe à l’illumination de la tombe de Saint-Volusien à Foix et fonde une maison religieuse.
+
+  </p>
+          </div>
+        )
+      },
+
+
+
+
+
+// revoir ce passage
+
+          {
+        titre: "L'Autonomie Contestée",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ À Orthez, Fébus impose une gestion administrative stricte, notamment pour l’armement : en 1381, la ville devait fournir 804 francs pour l’entretien des murailles, et à la fin de l’année le comte organise une montre militaire à Pamiers, exigeant que chaque sujet se présente avec les armes réglementaires ; ceux dépourvus d’équipement sont sanctionnés par des amendes. Les montres révèlent régulièrement des insuffisances, et le comte applique alors des pénalités proportionnelles aux moyens de chacun. En mai 1382 à Mazères, il institue un impôt basé sur la valeur des biens, où les plus riches paient davantage et les pauvres seulement deux francs par an et par foyer. Fébus exige également un droit fixe d’un sol par livre (1/20ᵉ) sur toutes les transactions. Toute cette surveillance et cette activité administrative constante ne l’empêchent pas de poursuivre une politique ambitieuse pour affermir son autorité, notamment face au duc de Berry. Après le drame d’Orthez et l’installation de Fébus à Pau, la politique française est bouleversée par les troubles du Languedoc, aggravés par les exactions du parti de Louis d’Anjou. Pour apaiser la région, Charles V remplace les administrateurs locaux par Bertrand Du Guesclin, dont l’autorité devait calmer les tensions. Cependant, dès la mort de Charles V en septembre 1380, son fils Charles VI, âgé de douze ans, est couronné à Reims, puis entouré d’un gouvernement dominé par ses oncles (Berry, Bourbon et Bourgogne). Le 19 novembre 1380, le Conseil royal nomme le duc de Berry lieutenant général en Languedoc, décision impopulaire qui ravive les protestations, notamment à Poitiers. Le retour d'Agnès, épouse de Fébus, auprès du comte d’Armagnac, ravive en outre les rivalités entre les maisons Foix et Armagnac. Dans ces tensions, le comte de Foix se montre plus ferme pour préserver son autonomie. Pour lui succéder, certains imaginent Fébus nommé gouverneur du comté de Foix, mais ce dernier défend simplement les droits de son fils unique et fait valoir son prestige personnel. La mort de Charles V laisse Fébus plein d’amertume, convaincu que ses efforts fidèles n’ont pas été reconnus par le nouveau régime.
+
+           </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+ 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    ]
+  },
+
+
+
+'apres-febus': {
+    titre: "Le Béarn Post Gaston Fébus",
+    periode: "Temps Féodaux",
+    resume: "Les derniers actes de Gaston X",
+    introduction: "Les États en affirmation définitivement l'indépendance...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+        {
+        titre: "Fébus Contre le Duc de Berry",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Le 17 décembre 1380, les consuls d’Albi demandèrent à Toulouse de reconnaître Gaston Fébus comme régent légitime, poussant les États de Languedoc à débattre de la question entre 1380 et 1381. Fébus quitta alors le Béarn pour défendre sa cause à Saint-Gaudens, tandis que le duc de Berry, nommé lieutenant du roi, envoyait ses représentants pour asseoir son autorité et protéger ses intérêts financiers. Ses exactions et son luxe provoquèrent la colère des États, qui dénoncèrent sa tyrannie et demandèrent au roi d’annuler sa nomination. Malgré ces protestations, Berry prit le pouvoir à Toulouse, installé à Saint-Cyprien, où la population le surnomma ironiquement « capitaine ». Le comte d’Armagnac tenta de le soutenir, mais Fébus, fort de sa popularité et de ses alliances, conserva son influence. Tandis que Menaud de Barbazan tentait d’apaiser les tensions, Fébus multiplia les alliances locales avec Guillaume de Rabastens et Pierre-Maynard de Toulouse, renforçant son contrôle du Lauragais. Charles VI tenta d’intervenir, mais Berry répondit avec hypocrisie, feignant la loyauté tout en jalousant l’ascension du comte de Foix. Fébus protesta auprès du roi, accusant Berry de soutenir l’Armagnac, et réunit en avril 1381 les États à Mazères pour contester ses décisions. Les débats furent vifs, mais Berry dut finalement céder. Puis, en juillet 1381, les négociations de Pamiers aboutirent à un compromis : Fébus abandonnait ses prétentions sur la lieutenance du Languedoc contre 65 000 francs et une pension annuelle de 40 000 francs, à condition de rester neutre. Cet accord fragile apaisa temporairement la querelle. Entre le 20 et le 21 juillet, les hommes de Fébus affrontèrent ces bandes près de Rabastens et Couffouleux, confirmant la fausse paix de Pamiers et la persistance de la rivalité entre Berry et le comte de Foix pour la domination du Midi.
+       </p>
+          </div>
+        )
+      },
+      {
+        titre: "Fébus Arbitre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Alors que les tensions entre Gaston Fébus et le duc de Berry atteignent leur comble, plusieurs affrontements éclatent dans le sud du royaume. Soucieux de défendre son autorité, Fébus fait rassembler une armée sous le commandement d’Yvain de Béarn près de Rabastens-sur-Tarn. Le dimanche de la Madeleine, ses troupes surprennent et mettent en déroute les compagnons du duc de Berry devant les murs de Rabastens. Fébus fait alors exposer les bannières capturées à Mazères, renforçant ainsi son prestige. Après la bataille, l’évêque de Langres intervient pour apaiser le conflit. Fébus le fait attendre, se plaint du déshonneur subi et prévient que, si le duc commet de nouveau le moindre dommage, il fera exécuter les prisonniers. Quelques temps plus tard, le 4 août, les deux princes partagent la messe et un banquet, puis se revoient à Mazères et « se quittent bons amis ». Politiquement, le Languedoc est alors en révolte contre le duc de Berry ; ce dernier se voit donc obligé de déléguer ses pouvoirs à Fébus. Le 28 décembre, un accord est signé à Capestang : Fébus obtient une compensation financière, la reconnaissance de ses droits sur les terres de Bigorre et la liberté d'attaquer ses propres ennemis (Albret-Armagnac) sans intervention du duc. En échange, il abandonne les communautés languedociennes qu’il laisse à Berry. Par la suite, entre 1381 et 1382, les troupes de Fébus lancent des raids pour démontrer que les seigneurs actuels sont incapables de protéger leurs sujets. Ainsi, lorsque Pierre-Arnaud tente de prendre le château de Bouglon pour contrôler la région entre Casteljaloux et la Garonne, les troupes de Fébus ripostent par une série d’opérations coordonnées. Elles ravagent les terres ennemies, capturent des prisonniers pour rançon et affirment leur domination sur le Bazadais. Fébus remporte une victoire décisive en signant un accord avec le seigneur de Curton en février 1382. Désespérés, certains nobles et villages préfèrent alors se placer sous la protection du « seul homme capable de le faire » : Gaston Fébus.
+
+            </p>
+          </div>
+        )
+      },
+
+
+
+
+
+      {
+        titre: "Constance de Rabastens",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dès 1381, Constance, une veuve quadragénaire résidant à Rabastens-sur-Tarn, commence à connaître des extases mystiques durant lesquelles elle prétend recevoir des messages divins. La renommée de ses prophéties grandit si vite qu’une foule immense se presse à l’église pour l’entendre. Cependant, les visions de Constance dépassent le cadre spirituel : elle est hantée par la détresse du royaume de France et appelle de ses vœux un « homme providentiel » capable d'épauler le jeune roi Charles VI pour purger la cour de ses traîtres. Dans son esprit, la figure du traître absolu est incarnée par le comte d’Armagnac, qu'elle compare volontiers à Ponce Pilate, l'accusant de comploter secrètement avec les Anglais. À l'opposé, elle dresse un portrait héroïque de Gaston Fébus, qu'elle surnomme « la Grue à tête vermeille ». Selon ses prédictions, Fébus terrassera Armagnac, tel l'empereur Vespasien anéantissant Pilate, avant de devenir le mentor du Roi. Elle prophétise même qu’il guidera le souverain vers le « Saint Passage », une croisade destinée à venger la mort du Christ. Bien que d’apparence mystique, ces visions servent à merveille les ambitions politiques de Gaston Fébus. L’une de ses images les plus frappantes, « la vache sera à l’ombre de la fleur », symbolise l’union imminente entre le Béarn (aux armoiries chargées de vaches) et la France (représentée par la fleur de lys). Cette vision semble d'ailleurs prémonitoire : à la fin de sa vie, Fébus signera le traité de Toulouse faisant de Charles VI son héritier unique, préfigurant ainsi, bien plus tard, l'accession du Béarnais Henri IV au trône de France.
+
+    </p>
+          </div>
+        )
+      },
+
+{
+        titre: "La Bataille d'Aljubarrota",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la mort de Ferdinand Ier du Portugal, une crise de succession éclate : Jean Ier de Castille, allié de Fébus, revendique le trône, tandis que les Portugais soutiennent Jean d’Aviz. Malgré ses liens avec la Castille, Gaston Fébus refuse d'intervenir, sachant que le duc de Lancastre (Anglais) soutient le camp portugais. Pourtant, au mépris de ses ordres, de nombreux chevaliers béarnais décident de partir au combat. Fébus les avertit solennellement qu'ils ne reviendront pas. Sa prophétie se réalise le 14 août 1385 lors de la bataille d'Aljubarrota : placés en première ligne, 300 Béarnais sont massacrés. La célèbre abbaye de Batalha sera d'ailleurs édifiée pour commémorer cette victoire portugaise. Accablé, Fébus s'enferme pendant trois jours avant de confier à son frère, Arnaud Guilhem de Morlanne : « Jamais le pays de Béarn n’a perdu autant d’hommes en un jour, alors que je les avais prévenus ». Le conflit s' déplace vers la Galice, que le duc de Lancastre convoite désormais. Pour contrer les Anglais, Charles VI envoie une armée commandée par le duc de Bourbon. Maître des passages pyrénéens, Fébus impose ses conditions : il indique que la Soule est sous sa protection, interdisant tout pillage sur ses terres. De plus, Fébus profite de la présence de cette armée royale pour régler ses propres comptes de manière magistrale, le duc de Bourbon cherchait un lieu où frapper, Fébus lui désigne Brassempouy, où s'est retranché Perrot le Béarnais, un routier pro-anglais et ennemi personnel du comte. Le duc rase le château. Ensuite, au retour de l'expédition, Fébus suggère au duc de laisser ses troupes se « défouler » sur les terres de l’évêque de Lectoure, situées en dans le comté d’Armagnac.
+
+    </p>
+          </div>
+        )
+      },
+      {
+        titre: "Le Génie Financier de Fébus",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1385, Gaston Fébus fait recenser précisément les foyers du Béarn et impose une taxe de 2 francs par an et par feu. Sur les 12 500 feux répertoriés, il tire ainsi une recette annuelle de 25 000 francs. Pour garantir le paiement, il instaure une solidarité villageoise : les plus riches doivent compenser les défaillances des plus pauvres afin que le village atteigne toujours son quota. Contrairement aux autres du royaume, Fébus refuse d'instaurer la gabelle (taxe sur le sel), car elle ruinerait l'économie vitale des salines de Salies. À la place, il multiplie les sources de revenus intelligentes comme la taxe de transit (des péages sont installés, notamment sur le pont d’Orthez), l'impôt sur la croissance (prélèvant 4 % sur l'accroissement de fortune des bourgeois, estimant que leur enrichissement découle directement de sa politique de stabilité), l'usure institutionnalisée (bravant l'interdiction chrétienne, il autorise et pratique l'usure avec des taux montant jusqu'à 43 %., lui permettant de saisir les biens des nobles incapables de rembourser leurs dettes) ou encore le rachat des corvées (les sujets peuvent payer une taxe pour être exemptés de travaux publics (ponts, bâtiments)). Fébus transforme sa puissance militaire en produit financier, louant par exemple ses services à la Soule pour 4 000 francs. Ce trésor de guerre lui permet d'acheter la loyauté de seigneurs alliés. Pour gouverner, il ne se fie pas uniquement à la haute noblesse. Il promeut des hommes issus de la bourgeoisie, comme Bernard de Luntz, ou récompense des serviteurs comme Pierre de Latapie en lui offrant des terres, l'élevant ainsi au rang de noble. Son autorité est telle qu'à Navarrenx, les jurats en retard d'impôts allaient d'eux-mêmes se constituer prisonniers à Orthez. Enfin, pour être le seul maître à bord, Fébus paralyse les assemblées d’États. S'il maintient la Cour Major et les communautés locales, il réduit leur rôle à une simple fonction consultative. En privant ses sujets de tout pouvoir de décision, il s'assure d'exercer une souveraineté absolue et sans partage sur ses terres.
+
+    </p>
+          </div>
+        )
+      },
+      {
+        titre: "Fébus et les Marmousets",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  En 1388, Charles VI, jeune roi de vingt ans, décida de s’émanciper de ses oncles, les ducs de Berry et de Bourgogne. Il s’entoura d’un nouveau groupe de conseillers, surnommés péjorativement les Marmousets, artisans d’une politique de restauration de l’autorité royale et de paix avec l’Angleterre. Le 2 septembre 1389, Charles VI entreprit avec eux un grand voyage en Languedoc, passant par Avignon pour rencontrer le pape et mettre fin aux abus commis sous les précédents gouvernements d’Anjou et de Berry. Le succès de ce périple dépendait cependant des relations avec Gaston Fébus, de plus en plus maître d’une principauté pyrénéenne indépendante. Pour préparer cette rencontre, les Marmousets envoyèrent à Orthez le maréchal Louis de Sancerre, officiellement pour négocier le mariage du duc de Berry avec Jeanne de Boulogne, élevée au château de Moncade. En réalité, il devait sonder les intentions de Fébus. En présence du chroniqueur Froissart, les entretiens portèrent d’abord sur la position délicate de Fébus face au schisme : il affichait une neutralité stricte, recevant à Noël 1388 des évêques d’Avignon et de Rome à la même table. Cette prudence s’expliquait par la double appartenance de ses domaines : ceux de Foix, vassaux du roi de France, suivaient le pape d’Avignon, tandis que ses terres de Marsan, Gabardan et Orthez, sous influence anglaise, suivaient Rome. Malgré cette neutralité proclamée, des lettres contemporaines montrent que Fébus rendait parfois de « petits services » au pape d’Avignon : il lui prêta de l’argent, fit lever en 1384 un subside ecclésiastique en Béarn au profit de Clément VII, et data encore un acte diplomatique de 1390 selon son pontificat. Cependant, il refusait toute ingérence pontificale dans ses affaires temporelles, exerçant lui-même le droit de régale sur les bénéfices ecclésiastiques. Cette position, proche des idées anglaises de John Wycliff, traduisait son désir d’un contrôle princier sur l’Église locale. Sancerre évoqua aussi la paix de Limoux, que les Marmousets voulaient consolider. Mais plusieurs contentieux persistaient : des hommes de Fébus occupaient toujours la châtellenie de Saint-Sulpice-sur-Lèze, et certains de ses vassaux, comme les seigneurs de Lantar, soutenaient encore des bandes « anglaises » qui pillaient le Languedoc, notamment vers Albi. Fébus recrutait volontiers ces marginaux et petits nobles ruinés, tels Jacques de Naiz ou Pierre de Chaudière, impliqués dans divers pillages et rançons, au grand dam des autorités royales. Sancerre dut le supplier d’y mettre fin. Deux affaires menaçaient enfin cette paix fragile : le conflit entre Fébus et le comte d’Armagnac au sujet de Mondonville, dont Fébus retenait le jeune héritier en gage d’un prêt, et la capture par Jean III d’Armagnac de plusieurs proches du comte de Foix, dont son conseiller Bernard de Duras.
+ 
+   </p>
+          </div>
+        )
+      },
+      {
+        titre: "Le Grand Marchandage",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Unique héritière du Comminges par sa mère, Jeanne de Boulogne est une pièce maîtresse sur l'échiquier politique du Midi. Son tuteur, Gaston Fébus, conscient de sa valeur, la traite comme une précieuse « monnaie d'échange ». Lorsque le clan d'Armagnac tente de l'obtenir pour s'emparer de ses terres, le comte de Foix s'y oppose farouchement : « Ils me prennent pour un imbécile ! » s'exclame-t-il, refusant de renforcer ses rivaux. Le puissant duc de Berry, bien que veuf et insistant, essuie lui aussi un premier refus. Fébus préfère alors sonder une alliance avec l'Angleterre. Cependant, la signature de la paix entre la France et l'Angleterre change la donne. Le duc de Berry n'étant plus lieutenant en Languedoc et s'étant éloigné des Armagnac, Fébus accepte enfin d'ouvrir les négociations. Fébus ne cède rien sans contrepartie majeure. Il exige une somme colossale pour couvrir dix ans de frais d'éducation de la jeune fille. Le duc accepte de verser 30 000 francs ; en échange, Fébus lui cède ses droits sur le Comminges. L'accord prévoit également des échanges de places fortes, comme le château d'Alzen contre celui de Saint-Julien-sur-Lèze, ainsi que la restitution de bijoux ducaux laissés en gage. Toujours passionné par la vénerie, le comte de Foix ajoute une clause insolite : la remise de deux têtes de cerfs royaux et de quatre chiens de chasse du comte de Sancerre. Le contrat est signé à Orthez le 9 mars 1388, dans des termes qui traitent Fébus en véritable souverain. Fidèle à son tempérament, il refuse d'assister au mariage par procuration, envoyant ses fils bâtards, Yvain et Arnaud-Guillaume, pour le représenter et surtout pour s'assurer du versement de 25 000 francs. Pour honorer sa nouvelle épouse, le duc de Berry dépêche des chariots de vêtements luxueux et de précieux palfrois. Jeanne quitte alors le Béarn sous escorte, passe par Avignon où elle est reçue avec faste par le pape Clément VII, avant de célébrer ses noces définitives à Riom. Malgré le coût exorbitant de l'union, 20 000 francs supplémentaires pour les festivités, le chroniqueur Froissart rapporte que ce mariage fut,un mariage heureux.
+  </p>
+          </div>
+        )
+      },
+
+
+
+
+          {
+        titre: "La Réconciliation du Sud",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1389, Orthez s'impose comme le cœur diplomatique du Midi français. Désireux de clore des décennies de conflits, Gaston Fébus engage des pourparlers décisifs avec son rival, Jean III d’Armagnac. Cette médiation de haut rang est orchestrée par le duc de Lancastre, grand seigneur anglais, représenté sur place par Thomas Percy et Florimond de Lesparre. Pour garantir la neutralité des débats, les deux délégations se réunissent dans une « loge », une structure éphémère bâtie pour l'occasion, à la frontière de leurs domaines, entre Aire-sur-l’Adour et Barcelonne-du-Gers. Le 26 juillet 1389, un accord est enfin scellé. Afin de prévenir toute trahison, les participants prêtent un serment solennel sur l'hostie consacrée au cours d'une messe, engageant ainsi leur honneur devant Dieu. Le traité repose sur un échange complexe de prisonniers et de territoires, visant à rétablir un équilibre durable. Fébus libère le fils du comte de L’Isle-Jourdain et restitue les terres de Mondonville et de Gensac. Jean III libère Bernard de Duras ainsi que deux nobles béarnais sans exiger de rançon. Surtout, l’Armagnac accepte de retirer ses troupes de Couffouleux et renonce définitivement à ses prétentions sur les Terres-basses d’Albigeois. Cet accord marque un tournant, stabilisant la région sous l'influence grandissante du comte de Foix.
+ </p>
+          </div>
+        )
+      },
+
+
+
+  {
+        titre: "Fébus Reçoit Charles VI",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1390, les conseillers du roi Charles VI, les « Marmousets », tentent de contraindre Gaston Fébus à choisir son camp entre la France et l’Angleterre. Fidèle à son indépendance, Fébus refuse de se soumettre, affirmant que son pays, le Béarn, ne dépend que « de Dieu, de son épée et de son lignage ». Habile, il décline d'abord une visite royale en déclarant qu'il ne faut pas que le roi en ait la peine : c'est lui qui ira à sa rencontre. Fébus entre à Toulouse, du 4 au 6 janvier 1390, avec une escorte fastueuse de 200 chevaliers et 600 montures, affichant ainsi sa puissance. Au château Narbonnais, il joue la carte de l'humilité souveraine, s'agenouillant trois fois devant Charles VI. La hiérarchie du banquet royal confirme son statut : il dîne aux côtés des princes de sang. En retour, Fébus offre un dîner somptueux pour 200 convives, utilisant ces festivités pour faciliter les négociations du futur traité de Toulouse. Fébus invite ensuite le roi dans son château de Mazères. Conscient qu’il ne peut égaler le luxe des tournois parisiens, il mise sur l'originalité. Le roi est accueilli par des centaines d’animaux de prix portant des clochettes d’argent, conduits non par des paysans, mais par la plus haute noblesse de Foix déguisée en bergers. Lors du banquet, ces derniers révèlent sous leurs habits de laine des manteaux luxueux brodés de fleurs de lys. Fébus organise des concours sportifs, javelot, jet de pierre, course, qu'il planifie avec finesse. Sachant que le jeune roi excelle au lancer de dards, il organise une épreuve sur mesure. Charles VI l'emporte et reçoit une couronne d’or, puis une magnifique coupe après le lancer de pierre. Le roi repart ravi, son ego flatté par ces victoires orchestrées. Pour garantir la paix sans sacrifier son indépendance, Fébus multiplie les signes extérieurs de déférence : il fait peindre des fleurs de lys surmontées de la couronne à Mazères et sur le portail de Foix. Il se définit alors comme le « lévrier blanc du roi de France », utilisant le symbole du lévrier pour exprimer une fidélité choisie plutôt qu'une soumission forcée.
+</p>
+          </div>
+        )
+      },
+
+
+
+
+      {
+        titre: "Le Traité de Toulouse",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Par cet accord historique, Gaston Fébus désigne le roi de France comme son héritier universel. En échange de la jouissance viagère de la Bigorre et d'une somme de 100 000 francs d'or, il cède perpétuellement à la Couronne le comté de Foix, la souveraineté du Béarn, ainsi que les terres de Marsan, Gavardan et Gabaston. Le traité prévoit des conditions strictes pour verrouiller l'accord : l'acte ne peut être annulé que si Fébus, alors veuf, se remarie et engendre un fils légitime, si la paix avec l'Angleterre exigeait la restitution de la Bigorre aux Anglais, Charles VI pourrait la racheter contre une indemnité de 50 000 francs et conscient des résistances locales dans les Pyrénées, le pouvoir royal exige que l'entourage de Fébus, dont son fils naturel Yvain, ainsi que les notables des grandes villes jurent sur les Évangiles de respecter ces clauses. Pour Charles VI et ses conseillers, les Marmousets, ce traité est une victoire diplomatique majeure. Il permet l'incorporation future du Midi pyrénéen au domaine royal, renforçant la position française face à l'Aquitaine anglaise. Enfin, un second accord signé le 10 janvier 1390 vient stabiliser la région : Fébus s'y engage solennellement à ne plus reprendre les armes contre son rival, Jean III d'Armagnac.
+  </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+          {
+        titre: "La Double Diplomatie de Fébus",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Après une visite en Languedoc, le roi Charles VI repart vers Paris (via Carcassonne et Avignon). Gaston Fébus, de son côté, retourne à Orthez.  Bien qu'il ait généreusement financé le séjour royal en Languedoc à hauteur de 60 000 francs, sa loyauté n'est qu'une façade. Dès le 6 avril 1390, il signe à Bayonne un pacte secret avec le duc de Lancastre. En échange du paiement de 300 hommes d'armes anglais, Fébus réaffirme sa fidélité à la Couronne d'Angleterre "comme il l'a toujours fait" et en profite pour récupérer 10 000 francs sur une créance datant du Prince Noir. En mai 1390, il complète ce dispositif par une alliance offensive et défensive avec Jean Ier d’Aragon. Ce pacte vise directement la maison d’Armagnac : Fébus veut s'assurer que son héritier ne soit pas isolé face à ses rivaux si le roi de France venait à lui faire défaut. Pendant ce temps, la géopolitique s'embrase. Béatrice d'Armagnac, veuve du fils de Fébus, a épousé Carlo Visconti, chassé de Parme par son cousin Jean-Galéas (lequel a fait empoisonner son oncle Bernabo). Béatrice se réfugie chez ses frères, les Armagnac, qui s'allient alors aux Florentins contre les Milanais. Parallèlement, la tension monte entre les Armagnac et l'Aragon. Jean Ier d'Aragon (dont l'épouse Yolande de Bar échangeait des manuscrits avec Fébus) entre en conflit avec Bernard d'Armagnac qui a priviligié son père Pierre IV. Ce dernier tente de récupérer les droits sur Majorque, rachetés à Isabelle de Majorque. Ce dynamisme belliqueux des Armagnac jette alors les bases du futur grand parti « Armagnac » qui s'opposera bientôt aux Bourguignons. En résumé, si les conseillers royaux (les Marmousets) croyaient avoir soumis le Midi, Fébus n'a agi que par intérêt. Le traité de Toulouse lui a apporté la Bigorre et un trésor considérable sans entamer la souveraineté du Béarn. Habitué à considérer les traités comme de simples « chiffons de papier », il comptait sans doute sur l'or et le temps pour contourner ses engagements, espérant certainement léguer ses domaines à son fils naturel Yvain plutôt qu'à son héritier légitime, Mathieu de Castelbon.
+ </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+      {
+        titre: "La Mort du Chasseur",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 1er août 1391, à l’Hôpital d’Orion, près d’Orthez, après une journée de chasse dans les bois de Sauveterre. Le comte, qui possédait plus de 1600 chiens, avait poursuivi un ours toute la matinée avant de se rendre à Orion pour dîner. Alors qu’il se rafraîchissait dans une pièce garnie de verdure, il demanda de l’eau pour se laver les mains ; au contact de l’eau froide, son visage pâlit, son cœur tressaillit et il s’effondra, murmurant : « Je suis mort, sire Dieu, pardon. » Il mourut quelques instants plus tard, malgré les soins de ses écuyers et chevaliers, qui crurent à un empoisonnement. Son fils Yvain, fut aussitôt envoyé à Orthez pour sécuriser le château et le trésor. Les témoins rapportent qu’il expira « doucement », en pénitence. Si le récit présente quelques invraisemblances, comme la chasse à l’ours en été, contraire aux préceptes du Livre de la chasse de Fébus lui-même, il demeure vraisemblable : le lieu, les personnages et les usages du repas sont confirmés par d’autres sources. Depuis 1387, Fébus consacrait sa retraite à la chasse et à la rédaction de ce Livre de la chasse, achevé le 1ᵉʳ mai 1387, où il disait se délecter « des armes, de l’amour et de la chasse », préférant cette dernière comme science et passion. Sa mort à l’Hôpital d’Orion semble chargée de symbole : ce lieu porte le nom du chasseur mythologique qu’Artémis éleva aux cieux avec son chien Sirius. Comme Orion, Fébus, « trop beau pour être vrai », meurt en pleine gloire, frappé par le destin au seuil de sa demeure.
+
+  </p>
+          </div>
+        )
+      },
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+      {
+        titre: "Les États Sauvent le Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La mort soudaine de Gaston Fébus provoqua une crise immédiate en Béarn. Des rumeurs, comme celle du marchand Datini, l'affirmèrent « tué par ses vassaux ». Tandis que son fils bâtard Yvain, aidé du portier Morlane, tentait en vain de s’emparer du trésor d’Orthez, la clef étant retrouvée trop tard par Nicole de Lescalle sur le corps de Fébus, le peuple pleura son prince, dont le corps fut exposé aux Cordeliers. Cette disparition souleva un enjeu politique majeur : la crainte de l'annexion par Charles VI via le Traité de Toulouse, qui menaçait les négociations de paix franco-anglaises à Amiens. Les États de Béarn, créés en 1391, se réunirent dès le 8 août, reprenant le principe d'indépendance et de neutralité de Fébus. Structurés en un « grand corps » (77 députés) et un « second corps » (127), ils s’emparèrent du trésor (évalué à plus de 750 000 florins), proclamèrent n’avoir « rien à faire avec le roi de France », qu’ils étaient fort différents des habitants du Pays de Foix qui « avaient le coeur tout français », et instaurèrent un serment d’union pour protéger les fors. Menés par Roger d’Espagne et Espan du Lion, les États désignèrent l'héritier légitime, Mathieu de Castelbon (14 ans), gendre du roi Jean Ier d’Aragon (qui s'effaça en sa faveur) et fiancé à Jeanne Géraude de Navaille. Mathieu reçut l’hommage à Foix (17 août) et jura les franchises à Mauléon-Barousse (26 août). Les États lui imposèrent une condition : faire annuler le Traité de Toulouse. Les négociations avec les Marmousets et le duc de Berry aboutirent en 1391 : le traité fut annulé contre 40 000 francs, plus 30 000 pour Berry et 100 000 issus du trésor. Les États répartirent 250 000 florins, dont 100 000 pour les bâtards Yvain et Gratien. Mathieu refusa également l’hommage du roi anglais Richard II. Les obsèques de Fébus furent célébrées le 2 octobre aux Frères Prêcheurs, en présence de Mathieu et des bâtards.
+ </p>
+          </div>
+        )
+      },
+
+        {
+        titre: "Le Béarn Souverain",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Après la folie de Charles VI (août 1392), le Béarn resta stable sous une « monarchie contractuelle ». Reconnu vicomte en 1393, Mathieu laissa le pouvoir aux États et partit combattre avec les Génois. Yvain mourut à Paris au Bal des Ardents (28 janvier 1393) et Gratien participa à l’expédition de Tunis. À son retour en 1395, Mathieu dut jurer fidélité aux Fors. Un accord final en 1396 régla la rente d'Agnès de Navarre. Mathieu mourut sans héritier après avoir perdu ses terres catalanes. La succession revint à sa sœur Isabelle de Castelbon et son époux Archambaud de Grailly (allié anglais). Acceptés par les États en 1398 sous un serment strict, ils durent négocier avec la France. L’accord de Tarbes (10 mai 1399) fut un compromis : Archambaud prêta hommage pour Foix et Nébouzan, mais non pour le Béarn, dont la souveraineté de fait fut reconnue. Dès août 1399, la chancellerie béarnaise utilisa les termes « sobiraa » (souveraineté). Archambaud, affirmant « ne reconnaître aucun souverain si ce n’est Dieu », poursuivit la politique de Fébus mais se heurta aux Palois et Ossalois, défendus par les États ; la chancellerie le nommait « señor ». À sa mort (1412), Isabelle gouverna avec son fils Jean Iᵉʳ (jusqu’en 1428). Jean Iᵉʳ, vassal en Foix mais souverain en Béarn, prêta hommage à la France (1406), épousa Jeanne de Navarre puis Jeanne d’Albret (1422), et navigua entre les partis avant de rallier Charles VII. Henri V tenta en vain de falsifier d’anciens hommages, et le Traité de Troyes (1420) ignora le Béarn. Sous surveillance des États, Jean Ier signa des traités de neutralité (Bordeaux 1425, Montaner 1431) et étendit son territoire (Castelbon 1412, Bigorre 1425). Il mourut en 1436, ayant maintenu l'équilibre et la prospérité du Béarn.
+       </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Tradition Béarnaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Dans les campagnes béarnaises, l'ordre social repose sur une règle absolue : le premier-né, qu'il soit garçon ou fille, hérite de l'intégralité du patrimoine. Ce système garantit l'unité de la « maison » et évite le morcellement des terres. Le cas de Mariette de Suberbielle illustre parfaitement ce droit d'aînesse intégral. En tant que premier enfant, elle devient la Daune (la patronne) de la maison Suberbielle, propriétaire légale de tous les biens familiaux. Lorsqu'elle épouse Arnautuc, un cadet (ne possédant donc rien) issu de la ferme Cami, Arnautuc perd son nom d'origine pour celui de sa femme (la maison) et devient « Arnaud aperat de Soberbiele » (Arnaud dit de Suberbielle). Même après le mariage, Arnautuc ne dirige rien. C’est Mariette qui gère seule la propriété et prend les décisions financières. Les nobles et les bourgeois doivent respecter cette hiérarchie, garante de l’ordre social, reposant sur une égalité de principe dans les règles et sur des statuts distincts assurant la vie en société. Le chroniqueur Froissart, frappé par cette organisation, affirmera d'ailleurs que sous la protection de Fébus, le peuple vit dans une telle liberté et une telle harmonie que le Béarn ressemble à un véritable « paradis sur terre ».
+      </p>
+          </div>
+        )
+      },
+    ]
+  },
+
+
+
+
+
+  'union-navarre': {
+    titre: "Union avec la Navarre",
+    periode: "Renaissance",
+    resume: "Le Béarn s’unit à la couronne navarraise indépendante.",
+    introduction: "Entre héritage et pou entre deux singes...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+         {
+        titre: "Jeanne d'Arc, Reine de France",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Née vers 1412 à Domrémy (maison de Rémi), Jeanne d’Arc affirme entendre des « voix venues de Dieu »(saint Michel, sainte Catherine d’Alexandrie et sainte Marguerite d’Antioche). Ces voix lui disent qu’il y a « grande pitié au royaume de France » et qu’elle doit aller trouver le dauphin Charles pour le faire sacrer à Reims. Jeanne parle un excellent français. En 1429, les anglais ont exécuté 70 % des nobles français, Charles d’Orléans est fait prisonnier et en plus les Bourguignons et l'Université de Paris se sont alliés aux anglais (plus libéraux que le Royaume de France), l'Université graduait que ceux ayant juré de respecter le Traité de Troyes (Charles VII déshérité), Pierre Cauchon étant l'homme de ce traité. Jean Petit, docteur de l'université, a justifié l'assassinat de Louis d’Orléans en tordant la théologie pour servir les bourguignons et marchands parisiens. Seul le Mont-Saint-Michel a résisté et si Orléans tombe, c’est fini. Elle se rend à Vaucouleurs, où elle rencontre le capitaine Robert de Baudricourt, fidèle au roi. Au début, il la prend pour une fille exaltée, mais Jeanne lui prédit qu’à ce moment même, les troupes du roi viennent de perdre la bataille des Harengs. Impressionné, Baudricourt finit par lui fournir un cheval, une armure et une petite escorte composée notamment de Jean de Metz et Bertrand de Poulengy. Elle part alors pour rejoindre le dauphin Charles à Chinon, qu’elle atteint le 6 mars 1429, après un dangereux voyage. Arrivée au château, Jeanne reconnaît le roi parmi ses courtisans, sans jamais l’avoir vu auparavant. Le roi, l’écoute en privé le lendemain ; elle lui révèle des secrets personnels que personne d’autre ne pouvait connaître. Convaincu, Charles VII décide de lui donner la commande, malgré la méfiance de ses conseillers et de ses capitaines. Quand on lui propose une épée pour aller au combat, Jeanne refuse car ses voix lui ont dit de prendre l’épée cachée derrière l’autel de l’église Sainte-Catherine-de-Fierbois, marquée de cinq croix. On creuse à l’endroit indiqué, et l’arme est effectivement retrouvée. Jeanne d’Arc rejoint les troupes françaises en route vers Orléans, alors assiégée par les Anglais depuis des mois. Là, elle rencontre le duc d’Orléans qui propose une stratégie mais Jeanne leur dit que ses « conseils viennent du roi du Ciel » et ajoute que Saint Louis et Charlemagne eux-mêmes se tiennent à genoux devant le trône de Dieu pour implorer le salut de la France. Les vents et la crue de la Loire empêchent toute traversée. Jeanne, convaincue que Dieu interviendra, annonce qu’il faut attendre. Puis, le vent tourne, le niveau de l’eau baisse, et le 29 avril 1429, elle entre enfin dans Orléans. Le 4 mai, Jeanne se réveille en pleine nuit, avertie par ses voix que les chefs ont fait de « mauvais choix » et qu’il faut attaquer autrement. Donc elle guide les troupes françaises vers la bastille de Saint-Loup. Le 4 mai, les Français remportent là leur première grande victoire depuis des années. Le 7 mai, elle participe, blessée au pied, à l’assaut décisif. Avant la bataille, elle annonce à ses hommes qu’elle sera blessée par une flèche près de la clavicule. Et en effet, au cours de l’assaut, elle est atteinte près de la clavicule par une flèche qu’elle arrache elle-même. Le lendemain, les Anglais lèvent le siège : Orléans est libérée.  Ensuite, Jeanne d’Arc convainc le roi qu’il doit être couronné à Reims, pas à Orléans. En chemin, l’armée affronte les Anglais à Patay, le 18 juin 1429. Les Anglais, voulant venger Orléans, préparent une embuscade, mais un cerf s’aventure dans la plaine, trahissant leur position. Les Français, menés par La Hire, chargent avant que les archers anglais n’aient le temps de se déployer. Plusieurs milliers d’Anglais sont tués, tandis qu’un seul soldat français trouve la mort, « un de trop », dit Jeanne. L’armée française avance vers Reims et les villes sur le passage finissent par ouvrir leurs portes au roi. Le 17 juillet 1429, à Reims, Jeanne demande au roi de lui remettre son royaume, ce qu’il fait solennellement puis elle déclare à son tour le donner au Christ, avant d’ajouter que le Christ le rend ensuite au roi Charles, devenu ainsi le lieutenant du Christ sur terre. Jeanne considère alors que l’essentiel de sa mission est accompli mais pas fini. 
+
+    </p>
+          </div>
+        )
+      },
+       {
+        titre: "Sainte Jeanne d'Arc et les Hussites",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Lors d’une brève trêve entre les couronnes française et anglaise, Jeanne d’Arc dicta, le 23 mars 1430, une lettre à un scribe, adressée aux Hussites. Ce mouvement religieux, plaçait l’autorité de la Bible au-dessus de celle du pape, ce qui n'est même pas biblique. Jeanne y condamne sévèrement leurs croyances : elle les dit semblables aux « Sarrasins », les accuse de vouloir renverser la foi que Dieu a « éclairée de mille manières » et les exhorte à renoncer à leur erreur. Elle affirme que, s’ils persistent, Dieu leur préparera des souffrances et déclare être prête à abandonner la guerre contre les Anglais pour marcher contre eux, afin de les débarrasser de leur hérésie ou de leur vie, si aucun autre moyen ne permet d’éliminer cette superstition.
+   </p>
+          </div>
+        )
+      },
+        {
+        titre: "La Vierge de la Patrie",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Charles VII hésite à poursuivre la reconquête vers Paris. Et par ses voix, Jeanne savait qu’elle devait être capturée (se sacrifier pour sauver le Royaume de France), ce qui arrivera à Compiègne. Son procès s’ouvre à Rouen en 1431. Financé par les Anglais, il a un objectif précis : brûler Jeanne avant le sacre du jeune Henri VI à Paris pour briser le moral des Français. L’assesseur Jean de la Fontaine informe Jeanne qu'elle peut solliciter des juges plus neutres au concile de Bâle. Cauchon refuse le transfert à Bâle, car cela reviendrait à admettre que son propre tribunal n'est pas souverain. Il choisit Rouen par ambition personnelle, espérant obtenir cet archevêché prestigieux en récompense. Vingt-cinq ans plus tard, lors du procès de réhabilitation, les notaires avoueront que Cauchon ordonnait de censurer les appels de Jeanne au Pape dans les comptes-rendus officiels pour donner au procès une apparence de légalité. Le piège final repose sur une question redoutable : « Voulez-vous vous soumettre à l'Église Militante ? ». Jeanne répond qu'elle s'en rapporte à Dieu et au Pape, mais refuse de se soumettre si l'Église l'oblige à renier ses voix. Pour Cauchon, c'est la définition même de l'hérésie : elle place son opinion personnelle au-dessus de l'autorité ecclésiastique. Instrumentalisant le droit canon, il décrète que sa sentence est divine et sans appel, qualifiant les demandes de Jeanne de simples manœuvres pour gagner du temps. Le 30 mai 1431, sur la place du Vieux-Marché à Rouen, après Pierronne la Bretonne neuf mois plus tôt (qui avait soutenu que Jeanne était « bonne et faisait la volonté de Dieu »), Jeanne d’Arc est aussi brûlée vive par l'Université qui voulait contrôler la France selon la volonté des marchands en nationalisant l’Église et en faisant tomber le roi. Le cœur de Jeanne ne se consume pas et est jeté dans la Seine le bourreau déclarera qu’il avait « brûlé une sainte ». Et une fois que Charles VII reprend Paris, l’Université fait profil bas. Le procès, demandé par la mère de Jeanne et autorisé par le pape Calixte III en 1455-1456, aboutit à la réhabilitation de Jeanne. 
+    </p>
+          </div>
+        )
+      },
+      {
+        titre: "Petite République des Pyrénées",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+        À la mort de Jean Iᵉʳ en 1436, le Béarn, souverain de fait depuis près d’un siècle, chercha à faire reconnaître juridiquement son indépendance. Les États de Béarn, déjà garants des libertés du pays, renforcèrent leur autorité pendant la minorité de Gaston XI, placé sous la tutelle de Mathieu de Comminges. Ils lui imposèrent un serment solennel, instituèrent la réunion annuelle de l’assemblée et mirent en place un contrôle étroit du pouvoir vicomtal : promulgation des Établissements de Béarn, encadrement des finances et des ateliers monétaires, indemnité et immunité des députés, création de deux syndics permanents (d’Épée et de Robe) et d’un Abrégé des États chargé des affaires urgentes. Ce système fit du Béarn une véritable petite république d’États, où le prince devait gouverner sous la surveillance d’institutions représentatives. Cette organisation s’inscrivait dans le mouvement européen de limitation du pouvoir princier, comparable aux Cortès ibériques ou aux Diètes d’Empire, mais trouva en Béarn un terrain particulièrement favorable. Les États affirmèrent également la neutralité du pays pour protéger son commerce transfrontalier. Gaston XI confirma cette politique dès 1436, en concluant avec le sénéchal d’Aquitaine Jean de Radcliff un traité garantissant la libre circulation des marchands béarnais dans les territoires anglais et rappelant que l’alliance entre le roi de France et la maison de Foix ne concernait que le comté de Foix, et non le Béarn. Dans la seconde moitié du XVe siècle, cette combinaison originale de souveraineté, de neutralité et de diplomatie commerciale renforça l’indépendance politique du Béarn. 
+           </p>
+          </div>
+        )
+      },
+        {
+        titre: "Succession Navarraise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Devenu majeur, Gaston XI se distingua dès 1441–1442 dans les campagnes contre les Anglais autour de Saint-Sever et de Dax, au service de Charles VII, tout en préservant la neutralité économique du Béarn avec Bayonne, encore anglaise. En 1443, Charles VII lui demanda d’abandonner dans ses actes la formule souveraine « par la grâce de Dieu ». En échange du titre de lieutenant général du roi en Guyenne et en Gascogne, le vicomte accepta, ce qui alarma les États de Béarn, soucieux de préserver la neutralité et la distinction juridique entre le Foix, vassal de la France, et le Béarn, demeuré souverain. En parallèle, la rivalité entre les maisons de Gramont et de Beaumont agitait la Soule et la Navarre : les premiers restaient fidèles au roi de France, tandis que les seconds, menés par Louis de Beaumont, s’alliaient à la cause anglo-navarraise. En juillet 1449, Gaston XI mit le siège devant Mauléon, tenue par Louis de Beaumont, connétable de Navarre. Le roi de Navarre, venu secourir son connétable, se trouva face à son propre gendre : Gaston XI lui rappela qu’il agissait sur ordre de Charles VII, non contre lui. Le château fut pris au nom du roi de France, et Gaston XI, déjà remarqué pour sa bravoure à Dax, fut fait chevalier, puis confirmé lieutenant général de Gascogne et de Guyenne. Ambitieux, il épousa en 1441 l’infante Éléonore de Navarre, fille de Jean II d’Aragon et de Blanche Iʳᵉ de Navarre, unissant ainsi les destinées du Béarn et de la Navarre. De cette union naquit un espoir d’héritage sur le trône navarrais, mais les querelles dynastiques au sein de la famille d’Aragon plongèrent le royaume dans la guerre civile. En 1455, Jean II, roi « consort » de Navarre, destitua son fils Charles, prince de Viane, de ses droits au trône, provoquant un conflit durable jusqu’à la mort de celui-ci en 1461.
+       </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Le Béarn, entre France et Navarre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Après la mort de Carlos de Viana, Jean II confia la régence de la Navarre à Éléonore, qui gouverna un royaume encore divisé entre Agramontais et Beaumontais, mettant progressivement fin à la querelle. Après la mort de la reine Blanche, Jean II épousa en secondes noces Juana Enríquez, dont il eut Ferdinand, futur « Catholique ». À la mort d’Alphonse V d’Aragon en 1458, Jean II devint roi d’Aragon, et en 1461, les Cortes reconnurent Ferdinand comme héritier, écartant Charles de Viane, qui mourut peu après, peut-être empoisonné. Pendant ces luttes, Gaston XI, devenu pair de France en 1458, soutint tour à tour les causes aragonaise et navarraise selon les alliances. En 1462, la guerre civile s’étendit à la Navarre : Blanche de Navarre, sœur de Charles de Viane, fut capturée par son père et confiée à la garde de sa sœur Léonore et de Gaston XI à Orthez. Blanche mourut en 1464, probablement empoisonnée, tandis que Léonore devenait héritière. Louis XI, monté sur le trône en 1461, se méfia d’abord du puissant vicomte : il exigea la restitution de la Soule, mais leurs relations se normalisèrent rapidement. Le mariage de Madeleine de France, sœur du roi, avec Gaston de Foix, fils du vicomte, renforça leurs liens. En 1465, Gaston XI récupéra Mauléon et participa aux affaires du royaume ; il assista aux États généraux de 1468 à la droite du souverain. Pendant ce temps, Jean II et les Beaumontais s’appuyèrent sur Ferdinand pour contenir l’influence française en Navarre. En 1467, Léonore céda à son demi-frère Ferdinand ses droits sur l’Aragon, consolidant ainsi la future union ibérique. En 1469, un traité entre Jean II et le duc de Bourgogne reconnut Ferdinand comme « gouverneur général de tous les royaumes ». À la mort d’Henri IV de Castille en 1475, Isabelle et Ferdinand furent proclamés rois de Castille, préparant la réunion des couronnes espagnoles. Entre-temps, Gaston XI continua de gouverner en souverain : il fit de Pau la capitale du Béarn (1464), renforça ses possessions, racheta Lautrec, devint vicomte de Narbonne, et entretint une cour brillante où rayonna son oncle, le cardinal de Foix. Il demeura un allié prudent de Louis XI, tout en préservant la souveraineté béarnaise. À la mort de son fils aîné Gaston en 1470, puis à la sienne en 1472, le Béarn passa à son petit-fils François Fébus.
+        </p>
+          </div>
+        )
+      },
+         {
+        titre: "Le Béarn face à Louis XI",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+     François Fébus était seulement âgé de cinq ans donc Louis XI tenta d’en prendre la tutelle, mais les États de Béarn confièrent la régence à Madeleine de France, mère du jeune prince, tout en conservant le pouvoir effectif. La France riposta économiquement : les officiers de Guyenne imposèrent la traite foraine aux marchands béarnais et taxèrent les bergers transhumants. En 1472 et 1477, Louis XI interdit la circulation de la monnaie de Morlàas, provoquant un déclin commercial. Le Béarn, isolé, se tourna vers le Midi français, et plusieurs nobles, comme Gaston du Lion, cherchèrent carrière à la cour de France. Considérés comme étrangers, les Béarnais installés en France étaient soumis au droit d’aubaine. Entre 1476 et 1481, Louis XI leur accorda des lettres de naturalité, notamment à Gaston du Lion, Jean de Méritein et Bernard de la Cornière, tout en précisant que le Béarn n’était « point de son royaume », reconnaissant ainsi son statut particulier. Après négociation avec Louis XI, Madeleine laissa la Soule à la France et, malgré une paix trouvée, ne put stopper les guerres entre Beaumont et Luxe. En 1479, à la mort de Jean II d’Aragon, sa fille Éléonore devint officiellement reine de Navarre le 28 janvier, mais mourut quinze jours plus tard, après avoir désigné pour successeur son petit-fils François Fébus de Foix-Béarn, qu’elle exhorta à s’allier à la France. En 1481, François Fébus hérita donc du trône de Navarre et fut couronné à Pampelune, unissant le Béarn à une couronne royale. Louis XI et Ferdinand d’Aragon tentèrent d’exercer leur influence par des projets d’alliance matrimoniale. En 1483, François Fébus mourut subitement à Pau, à seize ans, probablement empoisonné alors qu’il jouait de la flûte, sans avoir régné sur la partie espagnole de son royaume. Il fut enterré dans la cathédrale de Lescar. Sa sœur Catherine de Foix-Béarn, âgée de treize ans, fut désignée héritière, mais son oncle Jean de Foix contesta la succession. En 1484, les rois catholiques envisagèrent de marier Catherine au fils du prince des Asturies, mais Anne de Beaujeu, régente du royaume de France, intervint pour contrer ces ambitions. Les États de Béarn refusèrent le projet espagnol et conclurent, le 14 juin 1484, le mariage de Catherine avec Jean d’Albret, fils aîné d’Alain sire de Labrit. Le couple s’installa à Pampelune pour pacifier leurs États et entreprit d’unifier le Béarn et la Navarre, notamment par la création projetée d’un évêché commun reliant Lescar et Oloron à Pampelune. La même année, Jean de Foix tenta une insurrection pour faire valoir ses droits à la succession de François Fébus. En réponse, Anne de Beaujeu réunit un conseil royal à Montargis le 2 octobre sous l’autorité de Charles VIII. Le conseil distingua le Béarn et la Navarre du royaume de France, limitant la compétence du Parlement de Paris au seul comté de Foix et reconnaissant de fait la souveraineté du Béarn et de la Navarre. Il précisa que seuls leurs assemblées, les Cortès en Navarre et les États en Béarn, pouvaient désigner le successeur de François Fébus. Le 5 octobre 1484, les États de Béarn proclamèrent Catherine « Dame Catherine, royne de Navarre, senhora sobereine de Béarn, comtesse de Foix », officialisant la titulature souveraine du Béarn. Entre 1486 et 1491, Ferdinand le Catholique chercha à affermir son influence. En 1486, il organisa l’encerclement militaire de la Navarre. En 1487, il supprima les sauf-conduits des marchands navarrais et les soumit à son autorisation, tandis que la famille Beaumont s’alliait au comte de Lérin, suivant les coutumes castillanes. En 1488, le traité de Valence plaça la Navarre sous tutelle espagnole, censée apaiser les représailles et rouvrir le commerce, mais les troupes castillanes restèrent sur place. En 1491, il fut interdit aux rois de Navarre de marier leurs enfants sans l’accord d’Isabelle et Ferdinand.
+        </p>
+          </div>
+        )
+      },
+
+
+         {
+        titre: "L'Inquisition Espagnole",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ L’Inquisition espagnole, fondée en 1478 par Isabelle de Castille et Ferdinand d’Aragon, était directement placée sous le contrôle de la monarchie. Son objectif premier était de protéger la vérité révélée au sein d’un royaume marqué par une grande diversité religieuse. En cela, elle se distinguait de l’Inquisition médiévale, davantage dépendante de l’Église. En Espagne, cette Inquisition royale avait le pouvoir de prononcer directement des sentences pouvant aller jusqu’à la peine de mort (2 % des cas au XVIIᵉ siècle). L’exécution de ces condamnations relevait ensuite du pouvoir civil, tandis que les biens des condamnés étaient confisqués au profit de la couronne. Dès ses débuts, l’institution s’attacha principalement à poursuivre les conversos et les moriscos, soupçonnés de continuer à pratiquer en secret leur ancienne religion. Ces soupçons furent confirmés par la découverte, lors des premiers procès à Séville, Tolède ou Ciudad Real, de certains rites domestiques tels que l’allumage des bougies du sabbat, l’abstention de porc, ou la célébration de fêtes et de prières spécifiques. Cette surveillance accrue visait aussi à contrer la présence de juifs faussement convertis ayant intégré les ordres religieux, une « infiltration » de l’Église. Ces tensions, combinées à la crainte que les juifs non convertis n’influencent les conversos, aboutirent au décret de l’Alhambra en 1492. Ce texte ordonnait l’expulsion de tous les juifs refusant le baptême. Certains de ces juifs s’établirent surtout aux Provinces-Unies et dans l’Empire Ottoman, là-bas ils atteindront des hauts grades comme Joseph Nasi, conversos, qui a appris la gestion financière grâce à ses oncles (Banque Mendes). Ensuite, Joseph s’enfuit aux Pays-Bas, à Anvers, avec sa tante, veuve et héritière d’une immense fortune. Plus tard, il épouse Reyna, sa cousine. Joseph étudie à l’université de Louvain, mais est expulsé des Pays-bas et de Venise. En 1554, ils trouvent refuge à Constantinople. Il soutient Sélim contre son frère Bajazet dans la lutte pour le trône. Quand Sélim II devient sultan (1566), il devient conseiller diplomatique du sultan et gère une partie de la politique étrangère. Grâce à ses relais financiers et politiques, il influence l’élection d’Henri de Valois au trône de Pologne, sa famille prête de l’argent à des monarques comme Henri VIII (Anvers étant leur hub), Joseph soutint des projets proto-sionistes, notamment la tentative de repeuplement de Tibériade. Il aide les insurgés néerlandais contre l’Espagne. Cela affaiblit les Habsbourg, ennemis des Ottomans. Voulant se venger de la République de Venise qui l’avait persécuté, il encourage la Sublime Porte à entrer en guerre et défaite des chrétiens de Venise, donc Chypre devient ottomane. Joseph reçoit le titre de Duc de Naxos, la seigneurie de l’île d’Andros (il gouverne depuis son palais du Belvédère à Constantinople, où il installe même une imprimerie hébraïque). En 1561, il devient Seigneur de Tibériade, ville de Galilée en Palestine ottomane. Puis, Joseph veut créer une colonisation juive organisée en Terre d’Israël. Isaac Luria a fait de Safed un centre spirituel mondial avec Shelomo Alkabetz ou encore Rabbi Yosef Karo grâce à la tolérance Ottomane. Cependant pour l’Espagne, cette expulsion permit d’affirmer l’unité religieuse et politique du royaume, ouvrant la voie à son « Âge d’or ». Après 1492, l’Inquisition poursuivit la traque des conversos jusque dans les années 1530, avant de concentrer ses efforts sur les moriscos, jusqu’à leur expulsion définitive en 1609. Par la suite, elle devint un organe général de contrôle de l’orthodoxie religieuse, s’attaquant aux protestants, aux mystiques jugés suspects, les alumbrados, ainsi qu’aux lecteurs d’ouvrages figurant à l’Index. À titre de comparaison, l’Inquisition médiévale, notamment en France, fonctionnait de manière sensiblement différente. La peine était prononcée par le bras séculier après une condamnation de l’Inquisition (qui menait au préalable une véritable enquête comme en Espagne). Contrairement aux tribunaux civils de l’époque, souvent expéditifs, cette Inquisition (créée pour modérer les excès de justice) privilégiait des peines telles que la prison, les pèlerinages ou les pénitences, plutôt que la mort car on ne peut plus se repentir. Elle permit à l'Espagne de ne pas connaître "l'humanisme", qui est venu en partie de la culture grecque (chute de Constantinople).
+   </p>
+          </div>
+        )
+      },
+
+
+        {
+        titre: "La Castille menace Pampelune",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1494, Jean III d’Albret et Catherine arrivèrent à Pampelune dont les portes étaient fermées par ordre de Louis de Beaumont, comte de Lérin. Ils furent finalement couronnés le 13 janvier 1494 dans la cathédrale de Pampelune, lors de grandes fêtes où l’historien Garibay rapporte un chant basque célébrant Labrit et le roi père et fils contre le connétable Louis de Beaumont. En 1495, un accord fut signé à Burgos entre les rois de Navarre et ceux de Castille : le comte de Lérin se rendit, remit ses biens « en faveur du Catholique » et passa en Castille, tandis que la Navarre resta jusqu’en 1500 sous occupation militaire castillane. Entre 1498 et 1511, la Navarre connut de fortes tensions avec la France, la Castille et l’Aragon. En 1498, sous la pression des rois catholiques, elle expulsa les juifs refusant de se convertir. En 1500, le traité de Séville prévit la libération du royaume de l’influence castillane, mais Ferdinand retint à sa cour Madeleine, fille des rois de Navarre, projetant de la marier à un de ses descendants. En 1502, André Fébus, fils aîné de Madeleine, mourut au palais royal de Sangüesa, où naquit peu après Henri, dit “de Sangüesa”, futur Henri II de Navarre et époux de Marguerite de Valois. En 1504, Madeleine mourut à Medina de Madalene, retenue en Castille selon le traité de Séville, la même année que la reine Isabelle la Catholique. En 1505, le traité de Blois fut conclu entre Louis XII et Ferdinand le Catholique pour contrer Philippe le Beau, archiduc d’Autriche et mari de Jeanne la Folle, héritière de Castille : il prévoyait le mariage de Ferdinand, veuf, avec Germaine de Foix, petite-fille de Louis XI, unissant la branche des Foix-Béarn à la couronne d’Aragon et renforçant les prétentions espagnoles sur la Navarre. En 1506, Jean et Catherine signèrent le pacte de Tudela avec Philippe le Beau, mais celui-ci mourut un mois plus tard et Ferdinand reprit le pouvoir. En 1507, le comte de Lérin, trahi par des partisans “beaumontais”, fut expulsé de Navarre avec les troupes castillanes. Le 12 mars, César Borgia, fils du pape Alexandre VI et ancien allié du roi de Navarre, tomba dans une embuscade tendue par les beaumontais et fut tué. En 1508, Louis de Beaumont tenta de récupérer les biens familiaux avec le soutien de Ferdinand, qui préparait déjà l’invasion du royaume. En mars 1509, l’archevêque de Saragosse, fils de Ferdinand, affirma que le véritable titre du royaume revenait au roi d’Aragon, et Ferdinand fit rassembler les textes justifiant ses droits sur le trône de Navarre. En 1511, il signa avec le pape et Venise la “Sainte Ligue”, alliance dirigée contre la France, donnant un prétexte religieux à ses ambitions sur la Navarre.
+</p>
+          </div>
+        )
+      },
+
+
+
+
+      {
+        titre: "L'Église en Arbitre de Paix",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Face à la rivalité entre l'Espagne (portée par Colomb en 1493) et le Portugal, le Vatican arbitre le premier partage global de l'histoire pour éviter la Guerre. A Tordesillas (1495), sous l'égide du pape Alexandre VI, un méridien est tracé dans l'Atlantique. Le Portugal obtient tout ce qui est à l'Est, l'Espagne tout ce qui est à l'Ouest. En faisant décaler la ligne de 100 à 370 lieues des Açores, le roi Jean II de Portugal sécurise le Brésil (découvert en 1500). La rivalité se déplace en Asie (Moluques, les "Îles aux Épices"). Au Traité de Saragosse, Charles Quint vend ses droits sur les Moluques au Portugal pour 350 000 ducats. Un "anti-méridien" est tracé : le Portugal garde le monopole des épices, tandis que l'Espagne conserve les Philippines. L'Angleterre protestante et la France (en gallicanisation) rejettent ce monopole papal. Ne pouvant bloquer les routes du Sud, les souverains (Élisabeth Ière, François Ier) délivrent des lettres de marque à des corsaires comme Jean Fleury ou Francis Drake pour piller les galions ibériques. Ils cherchent les passages du "Nord-Ouest" (Cartier au Canada) et du "Nord-Est". Ils s'installent là où l'Espagne est absente : Vallée du Saint-Laurent (Québec), côte Est américaine (13 colonies) et Antilles. Le sucre remplace alors les épices comme marchandise la plus précieuse, provoquant 150 ans de conflits pour des îles comme la Guadeloupe ou la Jamaïque.
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "Devant le Parlement de Toulouse",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dans le même temps, au Béarn, Gaston de Foix, petit-fils de Gaston IX et neveu de Louis XII, récupéra la Soule en 1506, mais mourut en 1512 à Ravenne, laissant de nouveau la Soule à la France.  Par la suite, le Parlement de Toulouse réagit à l’appel de Jean d’Albret et Catherine de Navarre au pape, qui affirmait la souveraineté du Béarn. Dans un mémoire, il soutint que la vicomté n’était qu’une seigneurie relevant du duché d’Aquitaine. Le 6 mars 1509, Jean et Catherine répondirent par un mémoire déclarant que le Béarn « n’est, ne fust oncques de la juridiction, obéissance ne sujection dudit Monseigneur le Roi ». Le débat prit alors une dimension politique majeure autour de la question de la souveraineté béarnaise. Louis XII, engagé dans les guerres d’Italie contre Ferdinand, chercha à maintenir un équilibre pyrénéen. En 1509, il ordonna depuis Grenoble, le 13 avril, l’exécution des amendes prononcées contre Jean d’Albret et Catherine de Navarre, mais ses agents échouèrent à pénétrer en Béarn. Soutenu par le roi, le Parlement de Toulouse ouvrit le 4 juillet 1509 un nouveau procès accusant les souverains de refus d’hommage envers la France. Le 7 janvier 1510, il prononça la confiscation du Béarn. Face à cette décision, les États se réunirent le 26 février 1510 à Sauveterre, en présence de Jean et Catherine, décidant de fortifier le pays tout en privilégiant la diplomatie. Une ambassade fut envoyée à Louis XII, qui ordonna ensuite, le 4 mai 1510, l’exécution de l’arrêt de confiscation, avant d’envisager un partage : la Navarre à la Castille et le Foix-Béarn à la France. Mais la formation de la Sainte Ligue en 1511 changea la donne. Profitant du contexte, les Béarnais proposèrent à Louis XII une alliance contre la Castille en échange de la reconnaissance de leur souveraineté. Craignant un nouveau front pyrénéen, Louis XII accepta d’ouvrir des négociations. Le 2 mai 1512, une ambassade béarnaise arriva à Montrichard, près de Blois. Les délégués exigèrent que la question de la souveraineté fût discutée avant toute alliance, tandis que le roi voulait l’ordre inverse. Finalement, il céda. À Blois, deux commissions furent instituées : l’une pour négocier l’alliance, l’autre pour désigner les arbitres chargés de trancher la compétence du Parlement de Toulouse. Le 8 juillet 1512, Louis XII, qui venait de suspendre son projet de partage du Béarn, fit nommer les arbitres et ouvrit à Blois un arbitrage opposant Jean et Catherine d’Albret, souverains du Béarn et de Navarre, au Parlement de Toulouse, lequel revendiquait sa juridiction sur la vicomté ; les débats s’ouvrirent le 12 juillet suivant. Jean et Catherine confièrent leur défense à Pierre de Fundères, procureur général de la vicomté, tandis que Jean de Nogerolles représentait le Parlement de Toulouse. Les audiences commencèrent le 12 juillet 1512 par les plaidoiries et la remise de « cédulles » explicatives. Le 13 juillet, de nouvelles séances furent consacrées aux réfutations.
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "Le Plaidoyer de Pierre de Fundères",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dans sa défense, Pierre de Fundères affirma que Jean et Catherine « tiennent et possèdent ledit pays et seigneurie de Béarn comme seigneurs souverains, sans reconnaître aucun supérieur temporel ». Il énuméra les prérogatives du souverain béarnais : battre monnaie, faire grâce, lever des impôts, légiférer, rendre justice sans appel et déclarer la guerre. Il appuya sa démonstration sur plusieurs arguments : les Béarnais établis en France devaient obtenir des lettres de naturalité, preuve qu’ils n’étaient pas sujets du roi ; Louis XI avait traversé le Béarn sans y exercer aucun droit royal ; et le conseil de Charles VIII, lors de la crise successorale de 1484–1485, avait reconnu l’indépendance de la vicomté. Pour renforcer sa position, il cita Froissart, Honoré Bonet et Jules César, évoqua la neutralité du Béarn pendant la guerre de Cent Ans, et rappela que le légat pontifical ne pouvait intervenir sans autorisation du souverain local. Il s’appuya également sur des spécificités religieuses et administratives : les limites des diocèses de Lescar et d’Oloron ne coïncidaient pas avec les frontières politiques, la Soule dépendait de l’évêque d’Oloron et Orthez de celui de Dax, d’où la création d’officialités locales à Orthez et Mauléon. Enfin, Fundères rappela qu’aucun officier royal français n’avait jamais exercé en Béarn, tout en admettant que la traite foraine, perçue aux frontières, l’était parfois par des agents du roi de France. Il contesta la compétence du Parlement de Toulouse, démontra l’irrégularité de la procédure intentée contre ses clients et cita les États de Béarn comme garants du droit du pays à choisir librement son seigneur en cas de vacance du pouvoir. Face à lui, Jean de Nogerolles soutint que le Béarn faisait naturellement partie du royaume de France, se situant au nord des Pyrénées, frontières que Jules César aurait déjà assignées à la Gaule. Selon lui, le Parlement de Toulouse était compétent sur tout l’ancien territoire aquitain, de la Garonne aux Pyrénées. Il plaça la frontière entre France et Espagne au col de Roncevaux, légitimant ainsi la division de la Navarre entre la Castille (au sud) et la France (au nord). Pour appuyer sa thèse, Nogerolles rappela que la Bigorre et la Soule, également au nord des Pyrénées, appartenaient au royaume, et cita les hommages féodaux rendus autrefois par Gaston VII et Roger-Bernard III de Foix au duc de Gascogne, alors roi d’Angleterre, comme preuve de vassalité. Il affirma que les vicomtes de Béarn tenaient leurs droits régaliens par concession du roi de France, invoquant la doctrine des droits inaliénables de la couronne, qui permettait à Louis XII d’annuler toute tolérance antérieure. 
+</p>        </div>
+        )
+      },
+        {
+        titre: "Ferdinand d’Aragon et la Résistance du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 15 juillet 1512, les arbitres réunis à Blois cassèrent les arrêts du Parlement de Toulouse pour incompétence, sans se prononcer sur la souveraineté du Béarn. Quelques jours plus tard, le 21 juillet, les troupes castillanes envahirent la Navarre. En effet, un accord conclu le 9 février 1512 à Londres entre Ferdinand d’Aragon et Henri VIII d’Angleterre prévoyait une offensive contre la France, et Ferdinand profita du contexte pour s’emparer du royaume navarrais, sous prétexte que Jean d’Albret refusait de lui laisser le passage vers la France, alors en guerre pour l’Italie. Le 18 juillet 1512, Louis XII et les rois de Navarre avaient signé un traité de Blois défensif, que Ferdinand transforma en traité offensif par la diffusion d’une copie falsifiée. Prétextant l’appui supposé de Jean et Catherine d’Albret à la France schismatique, il lança ses troupes sur la Navarre. L’armée castillane, forte d’environ 15 000 hommes commandés par le duc d’Albe, envahit la région en évitant les forces françaises stationnées à Bayonne. En septembre 1512, Saint-Jean-Pied-de-Port fut prise, les vallées d’Aspe, Salazar et Roncal conquises, Garris incendiée, le château du seigneur de Luxe soumis et Uhart-Mixe détruit. Jean III et Catherine durent se réfugier à Mauléon, tandis que Ferdinand consolidait sa conquête. Le duc d’Albe fit détruire les maisons fortes, saisir les biens et renforcer la garnison de Saint-Jean-Pied-de-Port. En octobre, Jean d’Albret publia un manifeste contre Ferdinand, proclamant qu’il n’avait aucun droit sur la Navarre, puis lança une contre-offensive avec Pierre de Navarre et Roger de Gramont. Le 19 octobre 1512, la bataille d’Ainhice-Mongelos se solda par un échec. Bien que les Castillans durent un moment abandonner Saint-Jean-Pied-de-Port, ils la reprirent aussitôt. En novembre, la défaite des Navarrais entraîna une nouvelle occupation, et début 1513, les nobles bas-navarrais furent contraints de prêter hommage à Ferdinand, certains, comme les seigneurs de Luxe et de Gramont, refusèrent et virent leurs biens confisqués. Malgré cette soumission forcée, la Basse-Navarre resta profondément hostile à la domination espagnole. Les Cortes ne parvinrent pas à lever les impôts dans les vallées de Mixe, Ostabarès, Iholdy-Armendaritz et Arbéroue ; les collecteurs furent molestés ou emprisonnés, et les habitants invoquèrent la situation de frontière assiégée. Pourtant, les institutions locales survécurent : les juntes de Garris et d’Amendeuix en mars 1514 rassemblèrent plus de 600 notables sous l’autorité du bayle Jaime de Zhala, preuve de la persistance d’une administration autochtone. Ferdinand tenta bien quelques gestes de réparation, ordonnant des indemnisations en 1514 et 1515, mais ces mesures restèrent symboliques. La même année, les États de Basse-Navarre réunis à Uhart-Cize prêtèrent serment de fidélité au roi d’Aragon, tout en envoyant des otages, signe d’une soumission contrainte. L’esprit de résistance, incarné par le poète Bernard d'Echepare, emprisonné pour trahison, demeura vivace. Après les révoltes, les troupes castillanes renforcèrent la citadelle de Saint-Jean-Pied-de-Port, détruisirent le château de Garris et occupèrent Saint-Palais. En 1515, sous la direction d’Ochoa de Ursua, la forteresse fut ravitaillée et armée, bien que le duc de Nájera jugeât ces efforts vains. Dès février 1516, la défense fut concentrée sur le château d’Ultrapu, plus sûr.
+</p>        </div>
+        )
+      },
+  {
+        titre: "La Régence d’Alain et la Défense du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la mort de Catherine de Navarre en 1517, Jean d’Albret ne conserva plus que la Basse-Navarre, tandis que l’influence française progressait en Béarn. Louis XII, désireux de ménager les Béarnais, avait suspendu toute annexion, reconnaissant implicitement leur souveraineté. La mort de Catherine d’Albret en 1517 fut suivie d’une tentative française d’annexion du Béarn. Le contexte semblait favorable : l’héritier, Henri II d’Albret, n’avait que quatorze ans et vivait depuis 1515 à la cour de son oncle François Ier. Le roi et sa mère, Louise de Savoie, voulurent exercer sa tutelle. Mais les États de Béarn, soucieux de préserver l’indépendance du pays, rejetèrent cette tutelle et confièrent la régence au vieil Alain d’Albret. Une délégation ramena le jeune Henri en Béarn, où il fut proclamé « senhor soubiran ». Estimant le moment opportun, le pouvoir royal tenta une intervention armée : des troupes françaises, convaincues de trouver des alliés en Béarn, envahirent la vicomté mais furent repoussées. La trêve tacite conclue en 1512 lors de l’arbitrage de Blois fut ainsi rompue. Dès lors, l’affrontement entre la France et le Béarn reprit, ouvertement ou non, jusqu’au début du XVIIᵉ siècle. Victorieux en 1517, les Béarnais profitèrent de la situation pour affirmer que Louis XII avait reconnu en 1512 la souveraineté juridique du Béarn. Cette idée reposait sur une déclaration de Pierre de Biaix, arbitre à Blois, selon laquelle « le pays de Béarn est pays de par soi, tenu par ses seigneurs sans reconnaître de supérieur ». Pourtant, malgré ce discours, les souverains du Béarn ne nommèrent jamais d’ambassadeurs auprès des cours étrangères, signe que leur indépendance demeurait ambiguë sur le plan juridique. Face à cette résistance, la monarchie française temporisa tout en maintenant ses pressions. Le chancelier Duprat refusa d’accorder des « lettres de naturalité » aux Béarnais installés en France, tout en précisant que leurs biens n’étaient pas menacés, bien que « le roi ne fût point souverain seigneur du Béarn ». Autrement dit, les Béarnais n’étaient ni entièrement sujets du roi, ni complètement étrangers. De même, la traite foraine fut perçue de manière irrégulière aux frontières, selon les intérêts de l’administration royale. En 1519, durant cette période de tension, Alain d’Albret créa à Pau le Conseil souverain, inspiré du modèle navarrais d’avant 1512, afin de centraliser la justice et d’affirmer l’indépendance du Béarn.
+</p>       </div>
+        )
+      },
+       {
+        titre: "La Chute de Noain",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1521, Henri II d’Albret lança la reconquête de la Haute-Navarre, confiée militairement à André de Foix, seigneur d’Asparros, à la tête de 12 000 hommes et d’une artillerie lourde. Le 10 mai 1521, l’armée était prête à passer à l’offensive. Le 12 mai, le siège de Saint-Jean-Pied-de-Port débuta. Le comte de Lerín, chef du parti Beaumontais, tenta de secourir la place mais fut battu à Baïgorry et s’enfuit avec près de 2 000 Bas-Navarrais. Le 13 mai, le duc de Nájera rapporta que plusieurs villes, dont Saint-Palais, s’étaient soulevées et que les Bas-Navarrais se levaient pour Jean d’Albret. Le 15 mai, Saint-Jean-Pied-de-Port tomba, suivie du fort de Château-Pignon, et l’armée franco-navarraise atteignit les portes de Pampelune, que le vice-roi quitta le 17 mai. La reconquête fut d’abord victorieuse : Saint Ignace de Loyola y fut blessé lors de la prise de Pampelune. En quarante jours, les troupes franco-navarraises avaient repris Saint-Jean-Pied-de-Port et libéré tout le royaume. Cependant, l’élan fut brisé à Esquiroz et surtout lors de la bataille de Noain, le 30 juin 1521, où les 30 000 hommes impériaux du duc de Nájera écrasèrent les forces d’Asparros. Les Navarrais se replièrent vers Espelette, en Labourd. Certains résistèrent encore à Saint-Jean-Pied-de-Port : après vingt et un jours de siège, sur six cents défenseurs, trois cents, dont leur capitaine Juanicot d’Arbeloa, furent tués. Après la chute de la ville, Juanicot fut capturé puis exécuté à Pampelune le 25 août, avec quatre de ses compagnons. La chute définitive de Saint-Jean-Pied-de-Port en août 1521, suivie de la mort de son capitaine, marqua la fin de cette brève reconquête et l’intégration durable de la Haute-Navarre dans la monarchie espagnole. Le beaumontais Juan de Torrelblanca fut alors envoyé en France pour intercepter les fuyards sur la route de Cize à Bayonne, voie stratégique traversant l’Arbéroue. En juillet 1522, la guerre reprit en Navarre. Le fort de Maya, défendu avec bravoure par le jeune Léon d’Espelette et le seigneur de Belzunce, résista d’abord à l’assaut impérial. Le 19 (ou 22) juillet, après un siège héroïque, la forteresse fut finalement prise par les Impériaux. Cent cinquante-deux Bas-Navarrais, originaires des deux versants pyrénéens, furent capturés et exclus du décret de pardon du 25 décembre 1523. Parmi eux se trouvaient plusieurs nobles : Charles et Victor de Mauléon, François de Beaumont, Martin de Lagarde, François d’Espelette, Roger de Gramont, ainsi qu’Arnaud, Marie et Tristan de Hosta (ou Ozta). Certains, comme Juan Perez de Osta, converti au christianisme, furent recensés à Pampelune, tandis que d’autres conservaient en Navarre les noms de leurs villages d’origine. Le 18 octobre 1522, les survivants de l’armée d’Asparros, appuyés par des troupes françaises, reprirent le château de Fontarabie, tandis que d’autres forces occupaient à nouveau le fort de Maya. Belzunce y perdit son étendard avant d’être secouru par Martin d’Ursua. Malgré ces succès ponctuels, la guerre se prolongea : la forteresse de Maya fut détruite le 22 juillet, et plusieurs maisons fortes, dont celles de Jaureguizar et de Bertiz, furent rasées. Les rescapés rejoignirent alors les troupes françaises retranchées à Fontarabie, où Charles Quint échoua à asseoir sa domination. Le 24 novembre 1522, le maréchal de Navarre fut assassiné près de Simancas, et les biens des rebelles furent confisqués.
+</p>       </div>
+        )
+      },
+ {
+        titre: "La Navarre Déchirée",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1523, Charles Quint lança une nouvelle campagne contre la Basse-Navarre et le Labourd, mobilisant 24 000 hommes. Ses troupes ravagèrent Saint-Palais, Mauléon et Ustaritz, mais l’expédition échoua. Malgré ces dévastations, Henri II d’Albret conserva son autorité en Basse-Navarre. Le 28 août 1523, les États de Basse-Navarre furent réunis à Saint-Palais. Le commissaire d’Henri II, Bertrand d’Abbadie, y renouvela au nom du roi le serment de garder les fors et libertés du royaume. Le 1ᵉʳ septembre, Henri II confirma ces privilèges à Navarrenx devant vingt-six délégués représentant les villes, le clergé et la noblesse. Il institua deux sessions annuelles des États, créa une chancellerie suprême composée d’un président et de six conseillers, et fit battre une monnaie propre à la Basse-Navarre, geste hautement symbolique face à Charles Quint. Saint-Palais, devenu le centre d’opérations du Béarn et du sud de la France, fut toutefois abandonné le jour de Noël 1523 après le raid du prince d’Orange sur la Soule, le Labourd et la Basse-Navarre. En 1524, malgré la poursuite des troubles, les Français perdirent un quart de leurs effectifs. Fontarabie, assiégée, tomba le 27 février ; les Navarrais obtinrent ensuite le pardon royal le 29 février, mais abandonnèrent définitivement la place le 29 avril, mettant fin à la résistance organisée face au pouvoir impérial. En 1525, la victoire impériale de Pavie, où François Iᵉʳ et Henri II d’Albret furent faits prisonniers, ce dernier parvenant à s’évader, consacra la domination de Charles Quint sur la Navarre. Cette défaite marqua une rupture décisive : la Navarre fut durablement divisée en deux entités, la Haute-Navarre demeurant sous domination espagnole, tandis que la Basse-Navarre restait attachée à la dynastie des Albret. Dès le 19 mai 1525, plusieurs nobles bas-navarrais prêtèrent serment d’allégeance à Charles Quint, recevant à partir du 18 août des gratifications annuelles financées par les taxes levées sur la « Terre des Basques, Mixe, Ostabaret et leurs vallées », dont la perception demeurait difficile dans des régions encore rebelles. Le traité de Madrid du 14 janvier 1526, signé entre François Iᵉʳ et Charles Quint, scella cette séparation : le roi de France renonçait à ses prétentions sur l’Italie et la Bourgogne, tandis que l’empereur projetait de marier sa sœur, Éléonore d’Autriche, à Henri II d’Albret afin de lui faire abandonner ses droits sur la Navarre. Henri refusa, et en janvier 1527, il épousa finalement Marguerite de Valois, sœur de François Iᵉʳ, une union déjà négociée depuis 1525. Ensemble, ils fondèrent la Chambre des Comptes de Pau, organe administratif et financier du Béarn, renforçant l’autonomie du pays face à la France. Pendant ce temps, la Navarre subit une période de répression marquée par des procès pour sorcellerie, des confiscations et la castillanisation de son administration. Entre 1525 et 1527, les ordonnances impériales instaurèrent de nouveaux impôts et alignèrent les institutions sur le modèle castillan, conduisant à l’extinction du For Général. La résistance persista : le 5 mai 1527, des habitants de la vallée d’Ossès furent condamnés pour avoir refusé de payer les impôts « selon l’usage et la coutume ». Un incident éclata à Ascarat, où des gens venus d’Ossès enlevèrent des bœufs en guise de tribut ; une vingtaine d’hommes armés de Saint-Jean-Pied-de-Port, alors occupé par les Impériaux, vinrent les reprendre près d’Uhart-Cize. Le commissaire royal Hernando de la Serna réprima l’émeute et fit emprisonner Miguel de Aice, libéré six mois plus tard contre rançon.
+</p>       </div>
+        )
+      },
+      {
+        titre: "La Paix des Dames",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En juillet 1527, un édit royal publié à Garris plaça sous tutelle les juridictions civiles et ecclésiastiques pour faciliter la levée des impôts, tandis que les derniers serments d’allégeance furent obtenus sous contrainte : celui de Saint-Jean-Pied-de-Port, dirigé par le bayle Pedro de Armendariz, puis ceux des vallées de Baïgorry et d’Ultrapuertus, le 28 septembre. Le 30 septembre, les députés d’Ossès, Johanes de Bidazabal, Petri d’Ameztoii et Johanes de Mendikoaga, prêtèrent à leur tour serment, suivis par les autres communautés jusqu’au 8 octobre. Enfin, en février 1528, Charles Quint accorda de nouvelles grâces impériales, confirmant la fin progressive de la résistance navarraise. Cette même année 1527, la Basse-Navarre, épuisée par les campagnes successives, se soumit définitivement à Charles Quint, tandis qu’Henri II d’Albret épousait Marguerite d’Angoulême, sœur de François Iᵉʳ, une alliance qui rapprocha durablement la maison d’Albret de la France. Charles Quint reconnut la suzeraineté française sur le Béarn, tout en maintenant la Haute-Navarre sous domination espagnole et en rattachant le château de Mauléon au gouvernement de Guyenne. La Basse-Navarre, restée fidèle aux Albret, reçut alors le statut d’une principauté autonome, confirmé en 1530 par un don royal de 2 000 livres. Après cette date, la séparation entre Haute-Navarre espagnole et Basse-Navarre française fut définitivement établie. Les seigneurs partisans des Albret, dont les Gramont, réclamèrent sans succès la restitution de leurs biens confisqués. En 1533, Charles Quint ordonna une enquête sur les droits des sujets du roi de France, puis, en 1534, la restitution partielle des domaines saisis depuis 1521. Dans son testament, il reconnut l’injustice de l’usurpation du royaume de Navarre, mais son fils Philippe II n’en tira aucune conséquence. Après 1528, bien que considérée comme perdue pour les Impériaux, la Basse-Navarre conserva encore une administration espagnole à Burguete jusqu’en 1533. Malgré les interdictions impériales, les échanges commerciaux et pastoraux entre les deux versants pyrénéens se poursuivirent : Charles Quint interdit en 1529 l’entrée dans son royaume de toute personne venant de France, du Béarn ou de Basse-Navarre, mais la Chambre des Comptes autorisa encore en 1528 le passage du bétail par les cols. Une frontière stable fut fixée vers 1530, et les relations pastorales se maintinrent, comme le prouve la facerie conclue entre Bastan et Ossès en 1547, garantissant les droits traditionnels de pâturage. En 1529, la « paix des Dames » ou traité de Cambrai, signée entre Marguerite d’Autriche et Louise de Savoie d’un côté, et Marguerite de Navarre de l’autre, mit fin provisoirement au conflit entre la France et l’Empire. Les litiges sur la restitution des biens navarrais se prolongèrent toutefois jusqu’en 1539. La Haute-Navarre devint une province espagnole sans autonomie, tandis que la Basse-Navarre resta liée aux Albret.. Sur le plan intérieur, en l’absence d’Henri II, le pouvoir fut exercé à partir de 1535 par sa sœur Anne d’Albret et Jacques de Foix, évêque de Lescar et chancelier de Foix-Béarn. Entre 1538 et 1547, Henri transforma la bastide de Navarrenx en une forteresse bastionnée d'une modernité absolue (prototype de la fortification moderne, bien avant Vauban), suscitant l’inquiétude de Charles Quint, qui craignait qu’elle ne serve de base à une expédition française. Après avoir inspecté les défenses son espion lui fait ce rapport laconique : « Sire, il y a des places que l'on prend, et d'autres que l'on laisse. Navarrenx est de celles-là ».  En 1545, Tristan de Monein devint le premier gouverneur de la forteresse, et en 1546, les États du Béarn demandèrent la révision de ses fortifications. Henri signa les nouveaux règlements militaires en 1551, adoptés et imprimés en béarnais en 1552, illustrant la vitalité politique du pays. Sur le plan extérieur, Henri tenta en vain de reconquérir la Haute-Navarre, que Charles Quint refusa toujours de lui restituer, ne lui reconnaissant que le titre de prince de Béarn. Cependant, les États de Béarn restèrent farouchement attachés à leur souveraineté : ils refusèrent les documents rédigés en français, réservèrent les fonctions publiques aux natifs du pays et affirmèrent leur statut d’État indépendant face à la monarchie française. À la mort de sa femme, Henri voulut épouser la duchesse de Lorraine (nièce de Charles Quint) ou Juana, sa fille (il aurait obtenu la Navarre en dot s’il la déshéritait) et avait élaboré des plans d’invasion espagnole par Bordeaux et Toulouse jusqu’à Pau.
+
+
+</p>       </div>
+        )
+      },
+
+ 
+    ]
+  },
+
+
+
+
+
+
+   'l-humanisme': {
+    titre: "L'Humanisme en Béarn",
+    periode: "Renaissance",
+    resume: "Le Béarn se modernise sous les Albret.",
+    introduction: "Entre héritage et rapprochement avec Paris...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+        {
+        titre: "Le Schisme Anglais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Henri VIII rompt avec Rome en 1534, après que le pape a refusé d’annuler son mariage avec Catherine d’Aragon. Pour pouvoir épouser Anne Boleyn, il proclame l’Acte de Suprématie, qui fait de lui le chef de l’Église d’Angleterre, la future Église anglicane. Il se marie six fois, fait exécuter deux de ses épouses et confisque les richesses de l’Église catholique en dissolvant les monastères. Sa fille, Élisabeth Iʳᵉ, fera exécuter sa cousine Marie Stuart, ancienne reine d’Écosse et de France. Cette époque est marquée par l'influence de John Dee, le célèbre Mathematicien et astrologue d'Élisabeth (qui signait parfois ses messages secrets du code « 007 »). En 1564, il publie la Monas Hieroglyphica, un traité ésotérique mêlant Mathematiques, alchimie et symbolisme kabbalistique. Son fils, Arthur Dee, médecin et alchimiste, devient plus tard médecin à la cour de Russie. Il sert comme conseiller auprès du premier tsar Romanov, Michel Ier, à partir de 1621 et y reste environ quatorze ans. Arthur Dee joue un rôle important au sein de la cour moscovite tout en poursuivant l’héritage ésotérique de son père.
+
+</p>       </div>
+        )
+      },
+
+   {
+        titre: "L'Affaire Reuchlin-Pfefferkorn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+L'affaire Reuchlin-Pfefferkorn du Talmud a initialement cristallisé les positions en opposant les « Méchants », c'est-à-dire Pfefferkorn et les Dominicains de Cologne, qui seraient symboles d'obscurantisme, de censure et d'autorité scolastique rigide, aux « Héros » humanistes tels que Reuchlin, Érasme, Crotus Rubeanus ou Von Hutten, qui se firent les défenseurs du retour aux sources et de la liberté intellectuelle face une "ignorance cléricale", cette fracture a permis la constitution d'un « camp » soudant humanistes et nobles allemands contre la « tyrannie » romaine, légitimant ainsi, selon une logique de disendowment comparable à celle des lollards ou d'Henri VIII, la saisie par « droit divin » des immenses biens fonciers de l'Église (Henri VIII avait pris un quart des terres et l'or pour la couronne) par les princes protestants pour s'enrichir, marquant un basculement géopolitique où l'Église perd son rôle d'arbitre suprême (comme à Tordesillas) au profit d'une logique de puissance financière préfigurant le monde de 2025. Alors que la satire féroce des Epistolae Obscurorum Virorum ridiculisait les moines et théologiens aux yeux de l'Europe lettrée (diffuser des idées erronées par des supports accessibles, Michelet) et que Rome se méfiait davantage de sa défense face aux Ottomans, l'affichage des 95 thèses de Luther en 1517 a d'abord été perçu à tort par le camp humaniste comme la continuation du combat de Reuchlin : Crotus Rubeanus y voit une attaque similaire contre les Dominicains (tels le vendeur d'indulgences Tetzel) et la scolastique, incitant Von Hutten à publier des textes pro-Luther et le chevalier Sickingen à offrir sa protection militaire dans une alliance politique et nationaliste contre Rome, bien qu'ils ne saisissent pas la profondeur théologique du réformateur. En effet, contrairement à Érasme et Reuchlin qui souhaitaient une réforme intellectuelle sans quitter le catholicisme et qui furent effrayés par l'attaque radicale contre les sacrements et le Pape, la rupture de Luther est théologique et s'ancre dans le nominalisme d'Ockham : rejetant la tradition thomiste et cet « Aristote scolastisé » (qu'il maîtrise mal) qui prétendait comprendre Dieu par la raison et mériter le salut par les œuvres, Luther affirme que Dieu est une volonté souveraine insondable et que le salut ne s'obtient que par la Grâce et la Foi seule, une doctrine confirmée par l'influence de la Devotio Moderna de Thomas à Kempis ; cette trajectoire culmine le 10 décembre 1520 lorsque Luther, soutenu par Karlstadt (qui avait écrit des thèses avant lui), brûle la bulle Exsurge Domine, transformant définitivement un débat académique en un rejet public et total de l'autorité papale par l'université de Wittenberg unifiée. À cette époque, les princes allemands en avaient marre que l'argent de leurs impôts parte à Rome. Soutenir Luther était pour eux un moyen de devenir plus indépendants du Pape et de l'Empereur. Frédéric "le Sage" a donc caché Luther dans son château de la Wartburg.
+
+</p>       </div>
+        )
+      },
+
+
+
+
+
+  {
+        titre: "Entre Foi et Liberté du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au début du XVIᵉ siècle, un profond mouvement de réforme morale et spirituelle agita la chrétienté. En France, des humanistes tels que Lefèvre d’Étaples et Érasme, inspirés par l’Antiquité et les langues bibliques, prônèrent un retour aux Écritures. En Allemagne, l'influence de Luther s’éleva. En France, Guillaume Briçonnet, évêque de Meaux, et son disciple Gérard Roussel, futur évêque d’Oloron, tentèrent de réformer l’Église de l’intérieur. Sous François Ier, la situation religieuse connut une évolution complexe : le Concordat de Bologne (1516), signé avec Léon X, donna au roi la mainmise sur les nominations ecclésiastiques, renforçant le contrôle de l’État sur l’Église gallicane. Cependant, l’Église conserva une influence profonde sur la vie quotidienne et l’enseignement, si bien que la réforme restait étroitement surveillée par les autorités. François Ier, d’abord bienveillant, changea d’attitude après la condamnation de la Réforme par la Sorbonne et le Parlement de Paris. En 1534, la tension culmina avec l’affaire des Placards : des affiches contre la messe furent placardées jusque sur la porte de la chambre du roi, marquant la rupture entre l’État et les réformateurs. Tandis que François Ier se montrait plus répressif, sa sœur, Marguerite d’Angoulême, persista dans son œuvre spirituelle. Elle avait publié un ouvrage mystique, Le Miroir de l’âme pécheresse, condamné par la faculté de théologie de Paris mais soutenu par de nombreux humanistes. Devenue reine de Navarre par son mariage avec Henri II d’Albret en 1527, elle fit de sa cour un refuge pour les évangéliques persécutés. On y croisait Gérard Roussel, Clément Marot, Jacques Lefèvre d’Étaples et même Jean Calvin à ses débuts. Marguerite souhaitait purifier l’Église sans la détruire. Gérard Roussel incarnait cet évangélisme modéré que Calvin lui reprocha vivement. Après la mort de Marguerite, Henri II d’Albret maintint sa protection envers Roussel. En Béarn, le roi favorisa un compromis liturgique : le Credo, le Pater et le Dialogue furent traduits en langue vulgaire (béarnais) pour la compréhension du peuple. Pour les calvinistes, ces mesures étaient insuffisantes. Ils dénonçaient l’inaction royale et s’en prenaient aux agents de la monarchie. En Soule, ces tensions se traduisirent par des procès pour hérésie, comme à Mauléon en 1546, prouvant la pénétration des idées nouvelles jusque dans les vallées basques. Sous l’influence de Marguerite, le Béarn devint un bastion intellectuel réformé. Henri II d’Albret, tout en restant l’allié de François Ier, refusa d’autoriser l’arrestation des réfugiés sur ses terres. Ce faisant, il affirmait la souveraineté du Béarn : la défense de l'indépendance politique se confondait désormais avec la liberté religieuse.
+
+
+</p>       </div>
+        )
+      },
+
+
+
+
+
+
+
+
+     
+{ titre: "Les Médicis", 
+  contenu: ( <div className="space-y-4 font-corps text-gray-700 leading-relaxed"> <p> 
+    
+Après l'épisode de Jeanne d’Arc, qui incarnait un pouvoir fondé sur la volonté divine et hiérarchisée, une nouvelle pensée émerge. Pic de la Mirandole (Pico della Mirandola) tente d’unifier les traditions grecque, arabe, juive et chrétienne. Il fait de la Kabbale juive une clé théologique chrétienne, s'appuyant sur les sources de Flavius Mithridate, un juif converti. C’est précisément ce syncrétisme que Rome condamne en 1487-1488 : treize de ses thèses sont jugées hérétiques par Innocent VIII. Pic est arrêté, puis libéré grâce à l'influence des Médicis, car l'Église lui reproche de subordonner la Révélation à une sagesse universelle antérieure. Selon la Kabbale d'Isaac Louria, Dieu s’est retiré (une présence restée cachée) et la création est brisée. L’être humain, par ses actes de justice, d’étude et de compassion, doit libérer les étincelles de lumière pour les élever et les ramener à leur source divine. Dieu invite ainsi l’humanité à devenir son partenaire afin que l’homme accomplisse, par son travail, l’œuvre de reconstruction (Tikkoun Olam). Les Médicis protègent Ficin, Pic de la Mirandole et les courants hermético-platoniciens. Sans être kabbalistes au sens strict, ils créent un milieu syncrétique où la magie naturelle, le néoplatonisme, l’astrologie et la Kabbale chrétienne sont considérés comme des sciences sacrées compatibles avec le christianisme. Ce climat intellectuel a profondément marqué l’éducation de Catherine et de Marie de Médicis. En arrivant en France, elles importent cette culture faite d'astrologie, de correspondances symboliques et d’hermétisme savant. Si elles ne pratiquent pas le Zohar, elles utilisent des schémas "kabbalisants" à des fins politiques et cosmologiques. Officiellement, l’Église condamne la divination, la magie invocatoire et la manipulation des noms divins, les qualifiant de pratiques démoniaques. Seule une astrologie dite « naturelle » est tolérée. Si le concile de Trente ne condamne explicitement ni Ficin ni Pic de la Mirandole, la Contre-Réforme durcit ensuite considérablement la ligne doctrinale contre ces savoirs occultes.
+
+     </p>       </div> ) },
+
+
+
+
+
+
+
+
+  {
+        titre: "Jeanne d’Albret, L’Enfance d’une Reine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jeanne d’Albret naquit en novembre 1528 à Saint-Germain-en-Laye, fille de Marguerite de Navarre et d’Henri d’Albret, roi de Navarre. Son oncle, François Ier, régnait alors sur la France. Par sa mère, déjà engagée dans l’évangélisme et protectrice de poètes comme de théologiens réformateurs, elle développa un goût précoce pour la politique, la religion et les lettres. Cependant, l’enfant grandit surtout auprès de sa gouvernante, Aymée de Lafayette, amie de Marguerite et baillive de Caen, confinée entre les sombres murailles du château de Plessis-lès-Tours. Sa mère introduisit la Renaissance italienne en France et fut, selon René Doumic, une protectrice des lettres encore plus éclairée que François Ier lui-même. Elle soutenait la devotio moderna (une réforme intérieure de la foi) qui marqua durablement l’éducation de Jeanne. Malheureusement, Marguerite semblait comme hypnotisée par l'éclat qui entourait la prestance, l'esprit et le trône de son frère. Dès 1538, le mariage de Jeanne devint un véritable enjeu diplomatique. Son père souhaitait l’unir à l’infant Philippe pour récupérer la Haute-Navarre, tandis que François Ier préférait la marier au duc de Clèves. La paix, que le connétable de Montmorency prônait sans relâche, semblait pourtant encore lointaine. Charles Quint, lors de sa visite, trouva Jeanne intéressante, mais il n’était évidemment pas prêt à céder la Haute-Navarre ni à arranger les affaires de François Ier. Marguerite se retrouva « entre deux feux », dans une tension extrême, puisque son mari refusait ces projets. Les États de Navarre tranchèrent en affirmant qu’on ne marierait pas Jeanne à un prince étranger. Pourtant, François Ier lui présenta le duc de Clèves. Jeanne, soutenue par son père, refusa et osa contester, allant jusqu’à préférer entrer au couvent plutôt que de céder. L’affaire se conclut par la force : elle protesta jusqu’au bout avant d’être physiquement emmenée à l'autel par le connétable, sur ordre du roi. Le connétable démissionna ensuite de cette responsabilité, mais Jeanne, âgée d’à peine douze ans, avait déjà protesté solennellement contre la violence qui lui était faite. Elle dut même subir une véritable fustigation sur ordre de sa « tendre mère ». Si le mariage fut célébré en 1541, la consommation n’eut bien sûr pas lieu. En 1545, l’union fut annulée : elle s'était révélée stérile et le duc s’était finalement rapproché de Charles Quint.
+
+
+</p>       </div>
+        )
+      },
+      
+
+
+
+
+       {
+        titre: "La France Promet de Protéger L’Enfant à Naître",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1548, Jeanne d’Albret épouse à Moulins Antoine de Bourbon, qu’elle avait aimé à la cour, mais cette union n’apporte finalement rien sur le plan diplomatique. Sept ans plus tard, à la mort de son père, elle devient reine de Navarre et souveraine du Béarn. Comme Antoine est un Bourbon et non un Béarnais, seule Jeanne prête serment devant son peuple. Elle ouvre ses États à l’influence calviniste, faisant venir des prédicants dans les maisons aristocratiques et dans tout le Béarn. Elle veillera avec attention sur sa fille Catherine, souvent malade. Bien avant sa conversion officielle, Jeanne protège déjà ses sujets protestants, empêchant qu’ils soient maltraités et veillant à ce qu’ils puissent choisir librement d’écouter le curé catholique ou le pasteur réformé. Sa sincérité et les sacrifices qu’elle consentira ensuite pour la Réforme en témoignent. Lors de son mariage, le roi de France Henri II tenta d’échanger les domaines pyrénéens des Albret contre des terres situées au centre du royaume afin de mieux contrôler cette région stratégique face aux Habsbourg. À la mort d’Henri d’Albret, le roi de France retint Antoine à sa cour et fit occuper militairement le Béarn et le pays de Foix. Fidèle à ses sujets, Antoine refusa de trahir leur indépendance, organisa la défense locale et autorisa les États à solliciter l’aide de l’Espagne, mesure témoignant de la défiance envers la tutelle française. Devenue reine en 1555, Jeanne d’Albret doit d'abord appliquer l’ordonnance de 1546 imposant la foi catholique. Cependant, sa conviction se renforce : elle estime que le temps du « dilettantisme tolérant » d’Érasme est révolu. Dans une lettre du 22 août 1555 adressée au vicomte de Gourdon, elle affirme que la réforme de l’Église est « juste et nécessaire ». Elle introduit les premiers ministres protestants en Béarn sans que l’évêque de Lescar, son oncle, ne s’en aperçoive. En 1557, Antoine de Bourbon fait venir le prédicateur Le Gay, dit Boisnormand, qui prêche au château de Pau, puis à Nérac. La même année, Antoine, dans l’espoir de récupérer Pampelune, négocie avec Philippe II contre la France. Après le désastre de Saint-Quentin, Antoine, cousin du roi, est excusé et revient à la cour. Mais alors que Français et Espagnols négocient, Philippe II envahit le Pays basque et s’empare de Saint-Jean-de-Luz. "Navarrais" et Français s’allient alors contre l'ennemi commun. Antoine échoue cependant à reprendre la Navarre avant le traité de Cateau-Cambrésis (1559). Entre-temps, la tragédie frappe encore Jeanne. Son premier fils, Henri, était mort (étouffé par la chaleur selon certaines sources, ou suite à une négligence d'Aymée de Lafayette), puis son second fils, Louis-Charles, âgé de deux ans et demi, meurt après avoir été lancé comme un ballon de fenêtre en fenêtre par des nourrices et être tombé.
+
+</p>       </div>
+        )
+      },
+
+
+     
+
+
+
+
+
+       {
+        titre: "La Conversion de Jeanne d’Albret",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1558, Jeanne d’Albret et Antoine de Bourbon n’assistent pas aux États généraux où Calvin espérait leur présence ; le réformateur plaçait en effet de grands espoirs dans la maison de Bourbon. À La Rochelle, par l’intermédiaire de Jeanne, le pasteur Pierre David met en scène une pièce symbolisant l’Église malade guérie par un pasteur. Peu après, Antoine emmène le jeune Henri, futur Henri IV, assister aux sermons de Barbaste et de Boisnormand à Pâques 1559. Les pasteurs parisiens Chandieu et Morel reprochent ensuite à Antoine sa timidité, contrastant avec la fermeté de Jeanne. Le pape Paul IV la considérait d’ailleurs comme « pire que sa mère, ayant infesté la maison de Vendôme » (17 août). À la mort d’Henri II, Catherine de Médicis, jusque-là peu influente, devient régente d’un royaume profondément divisé. La puissante famille de Guise en profite pour renforcer son emprise à la cour. Le conseil de Navarre, davantage tourné vers l’Espagne que vers la cause navarraise, invite alors Antoine de Bourbon à se rendre à Paris. Il s’y rend accompagné de son frère Louis de Condé, de son cousin le prince de La Roche-sur-Yon, ainsi que des neveux du connétable de Montmorency : François d’Andelot et Coligny. À Paris, Catherine de Médicis confie à Antoine la mission d’accompagner sa fille Élisabeth de Valois en Espagne pour son mariage avec Philippe II. Cependant, celui-ci refuse le déplacement, car le roi d’Espagne ne le désigne que sous le titre de « duc de Vendôme ». Antoine cherche ensuite, par tous les moyens, à obtenir une véritable couronne. Il tente de marier son fils à la fille du roi de Bohême ou à l'archiduchesse de la maison de Maximilien d’Autriche, et propose même d’abandonner la Navarre en échange d’une autre principauté, comme le Milanais, la Sardaigne ou la Tunisie. L’Espagne entretient alors une diplomatie lente et ambiguë, espérant tirer profit de ses ambitions.
+
+</p>       </div>
+        )
+      },
+
+
+
+
+
+{
+        titre: "Le Baptême de l'Enfant à Naître",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le Roi de France était considéré comme le "père du peuple" et avait pour mission de protéger tous ses sujets. Mourir sans baptême est une catastrophe absolue. Henri II et Catherine de Médicis (qui eurent dix enfants après de longues années de difficulté) veulent sauver ces âmes. L’édit d’Henri II de février 1556 déclare que si une femme, hors mariage, n’a pas déclaré sa grossesse et que l’enfant meurt sans avoir reçu le baptême, la loi considère d’office qu’il y a eu infanticide et la femme sera alors condamnée à mort. L’orgueil (péché) est moins important que la vie : la société, dans son ensemble, doit empêcher qu’il soit supprimé. Cet édit ne sera aboli qu’à la Révolution française....
+
+
+
+</p>       </div>
+        )
+      },
+       {
+        titre: "La Conjuration d'Ambroise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au retour de Roncevaux en 1559, Antoine se déclare prêt à aider l’Espagne à envahir la Guyenne et à partager la France avec l’Empereur, persuadé que Catherine de Médicis défend mollement ses intérêts. Il va jusqu’à promettre que son fils renoncerait au protestantisme et propose d’envoyer le jeune Henri comme otage en Sardaigne. Cependant, il meurt avant d’avoir pu réaliser ces projets. En 1560, la France entre dans une période de graves tensions. La conjuration d’Amboise, organisée par le gentilhomme périgourdin La Renaudie contre l’avis de Calvin, rassemble près de dix mille hommes pour réclamer le renvoi des Guise et la liberté de culte. Bien qu'informés, Condé et Antoine de Bourbon n’y participent pas directement. La révolte est brutalement écrasée par les Lorrains. Face à cet échec, Antoine cherche des appuis auprès d’Élisabeth d’Angleterre et des princes allemands. Dans ce climat électrique, François Hotman publie son virulent Épître au Tigre de France contre le cardinal de Lorraine, tandis que Théodore de Bèze rejoint Nérac pour devenir le conseiller de Jeanne d’Albret. Le 25 décembre 1560, Jeanne fait publiquement profession de foi réformée, affirmant avoir été « retirée de l’idolâtrie par la grâce divine ». Cette conversion transforme la souveraine du Béarn en chef moral du parti huguenot. À la cour, Catherine de Médicis protège l'amiral de Coligny pour contrebalancer l'influence des Guise. Cependant, Coligny prend contact avec Élisabeth Iʳᵉ : Le Havre est livré aux Anglais en échange de subsides. L'occupation tourne au drame : les troupes anglaises démolissent les églises, brûlent les objets cultuels catholiques et chassent le lieutenant du roi. Finalement, le comte de Warwick expulse même l'ensemble de la population française de la ville.
+
+</p>       </div>
+        )
+      },
+       {
+        titre: "Jeanne d’Albret, la Réformatrice du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1561, Jeanne d’Albret se rend à Paris, où elle est reçue comme une étrangère. Malgré cet accueil froid, elle y affirme son autorité en célébrant le mariage de son neveu sous la bénédiction du réformateur Théodore de Bèze et en participant activement au colloque de Poissy, convoqué par Catherine de Médicis dans le cadre de sa politique œcuménique. Ce colloque, destiné à rapprocher catholiques et protestants, se solde par un échec qui accentue encore la fracture religieuse du royaume. Catherine de Médicis, cherchant à apaiser les tensions, fait réciter à ses enfants les prières en français. À cette époque, on estime à environ deux millions le nombre de protestants en France. Certains tentent même de convertir le roi et sa famille, le jeune futur Henri III aurait, dit-on, jeté au feu le livre d’heures de sa sœur. Antoine de Bourbon, quant à lui, pratique la messe à la fois avec Charles IX et avec Jeanne, illustrant la complexité de sa position religieuse. Cela scandalise l’Espagne qui juge Catherine trop conciliante et considère sa politique religieuse comme honteuse. Voyant son ouverture excessive, Catherine de Médicis se rend compte de son erreur et adopte bientôt une attitude beaucoup plus ferme envers le protestantisme au sein de sa propre maison. Cette même année, Jeanne promulgue un règlement fondamental pour le Béarn, instaurant un synode annuel à Orthez. Elle fait venir de Genève un pasteur envoyé par Calvin, Jean Reymond Merlin, chargé d’établir un règlement pour la nouvelle Église réformée de Béarn-Navarre. Ce synode, réunissant pasteurs et représentants des paroisses, organise la vie spirituelle et morale du pays. Dans le même mouvement, Jeanne interdit les processions catholiques et fonde une académie protestante à Lescar, plus tard transférée à Orthez, destinée à former les futurs pasteurs, en fixant leurs salaires, pensions et avantages. Par ces réformes, elle réorganise profondément la vie religieuse et morale de ses États, tout en s’efforçant de maintenir la paix civile. En juillet 1561, elle publie l’ordonnance de Nérac, qui autorise catholiques et protestants à partager les mêmes lieux de culte selon le principe du simultaneum, un acte de tolérance exceptionnel pour l’époque. Dans une lettre à son oncle, l’évêque de Lescar, Jeanne justifie cette mesure au nom de la concorde civile et de l’obéissance aux ordonnances souveraines. Sous l’influence de l’ambassadeur d’Espagne, Antoine de Bourbon impose à leur fils Henri une éducation catholique. Le précepteur protestant La Gaucherie est remplacé par un enseignant catholique, et le jeune prince, alors âgé de huit ans, résiste plusieurs mois avant de céder et d’assister à la messe pour la première fois le 1er juin 1562.
+</p>       </div>
+        )
+      }
+
+ 
+    ]
+  },
+   'bearn-protestant': {
+    titre: "L'Arrivée du Protestantisme",
+    periode: "Renaissance",
+    resume: "Le Béarn embrasse la Réforme protestante",
+    introduction: "Entre héritage et réforme, Jeanne d’Albret gouverne libre...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      {
+        titre: "Le Massacre de Wassy",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   En mars 1562, le massacre de Wassy par les troupes du duc de Guise déclenche une vague de violence dans tout le royaume. Catherine de Médicis envisage d'abord de confier à Jeanne d'Albret un rôle de médiatrice auprès de Louis de Condé, mais les Guise et le connétable de Montmorency s’y opposent fermement. Sous la pression de ce "triumvirat" catholique et de l’ambassadeur d’Espagne, Chantonnay, Jeanne est contrainte de quitter la cour. Séparée de son fils Henri, elle se réfugiera à Vendôme puis à Orthez. À Paris, Théodore de Bèze et l’amiral de Coligny soutiennent alors la politique conciliante du chancelier Michel de L’Hospital, auteur de l’édit de janvier 1562, qui reconnaît officiellement le culte réformé en France. On compte alors environ deux millions de protestants dans le royaume. Sous l’influence du pape, Catherine de Médicis renforce la discipline religieuse à la cour et s’éloigne progressivement du parti réformé (tout en restant personnellement proche de "l'astrologie").  Antoine de Bourbon, lieutenant général du royaume, délaisse la Réforme pour le camp catholique, ce qui lui vaut le surnom de « nouveau Julien l’Apostat ». Cherchant à plaire aux Guise, il rêve d'épouser Marie Stuart et tente de faire exiler Jeanne chez l’évêque de Châlons. Malgré les menaces, Jeanne consolide son autorité en Béarn : elle fonde un synode et structure l'Église réformée avec le pasteur Jean Reymond-Merlin. La première guerre de Religion éclate alors. Antoine prend la tête des troupes royales mais meurt au siège de Rouen en novembre 1562. Peu avant, il avait envoyé Blaise de Monluc capturer sa femme, mais Jeanne parvient à s'échapper de justesse par la Gascogne. La mort d'Antoine, qui s'était converti au luthéranisme, change la donne. Pour Catherine de Médicis, Jeanne n'est plus une hérétique en fuite, mais une puissance souveraine indépendante. Les deux reines finissent par rétablir un dialogue diplomatique et personnel, échangeant une correspondance cordiale et partageant même, à l'occasion, quelques emplettes.
+      </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Entre Foi Réformée et Raison d’État",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Jeanne d’Albret peut enfin reprendre l’éducation de son fils, bien que Catherine de Médicis exige que le futur Henri IV reste à la cour de France. En échange de titres et de la reconnaissance de son autorité sur le Béarn, Jeanne est contrainte de laisser son fils comme "otage" politique. L’éducation du jeune prince est alors confiée à des précepteurs protestants instruits, proches du mouvement réformé européen. Jeanne s’indigne toutefois de cette situation : elle se voit forcée de signer des textes contraires à sa foi et subit la présence de Blaise de Monluc. Elle exècre ce gouverneur pour sa brutalité envers les huguenots en Guyenne et au Béarn, où il multiplie les provocations et les menaces à son égard. Malgré ces tensions, Catherine de Médicis assoit son contrôle. L’année 1563 marque un tournant : les troupes royales sont victorieuses à Dreux, le puissant duc de Guise est assassiné, et l’édit d’Amboise accorde enfin une relative liberté de conscience aux protestants. Dans un rare élan d'unité nationale, les Français des deux confessions s’allient pour chasser les Anglais du Havre. Catherine s'y expose personnellement aux « arquebuses et canonnades » en l’absence de son défunt mari (qui, catholique, aurait sûrement jouer son rôle et protéger sa femme). Privé de secours, le comte de Warwick rend la ville le 28 juillet 1563 (la flotte de secours anglaise arrivera avec 2 jours de retard). À cette période, Calvin exhorte Jeanne à éradiquer totalement le catholicisme en Béarn. Pour l'épauler, il lui envoie le pasteur Jean Raymond Merlin. Ce dernier prône un changement radical et rapide, tout en tentant de rassurer le clergé local en leur garantissant leurs bénéfices jusqu'à leur mort. Cependant, la correspondance de Jeanne révèle une souveraine bien plus prudente que ses conseillers : soucieuse d’éviter les émeutes, elle privilégie la paix civile et la conciliation entre les deux confessions plutôt qu'une réforme brutale.
+      </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Jeanne d’Albret face à Rome",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   En 1563, Jeanne d’Albret consulta les États de Béarn, qui s’opposèrent à l’interdiction du catholicisme. Respectueuse de leur avis, la reine proclama la liberté de conscience : catholiques et protestants purent désormais pratiquer leur culte sans entrave. Si elle laissa enlever les images sacrées dans les villes acquises à la Réforme, elle les maintint partout ailleurs. Afin de préserver l'ordre public, elle interdit en juin les processions et les prêches enflammés de certains moines, dont les excès avaient déjà ensanglanté Paris et Orléans. En septembre, elle imposa au clergé une contribution de 15 000 livres pour financer l'éducation pour tous et le nouveau culte, jugeant cet investissement plus utile que le financement des guerres royales contre les huguenots. Malgré les tensions budgétaires, Jeanne refusa de spolier l’Église : son conseiller Merlin ne reçut aucun subside, et Calvin lui-même ne fut jamais remboursé des 10 000 livres jadis avancées à Antoine de Bourbon. Cette progression paisible de la Réforme inquiéta l'Europe catholique. Jeanne adressa au pape Pie IV une lettre cinglante, le qualifiant d’homme ayant « abandonné la vérité pour l’avancement de sa fortune ». La réaction ne se fit pas attendre : le pape l'excommunia et l'Inquisition la somma de comparaître à Rome, sous peine de confiscation de ses biens. Cette menace sonna comme un signal pour les puissances catholiques : le roi d’Espagne et la maison de Guise multiplièrent les complots et les projets d’enlèvement. Ce n'est que grâce à l'intervention diplomatique de Catherine de Médicis que ces conspirations échouèrent. Malgré ces provocations, Jeanne refusa de céder à la vengeance et maintint la coexistence des deux cultes. Dans ce climat électrique, trois évêques, Louis d’Albret (Lescar), Claude Regin (Oloron) et François de Noailles (Dax), devinrent suspects d’hérésie aux yeux de Rome. Pourtant, le catholicisme conserva ses droits : le chapitre de Lescar se reconstitua à la chapelle Saint-Martin de Goueyrets, tandis que celui d’Oloron se réfugia à Mauléon. Grâce à la vigilance et à la modération de Jeanne, secondée par la retenue de son peuple, ceux qui espéraient une éradication totale du catholicisme en furent pour leurs frais.
+    
+       </p>
+          </div>
+        )
+      },
+    
+
+    
+    //    {
+    //     titre: "Jeanne d’Albret défie Rome",
+    //     contenu: (
+    //       <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+    //         <p>
+    // Toujours en 1563, sur la recommandation du prince de Condé, elle remplaça dans l’administration du comté de Périgord son chancelier Bouchard, proche des Guises, par Pierre Lambert, conseiller au parlement de Bordeaux exilé pour cause de religion. Elle fit également publier le catéchisme de Calvin en béarnais et confia au pasteur Jean Reymond-Merlin, envoyé de Genève par Calvin, la tâche d’organiser une véritable Église réformée en Béarn. S’appuyant sur la législation royale, Merlin interdit les processions de la Fête-Dieu et dédia plusieurs églises, notamment la cathédrale de Lescar et l’église Saint-Martin de Pau, au seul culte réformé, après les avoir dépouillées de leurs ornements. Ces mesures, jugées brutales, provoquèrent une vive protestation des États de Béarn, qui réclamèrent en vain, dès le 23 juin 1563, le rétablissement des processions, puis, les 27 et 29 du même mois, la liberté de conscience. Le 28 septembre, le Saint-Office cita Jeanne à comparaître devant le tribunal de l’Inquisition, sous peine de confiscation de ses États et de leur attribution à un autre souverain. Jeanne refusa catégoriquement, déclarant qu’en tant que souveraine, elle n’avait pas à obéir à une juridiction étrangère. Ce refus, hautement symbolique, devint un véritable acte de résistance religieuse : pour la première fois, la reine de Navarre invoquait aussi clairement la liberté de conscience. Grâce à l’intervention du jeune Charles IX et de Catherine de Médicis, la mesure fut annulée. Dans une lettre datée du 23 décembre 1563, la reine mère exhorta Jeanne d’Albret à rétablir la paix parmi ses sujets, « comme le roi le fait des siens, c’est-à-dire en leur permettant de vivre en liberté de conscience, sans contrainte ni forcer personne ». Parallèlement, Catherine envoya à Pau son émissaire Guyon du Gout pour avertir la souveraine des risques qu’elle encourait si elle persistait à gouverner selon les principes réformés. Menacée de confiscation de ses terres, voire d’une guerre ouverte, Jeanne répondit avec diplomatie : elle promit de maintenir la paix, d’envoyer un représentant chargé de s’expliquer, et d’assurer l’ordre en son absence en confiant la régence locale à Monsieur de Gramont. Elle écrivit également au connétable de Montmorency et adressa ses remerciements au roi d’Espagne pour le soutien promis après la mort de son époux, précisant que sa foi protestante relevait uniquement de sa conscience personnelle et familiale, sans volonté de troubler ni ses voisins ni ses alliés.
+    //   </p>
+    //       </div>
+    //     )
+    //   },
+    
+       {
+        titre: "Le Tour de France",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Inspirée des édits de pacification français de Saint-Germain (1562) et d’Amboise (1563), la Patente publiée par Jeanne d’Albret prônait la concorde et la liberté de conscience, tout en imposant une amnistie générale. Contrairement à la France, la paix en Béarn ne fut pas négociée après une guerre, mais imposée par l’autorité souveraine. Ce texte introduisait de fait le principe Cujus regio, ejus religio (tel prince, telle religion), officialisant la coexistence des deux Églises. Cependant, pour Jeanne, cette tolérance n'était qu'une étape. En 1566, elle confiait à Théodore de Bèze son intention d’« abattre entièrement l’idolâtrie », convaincue que la liberté de culte finirait par rallier naturellement les cœurs à la foi réformée. Pendant ce temps, Catherine de Médicis entreprenait un voyage monumental à travers le royaume avec le jeune roi Charles IX. Ce "Grand Tour", débuté à Fontainebleau le 13 mars 1564, visait à restaurer l'autorité royale et l'unité nationale par des fêtes et des cérémonies fastueuses. Le cortège traversa le Lyonnais, la Savoie, le Roussillon et le Sud-Ouest. Dans cette région, la reine mère fut frappée par la vigueur du protestantisme. Malgré ses efforts de médiatrice, elle ne parvint pas à fléchir Jeanne d’Albret, qui l'accompagnait alors. La reine de Navarre répondit avec fermeté aux pressions de conversion, refusant tout compromis. Le voyage fut marqué par des contrastes saisissants : d'un côté, le luxe des réjouissances à Bordeaux, Montauban ou Toulouse ; de l'autre, les tensions religieuses persistantes. Jeanne d’Albret provoqua d'ailleurs un scandale en faisant prêcher un sermon protestant dans ses appartements privés lors d'une escale royale. Après avoir tenté de réconcilier les Guise et les Coligny à Moulins, la cour regagna enfin Paris le 1ᵉʳ mai 1566. Jeanne nota avec une satisfaction prudente que l’atmosphère de la capitale semblait, pour un temps, s’être apaisée.
+       </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Paris, Foyer d’Épreuves et d’Affirmation",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Jeanne demeure ensuite huit mois à Paris pour régler de nombreuses affaires : un procès contre le cardinal de Bourbon au sujet de la succession des Bourbon-Vendôme ; une opposition au mariage du duc de Nemours avec Anne d’Este, veuve de François de Guise, afin qu’il tienne sa promesse envers sa cousine Françoise de Rohan ; et diverses poursuites, notamment contre Jacques Spifame, ministre protestant qu’elle avait soutenu mais qui l’a trahie avant d’être exécuté à Genève. Ces épreuves renforcent le caractère combatif et revendicatif de Jeanne. Des plaintes lui parviennent de Limoges, de Foix ou de Pau concernant sa politique religieuse et fiscale, provoquant même des révoltes armées. Isolée mais tenace, elle reste animée d’une énergie farouche, « avec une ardeur de persécutée », décrite comme forte, virile d’esprit et sans faiblesse. Elle veille aussi à l’éducation de son fils, âgé de treize ans, âge de majorité royale. Satisfaite de sa foi, elle déplore cependant le manque de solidité de son instruction : son précepteur La Gaucherie lui aurait fait perdre sept années d’études, « le bâtiment est tombé en ruine ». Cette image traduit son attachement humaniste à une éducation à la fois solide et pieuse. Cultivée et poétesse, Jeanne avait elle-même eu pour maître le poète Nicolas Bourbon. En mai 1566, elle visite à Paris l’imprimerie de Robert II Estienne, célèbre humaniste, accompagnée de ses enfants Henri (futur Henri IV) et Catherine de Bourbon. Passionnée de livres, elle fait imprimer un texte de sa main destiné à enseigner la piété à ses enfants, affirmant sa volonté de leur transmettre les valeurs protestantes et l’esprit des « craignants-Dieu ». Elle confie ensuite l’éducation d’Henri à Jean Morély, gentilhomme calviniste et humaniste aux idées jugées trop libérales, condamnées à Genève et critiquées par Théodore de Bèze. Malgré les polémiques, elle lui garde d’abord confiance avant de l’écarter après des accusations compromettantes. 
+   
+    </p>
+          </div>
+        )
+      },
+     {
+        titre: "Jeanne Bâtit l’Église du Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ En 1566, Jeanne poursuit au Béarn la construction d’une Église protestante organisée, inspirée de Genève. Elle accueille Pierre Viret, renforce les synodes, limite les pratiques catholiques (processions, mendicité des moines, sépultures dans les églises) et fonde l’Académie d’Orthez pour former les futurs pasteurs. Les ordonnances de la même année interdisent les quêtes des prêtres, les jeux de hasard et les danses jugées indécentes, tout en attribuant les revenus des bénéfices ecclésiastiques aux pauvres de l’Église réformée. Si certains catholiques complotent contre elle, la reine réagit avec une modération remarquable, préférant pardonner les révoltes plutôt que de punir sévèrement. Les pasteurs, en revanche, la pressent d’aller plus loin, et un synode à Nay lui demande d’interdire totalement la messe, ce qu’elle refuse, privilégiant une approche progressive et pacifique. Malgré cette prudence, ses réformes suscitent l’hostilité de la cour de France et de l’Église catholique. Les pasteurs du Béarn réclamaient toutefois davantage de fermeté. Un synode réuni à Nay la pressa d’interdire totalement la messe, Michel Vigneau en tête. Jeanne s’y refusa, mais adopta en juillet 1566 des ordonnances limitant certaines pratiques catholiques (processions, prédications, mendicité des moines, sépultures dans les églises), réservant les bénéfices vacants au nouveau culte, supprimant les bénéfices catholiques et transférant leurs revenus aux pauvres de l’Église réformée, sans pour autant abolir la messe. Ces efforts de conciliation n’apaisèrent pourtant pas ses adversaires. Les intrigues du clergé et de la cour de France s’intensifièrent : Charles de Luxe, gentilhomme béarnais, espionnait pour Charles IX et fomenta la révolte de Basse-Navarre (très peu de bourgeois là-bas la Réforme n'a pas pris) en 1566–1567. Malgré ce soulèvement et les menaces répétées contre sa vie, Jeanne fit preuve d’une remarquable modération : une fois la révolte réprimée, elle pardonna aux conjurés. Plus encore, Charles de Luxe, loin d’être puni, reçut du roi de France le collier de l’ordre de Saint-Michel en récompense de sa trahison.
+    </p>
+          </div>
+        )
+      },
+       {
+        titre: "Conflits et Complots contre Jeanne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    En 1566, le comté de Foix, hérité des Albret, est contesté par la couronne et par certains vassaux. Jeanne subit alors des décisions iniques, où la justice royale cherche manifestement à affaiblir son autorité territoriale. Elle y voit la main de ses ennemis, les Guise et la cour de Paris, qui tentent de la dépouiller d’une partie de ses droits. Dans le même temps, sa parente Françoise de Rohan poursuit un procès retentissant contre le duc de Nemours, qui l’avait séduite puis abandonnée malgré une union promise. Le Parlement de Paris rend en 1566 un arrêt défavorable à Françoise, ce que Jeanne dénonce comme une injustice flagrante, preuve selon elle que la justice demeure entièrement sous influence catholique. À la cour, des rumeurs se propagent : on prétend que Jeanne d’Albret projette d’assassiner Catherine de Médicis ou d’enlever le duc d’Anjou, futur Henri III. Savigny, bâtard d’Antoine de Bourbon, se trouve compromis dans ces intrigues ; certains le soupçonnent d’avoir servi d’instrument à un complot, ou d’avoir laissé croire qu’il en existait un. Il est finalement assassiné mystérieusement, probablement pour l’empêcher de parler ou d’ajouter encore à la confusion. Ces manœuvres visaient à salir Jeanne, mais aucune preuve ne l’impliqua jamais. À l’approche de la deuxième guerre de Religion, Jeanne décide de regagner le Béarn pour poursuivre son projet d’édification d’une Église protestante. Elle s’entoure du grand réformateur Pierre Viret, venu de Lausanne, qui avait déjà diffusé la Réforme en France, du Rhône au Languedoc. Leur objectif est clair : mettre en place un système religieux destiné à remplacer progressivement l’Église catholique, que Jeanne juge condamnée à disparaître. Cependant, Claude Régin, évêque d’Oloron et jusque-là fidèle à la reine, refuse de soutenir ces mesures restrictives contre le catholicisme et préfère quitter le Béarn. Les ordonnances de 1566, supprimant les bénéfices catholiques et transférant leurs revenus aux pauvres de l’Église réformée.
+       </p>
+          </div>
+        )
+      },
+    // Un rapggport de l’espion espagnol Guevara décrit un épisode révélateur : à Pâques, après la Cène célébrée à Pau, une dispute éclate entre le ministre Merlin et le seigneur de Sainte-Colomme ; le seigneur d’Audaux prend parti pour Merlin, la querelle dégénère devant Jeanne et son fils Henri, et plus de cinquante protestants sont tués contre six catholiques, avec de nombreux blessés. Ces « Pâques sanglantes » sont suivies d’actes d’iconoclasme dans tout le Béarn. Guevara avait tendance à exagérer considérablement le chaos en Béarn pour inciter le roi d'Espagne à envahir le territoire.
+      
+ 
+      
+    ]
+  },
+
+
+   'vers-paris': {
+    titre: "Tournée vers Paris",
+    periode: "Renaissance",
+    resume: "Le Béarn défend sa souveraineté",
+    introduction: "La bastide de Navarrenx face au Royaume de France...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+      
+         {
+        titre: "La Réforme sous le Sceptre de Fer",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    En 1566, Jeanne d’Albret établit un règlement destiné à organiser la Réforme en Béarn. Désormais, un synode unique devait se tenir chaque année au mois de novembre, les procès de mariage relevaient exclusivement de la reine et de son Conseil, fornications, concubinages, paillardise, femmes publiques, mendicité des valides, étaient sévèrement réprimées (jusqu'au bannissement), s'inspirant de Jésus au Temple. Elle interdit les cartes et les dés, confirma les restrictions sur les danses, bannit moines et prêtres de toute quête, et supprima les processions publiques catholiques, n’autorisant plus que des cérémonies à l’intérieur des cloîtres. La jeunesse devait être instruite au collège d’Orthez, financé par le trésor public, avec un procureur et deux régents nommés pour assurer son fonctionnement. Les ministres protestants reçurent un traitement annuel, 300 livres pour les mariés, 240 pour les célibataires, mais il leur fut interdit de prêcher hors du Béarn sans autorisation, tandis qu’à l’intérieur du territoire, ils jouissaient d’une pleine liberté de prédication, contrairement aux catholiques à qui ce droit fut retiré. Les enterrements furent désormais interdits dans les temples, sauf exception, et devaient se dérouler sans cérémonie. Les prêtres catholiques ne pouvaient plus sonner les cloches ni retourner dans les lieux où leur culte avait été supprimé. Jeanne déclara vouloir extirper l’« idolâtrie romaine » et supprima les bénéfices ecclésiastiques, dont les revenus furent attribués aux pauvres de l’Église réformée. Les patrons laïques conservaient seulement le droit de présentation, à condition que les bénéficiaires ne fussent pas catholiques. Enfin, tout obstacle posé par les évêques et abbés fut interdit, confirmant la mainmise de Jeanne sur la Réforme béarnaise. Cette radicalisation s’explique par plusieurs facteurs : la condamnation de Jeanne d’Albret par l’Inquisition, les affrontements religieux dans le Sud-Ouest qui l’obligèrent à inspecter et fortifier ses places, ainsi que son refus de céder au roi de France sur la réévaluation de la monnaie béarnaise, les « bacquettes », symbole de son autorité régalienne. Sa politique suscita de fortes résistances : plusieurs gentilshommes catholiques complotèrent contre elle, comme Jean de Belsunce, qui fomenta un soulèvement en Basse-Navarre, ou Jacques de Sainte-Colomme, qui projeta l’enlèvement de Jeanne et de son fils Henri, l’interdiction du calvinisme et le bannissement des étrangers protestants. Même les États de Béarn, dirigés par les évêques catholiques, contestèrent les ordonnances de 1566. Jeanne les imposa néanmoins avec fermeté, tout en maintenant le catholicisme dans les villages où il demeurait majoritaire.
+
+       </p>
+          </div>
+        )
+      },
+    
+      
+      {
+        titre: "Entre Prudence et Révolte",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Au début de 1567, Jeanne ramena son fils Henri de Navarre, alors âgé de quatorze ans, en Béarn. C’était une mesure de prudence : elle voulait l’éloigner de la cour de France, où les Guise et la couronne risquaient de le manipuler ou même de le retenir en otage. Elle lui donna une grande éducation rustique, à coups de fouet à chaque mauvais pas (Henri IV en tirera une fierté et commandera plus tard des fouets pour Louis XIII). Le climat, quant à lui, était très tendu : les protestants dénonçaient les violations de l’édit de pacification d’Amboise (1563). Louis de Condé, chef militaire huguenot, tentait encore, en 1567, de négocier avec la cour pour éviter un nouveau conflit. Mais Jeanne savait que la situation restait fragile. Les protestants découvrirent que, parallèlement aux édits de tolérance, le roi Charles IX et Catherine de Médicis envoyaient aux parlements et gouverneurs des contre-lettres secrètes leur ordonnant de ne pas appliquer réellement la liberté de culte. Cette duplicité fut vécue comme une trahison : aux yeux de Jeanne, la monarchie poussait les réformés à bout. En 1567, alors que les tensions religieuses s'exacerbèrent, Jeanne rencontra Condé et Coligny pour débattre de l’avenir du parti réformé. Tandis que Catherine de Médicis chercha à la retenir à la cour, Jeanne, méfiante, prétexte un voyage avec son fils. Quittant Paris pour le Poitou, puis la Gascogne, elle marque le début de la rébellion des huguenots contre le pouvoir royal catholique. Le 28 septembre 1567 éclata la « surprise de Meaux » : Condé et Coligny tentèrent de s’emparer du roi et de la reine mère pour les protéger des Guise. L’opération échoua, entraînant la deuxième guerre de Religion. Alors à Saint-Gaudens, Jeanne apprit la nouvelle et écrivit aussitôt à Catherine de Médicis. Elle protesta de sa loyauté et expliqua que les protestants n’avaient pris les armes que pour trois raisons : éviter leur extermination (« être rasés de dessus la terre »), servir sincèrement le roi, et protéger les princes du sang (Condé, Navarre, etc.). Elle rejeta donc la responsabilité de la guerre sur la duplicité de la cour, non sur les réformés. En 1568 parut la traduction en béarnais du Psautier de Clément Marot par Arnaud de Salette. La cour de France tenta alors d’impliquer Jeanne comme médiatrice entre catholiques et protestants. Elle refusa, consciente que la cour n’était pas impartiale et que sa position en serait affaiblie. Elle chargea La Vaupilière de porter ses plaintes au roi Charles IX : dénoncer la duplicité royale, les violations de l’édit de pacification, et présenter des requêtes pour son fils Henri de Navarre, afin qu’il puisse circuler librement en Guyenne pour veiller à l’application des édits, à la liberté de culte et à la protection des protestants.
+
+    
+        </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Complots et Menaces sur le Béarn",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Le cardinal de Lorraine, chef des Guise et puissant allié catholique, chercha à faire enlever Henri de Béarn par l’intermédiaire de Jean de Losses, capitaine fidèle à la cour. Cet épisode montre que Jeanne et son fils restaient directement menacés, tandis que la cour catholique jouait sur les deux tableaux : la diplomatie et la menace armée. Les demandes transmises par La Vaupilière furent refusées par Charles IX, confirmant que la cour n’avait aucune intention de protéger les droits des protestants ni de respecter les édits. Le 25 janvier 1568, depuis Pau, Jeanne d’Albret adressa une lettre ferme et spirituelle au procureur du roi à Périgueux, M. de Bordes, qui avait arbitrairement saisi les biens de son serviteur Lambert. Elle rappela que ce dernier travaillait pour son service à Paris et qu’il était indigne de le maltraiter. Ce sens élevé de la justice contraste fortement avec l’attitude de Catherine de Médicis et de Charles IX. Ce dernier, feignant la conciliation, demanda à Jeanne d’apaiser la situation « avec douceur », tout en surveillant étroitement le Béarn, inquiet des troubles religieux. Une révolte éclata alors en Basse-Navarre : Jeanne accepta de pardonner au peuple, mais non aux seigneurs rebelles. Dans le même temps, un complot, probablement fomenté par les Guise, fut découvert : il visait à enlever ses enfants, voire Jeanne elle-même. Elle dut fuir à Nérac, se rapprochant encore davantage des chefs protestants. Charles IX déclara que Jeanne avait toujours cherché la paix, mais qu’elle avait été contrainte de prendre les armes pour se défendre. Il ordonna à Noailles de protéger sa ville et d’éviter que les troubles ne nuisent aux « pauvres sujets » du roi, une manière détournée de signifier : « Surveillez bien cette affaire et empêchez que Jeanne ne prenne trop de pouvoir ».
+      </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Jeanne face à l’Europe Catholique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Charles mit alors la pression sur le jeune Henri : après avoir pris de ses nouvelles à la suite d’une fièvre, il lui recommanda de ne pas suivre sa mère ni les huguenots. Il remercia également Caumont d’avoir tenté de dissuader Jeanne de rejoindre les protestants en armes. Après la bataille de Jarnac et l’assassinat du prince de Condé, Jeanne d’Albret devint la cheffe politique des réformés. En septembre 1568, elle se rendit à La Rochelle, où elle ranima le courage de ses partisans, sacrifia ses biens et présenta son fils Henri, âgé de quinze ans, comme l’espoir du parti protestant. Accusée de rébellion, Jeanne prouva au contraire que c’était la couronne qui, dès octobre 1568, avait ordonné la saisie de ses domaines (15 octobre 1568) et nommé, le 4 mars 1569, le seigneur de Terride gouverneur de ses États, avec mission d’extirper l’hérésie et de confisquer les biens des protestants. En réalité, ce n’était donc pas Jeanne qui s’était rebellée contre Charles IX, mais bien la cour de France qui, avant même les événements de La Rochelle, complotait pour soulever ses sujets, confisquer ses terres et livrer son royaume à d’autres puissances, dont l’Espagne. Jeanne ne choisit pas La Rochelle par esprit de rébellion, mais parce qu’elle n’avait plus d’autre issue pour sauver sa vie et celle de ses enfants. Dans une lettre adressée à Charles IX le 16 septembre 1568, depuis Bergerac, Jeanne précisa que ses armes ne servaient qu’à trois fins : éviter l’extermination (« qu’on ne nous rase de dessus la terre »), servir loyalement le roi et protéger les princes de sang (défendre un royaume menacé). Elle s’attaqua à la maison de Guise, et surtout au cardinal de Lorraine (perfide et manipulateur). Elle rappela la trahison de ses adversaires lors de la surprise de Meaux, comparant leurs manœuvres à celles d’un peintre qui efface et refait sans cesse son tableau, et accusa encore le cardinal de « jouer à la pelote de sa foi et de son honneur ».  La Mothe-Fénelon, ambassadeur du roi de France, avait obtenu d’elle qu’elle pardonne les révoltés de Basse-Navarre, puis tenta de la convaincre de se rendre à la cour, ce qui revenait, pour elle, à se livrer à ses pires ennemis : les Guise et Catherine de Médicis. Jeanne refusa. Jean de Losses, capitaine gascon fidèle à la couronne, aurait reçu l’ordre d’enlever Jeanne ou ses enfants, tandis que Montluc, gouverneur catholique de Guyenne, aurait reçu une commission similaire selon Poeydavant. Les sources divergent, mais toutes confirment l’existence d’un véritable projet d’arrestation ou d’enlèvement. À cela s’ajoutait une menace internationale : en 1568, le pape Pie V projeta de déposer Jeanne et chargea le roi d’Espagne, Philippe II, de s’emparer du Béarn, tout en faisant comparaître la Reine de Navarre devant l'Inquisition Espagnole. Le souverain pontife avait d'ailleurs émis une bulle ordonnant une croisade contre les protestants, accompagnée d'un soutien financier et de l'envoi d'un contingent militaire. Face à ces périls, Jeanne joua un rôle diplomatique majeur, multipliant manifestes, lettres et négociations. Pendant ce temps, la terreur s’abattit sur le Béarn : les réformés, privés de défense, furent livrés à leurs ennemis, tandis que son lieutenant-général, le comte de Gramont, oscillait entre les deux camps.
+
+
+       </p>
+          </div>
+        )
+      },
+    
+    //    {
+    //     titre: "La forteresse de Navarrenx",
+    //     contenu: (
+    //       <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+    //         <p>
+    // La troisième guerre de Religion (1568-1570) toucha directement le Béarn lorsque Charles IX, jugeant Jeanne d’Albret prisonnière, ordonna la saisie de toutes ses possessions, y compris sa seigneurie souveraine, confiée à Antoine de Lomagne, comte de Luxe. Fidèle à sa foi, la reine résista avec le soutien des protestants français et de leurs alliés anglais et néerlandais, notamment depuis La Rochelle. Rapidement accusée de préparer la guerre sous couvert de paix, elle répondit dans ses Mémoires qu’en tant qu’autorité temporelle des réformés et belle-sœur de Condé, elle devait se défendre de l’accusation de rébellion. Sa stratégie consista à attaquer directement la maison de Guise, et surtout le cardinal de Lorraine, qu’elle décrivit comme perfide et manipulateur, afin de justifier la prise d’armes protestante. Elle rappela la trahison de ses adversaires lors de la surprise de Meaux, comparant leurs manœuvres à celles d’un peintre qui efface et refait sans cesse son tableau, et accusa encore le cardinal de « jouer à la pelote de sa foi et de son honneur ». Justifiant l’armement de 1568, elle affirma que les princes du sang, suivis de la noblesse et du peuple, avaient le devoir de défendre un royaume menacé. La crise éclata entre 1568 et 1571. En 1568, Jeanne obtint des États leur appui pour sa politique religieuse et ses ordonnances de 1566, qui interdisaient la prédication et le culte catholique. Partie rejoindre Coligny et Condé à La Rochelle, elle provoqua la réaction de Charles IX, qui envoya des troupes commandées par le baron de Terride. Les Béarnais, unis malgré leurs différences religieuses, se déclarèrent prêts à combattre. Les forces royales occupèrent le pays, mais Navarrenx résista héroïquement. Grâce à Mongomery, Jeanne leva une armée dans l’Albigeois et le Quercy, libéra Navarrenx le 6 août 1569, puis remporta la bataille d’Orthez le 15 août. Des représailles frappèrent les catholiques et, en 1571, les Ordonnances ecclésiastiques firent du calvinisme la religion officielle du Béarn. L’Académie protestante d’Orthez devint alors un centre intellectuel majeur, la cause de la souveraineté s’identifiant à celle de la Réforme. En 1568, les habitants de Soule se révoltèrent contre l’autorité de Jeanne d’Albret, reine de Navarre. Catherine de Médicis envoya un émissaire, La Mothe, pour apaiser la situation, mais les troubles persistèrent : des bandes armées pillèrent, saccagèrent des maisons et s’en prirent aux représentants du pouvoir. En 1567-1568, les Soulétins rejoignirent les ligueurs catholiques révoltés en Basse-Navarre et attaquèrent plusieurs localités. Jeanne d’Albret réagit en envoyant des troupes commandées par son fils Henri (le futur Henri IV), qui repoussèrent les insurgés. Ceux-ci, chassés, se vengèrent en ravageant le village de Montory. Malgré les interventions, l’anarchie régna encore un mois en Soule, où la reine ne put rétablir l’ordre sans risquer d’aggraver la crise. La paix mit du temps à s’installer en Soule, malgré les tentatives de réconciliation.
+    //    </p>
+    //       </div>
+    //     )
+    //   },
+     {
+        titre: "La Forteresse de Navarrenx",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Le 23 mars, la paix de Longjumeau fut signée, mais la tension demeura. Le 23 août, Condé et Coligny se réfugièrent à La Rochelle ; Jeanne, se sentant en danger, s’y rendit également et confia la lieutenance générale au baron d’Arros car elle n'avait plus confiance en Gramont. Pour Londres, elle engagea ses bijoux afin de financer l’armée huguenote. Le 18 octobre 1568, sous prétexte que Jeanne d’Albret était tombée aux mains des huguenots, le roi Charles IX ordonna la saisie de ses biens en France et chargea Charles de Luxe de prendre possession, en son nom, de la Basse-Navarre et de la Soule, tout en préparant l’invasion du Béarn. D’Arros, anticipant une attaque, se tint prêt à défendre le pays. Ce même mois d’octobre, après s’être emparé de la Basse-Navarre, Charles de Luxe prit aussi le château de Mauléon, sans égard pour son beau-frère, le seigneur de Belsunce, qui en était gouverneur et s’était réfugié à La Rochelle auprès du prince Henri. Maître de la Soule, Luxe établit un avant-poste à Osserain, à la frontière entre la Soule, la Basse-Navarre et le Béarn. Mais Gramont, bras droit de d’Arros, parvint à le déloger en janvier 1569. L’année 1569 fut désastreuse pour la Soule. Le 4 mars, le duc d’Anjou, futur Henri III, ordonna au vicomte de Terride de soumettre le Béarn, tandis que Luxe et les troupes catholiques navarraises et souletines envahissaient la région, multipliant les violences et les pillages. Les catholiques béarnais s’emparèrent d’Oloron, Luxe prit Nay, et Domezain pilla Sauveterre. Impuissant face à cette invasion, d’Arros dut se replier sur Navarrenx. Terride s’empara rapidement de tout le Béarn, rétablit le culte catholique, interdit le culte réformé et, soutenu par les troupes de Luxe, l’immense armée française entreprit le siège de Navarrenx, commencé le 24 mai. Face à cette offensive, Jeanne d’Albret réagit et confia au comte de Montgomery, le 10 juillet 1569, la mission de repousser les envahisseurs et de délivrer d’Arros. À cette occasion, elle fit frapper une médaille affirmant sa détermination : « Jeanne, par la grâce de Dieu, reine de Navarre, seule et avec les autres, pour Dieu, le royaume, les lois et la paix. Ou victoire entière, ou paix assurée, ou mort honneste ». La campagne de vingt jours qui suivit fut saluée par Montluc lui-même comme « le plus beau traict de guerre du siècle ». Les seules exécutions attestées concernèrent Bassillon, gouverneur de Navarrenx, convaincu de trahison pour avoir voulu livrer la Navarre aux Espagnols. À la tête d’une armée, Montgommery quitta Castres le 27 juillet, traversa le comté de Foix où il recruta des soldats fidèles à Jeanne d’Albret, et, forçant les étapes, entra en Béarn entre le 6 et le 8 août 1569. Il marcha alors sur Navarrenx, que Terride dut abandonner après un siège de trois mois, laissant derrière lui son artillerie. Montgommery poursuivit ensuite sa progression : tandis que Terride se repliait sur Orthez, Oloron et Mauléon, il ne lui laissa aucun répit et, le 15 août, le délogea du château de Moncade à Orthez. Poursuivant sa victoire, Montgommery entra triomphalement dans Pau, la capitale du Béarn, le 23 août. Luxe et Domezain se réfugièrent en Soule, mais les troupes de Montgommery les y poursuivirent, ravageant le pays et incendiant de nombreuses églises. Charles de Luxe fut finalement chassé de Mauléon, dont la ville fut brûlée et saccagée ; la garde du château fut confiée au capitaine huguenot Pierre d’Aramits. Cependant, retiré dans son château de Tardets, Charles de Luxe ne renonça pas et prépara sa revanche. Il attaqua Saint-Jean-Pied-de-Port, fidèle à la reine de Navarre, mais dut se replier sur la Soule. Réunissant ses troupes à Barcus, il lança ensuite une offensive sur le Béarn et s’empara de Sainte-Marie, d’où il fut délogé par d’Arros. De nouveau battu, Luxe se replia en Basse-Navarre, non sans tenter de reprendre Mauléon ; mais le capitaine Aramits défendit la place avec acharnement. Au cours de ces combats, les Béarnais incendièrent encore une fois la ville. Dans une lettre à la reine de Navarre, Enecot de Sponde déplora cet acte et s’interrogea sur la décision de brûler le château et la ville de Mauléon au lieu d’y établir une garnison, comme le conseil l’avait prévu.
+
+  
+  
+  
+     </p>
+          </div>
+        )
+      },
+
+
+//       // Les accusations catholiques de cruautés, notamment à Artix, Nay ou après Orthez, le 15 août, sont infondées : aucun massacre n’a été prouvé, et Montgomery, loin d’imiter le baron des Adrets, se distingua par sa rapidité  et sa discipline.
+// Les seules exécutions attestées concernèrent Bassillon, gouverneur de Navarrenx, convaincu de trahison pour avoir voulu livrer la Navarre aux Espagnols.
+
+        {
+        titre: "Entre Guerre et Pardon",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 6 janvier 1570, Charles IX confia à Charles de Luxe la charge de lieutenant général du roi en Soule, déclenchant de nouveaux combats qui aboutirent à la reprise de Mauléon par les forces royales. À Navarrenx, Jeanne punit sévèrement les catholiques béarnais ayant soutenu les troupes royales : confiscations de biens, exils et proscriptions. Dès le 28 janvier 1569, elle avait publié une ordonnance bannissant le catholicisme, puis ordonné, le 2 octobre, la saisie des biens ecclésiastiques. À Lescar, plusieurs chanoines catholiques restèrent pourtant sur place malgré la confiscation de leurs biens. En 1570, elle interdit le culte catholique et confia les biens de l’Église à l’État. Progressivement, certaines mesures furent adoucies : le 25 novembre, des lettres de grâce annulèrent partiellement les proscriptions et rétablirent plusieurs anciens membres catholiques du Conseil souverain ou des États, à condition qu’ils jurent fidélité à leur souveraine. Des violences éclatèrent à Pau et dans quelques localités, mais non à Orthez ni à Navarrenx. Malgré ces troubles, Jeanne proclama, le 31 mai 1570, un pardon général à quasi tous ses sujets. Après ces épreuves, la paix de Saint-Germain du 8 août 1570, mit fin à la guerre. Jeanne remercia Charles IX pour cet édit, soulignant la joie du peuple béarnais et sa fidélité au roi. Elle écrivit qu’elle ne désirait « que le bien et le service du royaume ». La Soule, elle, retrouva ensuite une période de tranquillité.
+
+ </p>
+          </div>
+        )
+      },
+
+
+// Certains lui attribuèrent les exécutions de prisonniers à Navarrenx, mais les sources montrent qu’elle n’y prit aucune part : les ordres arrivèrent trop tard, et les morts furent causées par des soldats agissant sans instruction. Jeanne d’Albret n’ordonna donc aucun massacre.
+
+
+       {
+        titre: "La Vertu, Clé de la Liberté du Béarnais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En mars 1571, Jeanne d’Albret se félicita du vote des trois États du Béarn, qui lui confirma la fidélité de la majorité de ses sujets. Elle annonça la convocation d’États généraux pour entendre leurs plaintes et leur promit justice. En signe de confiance, elle réduisit son armée et garantit la liberté de conscience, le respect des sépultures et la paix religieuse. Grâce à Bernard d’Arros, elle savait qu’il existait encore des notables catholiques dans plusieurs communautés béarnaises, notamment à Lescar, Oloron et Morlaàs. Ce même mois, elle rappela à son lieutenant Bernard d’Arros qu’aucun sujet ne devait être « forcé ni contraint pour le faict de la conscience », marquant ainsi sa position de tolérance. C’est également à cette époque que fut publiée la traduction en basque du Nouveau Testament par Jean de Liçarrague (1571), signe de la vitalité intellectuelle et religieuse de son règne. Le 9 novembre, Jeanne fut bien accueillie en Béarn par ses sujets des deux religions et proclama une amnistie générale. Sous la pression des synodes et des États de Béarn, où siégeaient encore des membres catholiques, elle promulgua le 26 novembre 1571 ses ordonnances ecclésiastiques. Celles-ci confièrent la gestion des biens ecclésiastiques à un Conseil chargé de financer le culte réformé et l'accès gratuit aux écoles, le chef d'État ayant comme devoir de veiller au salut de ses sujets. Selon Jeanne, les biens de l’Église appartenaient au peuple. Elle ne prévoyait pas de sanctions contre les catholiques et les laissait participer à la messe dans les provinces voisines. La Reine instaure un ordre où le péché et le crime sont confondus, une personne suspectée de conduite "impure" (jeu ou débauche par exemple) subit la peine ecclésiastique (confession publique) et/ou la peine civile (pilori ou bannissement) car ce sont des désordres sociaux qui attirent la colère de Dieu sur la principauté. Le consentement est synonyme de préméditation. Elle est proche de la Somme théologique, ici tout comme on ampute un membre infecté pour sauver l'organisme entier, il est louable pour l'autorité publique de supprimer un homme dont le péché risque de détruire la collectivité, « un peu de ferment corrompt toute la pâte » (1 Co 5, 6), car en s'écartant de la raison par le péché, l'homme perd sa dignité humaine et tombe au rang de la bête nuisible dont on peut disposer pour l'utilité des autres ((Pr 11, 29),(Ps 49, 21)). De plus, le véritable responsable d'une action est l'autorité qui l'ordonne. Dans chaque village, un conseil d'anciens (laïcs) et le pasteur surveillent tout, la "police des mœurs". Jeanne autorisait l'usure raisonnable pour favoriser l'économie, tout en punissant l'exploitation des pauvres. L'unification des poids et mesures était une mesure de justice sociale pour éviter que les marchands ne trompent les paysans. Pour Jeanne, la taverne est l'antichambre de l'enfer, l’ivrognerie est un crime (boire doit servir à restaurer ses forces pour travailler et servir Dieu, pas à rigoler grassement). Les jeux de cartes, de dés et de hasard sont bannis (ils mènent aux jurons et à la violence). La danse était surnommée le "Saut du Diable", donc interdite, les chants profanes sont remplacés par les Psaumes (Arnaud de Salette) pour que le paysan chante la gloire de Dieu et non des chansons de foire. Les foires restent autorisées pour l'économie, mais dès que la transaction est finie, on rentre chez soi. L’instruction primaire (lire) était ouverte à tous les Béarnais sans aucune distinction avec une prise en charge par la communauté des plus pauvres (« l'argent ne devait pas être un frein au salut »). En encadrant les mœurs et en protégeant les plus faibles tout en suivant la Tradition, la Reyne libère le peuple du chaos des passions individuelles et, enlève au béarnais le fardeau du choix moral et juridique constant. La vie devient "logique" et prévisible sans que le riche écrase le pauvre (libéralisme). Cette "liberté par la loi" permet aux Béarnais de vivre dans un cadre clair et sécurisé, où l'intérêt collectif  priment sur l'égoïsme et l'exploitation. Pour Jeanne, brider l'égo par la loi, c'est libérer la place pour Dieu et donc pour son prochain. 
+
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "La Dernière Reine de Navarre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En février et mars 1572, Jeanne d’Albret se rendit à Chenonceaux pour négocier le mariage de son fils Henri, futur Henri IV, avec Marguerite de Valois. Dans ses lettres à son fils, elle se plaignit de la moralité de la cour et décrivit un milieu corrompu : « Pour rien au monde je ne voudrais que vous veniez vivre ici. Même si je savais que c'était mauvais, je trouve cela encore pire que je ne le craignais. Ici, ce sont les femmes qui font des avances aux hommes, et non l'inverse. Si vous étiez ici, vous ne vous échapperiez jamais sans une intervention spéciale de Dieu. » Elle assimila cette cour à un lieu de débauche, de luxure et de tentation, un véritable « piège sexuel » tendu aux hommes. Ce projet de mariage visait à sceller la réconciliation entre catholiques et protestants. Coligny et Louis de Nassau, réhabilités par Charles IX car il avait besoin d’eux, pensaient à marier Henri de Navarre à Élisabeth et donc une unification protestante (la loi salique l'évitant). Montée à Paris, Jeanne reçut un chien de la reine Margot, mais Catherine de Médicis ne l’écouta pas et se moqua d’elle. Pourtant, si Jeanne refusait de signer, cela signifiait la rupture avec la France et l’emprise accrue des Guise (se disant de Charlemagne par les Lorrains). Marguerite souhaitait d’ailleurs épouser le duc de Guise, mais celui-ci se maria avec Catherine de Clèves. Catherine de Médicis, quant à elle, envisageait un mariage avec l’Espagne. Montgomery conseilla à Jeanne de maintenir le mariage. Elle s’y résolut finalement, consciente des enjeux politiques. Mais la reine mourut subitement en juin 1572, peu avant la cérémonie, laissant un royaume affermi, pacifié et profondément attaché à son indépendance. À sa mort, Jeanne exprima ses dernières volontés : elle souhaitait que sa fille, filleule de Catherine de Médicis, épouse un grand prince protestant et qu’ils vivent en harmonie. À Henri, son fils, elle laissa un ultime conseil : qu’il protège sa sœur « après Dieu » et qu’il lui serve de père.
+ </p>
+          </div>
+        )
+      }
+      
+    ]
+  },
+  
+  'france': {
+    titre: "Entre Paris et Navarrenx",
+    periode: "Renaissance",
+    resume: "Le Béarn sous le Roi de France",
+    introduction: "Entre France et Béarn, l'avènement d'Henri IV....",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+
+
+
+
+
+
+      {
+        titre: "Le Béarn après la Saint-Barthélemy",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Jeanne d’Albret avait exprimé dans son testament la volonté que sa fille soit tenue à l’écart de la cour des Valois et « nourrie » en Béarn, afin de préserver sa foi et sa droiture. À la suite de la mort de la reine, les tensions éclatèrent violemment en 1572, le 22 août, les Guise tentèrent d’assassiner l’amiral de Coligny, et deux jours plus tard, le 24 août, eut lieu le massacre de la Saint-Barthélemy, déclenché, selon les récits, après que Catherine de Médicis aurait persuadé Charles IX, pourtant alors en bonne entente avec les huguenots, que les protestants complotaient contre lui. Ce jour-là, Catherine de Bourbon se trouvait probablement au Louvre avec Madame de Tignonville ; elle fut sauvée avec son frère Henri et leur cousin Henri, mais fut contrainte de se convertir au catholicisme. Son oncle, le cardinal Charles de Bourbon, très influent en Béarn, fit signer le 16 octobre 1572 par Henri IV un édit imposant le retour du catholicisme en Béarn et chargeant le comte de Gramont de le faire enregistrer, ce à quoi les protestants du pays, menés par le baron d’Arros, s’opposèrent vigoureusement, allant jusqu’à emprisonner Gramont avant de le relâcher après négociations avec le roi de Navarre ; Arros demeura lieutenant général du Béarn jusqu’à son remplacement en 1575 par le baron de Miossens. Catherine et son frère Henri demeurèrent ensuite quatre ans en otage à la cour de France, milieu marqué par la débauche ; cette expérience renforça chez Catherine sa rigueur morale, mais elle y développa également un goût pour la musique, la danse et les bijoux. Fidèle à l’esprit de Calvin et aux enseignements de Jeanne d’Albret, elle se forgea l’image de la « princesse des vertus », attachée, selon les mots de sa mère, aux « saints mariages ».
+        </p>
+          </div>
+        )
+      },
+       {
+        titre: "Le Départ de la Capitale",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Le 4 février 1576, Henri de Navarre quitta la cour, et le 6 mai 1576 fut signé l’édit de Beaulieu, après la victoire des « malcontents » menés par le duc d’Alençon : cet édit accordait une large liberté de culte aux réformés, sauf à Paris, et valut à Alençon le titre de duc d’Anjou. Dans ce climat d’apaisement fragile, Marguerite de Valois demeura à Paris tandis que Catherine de Bourbon quitta la capitale. Avant son départ, Henri III ordonna à Fervacques, courtisan jouant double jeu, de l’accompagner avec instruction de la faire revenir si elle persistait dans la foi réformée ; toutefois, Catherine déclara à Palaiseau, le 31 mai 1576, devant ses compagnons, qu’elle en « avait assez de la messe », même si elle attendit encore quelques jours avant de se prononcer publiquement. Arrivée à Châtellerault, ville fortement protestante, elle assista à un prêche et affirma publiquement que son abjuration avait été extorquée par la contrainte et était donc « nulle et non avenue ». Peu après, à Parthenay, elle retrouva son frère Henri de Navarre ; ensemble ils se rendirent à Niort où, le 13 juin 1576, Henri abjura à son tour le catholicisme et redevint protestant. Catherine refusa ensuite le mariage avec le prince de Condé que son frère lui proposait, éprouvant une inclination personnelle pour Henri de La Tour d’Auvergne, union qui ne se réalisa jamais. Pendant ce temps, la paix de Beaulieu s’avérait illusoire, les troubles reprenaient, et en Béarn, Armand de Gontaut, fils de Françoise (titulaire du château d'Audaux) et calviniste passé avec les catholiques que Jeanne d’Albret n’avait pas amnistié, fut nommé sénéchal par Henri de Navarre ; la cour de Béarn refusa cette nomination, mais Henri vint plus tard en personne la confirmer.
+      </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Henri de Navarre en Bigorre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Henri, marié, se rendit en Guyenne pour sécuriser le Béarn, la Bigorre et le Foix. Les catholiques de Bigorre, espérant un règne favorable, rentrèrent à Tarbes avec les huguenots, mais la haine entre les deux partis demeura vive. En avril 1573, Raymond de Cardaillac, seigneur de Sarlabous, tenta d’enlever Gaza, juge-mage protestant de Tarbes, en envoyant son homme Dominique Abadie ouvrir les portes de nuit. À son signal, Sarlabous entra dans la ville, mais Gaza s’enfuit en chemise jusqu’à Gayan, puis se réfugia à Pau. Sa maison et celles de ses coreligionnaires furent pillées. La rumeur d’une vengeance béarnaise effraya tant les habitants qu’ils passaient leurs nuits hors des murs. Ce n’est qu’en juin, lorsque La Valette envoya en garnison la compagnie de Gramont, renforcée par celles de Montesquiou et de Larboust, que le calme revint. Toutefois, les Béarnais reprirent Lourdes, massacrèrent les défenseurs, incendièrent vingt maisons, pillèrent la ville et emmenèrent plusieurs habitants prisonniers à Pau, libérés ensuite contre rançon. La prise de Lourdes par les protestants alarma tout le Lavedan ; les capitaines locaux, dont Ourout et Estivaire, organisèrent la résistance et mirent en fuite le baron d’Arros, retranché ensuite en Béarn. En Bigorre, après plusieurs années d’incertitude, la rumeur d’une reprise des armes par les huguenots béarnais en 1574 poussa les Tarbais à solliciter la médiation de Gramont, gouverneur catholique, qui obtint une trêve fragile. Peu après, le capitaine Lizier, châtelain du roi de Navarre à Barbazan-Dessus, s’empara de Tarbes par ruse et dévasta le pays. Gramont réagit aussitôt, fortifiant Lourdes, regroupant ses troupes et, au printemps 1574, menant un siège décisif qui permit la reprise de Tarbes et la pacification du comté. Les États réunis à Bagnères réorganisèrent alors l’administration, nommant Mansan gouverneur et réparant les places fortes. Malgré un nouvel accord tenté en 1575 entre Bigordains et Béarnais, les hostilités reprirent : Mirande fut assiégée, Vic et Lescurry brièvement occupées, puis la région finalement pacifiée sous la protection du roi de Navarre et de sa sœur, inaugurant près de neuf ans de paix. 
+      </p>
+          </div>
+        )
+      },
+       {
+        titre: "Madeleine de Miremont",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Madeleine de Saint-Nectaire est la fille d'un bailli des montagnes d'Auvergne et de Marguerite d'Étampes. Née en 1526, elle épousa le 29 mai 1548 Guy de Miremont, seigneur de Saint-Exupéry. Devenue veuve assez tôt, elle dédaigna les hommages pour se consacrer à d'autres vertus. Elle se montra comme l'un des "plus intrépides champions du parti protestant". Elle se signala tout particulièrement dans la guerre qu'elle mena contre François de Rosières, le seigneur de Montal, qui était lieutenant du roi dans la haute Auvergne. Devenue Madeleine de Miremont, elle marchait à la tête d'une troupe de soixante gentilshommes et battit à plusieurs reprises les troupes de Montal. Vers 1574, ce dernier rassembla une armée et vint ravager les environs du château de Miremont. La comtesse réunit ses propres forces, marcha contre lui et lança à ses soldats : "Faites comme moi!...". Suivie de seulement quelques cavaliers, elle se précipita sur l'ennemi mais se laissa "témérairement entraîner" loin de son château. Montal profita de cette imprudence et fit "investir le château" avant qu'elle ne puisse y retourner. Bloquée à l'extérieur, elle partit chercher du secours à Turenne, mais ne réussit à obtenir que quatre compagnies d'arquebusiers. En attendant plus de renforts, elle décida d'introduire secrètement cinquante hommes dans la forteresse. Montal fut averti de ce projet et s'avança contre elle. Après "une escarmouche des plus vives", Madeleine saisit "l'instant favorable", chargea la cavalerie ennemie et la "mit en déroute". C'est durant cette bataille que périt son grand adversaire, François de Rosières, "blessé de la main de Madeleine". Ces exploits furent tels qu'Henri de Navarre (le futur roi Henri IV) se serait écrié : "Ventre saint-gris! ... si je n'étais pas roi, je voudrais être Madeleine de Saint-Nectaire!...". Madeleine se distingua encore par sa valeur plus tard, en tant que partisan du roi Henri III contre la Ligue. Elle mourut en ne laissant qu'une fille, Françoise de Miremont, qui épousa le 19 mars 1571, Henri de Bourbon, vicomte de Lavedan.
+      </p>
+          </div>
+        )
+      },
+
+
+
+       {
+        titre: "Navarrenx, refuge et pouvoir",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ En janvier 1577, Catherine de Bourbon fut nommée régente des domaines du sud-ouest et gouvernante du Béarn, exerçant cette charge au nom de son frère Henri de Navarre, sauf lorsque celui-ci, pour des raisons politiques ou familiales, cherchait à s’émanciper davantage ou à se rapprocher de Catherine de Médicis et de la reine Margot (proche de Francois Foix de Candale, traducteur de Hermes Trismegistus, l'hermétisme est très présent à la cour de Nérac). Prévoyante, elle fit transférer une partie du trésor de Pau vers la forteresse de Navarrenx, jugée plus sûre. Autour d’elle se forma un entourage composé notamment du secrétaire Enecot de Sponde, ancien serviteur de Jeanne d’Albret, et d’un triumvirat constitué d’Henri d’Albret (qui s’entendait bien avec Henri IV), du baron d’Arros et de Philippe de Montaut, baron de Bénac. En 1578, Armand de Gontaut fut nommé lieutenant général du Béarn. À partir de 1582, la situation changea : après la disparition du baron d’Arros, son principal conseiller devint Saint-Geniès, baron de Gontaut-Biron, seigneur d’Audaux et époux de Jeanne de Foix, catholique. En décembre 1585, Henri III et Catherine de Médicis rejoignant la Ligue catholique, Marguerite de Valois leur remit la ville d’Agen et sa région ; menacée à la fois à Agen et à Pau, Catherine se réfugia à Navarrenx, où le seigneur d’Audaux organisait la défense du pays. Elle y demeura de 1585 à 1588, après y avoir déjà vécu une année entre 1579 et 1580, alternant parfois avec des séjours dans les châteaux voisins d’Audaux et d’Hagetmau en raison du logement précaire. Pendant ce temps, à Nérac, Henri de Navarre cherchait pour sa sœur un mariage apte à unir leurs terres et renforcer leur pouvoir. Plusieurs prétendants furent envisagés comme le duc de Lorraine, trop proche de la Ligue catholique, il fut écarté. L’attention se porta alors sur Charles de Bourbon, comte de Soissons, cousin du roi et héritier potentiel du trône en l’absence d’enfant. Henri tenta de l’éloigner de la Ligue, tandis qu’une véritable complicité naissait entre Catherine et Soissons, l’intelligence vive de l’une et l’élégance de l’autre les rapprochant ; le comte célébra même son vingt et unième anniversaire en Béarn, à Hagetmau, Nérac, Audaux et Pau, aux côtés d’Henri IV. Mais en mars 1588, la situation se dégrada : la Ligue menaçait, Catherine se sentait isolée et, inquiète, pressa Soissons, parti en Béarn, de revenir, lui écrivant des lettres où se mêlaient reproches et tendresse. Le 10 mars, la mort soudaine du prince de Condé, chef du parti protestant, à Saint-Jean-d’Angély, bouleversa tout : Soissons devenait le nouveau chef de la branche cadette des Bourbons, rôle stratégique mais dangereux. Catherine réagit vivement, laissant dans une lettre empreinte de douleur et de soupçon entendre que Condé avait peut-être été assassiné, puis, sur un ton plus intime, reprocha à Soissons son silence et son apparent désintérêt, tout en justifiant sa propre réserve dictée par l’étiquette. Pendant ce temps, les rumeurs accusaient Charlotte de La Trémoille, la veuve de Condé, d’avoir empoisonné son mari. Henri de Navarre et Soissons se rendirent aussitôt à Saint-Jean-d’Angély pour faire la lumière sur cette mort suspecte.
+
+ 
+   </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Catherine face aux intrigues",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1588, tandis que son frère Henri de Navarre combat sur les champs de bataille, Catherine de Bourbon maintient la stabilité du Béarn en préservant la coexistence entre catholiques et protestants — les premiers continuant d’aller librement à la messe en Soule, Bigorre ou Navarre —, en respectant les droits de la noblesse et en convoquant régulièrement les États du Béarn, n’hésitant pas à rappeler à l’ordre ses conseillers, voire le lieutenant général de son frère. La tension est extrême : l’Invincible Armada de Philippe II menace l’Angleterre, Catherine renforce la défense pyrénéenne, met en place un réseau d’alerte, soutient militairement Henri, tout en faisant face aux troubles intérieurs suscités par les ligueurs du maréchal de Matignon et du baron de Poyanne. Dans ce contexte, le comte de Soissons lui manifeste sa loyauté : son armée repousse celle de Poyanne au prix de lourdes pertes, dont la blessure grave d’Amadis de Castelnau, ce que Catherine interprète comme la preuve du courage et du dévouement du prince. À la fin de 1588, la France s’enfonce davantage dans les guerres de Religion : le 23 décembre, Henri III ordonne l’assassinat du duc de Guise, puis l’exécution du cardinal son frère le lendemain, et, pour avertir Soissons, lui montre lui-même les cadavres dans un geste de « coup de majesté ». Paris se soulève alors pour la Ligue, et Henri III, contraint, s’allie à Henri de Navarre ; ensemble, ils marchent sur la capitale, échouent et se replient sur Saint-Cloud. Soissons quitte ensuite la Cour pour combattre et remporte la victoire de Croix-du-Perche en mars 1589, mais son excès de fougue entraîne sa capture près de Nantes par le duc de Mercœur, chef de la Ligue en Bretagne, qui l’enferme au château de Nantes le 6 juin. Il y organise une évasion spectaculaire : feignant la maladie, il se fait remplacer dans son lit par un jeune page, se cache dans un panier de provisions que ses serviteurs ressortent du château sans alerter les gardes, puis s’enfuit ; Catherine y voit un signe éclatant de la Providence.
+   </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Tenir le Béarn sous Henri IV",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   À Pau, Catherine reçoit les nouvelles grâce à un réseau de courriers qu’elle organise. Dans une lettre du 4 janvier 1589, elle confirme l’exécution des Guise et redoute l’interception des messagers. Pendant ce temps, Soissons, pris dans la tourmente, soutient Henri IV, tous deux convaincus que Charlotte de La Trémoïlle a empoisonné son mari, le prince de Condé, mais leur alliance est aussi motivée par l’intérêt, car Soissons espère récupérer les biens des Condé, la princesse enceinte risquant la déchéance en cas de culpabilité reconnue. Leur entente se brise lorsque des rumeurs défavorables à Soissons parviennent à Henri de Navarre, qui envisage de marier sa sœur à Jacques VI d’Écosse. Déçu, Soissons se rapproche alors d’Henri III en juillet 1588, obtient des lettres de grâce le 20 août, après sa condamnation pour avoir rejoint les huguenots avant Coutras, et devient un instrument du roi contre les Guise, Henri III allant même jusqu’à considérer de le marier à la sœur d’un cardinal romain pour contrecarrer les alliances prévues par la Ligue. Le 11 juillet 1589, depuis Saint-Geniès, Catherine écrit à son cousin pour s’inquiéter du sort de ses messagers et réaffirmer sa fidélité à son frère. Ses lettres témoignent d’un sens aigu de l’administration et d’une autorité ferme. L’été apporte de nouveaux bouleversements. Fin juillet 1589, les deux rois, Henri III et Henri de Navarre, échouent à prendre Paris. Le 1ᵉʳ août 1589, Jacques Clément assassine Henri III, entraînant l’extinction des Valois et l’avènement d’Henri IV. Catherine devient alors sœur du nouveau roi de France, Henri IV. Dès le 19 août, elle ordonne au baron de Pailhès, son gouverneur, de proclamer solennellement l’avènement du nouveau souverain : « Le Roi, mon seigneur et frère, a voulu que, comme son fils et héritier, vous promettiez de lui être fidèles. » Elle appelle la noblesse à se rallier sans délai à Henri IV, affirmant son sens de l’État et sa fidélité constante. Elle comprend mieux que quiconque la nécessité de préserver l’unité du royaume et de la dynastie. Catherine doit désormais concilier deux missions : servir son frère, devenu roi de France, et poursuivre la régence du Béarn. Elle occupe cette fonction avec ténacité jusqu’au 26 octobre 1592, date de son départ, motivé par un drame personnel lié à Charles de Soissons. Malgré une santé fragile, fièvres intermittentes, chutes et blessures, notamment à la suite d’un accident de cheval en août 1592, elle fait preuve d’une énergie remarquable. Elle reprend inlassablement ses activités de régente, tout en conservant une personnalité vive et attachée aux plaisirs de la vie. Sa gourmandise est notoire : les notables l’honorent de confitures, de saumons ou d’aloses. Bonne calviniste, elle ordonne des jeûnes publics, mais sait allier rigueur religieuse et goût de la table. Son raffinement vestimentaire est tout aussi célèbre : elle dépense près de dix-huit mille livres entre 1590 et 1591 pour des tissus de soie, de la vaisselle d’argent doré et ciselé, et des bijoux ornés de diamants. Jamais elle n’apparaît en public sans parures. Catherine aime autant offrir que recevoir : elle rivalise avec son amie Corisande en cadeaux somptueux. Pour les étrennes de 1591, elle offre à la dame d’Hagetmau un parasol incrusté de diamants et un collier d’or, tout en gâtant la fille de Corisande de bijoux d’or, de perles et de cristal. Généreuse, elle gratifie également les membres de sa maison, notamment son médecin-apothicaire, mais cette prodigalité la met souvent en difficulté financière. Comme en 1574, elle doit solliciter dons et avances pour combler le déficit. Ces soucis sont aggravés par la lenteur de son frère, Henri IV, qui, lui-même en manque de fonds, n’adopte que le 23 octobre 1590 des mesures provisoires concernant la succession de Jeanne d’Albret, ouverte depuis 1572. Il accorde alors à sa sœur les revenus et droits sur plusieurs domaines, le duché d’Albret, les comtés d’Armagnac, la seigneurie de Lectoure, les vicomtés de Limoges et d’autres baronnies. Catherine doit toutefois transformer cette donation en réalité concrète, tâche rendue difficile par les guerres et le désordre qui ravagent ces régions. Elle ne perçoit en outre aucun revenu du Béarn ni de la Navarre, restés à l’écart des pillages.
+      </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Catherine, régente de la nuance",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Les lettres patentes s’inscrivent dans la décision du 13 avril 1590, par laquelle Henri IV choisit de ne pas incorporer les « biens de la couronne » au royaume, contre la coutume française. Il justifie cette exception en rappelant que « tout son domaine ancien enclavé dans le royaume » n’avait « point d’enfants, Madame, sa sœur » et « qu'il ferait tort à la nature de ses terres » (comme le droit d'aînesse ou la loi sur l'héritage !). Fidèle à la mémoire de sa mère, Catherine conserve un rôle officiel, sans disposer de personnel propre. Avec le pasteur Palma-Cayet, elle ouvre les sessions des États au nom du « Seigneur Vivant » et demande aux synodes d’envoyer des « ministres de la Parole de Dieu ». En période de crise, elle encourage prières publiques et jeûnes pour attirer la protection divine. Catherine refusa de condamner les catholiques qui allaient à la messe dans les régions voisines, étant ennemie de la contrainte. Une lettre au maréchal de Matignon illustre sa position prudente. Ce dernier, catholique rallié à Henri IV mais dont le Parlement demeurait hostile aux réformés, avait poursuivi deux écoliers pour propos religieux. Alertée, Catherine intervint, avertissant Matignon que ce procès risquait d’enflammer les esprits. Elle recommanda de suspendre l’affaire jusqu’à obtenir un « commun consentement ». Par ce geste, elle réaffirme sa loyauté envers son frère et son souci d’apaisement. Pour elle, le conflit en cours n’est pas d’abord religieux, mais une guerre civile opposant les légitimistes protestants aux catholiques et à la Ligue, perçue à la fois comme un parti étranger et un mouvement révolutionnaire. Dans cette attente d’un règlement royal, elle prône la mise en retrait des débats théologiques. Son amitié avec la famille de Gramont illustre cet esprit de conciliation. Corisande de Gramont fiance sa fille à François de Caumont-Lauzun, et les fiançailles sont célébrées à Noël 1591 au château de Duras, en présence de la haute noblesse gasconne. Catherine offre une bague à la jeune fiancée et se rend elle-même à la cérémonie, malgré la présence de nombreux Ligueurs. Conseillée par Saint-Geniès et le baron de Bénac, elle gouverne désormais de manière plus autonome. Armand de Gontaut-Biron, affaibli, reste à Audaux, tandis que Catherine envoie Bénac en mission en Bigorre et au Pays de Foix. Elle use de son nouveau titre d’« Altesse Royale » et demande que les lettres des États lui soient adressées à « Sa Grandeur ». Elle signera simplement « Catherine », suivant l’usage de la cour de France.
+     </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "En Voyage à Bayonne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ En voyage officiel à Bayonne (en mars 1591), Catherine de Bourbon combine réunions de travail sur les affaires locales et festivités : ballets, mascarades, feux d’artifice. Bayonne n’avait pas connu un tel faste depuis la visite de Catherine de Médicis et Charles IX en 1564-1565. Catherine reçoit presque les mêmes honneurs que sa marraine, et les dames de la noblesse l’accompagnent lors de ses promenades à cheval, lui offrant une pièce d’ambre gris en souvenir. Consciente de son rang, elle décide en juin 1591 de se rendre aux Eaux-Bonnes pour soigner ses rhumes. Elle est accompagnée de pasteurs, probablement Palma-Cayet, de serviteurs, de Jérôme Vize et de charpentiers. Les pasteurs doivent rappeler les préceptes de la morale chrétienne dans ces lieux jugés propices aux écarts, tandis que les charpentiers améliorent le logement de Madame, jusque-là sommaire aux Eaux-Chaudes. Jérôme Vize reçoit pour mission de poser deux plaques commémoratives. La première, fixée dans la gorge du Hourat, porte une inscription latine traduite par Palma-Cayet : les rochers y « parlent » pour saluer la « vierge Catherine, princesse des Français et des Navarrais », passée par là en 1591. Une seconde plaque, placée au-dessus d’une source, désigne Catherine comme « Dame Catherine, sœur du Roi Très Chrétien Henri IV », « Vierge Catherine » et « Princesse des Vertus », formule reprise plus tard dans ses portraits gravés.
+    </p>
+          </div>
+        )
+      },
+        {
+        titre: "Le Béarn face à la Ligue et l’Espagne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+De 1589 à 1591, la région couvrant Bordeaux, Bayonne, et le Pays de Foix était aux mains des Ligueurs, transformant le Béarn et la Basse-Navarre en une forteresse assiégée où la situation évoluait constamment. L'ennemi principal était Emmanuel de Savoie, marquis de Villars, qui contrôlait Agen avec l'aide d'espions espagnols surveillant Catherine de Bourbon, laquelle ne pouvait compter que sur le maréchal de Matignon et M. de la Hillère, gouverneur de Bayonne. Afin de reprendre le contrôle de son territoire, Catherine commença par pacifier la Soule, un désordre entretenu par le baron de Luxe, vieil ennemi de sa famille, réfugié en Navarre espagnole et préparant une invasion avec Guy de Lusignan. Elle confia cette affaire à la famille calviniste Belsunce, dont Jean de Belsunce reprit le château de Mauléon en 1587 pour surveiller la frontière. En Bigorre et Foix, la situation était également très instable, Catherine dut faire face à l'épisode éprouvant du baron de Bénac, qui, chargé de réunir les États de Foix en septembre 1590, fut attaqué, dépouillé de ses neuf chevaux, de ses valets et de ses coffres sur le chemin du retour, ne devant son salut qu'à une fuite in extremis. Catherine l'indemnisa puis le chargea d'encourager le baron de Bazillac (catholique rallié) à combattre son frère ligueur, le sire de Pardaillan, tout en limitant l'action de Bénac à la Bigorre et confiant la région de Foix au fidèle baron de Pailhès (Georges de Foix). Parallèlement, la menace s'intensifiait en Languedoc, où le gouverneur Henri de Montmorency l'informa de l'arrivée de 5000 reîtres et d'une flotte à Sigean, envoyées par Philippe II d'Espagne. Villars lança alors une offensive, progressant depuis Agen pour occuper Auch et Fleurance, menaçant Nérac et Bordeaux, allant même jusqu'à propager la rumeur de la mort d'Henri IV. Face à ce péril grandissant, Catherine, réfugiée à Navarrenx, multiplia les courriers, renforça la défense du Béarn et appela le vicomte de Turenne en renfort. En 1591, une nouvelle complication survint avec l'arrivée d'Antonio Pérez, ancien Secrétaire d'État et favori de Philippe II, tombé en disgrâce après avoir ordonné l'assassinat d'Escobedo. Réfugié en Aragon, il était devenu un symbole des libertés contre la centralisation espagnole, mais, repoussé par les troupes castillanes, il franchit le col du Pourtalet pour arriver déguisé en laquais à Pau le 26 novembre 1591. Catherine le reçut avec les honneurs, l'installa au dernier étage de la Tour de la Monnaie, protégée par des arquebusiers et reliée au donjon par une passerelle secrète, pour déjouer les espions espagnols qui rapportaient qu'elle le traitait comme un prince. Henri IV et Catherine comptaient utiliser Pérez pour soulever l'Aragon, une opération fut lancée au début de 1592 avec 600 hommes béarnais traversant le Pourtalet, mais l'expédition tourna au fiasco, les soldats calvinistes commettant des exactions et pillant les églises, ce qui scandalisa les populations locales, fit échouer tout soutien et força Pérez à revenir se cacher à Pau.
+   </p>
+          </div>
+        )
+      },
+   
+      {
+        titre: "Catherine et la gestion urbaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Entre 1580 et 1590, cinq crues du Gave endommagèrent presque entièrement la passerelle en bois. Les jurats convinrent alors avec la régente de partager les revenus du péage et les frais de réparation. Les travaux se heurtèrent à des difficultés techniques, notamment pour la construction des batardeaux et le transport des piles en maçonnerie, ce qui obligea les jurats à solliciter l’appui de Catherine. Le 22 juillet 1592, elle réunit au château une séance exceptionnelle du Conseil Souverain et convoqua une assemblée générale des chefs de famille afin de délibérer sur l’aliénation d’une partie des biens communaux pour financer les travaux. L’autorisation fut accordée, et le 11 août, à sept heures du matin, les chefs de famille se réunirent à l’hôtel de ville pour voter le principe d’une aliénation partielle. Le 26 septembre, Catherine reçut les jurats en présence du Conseil Souverain et du procureur patrimonial pour ratifier l’accord, les travaux s’achevant peu après son départ. En 1607, Henri IV accepta finalement de prendre à sa charge la part des dépenses due par la communauté urbaine de sa ville natale. Catherine posa ainsi les bases d’un développement urbain qui ne se concrétisa qu’au siècle suivant. L’hôtel de ville, trop exigu pour accueillir le marché hebdomadaire fixé au lundi par Gaston XI en 1463, l’amena à aménager un nouveau quartier, appelé le « canton », au-delà de l’enceinte palissadée du faubourg, près du cimetière. Ce secteur devint le futur carrefour de la cité, une pente descendant vers le Hédas franchie par une passerelle vers le nord, tandis qu’à l’est, le long de la route de Morlaàs, se formait un nouveau faubourg. La régente prit aussi plusieurs mesures d’administration générale. Elle convoquait régulièrement les deux sessions annuelles obligatoires des États, ainsi que des sessions extraordinaires lorsque la situation l’exigeait. Son respect strict des procédures assura le bon fonctionnement des institutions et un équilibre durable entre le pouvoir princier, les États et les synodes des pasteurs. Le budget était voté régulièrement et aucune décision n’était prise sans leur consultation. Lors des sessions plénières, Catherine s’adressait aux députés, recevait ensuite les syndics ou délégations des deux ordres, puis les laissait délibérer librement, sans sa présence ni pression, contrairement à son frère, dont les convocations étaient souvent irrégulières. Sous sa régence, les États connurent un véritable apogée, appréciant la présence directe d’un membre de la famille princière. Catherine contribua également à l’introduction du français comme langue administrative. Bien qu’elle maîtrisât le béarnais et ait écrit un court billet dans cette langue, sa correspondance, les comptes de son Hôtel et ses adresses aux États étaient rédigés en français, tandis que les États continuaient à délibérer en langue locale. Ce choix favorisait la diffusion des écrits calvinistes, notamment la pensée de Calvin et de ses Institutions chrétiennes. La régente exerçait aussi une surveillance attentive sur les ateliers monétaires, au nombre de trois : un à Saint-Palais et deux en Béarn, transférés de Morlaàs à Pau par Henri II d’Albret. Chaque atelier, dirigé par un garde-général et ses adjoints, procédait à quelques frappes. Alertée par le garde-général Pierre de Laval sur la mauvaise qualité des pièces, Catherine imposa, le 6 décembre 1590, une caution de mille écus à chaque responsable. À la demande des États, elle ordonna la frappe de « baquettes » de cinq sous, monnaie béarnaise identifiable par une vache, et de petits ardits, afin de pallier la pénurie de menue monnaie. En 1591, pour remédier aux défauts des pièces de six deniers, elle regroupa les ateliers sous l’autorité d’un maître particulier des monnaies de Navarre et de Béarn. Le 3 juillet 1591, elle fit retirer les pièces défectueuses, les fit refondre et constata que « le commun peuple est satisfait ». Enfin, elle fit exécuter des jetons et des médailles confiés au graveur et orfèvre Guillaume Lamy.
+      </p>
+          </div>
+        )
+      },
+
+
+
+    ]
+  },
+
+
+
+
+
+  'le-depart': {
+    titre: "Le Départ de la Gouvernante",
+    periode: "Renaissance",
+    resume: "Le Béarn sans seigneur",
+    introduction: "Entre France et Béarn, le départ de Catherine....",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+
+
+
+
+     
+    
+       {
+        titre: "Une union impossible",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Turenne signale à Henri IV qu’une proposition de mariage a été faite à sa sœur par le roi d’Écosse. Énergique, cet souverain ne pourrait toutefois quitter son pays, et Catherine comprend que son frère refuse toujours son union avec le comte de Soissons, ce qui est compréhensible car de nombreux nobles catholiques, hostiles à la Ligue, ne reconnaissent Henri IV que dans l’attente de sa conversion. Donc un « Tiers Parti » émerge : il regroupe des modérés qui envisagent de placer sur le trône un prince catholique de la branche cadette des Bourbons comme le comte de Soissons. Et ce n’est que le 1ᵉʳ octobre que Soissons, accompagné du duc de Longueville et du maréchal d’Aumont, rejoint le roi à Gamaches pour lui prêter serment. À genoux, il jure fidélité, mais Henri reste méfiant. Dès le lendemain, Soissons réclame le commandement des troupes en Picardie, au détriment du duc de Longueville. Henri apaise le conflit en nommant le maréchal d’Aumont lieutenant-général. Il considère désormais Soissons comme un jeune prince brillant mais imprudent, incapable de prudence politique et potentiellement dangereux. Il refuse donc d’encourager ses prétentions à épouser Catherine. La mort du cardinal de Bourbon à Fontenay-le-Comte, le 9 mai 1590, compliquait déjà la situation. Le cardinal de Vendôme hérite de son titre et devient à son tour cardinal de Bourbon. Rome renouvelle l’excommunication d’Henri IV, et la Sorbonne confirme son exclusion de la succession, ce qui fait de Vendôme ou du comte de Soissons les héritiers naturels du trône selon le Tiers Parti. Le duc de Mayenne s’allie avec le roi d’Espagne Philippe II, plongeant le pays dans une guerre civile si grave que les deux camps appellent des forces étrangères à l’aide. En effet, Philippe II envoie des troupes de Flandres sous le commandement d’Alexandre Farnèse, tandis qu’Henri, blessé à Aumale le 5 février 1592, doit lever le siège de Rouen le 20 avril. Pendant ce temps, en Béarn, Catherine de Bourbon, sœur d’Henri et régente, affronte les complots des Ligueurs appuyés par l’Espagne. Elle protège Antonio Pérez et résiste aux plans du baron de Luxe, réfugié en Navarre espagnole, qui veut lancer une offensive à travers les Pyrénées avec l’aide du marquis de Villars et du redoutable évêque de Saint-Bertrand-de-Comminges. Catherine ne cède pas : elle confie la défense du Béarn au baron de Bénac et au sieur de Bazillac, qui rallient les habitants de Tarbes à la cause d’Henri IV et jurent de vivre et mourir les armes à la main pour le roi. Elle garde la confiance du peuple en maintenant les droits des États et la libre pratique du culte catholique. Préparant le Béarn à une attaque imminente, elle met toutes ses possessions en état d’alerte : en janvier et février 1592, elle incite les Ossalois à se mobiliser, puis en mars elle appelle le baron de Bénac à l’aider à organiser la défense de la Bigorre, car elle a appris que les Espagnols allaient bientôt attaquer. Le plan du baron de Luxe, soutenu par le marquis de Villars, commence à se concrétiser avec une offensive espagnole contre la Guyenne. 
+       </p>
+          </div>
+        )
+      },
+    
+  
+    
+       {
+        titre: "Le comte et le roi : intrigues à Pau",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dans un climat de guerre et de vives tensions, l'épisode sentimental entre Catherine de Bourbon et le comte de Soissons éclata au grand jour malgré l'opposition farouche de son frère, le roi Henri IV. Profitant du siège de Rouen, Soissons prétexta la maladie de sa mère pour se rendre secrètement à Pau avec une douzaine de cavaliers, dans l'espoir d'épouser Catherine. Cependant, Henri IV, mis au courant, s'opposa violemment à cette union, d'autant plus que sa méfiance envers son cousin se transformait en fureur, alimentée par des rapports d'informateurs anglais le soupçonnant d'avoir reçu de l'argent espagnol et de chercher à se positionner stratégiquement dans le jeu politique, potentiellement comme alternative au "Tiers Parti", en s'unissant à la sœur du roi de Navarre. Alors que Catherine, encouragée par la maîtresse délaissée du roi, Corisande, accueillait Soissons et l'incitait à sauver leur projet de mariage, le comte tenta d'anticiper les accusations du roi en envoyant son maître d'hôtel, prétendant vouloir protéger Catherine dans son voyage, une initiative qu'Henri rejeta comme une manœuvre pour dissimuler ses intentions. Malgré les mesures prises par le roi pour le neutraliser, et l'ordre sévère qu'il avait envoyé au président du Conseil Souverain de Pau, Pierre de Mesme, seigneur de Ravigan, pour empêcher toute entrevue sans son consentement, le drame éclata au château de Pau dans la nuit du 6 avril 1592. Soissons, venu avec une petite escorte dispersée dans les villages, fut observé de près par le Conseil Souverain, et Charles et Catherine ignoraient l'ordre royal. Fidèle au roi, Ravigan agit avec discrétion et rapidité pour éviter un scandale public et, accompagné de plusieurs membres du Conseil vêtus de leurs robes rouges, fit irruption dans la pièce où se trouvaient les deux amants. Cette irruption fut vécue comme une profonde humiliation par Catherine, qui percevait l'acte comme un affront à sa dignité de princesse du sang. M. de Panjas ordonna alors à Soissons de rendre son épée, il fut arrêté et mis sous surveillance, tandis que Catherine était également étroitement surveillée, redoutant l'interception de ses correspondances. Après cet événement, et dans une tentative de justification, Catherine écrivit à Henri IV pour expliquer les faits et défendre son cousin, reprenant ses arguments de loyauté et de bienveillance, et rappelant que c'est elle qui l'avait appelé, sous prétexte qu'Henri lui-même lui avait conseillé de "luy vouloir du bien" dans le contexte d'un choix de mariage entre Soissons et le prince de Dombes (futur duc de Montpensier), un candidat qu'Henri IV avait envisagé après le refus de Catherine d'épouser un roi d'Écosse. Catherine affirma n'avoir vu en Soissons qu'un serviteur fidèle attendant le moment propice pour lui faire connaître son choix définitif conformément à la volonté royale.
+    </p>
+          </div>
+        )
+      },
+    
+    
+       {
+        titre: "Catherine, reine en mouvement",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+  Après des années de stérilité avec sa femme, Henri IV craignait que Soissons n'hérite de la couronne de Navarre, ce qui compliquerait le jeu successoral et donnerait naissance à des héritiers légitimes aux domaines de Navarre-Albret, menaçant la position royale. En mai 1592, Catherine, après plus de six mois d'attente, chercha à quitter le Béarn où elle résidait. Elle demanda au baron de Rabat de réunir les États du comté de Foix, sous prétexte que la situation était critique en raison de rumeurs concernant l'incursion des troupes ligueuses espagnoles et des bandits franchissant les Pyrénées. Rabat s'exécuta rapidement, la situation militaire étant mise en alerte, et Catherine prépara son départ sous la menace feinte d'une invasion. Bien que le gouverneur local ait tenté de minimiser le danger d'une invasion par Canfranc ou Ainsa pour ne pas "alarmer la plaine", des correspondances interceptées le 25 juillet confirment la gravité de la situation : des forces espagnoles (menées par Philippe II) sont prêtes à entrer en Guyenne pour "faire la guerre aux hérétiques", et les chefs espagnols guettent les "nouvelles" en provenance du Béarn. Avant de quitter le pays, Catherine agit en véritable régente : elle déplace son conseil à Nérac, galvanise les troupes béarnaises avec l'aide du gouverneur de Navarrenx, et réquisitionne 250 paires de bœufs et 100 charrettes pour déplacer l'artillerie du dépôt de Pau vers les remparts. Parallèlement, elle lance une manœuvre de diversion en ordonnant au maréchal de Matignon de préparer une offensive en direction d'Agen (vers Bordeaux) pour écarter le danger. Pour financer son départ, elle convoque les États de Bigorre et de Béarn le 30 août, s'appuyant sur son fidèle ami Saint-Geniès, car elle est privée de ses soutiens habituels (comme le seigneur d'Audaux) qui ont fait défection. Le 17 octobre, elle demande aux États de Bigorre de financer son voyage et annonce au gouverneur de Nay son intention de passer par cette ville pour "gagner Toulouse". Dans un geste exceptionnel de "générosité", les États de Béarn, tout en regrettant son départ, lui attribuent 4 000 écus pour "faire à sa volonté". Les députés des États étaient parfaitement conscients que par cet acte, la "vierge" quittait le pays souverain, marquant ainsi la fin de sa présence directe au château de Pau. Catherine restera protestante, deviendra duchesse de Bar et mourra sans descendance. Se croyant enceinte, sa toute dernière phrase sera : "Sauvez mon fruit". Alors que toute la France était en feu, « le Béarn sous la Gouvernante ne cessa de jouir de la plus parfaite tranquilité », s'exclamera Louis-Philippe au sujet de Catherine qui laissait les États délibérer sans pression.
+     </p>
+          </div>
+        )
+      },
+       {
+        titre: "Le Béarn sans Catherine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Jacques Nompar de Chaumont, baron de La Force, fut nommé gouverneur et lieutenant général en Béarn le 13 mars 1593. Bien qu’il ne soit pas originaire du Béarn, il était protestant, ce qui marquait la continuité de l’influence réformée dans la région. À la même époque, Henri IV redevient catholique. Les catholiques du Béarn s’organisèrent alors autour de Jean de Forpelet, dit Lons, et de Jean-Pierre d’Abadie, qui, en 1594, demandèrent la restitution des droits et des biens aux catholiques. Cependant, cette tentative se solda par un échec. Bien que la nomination de La Force ne fasse pas l’unanimité, il parvint néanmoins à assurer la paix intérieure dans la principauté. La paix de Vervins, conclue en 1598 entre Henri IV et Philippe II d’Espagne, mit fin aux terreurs méridionales et contribua à apaiser durablement le Béarn. Enfin, en avril 1599, fut promulgué l’édit de Fontainebleau, rétablissant le culte catholique là où il y a un seigneur catholique et dans 12 localités choisies par les évêques de Lescar et d'Oloron et toujours interdit dans les villes ayant une église calviniste "recueillie" comme Pau. Puis, en 1608, après avoir donné naissance à “Gaston” (comme le prince de Viane, fils de Gaston XI qui obtint la Navarre), Henri IV fait revenir les jésuites en Béarn, sans doute dans le cadre d’un projet d’État-tampon navarrais pour l’équilibre européen, éventuellement rendu possible par un mariage avec une infante espagnole ayant la Navarre en dot.
+     </p>
+          </div>
+        )
+      },
+       {
+        titre: "L’Invincible Armada",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1588, le conflit entre l’Angleterre protestante d’Élisabeth Iʳᵉ et l’Espagne catholique de Philippe II atteint son apogée avec la préparation de l’Invincible Armada. Mais grâce à l’action décisive de ses conseillers, Walsingham ou Dudley, avertie grace au réseau de Hector Nuñez (médecin juif), la couronne anglaise a pu se préparer à l’attaque et renforcer sa défense contre la flotte espagnole. Élisabeth Iʳᵉ, qui a assassiné 40 000 catholiques, fait son discours devant les Troupes de Tilbury « Je sais que j’ai le corps d’une femme faible, mais si l’Angleterre est attaquée, je prendrai moi-même les armes ».
+</p>
+          </div>
+        )
+      },
+     {
+        titre: "Henri IV et la Bigorre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1585, la formation de la Ligue catholique ranima les tensions : les États de Bigorre établirent à Tarbes une garnison commandée par Horgues. Les ligueurs, évitant un affrontement direct, pillèrent les environs, Rabastens, Vic, la plaine, imposant lourdes contributions malgré l’opposition du sénéchal Philippe de Montaut, seigneur de Bénac. Divers chefs, comme Larboust ou La Palu, ravagèrent la région, tandis que Sarlabous, Cornac ou Labatut menaient de coûteuses campagnes pour les repousser. Tarbes, défendue par ses capitaines, échappa de peu à plusieurs attaques, notamment celle des Béarnais en 1589, déjouée par Lespouey et Charles d’Antin. Cette résistance marqua quelques années de répit, mais, après l’assassinat d’Henri III, la Ligue refusa de reconnaître Henri de Navarre comme roi. En 1592, les ligueurs s’installèrent à Ibos et prirent presque tout le pays, soutenus par les Commingeois. Le marquis de Villars, envoyé pour rétablir l’ordre, rallia plusieurs seigneurs, dont Castelnau de Laloubère, qui occupa Tarbes. Bazillac, agissant pour la princesse de Navarre, reprit un temps la ville avant de la juger indéfendable. Tarbes tomba alors aux mains de la Ligue, jusqu’à la capitulation conclue en 1594 par Henri de La Force : la ville revint au roi, la Ligue fut dissoute et les États, réunis à Lourdes, proclamèrent leur fidélité à Henri IV. Les fortifications furent ensuite abattues, la garnison dissoute, et la Bigorre entra durablement dans la paix, rattachée définitivement à la couronne par l’édit de 1607. En Soule, les troubles religieux suivirent une chronologie parallèle. En 1583, une troupe huguenote venue du Béarn pilla Mauléon et la résidence de l’évêque Claude Régin, qui mourut en exil à Vendôme en 1592. La révocation des édits de pacification en 1585 força plusieurs officiers protestants, dont Gérard de Béla, bailli royal, à l’exil. Henri de Navarre ordonna alors à Béla et à Jean IV de Belsunce de reprendre la province par les armes. Devenu gouverneur en 1587, Belsunce imposa de nouveaux impôts pour entretenir les garnisons, soulevant l’indignation des Souletins, très attachés à leurs franchises d’« exempt de toute imposition ». Devenu roi de France en 1589, Henri IV confirma ces privilèges par lettres patentes en 1593, sans pouvoir les appliquer pleinement. Le conflit entre Belsunce et les habitants perdura jusqu’à la mort du gouverneur en 1597, puis son fils Jean, plus conciliant, apaisa les tensions, fit reconnaître les libertés locales et obtint une exemption d’impôts et une charge royale pour l’entretien du château de Mauléon (1603). L’édit de Fontainebleau (1599), rétablissant le culte catholique en Béarn, marqua l’apaisement final : Arnaud de Maytie, neveu de l’évêque Régin et nouvel évêque d’Oloron, fit démolir le temple protestant de Mauléon en 1598, scellant la restauration du catholicisme et la fin des troubles. Ainsi, à la charnière du XVIIᵉ siècle, Soule et Bigorre, longtemps tiraillées entre Béarn, Ligue et royauté, retrouvèrent la stabilité sous Henri IV, symbole d’un retour durable à la paix et à l’unité du royaume.
+</p>
+          </div>
+        )
+      },
+       {
+        titre: "Jean Bodin",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Bodin rompt avec la légitimation miraculeuse incarnée par Jeanne : il définit la souveraineté comme pouvoir absolu, perpétuel et indivisible de l’État, capable de légiférer, lever l’impôt, réguler la religion et garantir la paix civile. La religion reste utile mais devient subordonnée à l’ordre politique, ce qui marque une sécularisation relative. Cette théorie est proche de la centralisation monarchique bien que les huguenots n'y ont pas donné suite car l'acceptation par les puissances étrangères ou le peuple était jugée impossible. Richelieu radicalise ce modèle en brisant les pouvoirs nobiliaires et en plaçant le clergé sous l’État. Louis XIV en réalise l’aboutissement avec l’absolutisme, la subordination des parlements, le contrôle de l’Église et la Révocation de l’Édit de Nantes. Bodin lui-même évolue dans un contexte de diffusion européenne des textes hermétiques, kabbalistiques et néoplatoniciens (Italie, Hollande, Angleterre), qu’il connaît par lectures et réseaux humanistes : sans être kabbaliste ni rosicrucien, il absorbe des idées d’unité cosmique, d’ordre universel et de symbolisme qui se combinent avec son projet d’un pouvoir souverain unifié.
+</p>
+          </div>
+        )
+      },
+      {
+        titre: "Lady Mary Bankes et la Royal Society",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dans les années 1630, le “collège invisible” réunit savants, alchimistes et biblistes puritains qui cherchent à découvrir des “lois divines de la nature” comme dans les textes sacrés, certains, influencés par la kabbale juive, pensent même que la création scientifique doit imiter la lecture mystique de l’Ancien Testament. Ce milieu est étroitement lié à l’atmosphère religieuse radicale qui accompagne la montée des puritains, dont le chef militaire, Oliver Cromwell, voit l’histoire d’Angleterre comme une répétition des récits bibliques : pour eux, l’Angleterre est un “nouvel Israël” et les rois impies doivent être jugés comme dans la Bible. Cela aboutit à la capture du roi Charles Ier, trop catholique, après une guerre civile entre les Royalistes et les parlementaires, puis à sa décapitation en 1649. L’Angleterre devient alors une république puritaine, gouvernée par Cromwell, qui impose une discipline morale stricte inspirée de leur lecture littérale de l’Ancien Testament. Pendant cette guerre civile, Lady Mary Bankes organise la défense face aux parlementaires avec seulement une poignée de serviteurs et quelques soldats. Lors du dernier assaut, elle et ses servantes ont repoussé les soldats qui montaient aux échelles en leur jetant des pierres et des braises brûlantes depuis les remparts. Puis en 1660, à la restauration de la monarchie, plusieurs membres des réseaux savants que nous avons vus (dont des puritains, des alchimistes, et des correspondants passionnés d’hébraïsme) se regroupent dans une institution nouvelle : la Royal Society. Henry Oldenburg, protestant, en devient le premier secrétaire et transforme la société en un immense réseau d’échanges intellectuels européens. Oldenburg s’intéresse aux traditions juives, correspond avec des rabbins (il échange avec Jacob Abendana, grand rabbin séfarade d’Amsterdam puis de Londres) et des érudits, et collecte des manuscrits hébreux : il est un relais majeur de la kabbale chrétienne érudite dans le monde savant anglais. Plusieurs savants de la Royal Society cherchaient à extraire des “messages secrets” de la nature en utilisant des méthodes d’interprétation proches de la kabbale juive pour déchiffrer “le livre de la création”. Le Tsar Pierre 1e, rencontra Isaac Newton, un membre de la Royal Society.  
+</p>
+          </div>
+        )
+      },
+
+ 
+,
+
+ 
+
+       {
+        titre: "Henriette-Marie de France",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Henriette-Marie de France, fille cadette d’Henri IV est élevée dans la foi catholique. À 15 ans, elle épouse Charles Ier, roi d’Angleterre, dans le cadre d’une alliance politique contre l’Espagne. Très vite, le Parlement anglais, majoritairement protestant et puritain, la déteste. Elle refuse d’être couronnée lors d’une cérémonie protestante. Au début, le couple royal s’entend mal, le duc de Buckingham, favori du roi, cherche à les séparer et Charles renvoie presque tous les serviteurs français de la reine. En 1628, Buckingham est assassiné. Libéré de son influence, Charles tombe profondément amoureux d’Henriette. Leur couple devient très uni et ils auront neuf enfants. La reine devient alors la principale conseillère du roi. Habituée à l’absolutisme français, elle l’encourage à résister au Parlement. Pour les Anglais, elle incarne « la femme papiste » poussant le roi vers la tyrannie. Les tensions s’aggravent : les puritains réclament la tête des conseillers royaux et attaquent la religion de la reine. En 1641, des émeutes éclatent à Londres, la foule hurle sous ses fenêtres et l’accuse de comploter avec le pape et des puissances étrangères. En février 1642, convaincue que la guerre est inévitable, Henriette-Marie prend une décision radicale et part pour les Pays-Bas. Officiellement, elle accompagne sa fille, officieusement, elle emporte les joyaux de la Couronne (couronnes, colliers de perles et diamants). En Hollande, elle vend ou met en gage ses bijoux afin de financer l’effort royaliste : elle achète des navires, des milliers de mousquets, de la poudre à canon et recrute des officiers expérimentés. Lorsque Charles Ier lève son étendard à Nottingham en août 1642, Henriette-Marie prépare son retour comme la principale fournisseuse de l’armée royale. En février 1643, elle quitte la Hollande avec plusieurs navires chargés de munitions, de canons et de soldats. La marine du Parlement, les « Têtes Rondes », tente de l’intercepter, mais elle parvient à débarquer à Bridlington, sur la côte du Yorkshire, dans un fracas assourdissant. Épuisée, elle s’installe dans une petite maison du quai pour se reposer. La nuit, des navires parlementaires bombardent la maison. À moitié vêtue, elle s’enfuit sous le feu pour se réfugier dans des fossés. Une fois à l’abri, elle réalise qu’elle a oublié son petit chien, Mitte, un épagneul. Elle récupère l’animal dans la maison en ruines et rejoint le fossé saine et sauve. Pendant plusieurs mois, Henriette-Marie reste dans le nord de l’Angleterre pour organiser l’armée royaliste. Elle prend la tête de milliers de fantassins et de dizaines d'escadrons de cavalerie. Refusant le luxe, elle chevauche avec ses soldats, dort parfois dans des granges et se nourrit comme eux. On la surnomme alors « Her She-Majesty Generalissima ». En juillet 1643, elle traverse l’Angleterre en évitant les forces ennemies pour rejoindre Charles Ier à Oxford. Mais dès 1644, la situation se dégrade : les royalistes reculent. Enceinte de son neuvième enfant et malade, Henriette-Marie accouche à Exeter de la petite Henriette, tandis que l’armée ennemie se trouve à quelques kilomètres. Le Parlement a mis sa tête à prix pour haute trahison. Elle est contrainte d’abandonner son bébé, confié à une fidèle, et fuit vers la France à bord d’un petit bateau de pêche, essuyant des tirs de navires anglais jusqu’à son entrée dans les eaux françaises. Réfugiée en France, chez Louis XIV, elle tente désespérément d’envoyer de l’argent et des renforts à son mari. En février 1649, elle apprend l’exécution de Charles Ier par les hommes de Cromwell. Selon la tradition, elle serait restée immobile et muette pendant des heures, sans verser une larme. Elle portera le deuil jusqu’à la fin de sa vie et se fera désormais appeler « la Reine malheureuse ». Puis, elle vivra à Paris dans une grande pauvreté, la France étant elle-même plongée dans la Fronde. Ensuite, elle se brouille violemment avec son fils aîné, le futur Charles II, car elle veut imposer le catholicisme à ses enfants. Très pieuse, elle fonde le couvent de la Visitation à Chaillot, où elle se retire fréquemment pour prier. En 1660, la monarchie est restaurée et son fils devient Charles II. Henriette-Marie retourne alors à Londres comme reine mère. On continue de la surnommer « la Papiste » avec méfiance. Installée à Somerset House, qu’elle fait somptueusement rénover, elle y tient une cour brillante, mais se sent étrangère dans une Angleterre profondément transformée. Elle rentre définitivement en France en 1665 et meurt au château de Colombes, près de Paris, à l’âge de 59 ans.
+</p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Glorieuse Révolution",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1642 Antonio de Montezinos navigateur juif revient d'Amérique du Sud, il aurait retrouvé les tribus perdues ( Ruben et Lévi), il raconta son histoire à Manassé ben Israël, un rabbin d’Amsterdam, qui en fit un livre : “La Esperanza de Israel” (1650). En 1655, Menasseh ben Israël part lui-même à Londres pour présenter à Cromwell une pétition célèbre (Cromwell profondément influencé par l’Ancien Testament), où il demande : la permission pour les Juifs de revenir vivre en Angleterre, la liberté de culte et la possibilité de commercer librement. Cromwell accepta pour intérêts géopolitiques en Méditerranée et aux Provinces-Unies, pour l'économie anglaise et car Israël dispersé doit être réuni. Jacques 2, catholique essaie de résister contre la Glorieuse Révolution (1688) qui aboutit à un prince protestant Guillaume d’Orange, dont le soutien par de riches commerçants juifs permet d’anéantir les espoirs de Jacques 2 qui va se réfugier auprès de Louis XIV. Et 6 ans plus tard, création de la banque d’Angleterre, puis pour être roi d’Angleterre il faut être protestant. Puis ensuite, Solomon de Medina, juif anglais finance les guerres anglaises contre Louis 14 avec le duc de Marlborough (comme Rothschild plus tard contre Napoléon).
+</p>
+          </div>
+        )
+      }
+      
+
+
+    ]
+  },
+  
+   'monarchie': {
+    titre: "Sous la monarchie absolue",
+    periode: "Renaissance",
+    resume: "Le Béarn et la monarchie française",
+    introduction: "La monarchie française s'impose en Béarn....",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+{
+        titre: "D'Henri IV à Louis XIII",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Après la mort d’Henri IV, une vive tension éclata dans le Béarn : les États, majoritairement protestants, refusèrent d’accorder davantage de liberté au culte catholique, en contradiction avec l’édit de Fontainebleau. Cette situation provoqua une confrontation entre Antoine de Gramont, catholique, soutenu notamment par le protestant Bernard de Montaut, et le baron de La Force (protestant). En 1615, le clergé catholique, représenté par Jean de Salettes (évêque de Lescar) et Arnaud de Maytie (évêque d’Oloron), profita de la faiblesse de la Régence pour réclamer au Conseil du roi la restitution de leurs biens confisqués depuis Jeanne d'Albret. Si Marie de Médicis envisagea un temps l'union politique du Béarn à la France pour régler le problème, elle se heurta aux Fors, les lois fondamentales garantissant la souveraineté de la vicomté. De plus, La Force, impliqué dans la révolte des princes (aux côtés de Condé), parvint à maintenir le statu quo et à ralentir toute réforme jusqu'en 1616. Tout changea avec le "coup de majesté" de Louis XIII. Après l’assassinat de Concini (avril 1617) et sa prise de pouvoir effective, le jeune roi, marié à Anne d'Autriche et désireux de renforcer l'unité catholique face à l'Espagne, décida de trancher. Le Béarn, qui se gouvernait quasiment sans prince depuis 1593, devenait une anomalie. En juin 1617, Louis XIII frappa fort : il promulgua l'Arrêt de Mainlevée. Ce texte ordonnait la restitution immédiate des biens ecclésiastiques aux catholiques, compensant les pasteurs protestants par une pension royale (édit confirmé en septembre). C'était une attaque directe contre l'organisation économique du protestantisme béarnais. La réaction fut immédiate. Dès novembre 1617, les États de Béarn rejetèrent l'édit, le déclarant contraire aux Fors et à la souveraineté du pays. Le conflit se déplaça sur le terrain juridique : le Conseil Souverain de Béarn (équivalent du Parlement) refusa d'enregistrer et de publier les lettres royales. L'escalade devint inévitable en 1618. Louis XIII envoya des "lettres de jussion" (ordres impératifs) en juillet, mais le Conseil s'obstina dans son refus, arguant que le roi ne pouvait modifier les lois religieuses du Béarn sans le consentement des États. En octobre 1618, le roi dépêcha un commissaire, Jean d’Esquille, pour briser cette résistance et convoquer les syndics à la Cour. L'émissaire royal fut si mal reçu qu'il dut quitter précipitamment le Béarn sous les menaces. Cet échec de la diplomatie marquait la fin des négociations.
+
+     </p>
+          </div>
+        )
+      },
+
+
+{
+        titre: "Le Système des Intendants",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la suite du règne de Charlemagne, le pouvoir central s'est considérablement effrité, laissant place à une autorité royale affaiblie face à la puissance des seigneurs locaux. La reconquête du pouvoir par le Roi s'est opérée progressivement à travers ce que l'on nomme le « Grand Compromis » : le souverain gouverne en s'appuyant sur des conseils et, surtout, sur les Parlements pour affaiblir la noblesse féodale et renforcer le pouvoir royal. Ces magistrats exercent la Justice Déléguée, c'est-à-dire qu'ils rendent la justice « au nom du Roi ». Cependant, cette collaboration recèle une tension majeure : les parlementaires détournent leur droit d'enregistrement (remontrance qui servait à signaler un problème juridique) des lois pour faire obstacle aux décisions royales. Pour briser cette résistance et museler les Cours souveraines, la monarchie s'oriente alors vers l'Absolutisme. Cette lutte de pouvoir se double d'une dimension idéologique. Les magistrats s'emparent du jansénisme comme d'une arme politique. Cette doctrine théologique devient pour eux un moyen de contester la double autorité de l'Absolutisme royal et du Pape. Sociologiquement, ces juges, surnommés les « Robins » (la Noblesse de Robe), jouissent d'une position privilégiée. Exemptés d'impôts et dispensés de guerres, ils cumulent les avantages sans assumer les devoirs traditionnels de la noblesse. De plus, le système de la vénalité des charges (l'achat des postes) leur confère une propriété sur leur fonction : ils sont inamovibles. Ne pouvant être destitués par le Roi, ils agissent en toute indépendance. Sous Henri IV, lors de l’Édit de Nantes, les magistrats refusent d’enregistrer le texte, mais le roi leur impose l’enregistrement en leur rappelant clairement : « Vous jugez, moi je gouverne ». C’est pour pallier cette impuissance que le cardinal de Richelieu institue la figure de l'Intendant. Contrairement au juge qui est un « officier » propriétaire de son poste, l'Intendant est un « commissaire » nommé et révocable à tout moment par le Roi. Envoyé dans les provinces, il a pour mission de briser les contre-pouvoirs locaux (nobles et juges) et d'assurer la levée de l'impôt directement pour le compte de la Couronne. Par la suite, les magistrats profiteront de la faiblesse du pouvoir sous la régence d’Anne d’Autriche. Le parlement adoptera le 10 février 1638, le vœu de Louis XIII qui consacre la France à la Très Sainte Vierge Marie, le 15 août est désormais fête nationale.
+
+     </p>
+          </div>
+        )
+      },
+
+
+
+
+       {
+        titre: "Le Rattachement du Béarn à la France",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ En 1619, les troubles en France empêchèrent le roi d’imposer sa volonté : le retour au pouvoir de Marie de Médicis entraîna le ralliement de plusieurs opposants protestants contre la politique de Luynes, et une assemblée politique protestante béarnaise se réunit à Orthez puis à La Rochelle sans autorisation royale. Après l’accord de mai 1619 entre Louis XIII et sa mère, l’assemblée du clergé de France rappela la nécessité d’appliquer l’édit, tandis que le roi accordait un pardon aux participants pour témoigner de sa modération. Une nouvelle assemblée protestante se tint à Loudun en septembre 1619, poursuivant les discussions sans résultat jusqu’en avril 1620, malgré la désignation de députés réformés et la reconduction des places de sûreté. La seconde guerre opposant Louis XIII à Marie de Médicis en 1620 retarda encore l’application de l’édit, mais la victoire royale à Ponts-de-Cé en août et la réconciliation de Brissac conduisirent le roi à marcher vers la Guyenne, région du duc d’Épernon et à forte présence protestante proche du Béarn. De septembre à octobre 1620, s’achève l’autonomie du Béarn avec son rattachement définitif à la France sous le règne de Louis XIII. Le 17 septembre, le roi arrive à Blaye, où le baron de La Force, gouverneur du Béarn, vient lui témoigner son obéissance et reçoit commission pour faire enregistrer l’édit de mainlevée de 1617. Malgré de nouvelles lettres royales et les efforts du gouverneur, le Conseil souverain du Béarn refuse toujours de se soumettre. Accompagné du premier président de cette institution, La Force rejoint alors le roi à Bordeaux, qui adresse le 28 septembre des lettres de jussion aux magistrats palois pour les contraindre à l’enregistrement. Le Conseil souverain envoie ensuite deux délégués, le protestant Dufour et le catholique Pierre de Marca, pour tenter de retarder la décision. Reçus à Preignac le 9 octobre, ils ne parviennent qu’à précipiter la résolution royale. Une troisième délégation, formée de La Force et de l’avocat général Du Pont, rencontre Louis XIII à Grenade-sur-l’Adour le 13 octobre et procède à l’enregistrement tardif de l’édit, daté du 8 octobre, mais cette démarche n’empêche pas le roi d’intervenir directement. Le lendemain, une ultime délégation béarnaise se rend à Arzacq pour implorer le pardon royal. Le 15 octobre 1620, Louis XIII fait son entrée à Pau, où les membres du Conseil souverain, rassemblés dans la cour du château, se soumettent et demandent pardon. Le lendemain, deux réunions du Conseil royal préparent les mesures de réorganisation politique : le roi ordonne la prise de possession de la citadelle de Navarrenx, confie le gouvernement du Béarn au catholique Bernard de Baylens, baron de Poyanne, en remplacement du protestant Jean-Bertrand de Gachissans (17 octobre), puis reçoit le serment de fidélité du Conseil souverain au château de Pau le 19 octobre avant de proclamer le 20 octobre l’édit d’union officialisant le rattachement du Béarn et de la Basse-Navarre à la France qui devient jusqu'en 1789 un « pays d'États » avec toujours ses États et ses fors. Ces mesures provoquent une vive indignation, entraînant une révolte entre 1621 et 1622, soutenue par les protestants français déjà insurgés à Montauban, que le roi échoue à soumettre. La dernière révolte béarnaise, menée par les frères Bensin, ne parvient pas à reprendre la citadelle de Navarrenx (qui avait été donnée à un catholique par Louis XIII) : le château de Salles-Mongiscard, où ils s’étaient réfugiés, ainsi que ceux de Montaner et de Bellocq, sont pris et démantelés. Jean-Paul de Lescun, impliqué dans ces troubles, est arrêté puis exécuté à Bordeaux.
+     </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "Les Mousquetaires Béarnais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1622, Louis XIII créa la Compagnie des mousquetaires à cheval, héritiers d’une tradition militaire initiée par Henri IV. Parmi eux, Jean-Armand du Peyrer, né à Oloron en 1598, fils d’un riche marchand devenu seigneur de Troisvilles, se distingua par son courage. Après avoir rejoint les mousquetaires en 1625, il en prit le commandement en 1634. Bien qu'il fût un chef militaire compétent, Tréville devint impopulaire en raison de sa gestion partiale de la justice dans son domaine.  Armand de Sillègue, originaire du Béarn, entra dans la compagnie avant de mourir en duel en 1643. Militairement, les troupes béarnaises furent intégrées à l’armée royale dès 1630, formant le Régiment des bandes béarnaises, qui joua un rôle crucial lors des guerres contre l’Espagne. Plusieurs Béarnais, réputés pour leur bravoure, rejoignirent la prestigieuse garde des mousquetaires du roi, qui perpétuait une longue tradition de compagnies royales initiée dès le Moyen Âge. En parallèle, les grandes familles béarnaises se rallièrent au roi pour préserver leur statut et leur influence. En 1629, la paix d’Alès mit fin aux guerres protestantes et apaisa les tensions. Les États du Béarn cessèrent de contester leur rattachement à la France. Isaac de Portau, originaire de Gan, devint mousquetaire en 1643 grâce à ses relations avec Tréville, mais ne laissa pas de trace marquante. Henri d’Aramits, fils d’un ancien maréchal des logis et abbé laïc en vallée d’Ossau, servit une quinzaine d’années avant de disparaître des archives vers 1659. Le plus célèbre, Charles de Batz de Castelmore, dit d’Artagnan, né dans le Gers entre 1611 et 1615, rejoignit les mousquetaires en 1644 sous Mazarin face aux frondeurs (comme Anne-Marie-Louise d'Orléans qui tire sur les troupes royales pour sauver Condé à Saint-Antoine), protégeant le jeune Louis XIV. Fidèle au roi, il reprit du service après la reformation de la compagnie en 1657, monta en grade jusqu’à devenir capitaine-lieutenant, et mourut héroïquement en 1673 au siège de Maastricht. Pendant ce temps, les Fors continuèrent à encadrer la vie béarnaise, mais leur portée fut peu à peu réduite jusqu’à leur suppression par la République. 
+
+       </p>
+          </div>
+        )
+      },
+ {
+        titre: "Un Royaume dans le Royaume",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XVIIᵉ siècle, après son union à la France, le Béarn connaît une profonde transformation politique et religieuse. Sous Louis XIII puis Louis XIV (1620-1715), la province est réorganisée dans le cadre d’une centralisation monarchique qui marque la fin de son autonomie séculaire. En 1620, le Béarn est officiellement rattaché à la couronne, et le Conseil souverain de Béarn est fusionné avec la chancellerie de Navarre (Basse-Navarre) de Saint-Palais pour former le parlement de Navarre siégeant à Pau. Bien que ce nouveau titre soit en partie symbolique, il consacre la mainmise du pouvoir royal sur les institutions locales. Le parlement, désormais composé exclusivement de membres catholiques, devient un instrument essentiel de la politique antiprotestante et de la restauration du catholicisme. Le président du parlement de Navarre, souvent intendant du Béarn et de la Navarre, incarne cette autorité royale : Pierre de Marca, figure marquante des années 1630-1640, joue un rôle majeur dans cette centralisation. Dès 1624, la réorganisation s’étend à la chambre des comptes de Pau, fusionnée avec celle de Nérac, puis, en 1691, cette chambre est rattachée au parlement de Navarre. Ces réformes administratives favorisent le développement économique et urbain de Pau, dont l’influence dépasse alors les frontières du Béarn. Le retour d’anciennes congrégations religieuses et l’installation de nouveaux ordres, jésuites, barnabites, capucins, récollets, participent à l’expansion de la ville et à la reconquête catholique. Sur le plan religieux, la situation demeure tendue. L’édit de Nantes, promulgué en 1598, n’avait pas été appliqué au Béarn, où les protestants restaient majoritaires. Ceux-ci réclament son extension, mais le roi la refuse, invoquant l’ancienne indépendance du pays. Cette exclusion entretient un climat d’incertitude et de résistance. Dans les années 1620, les protestants restituent les églises catholiques et construisent de nouveaux temples entre 1621 et 1624, la plupart furent détruits en 1685, lors de la révocation de l’édit de Nantes. La tension s’aggrave à partir de 1667. Le mouvement protestant est alors conduit par Thibaud de Lavie, neveu de Montaigne et ancien avocat général au parlement de Bordeaux, tandis que le camp royal et catholique est soutenu par Antoine III de Gramont, duc de Gramont et maréchal de France, gouverneur du Béarn et de la Navarre. Le parlement, appuyé par le roi, multiplie les mesures répressives : fermeture des temples, interdiction des prêches, poursuite des pasteurs comme André Magendie, ministre réfugié à Amsterdam après 1666. Pour apaiser les tensions, le roi dépêche Claude Pellot, intendant de Guyenne, qui mène une enquête statistique en 1668 : il recense 4 901 familles protestantes, tandis que celles-ci en revendiquent plus de 8 000. L’édit d’avril 1668 limite à vingt le nombre de temples autorisés, mais la politique de réduction s’intensifie. Un arrêt du Conseil d’État du 15 septembre 1670 confirme ces restrictions et introduit enfin l’édit de Nantes en Béarn, dans une version très encadrée. Cette logique culmine avec l’édit de réduction des temples du 4 février 1685, promulgué par Nicolas Foucault, intendant du Béarn : quinze temples sur vingt sont détruits, et seules cinq paroisses conservent un lieu de culte. Les dragonnades d’Orthez (14 juillet 1685) et de Pontacq (17 mai 1685) forcent la population à abjurer, Foucault peut alors écrire à Louvois qu’« il n’y a plus de protestants en Béarn ».
+    </p>
+          </div>
+        )
+      },
+     
+
+      {
+        titre: "L'union Béarn-France en Soule",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1620, l’Édit d’Union rattache le Béarn et la Basse-Navarre à la France, transformant le Conseil souverain de Béarn en Parlement de Pau. La justice de Mauléon (Soule) y est intégrée, déclenchant une « petite guerre » judiciaire : le Parlement de Bordeaux revendique aussi la Soule. Cette rivalité permet à deux figures souletines d’émerger : Jacques de Béla, seigneur d’Orhy et fidèle d’Henri IV, auteur d’un mémoire pour rattacher la Soule à Pau, et Arnaud d’Oihenart, docteur en droit passionné par la culture basque, auteur de la Notitia utriusque Vasconiae (1637). En tant que syndic de Soule, Oihenart défend à Paris les privilèges locaux et la Cour de Licharre, mais échoue à faire annuler la vente du domaine royal au seigneur de Troisvilles, échec qu’il vit comme une humiliation. Le comte de Troisvilles n’était autre que le fils de Jean de Peyrer, fermier des dîmes en Soule, qui avait acheté le domaine de Troisvilles en 1607 et dû se faire anoblir pour jouir des privilèges attachés à ses terres. Sous Louis XIII et Louis XIV, la Soule subit un durcissement du pouvoir royal. Le jeu de soule, accusé de troubler l’ordre public, est interdit dès 1639, bien qu’encore pratiqué dans les campagnes. Clergé et officiers le condamnent comme source de désordre et d’irrévérence. Entre 1640 et 1670, la province est bouleversée par la vente de son domaine royal. Les États de Soule, endettés de 60 000 livres pour racheter leur vicomté, voient leurs efforts anéantis par les manœuvres de Troisvilles. 
+
+
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "La Soule au 17e siècle",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Entre 1639 et 1662, la Soule traverse une période d’agitation populaire née de l’édit de 1639, qui aliénait le domaine royal et limitait les libertés locales. La révolte, menée par Matalas, prêtre de Saint-Jean-de-Berraute, devient un symbole de résistance paysanne. Son cri « Herria, Herria » (« Le Pays ! ») incarne la défense des droits souletins contre la centralisation monarchique. Malgré la médiation de l’évêque d’Oloron, Arnaud de Maytie, Matalas est arrêté et exécuté à Mauléon en 1661. Les États de Soule et l’évêque implorent la grâce du roi, qui accorde des lettres d’abolition en 1662, au prix de 2 000 livres. Le même été, un jugement de la Cour de Licharre confirme que la justice sera rendue selon la coutume du pays. Mais le conflit perdure : en 1663, un arrêt du Conseil d’État maintient le comté de Troisvilles, rattachant plusieurs paroisses souletines. La Soule, nonobstant, reste attachée à son autonomie et à ses usages montagnards. Les Souletins, pauvres et fiers, vivent de pastoralisme et de transhumance, suivant les saisons selon la coutume. La noblesse locale, liée aux maisons nobles, cohabite avec un Tiers État actif politiquement dans la Cour d’Ordre, institution typique du pays. Le pouvoir royal tente d’imposer son autorité, mais la montagne et l’isolement préservent l’identité souletine : simple, travailleuse et profondément libre.
+
+  </p>
+          </div>
+        )
+      },
+        {
+        titre: "La Contre-Réforme en Soule",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XVIIᵉ siècle, la Contre-Réforme marque profondément la Soule, menée par une lignée d’évêques d’Oloron issus de Mauléon : Arnaud Iᵉʳ de Maytie (1599–1622), Arnaud II (1622–1646) et Arnaud III François (1660–1681). Trois membres d’une même famille souletine relèvent ainsi le diocèse béarnais. Leur action permet la reconstruction des églises détruites lors des guerres de Religion, dotées alors de tribunes pour les hommes et de retables dorés. C’est aussi l’époque où apparaissent les clochers-calvaires (ou trinitaires), typiques de la Soule, représentant le Golgotha : la croix du Christ plus haute que celles des deux larrons. Arnaud II restaure la collégiale de Sainte-Engrâce, sauvée des flammes calvinistes, et y rétablit douze chanoines et un abbé. Son neveu Arnaud III fonde, à la demande des habitants, le couvent des capucins de Mauléon. Obtenant les lettres patentes du roi, il fait venir les capucins de Pau qui plantent la croix le 3 mai 1669. Le couvent, construit sur la rive droite du Saison (à l’emplacement de l’actuel collège Saint-François), est financé par les dons des habitants et un legs du marquis de Moneins (1678). Arnaud III y laisse sa bibliothèque et son portrait, les capucins y demeureront jusqu’à la Révolution. Mais cette piété populaire côtoie des superstitions persistantes. Froidour note qu’il y avait alors « quantité de sorciers et de sorcières » en Soule. Dès 1599, la Cour de Licharre interroge sous la torture deux femmes accusées de sorcellerie. Comme au Labourd, la peur et la délation alimentent une véritable chasse aux sorcières, reflet des tensions religieuses et sociales du temps. La Soule, pays d’États, conserve cependant une large autonomie. La Cour d’Ordre, composée du syndic et du secrétaire, assure le lien entre le peuple et le roi. La justice est d’abord rendue par le capitaine-châtelain de Mauléon, lieutenant du roi et président de la Cour de Licharre, avant la création en 1550 du poste de lieutenant général de robe longue. Plusieurs figures locales occupent ces charges : Bertrand de Salha, Charles de Luxe, Jean de Sponde, ou encore Jean de Belonce, dont le gendre Gérard de Béla sépare les fonctions civiles et criminelles en 1588. Cette même année est bâtie la salle de Mauléon, abritant la justice au rez-de-chaussée et l’hôtel de ville à l’étage. Au XVIIᵉ siècle, la famille de Maytie domine encore ces fonctions, Pierre Arnaud de Maytie, écolâtre d’Oloron, achète la charge de lieutenant en 1600, tandis que d’autres lignées influentes, comme les Sponde, Casamajor et Troisvilles, marquent la vie politique. Les relations avec le Béarn et la Couronne restent complexes. En 1601, la Soule rejette un projet d’union avec la Basse-Navarre, préférant le Parlement de Bordeaux. Finalement, Louis XIV rattache la province au Parlement de Navarre en 1691. Un an plus tard, la déclaration royale de mai 1692 impose que tous les appels de la Cour de Licharre soient jugés à Pau, scellant l’intégration de la Soule au système judiciaire béarnais. Cette organisation restera stable jusqu’à la fin de la monarchie, malgré la tentative du Parlement de Navarre, en 1787, d’imposer la taille aux Souletins, tentative qui échouera face à leur attachement séculaire à leurs libertés locales. La république française abolira ensuite cette organisation sans aucune négociation.
+
+
+ </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "La Conférence de Fontainebleau",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le Colloque de Fontainebleau eut lieu le 4 mai 1600, présidé par le roi Henri IV. Il opposait le chef protestant Philippe Duplessis-Mornay (surnommé le "pape des Huguenots") à l'évêque catholique et ancien protestant Jacques Davy Du Perron. L'objet du débat était l'ouvrage influent de Mornay, Institution... du saint sacrement de l'Eucharistie en l'Église ancienne (1598), dans lequel il affirmait que la doctrine protestante de l'Eucharistie était conforme à celle de l'Église primitive en s'appuyant sur cinquante-cinq citations des Pères de l'Église. Du Perron accusa publiquement Mornay d'avoir délibérément déformé, tronqué ou mal interprété ces passages. L’examen fut interrompu après la vérification de seulement neuf passages. Le résultat fut jugé désastreux pour Mornay, qui fut incapable de se défendre. Du Perron démontra que Mornay citait les objections initiales des théologiens médiévaux (comme Duns Scot ou Durand de Saint-Pourçain) en les présentant comme leur avis personnel, omettant leur réfutation immédiate, qu’il utilisait des citations tronquées comme celle de Saint Jean Chrysostome, où l'omission des derniers mots changeait le sens du texte en faveur de l'interprétation protestante, et faisait des fausses attributions (Mornay attribuait un texte apocryphe à un Père de l'Église, comme Saint Cyrille, pour lui donner plus d'autorité). Parallèlement, lors de son mariage avec le duc de Bar, Catherine de Bourbon avait vaguement promis de « se faire instruire » dans la foi catholique, tout comme son frère. Son instruction commence (sur ordre d'Henri IV, désormais convaincu) alors le 7 octobre 1600, le maître d’œuvre étant le cardinal Du Perron. Les protestants craignent que Du Perron ne convainque Catherine, le maréchal de Bouillon (Henri de La Tour d'Auvergne, grand chef protestant et ancien prétendant de Catherine) intervient donc pour saboter la conversion. Il dit à Catherine : « Si vous avez envie de quitter le protestantisme, pas besoin de débat. Si vous ne le voulez pas, ce débat est un piège dangereux pour nos Églises ». Catherine lui répond que son mari prie à genoux pour sa conversion toutes les nuits. De ce fait, le parti calviniste accepte le principe d'une controverse, mais à ses conditions : pas de “un contre un”, car Du Perron est trop fort, ils constituent donc une équipe de cinq de leurs meilleurs théologiens (Daniel Tilenus, François Gordon, Pierre Du Moulin, M. de Beaulieu, M. de Feugeray) et exigent que tout se fasse par mémoires écrits, afin de ne jamais donner à Du Perron l’occasion de montrer sa rhétorique orale, pour « discuter indéfiniment ». Et la stratégie fonctionne : le débat devient une « partie de jeu de paume » interminable. La controverse n’aura donc jamais lieu. Catherine de Bourbon mourra huguenote, se croyant enceinte, elle eut pour dernière phrase : “Sauvez mon fruit”.
+
+
+ </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Le Roi d'un Hiver",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Giordano Bruno, moine italien, développe une philosophie mêlant l’héliocentrisme de Copernic, la magie et l’hermétisme égyptien, considérée comme l’une des inspirations majeures du mouvement Rose-Croix. Frédéric V, un prince allemand protestant, épouse Elizabeth Stuart, la fille du roi Jacques Ier d’Angleterre. Les protestants de Bohême se révoltent alors contre l’Empereur catholique et élisent Frédéric V comme nouveau roi de Bohême en 1619. L’espoir, partagé par les cercles Rose-Croix, était que cette élection déclenche une grande alliance protestante « anglo-allemande » qui, grâce à la nouvelle science symbolisée par la Rose-Croix, réformerait l’Europe et renverserait le pouvoir catholique. Mais l’aventure de Frédéric V, surnommé le « Roi d’un hiver », tourne au désastre : il est écrasé par l’Empereur lors de la bataille de la Montagne Blanche en 1620. C’est le début de la terrible Guerre de Trente Ans. Avec l’échec politique de Frédéric V, l’espoir d’une révolution scientifique et spirituelle ouverte disparaît. Le mouvement rosicrucien, ainsi que les courants hermétiques, doit alors retourner à la clandestinité.
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "L'Éducation Moderne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jan Amos Komenský, dit Comenius, est évêque protestant de l'Unité des Frères Moraves et le véritable père de l'éducation moderne. Sa vie fut tragiquement bouleversée par la Guerre de Trente Ans. Mais c'est de ce chaos que naquit son projet grandiose de "Pansophie", une réforme visant à "tout enseigner à tous", une volonté éducative influencée par les Rose-Croix et Jacob Böhme, où l'Homme est vu comme un microcosme contenant en lui tout l'Univers et fait à l'image d'un Dieu esprit androgyne, donc l'Homme original (Adam) serait androgyne comme Dieu, et que la chute l'a divisé. L'éducation sert à "réparer" cette chute et retrouver l'unité. Ce rêve utopique manqua de peu de devenir une réalité politique lorsqu'il fut invité à Londres en 1641 par Samuel Hartlib pour créer un "Collège Pansophique", sorte de centre mondial du savoir, mais si la Guerre Civile anglaise fit capoter le projet immédiat, l'idéal survécut à travers le secret "Collège Invisible" de ses disciples qui, appliquant ses méthodes de collaboration, finirent par fonder la prestigieuse Royal Society, une filiation spirituelle que Comenius reconnut lui-même en leur dédiant son livre Via Lucis à la fin de sa vie. À l’UNESCO, Comenius jouit aujourd'hui d’un statut presque iconique, mais sans Dieu à l’image du “Néo-Gnosticisme moderne”. Le fait de vouloir être spirituel (faire passer Dieu pour une énergie par exemple alors que selon Rome : Dieu commande, l'homme collabore humblement ) pour réussir ses propres désirs, le corps serait un temple que l’on vénère (culte de l’image), la spiritualité devient un produit de consommation pour gonfler l'ego, au lieu de le dissoudre. Comme la psychologie moderne, où Dieu serait en nous, et nous serions notre propre Dieu. Elle nous pense de nature divine, donc on ne se soumet pas (Hubris).
+</p>
+          </div>
+        )
+      },
+          {
+        titre: "La Glorieuse Révolution",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1623, Paris est secouée par un scandale intellectuel majeur lorsque des affiches signées par les "Députés du Collège Invisible" apparaissent, proclamant "nous demeurons visibles et invisibles" pour instruire les hommes, un événement mystérieux qui fait écho au parcours de René Descartes débuté en 1618. Engagé alors aux Pays-Bas dans l'armée de Maurice de Nassau (allié du "Roi d'un hiver" Frédéric V, figure rosicrucienne déclenchant la Guerre de Trente Ans), Descartes évolue dans une effervescence où gravitent des hermétistes comme Michael Maier (proche de la cour de Prague sous Rodolphe II, alchimie forte) ou le mystique Jacob Böhme (connu pour sa théosophie sur la lutte du bien et du mal), mais c'est sa rencontre décisive à Breda avec le physicien Isaac Beeckman (son mentor anti-mystique à qui il dédie le Compendium Musicae) qui le pousse vers la science mathematique, une vocation confirmée en 1619 à Neubourg par ses fameux "trois songes" inspirant sa science universelle. Des décennies plus tard, cette imbrication entre politique et savoir se répète avec John Locke qui, accusé de complot en 1683, s'exile en Hollande (où il fréquente les Remonstrants) avant de revenir en Angleterre en 1689 sur le navire de la princesse Marie lors de la "Glorieuse Révolution" menée par les Whigs et Guillaume d'Orange (financé par des banquiers comme Suasso, juif). Ce nouveau régime de Guillaume et Marie consolide son pouvoir grâce au soutien intellectuel massif de la Royal Society et de figures comme Locke ou Isaac Newton (chrétien ésotérique devenu député après s'être opposé à Jacques II), le roi offrant en retour protection et légitimité à l'institution scientifique.
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "La Traite des Corsaires Sarrasins",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Entre le XVIe et le XVIIIe siècle, les mers du sud de l’Europe furent le théâtre d’une activité redoutée : les raids des corsaires barbaresques venus d’Alger, de Tunis, de Tripoli ou de Salé. Autorisés par leurs souverains, ces marins sarrasins attaquaient les navires chrétiens et les villages côtiers pour capturer hommes, femmes et enfants. Des milliers d’Européens furent ainsi réduits en esclavage : marins provençaux, pêcheurs corses, Catalans, Basques ou Landais enlevés en mer. Les captifs étaient vendus sur les marchés. Certains furent rachetés grâce à la charité chrétienne, notamment par les Trinitaires et les Mercédaires, ordres religieux voués à la rédemption des esclaves. Parmi ces victimes se trouvait Saint Vincent de Paul. Cette traite s'accompagnait de la traite arabo-musulmane. Beaucoup d’hommes étaient castrés, et seuls quelques-uns survivaient à ces opérations. On estime que 17 millions d’Africains furent déportés par les musulmans lors de cette traite. Ce n’est qu’au XIXe siècle, lorsque les puissances européennes décidèrent d’en finir avec la piraterie nord-africaine, que ces razzias disparurent. La prise d’Alger en 1830 par la France mettra définitivement un terme à ces razzias maritimes.
+ </p>
+          </div>
+        )
+      },
+        {
+        titre: "Le Portugal et l'Union Ibérique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sous le règne de Manuel Ier "le Fortuné", Vasco de Gama ouvre la route des Indes en 1498, le Brésil est découvert par Pedro Álvares Cabral en 1500, les richesses et l'architecture manuéline affluent à Lisbonne. Mais en 1578, Sébastien Ier disparaît lors de la bataille d'Alcácer Quibir au Maroc. Sans héritier, le trône passe à son grand-oncle, le cardinal Henri, qui meurt deux ans plus tard. Philippe II d'Espagne (fils d'Isabelle de Portugal) envahit le pays et se fait couronner roi du Portugal sous le nom de Philippe Ier (1580). C'est le début de l'Union Ibérique. Mais, l'Espagne, en guerre contre l'Angleterre et les Pays-Bas, n'aide pas le Portugal à défendre ses colonies. Donc sous Philippe IV, le 1er décembre, un groupe de conjurés s'empare du palais de Lisbonne et proclame le duc de Bragance comme souverain. Jean IV devient le premier roi de la Maison de Bragance. En 1668, par le traité de Lisbonne le Portugal est à nouveau un royaume totalement indépendant.
+ </p>
+          </div>
+        )
+      }
+
+
+
+     
+    
+
+
+
+     
+
+
+
+
+
+
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   'tenebres': {
+    titre: "Le Siècle des Ténèbres",
+    periode: "Renaissance",
+    resume: "La monarchie française devant la mondialisation",
+    introduction: "Des idées noahides s'emparent de Londres, Paris, Pau...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+        {
+        titre: "La Création de l'Hôpital Général",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1621, Cornelius Jansen et l'abbé de Saint-Cyran se réunissent à Bourg-Fontaine (près de Villers-Cotterêts). Ils étudient Saint-Augustin et posent les bases de leur doctrine : le salut dépend uniquement de la Grâce de Dieu (prédestination), c’est la naissance du jansénisme.  Ensuite après la Fronde, une “gueuserie incontrôlable” qui vit dans les cours des miracles s’empare de Paris. La Compagnie du Saint-Sacrement, société secrète de dévots, qui trouvaient la charité catholique "trop gentille" ou inefficace,ont donc fait pression pour la création de l'Hôpital Général. Par négociation, Louis XIV signe l'édit de fondation de l'Hôpital Général de Paris. Le Roi donne aux directeurs de l'Hôpital (qui sont des bourgeois et des magistrats, pas des médecins) un pouvoir de juridiction totale. Ils ont leur propre police, leurs propres prisons, carcans et poteaux. Ils jugent eux-mêmes les délits à l'intérieur de l'Hôpital (ils contrôlent à la fois la gestion et la justice interne). Ils annexent tous les biens, revenus, et rentes de nombreuses institutions de charité existantes. L'Hôpital Général devient extrêmement riche, ce qui est paradoxal étant donné sa mission d'enfermement des miséreux. Une partie des droits de maîtrise est réaffectée à l'Hôpital Général (obligation légale pour financer cette nouvelle structure). L'Archevêque de Paris est membre de droit du Conseil des Directeurs mais il n'a aucune autorité sur les décisions. Le Receveur est l'intendant financier. L'institution sépare les familles pour éviter la "reproduction" de la gueuserie (les hommes partent à Bicêtre, les femmes et les jeunes enfants à la Salpêtrière). Dès qu'on tombait dans la misère (perte d'emploi, mendicité) on restait prisonnier dans ces camps de concentrations. Les femmes issues de la haute bourgeoisie parisienne commandaient les ouvroirs des femmes (ateliers de travail forcé) et imposaient un travail acharné, souvent au-delà de la décence car elles considéraient que leur misère était le résultat de leurs péchés. Saint Vincent de Paul refusait le "renfermement forcé", il disait que la Providence ne voulait pas qu'on enferme les pauvres contre leur gré. Cependant, l'Hôpital Général a fini par absorber administrativement son œuvre des Enfants-Trouvés. En fait, les magistrats géraient l'Hôpital, et utilisaient les réseaux de charité pour s'occuper du quotidien, car c'était une main-d'œuvre gratuite et dévouée. Louis XIV (par Mazarin) a compris que la Compagnie du Saint-Sacrement était une menace politique. Louis XIV interdit leurs réunions en 1660 et dissout la compagnie vers 1666. En 1673, Louis XIV frappe fort en supprimant le droit de remontrance et en donnant un ordre clair : on enregistre les lois et on se tait, ce qui permet à l’autorité royale de reprendre le dessus. Le conflit atteint son paroxysme à Port-Royal, où les jansénistes s’organisent et harcèlent le pouvoir royal, poussant Louis XIV à expulser les religieux en 1709 puis à faire raser le monastère en 1711. Il ne voulait pas partager son autorité. Après la chute des dévots, l'administration de l'Hôpital Général est restée aux mains des familles de parlementaires parisiens, devenus jansénistes pour faire face à la Monarchie. Louis XIV sollicite donc le Pape Clément XI pour obtenir une condamnation définitive des jansénistes, le Pape condamne 101 propositions du livre du janséniste Quesnel, c'est désormais une hérésie (bulle Unigenitus). L’Église de France accepte la bulle avec 40 évêques pour et 8 contre. Mais le Parlement estime que le Pape n'a pas à dicter la loi en France et que cette bulle attaque les "libertés de l'Église de France". Louis XIV a dû forcer l'enregistrement par un "Lit de justice" (il utilise le Grand Conseil, une juridiction d'exception, directement soumise à lui) en février 1714. Mais même après ça, les juges refusaient de juger les dossiers liés à la bulle. Louis XIV meurt le 1er septembre 1715. 
+ </p>
+          </div>
+        )
+      }
+
+,
+{
+        titre: "Catherine Deshayes",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Gabriel Nicolas de la Reynie, premier lieutenant général de police de Paris et père de la police moderne, met au jour un vaste réseau criminel au sein de la « Chambre Ardente ». Un tribunal spécial créé pour un scandale, celui de Catherine Deshayes, dite « La Voisin », une avorteuse (faiseuse d’anges) qui méprisait et frappait son mari (Antoine Monvoisin). Elle pratiquait des milliers d'avortements clandestins (contre la volonté du "stabilisateur", Robespierre, ils en jubileront, comme de Gaulle/Macron ), et utilisait un « fourneau » pour brûler les restes des nouveau-nés et des fœtus pour ne laisser aucune trace. L'enquête révèle aussi des échanges de poisons pour éliminer des parents gênants ou des rivaux amoureux, tout en portant des contre-poisons sur soi. La Comtesse du Roure, Mademoiselle Cato ou encore Mademoiselle des Œillets sont impliquées, la Comtesse de Soissons (Olympe Mancini) doit, elle, s'exiler pour échapper au jugement. Puis, Marguerite, la fille de La Voisin, accuse la favorite du Roi, Madame de Montespan, d'avoir commandé avec l'abbé Guibourg (sang d'enfant versé sur le corps de Madame) des messes noires et des cérémonies sataniques impliquant du sang d'enfants pour conserver l'amour de Louis XIV. Le Péché entraîne le péché. La Voisin est brûlée vive place de Grève en 1680. 
+ </p>
+          </div>
+        )
+      }
+
+,
+ {
+        titre: "Philippe d'Orléans",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le nouveau Régent, Philippe d'Orléans, a besoin du Parlement pour casser le testament de Louis XIV (qui limitait ses pouvoirs). En échange de l'aide du Parlement, le Régent leur rend leur droit de remontrance (le droit de contester le Roi) et lâche du lest sur le jansénisme. Les prisonniers jansénistes sont libérés presque tout de suite. Le cardinal de Noailles (protecteur des jansénistes que Louis XIV détestait) revient en grâce et devient le chef du Conseil de Conscience. Le 10 septembre 1715, lors de la première réunion du Conseil des finances présidé par le duc de Noailles, le constat est accablant : le royaume n’a plus un sou en caisse, le roi doit deux années entières de revenus à ses créanciers et il est incapable même d’évaluer précisément le montant des rentes dues, dans un contexte où le crédit est fragilisé par l’interdiction religieuse de l’usure. En janvier, des évêques jansénistes demandent au Régent de contester la bulle et de faire appel à un concile, mais Philippe d’Orléans refuse, affirmant que la bulle est claire. Malgré cela, en mars 1716, le Parlement d’Aix annule une décision d’évêque, les juges civils ordonnent des prêtres et sanctionnent des évêques.Face à cette situation, le Régent impose le silence en exilant le Parlement plusieurs fois comme à Pontoise, mais les magistrats vivent bien à Pontoise et continuent à désobéir. Pendant une année entière, la Chambre de justice mène une enquête rigoureuse, comparable à une véritable inquisition judiciaire menée à charge et à décharge, qui touche près de 8 000 financiers et aboutit à environ 4 400 restitutions, amendes et condamnations, pour un montant total de 219 millions de livres. La Chambre de justice prononce des peines allant des galères à la prison, des carcans et des amendes, y compris l’« amende honorable », châtiment infamant qui s’ajoute aux restitutions et qui oblige le condamné à traverser la ville en chemise, la corde au cou, pour demander pardon publiquement, Le concile d’Embrun est convoqué pour remettre de l’ordre et aboutit à la déposition de l’évêque janséniste Soanen, tandis que les avocats parisiens expliquent à l’Église ce qu’elle doit faire, révélant une ingérence totale du juridique dans le religieux, situation tournée en dérision par une chanson populaire se moquant des avocats devenus docteurs de l’Église, preuve que la majorité n’est pas dupe. Les jansénistes créent alors le journal Nouvelles ecclésiastiques, illégal mais imprimé à l’étranger, introduit clandestinement et financé par des caisses noires, ce qui lui permet de passer sous le nez de la police. Après la mort de Noailles arrivent le cardinal de Vintimille et le cardinal de Fleury, grand homme d’État, qui prennent une mesure clé en retirant les bénéfices aux ecclésiastiques refusant la bulle, mais le Parlement refuse encore d’enregistrer. 
+</p>
+          </div>
+        )
+      }
+
+,
+ {
+        titre: "John Law",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+John Law, écossais, tue un homme lors d'un duel à Londres en 1694 et est condamné à mort, mais il parvient à s'évader de prison et à s'enfuire sur le continent. Il voyage de ville en ville (Venise, Amsterdam, Gênes) pour étudier comment les banques fonctionnent. Sous Louis 14, Law, qui jouait aux cartes en France et utilisait ses capacités de calcul mental pour gagner des fortunes, a essayé de proposer ses idées, mais Louis XIV l'a rejeté (le roi se méfiait de cet étranger protestant). Le Régent, lui, lui donne carte blanche en 1716 ! John Law met un vaste projet financier fondé sur l’idée que la monnaie n’est qu’un instrument d’échange et que le papier-monnaie, plus souple que l’or, peut relancer l’économie. Il crée d’abord la Banque générale, devenue ensuite Banque royale, qui émet des billets acceptés pour le paiement des impôts, instaurant ainsi la confiance dans cette nouvelle monnaie, puis il fonde la Compagnie du Mississippi, à laquelle il accorde le monopole du commerce avec la Louisiane et dont il fait le support principal du remboursement de la dette publique en proposant d’échanger les anciennes créances de l’État contre des actions. En liant étroitement la banque, la compagnie et les finances du royaume, Law finit par contrôler l’ensemble du système financier et fait massivement imprimer des billets afin de soutenir la hausse spectaculaire du cours des actions, provoquant une spéculation frénétique. Lorsque la confiance s’effondre face à l’irréalité des richesses promises, il tente de sauver le système par des mesures autoritaires, limitant la détention d’espèces, cherchant à empêcher la conversion des billets en or et organisant même, à travers des rafles forcées, l’envoi de populations pauvres vers la Louisiane pour peupler la colonie. Ces décisions n’empêchent pas le krach final, marqué par la panique, l’effondrement de la valeur des billets et des actions, et la fuite de Law, dont l’action laisse derrière elle un profond traumatisme économique, social et moral dans le royaume. Pour calmer la colère populaire, l'État a organisé un audit massif.  Les plus riches et les spéculateurs ont vu leurs titres annulés ou fortement réduits. L'État a ainsi "effacé" une énorme partie de sa dette en refusant de rembourser tout le monde. On a supprimé le papier-monnaie (devenu synonyme d'arnaque) pour revenir exclusivement aux pièces d'or et d'argent. En 1726, le Cardinal de Fleury fixe la valeur de la livre tournois de façon stable. Cette stabilité monétaire va durer presque 60 ans, permettant à l'économie de redevenir prévisible. Les dettes de Louis XIV ont été "payées" avec du papier qui a fini par ne plus rien valoir. La Compagnie des Indes, qu'il avait créée, a été réorganisée. Les ports comme Lorient, Nantes et Bordeaux ont profité des infrastructures et des navires construits pendant le Système. Le commerce avec les Antilles (sucre, café) et l'Asie est devenu le moteur de la richesse française pendant tout le XVIIIe siècle. En 1730, face à ce nouveau refus, l’État tranche par un lit de justice : la bulle Unigenitus devient loi du royaume et Louis XV affirme que l’épiscopat est d’accord, déclarant officiellement l’affaire close.  Les jansénistes refusent pourtant de reconnaître la défaite et adoptent une nouvelle stratégie consistant à « faire intervenir Dieu » en cherchant à prouver, par des miracles, que Dieu est avec eux. Leurs avocats saisissent le Parlement, qui accepte la requête et décide s’il y a miracle ou non. Edmond Barbier, vérifie les faits et démonte un miracle célèbre en révélant des témoignages fabriqués montrant un mensonge assumé pour la cause. En réaction, l’État agit en 1732 sous l’impulsion du cardinal de Fleury, devenu Premier ministre, et décide la fermeture du cimetière pour des raisons de protection du peuple. Des graffitis comme celui du 27 janvier 1732, « Défense à Dieu de faire miracle en ce lieu » sont placés.
+</p>
+          </div>
+        )
+      }
+
+,
+
+
+
+        {
+        titre: "Franc-Maçonnerie et les réseaux de la 'Fronde' Parlementaire",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XVIIIe siècle, l'Hôpital Général s'érige en véritable forteresse du jansénisme. Tout en continuant d'assurer sa mission de gestion des pauvres, l'institution s'oppose ouvertement à l'Archevêque de Paris et, sur le plan religieux, brave parfois l'autorité du Roi lui-même. Cette structure marque un tournant historique décisif : elle incarne l'étatisation de la misère, retirée de la seule main de l'Église, pour devenir un instrument de police sociale. Les enjeux financiers y sont également cruciaux, comme le rappelle le précédent de 1661 : Nicolas Fouquet, emprisonné pour sa rivalité avec Colbert et son enrichissement insolent, fut d'ailleurs accusé d'avoir utilisé l'Hôpital comme source de fonds, à une époque où l'Église dépendait encore essentiellement de la dîme. Les tensions s'exacerbent dans les années 1750 avec l'éclatement de l'affaire des « Billets de confession ». Les prêtres fidèles à Rome refusent alors l'extrême-onction aux mourants incapables de prouver, par ce billet, qu'ils se sont confessés à un prêtre non-janséniste. Le Parlement réagit fermement en qualifiant ce refus de sacrement de « trouble à l'ordre public ». Les magistrats affirment en effet que la bulle Unigenitus n'est pas une loi de l'État et qu'en l'appliquant, le clergé obéit à Rome contre les lois de la France. Allant plus loin, le Parlement ordonne la « saisie du temporel » de plusieurs évêques, dont celui de Troyes, partisan de la ligne dure, pour avoir contraint leurs prêtres à cette rigueur. Face à ce désordre, Louis XV nomme Christophe de Beaumont archevêque de Paris en 1746, avec pour mandat de briser l'influence janséniste. Beaumont tente de restaurer son autorité sur l'Hôpital Général, dont la gestion interne est alors assurée par Catherine Huet et des officières violentes. L'archevêque limoge la direction en place pour imposer Madame de Moysan. La riposte est immédiate : les magistrats démissionnent en bloc et le Parlement de Paris se met en grève, paralysant ainsi le cours de la justice dans la capitale. Voltaire tourne l'affaire en ridicule et, sous l'effet de cette propagande, le peuple de Paris se révolte paradoxalement pour défendre ceux qu'il croit être de « bons administrateurs », soutenant sans le savoir une organisation interne pro-sodomie et pro-violence. L'âme de cette résistance n'est autre que l'avocat Louis Adrien Le Paige. Cerveau de la contestation, il rédige les Nouvelles Ecclésiastiques, journal clandestin qui dénonce nommément les prêtres « anti-jansénistes ». Il opère sous la protection de Louis François de Bourbon-Conti, noble frondeur, franc-maçon et adversaire résolu de Louis XV et de la Pompadour. En tant que Grand Prieur, Conti règne sur l'Enclos du Temple, un quartier bénéficiant de franchises où la police royale ne peut pénétrer sans une procédure complexe. En nommant Le Paige « Bailli du Temple », Conti lui offre une immunité quasi totale. L'avocat peut ainsi, en toute impunité, rédiger ses articles incendiaires et coordonner la révolte des juges sans craindre la Bastille.
+</p>
+          </div>
+        )
+      },
+
+  {
+        titre: "La Première Guerre Mondiale",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dès le XVIIe siècle, plusieurs États européens, notamment l’Angleterre, la France et les Provinces-Unies, délèguent une partie de leur pouvoir à des Compagnies des Indes, organisations privées à capitaux actions soutenues par l’État. Ces véritables « États dans l’État » disposent de monopoles commerciaux régionaux, du droit de lever des armées, de faire la guerre, de rendre la justice et de signer des traités. Ces compagnies ne se contentent plus de commercer : elles contrôlent directement la production à la source. En Inde, la Compagnie anglaise des Indes orientales finit par administrer un territoire peuplé de près de 200 millions d’habitants, grâce notamment à une armée composée majoritairement de soldats locaux, les cipayes. Après la Première Guerre Mondiale (1756–1763), la France perd le Canada et la majeure partie de ses possessions en Inde, tandis que l’Angleterre s’impose comme la première puissance maritime mondiale. Les compagnies sont progressivement dissoutes au profit d’un contrôle colonial direct : en France à la fin du XVIIIe siècle, et en Angleterre en 1858, après la révolte des Cipayes. Le monde est alors passé d'une division religieuse (le Pape) à un partage économique géré par des marchands armés, marquant la naissance du capitalisme mondial.
+</p>
+          </div>
+        )
+      },
+        {
+        titre: "Le Marquis de Pombal",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sous le règne de Pierre II, le Portugal signe avec l'Angleterre le traité de Methuen, dit "des draps et des vins". Le Portugal ouvre son marché (et celui du Brésil) aux textiles anglais, en échange, l'Angleterre réduit les taxes sur le vin portugais. Le Porto devient la boisson favorite de l'élite britannique. Cependant, l'industrie textile portugaise est étouffée. L'or extrait des mines du Brésil arrive à Lisbonne, mais repart presque aussitôt vers Londres pour payer les importations britanniques, finançant indirectement les débuts de la révolution industrielle anglaise. Ensuite, le roi Jean V, le "Roi-Soleil portugais", utilise les richesses du Brésil pour construire des monuments colossaux (Palais de Mafra) et imiter la cour de Versailles. À sa mort, son fils Joseph Ier (José I) lui succède. Peu intéressé par la gestion quotidienne, il délègue le pouvoir à un homme d'une volonté de fer : Sebastião José de Carvalho e Melo, futur Marquis de Pombal. Avant d'arriver au pouvoir, Pombal a vécu à Londres (1738-1745) comme ambassadeur. Le 15 mai 1740, il rejoint la Royal Society. La tradition historique veut qu'il ait été initié à la franc-maçonnerie à Londres par le Prince de Galles. Pour Pombal, la maçonnerie n'est pas qu'un rite, c'est un réseau de progrès. Il voit en l'Église et la haute noblesse des freins à la modernisation du pays. Sous son gouvernement, les persécutions de l'Inquisition contre les maçons cessent, car il a besoin de ces ingénieurs et de commerçants pour réformer l'État. Le 1er novembre 1755, un tremblement de terre suivi d'un tsunami et d'incendies dévaste Lisbonne. Face à la catastrophe, Pombal lance sa célèbre phrase : "Enterrez les morts et soignez les vivants". La Baixa (ville basse) est reconstruite selon un plan orthogonal (angles droits, symétrie). La Place du Commerce est conçue comme un temple de la Raison, remplaçant l'ancien palais royal détruit. Les bâtiments intègrent la "cage pombaline" (gaiola), l'une des premières structures antisismiques au monde. Pombal voit dans la Compagnie de Jésus (les Jésuites) un "État dans l'État", trop puissant et fidèle au Pape plutôt qu'au Roi. Un attentat manqué contre le roi Joseph Ier en 1758 lui permet d'accuser la noblesse (les Távora) et les Jésuites. Le procès est expéditif et mené par des tribunaux contrôlés par Pombal. Ils sont exécutés sans preuves recevables. En 1759, Pombal bannit les Jésuites du Portugal et de ses colonies en saisissant leurs biens et, surtout, en brisant leur monopole sur l'éducation. Il crée des écoles laïques et modernise l'Université de Coimbra, remplaçant la théologie par sa "Raison".
+</p>
+          </div>
+        )
+      },
+     
+{
+        titre: "Les Dönmeh",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sabbataï Tsevi se proclame Messie au sein du judaïsme sépharade, en 1666, il est arrêté par les Ottomans, pour ne pas mourir il choisit l’islam, publiquement, sous le nom de Mehmed Efendi. Pour ses disciples, cette “apostasie” n’est pas une trahison mais un acte mystique conforme à leur théologie car le Messie doit descendre dans le mal pour libérer les étincelles divines (descendre dans Ishmaël). Donc une partie de ses disciples font la même chose. 
+ </p>
+          </div>
+        )
+      },
+
+ {
+        titre: "Les Relations en Europe",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Samuel Oppenheimer, important juif de cour, finance les Habsbourg, notamment les campagnes du prince Eugène de Savoie contre... l’Empire ottoman. Son fils, Simon Oppenheimer, poursuit l’activité bancaire et s’installe dans l’électorat de Hanovre, alors dirigé par la maison de Brunswick-Lunebourg. En 1714, à la mort d’Anne Stuart, l’électeur Georges de Hanovre devient roi de Grande-Bretagne sous le nom de George Iᵉʳ, ce qui ouvre aux Oppenheimer un accès privilégié au marché financier londonien. Samuel aura un fils Jacob Wolf Oppenheimer, prés de Georges II, qui remarque le jeune Mayer Amschel Rothschild à Francfort dans les années 1750 : celui-ci bénéficiera du réseau de Jacob en Allemagne et en Angleterre. Rothschild devient notamment le banquier du landgrave Guillaume IX de Hesse-Kassel (petit fils par sa mère du roi Georges II), l’un des princes les plus riches du Saint-Empire et frère de Charles, un illuminé de Bavière.
+</p>
+          </div>
+        )
+      },
+
+ {
+        titre: "La Franc-Maçonnerie",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+John Theophilus Desaguliers (huguenot réfugié en Angleterre) et James Anderson (protestant) sont les fondateurs de la franc-maçonnerie moderne. John étant un collaborateur et disciple de Newton, et membre puis secrétaire-adjoint de la Royal Society. Les Constitutions d’Anderson, rédigées en 1723 puis révisées en 1738 par James Anderson, pasteur presbytérien écossais, avec l’approbation de la Grande Loge de Londres fondée en 1717 (la maçonnerie anglaise s'aligne sur les Whigs), forment le texte fondateur du mouvement. Dans ces Constitutions, la Loi morale que tout maçon doit suivre est présentée comme celle que tous les hommes acceptent, comme une version protestante des sept lois noachides de la tradition juive, “recyclées” en morale universelle. L’introduction historique du texte (la partie mythique) explique d’ailleurs que Noé est le second fondateur de l’humanité, qu’il transmet les devoirs moraux universels et que ses fils diffusent ces lois à toutes les nations : c’est exactement la structure du noachisme. Ce choix permettait de contourner le christianisme dogmatique (pas de Trinité, pas de divinité du Christ, pas de Rédemption ni de sacrements) et de construire une fraternité ouverte à des juifs, protestants, déistes autour d’une morale minimale : interdiction du meurtre, de l’idolâtrie, obligation d’un système judiciaire sous la forme protestante appelée Loi Noachique universelle, assimilée par Anderson à la Loi morale des maçons. C’est précisément pour cette raison théologique que l’Église catholique condamna immédiatement la franc-maçonnerie : dans In eminenti (1738), Clément XII aurait compris que les Constitutions remplaceraient la foi chrétienne par un déisme noachique, c’est-à-dire une morale pré-chrétienne, minimaliste et rationalisée. Le début du calendrier maçonnique se situe en 4000 av. J-C coïncidant avec l'« Ère du Taureau » qui trouve résonance temporelle avec le culte de Mithra, divinité bienveillante indo-aryenne du contrat, ordonnateur du cosmos via la Tauroctonie, dieu du serment et de l'alliance avec son bonnet phrygien. Cette parenté symbolique se matérialise dans l'architecture même des temples, le mithraeum et la loge, conçus comme des reflets rectangulaires du cosmos où les initiés siègent face à face. Sur le plan rituel, les deux traditions imposent le secret et structurent le parcours de l'adepte par une mort symbolique suivie d'une renaissance, progressant à travers des degrés initiatiques avec la poignée de main comme signe d'alliance ou des banquets fraternels où le partage du pain et du vin rappelle le sacrifice fondateur. Cette voie mystique instaure une égalité absolue au sein de la fraternité.
+</p>
+          </div>
+        )
+      },
+
+
+
+       {
+        titre: "La Franc-Maçonnerie Russe",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+John Phillips, maçon anglais arrivé à Saint-Pétersbourg dans les années 1730, est le premier porteur officiel de la franc-maçonnerie en Russie. James Keith écossais, officier, puis maréchal au service de la tsarine Élisabeth Petrovna. Franc-maçon actif en Prusse et en Russie. Il contribue à ancrer la maçonnerie militaire dans la noblesse russe. Ivan Yelagin, noble russe, qui devient Grand Maître de la maçonnerie russe à partir de 1772. Reçoit des patentes anglaises et structure les loges selon le modèle anglais. C’est avec Yelagin et Novikov (introducteur en Russie des courants rosicruciens et de la maçonnerie mystique allemande, plus ésotérique que l'anglaise, Catherine II le réprimera par la suite) que la maçonnerie russe devient ésotérique, mystique, kabbalisante et alchimique, influencée par Martinès de Pasqually, Louis-Claude de Saint-Martin, Willermoz, les Rose-Croix allemands, la Kabbale chrétienne héritée de Pico, Reuchlin, Agrippa, Kircher...
+</p>
+          </div>
+        )
+      },
+
+   {
+        titre: "Anne-Catherine Helvétius",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XVIIIᵉ siècle émergent les 'Obscurs', structurées autour de ce qu’on appelle la République des Lettres, véritable réseau social avant l’heure. Elles s’appuient sur de nombreux centres d’imprimerie clandestine, tenus par des protestants : Marc-Michel Rey, Prosper Marchand, les Wetstein, Jean-Frédéric Bernard, Desbordes, Pierre Mortier, Arkstee & Merkus, Samuel Fauche, les frères Cramer, J. Nourse, Samuel Richardson, Dunoyer ou encore Lackington. Amsterdam devient alors la capitale protestante de cette imprimerie clandestine. L’influence des 'Obscurs' est aussi soutenue par certaines figures politiques : Catherine II, très portée sur l’ésotérisme, rachète la bibliothèque de Diderot pour le financer. Frédéric II de Prusse, agnostique, autorise la publication de textes anticatholiques de Voltaire. À l’instar de Luther avant lui, il fut façonné en figure de proue d’une propagande anticléricale, dont le mensonge constituait la substance même, jusqu’à Madame du Châtelet (salope de Voltaire). Les salons tenus par des femmes, Madame Geoffrin, Julie de Lespinasse, Madame du Deffand, Madame Helvétius, réunissent penseurs, savants, aristocrates et francs-maçons, comme l’abbé Sieyès, les Rolland, Buffon, Napoléon, Franklin ou Suzanne Necker (femme du banquier du Roi). Ces cercles intellectuels annoncent les bouleversements à venir et seront prolongés plus tard par celui de Madame de Staël, à Coppet, en Suisse. Parallèlement, le Grand Orient de France, dirigé par le duc d’Orléans, cousin du roi, devient un centre d’influence majeur.
+
+</p>
+          </div>
+        )
+      },
+ {
+        titre: "Guerre Interne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Il existait de fortes divergences internes entre penseurs des 'Obscurs'. Rousseau écrit qu’il n’est pas d’accord avec d’Alembert, et ses échanges avec François-Marie Arouet au sujet de la vertu révèlant un Rousseau bien plus strict. Voltaire, quant à lui, décrit le Dieu de l’Ancien Testament comme un tyran favorisant un “peuple élu” destiné, selon lui, à détruire les autres. Il met en doute la véracité des violences décrites dans ces textes et invite même les Juifs à abandonner ce qu’il considère comme des croyances superstitieuses. Voltaire rejette également avec force l’accusation de déicide portée contre les Juifs : selon lui, Jésus n’a été considéré comme Dieu que tardivement, au concile de Nicée (c'est le cas depuis l'an 33). Et même si une partie des Juifs (pharisiens) ont livré Jésus, cela ne saurait justifier la punition des Juifs contemporains (le judaïsme actuel vient.... des pharisiens). Dans un texte de 1776, il dis observer que tous les peuples, Juifs comme chrétiens, ont traversé des périodes de barbarie mais ont fini par évoluer, appelant ainsi à “oublier les abominations passées”. Il précise d’ailleurs à Pinto que ses critiques visent la superstition, non les personnes juives. Pour Voltaire, la plupart des religieux sont surtout attirés par l’argent (opinion contraire à l'islam ou au catéchisme). Sa vision est essentiellement noachide, et il finira d’ailleurs par rejoindre la franc-maçonnerie à la fin de sa vie.
+</p>
+          </div>
+        )
+      },
+
+{
+        titre: "Les Élus Coëns",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Joachim Martinez de Pasqually de l'Ordre des Chevaliers Maçons Élus Coëns de l'Univers, fondé vers 1763-1767, très actif à Toulouse et Bordeaux). Qui était une forme de Kabbale chrétienne et de gnose, mais surtout de théurgie (martinésisme). L'objectif n'était pas seulement d'étudier, mais d'opérer : contacter des entités angéliques par des rituels ("culte cosmos"). L'objectif était la Théorie de la Réintégration (le but de l'initiation Coën est de remonter pour devenir un "homme-dieu" (voir 'Tutelle Aragonaise')). Il meurt à Saint-Domingue en 1774, où il était allé réclamer un héritage. Saint-Domingue était à l'époque la colonie la plus riche du monde, basée entièrement sur l'esclavage et le sucre. Tout héritage ou commerce là-bas était directement lié à cette économie (Voltaire, tout en écrivant contre l'esclavage, dans Candide, avait des parts dans des compagnies maritimes, comme la Compagnie des Indes, qui pratiquaient la traite négrière). Le grand "concurrent" mystique des Élus Coëns était la Stricte Observance Templière (rite allemand, fondé par le Baron Von Hund, qui prétendait être l'héritier direct des Chevaliers Templiers). Jean-Baptiste Willermoz commerçant lyonnais, maçon de Lyon, haut grade Écossais, et disciple direct de Martinez (est ordonné "Réau-Croix" (le plus haut grade) et fonde un temple à Lyon), trouvait la magie de Pasqually trop complexe et dangereuse, il va donc prendre la doctrine de Pasqually (la Réintégration) et l'injecter dans la structure de la Stricte Observance Templière après avoir correspondu avec eux en 1774. Ensuite, Willermoz trouve la "Stricte Observance" allemande trop rigide et vide de sens spirituel. Il organise une réunion majeure à Lyon : Le Convent des Gaules (1778). Il crée le Rite Écossais Rectifié (R.E.R.) et transforme les grades : on ne parle plus de "Templiers" (vengeurs) mais de Chevaliers Bienfaisants de la Cité Sainte. Louis-Claude de Saint-Martin est initié par Martinez de Pasqually à Bordeaux en 1771 (il devient son secrétaire). Après la mort de Pasqually (1774), Saint-Martin s'éloigne de la théurgie (magie) des Coëns. Il va à Strasbourg où il découvre l'œuvre de Jacob Böhme ("Jacob Beum") grâce à une amie (Mme de Boecklin). Böhme l'influence totalement. Saint-Martin abandonne les rituels maçonniques pour la "voie cardiaque" (prière intérieure). Il signe ses livres "Le Philosophe Inconnu".  Bacon de la Chevalerie, disciple de Martinez, lui, joue un grand rôle dans la fondation du Grand Orient de France. 
+</p>
+          </div>
+        )
+      },
+ 
+     
+
+
+
+
+    ]
+  },
+ 'revolution': {
+    titre: "Vers la Révolution",
+    periode: "Renaissance",
+    resume: "Le Royaume de France est chamboulé",
+    introduction: "Jusqu'à la convocation des États généraux en 1789...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+         {
+        titre: "La Franc-Maçonnerie Auscitaines",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+L’idéal de la franc-maçonnerie française au XVIIIᵉ siècle est principalement éclairé par la pensée de Louis de Pardaillan de Gondrin, duc d’Antin et Grand Maître de la franc-maçonnerie française. Dans son discours prononcé le 24 juin 1740, lors d’une grande réunion maçonnique, considéré comme le premier manifeste doctrinal de la franc-maçonnerie française, le duc d’Antin affirmait (Discours de Ramsay) que les hommes ne se distinguent ni par leurs langues, ni par leurs habitudes, leurs pays ou leurs dignités. Il concevait le monde entier comme une grande République, où chaque nation représente une famille et chaque individu un enfant, la société maçonnique ayant pour but de faire revivre et de répandre ces maximes universelles, issues de la nature humaine. L’établissement de la franc-maçonnerie visait à réunir les esprits et les cœurs pour les rendre meilleurs, et à former, dans la durée, une nation spirituelle composée de multiples nations unies par les liens de la vertu et de la science, sans jamais déroger aux devoirs particuliers de chacun. Les loges entendaient ainsi rassembler des hommes d’esprit éclairé, de mœurs douces et d’humeur agréable, animés par l’amour des beaux-arts mais surtout guidés par les principes de vertu, de science et de religion. Dans cette perspective, l’esprit de fraternité devait dépasser les frontières du genre humain tout entier, afin d’apprendre aux nations et aux royaumes à se chérir mutuellement tout en respectant leur patrie. L’obligation première du maçon ne résidait donc pas dans une ambition de domination, mais dans le désir d’établir une institution destinée à unir les cœurs et les esprits. Concernant la religion, Louis de Pardaillan précisait qu’il ne s’agissait pas de la religion catholique, ni des règlements sur l’adoration pratiquée par les francs-maçons français, mais d’une loi morale universelle à laquelle tout maçon devait obéir, tout en comprenant la valeur symbolique de l’Art. Ainsi, un maçon ne pouvait être ni un athée stupide, ni un libertin sans religion : autrefois, il devait professer la religion de sa patrie, mais au XVIIIᵉ siècle, il n’était tenu que de suivre la religion sur laquelle tous les hommes s’accordent. En pratique, un franc-maçon devait être un homme bon, sincère, modeste et d’honneur, quelle que fût sa croyance particulière. De cette manière, la franc-maçonnerie se présentait comme le centre de l’union et le moyen d’établir une amitié sincère et durable entre des personnes que tout aurait pu séparer, mais que la fraternité maçonnique parvenait à rassembler.
+ </p>
+          </div>
+        )
+      },
+
+        {
+        titre: "La Loge Saint-Jean-des-Arts",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1776, la loge d’Auch, alors en perte de vitalité, rejoignit l’obédience de la Grande Loge et élut le frère Projean comme vénérable, mais des signes de faiblesse et de dissensions internes furent relevés. Dans ce contexte, les années 1771 à 1776 furent décisives pour la franc-maçonnerie française, marquées par la dissolution de la Grande Loge, la fondation du Grand Orient de France et l’élection du duc de Chartres, Louis-Philippe-Joseph d’Orléans, comme Grand Maître. Ce dernier entreprit en avril 1776 une tournée d’inspection des loges du Sud-Ouest, à Bordeaux, Agen et Toulouse où il posa notamment la première pierre d’un temple maçonnique et contribua à résoudre plusieurs conflits internes. Dans la région, la régénération de la franc-maçonnerie fut menée par Frix Bourdens, bourgeois auscitain, conseiller du roi et homme d’une grande énergie, qui décida d’insuffler un sang nouveau à la loge d’Auch en la rattachant au Grand Orient. Grâce à lui, un important groupement maçonnique fut constitué en 1778. Cette loge rénovée prit le nom de Saint-Jean-des-Arts et adopta la devise « De plusieurs, nous sommes un seul corps . Son inauguration solennelle, le 10 février 1779, réunit de nombreuses loges du Sud-Ouest et de France : La Sagesse (Toulouse), Cœurs Réunis, Parfaite Union d’Agen, La Zélée de Bayonne, ainsi que la célèbre loge parisienne des Neuf Sœurs, dont la présence contribua à l’éclat de la cérémonie. Le Grand Orient confia ensuite les pleins pouvoirs à la nouvelle loge. Parvenue à son plein épanouissement, Saint-Jean-des-Arts illustrait la mutation profonde de la franc-maçonnerie, désormais tournée vers les idéaux de liberté, d’égalité et de fraternité, principes qualifiés dans la circulaire de 1775 d’« apanage précieux des francs-maçons » et de « bases fondamentales de l’Ordre ». Dans les loges et au sein du Grand Orient, tous les membres étaient placés sur un pied d’égalité, sans distinction de naissance, de fortune ou de rang : les offices étaient conférés par élection pour une durée limitée. À Saint-Jean-des-Arts, il n’était pas rare de voir un tapissier comme Sarrouy ou un professeur de dessin comme Chaubard diriger en loge des nobles, des ecclésiastiques ou des officiers, tandis que dans les loges militaires, un simple artisan pouvait, par le suffrage de ses pairs, tenir le premier maillet et commander à ses supérieurs hiérarchiques. Cette égalité de droits et de devoirs, abolissant les privilèges liés à la naissance, fit de la franc-maçonnerie une véritable démocratie spirituelle, que la loge des Neuf Sœurs qualifia plus tard de communauté de « citoyens de la démocratie maçonnique ». Lorsque éclata la Révolution française, la loge Saint-Jean-des-Arts, à l’instar de nombreuses autres en France, à Tarbes, Toulouse, Perpignan, Cahors ou Saint-Gaudens, cessa progressivement ses activités : les temples furent désertés et laissés vides, même si quelques loges isolées poursuivirent leurs travaux. Plusieurs frères, tels que le marquis de Pins, le baron de Luppé, Daignan, de Labarthe, d’Arparens ou de Castéra, prirent le chemin de l’émigration, tandis que d’autres s’engagèrent activement dans la vie civique et patriotique : service dans la garde nationale, participation aux sociétés populaires, aux élections, aux administrations ou aux tribunaux de tous niveaux. Dans le Gers, où les loges étaient particulièrement nombreuses à Condom, Mirande, Lectoure, Fleurance et Saint-Clar, les francs-maçons jouèrent un rôle déterminant dans le mouvement révolutionnaire et exercèrent une influence notable dans les assemblées électorales. Cette prépondérance s’explique aisément : ces hommes formaient alors une élite intellectuelle, préparée à la vie publique par les enseignements politiques et moraux qu’ils avaient reçus en loge. Plusieurs francs-maçons du Gers ont exercé des fonctions importantes pendant la Révolution : Louis Maribon de Montaut : Député du Gers à la Convention, Joseph-Nicolas Barbeau du Barran : Député du Gers à la Convention. Joachim Pérez : Député du Gers au Conseil des Cinq-Cents. Dareix : Membre du conseil du département (1790), Batbie : Membre du directoire du département (1791)....
+   </p>
+          </div>
+        )
+      },
+       {
+        titre: "Thérésa Cabarrus et La Franc-Maçonnerie Basque",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La toute première loge bayonnaise, la Saint-Jean de l’Union Cordiale (future « La Zélée »), est fondée le 3 juin 1743 par La Française de Bordeaux. Présidée par Timothée Lichigaray, issu d’une famille protestante de commerçants basques d’Orthez, elle rassemble l'élite sociale : commerçants, armateurs, parlementaires et procureurs du Roi. Fait remarquable, elle accueille des Juifs séfarades du quartier de Saint-Esprit, alors que ceux-ci n'ont pas encore la citoyenneté française. En 1772, ces derniers créent leur propre loge spécialisée à Saint-Esprit : La Fidélité. Cette ouverture provoque des tensions : en 1783, des membres opposés à cette présence sont expulsés et fondent L’Amitié, qui ne durera que trois ans. D’orientation libérale, les membres de La Zélée s'impliquent dans la rédaction des Cahiers des États généraux et le mouvement des « Obscurs ». Avec Joseph Garat, député du Labourd, ministre de la Justice puis de l’Intérieur, c’est lui qui annonce sa condamnation à mort à Louis XVI (descendant de Marguerite de Moncade). Dominique Dubrocq, premier maire élu de Bayonne (1790), initié à La Zélée puis membre de L’Amitié. Président de la Chambre de commerce et Rose-Croix en 1797, il loge Ferdinand VII d’Espagne en 1808. Commissaire du Directoire, député et fondateur de la Compagnie d’Assurances Générales de France. Dominique Eugène, un banquier, président de la Chambre de commerce (1770-1771) et Rose-Croix en 1784.  Son fils, sera ministre des Finances en Espagne et fondateur de la Banque San Carlos. Sa fille Thérésa, salonnière, salope et membre de la loge « La Candeur » commanditera la chute de Robespierre, sauvant ainsi sa vie. Sous l’Empire, Napoléon III percevra les loges à la fois comme un outil de contrôle de la bourgeoisie et comme un vecteur des idéaux révolutionnaires à travers l'Europe. Le XIXe siècle voit l'ascension de figures majeures avec Jacques Laffitte, bayonnais devenu président du Conseil, il fonde à Paris la loge « Les Trois Jours » (dont La Fayette est vénérable d’honneur). Il use de son influence pour nommer des percepteurs et financer discrètement la presse locale. Frédéric Bastiat, pionnier du libéralisme économique et humaniste, son père Pierre et son oncle Justin étaient maçons à La Zélée, Frédéric atteindra le grade de Rose-Croix en 1822. Camille Delvaille, issu d’une vieille famille juive de Saint-Esprit et conseiller municipal de 1870, est initié à Bordeaux et joue un rôle clé dans le réveil de La Zélée en 1892. Face à cette influence, une réaction religieuse s'organise au début du XXe siècle : des prêtres basques rédigent alors un catéchisme en langue basque spécifiquement dirigé contre la Franc-Maçonnerie.
+  </p>
+          </div>
+        )
+      },
+    
+  {
+        titre: "La Franc-Maçonnerie Tarbaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XVIIIᵉ siècle, Tarbes connaît une forte expansion : sa population triple, la ville s’embellit et s’affirme comme métropole religieuse, administrative et intellectuelle de la Bigorre. Ce dynamisme favorise l’essor d’une nouvelle forme de sociabilité urbaine : la franc-maçonnerie, qui s’implante aussi à Bagnères, Barèges et Vic, témoignant du rayonnement régional de Tarbes. La première loge tarbaise, La Paix, est constituée le 10 novembre 1764 par la Grande Loge de France, présidée par le comte de Clermont. Avec la création du Grand Orient de France en 1773, la loge doit régulariser sa situation. Le 29 février 1776, la Paix est reconnue loge régulière et sa réinstallation solennelle a lieu le 27 mai 1776 sous la présidence du marquis de Chabrillan. Toutes les formalités maçonniques sont respectées : lecture des constitutions, serment des vingt et un frères présents et proclamation officielle d’allégeance au Grand Orient de France. Après 1776, la loge La Paix de Tarbes n’apparaît plus que sporadiquement dans les archives. Le 14 décembre 1777, son vénérable Jean-Louis Depène demande au Grand Orient de remplacer son député, l’abbé de Montmorency-Bouteville, par Charles-Claude Leblanc de Virly. Puis, silence jusqu’au 18 février 1782, date à laquelle la loge annonce avoir surmonté une crise : privée de temple et peinant à se réunir, elle reprend vie à l’occasion de la naissance du dauphin Louis-Joseph-Xavier, fils de Louis XVI, en octobre 1781. Pour célébrer l’événement, les maçons se retrouvent le 24 décembre 1781 dans leur nouveau local place Saint-Jean et organisent, le 30 décembre, de grandes réjouissances publiques : messe solennelle aux Cordeliers, distribution de pain aux pauvres, banquet patriotique et illumination spectaculaire de la place. Le décor conçu par les frères Carles et Pujol symbolise la paix, la liberté et un arbre représentant l’Angleterre et ses colonies américaines et indiennes. La fête se conclut par un bal élégant, en présence du comte de Gontaut et de la société tarbaise. Leur conduite exemplaire améliore effectivement leur réputation et attire un nouveau membre, probablement le chevalier Pierre de Saint-Tray, futur vénérable de la loge en 1783. Reçu à La Paix en 1781, Barère fut un maçon peu assidu, sans charge, devenu simple « associé libre » dès 1785. Avocat à Toulouse, il se distingua surtout dans les milieux académiques et philanthropiques, membre de nombreuses sociétés savantes (Musée, Académie des Sciences, Jeux Floraux). Ce n’est qu’en 1788 qu’il rejoignit la loge marginale L’Encyclopédique, plus société intellectuelle que temple initiatique. Ses convictions réformatrices et libérales se sont donc forgées bien davantage dans l’exercice de son métier et les milieux lettrés que dans les loges. À Tarbes, plusieurs maçons notables jouèrent néanmoins un rôle important après 1789 : Jacques Barère devint administrateur du district, Joseph Carles maire, le baron de Hiis procureur syndic, et le vicomte de Labatut président du département. Leur ascension traduisait la continuité du pouvoir local des élites. Le parcours de l’avocat Antoine-François Péré, vénérable en 1782, en est exemplaire : révolutionnaire puis napoléonien, il finit pair de France sous la monarchie de Juillet. Beaucoup de maçons tarbais traversèrent la Révolution sans dommage, certains se ralliaient à chaque régime pour préserver leur position, tandis que d’autres, comme Dominique-Antoine Perrey, ancien vénérable devenu substitut du procureur général à Toulouse, furent victimes de la Terreur, condamné à mort en 1794.
+ </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "La Franc-Maçonnerie Béarnaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À Pau, dès 1776, existait une loge maçonnique officielle appelée La Sincère, à l’Orient de Pau. En 1788, après avoir compté parmi ses membres plusieurs Parisiens, Joseph-Charles Lefranc, Jean-Baptiste Lagrange ou encore Philippe Frédureau, la loge adresse une requête au Grand Orient de France afin de changer son titre primitif La Sincère Réunie en Le Berceau de Henri IV. On y apprend notamment qu’elle tenait alors ses réunions au Château de Pau. Au moment du rattachement du Béarn à la France, les principaux défenseurs de Pau sont les avocats du Parlement. Parmi eux figurent Pierre Pont-Pédeprat (maçon), Hillaire Laterrade (maçon), Joseph Claverie (maçon), François Balthasar (maçon), Isaac-Pierre Latour (Vénérable), Nicolas Suberbie-Cazalet (Vénérable), Jean-Daniel Harriet (maçon) et Louis Bois de Juzan (maçon). C’est ce parlement qui, sur demande venue de Paris, prend la décision symbolique : « On est Français, on n’est plus Béarnais ». Lors de la création du département des Basses-Pyrénées, Navarrenx est d’abord désignée comme chef-lieu, le 4 mars 1790. Les notables de Pau n’acceptent jamais cette décision. Une campagne de lobbying intense est immédiatement lancée auprès de Paris pour récupérer le titre, invoquant la salubrité ou encore l’inaccessibilité de Navarrenx. Ils avaient eu des membres en lien direct avec l’État central : Mathias Lansac (directeur et receveur général des Droits du Roi), Antoine Soufron (contrôleur des Actes) et Jean Touyaa de Lort (receveur général du Tabac). À peine sept mois plus tard, le 14 octobre 1790, un nouveau décret transfère finalement le chef-lieu à Pau. Cependant, les idées républicaines de Paris y passent mal. On y défend la religion catholique, les anciennes libertés locales et accepte mal les prêtres jureurs. Les représentants de l'État décident donc de punir Pau. En octobre 1795, la République, qui a assassiné notre Seigneur, retire le titre de chef-lieu à Pau pour le donner à Mont-Bidouze. Sauf que Saint-Palais est inefficace et le chef-lieu revient à Pau, Napoléon le confirmera. 
+ </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "L'Instruction Béarnaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Aux XVIIᵉ et XVIIIᵉ siècles, Paris ne fonctionne pas comme une « usine à génies locaux » mais s'impose plutôt comme le carrefour névralgique où les esprits brillants se rencontrent et diffusent leurs idées. Les « génies » se forment souvent contre les institutions plutôt que grâce à elles : Descartes, bien que passé par le cadre rigide du collège jésuite de La Flèche, y puise une liberté exceptionnelle et un accès massif aux bibliothèques avant de rejeter ce moule pour devenir autodidacte par les voyages et l’armée. De même, Diderot quitte la Sorbonne sans diplôme pour apprendre par les débats et les réseaux informels, tandis que Pascal, formé hors des cadres universitaires sous l’impulsion de son père et Rousseau s'affirment comme de purs autodidactes, le premier inventant une machine à calculer et écrivant sur les coniques dès l'adolescence. Face à des universités comme la Sorbonne, Montpellier ou Toulouse, jugées trop scolastiques, rigides et centrées sur la production d'un ordre social conformiste où l'originalité est suspecte, ces penseurs privilégient l'autonomie, les correspondances (véritable Internet de l'époque) et les bibliothèques privées. Condillac, pédagogue privé rejetant la scolastique, prône une connaissance issue de l'expérience graduelle adaptée au rythme de l'élève, tandis que Condorcet appelle à une progression par compétences plutôt que par âge. Cette quête d'autonomie trouve un écho dans le modèle du Béarn qui, jusqu’à la Révolution, a résisté à la centralisation scolaire au profit de pratiques de compagnonnage (sans parcours figé) et de transmission directe hors État fondé sur le mérite réel, la pratique (logique de compétence réelle) plutôt que sur les titres parisiens. Dans ces espaces de liberté, le temps n'est pas standardisé ni surveillé par des plannings rigides, mais rythmé par la lumière, la fatigue et l'avancement réel des tâches, une vision organique de l'apprentissage défendue par Rousseau, qui insiste sur l'écoute du corps, et par Diderot, qui valorise la curiosité spontanée et la pensée errante contre l'éducation cloîtrée qui brise l'élan intellectuel.
+ </p>
+          </div>
+        )
+      },
+       {
+        titre: "Jacob Frank",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jacob Frank, mystique juif, se réclamait de Sabbataï Tsevi, faux messie du XVIIᵉ siècle, et fonda un mouvement dissident appelé le frankisme, qui mêlait des éléments du judaïsme kabbalistique, du sabbataïsme et du mysticisme chrétien. Vers 1755, lui et ses disciples furent violemment rejetés par les autorités rabbiniques traditionnelles, accusés d’hérésie, d’orgies rituelles et de blasphèmes. Frank enseignait que la vérité divine se révélait par la “transgression”, prônant ainsi une inversion des valeurs religieuses dans un mysticisme antinomien rejetant les lois traditionnelles. En 1759, dans une tentative d’élargir son mouvement et dans une stratégie d’infiltration, il feignit une conversion au catholicisme, estimant que le catholicisme polonais pouvait lui offrir une protection politique, il fut baptisé à Lviv avec plusieurs centaines de fidèles, certains parrainés par de puissants nobles polonais. Mais cette conversion servait aussi un but doctrinal : Frank enseignait que le catholicisme représentait une étape de la révélation divine, une “seconde loi” succédant à celle de Moïse et annonçant une “troisième loi”, une religion universelle censée dépasser à la fois le judaïsme et le christianisme.  Après sa mort, ses disciples les Frankistes, se sont dispersés en Europe centrale. Certains d’entre eux ont cherché à s’intégrer dans la société chrétienne, en se fondant dans la noblesse ou la bourgeoisie. Dans l’Empire austro-hongrois, la descendance de familles frankistes (comme les Dobruschka ou les Fränkel) a souvent rejoint les milieux maçonniques ou intellectuels, l’un d’eux, Moses Dobruschka, alias Franz Thomas von Schönfeld, a même été anobli à Vienne, Il crée en 1780 les Frères Asiatiques, qui accueilleront le duc de Brunswick, dont le neveu sera à la tête de l’armée prussienne à Valmy en 1792 (le début d'une rivalité France/Allemagne allant jusqu'au traité de Francfort, la cause des blocs militaires de 1914). Leur conversion au catholicisme rendait les frankistes éligibles à certaines fonctions interdites aux juifs.
+ </p>
+          </div>
+        )
+      },
+
+
+ {
+        titre: "La France face au Libéralisme",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À Dijon, au début des années 1760, l'approvisionnement en pain, place Saint-Étienne, obéit à des règles strictes. Les mardis et samedis, les cultivateurs des environs sont tenus d'apporter leurs grains à la halle. Il est formellement interdit d'acheter ou de vendre des céréales en dehors de ce marché officiel, afin de garantir la transparence et d'éviter la spéculation. La vente est rigoureusement orchestrée par la "Police des grains". À l'ouverture du marché, la priorité absolue est donnée aux habitants : les ménagères passent en premier pour acheter leur grain. Ce n'est qu'ensuite que les professionnels, boulangers et restaurateurs, sont autorisés à s'approvisionner. Enfin, en fin de marché, les marchands de gros et négociants peuvent acquérir les invendus pour les transporter ailleurs. Les bourgeois et les communautés religieuses achètent de grandes quantités (des "provisions") qu'ils stockent dans leurs greniers. Les artisans et les boutiquiers achètent leur grain au coup par coup, le font moudre, puis l'apportent au boulanger pour le faire cuire (contre rémunération), faute de posséder un four. Les plus pauvres, eux, vivent au jour le jour et achètent directement leur pain cuit chez le boulanger, subissant de plein fouet les variations de prix. Cependant, en 1763, sous l'influence des Physiocrates, les premiers économistes libéraux, Louis XV décide de changer de stratégie pour résorber la dette du royaume. La "Police des grains" entraverait l'économie. Selon eux, il faut "laisser faire" : la libre circulation des grains enrichira les marchands et, par ruissellement, le royaume. Cette réforme s'attaque au cœur du système social : la "taxe" (mécanisme de régulation des prix donnant un prix plafond). Jusqu'alors, le rôle du Roi (le "boulanger du royaume") était d'assurer que même les sujets les plus pauvres puissent se nourrir, quitte à limiter les profits des marchands. Pour les Physiocrates, brider les marchands est une hérésie économique. Ils obtiennent l'interdiction de cette taxation au nom de la liberté du commerce, là où le peuple y voyait un droit fondamental. Pour les Physiocrates, n'importe qui doit pouvoir s'improviser marchand de grains. Leur logique est purement économique : la liberté des prix permet aux propriétaires terriens de s'enrichir, ce qui est censé dynamiser l'agriculture. Mais cette vision se heurte violemment à la morale de la monarchie, on ne doit pas s'enrichir sur le pain du peuple. Le grain n'est pas une marchandise ordinaire, c'est la vie des sujets. La colère monte jusqu'aux portes du pouvoir. En 1770, l'Abbé Terray, devenu Contrôleur général des finances à la fin du règne de Louis XV, dresse un bilan catastrophique de cette expérience libérale. Pour lui, il est intolérable que le grain devienne un objet de spéculation financière au profit des riches, affamant les plus pauvres. En 1770, Terray promulgue un nouvel édit qui marque le retour en force de la réglementation. Il rétablit l'interdiction d'acheter en dehors des marchés ("hors marché") et restaure la "Police des grains". Les journaux et les partisans des Physiocrates hurlent au scandale, accusant Terray de bafouer la liberté fondamentale du commerce. À l'avènement de Louis XVI, Turgot fut nommé contrôleur général des finances. Proche du philosophe Condorcet, Turgot est un libéral convaincu. Il persuade Louis XVI, inexpérimenté et désireux de bien faire, de lui donner carte blanche. Turgot promet que le retour au système de 1763 (la liberté totale) garantira un prix “naturel”. Turgot va jusqu'à défendre l'usure (le prêt à intérêt), affirmant que l'argent est une marchandise comme une autre. Sa philosophie repose sur l'intérêt personnel : les marchands connaissent mieux le commerce que les fonctionnaires. Turgot part du principe que l'être humain n'agit bien que s'il y trouve un intérêt financier. Turgot mise donc tout sur la loi de l'offre et de la demande. Intéressante pour les bourgeois qui possèdent les terres, tandis que les paysans, qui ne font que les travailler, s’en désintéressent complètement. Cette vision est un séisme pour la société catholique. Ce système remplace la charité et la protection du Roi par la loi froide du marché. Turgot, conscient que le peuple va "crier", prévient le Roi qu'il faut tenir bon. Méprisant les craintes populaires, il estime que le peuple est trop ignorant économiquement pour comprendre son "système" bienfaisant et que seule l'instruction future lui permettra de saisir la beauté du libéralisme. Pour faire passer la pilule, Turgot s'attaque aussi aux dépenses de l'État. Il réduit son propre train de vie de 40 % pour montrer l'exemple, et celui de la Cour (le Roi doit être riche pour ne pas dépendre des financiers bourgeois).
+</p>
+          </div>
+        )
+      },
+ {
+        titre: "La Guerre des Farines",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sans étude préalable et de manière brutale, l'édit de libéralisation est signé en 1774. Pour justifier cette réforme, les libéraux (soutenus par Voltaire) propagent l'idée fausse que l'ancienne "Police des grains" empêchait le blé de circuler. C'est un mensonge historique : la Police ne bloquait pas le grain (sauf exception), elle surveillait sa circulation pour s'assurer qu'il n'aille pas uniquement là où les prix étaient les plus hauts, mais là où les gens en avaient besoin. En supprimant cette police, Turgot ne libère pas le grain, il libère la spéculation. Puis, face à la montée des prix, la population s'appauvrit. Pour calmer la gronde, Turgot met en place des ateliers de charité. Censés aider les plus démunis (femmes et enfants inclus), ces ateliers forcent les pauvres à abandonner leur ancien métier pour des travaux qui permettent d'embellir les villes. La situation dégénère au printemps 1775. À Dijon, la "liberté du commerce" a un effet pervers : les puissants marchands de Lyon, disposant de plus de capitaux, viennent rafler les stocks de blé directement sur le marché de Dijon. Les marchands dijonnais ne peuvent pas lutter. Les autorités locales voient le blé partir et les prix flamber, mais la loi leur interdit d'intervenir. La tension éclate finalement sur le marché. Une poissonnière prend à partie un marchand de blé, l'insultant copieusement. Ce conflit verbal, symptôme de la détresse populaire, se retrouve devant les juges, qu’elle insulte aussi. Après les insultes et le désordre, l'affaire est classée sans suite et chacun rentre chez soi, laissant le problème du pain entier. À Dijon, la colère populaire se cristallise autour du négociant et meunier Carré. Celui-ci est suspecté d'être un "faux-nez" pour les élites locales. En effet, Carré a perdu des contrats antérieurs aux années 1770 (changement de la loi), mais continue ses affaires grâce aux financements occultes de Jean-Charles Fyot (Premier Président du Parlement) et de ses proches. Ces juges bourguignons, réputés pour leur avarice, sont accusés d'utiliser Carré pour spéculer sur le blé et s'enrichir sur le dos du peuple. Les administrateurs locaux sont coincés. D'un côté, ils doivent obéir aux édits de libéralisation de Turgot, de l'autre, ils voient la famine arriver. Le 13 avril 1775, dans une lettre adressée au Prince de Condé (Gouverneur de Bourgogne), les autorités expriment leur inquiétude. En substance, ils disent respecter la décision du Conseil du Roi, mais se dédouanent des conséquences : "Si le peuple a faim, ce sera à cause de vos réformes". Avec la réforme de Turgot, la "police des grains" (qui permettait de forcer la vente et de contrôler les stocks) est désarmée. Désormais, les marchands font la loi et les autorités ne peuvent difficilement "prévenir" les pénuries, elles ne peuvent que subir. Le Prince de Condé est en désaccord total avec les réformes de Turgot. Il craint le désordre. La communication entre Dijon et Paris est lente : les lettres d'avertissement envoyées à Condé mettent plusieurs jours à arriver. Ce décalage laisse les autorités locales sans ordres précis au moment critique. Le 18 avril 1775 (mardi de Pâques), la situation explose. La foule s'en prend d'abord au meunier Carré, accusé de stocker du blé. Il est poursuivi et forcé de se barricader. La troupe (les soldats), commandée par La Tour du Pin, arrive sur place mais elle est en sous-nombre et refuse de tirer sur le peuple. Elle ne "fait pas le poids". La colère se déplace ensuite vers Jean-Charles Fyot de Sainte-Colombe, le juge accusé d'être complice de Carré. Il se calfeutre chez lui, barre ses fenêtres et se cache. La foule envahit sa maison et commence à tout saccager, jetant les meubles par les fenêtres. Les émeutiers s'apprêtent à mettre le feu à la maison de Fyot. C'est l'intervention d'un homme d'Église (l'Évêque) qui évite le pire. Il harangue la foule en expliquant que l'incendie se propagerait aux maisons voisines, habitées par des pauvres, et ferait un carnage. L'argument porte : la maison est pillée, mais pas brûlée. Pour l'Octroi (la taxe payée à l'entrée de la ville sur les marchandises) Turgot affirme que réduire cet octroi fera baisser le prix du pain pour le peuple. Sauf que la ville perd ses revenus (qui servent à l'entretien et à la charité) et les marchands profitent de la baisse de taxe pour augmenter leurs marges au lieu de baisser les prix.
+</p>
+          </div>
+        )
+      },
+
+
+
+
+ {
+        titre: "Le Convent de Wilhelmsbad",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le duc de Brunswick présida le Convent de Wilhelmsbad, un congrès maçonnique international en 1782 car la maçonnerie était extrêmement fragmentée entre de nombreuses obédiences. Le convent avait pour but la réforme morale et spirituelle de l’homme. Lors de ce convent, des désaccords profonds opposèrent notamment Joseph de Maistre, représentant du royaume de Savoie, à Charles de Hesse-Kassel (futur frère asiatique) : de Maistre, catholique mystique, souhaitait maintenir une maçonnerie sur une base chrétienne traditionnelle proche de Willermoz, tandis que Charles de Hesse-Kassel incarnait un courant plus rationaliste. C'est ici que sont discutés les grades supérieurs, la mystique chrétienne, les influences kabbalistiques, la structure ésotérique universelle avec les systèmes martinistes (France), les Illuminés de Bavière, les Rose-Croix allemands, la noblesse prussienne, polonaise, suédoise, russe (Yelagin et Novikov, rosicruciens), la mystique de la réintégration (Martinez de Pasqually), des schémas kabbalistiques chrétiens (Reuchlin), des rituels alchimiques et l’idée d’une réforme morale de la noblesse. Joseph de Maistre évoqua après Wilhelmsbad la confusion et la “profonde inquiétude” qu’il avait ressenties, affirmant que le convent avait ouvert une ère nouvelle en raison de décisions vagues et ambiguës, et parce que certains participants semblaient vouloir “retirer à la maçonnerie son âme chrétienne”. C’est cette ambiguïté qui le poussa plus tard à écrire : « Ce qui est sorti de Wilhelmsbad est plus redoutable qu’on ne le croit. » On sait avec certitude que plusieurs familles nobles européennes du XIXᵉ siècle, notamment celles de Hesse, du Danemark, de la Russie impériale (les Romanov) ou encore des cercles brunswickois, montraient un intérêt marqué pour les symboles anciens comme les svastikas, des croix à branches courbes, des rosaces solaires ou des motifs templier. Le duc de Hesse-Kassel, la famille de Hesse-Darmstadt ou la maison de Danemark participaient à ce courant intellectuel, d’où la présence de motifs solaires comme la svastika dans leurs décors De ces lignées descendent notamment Dagmar de Danemark, luthérienne et épouse d’Alexandre III et mère de Nicolas II, ainsi que les membres de Hesse-Kassel et de Hesse-Darmstadt, eux aussi portés vers l’ésotérisme.
+
+</p>
+          </div>
+        )
+      },
+
+
+
+ {
+        titre: "Le Mythe de l'Indépendance Américaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Les mythes fondateurs jouèrent un rôle déterminant dans la cohésion des colons américains, unifiant les treize colonies sous une même bannière idéologique et spirituelle. Au cœur de cette mémoire collective se trouvait la légende des Pères pèlerins, ces Puritains qui, en 1620, quittèrent Plymouth à bord du Mayflower pour fonder la colonie de New Plymouth. Persécutés pour leur foi presbytérienne, ils cherchaient avant tout la liberté de conscience. Leur exil, perçu comme un acte sacré, fut réinterprété par les révolutionnaires du XVIIIᵉ siècle comme le point de départ du projet spirituel et politique américain : l’indépendance n’était plus seulement une révolte contre la Couronne, mais l’aboutissement d’une mission divine. Cette continuité entre foi et liberté constitua l’un des piliers du discours révolutionnaire, reliant la cause patriotique à l’héritage spirituel des premiers colons. Les idées politiques et religieuses issues du puritanisme de Nouvelle-Angleterre, notamment la théologie du Covenant (Alliance), influencèrent profondément les leaders révolutionnaires. Selon cette vision, les colons étaient liés à Dieu par un contrat sacré : la liberté et la vertu publique conditionnaient la bénédiction divine. L’Amérique était dès lors perçue comme une nouvelle Jérusalem, un peuple élu investi d’une mission providentielle. Ce sentiment de destinée nationale fut renforcé par la conviction que la guerre d’indépendance répondait à la volonté divine. Le Congrès continental institua même un aumônier par régiment, conférant à la lutte une dimension sacrée. La guerre devenait une croisade contre la servitude de l’Antéchrist. Des pasteurs comme Samuel Sherwood affirmaient que « Dieu tout-puissant, les puissances célestes et une multitude d’anges » soutenaient les colons, tandis que la victoire de Saratoga était célébrée comme un miracle du « Dieu des armées ». Ce climat religieux unifiait une société pourtant marquée par une grande diversité confessionnelle. Depuis le Grand Réveil, les sermons évangéliques avaient ravivé un imaginaire millénariste selon lequel le règne messianique du Christ commencerait en Amérique, « principal siège du royaume que le Christ érigerait sur terre dans les derniers jours ». Les colons croyaient œuvrer non seulement pour leur indépendance, mais pour le salut de l’humanité entière : la liberté américaine devait dépasser les frontières et inspirer les nations opprimées. Cette conscience messianique, annonciatrice du Manifest Destiny du XIXᵉ siècle, liait étroitement patriotisme et mission divine. L’opposition entre catholicisme et protestantisme renforça également cette identité spirituelle. Depuis la révocation de l’édit de Nantes et les guerres contre la France et l’Espagne, puissances catholiques, le papisme était assimilé au despotisme, tandis que le protestantisme incarnait la liberté. Les Whigs britanniques et les patriotes américains firent de cette opposition un argument politique, voyant dans la domination de l’Église anglicane et la construction d’un palais épiscopal à Boston une tentative d’asservissement spirituel. Le refus britannique d’établir un évêché indépendant en Amérique fut perçu comme un symbole d’ingérence tyrannique, rappelant les persécutions subies par les Puritains. En réaction, des voix comme celle de Samuel Williams appelèrent à la tolérance universelle et à la liberté de conscience, principes repris par Jefferson et Madison, qui formulèrent l’idée d’un “mur de séparation” entre l’État et la religion. Enfin, l’Acte de Québec de 1774, reconnaissant le catholicisme dans la province canadienne, fut interprété comme une trahison du roi. Cette décision acheva de transformer la résistance religieuse en insurrection politique. Ainsi, du mythe des Pères pèlerins à la prédication révolutionnaire, de la théologie du Covenant à la revendication de liberté absolue, la Révolution américaine s’inscrivit dans une vaste continuité spirituelle : celle d’un peuple convaincu de servir la Providence en se libérant du joug britannique et en inaugurant une ère nouvelle de liberté universelle.
+ </p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Le Début de l'Indépendance Américaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1764, la loge maçonnique St. Andrew’s Lodge de Boston acquiert le Green Dragon Tavern, une taverne du quartier Nord qui deviendra, selon Daniel Webster. C’est là que les Sons of Liberty s'associaient à des actions, notamment le célèbre Boston Tea Party. Parmi les figures majeures du mouvement figurent Paul Revere ou Joseph Warren, tous membres de la St. Andrew’s Lodge. Warren, grand maître provincial de la franc-maçonnerie du Massachusetts, joua un rôle déterminant en organisant la mission de Paul Revere chargée d’avertir les milices coloniales de l’arrivée des troupes britanniques, la fameuse “Midnight Ride”, qui mena directement aux affrontements de Lexington Green, marquant le début du conflit entre colons et armée britannique. Ce même jour, William Munroe, lieutenant-sergent des Minutemen de Lexington, franc-maçon et premier maître de la loge locale, accueillit Revere dans sa demeure, la Munroe Tavern, qui servit à la fois de base patriotique et de lieu maçonnique, symbole de la convergence entre action révolutionnaire et fraternité initiatique. Dès l’adoption du Stamp Act, les Sons of Liberty organisèrent des manifestations virulentes : pendaisons d’effigies au Liberty Tree de Boston, saccage des bureaux des collecteurs d’impôts et campagnes d’intimidation poussant nombre d’agents fiscaux à démissionner. À New York, les patriotes érigeaient des Liberty Poles pour affirmer leur résistance à la domination britannique, chaque tentative des troupes royales de les détruire entraînait des affrontements, culminant avec la Battle of Golden Hill en janvier 1770, un épisode sanglant opposant les Sons of Liberty, aux soldats britanniques. En 1772, les patriotes incendièrent le navire britannique HMS Gaspee, échoué alors qu’il pourchassait un bateau de contrebandiers, un acte spectaculaire d’insoumission préfigurant le Boston Tea Party. D’après les archives, la St. Andrew’s Lodge ne tint pas séance cette nuit-là, signe d’une prudence stratégique. Face aux taxes imposées par les Townshend Acts (sur le thé, le papier, la peinture, etc.), les Sons of Liberty organisèrent de vastes boycotts économiques visant à paralyser le commerce britannique. Ces actions, souvent efficaces, furent toutefois marquées par des méthodes coercitives : les loyalistes étaient parfois soumis au tarring and feathering, goudronnés et emplumés, pour les dissuader de collaborer avec la Couronne. 
+    </p>
+          </div>
+        )
+      },
+    
+       {
+        titre: "La Mise en Place de l'Indépendance Américaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dès les années 1760, plusieurs communautés juives participent activement au mouvement patriotique. À Philadelphie, des notables comme Benjamin Levy, David Franks et Samuel Levy signent les résolutions de non-importation contre le Stamp Act, marquant une première opposition économique à la Couronne. Figure centrale de cet engagement, le juif d'origine polonaise Haym Salomon s'illustre d'abord à New York en rejoignant les Sons of Liberty. Arrêté par les Britanniques, il s'évade et s'établit à Philadelphie, où il devient l'un des artisans financiers les plus indispensables du Congrès continental. De 1775 à 1783, Salomon est le collaborateur le plus proche et l'un des plus efficaces de Robert Morris, le Surintendant des Finances. Son rôle, confirmé par le journal de Morris, est vital. Il négocie la vente de lettres de change et de titres du gouvernement pour lever des fonds. Il convertit les prêts obtenus des alliés (comme la France) en argent liquide utilisable par l'armée. Il prête sur sa propre fortune pour soutenir l'effort de guerre, finançant directement des délégués du Congrès ou des opérations militaires. Son intervention la plus célèbre a lieu avant la campagne décisive de Yorktown (1781). L'armée de Washington ayant désespérément besoin de fonds, Salomon réussit, à la demande de Morris, à lever une somme critique (souvent estimée à 20 000 dollars), permettant à la campagne de se poursuivre vers la victoire. Le soutien ne fut pas que financier. De nombreux juifs se distinguent dans la logistique et au sein de l'armée révolutionnaire, notamment Mordecai Sheftall, Philip Moses Russell, Solomon Bush et David Franks. L'exemple le plus marquant est celui de Francis Salvador. Premier juif élu au Congrès provincial de Caroline du Sud, il combat les loyalistes alliés aux Cherokees et meurt au combat en août 1776. Il est aujourd'hui reconnu comme le premier officier juif et le premier juif tombé pour l’indépendance américaine. Les Treize Colonies, soumises aux Navigation Acts, ne pouvaient commercer quasiment qu'avec la Grande-Bretagne. À la veille de la Révolution, le renforcement du contrôle maritime par Londres rend illégales les importations vitales d'armes depuis des ports neutres comme Curaçao ou Amsterdam. La correspondance du gouverneur britannique de Curaçao se plaint de marchands juifs accusés de vendre armes et poudre aux insurgés, malgré la pression britannique sur cette colonie néerlandaise. Le journal de la Congrégation Mikveh Israel de Philadelphie mentionne d'ailleurs des collectes de fonds organisées à Curaçao en 1776. Des marchands juifs installés dans des ports étrangers ont également utilisé leurs réseaux pour transmettre des renseignements navals aux patriotes. L'engagement pour la liberté se double d'une lutte pour l'égalité religieuse. Moses Michael Hays, un marchand de Newport puis de Boston, refuse dès 1775 de prêter un serment de loyauté au roi qui exigeait la mention de la foi « chrétienne », affirmant que « tous les hommes sont créés égaux ». Franc-maçon influent, Hays devient Grand Maître de la Grande Loge de Nouvelle-Angleterre en 1792, choisissant le célèbre patriote Paul Revere comme adjoint. Conscient de ces contributions vitales, George Washington (franc-maçon comme Roosevelt du bombardement de Biarritz, Churchill ou Daladier) adresse en 1790 une lettre historique à la congrégation juive de Newport. Il y remercie la communauté pour son rôle dans « l’édifice de la liberté » et garantit que les États-Unis ne donneront « à la bigoterie aucune sanction, à la persécution aucune assistance ».
+   </p>
+          </div>
+        )
+      },
+ {
+        titre: "Au Tour de la France",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+    Louis XVI nomme Jacques Necker, banquier issu de la haute bourgeoisie, directeur du Trésor royal, puis l’année suivante directeur général des finances. Deux ans plus tard, sous l’influence de ses conseillers comme Savalette de Langes (maçon), le roi engage la France dans la guerre d’indépendance américaine contre une monarchie étrangère. Aux côtés du marquis de La Fayette, jeune aristocrate franc-maçon devenu héros de cette guerre, se trouve Benjamin Franklin, membre de la prestigieuse loge des Neuf Sœurs avec Voltaire. Franklin, Condorcet ou le duc de La Rochefoucauld incarnent cette alliance entre noblesse, bourgeoisie éclairée et idéaux républicains. Mais derrière le visage réformateur et moraliste de Necker se cache la réalité d’un système financier profondément lié à la bourgeoisie montante. Les rentes royales, principal instrument de placement des élites, liaient la monarchie à ses créanciers. La couronne, constamment endettée, empruntait auprès de banquiers et négociants issus du tiers état enrichi, leur versant en échange des rentes viagères ou perpétuelles garanties par le Trésor royal. C’était un lien d’intérêt réciproque : le roi dépendait de ceux qui vivaient de ses dettes, et cette bourgeoisie financière voyait dans l’État non un adversaire, mais un débiteur rentable. Necker symbolise parfaitement cette double position : banquier prospère devenu ministre, il finançait le roi tout en profitant des rentes royales détenues au nom de sa femme et de sa fille. Ainsi, l’homme présenté comme le sauveur des finances publiques incarnait en réalité la contradiction même du système : un serviteur de l’État nourri par les revenus de sa dette. Lorsque la bourgeoisie réclamera plus tard le pouvoir politique, ce sera aussi pour défendre ce modèle : abolir les privilèges comme ceux du Béarn (impérialisme), mais préserver les rentes qui garantissaient leurs profits. La Révolution, en ce sens, préparait déjà son propre paradoxe : une révolte contre les privilèges au profit d’une nouvelle aristocratie, celle de l’argent. En 1781, Necker publie le Compte rendu au roi, un document inédit rendant publiques les finances de l’État. Il y affirme, à tort, que le royaume n’est pas en déficit. Cette manœuvre populiste sape les réformes fiscales du roi, notamment la taxation de la noblesse et du clergé. Necker gagne ainsi la faveur de l’opinion mais affaiblit la monarchie. Renvoyé en mai 1781, il se retire à Coppet, en Suisse, tout en entretenant un vaste réseau d’influence auprès des élites et en publiant des ouvrages qui renforcent son image de réformateur victime du pouvoir royal. Pendant ce temps, la situation financière de la France se dégrade (la période de l'éruption du Laki). Les milieux libéraux, protestants et bourgeois réclament son retour, le présentant comme un « ami du peuple ». Malgré ses origines étrangères et sa fortune considérable, Necker est rappelé, après l’édit de tolérance signé par Louis XVI sous l’influence de conseillers comme Loménie de Brienne ou Malesherbes. De retour à Paris, il est acclamé par la presse et les salons bourgeois. Sous l’influence des physiocrates, le contrôleur général des finances Loménie de Brienne (Archevêque de Toulouse, proche des 'Obscurs' et certainement déiste ou mécréant) refait adopter en juin 1787 une mesure autorisant la libre circulation et l’exportation des grains. Le prix du pain s’envole.
+
+  </p>
+          </div>
+        )
+      },
+      {
+        titre: "La Vie n’est pas une Marchandise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Lorsque Necker revient au pouvoir et tente, en août 1788, de bloquer les exportations, il est déjà trop tard : la pénurie est installée, la population souffre de la faim et voit le blé quitter les villes et les campagnes. Des troubles éclatent notamment à Saint-Brieuc, Lannion et Morlaix, où la population proteste contre la cherté du pain et accuse les autorités et les marchands d’accaparement. Le 9 septembre 1789, à Troyes, le maire Claude Huez est massacré par la foule, qui l’accuse de cacher des réserves de blé. Sa femme aurait répondu aux affamés réclamant du pain qu’« ils n’avaient qu’à manger leurs enfants ». À Troyes, des femmes s’emparent des portes de la ville pour empêcher les magistrats de fuir, montent sur les toits et lancent des tuiles sur les soldats du roi. L’une d’elles va gifler un officier royal en public. Elles défendent le droit au pain, qui est un droit vital et non une simple marchandise. Lors de l’affaire Réveillon, des ouvriers et de nombreuses femmes participent aux émeutes contre un manufacturier accusé de vouloir baisser les salaires. Sa maison est pillée. À Rennes en janvier 1789, des bagarres violentes  éclatent avec la noblesse face à des étudiants et des femmes. À Aix, des femmes attaquent des greniers pour s’emparer du blé et imposer la « taxation populaire ». Le grain est alors vendu à un prix jugé juste par la communauté, l’argent étant remis au propriétaire, mais en refusant les prix du marché. Les marchands stockaient le blé pour l'exporter là où c'était plus cher. Le peuple de Rouen voyait passer des bateaux remplis de blé alors qu'eux n'avaient pas de pain, encore de grosses émeutes ! Pour résoudre la crise, Louis XVI, sur les conseils de Loménie de Brienne convoque les États généraux en 1789, une assemblée qui n’avait pas été réunie depuis 1614. Trois ordres y siègent : clergé, noblesse et tiers état (bourgeoisie).  Sur le conseil de Necker, le roi double la représentation du tiers, qui exige ensuite que son vote compte double. Ces revendications, présentées comme une quête d’égalité, visent en réalité à accroître le pouvoir bourgeois au nom de notions abstraites comme la nation, le peuple et la souveraineté. En juin, les députés du tiers se proclament Assemblée nationale, sans mandat royal ni soutien populaire réel. Le roi ferme leur salle de réunion, mais 576 députés prêtent alors le serment du Jeu de paume, jurant de ne pas se séparer avant d’avoir donné une constitution à la France. En quelques jours, cette élite bourgeoise s'arroge le droit de parler au nom du peuple et affirme que désormais l’homme, et non Dieu, est la source de l’autorité (voir 'Tutelle Aragonaise').
+  </p>
+          </div>
+        )
+      }
+
+
+
+
+
+
+    ]
+  },
+
+ 'la-republique': {
+    titre: "Le Béarn sous la Terreur",
+    periode: "Époque Moderne",
+    resume: "Les Sacrilèges s'abattent sur la France",
+    introduction: "Jusqu'à la mort de Maximilien de Robespierre...",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+      
+ {
+        titre: "La Continuité des Réseaux",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Après la victoire américaine de 1783, les réseaux commerciaux juifs et protestants, déjà mobilisés durant la guerre d’Indépendance, continuèrent d’exercer une influence importante dans les échanges transatlantiques. Ces familles de marchands et banquiers, établies à Amsterdam, Londres, Curaçao, Bordeaux ou Livourne, disposaient d’une longue expérience du commerce international et des circuits financiers parallèles. Habitués à contourner les blocus et les contrôles monarchiques, ils faisaient circuler capitaux, informations et marchandises entre l’Europe, les Antilles et les États-Unis. Lorsque la France entra en crise en 1789, ces réseaux furent réactivés : plusieurs négociants qui avaient soutenu les patriotes américains mirent désormais leurs circuits au service des factions révolutionnaires françaises. Amsterdam, centre bancaire séfarade majeur, vit certaines familles prêter directement ou indirectement à la Révolution française par le biais de maisons de commerce, tandis que Livourne, port franc d’Italie, devint un point d’entrée discret pour les métaux précieux et les produits coloniaux à destination de Marseille, Toulon et Bordeaux, même durant les tensions maritimes de 1792 à 1795. En France, ces réseaux eurent un impact financier, commercial et politique décisif : les négociants juifs bordelais et marseillais, forts de leurs contacts atlantiques, continuèrent à importer des marchandises essentielles, soutenant ainsi l’économie révolutionnaire. Cet héritage s’inscrivait dans la continuité des circuits atlantiques forgés pendant la guerre d’Amérique (1775–1783), lorsque les ports français de Nantes, Bordeaux et La Rochelle avaient établi un trafic intense d’armes, de vivres et d’informations avec les États-Unis via les Antilles. Ces filières, formées de capitaines, d’armateurs et de négociants, restèrent actives après 1783 et furent réutilisées dès 1789 pour faire circuler argent, imprimés politiques et correspondances à l’abri du contrôle royal. Les milieux marchands favorables au changement, notamment à Bordeaux et Nantes, facilitèrent ainsi la diffusion de brochures et journaux révolutionnaires depuis Londres ou Philadelphie. Le réseau de Brissot, en particulier, s’appuyait sur ces connexions commerciales pour publier et importer des textes politiques, échappant aux contrôles royaux et bancaires. Ses correspondances évoquent des « banquiers d’Amsterdam » et des « négociants portugais ». Brissot mentionne d’ailleurs un « réseau hollandais » mobilisé pour faire passer de l’argent et des publications interdites, où figuraient plusieurs familles influentes comme les Rodrigues d’Amsterdam. Ces réseaux transnationaux fonctionnaient grâce à une structure familiale éclatée : un marchand à Bordeaux pouvait avoir un cousin à Amsterdam et un autre à Londres, ce qui permettait de détourner un blocus français en passant par un navire hollandais via Anvers. Ces circuits utilisaient le crédit, les lettres de change et les prête-noms, rendant leurs opérations invisibles à l’administration royale. Les transactions se faisaient souvent en or, argent ou en biens facilement transportables tels que le sucre, le café, l’indigo ou les pierres précieuses. 
+   </p>
+          </div>
+        )
+      }
+     
+    
+     ,
+ {
+        titre: "La Révolution des Rentes",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Philippe d'Orléans, Grand Maître du Grand Orient de France, ransforme le Palais-Royal en une zone de non-droit pour la police royale, où l'on pouvait imprimer des pamphlets et haranguer la foule librement.  Le 23 juin 1789, Louis XVI convoque une séance solennelle à laquelle Necker est absent. Il y rappelle la structure traditionnelle du royaume fondée sur les trois ordres (clergé, noblesse et tiers état) chacun ayant son rôle propre, le roi en étant le garant de l’unité. Il ordonne que chaque ordre délibère séparément, conformément à la coutume. Le clergé et la noblesse obéissent, mais les députés du tiers refusent de bouger. C’est alors que Mirabeau s’écrie : « Allez dire à votre maître que nous sommes ici par la volonté du peuple et que nous n’en sortirons que par la force des baïonnettes ! » Dans les jours suivants, plusieurs membres du clergé, dont l’archevêque de Vienne, rejoignent le tiers état. Sous la pression, Louis XVI cède : le 27 juin, il reconnaît officiellement cette Assemblée nationale qu’il rejetait encore quelques jours plus tôt. Le roi, hésitant entre la fermeté de Marie-Antoinette et le compromis prôné par Necker, choisit de ne pas intervenir, laissant les révolutionnaires consolider leur position. En parallèle, il fait venir discrètement autour de Paris des troupes étrangères fidèles, afin d’éviter les émeutes et de rappeler que l’armée reste monarchique. Le 9 juillet 1789, l’Assemblée nationale devient constituante, affirmant son but : donner une constitution à la France. Pendant ce temps, Desmoulins, Danton, Marat et le duc d’Orléans excitent déjà les foules parisiennes.  Entre le 11 et le 13 juillet, les barrières de l'octroi (où l'on payait les taxes sur les marchandises entrant dans Paris) sont incendiées. Les rapports de police de l'époque mentionnent la présence de "brigands" qu'on soupçonnait d'être payés au Palais-Royal. Le 11 juillet, Louis XVI avait renvoyé Necker (il le savait du complot). Il était perçu comme le « ministre du peuple » et ce renvoi provoque une onde de choc : les clubs et les journaux crient au coup d’État royal. À Paris, on redoute la dissolution de l’Assemblée (autoproclamée sous motion de l’Abbé Sieyes), un massacre ou un pacte de famine (Flesselles,Berthier,Foulon accusés). Le 12 juillet, au Palais-Royal, Camille Desmoulins monte sur une chaise et lance : « Citoyens, le moment est venu ! Necker est renvoyé, le massacre des patriotes est décidé ! Aux armes ! » Il brandit un pistolet et propose de porter une cocarde verte, mais étant la couleur du Comte d’Artois, il se rabat sur le Bleu/Rouge de la livrée d’Orléans. Les bustes de Necker et de Philippe d’Orléans (futur Philippe-Égalité) sont promenés en triomphe dans les rues. Le 13 juillet, la foule pille le couvent de Saint-Lazare avec les blés de la dîme ecclésiastique. Flesselles, en tant que Prévôt des marchands, veut éviter le bain de sang. Il promet des armes aux Parisiens mais les envoie aux mauvais endroits (Chartreux), les Parisiens s’arment de tout ce qu’ils trouvent. À l’Hôtel de Ville, on décide de créer une milice citoyenne, future Garde nationale. Le matin du 14 juillet, la foule envahit l'Hôtel des Invalides. Les soldats sur place refusent de tirer sur le peuple. 30 000 à 40 000 fusils qui ont été pris. C'est pour trouver la poudre nécessaire à ces fusils que la foule se dirige ensuite vers la Bastille. Le gouverneur (“maire”) de Launay a invité les délégués de la Ville à déjeuner pour prouver sa bonne foi. Il a juré qu'il ne tirerait pas si on ne l'attaquait pas. Mais, quand la foule a brisé les chaînes du premier pont-levis et a pénétré dans la première cour, les tirs ont commencé. Ensuite, De Launay rend la forteresse contre une promesse écrite de vie sauve pour lui et ses hommes. Mais dès que les portes s'ouvrent, la foule massacre plusieurs soldats. De Launay est traîné, lynché et Desnot lui coupe la tête. Jacques de Flesselles, lui, est abattu d'un coup de pistolet sur les marches de l'Hôtel de Ville. En promenant les têtes sur des piques, la foule s'arrête devant la statue d'Henri IV sur le Pont-Neuf. On force les têtes coupées à s'incliner devant la statue en criant : "Salue ton maître !" car pour les partisans du Duc d'Orléans, Henri IV était le "bon roi" populaire et pas Louis XVI. 
+ 
+ </p>
+          </div>
+        )
+      },
+
+
+    {
+        titre: "L'Autoproclamation",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 15 juillet 1789, au lendemain de la prise de la Bastille, Jean-Sylvain Bailly est élu maire de Paris par 4 % des Parisiens et fait de lui le premier chef civil de la Révolution. Franc maçon, Bailly incarne la bourgeoisie éclairée qui prend le pouvoir au nom du peuple, mais sans lui.  Les femmes élues ou qui votaient comme chefs de maison dans les assemblées, perdent ce droit et sont exclus par des gens auto-élus. La République ne reconnaît plus que des individus soumis à l’État. Les communautés religieuses sont dissoutes, les couvents pillés, les prêtres chassés, les sœurs dispersées. Certaines, comme les seize Saintes carmélites de Compiègne, sont guillotinées pour avoir refusé de renier leur vœu et leur foi catholique, montant à l’échafaud en chantant le Veni Creator. La fidélité religieuse est un motif de mort. Entre 1789 et 1799, le nombre de religieuses passa de 50 000 à 2 000, et celui de prêtres de 125 000 à 25 000.
+
+
+</p>
+          </div>
+        )
+      },
+  
+        {
+        titre: "Les Langues Régionales",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Bertrand Barère, député maçon, montagnard et orateur du Comité de salut public, propose d’interdire l’usage des langues régionales : breton, basque, alsacien, corse sauf le gascon car c’est la sienne. Dans la foulée, l’abbé Henri Grégoire, évêque constitutionnel de Blois, publie son célèbre Rapport sur la nécessité et les moyens d’anéantir les patois. Sous prétexte d’unité nationale, il préconise la disparition des langues locales (même le gascon), assimilées à l’ignorance. Alors que depuis l’ordonnance de Villers-Cotterêts, en 1539, François Ier avait imposé le français pour les actes administratifs, mais aucun roi n’avait jamais voulu effacer les langues du peuple. Puis il s'ensuit, après l'interdiction de parler une langue "régionale" à l'école par le parisien Ferry (franc-maçon), une phase de colonisation de l'Afrique, pour imposer une seule pensée : la pensée républicaine, après l'éthnocide du Béarn.
+ </p>
+          </div>
+        )
+      },
+        {
+        titre: "La DDHC",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La Déclaration des droits de l’homme et du citoyen est signée le 26 août 1789, « en présence et sous les auspices de l’Être suprême ». À la suite de cet événement, on assiste à la mise en place du droit à l'usure (octobre 1789), déjà présent chez les protestants hollandais depuis le 16e siècle, l’émergence du culte de la Raison et à la transformation de Notre-Dame de Paris en Temple de la Raison. Cette déclaration possède aujourd’hui une valeur constitutionnelle, au même titre que la Constitution de 1958. Le Conseil constitutionnel, institution créée par la Constitution de la 5ème République, rédigée en grande partie par Michel Debré, d'origine juive et du Parti Radical. Son fils, Jean-Louis Debré, deviendra même plus tard président du Conseil constitutionnel. Il exprimera une profonde admiration pour celle qu’il appelle « Sainte Marianne », symbole de la République, « fruit de ses entrailles, aussi bénie », qui nous « délivre avec le peuple des rois et des papes ». Jean-Louis Debré n’hésite pas, non plus, à user de déclaration pour rendre hommage aux soldats de l’an II, « les héros de la nation ». De plus, le 2 novembre 1789, l’Assemblée nationale décrète que les biens du clergé sont « mis à la disposition de la Nation ». Ces terres sont achetées par des bourgeois. Donc si la monarchie revient, ils risquent de perdre leurs terres, ce qui pousse les bourgeois à soutenir la Révolution.
+</p>
+          </div>
+        )
+      },
+       {
+        titre: "Jean-Paul Marat",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jean-Paul Marat né à Neuchâtel dans une famille calviniste (son père ancien moine). À 16 ans, il quitte sa famille pour Bordeaux et il devient précepteur dans une riche famille de négociants et commence à étudier la médecine sérieusement. Puis il va à Paris et y passe quelques années à étudier en autodidacte puis il se dirige vers le centre de la liberté de pensée, Londres. Le 15 juillet 1774, Marat aurait été reçu au grade de maître à la loge "King's Head, Gerard Street" (Loge de la Paix et de la Bonne Union) à Londres. Le 30 juin 1775, il obtient son doctorat en médecine à l'Université de St Andrews, en Écosse (on n'obtient pas toujours ce diplôme par examen, mais sur recommandation de deux médecins certifiés et Marat avait d'excellents appuis dans le milieu). Ophtalmologue et médecin vénérien, Marat rentre en France en 1777, il décroche le poste de Médecin des gardes du corps du Comte d'Artois (le frère du roi Louis XVI, futur Charles X). Marat veut devenir le plus grand physicien du monde mais l'Académie des Sciences, et notamment Lavoisier qui le considère comme un charlatan, rejette ses théories. Ensuite, il n'est plus médecin chez le Comte d'Artois, sa maladie de peau apparaît et il déteste l'élite qui l'a rejeté puis fonde en septembre 1789 son journal, "Le Publiciste Parisien", qui devient très vite "L'Ami du Peuple".
+
+</p>
+          </div>
+        )
+      }
+
+,
+        {
+        titre: "La Presse Républicaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La presse, avec en tête Marat et son journal L’Ami du Peuple, a besoin de visages pour incarner la crise économique. Plutôt que d'expliquer la disette par de mauvaises récoltes ou la désorganisation du commerce, Marat utilise une explication simple : le complot de famine. Marat et Hébert affirment que Louis XVI est le « chef des accapareurs ». Le Roi stocke délibérément le grain dans des entrepôts secrets pour affamer Paris. Marat appelait le peuple à « pendre les boulangers devant leurs portes » et à fouiller les châteaux pour retrouver le blé prétendument volé. « La peur devait changer de camp ». 
+</p>
+          </div>
+        )
+      }
+
+,
+          {
+        titre: "Les Juifs de Bayonne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Grâce à des lettres patentes, les juifs séfarades de Bayonne avaient eu le droit de résider officiellement, le droit de commerce maritime, la protection du roi, et encore la quasi-citoyenneté locale donc quand la Révolution abolit les privilèges les Séfarades perdent juridiquement les droits que les rois leur avaient accordés. Par contre le 27 septembre 1791, sous la pression des Girondins et du franc-maçon Clermont-Tonnerre, l’Assemblée vote « Les Juifs sont citoyens, comme tous les autres. ». Le Code Pénal de 1791 installe la prison comme peine principale, la privation de liberté de Beccaria à la place de la souffrance du corps, source de salut (St Jean Chrysostome). Un an plus tard, Jean-Baptiste de Cloots, dit Anacharsis Cloots, révolutionnaire athée, militant pour une république universelle et assassiné pour athéisme par le Comité de sûreté générale (supervise les enquêtes) sous le régime du Comité de salut public (oriente la politique révolutionnaire) mené par Robespierre. (qui est pour une France vertueuse et non une république mondiale) précise dans son ouvrage 'La République Universelle' que les juifs d’Europe soutiennent la Révolution et que les princes allemands seront effrayés que les juifs de leurs États soutiennent la République car l’économie allemande dépend de la finance juive surtout pour les concessions de fournitures militaires.
+</p>
+          </div>
+        )
+      },
+
+       {
+        titre: "Manon Rolland",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+C’est dans le salon de Madame Roland que Brissot et les autres leaders girondins se réunissaient pour élaborer leur stratégie politique. Brissot qui disait par exemple que si un homme meurt de faim, manger un autre homme n'est pas un crime contre nature. Jean-Marie Roland, le mari de Manon, était un inspecteur des manufactures très scientifique qui écris en 1787 sur le déménagement des ossements du cimetière pour théoriser une manière d'utilisation de la graisse des cadavres pour en faire de l'huile. L'Assemblée a voté des fonds secrets pour le Ministère de l'Intérieur (tenu par Roland) pour "l'esprit public". Madame Roland a utilisé cet argent pour financer des affiches et des journaux, notamment "La Sentinelle" (écrit par Louvet). Donc Roland, ministre du Roi Louis XVI, utilisait l'argent de l'État pour financer une propagande qui attaquait violemment le Roi ("la cour", "le comité autrichien"). C'était une machine de guerre politique financée par l'argent public. pendant ce temps, les Jacobins ont tissé une "toile d'araignée" sur la France avec des milliers de sociétés affiliées en province (Pau) qui relaient les ordres de Paris. La nuance disparaît  si tu n'es pas "pour" la Révolution radicale, tu es "ennemi" (Aristocrate), même si tu es modéré. En juin 1792, depuis son camp militaire, Lafayette écrit une lettre. Il y dénonce "la secte des Jacobins" qui usurperait la souveraineté nationale.  L'Assemblée déclare la "Patrie en danger" le 11 juillet 1792, cela permet de passer outre le veto du Roi. On peut réquisitionner tout le monde.  À partir du 25 juillet, les sections se déclarent en "session permanente".  C’est là que le petit peuple (les Sans-Culottes) prépare l'assaut contre les Tuileries. Servan (ministre de la Guerre) propose de créer un camp de 20 000 Fédérés pour protéger Paris, mais aussi pour avoir une force armée capable de renverser le Roi si besoin. Madame Roland pousse Barbaroux à faire venir les Marseillais, et il s’exécute : "Envoyez-moi six cents hommes qui sachent mourir”. Et ils arrivent en entonnant un chant composé par le franc-maçon Rouget de Lisle : la Marseillaise. « Qu’un sang impur abreuve nos sillons ». Santerre, le riche brasseur du faubourg Saint-Antoine, accueille les Marseillais le 30 juillet 1792. Les Girondins (Brissot, Vergniaud) demandent au Roi de rappeler les ministres patriotes renvoyés en juin (Roland, Servan, Clavière). Louis XVI refuse. Pétion, maire de Paris (élu par moins de 2% de Paris), se rend à l'Assemblée pour présenter une pétition au nom de 47 des 48 sections de Paris. Il demande officiellement la déchéance du Roi. La section de Mauconseil (environ 600 citoyens actifs) prend un arrêté historique : "Si le 9 août à minuit, la déchéance n'est pas votée, le tocsin sonnera et le peuple marchera”. Contrairement à Pétion, Robespierre a compris que l'Assemblée est trop hésitante, c'est au “peuple d'agir” directement. Les Jacobins exigent que Lafayette soit décrété d'accusation pour avoir menacé Paris. L'Assemblée vote contre. À la sortie, les députés qui ont voté "non" sont harcelés et menacés physiquement par les Marseillais et les sans-culottes. Beaucoup de députés modérés n'oseront plus revenir siéger ensuite. La Section du Théâtre-Français est le QG de l'insurrection. Le bataillon des Marseillais y est logé encadré par Danton. Le plan de bataille se dessine aux Jacobins. Un "Comité d'insurrection" secret est formé. On y retrouve : Santerre, Westermann ou encore Carra (journaliste). Ils attendent minuit. Dès que l'heure passe sans vote de l'Assemblée, ils lancent l'insurrection. Le 10 août, les insurgés arborent un drapeau rouge avec l'inscription : "Loi martiale du peuple souverain contre la rébellion du pouvoir exécutif". Ils disent : "Le rebelle, ce n'est pas le peuple, c'est le Roi". Brissot et les Girondins, terrifiés par l'insurrection populaire qui arrivait, ont tenté une dernière négociation secrète pour sauver la monarchie. Robespierre le remarque.
+ 
+ </p>
+          </div>
+        )
+      },
+       {
+        titre: "Les Marseillais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le marquis de Mandat a succédé à Lafayette à la tête de la Garde nationale parisienne. Fidèle au roi, il dispose d’un plan de défense solide pour protéger les Tuileries. Cependant, la mairie de Paris, sous la pression de Pétion, refuse de livrer de la poudre et des cartouches aux défenseurs du château, tout en en fournissant aux Marseillais. Mandat se retrouve ainsi contraint de défendre les Tuileries avec des hommes presque dépourvus de munitions. Dans la nuit du 9 au 10 août, la nouvelle Commune insurrectionnelle, qui vient de s’emparer de l’Hôtel de Ville, convoque Mandat. Pensant obéir à une autorité légale, il s’y rend seul. Il est interrogé, destitué, puis assassiné sur les marches de l’Hôtel de Ville. Son corps est ensuite jeté dans la Seine. Au matin du 10 août, la Garde nationale se retrouve sans chef. Désorganisée, elle fraternise avec les insurgés ou se disperse. L’Assemblée, voyant le château investi, se résout à légitimer la force victorieuse et nomme par acclamation Santerre à la tête de la force armée parisienne. Le « trio » girondin (Roland, Clavière, Servan) est immédiatement rappelé au pouvoir. Pour calmer la rue et parce qu’il a été l’un des principaux artisans de la journée du 10 août (tellement abominable que je ne la décris pas, le roi est déchu), Danton est nommé ministre de la Justice. Il devient alors le seul véritable homme fort du nouveau gouvernement. La Commune de Paris finance les presses et les affiches de Marat, son journal changera alors de nom pour devenir Le Journal de la République française. Dès le lendemain du 10 août, la Commune fait fermer les barrières de Paris : aucun député ne peut quitter la ville sans un passeport délivré par elle. L’Assemblée législative n’est plus libre de ses mouvements.
+
+</p>
+          </div>
+        )
+      },
+       {
+        titre: "Les Voleurs",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Marat, Sergent-Marceau, Panis et Tallien font partie du Comité de surveillance de la Commune, accusé d’avoir puisé dans les coffres des Tuileries et conservé bijoux et argenterie confisqués. Ils sont quand même élus députés de Paris à la Convention nationale en septembre 1792. Le palais avait été massivement vandalisé et pillé : meubles brisés, tapis volés et argenterie emportée. Pour éviter d'admettre que le « peuple » s'était approprié les richesses nationales, la presse révolutionnaire (girondins et montagnards) prétend que le Roi avait déjà « vidé les lieux » ou « vendu les meubles sur le dos du peuple » pour financer ses gardes suisses ou ses alliés à l'étranger. Puis, l’Armoire de Fer est découverte, on y trouve par exemple le paiement occulte de Mirabeau donc si le Roi payait des députés en secret, c’est qu'il puisait forcément dans le Trésor Public ( l'absence de preuves est une preuve). Roland demeure ministre de l’Intérieur, mais la Commune de Paris, véritable pouvoir de fait, refuse de lui obéir. La Commune ordonne, le ministre subit. Elle va jusqu’à faire perquisitionner son domicile. Le pouvoir exécutif est ainsi largement neutralisé par la ville de Paris. Claude Fournier, impliqué dans des troubles sanglants, notamment à Orléans et à Versailles, bénéficie de l’annulation des poursuites engagées contre lui : la loi ne s’applique plus aux « patriotes » radicaux. Le général Lafayette, alors à Sedan avec son armée, refuse de reconnaître la déchéance du roi. Le 14 août, il fait arrêter les trois commissaires envoyés par l’Assemblée, Kersaint, Antonelle et Peraldi. L’Assemblée le déclare aussitôt « traître à la patrie ». Les 17 et 18 août, comprenant que ses soldats ne le suivront pas vers Paris, Lafayette s’enfuit vers les lignes autrichiennes. Le conseil général de Sedan, qui l’avait soutenu, est destitué et poursuivi. Le 15 août 1792, les grenadiers du bataillon des Minimes demandent et obtiennent la suppression des processions en l’honneur de la Vierge Marie. Depuis le décret du 1er février 1792, un passeport est nécessaire pour circuler, après le 10 août, c’est la Commune de Paris qui les délivre. Si l’on est jugé « non patriote », le passeport est refusé : on reste bloqué à Paris, souvent dans l’attente d’une arrestation.
+
+</p>
+          </div>
+        )
+      },
+     {
+        titre: "Les Massacres",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Sous l'impulsion de Danton et de la Commune de Paris, une délégation se présente à la barre de l'Assemblée pour exiger la création d'un outil judiciaire d'exception. Le 17 août 1792, un tribunal criminel est instauré pour juger les « traîtres ». Cette juridiction déploie une justice expéditive : les sentences sont sans appel et aucun recours en cassation n’est autorisé. La cible principale de ce pouvoir est constituée des soutiens de Louis XVI antérieurs à la journée du 10 août. Sont particulièrement visés les signataires des pétitions dites des « 8 000 » et des « 20 000 » (qui protestaient contre l'invasion des Tuileries le 20 juin). Ceux ayant manifesté leur attachement à La Fayette ou au Roi sont déchus de leurs droits civiques et classés comme « suspects ». Ce tournant marque le début d'une exclusion politique radicale : quiconque n'a pas basculé dans le camp insurrectionnel le 10 août perd sa qualité de citoyen. La pression s'étend aux familles : les 15 et 18 août, l'Assemblée décrète l'arrestation des femmes et des enfants d'émigrés. L’objectif est d'utiliser ces proches restés en France comme otages pour contraindre les émigrés au retour afin de les capturer. Le 23 août, Arnaud de Laporte, intendant de la liste civile et seul capable de justifier les dépenses personnelles du Roi, est exécuté. Fin août, sous l'égide de Danton, la Commune ordonne des visites domiciliaires. Paris est bouclée et, entre le 29 et le 31 août, des milliers de personnes sont arrêtées. Les prisons de la capitale (les Carmes, l'Abbaye, la Force) arrivent à saturation. Jean-Lambert Tallien, secrétaire de la Commune, justifie ces mesures par la nécessité de neutraliser les « conspirateurs » de l'intérieur pour assurer le salut de l'État. Le procureur de la Commune, Pierre Manuel, fait fermer les barrières de la ville. Une distinction est opérée entre les prisonniers de droit commun et les « prisonniers politiques » (nobles, catholiques et prêtres réfractaires, ces derniers étant regroupés au couvent des Carmes). Parallèlement, une propagande active diffuse l'idée d'un complot contre-révolutionnaire imminent fomenté depuis les cellules. L'étincelle survient lors du transfert de prêtres réfractaires vers la prison de l'Abbaye. Alors que la nouvelle de la chute de Verdun parvient à Paris, une foule excitée attaque le convoi. Le massacre se généralise alors dans les autres centres de détention (le Châtelet, la Force, les Carmes). Des bandes armées investissent les geôles et exécutent les prisonniers sans distinction. En quelques jours, des milliers de personnes, dont de nombreux prêtres et catholiques, sont massacrées à l'arme blanche. Le cas de la princesse de Lamballe est emblématique de cette violence. Proche de la Reine, qui l'avait pourtant écartée par le passé en raison de ses penchants « féministes » et de son appartenance à la franc-maçonnerie (qu'elle dut quitter), elle refuse de renier son amie devant ses juges. Son procès ne dure que quelques secondes. Déclarée « ennemie de la République », elle est battue, mutilée, démembrée et ses poils pubiens sont découpés,. Sa tête, portée au bout d’une pique, est exhibée sous les fenêtres de Marie-Antoinette, enfermée au Temple. À la suite de ces événements, le Comité de surveillance de la Commune (dirigé par Marat, Panis et Sergent) publie une circulaire destinée aux provinces, justifiant les tueries et incitant à l'extension du mouvement. Dans ce climat de chaos, Marat propose le titre de dictateur à Robespierre, il refuse cette voie.
+
+</p>
+          </div>
+        )
+      },
+      
+        {
+        titre: "La Bataille de Valmy",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ La France déclare la guerre au « roi de Bohême et de Hongrie ». La Prusse, alliée de l’Autriche par le traité de Pillnitz, entre alors automatiquement en guerre contre la France. Après la déclaration de guerre, la situation est catastrophique : les officiers nobles désertent et l’armée est désorganisée. En juillet 1792, le chef des armées prussiennes menace de détruire Paris si l’on touche au Roi (à la demande de la Reine). Les Prussiens prennent Longwy, puis Verdun (le 2 septembre). La route vers Paris est alors ouverte. Le général Dumouriez (franc-maçon) parvient à faire jonction sur le plateau de Valmy. L’armée française, composée d’un mélange de soldats de métier et de volontaires « sans-culottes », arrête l’invasion prussienne. Il ne s’agit pas d’une bataille classique mais d’une simple canonnade : on tire de loin et, soudain, la retraite est ordonnée alors que les Prussiens ont le dessus, sur ordre de leur chef, le duc de Brunswick (franc-maçon de la Stricte Observance Templière). Celui-ci est proche de Junius Frey / Moses Dobruška, juif annobli sous le nom de Franz Thomas von Schönfeld, petit cousin de Jacob Franck, proche de Joseph II et d’Ephraïm Joseph Hirschfeld (juif talmudiste). Il est illuminé de Bavière, inspirateur des Frères asiatiques et beau-frère de François Chabot (révolutionnaire, partisan de Danton, membre du Comité de sûreté générale, qui marie sa sœur pour blanchir au moins 700 000 livres acquis par pots-de-vin au cours de la liquidation de la CIO).
+ </p>
+          </div>
+        )
+      },
+  {
+        titre: "Les Régicides",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le Béarn était le seul territoire souverain rattaché à la France par la seule personne du Roi, en tant que Seigneur de Béarn, un domaine ne tenant que de Dieu depuis Fébus (le Béarn était donc soumis à son Souverain). À la différence d'autres provinces comme la Bretagne, Louis XVI avait reçu le Béarn en héritage de son aïeule Jeanne d'Albret. En revanche, il avait reçu la France de Saint Louis, lequel n'exerçait aucun pouvoir direct sur le duché de Bretagne, lequel relevait uniquement de la couronne par le devoir d’hommage. Le 17 janvier 1793, après des jours de débats, la décision tombe : la mort pour le roi, dont une de son propre cousin, Philippe d’Orléans, dit Égalité, grand maître du Grand Orient de France. La Navarre entière avait voté la survie du roi. Louis XVI, dans sa dernière dignité, demande un appel au peuple, le droit pour la nation entière de confirmer ou d’infirmer la sentence. Il est refusé, la République décide pour le peuple. Le roi de Navarre est assassiné par les parisiens, Thomas-Marie Raby asperge la foule de son sang. L'Atavisme de Jean-Jacques Rousseau. Après l’exécution de Louis XVI, la reine est enfermée au Temple avec ses deux enfants et Madame Élisabeth. En juillet 1793, les gardiens, lui arrachent son fils, le Dauphin Louis-Charles (âgé de huit ans) après la résistance de plus d'une heure de la Reyne et du Dauphin lui-même. L’enfant est confié à un cordonnier, Simon et à sa femme Marie-Jeanne, chargés de le « rééduquer » selon les principes républicains. Simon lui fera chanter la "Marseillaise" ou traiter sa mère de "Salope". Sous la pression, les Simon abandonnent leur rôle d'instructeurs. Livré à lui-même, battu, affamé, isolé, le petit roi est forcé de signer un faux témoignage accusant sa mère et sa tante de viol, et finira assassiné dans cette même cave par la République. Ce document, dicté par ses tortionnaires, servira à l’accusation lors du procès de la reine. Transférée à la Conciergerie, la prison la plus sombre de Paris (Marie-Antoinette y demeure 76 jours, sans voir la lumière du jour). La Reine était la cible idéale pour incarner la faillite de l'État. La presse suggère qu'elle n'est qu'une espionne envoyant l'or de la France à son frère, l'Empereur d'Autriche. Dans son journal Le Père Duchesne, Jacques Hébert affirme que chaque bijou de la Reine est une « pièce d'or volée au pauvre sans-culotte » pour financer les armées ennemies. Ensuite, son procès, tenu en octobre 1793, n'est qu'un simulacre de justice. Elle est accusée de trahison (Fouquier-Tinville se contentant,  par exemple, d'invoquer la "notoriété publique", ce que tout le monde saurait et croirait comme l’or envoyé à son frère) ainsi que de complot contre la République et du viol de son propre fils. L’accusation est d’autant plus abjecte que la loi sur le viol, venait d’être pervertie par les républicains. Ayant tout perdu, son mari, ses enfants, sa couronne, la reine se tient droite jusqu’au bout. À l’insulte, elle répond par le silence et la dignité. Le 16 octobre, elle est condamnée à mort. Quelques heures plus tard, la Reine de Navarre monte à l’échafaud, pâle mais calme, ayant comme son mari, pardonné à ses juges. 231 ans plus tard, la République française profitera des « Jeux olympiques » (aucun anachronisme) pour la diffamer, elle et tous les catholiques de France, devant le monde entier, en la faisant chanter une chanson de propagande.
+
+
+</p>
+          </div>
+        )
+      },
+      {
+        titre: "Charlotte Corday",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Marie-Anne-Charlotte de Corday d’Armont, arrière-arrière-arrière-petite-fille de Pierre Corneille, voit sa mère mourir alors qu'elle n'a que 13 ans. Son père, incapable de subvenir seul aux besoins de ses filles, les emmène à l’abbaye aux Dames de Caen. Charlotte y lit Rousseau, Montesquieu et Voltaire, et croit à une république de lois et de vertus. Après la fermeture des couvents en 1790, elle s’installe à Caen chez une parente, Madame de Bretteville. Ensuite, elle est horrifiée par les Massacres et le Régicide, qui constituent pour elle une trahison de la Révolution. En juin 1793, après leur proscription à Paris, des députés girondins (dont Barbaroux) se réfugient à Caen. Charlotte assiste à leurs réunions et les voit comme les seuls vrais républicains, persécutés par des « tyrans » comme Marat. Charlotte Corday arrive à Paris le 11 juillet 1793. Elle voulait sans doute poignarder Marat au sommet de la « Montagne », en pleine Convention nationale, lors de la célébration du 14 juillet, mais elle apprend que Marat est malade et qu’il reste chez lui, au 30 rue des Cordeliers, passant ses journées dans une baignoire sabot pour apaiser ses douleurs. Le matin du 13 juillet, Charlotte se rend au Palais-Royal, achète pour 40 sous un couteau de cuisine et cache l’arme sous son fichu, sachant que Simone Evrard, la compagne de Marat, le protège. Charlotte échoue une première fois à entrer, puis écrit une lettre à Marat, prétendant avoir des secrets terribles sur l’insurrection girondine en Normandie à lui révéler. Elle revient donc le soir, mais est encore refusée. Marat, ayant lu la lettre et attendant des informations sur les « traîtres » de Caen, ordonne depuis sa salle de bain qu’on laisse entrer la jeune femme. L’entretien dure environ un quart d’heure. Marat est dans sa baignoire, une planche posée en travers pour lui servir de bureau. Charlotte lui dicte les noms des députés girondins réfugiés à Caen. Marat les note fébrilement et lui lance : « C’est bien, dans peu de jours, je les ferai tous guillotiner à Paris ». À ce moment, Charlotte sort son couteau et le plonge d’un coup sec sous la clavicule droite, touchant le poumon et l’aorte. Marat a juste le temps de crier : « À moi, ma chère amie ! » avant de perdre connaissance. Charlotte reste dans l’appartement, calme. Transférée à la prison de la Conciergerie, elle demande qu’un peintre vienne faire son portrait. C’est l’officier de la Garde nationale Jean-Jacques Hauer qui commence à la peindre dans sa cellule. Elle retouche même sa coiffure pour l’occasion. On lui commet d’office l’avocat Chauveau-Lagarde (comme pour Marie-Antoinette), et elle lui demande simplement de dire que son acte était prémédité et assumé. Le procès s’ouvre devant le Tribunal révolutionnaire avec Fouquier-Tinville. Les juges tentent de lui faire avouer qu’elle avait des complices (les Girondins de Caen), mais elle répond : « On ne se dévoue pas sur le conseil d’autrui », et ajoute : « J’ai tué un homme pour en sauver cent mille, une bête féroce pour rendre le repos à mon pays, j’étais républicaine bien avant la Révolution ». Elle est condamnée à la peine de mort et conduite à l’échafaud, revêtue de la chemise rouge des parricides. Un violent orage éclate sur Paris. La foule l’insulte, mais elle reste droite, ne montrant aucune peur. Arrivée sur la place de la Révolution, elle refuse l’aide du bourreau Sanson pour monter les marches et se place d’elle-même sous le couperet. Alors que le bourreau montre la tête de Charlotte à la foule, un aide-bourreau nommé Legros donne un soufflet à la tête décapitée. Après cela, Marat devient un martyr : il est sacralisé par les sans-culottes, son buste remplaçant même les crucifix dans certaines églises.
+</p>
+          </div>
+        )
+      },
+
+
+    ]
+  },
+
+
+  
+   'terreur': {
+    titre: "Le Monde sous la Terreur",
+    periode: "Époque Moderne",
+    resume: "L'Entrée du Monde dans l'Obscurantisme",
+    introduction: "Des Peuplicides se mettent en place au nom de la tolérance",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+
+
+       {
+        titre: "Le Génocide Vendéen",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Après moins d'un an d'existence, la République est en danger et « La Terreur est à l'ordre du jour » comme le proclame Bertrand Barère. Avant cela, le 1er août 1793, la Convention nationale votait un décret ordonnant explicitement l’extermination de la Vendée (« Il faut que la Vendée soit un cimetière national », Barère). Dans les jours qui suivent, Barère, porte-parole du Comité de salut public, proclame devant l’Assemblée : « Il faut faire de la Vendée un cimetière national ». Sous l’autorité de Turreau et des représentants en mission, après les levées en masse, s’en suit une entreprise d’anéantissement. Les villages vendéens sont incendiés, les récoltes détruites, les habitants fusillés, brûlés vifs, mis dans des fours à pains, les pères de familles pendus aux portes des granges, les enfants enterrés vivants, les femmes fondues, les vendéens écorchées. À Nantes, Carrier organise les célèbres noyades de la Loire, où prêtres, religieuses, femmes, enfants et vieillards sont attachés par couples, dans des positions bizarres, avant d’être jetés à l’eau. Comme le républicain Louis-Joseph Westermann le précise, il faut empêcher cette race maudite de se régénérer (naissent les premiers avortements), il écrit au Comité de salut public : « La Vendée, est morte sous notre sabre, avec ses femmes et ses enfants. Nous ne faisons pas de prisonniers, la pitié n'est pas républicaine ». Les violences dépassent l’imaginable : femmes enceintes éventrées, les embryons empilés, les enfants massacrés, des familles entières exterminées. La République mène une politique de la terre brûlée, l’équivalent de deux départements complètement détruits. Lors de l'armistice, la République promettait de rendre Louis XVII... qui était déjà mort. Dans le sud-ouest, la répression s’étend : les « monstres » du Labourd, catholiques, sont jugés intolérants. Et donc en mars 1794, les représentants Cavaignac et Pinet organisent la déportation des habitants du Pays basque, où beaucoup périssent de faim, de froid ou de maladie. Les villages détruits seront reconstruits par les basques sans aucun secours ni compensation jusqu'à la mort de Robespierre (nouveau gouvernement à construire). L’objectif n’était plus militaire, mais idéologique, une mise en place d'une colonisation intérieure (impérialisme interne) : effacer un peuple (inférieur civilisationnellement) jugé coupable de fidélité à sa foi que les contemporains eux-mêmes qualifient de populicide nécessaire à la république (Gracchus Babeuf, communiste). On observe d’ailleurs qu’en 35 années de Ve République, le nombre de morts excéderait celui comptabilisé sur treize siècles de monarchie (le Régime en étant la cause), et que l’année 2024 à elle seule, avec environ 73 millions d’avortements, aurait produit davantage de morts que l’ensemble des temps féodaux, estimés à 70 millions sur près de 11 siècles. 
+  </p>
+          </div>
+        )
+      },
+    
+
+{ titre: "Les Clubs Révolutionnaire",
+  contenu: (
+     <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+     <p> Comme dans de nombreuses villes, des sociétés équivalentes des clubs jacobins se forment dès 1790-1791 à Pau et à Navarrenx. À Pau, la division impérialiste se produit, les Bénédictins, comme Jacques Roux, prêtent serment à la Constitution civile du clergé (Dom Sanadon, évêque constitutionnel des Basses-Pyrénées, ou Dom Sordes, vicaire général qui voit la liberté comme une religion civique défendable par les armes). Un club révolutionnaire exclusivement féminin, les Amies de la Constitution, est fondé avec l’idée que les contre-révolutionnaires ne disposent d’aucun véritable argument, seulement de la haine. Selon ce groupe, les femmes qui ne soutiennent pas la Révolution représentent « un danger, il faudrait les dénoncer, les stigmatiser et les réduire au silence ». Cette hostilité va jusqu'aux religieuses vivant dans leurs couvents « Armons-nous de verges, comme Jésus nous en donna l'exemple, et faisons une sévère police dans les Lieux Saints ». Elles prêtent serment d'élever les enfants dans l'amour de la Constitution et veulent « donner des enfants à la patrie », sans avoir forcément connaissance de cette Constitution (Après Siro, c'est Madame Larrieu, proche de Diderot, qui devient présidente). À Pau, les clubs ont ensuite été fermés puis rapidement rouverts et, sous Robespierre, les femmes ont pu revenir dans le club masculin rouvert. Ses discours faisaient suite aux assauts du château de Versailles et du champ de Mars, durant lesquels deux gardes ont été tués par des républicaines. Parallèlement, Claire Lacombe et Pauline Léon, toutes deux jacobines, organisaient des cortèges en armes. Claire a même demandé, le 12 mai 1793, de pouvoir combattre en Vendée. Les tensions étaient vives : le 15 mai 1793, Théroigne de Méricourt fut attaquée par un groupe de femmes jacobines. Celles-ci l'accusaient d’être une Brissotine (pro-république universelle, par exemple). Ces femmes l'ont alors frappée, déshabillée et lui ont donné des fessées en public. Olympe de Gouges, elle, disait que les « Citoyennes républicaines » dénaturaient le rôle de la femme. En retour, elle fut qualifiée de brissotine et de « faible » par les féministes, mais n’avait aucune alliée pour la protéger (même les femmes catholiques se battaient pour Dieu, pas pour des droits abstraits : elles voulaient le retour de leur messe et la paix pour leur communauté, pas la projection d’un désir intellectuel propre sur toutes les femmes de France, fondé sur des prémisses fausses). Le 16 décembre 1792, elle se prononce contre la mort de Louis XVI et demande même qu’on lui accorde des avocats, ce qui provoqua un scandale absolu et sera retenu contre elle lors de son procès, après son affiche Les Trois Urnes, qui proposait un vote démocratique pour que les Français choisissent leur régime (République, Monarchie ou Fédéralisme). Dans un autre registre, Françoise Dupont, une militante jacobine qui assistait aux exécutions tout en tricotant avec ses acolytes, envoyait de nombreux dissidents à la guillotine grâce à ses rapports précis. Sa détermination allait jusqu'à l'espionnage : elle n'hésita pas à se faire passer pour une malade au sein de la Maison des Hospitalières afin d'infiltrer et de dénoncer les religieuses. De 1789 à 1799, la France passa de 50 000 religieuses à 2 000 et de 145 000 prêtres à 25 000.
+
+ </p> </div> ) },
+
+      { titre: "Les Bretonnes Anti-République", 
+  contenu: (
+     <div className="space-y-4 font-corps text-gray-700 leading-relaxed"> 
+     <p> Dès les premiers troubles révolutionnaires, une résistance féminine en Bretagne s'organise, transcendant les barrières sociales. À Saint-Brieuc, par exemple, elles s’assemblent aux cris de : « Vive le clergé et vive la noblesse […] nous voulons la conservation des Capucins ! ». Cette opposition précoce entraîne rapidement des arrestations, mais la détermination de ces femmes ne faiblit pas. À Saint-Malo, Françoise Poidevin attaque directement le maire, le tirant par son écharpe et le traitant d’impie. Elle justifie son acte en expliquant que « beaucoup d’autres femmes et filles avoient pris le parti de former pareille réclamation jusqu’au district de Saint-Malo », mais qu'ayant été détournées, elles ont fini par le « demander hautement dans l’église de leur paroisse ». À Plémy, l'accueil du nouveau curé constitutionnel est brutal : une foule lui jette des pierres et de la boue. Une fois dans l’église, deux femmes entrent dans la sacristie et le traînent dehors par les bras, encouragées par les hommes qui crient : « Frappez toujours, nous vous soutiendrons ! ». À Guipry, le curé fait face dès sa première messe à « une multitude de femmes [qui] se sont précipitées dans l’église en criant "assassinons le prêtre" ». En réponse, des négociants soutenant le prêtre républicain rétorquent violemment qu'il faut « tuer tous ces mâtins du port ». Désirée Le Flo refuse tout net de prêter le serment civique exigé des autorités, bien qu'elle soit sous surveillance dans des conditions difficiles. Elle affirme ne pas pouvoir « dissimuler sa répugnance d’acquiescer à une loi qui condamne son mari », elle ne se soumet pas au chantage sur le divorce voté le 20 septembre 1792 et qui sera condamné par Léon XIII en 1884 « ils désacralisent le mariage en le réduisant à un contrat civil révocable, le pouvoir vient du peuple et non de Dieu, ils éduqueront la jeunesse sans religion et traiteront l'Église comme une association privé », une loi à contre-courant avec la progression humaine (Pour christianiser son empire, Théodora permit aux femmes de demander le divorce, à condition qu’il repose sur des preuves sérieuses, comme l’adultère). La pratique religieuse devient un acte à haut risque. À Plouguerneau, des femmes en fin de grossesse mettent leur santé en danger pour accoucher près d’un lieu de culte desservi par un réfractaire. Comme le rapporte le curé Le Gall, « les femmes se font transporter à Tremenac’h au risque de leur vie et de celle de leur fruit pour avoir un prétexte d’y faire baptiser leurs enfants ». De même, des défunts sont enterrés clandestinement, de nuit. À Saint-Malo, lors de l'enterrement de la mère de deux sœurs, un prêtre républicain se présente. Elles le chassent immédiatement, déclarant que la défunte « est trop sainte pour être enterrée par un prêtre démocrate ». L'hébergement des prêtres réfractaires est un acte de foi puni de mort. Le cas d'Angélique Glatin, 63 ans, est emblématique. Coupable de recel de prêtre, elle assume son acte par conviction religieuse et « charité », bien qu'elle en connaisse l'illégalité. Elle explique qu'il disait la messe chez elle (ce qu'elle exigeait) et qu'elle subvenait seule à ses besoins, prête à y « sacrifier son dernier sol ». Face aux juges, elle refuse catégoriquement de nommer ses complices, affirmant qu'elle ne dévoilera jamais ce secret, « dût-on cent fois la mettre à la torture ». Elle est condamnée à mort le 17 thermidor an II. Ursule Tierrier, accusée, répond sans détour qu'elle « abhorre absolument » le régime républicain. Elle déclare aimer son roi, désirer « en avoir un autre », précisant que le catholicisme est la seule cause de son opinion. Elle est guillotinée à Tréguier le 14 floréal an II pour incitation au rétablissement du catholicisme. Modeste-Émilie Forsan, quant à elle, est arrêtée pour le prétendu « crime » de ses locataires, payant le prix de son statut noble. Thérèse de Moëlien (Association bretonne) joue un rôle de premier plan. Elle voyage jusqu’en Rhénanie en 1791 auprès des princes émigrés, transportant des documents secrets. Elle retourne à Coblence en 1792 pour des échanges stratégiques, recrute des membres en Bretagne et assiste même à un comité central. Après la mort de son mari, elle brûle des papiers compromettants, sauvant de nombreux conjurés, mais les révolutionnaires trouvent des preuves chez elle. Elle est condamnée à mort. À Quédillac, la femme Lhuissier est condamnée à mort pour avoir fait arborer la cocarde blanche et hissé le drapeau blanc sur le clocher. Marie Henry de la Riollaye transforme son château en véritable base arrière, distribuant vivres et poudre, et exhortant les insurgés à marcher sur Montauban. De même, Jeanne Louise Champeaux met ses biens au service de la révolte dans la région de Redon (condamnée à mort en ventôse an II), tandis que Madame de Normanville est dénoncée à Sarzeau pour distribution de cocardes blanches. De plus, en Bretagne au XVIIIᵉ siècle, tous les deux ans, une femme était condamnée maricide.
+</p> </div> ) },
+ { titre: "Lyon, Libérée des Barbares", 
+  contenu: (
+     <div className="space-y-4 font-corps text-gray-700 leading-relaxed"> 
+     <p> Joseph Chalier, un jacobin, est arrêté par les bourgeois lyonnais et il est guillotiné le 16 juillet 1793. Paris est pas content et la Convention nationale a décidé de venger Chalier en détruisant Lyon. Dans son rapport du 10 octobre 1793, Saint-Just déclare : « Il faut punir non seulement les traîtres, mais même les indifférents, il faut punir quiconque est passif dans la République et ne fait rien pour elle ». Et le 12 octobre 1793, la Convention décide que Lyon perd son nom et devient "Ville-Affranchie". On ordonne la destruction des belles maisons de la place Bellecour. Une colonne est érigée avec l'inscription : « Lyon fit la guerre à la Liberté, Lyon n'est plus ».  De plus, comme la guillotine était jugée "trop lente" pour tuer tout le monde, Fouché et Collot d'Herbois organisent les mitraillades (dans la plaine des Brotteaux). On attachait les condamnés par groupes de centaines et on tirait dessus au canon chargé de mitraille (clous, morceaux de fer). Ceux qui n'étaient pas morts sur le coup étaient achevés au sabre. Ceux qui quittent la ville sont tués. La ville comptait environ 150 000 habitants avant le siège. Après la répression, seulement 80 000.
+      
+      </p> </div> ) },
+ {
+        titre: "Maximilien de Robespierre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Robespierre, admirateur de Rousseau, défenseur d’une République vertueuse et pour l'abolition de la peine de mort. Dans ce même esprit, il s’en prit aux athées (comme Hébert) car il pensait que l’irréligion menaçait la République morale qu’il voulait construire. Le Marquis de Sade (athée matérialiste et pro-sodomie) avait été libéré de prison en 1790 (grâce à l'abolition des lettres de cachet) et a appartenu à la même section parisienne que Robespierre, la Section des Piques. Il est élu président et rédige un "Discours aux mânes de Marat". Heureusement, Robespierre marginalisera ce criminel. Sous sa direction, la Convention protégea les femmes enceintes condamnées, l’enfant à naître étant jugé innocent. Cette clémence prolongeait le modèle catholique de protection de la Vie existant ('L'Humanisme en Béarn'), mais au nom de l'égalité, de la fraternité, de la Nation et de l’Humanité. En 1791, Robespierre dénonça l’« aristocratie des riches » comme la pire des tyrannies. Il soutint ensuite la Loi du Maximum pour bloquer le prix du pain et lutter contre les marchands accapareurs. En janvier 1794, il envoya Marc-Antoine Jullien à Nantes. Ce dernier rapporta l'horreur : « On fusille ici, on noie, on extermine tout ». Dès réception, Robespierre intervint au Comité de salut public pour faire rappeler Carrier à Paris. Il fit de même avec Fouché et Tallien pour leurs excès sanglants (Tallien était athée). Il s'opposa également à la condamnation de Madame Élisabeth, vierge et sœur du roi, qui avait consacré sa vie à aider les pauvres et à soigner les malades à Versailles, jugeant son exécution injuste. Ces désaccords et le sort de la famille royale précipitèrent sa chute. Les athées comme Vadier (Comité de Sûreté Générale qui décidait avec Jagot ou Amar, la mort des français) utilisent l’affaire Catherine Théot et sa liaison avec Dom Gerle pour faire passer Robespierre comme “un gourou qui se prend pour Dieu” mais Robespierre pour se défendre tente de désamorcer le Tribunal révolutionnaire à ne pas les juger. En représailles, Carrier et Tallien crièrent au tyran pour se venger de leur rappel. Maximilien fut finalement exécuté par ses anciens alliés. Peu après, d’autres républicains comme Pinet, Cavaignac ou Fouché furent, eux, épargnés, voire récompensés pour avoir massacré le peuple par leur contemporain puis même par Macron au début de son deuxième mandat. 
+</p>
+       </div>
+        )
+      },
+
+ {
+        titre: "La République Française",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En pleine première guerre mondiale (1756-1763), dans une lettre à d’Alembert de 1758, Rousseau (partisan d'une démocratie où donc le peuple décide sans aucune pression, sans représentant mais avec des commissaires) explique que la monarchie possède une certaine stabilité interne : même si un individu devient très riche, il ne dépassera jamais le prince, parce que tout l’ordre politique est construit autour d’un pouvoir supérieur qui ne peut être concurrencé. Autrement dit, dans une monarchie, les inégalités ne menacent pas directement la structure du régime et permettent au peuple de connaître sa profession pour son chemin vers la sainteté. En revanche, dans une république puisque le peuple et le souverain ne sont qu’un même corps, et que l’autorité repose sur l’égalité civile, toute croissance excessive de l’inégalité devient un danger mortel. Si quelques citoyens deviennent plus riches et plus puissants que leur propre communauté, ils finissent par dominer les lois et s’imposer comme de véritables souverains de fait. Rousseau affirme que la république est un régime qui peut s’effondrer dès que l’écart entre riches et pauvres dépasse une limite acceptable. C’est précisément pour cela qu’il s’oppose à l’introduction du théâtre à Genève, qu’il considère comme une institution favorisant le luxe, la vanité et la croissance de l’inégalité. Après la mort du Gérant en 1794, le Directoire établira une société dominée par les fortunes privées et la vertu est exclue de la vie publique. 
+
+
+</p>
+
+
+          </div>
+        )
+      }
+,
+
+ {
+        titre: "La Naissance de la Marchandisation Humaine",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Désormais, la population devra s'astreindre aux impératifs du business, à l'instar du phénomène du « sport-téléréalité ». Ce dernier émane d'une confluence entre le christianisme viril et la franc-maçonnerie, se manifestant comme une véritable fabrique de haine, de chantage et d'une politique délétère. On en retrouve des traces chez James Naismith (franc-maçon) et dans la politique du basket de la fin du XXe siècle en France, puis dans celle de David Stern et Adam Silver (avocats juifs, ce dernier étant proche d'Obama et de Disney, ce dernier issu de DeMolay International fondé par Frank Land, franc-maçon). Après un coup de buzz (chaussures de MJ), en 1992 (année de la "Dream Team") la NBA signe un contrat avec Nike en instrumentalisant "la rue". Ensuite, Nike deviendra partenaire fondateur de la WNBA (causewashing). En outre, Arthur Pember (premier président de la FA) et Ebenezer Cobb Morley (a rédigé les 13 lois originelles du football) étaient présent à la Taverne des francs-maçons (appartenant à la Grande Loge unie d'Angleterre) pour la création du football (schisme avec le rugby) le 26 octobre 1863. Arthur Kinnaird, protestant et neveu du franc-maçon George Kinnaird, star du foot deviendra président de la FA. Ensuite, les jeux païens reposant sur le slogan « l’important est de participer », associé à un strict amateurisme pour les bourgeois, concept inspiré du franc-maçon Thomas Arnold (rugby comme Ranfurly Shield ou la Bledisloe Cup), se sont aujourd'hui pervertis. Gianni Agnelli, membre influent du CIO, patron de FIAT et favorable à Samaranch (président du CIO au passage libéral), siégeait au Chase International Advisory Committee (comité de mondialisation des marchés) présidé par David Rockefeller et était membre fondateur de la la Commission Trilatérale fondée par David Rockefeller. Chase Manhattan Bank (Rockefeller) était le partenaire financier global de la First Interstate Bank, qui a vu le modèle soviétique (amateurs financés par l’État) remplacé par un marché du sport rentable. Peter Ueberroth (président du LAOOC), architecte du modèle financier des JO 1984 (les premiers avec des non amateurs) a rejoint le conseil d’administration de Chase Manhattan Bank dans les années 1980. Le LAOOC a encaissé avant les Jeux des droits TV (ABC) et sponsorings et a placé ces fonds sur des instruments monétaires. En 1985, lancement du programme TOP et sélection fermée de multinationales (Visa,Coca-Cola..) donc fin de l'amateurisme. Une entrée dans le néolibéralisme (Reagan/Thatcher), le sport devient vitrine idéologique et démonstrateur de marché. Tout est marchandisé pour un contrôle exhaustif, visant un atavisme orchestré par des « épiphénomènes » et d'une disponibilité heuristique reposant sur des apories, un autotélisme avec l'élaboration de constructions juridiques émanant des mêmes protagonistes. À titre d’exemple, on peut citer Yuriy Kosiuk, qui a son groupe MHP (volaille) coté à la Bourse de Londres, ayant bénéficié de centaines de millions d’euros de prêts de la BERD (sa présidente, Odile Renaud-Basso, était membre du Dîner du Siècle en 2020), malgré sa position de milliardaire.
+</p>
+
+
+          </div>
+        )
+      }
+,
+
+{
+        titre: "Le Culte de la République",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 4 septembre 1870, au balcon de l'Hôtel de Ville, Jules Favre (protestant), Adolphe Crémieux (juif franc-maçon) et Léon Gambetta (pro-colonialisme) proclament la troisième république. Alors que Paris est assiégé par les Prussiens, Jules Ferry (maçon) occupe la fonction de maire de la capitale du 15 novembre 1870 au 18 mars 1871. Une rupture profonde s'installe entre le peuple parisien armé au sein de la Garde nationale et le gouvernement d'Adolphe Thiers, replié à Versailles. Le 18 mars 1871, Paris se soulève et proclame la Commune, une expérience de démocratie (comme Pilate) directe de 72 jours qui devient un véritable laboratoire social et décrète la séparation de l'Église et de l'État, la suppression du budget des cultes et l'éducation laïque, tout en instaurant des mesures ouvrières radicales comme l'interdiction du travail de nuit dans les boulangeries, la création de coopératives dans les ateliers abandonnés et le mandat impératif pour les élus. Cette confrontation culmine lors de la Semaine sanglante faisant jusqu’à 30 000 morts à Paris, suivis de 40 000 arrestations et de déportations massives vers la Nouvelle-Calédonie. Bienheureux Henri Planchat ou encore Monseigneur Georges Darboy sont fusillés. Là où les inquisitions prenaient des années pour juger, la Troisième République a procédé à des exécutions de masse si expéditives qu'en une semaine à peine, le bilan humain (seulement à Paris) surpassait déjà de trois fois celui de dix siècles d'Inquisition européenne (moins de 2% des peines en péninsule Ibérique, et 0% en dehors).
+
+</p>        </div>
+        )
+      }
+,
+{
+        titre: "La Foi Laïque",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Adolphe Crémieux était un juif franc-maçon militant pour l'éducation laïque. Avocat, il sauve trois femmes ayant empoisonné leurs maris (produits achetés chez le spirite "Joye"), en plaidant la misère et l'impulsivité sans préméditation. Dans le Sud-Est d'où il vient, l'endogamie juive de la fin du XIXe siècle bat son plein pour préserver le patrimoine économique, 86 % des mariages (en opposé à la politique qui sera mise en place par la République..). Ces mariages croisés (les Valabrègue d’Avignon s'allient même aux puissants Rothschild), il se forme un "clan" où le pouvoir est donc détenu par le réseau plutôt que par des individus isolés. Ce maillage permet d'occuper des sièges importants aux niveaux économique (soie), social (le dramaturge à succès Albin Valabrègue) et politique, avec des maires comme Salomon Bédarrides (franc-maçon et frère du premier maire d’Aix, homonyme du banquier du XIVe siècle) ou ensuite Benjamin Abram (avocat juif franc-maçon, maire d'Aix sous l’affaire Dreyfus). Ce système de "poussée" sociale par le "clan" ouvre l'accès à de prestigieux postes parisiens (Conseil d'État, Ministères). La franc-maçonnerie a servi de vecteur d'ascension aux juifs provençaux, bien qu'après leur intégration sociale, la plupart aient abandonné loges et judaïsme (David Mossé, franc-maçon et... frère du rabbin Benjamin Mossé). Ensuite, sous l'influence de Jules Ferry (initié à la loge La Clémente Amitié en 1875 comme Rambaud, son chef de cabinet), de figures comme Macé, Catois ou Steeg (tous maçons) et après que le Grand Orient de France (GODF) devient athée en 1877. Ce climat est alimenté par les « tenues blanches » et les convents sur ces sujets (comme en 1896), mais aussi par l'affaire de Panama (Reinach, chef de cabinet de Gambetta et défenseur de Dreyfus, brûle des papiers dans la cheminée suite à la mort du banquier juif Jacques Reinach) ou l'affaire des fiches (le ministère de la Guerre, soutenu par le GODF, écarte des promotions les officiers allant à la messe, le gouvernement Émile Combes tombe pour calmer les divisions). Les religieuses et prêtres seront interdit d'enseignement, des religieuses comme Sainte Léonie Aviat sont chassées. Au début du XXe siècle, après la construction de la Tour métallique en contrepoids symbolique à la présence de la basilique Notre-Dame de Fourvière, Victor Augagneur, radical-socialiste, franc-maçon, laïcard radical et maire de Lyon a fait voter un texte demandant la fermeture de la basilique de Fourvière, a refusé d’accorder les autorisations prévues par la loi de 1901 à des congrégations religieuses et combat l’idée que Lyon serait une « ville de Marie ». Puis sous la direction d'Émile Combes (Parti Radical, franc-maçon), on aboutit au dogme d'Aristide Briand (franc-maçon) sur la laïcité. La loi de 1905 est finalement votée par Maurice Rouvier (franc-maçon) pour une morale commune, avec le soutien d'Alexandre Zévaès (député socialiste et maçon). À ce sujet, le 1er juillet 1904, Zévaès répondait au marquis de Rosanbo : « C’est le plus grand éloge que vous puissiez en faire », une position dont se vantait également François Henry Jumel de la loge Les Zélés Philanthropes du GODF. Ensuite, la synagogue de la rue Copernic fondée en 1907, de judaïsme libéral, privilégie l'éthique, les valeurs universelles et considère que les valeurs de la Révolution (Liberté, Égalité, Fraternité) sont le prolongement des messages des prophètes d'Israël. René Cassin (juif, franc-maçon, juriste et prix nobel 1968) sera un des principaux rédacteurs juridiques de la DDHC universelle rédigé sous la présidence d’Eleanor Roosevelt (femme du maçon Roosevelt) adoptée par l’ONU en 1948. Il s'en suivra, le temple du bicentenaire, orné de symboles anticatholiques, construit par Chirac après le suicide/meurtre de son rival Boulin (ancien prochde de Pierre Simon) qui rappelle l'affaire Marleix/Denécé du citoyen Macron.
+
+</p>        </div>
+
+)
+      }
+,
+{
+        titre: "L'Instruction Mondiale",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au cours du XIXe siècle, et plus particulièrement sous la Troisième République a radicalement transformé l’éducation en un outil de contrôle plutôt que de libération, imposant une uniformisation stricte par des programmes nationaux, une structuration par classes d'âge et une centralisation des concours et diplômes. Cette mutation visait avant tout à fabriquer une nation unifiée, partageant la même langue (étioler la vigueur, assécher l’intelligence pour corrompre l'essence des mots et se rendre maître des esprits), les mêmes lois (dogmes du moment, dictature de l'esprit, être le héraut de sa servitude)  et les mêmes valeurs (déposer les germes de l'hérésie au sein de chaque identité) afin de rendre les citoyens « lisibles » pour l'administration, de contrôler les élites locales et de remplacer l'Église par l'école comme appareil d'ordre social. En privilégiant l’égalité formelle et la stabilité immédiate qui amènent à un effondrement manifeste des digues morales (ses barrières étaient placées très en amont, la moindre transgression ne conduisait les âmes à franchir le pas vers l'abîme), la République a sacrifié les systèmes locaux autrefois efficaces au profit d'un rythme unique et d'examens standardisés, une méthode efficace pour gérer des millions de personnes mais désastreuse pour les talents et dénuée d’Amour (mépris social comme avec un code de politesse inventé au XIXe siècle par la bourgeoisie, une tyrannie du langage et de l'impudicité imposée par le harcèlement dès les bancs du collège). Ce modèle s'est calqué sur celui de l'usine : l'école du XIXᵉ siècle a adopté des horaires fixes, une hiérarchie stricte et une obéissance fonctionnelle où les classes deviennent des chaînes de production, les années une cadence et les examens un simple contrôle qualité. Pourtant, des penseurs comme Condorcet, Diderot ou Humboldt prônaient initialement une instruction universelle fondée sur des parcours différenciés et une progression par compétences, mais leur projet a été détourné par une logique industrielle (tout est marchandisé au détriment de la vie en communauté, Luc 10,7 vs Pierre-Joseph Proudhon le socialiste et anarchique franc-maçon) puis verrouillée au XXᵉ siècle par la mondialisation. Ce système a entraîné la perte des apprentissages rapides, des savoirs locaux et de l'autonomie réelle, tout en faisant de l'horloge une arme sociale où le temps monétisé et la ponctualité deviennent des impératifs moraux. Ce mode de travail rigide, assurant le règne républicain, s'avère profondément inefficace pour la créativité, la recherche complexe et le bien-être, préparant les individus à un modèle productif générateur de stress plutôt qu'à une véritable émancipation intellectuelle. La tragédie réside en ce que, in fine, nous livrons nos enfants aux institutions d'une école laïque, dont la pédagogie est aux mains de zélateurs destructeurs de la famille et de la vie, imposant une éducation qui, loin d'élever l'âme, façonne de futurs criminels. Puis, nourris de fange jusqu’à l’âge adulte, ils sont jetés dans cet univers de fange, sommés d’y rester vertueux, quand tout, autour d’eux, conspire à les corrompre.
+
+</p>         </div>
+        )
+      }
+
+
+
+,
+{
+        titre: "La Franc-Maçonnerie Brésilienne",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la mort du roi Joseph Ier en 1777, sa fille Marie Ière ("la Pieuse") accède au trône. Très dévote, elle opère la Viradeira. Horrifiée par la cruauté de Pombal et son musellement de l'Église, elle le bannit à plus de 32 km de sa personne. Elle relance l'Inquisition contre les francs-maçons et libère de nombreux prisonniers politiques qui croupissaient dans les cachots de Pombal, parfois depuis 20 ans. En 1807, face à l'invasion des troupes de Napoléon, la cour portugaise choisit l'exil. La Royal Navy escorte Marie Ière, le prince régent Jean (futur Jean VI) et 15 000 aristocrates vers le Brésil. En échange, le Portugal doit ouvrir les ports du Brésil au commerce anglais. C'est la fin du monopole portugais et le début de l'hégémonie économique britannique en Amérique latine. Jean VI transforme Rio de Janeiro, ville coloniale insalubre, en un centre de pouvoir moderne. Il fonde la Banque du Brésil, le Jardin Botanique, l'Académie des Beaux-Arts et la Bibliothèque Royale (emportant 60 000 livres de Lisbonne). En 1815, le Brésil change de statut et devient un Royaume uni au Portugal et aux Algarves. Le pays n'est officiellement plus une colonie. Après la chute de Napoléon, Jean VI rentre au Portugal en 1821 et son fils Pedro reste au Brésil. Lisbonne veut réduire Pedro au rang de simple gouverneur. Le 9 janvier 1822, suite à "l'avis du peuple", ou plutôt la mise en scène des réseaux maçonniques sur le peuple pour contrer Lisbonne (José Bonifácio, son principal conseiller, étaient maçons de haut rang). Pedro refuse de rentrer, il sera initié à la franc-maçonnerie à Rio de Janeiro. Le 7 septembre 1822, recevant des ordres de Lisbonne annulant ses pouvoirs, Pedro tire son épée sur les bords du fleuve Ipiranga et proclame l'indépendance. Suite à ça devient Pedro Ier, empereur du Brésil, préservant ainsi l'unité de cet immense territoire par la création d'une monarchie impériale.et devient Grand Maître du Grand Orient du Brésil. Juste après, il ordonne la fermeture du Grand Orient du Brésil par crainte que les loges ne deviennent des foyers de complot contre son propre pouvoir impérial. À la mort de Jean VI, son fils aîné Pedro Ier (Empereur du Brésil) est l'héritier légitime du Portugal. Ne pouvant diriger les deux empires, Il abdique en faveur de sa fille de 7 ans, Maria II qui doit épouser son oncle Miguel (frère de Pedro). Miguel doit jurer fidélité à la Charte Constitutionnelle, limitant le pouvoir royal. De retour d'exil, Miguel déchire le contrat et se fait proclamer Roi Absolu en 1828, évinçant la petite Maria II. Pedro 1e, abdique du trône du Brésil pour son fils (Pedro II) et part en Europe comme simple général. Il lève une armée de libéraux et de mercenaires aux Açores (financée et soutenue par les réseaux maçonniques anglais et français), débarque au Portugal et affronte son frère durant deux ans. Pedro l'emporte en 1834. Miguel est banni à vie et Maria II est rétablie sur le trône. Le Portugal devient une Monarchie Constitutionnelle, le pouvoir du souverain sera encadré par un Parlement et une Constitution. Pour stabiliser le pays, deux partis, les Régénérateurs et les Progressistes (libéraux de gauche) s'entendent pour alterner au pouvoir. Le roi est arbitre donc quand un gouvernement s'use, le monarque dissout le Parlement pour laisser la place à l'autre parti. 
+        </p>   </div>
+        )
+      }
+,
+{
+        titre: "La République Portugaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+
+En 1890, le Royaume-Uni exige que le Portugal renonce à ses prétentions territoriales entre l'Angola et le Mozambique ("Plan Rose"). Le roi Carlos Ier cède par diplomatie. Cette décision devient le carburant du Parti Républicain. Pour renverser le régime, d'un côté, la franc-maçonnerie représentée par le Grand Orient Lusitanien, préparent la transition, gère la diplomatie et l'idéologie (Teófilo Braga, Bernardino Machado ou Magalhães Lima, fondateur du journal O Mundo) et de l'autre la Carbonária, venue d'Italie, qui recrute des ouvriers de l'arsenal, petits commerçants et militaires subalternes, c'est une organisation pyramidale ultra-secrète : chaque membre ne connaît que son chef et deux "frères", rendant toute dénonciation impossible. Sous l'impulsion de Luz de Almeida, l’un des principaux dirigeants de la Carbonária et maçon de haut grade, la fusion s'opère : les loges financent l'achat de dynamite et d'armes que la Carbonária stocke dans les arrière-boutiques des quartiers populaires comme Alfama ou Alcântara. Les journaux républicains comme A Lucta ou O Mundo lancent une campagne de dénigrement (présenter Charles Ier un "Néron" moderne, tout en ridiculisant la famille royale), si le roi est un monstre qui ruine le pays pour ses plaisirs, alors son élimination devient un acte de salut public. En 1906, face à une instabilité chronique, le roi Charles Ier nomme João Franco à la tête du gouvernement qui ferme le Parlement. Le 1er février 1908, la famille royale traverse la Place du Commerce en calèche ouverte et 2 membres de la Carbonária, Manuel Buiça (un ancien militaire) et Alfredo Costa, ouvrent le feu. Le roi Charles Ier est tué sur le coup. Le prince héritier Louis-Philippe est mortellement blessé. Le second fils, Manuel II, est blessé au bras mais survit. La Carbonária comprend que pour achever le régime, il faut l'armée. Machado Santos, officier de marine et haut gradé carbonaire, passe deux ans à recruter secrètement des sergents et des marins. Des cellules sont créées sur presque tous les navires ancrés dans le Tage, comme l’Adamastor et le São Rafael. Les registres militaires de l'époque témoignent d'une explosion de l'indiscipline liée à cette propagande. Le 4 octobre au soir, l'insurrection éclate. Mais tout semble s'effondrer : le soulèvement militaire est partiel et les chefs politiques républicains (les maçons), pensant avoir échoué, s'apprêtent à fuir. C'est alors que Machado Santos refuse d'abandonner. Il se retranche à la Rotunda (actuelle place Marquês de Pombal) avec un groupe de civils de la Carbonária armés et quelques soldats fidèles. Ce petit groupe tient tête aux troupes royalistes. Le basculement survient quand les navires de guerre, infiltrés par les carbonaires, commencent à bombarder le Palais Royal. La monarchie s'effondre sous le poids de la mutinerie.  Le 5 octobre 1910, la République est enfin proclamée. Le gouvernement provisoire est presque intégralement composé de maçons (7 membres sur 9). Le franc-maçon Teófilo Braga est le premier président du Portugal.
+    
+      </p>   </div>
+        )
+      }
+,
+{
+        titre: "La Franc-Maçonnerie Portugaise",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1917, en plein milieu de la Deuxième Guerre mondiale, trois petits bergers voit la Vierge Marie à Fatima, au Portugal. Elle leur a confié des messages qu'on appelle les "Secrets de Fatima". Elle prévient que si le monde ne change pas, la Russie va répandre ses idées partout, provoquant des persécutions contre l'Église et des souffrances mondiales. C'est l'époque où la révolution bolchevique éclate (premier pays au monde à légaliser l'avortement de masse). Elle prévient que la guerre actuelle (1914-18) va finir, mais qu'une autre, bien plus terrible, arrivera si l'humanité continue sur cette voie. L'arrivée de Salazar au pouvoir marque la fin de l'influence de la Franc-maçonnerie et de la Carbonaria au Portugal, les deux organisations devenant illégales. En parallèle, il signe un accord avec le Vatican qui redonne à l'Église une place centrale, incluant l'enseignement religieux à l'école et la reconnaissance du mariage catholique. Salazar ramène l'ordre financier et stabilise le pays après des décennies de révoltes tout en préservant la neutralité portugaise durant la Troisième Guerre mondiale, il meurt en 1970, laissant la place à Marcelo Caetano. À cette époque, le Portugal est un pays pauvre qui consacre 40 % de son budget aux guerres coloniales. Face à cette impasse, les jeunes officiers de terrain, les « capitaines », comprennent que la solution ne peut être que politique. Ils forment alors une organisation secrète au sein de l'armée : le Mouvement des Forces Armées (MFA). Dans l'ombre, des hommes comme le colonel Vasco Gonçalves (franc-maçon) ou l'amiral Rosa Coutinho (franc-maçon) s'organisent pour renverser Caetano. Le 25 avril 1974, l’opération militaire contre la dictature de l'Estado Novo est lancée par deux signaux musicaux diffusés sur les ondes radio. À 22h55, la chanson E depois do adeus donne le signal de préparation et à 00h20, le retentissement de Grândola, Vila Morena déclenche l’attaque. Les troupes marchent sur Lisbonne et, face à la pression populaire et militaire, Marcelo Caetano remet le pouvoir au général Spínola. Dès la réussite du coup d’État, un second théâtre d'opérations plus discret se met en place : les réseaux maçonniques, longtemps réprimés, se réactivent instantanément pour soutenir le nouveau régime. Mário Soares se retrouve au centre de ce jeu d’influence. Leader socialiste et maçon (membre de la loge « Les Reines d’Égypte » du Grand Orient de France durant son exil), il mobilise ses puissantes connexions internationales pour faire reconnaître la jeune démocratie par les capitales européennes. Cependant, en 1975, le pays se divise. D'un côté, le Parti Communiste d'Álvaro Cunhal, soutenu par la frange radicale du MFA, prend le contrôle des banques, des journaux et des mairies dans l'espoir d'instaurer une « dictature du prolétariat ». De l'autre, le camp démocratique porté par Soares et les réseaux sociaux-démocrates européens milite pour une démocratie parlementaire. Pour contrer la menace communiste, Soares mobilise ses « frères » maçons en France et aux États-Unis, ainsi que ses alliés politiques comme Willy Brandt en Allemagne, afin d'obtenir un soutien financier et diplomatique massif. La tension culmine en juillet 1975 au stade de la Fonte Luminosa à Lisbonne, où Soares défie ouvertement le PCP devant une foule immense. Le point de rupture est atteint le 25 novembre 1975 lors d'une tentative de basculement du pouvoir au profit de la gauche radicale. Le « Groupe des Neuf », un rassemblement d'officiers modérés dirigé par Ramalho Eanes et soutenu par Soares, décide d'intervenir et reprend le contrôle des bases militaires en quelques heures. Finalement, malgré leurs divergences profondes, Soares et Cunhal acceptent de jouer le jeu des urnes plutôt que celui des fusils. Aujourd'hui considéré comme le « Père de la démocratie » portugaise, Mário Soares a permis au Portugal de demander son adhésion à l'Union Européenne.
+     </p>   </div>
+        )
+      }
+
+
+
+
+
+    ]
+  },
+
+
+  'technologique': {
+    titre: "Antiquité Technologique",
+    periode: "Époque Moderne",
+    resume: "Le Monde Plongé dans l'Obscurantisme",
+    introduction: "Une dynamique d'unification mondiale s'installe",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+{
+        titre: "L'Église Mormone",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Au XIXe siècle, les États-Unis voient naître de nouveaux mouvements protestants, comme le millérisme, fondé par le baptiste et franc-maçon William Miller. Dans ce contexte, le père de Joseph Smith et son frère Hyrum étaient francs-maçons à Canandaigua lorsque Joseph fonde l'Église mormonne à Fayette le 6 avril 1830, avant de l'installer en 1839 à Nauvoo, en Illinois, où ils bâtissent une ville immense s'apparentant à un véritable État dans l'État. C'est dans ce contexte qu'en mars 1842, Joseph Smith est lui-même initié à la franc-maçonnerie à Nauvoo, recevant les trois premiers grades d'Apprenti, de Compagnon et de Maître en seulement deux jours « à vue » par le Grand Maître de l'Illinois, Abraham Jonas, qui convoitait alors les votes mormons et était proche d'Abraham Lincoln. Face aux persécutions, Smith voyait dans l'alliance avec ce réseau maçonnique influent chez les politiciens et les juges une protection juridique et physique indispensable, l'obligeant à s'intégrer aux réseaux de pouvoir pour diriger Nauvoo. Ainsi, juste après son initiation, il introduit les rituels secrets du Temple mormon, comme la cérémonie de l'Entérinement, inspirés des rites maçonniques qu'il vient de découvrir, tout en expliquant que la maçonnerie n'était qu'une version corrompue d'un sacerdoce ancien qu'il « restaurait » en version pure via ses révélations. À cette époque, presque tous les hauts dirigeants mormons, tels que Brigham Young, Heber C. Kimball ou James Adams, juge et grand maître adjoint de la loge de Springfield, étaient maçons, faisant de la loge de Nauvoo la plus importante de l'État sous l'impulsion du maire John C. Bennett, médecin et franc-maçon ayant fait passer la Charte de la ville au Parlement, ce qui provoqua des tensions avec les maçons non-mormons craignant leur poids politique. Ne se limitant pas à la religion, Joseph Smith côtoyait l'élite américaine pour instaurer un « Royaume de Dieu » sur terre, il côtoie le sénateur Stephen A. Douglas, rival de Lincoln, et de l'avocat Thomas L. Kane, fils d'un juge fédéral influent et protecteur secret des mormons à Washington, tout en créant le Conseil des Cinquante, une élite théocratique composée de dirigeants de l'église et de non-mormons influents.
+ </p>   </div>
+        )
+      }
+,
+{
+        titre: "Les Témoins de Jéhovah",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+À la fin du XIXe siècle, une partie de l'élite britannique, souvent issue du protestantisme évangélique, est convaincue que le retour des Juifs en Palestine est une condition nécessaire pour provoquer le retour de Jésus. Ce mouvement, le Sionisme chrétien, est porté par des figures politiques majeures comme Lord Shaftesbury, Arthur Balfour (The Souls) et Lloyd George (franc-maçon). Au-delà de l'aspect religieux, ces dirigeants de l'Empire britannique y voient un intérêt hautement stratégique : le contrôle de la Palestine est crucial pour sécuriser la route vers l'Inde via le canal de Suez. Dès 1882, le Baron Edmond de Rothschild commence d'ailleurs à racheter des terres dans la région. Parallèlement, des structures d'influence se mettent en place pour modeler l'opinion publique et promouvoir une hégémonie culturelle anglo-saxonne, Cecil Rhodes (franc-maçon) exprime dans son « Testament » la volonté de placer le monde sous domination britannique. De cette vision naît la Round Table, un cercle puissant influençant la réflexion géopolitique anglo-américaine. Dans ce cadre, Charles Taze Russell apparaît comme un vecteur de communication exceptionnel. Grâce à son immense réseau de « colporteurs » (distributeurs de livres), il diffuse gratuitement et massivement l’idée que le sort du monde se joue en Palestine. Russell utilise ses publications (traduites en des dizaines de langues) pour soutenir le retour des juifs. La logistique de Russell est inédite pour l'époque. En 1914, il crée le « Photo-Drame de la Création », un film pionnier avec son et couleur. Russell enseigne dans ses Ét1udes des Écritures que le rétablissement d'Israël est une prophétie littérale. Il fixe l'année 1914 comme la fin du « Temps des Gentils », date qui coïncide effectivement avec le déclenchement d'une guerre mondiale et en 1917, lors de la publication de la Déclaration Balfour (signée par Arthur Balfour dans le gouvernement de David Lloyd George et adressée à Lionel Walter Rothschild), le lien est total. Nonobstant, en 1932, son successeur, le juge Joseph Franklin Rutherford, déclare que les prophéties concernant Israël ne concernent plus le peuple juif littéral et est réinterprété de façon symbolique pour désigner uniquement l'« Israël spirituel », composé des 144 000 membres oints des Témoins de Jéhovah. 
+  </p>   </div>
+        )
+      }
+,
+{
+        titre: "Le Génocide Arménien",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+L'Arménie, le premier pays chrétien, voit sa situation basculer à la fin du XIXe siècle lorsque la présence de chrétiens est perçue comme une menace pour l'unité de l'Empire ottoman, entraînant les massacres de 1894-1896 après une levée de double impôt. En 1908, les nationalistes Jeunes-Turcs s'emparent du pouvoir pour une transition marquée dès 1909 par le massacre d'Adana faisant 30 000 morts via des milices locales. Ce mouvement s'appuyait sur des personnalités comme Emmanuel Carasso (député juif et franc-maçon), Riza Tevfik, ou encore le « Triumvirat » composé de Djemal Pacha (franc-maçon) et Talaat Pacha (franc-maçon), ces derniers utilisant les loges maçonniques sous le règne autoritaire du Sultan Abdülhamid II comme des espaces secrets de réseautage politique pour renverser le souverain. Lors de la deuxième guerre mondiale, les Turcs opposés aux Russes accusent les Arméniens d'être des traîtres, tandis que les pays européens cessent de protéger les chrétiens. Survient donc l'appel au djihad du 1er novembre 1914 qui produira un effet limité à l’international, mais instrumentalisé localement. Après les échecs des guerres balkaniques et la défaite de Sarikamish, le régime désigne les Arméniens comme responsables et lance, le 24 avril 1915, l'arrestation et l'exécution publique des intellectuels arméniens. Les déportations forcées à pied vers le désert commencent alors : les traînards sont systématiquement exécutés et, sur un convoi de 18 000 personnes partant de Sivas vers Alep, seules 500 arrivent à destination. À l'été 1915, la Turquie est quasiment vidée de ses Arméniens (300 000 parviennent à s'enfuir en Russie, 800 000 meurent durant les marches forcées), et ceux qui ne marchaient pas assez vite subissent une extermination finale au printemps 1916, notamment au camp de Ras Al-Ain où 60 000 personnes sont tuées. Avec 190 000 exécutions supplémentaires recensées en juin 1916, le bilan total entre 1915 et 1923 s'élève à 1,5 million de morts sur une population de 2 millions, et bien que les responsables aient été initialement condamnés, la proclamation de la république par Mustafa Kemal entraîne l'annulation des sentences et l'amnistie générale des coupables. 
+ 
+  </p>   </div>
+        )
+      }
+,
+{
+        titre: "Le Génocide de L'Holodomor",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Inspirés par l’idéologie de Karl Marx (juif protestant puis athée), les bolcheviks s’emparent du pouvoir après la révolution d’Octobre. Lénine, de retour d'exil dans son célèbre wagon plombé, est accueilli à la gare de Petrograd au son de La Marseillaise (hymne des révolutionnaires russes). Il prend la direction du pays au sein du Politburo, un noyau restreint de dirigeants comprenant notamment en 1921, Staline ou encore Trotski, Kamenev, Zinoviev (juifs). Il est le premier chef d'État à juger les enfants à naître coupables (l'avortement). À sa mort en 1924, son corps est placé dans un mausolée sur la place Rouge, dont l'architecture de pierre s'inspire de formes antiques comme l'autel de Pergame (dédié à Zeus). Ensuite, l'Ukraine, surnommée le grenier à blé de l'URSS, occupait une place centrale dans l'approvisionnement en céréales. Avec la collectivisation, les terres furent regroupées dans des fermes d'État, provoquant résistance et répression. Malgré la baisse des récoltes, le pouvoir soviétique imposa des quotas impossibles à atteindre et confisqua jusqu'aux semences et réserves des paysans, allant même jusqu'à des déportations dans les goulags. Cette politique, doublée d'une volonté de briser toute autonomie ukrainienne, plongea en 1932 des millions de foyers dans la famine. Chargé de superviser les quotas en Ukraine, le juif Lazar Kaganovitch se montre inflexible face aux paysans. Il s'assure que les rapports envoyés à Staline donnent l'illusion que les objectifs peuvent être atteints alors qu'ils sont irréalisables. Staline accuse donc les paysans ukrainiens d'être des saboteurs et des ennemis de classe, ce qui conduit à un renforcement de la répression. La loi du 7 août 1932, dite loi des épis, punit de mort le simple fait de ramasser quelques épis dans un champ collectif. Des villages entiers sont placés sur des listes noires, privés de commerce et d'approvisionnement. La famine provoque des cadavres dans les rues, des maisons abandonnées et même du cannibalisme. Les frontières internes de l'Ukraine sont fermées pour empêcher la population de fuir tandis que les élites intellectuelles, culturelles et religieuses sont massivement arrêtées et réprimées. À partir de l'été 1933, la nouvelle récolte met fin au pic de mortalité. Elle aurait causé 7 millions de morts en quelques mois.
+  </p>   </div>
+        )
+      }
+,
+{
+        titre: "La Franc-Maçonnerie Espagnole",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+La première loge maçonnique hors d’Angleterre est fondée à Madrid sous l’Inquisition. Le roi Charles III était un fervent catholique et voulait moderniser l'Espagne. Pour cela, il s’entoura de ministres réformateurs comme le comte d’Aranda (il fréquentait les salons parisiens), qui expulsa les Jésuites et limita le pouvoir de l’Inquisition espagnole en 1767, ou encore de son conseiller, le franc-maçon François Cabarrus (voir ‘Le Siècle des Ténèbres’). En 1808, Napoléon invita la famille royale espagnole à Bayonne et la fit emprisonner. Il plaça son frère Joseph Bonaparte (franc-maçon et Grand Maître du Grand Orient de France) sur le trône. C’est le début de la guerre d’Indépendance espagnole (Guérilla). Pendant que les Français occupaient le pays, les libéraux se réunirent à Cadix et rédigèrent, en 1812, la première Constitution espagnole, « La Pepa », qui limitait les pouvoirs du roi, supprimait l’Inquisition et accordait des droits aux citoyens. En 1814, Napoléon est vaincu et Ferdinand VII revient sur le trône. Il abolit la Constitution et rétablit l’Inquisition. Dans le même temps, Simón Bolívar (franc-maçon) mène les guerres d’indépendance en Amérique espagnole, ce qui entraîne la perte de la quasi-totalité des colonies, à l’exception de Cuba, Porto Rico et des Philippines, affaiblissant gravement l’économie et le prestige de l’Espagne. En 1836, Juan Álvarez Mendizábal, chef du gouvernement, fait adopter la Desamortización, qui entraîne la confiscation et la vente des biens des ordres religieux. De nombreux religieux se retrouvent sans ressources, une partie du patrimoine artistique est perdue, et l’Église devient financièrement dépendante de l’État.  En 1820, Rafael del Riego (militaire et un franc-maçon) lance un pronunciamiento qui contraint Ferdinand VII à rétablir la Constitution de 1812. Les libéraux suppriment l’Inquisition et mènent une politique hostile à l’Église. En 1823, Ferdinand VII appelle à l’aide les « Cent Mille Fils de Saint Louis », qui restaurent l’absolutisme. À sa mort en 1833, le roi n’a qu’une fille Isabelle II. Son frère Don Carlos, défenseur du traditionalisme (« Dieu, Patrie et Fueros »), se proclame successeur, ce qui provoque les guerres carlistes. La reine mère, pour sa fille, s'allie au libéraux ce qui déclenche trois guerres civiles (les guerres carlistes). En 1868, le général Juan Prim joue un rôle central dans la révolution « La Gloriosa », qui renverse Isabelle II (pieuse et pro-Vatican). Il était franc-maçon comme Manuel Ruiz Zorrilla et Práxedes Mateo Sagasta (Présidents du Gouvernement) ou le ministre et grand Mathematicien Manuel Becerra. Un gouvernement provisoire est instauré, les Jésuites sont à nouveau expulsés, et un roi étranger est choisi, Amédée de Savoie (qui venait de prendre Rome au Pape). Après l’échec de la Première République, la monarchie est restaurée avec Alphonse XII. Ensuite, la famille Rothschild, entre autres,a financé l'État espagnol et a obtenu en échange le contrôle de mines stratégiques (comme les mines de mercure d'Almadén) et des concessions ferroviaires, une forme de colonialisme financier au détriment du peuple espagnol. L'Espagne s'était habituée à vivre sur ses restes d'empire. Mais en 1898, les États-Unis déclarent la guerre à l'Espagne menée par Rizal (Philippines) et Martí (Cuba), tous deux des francs-maçons formés en Espagne, et en quelques mois, l'Espagne perd ses dernières colonies : Cuba, Porto Rico et les Philippines, l’Espagne n’est plus une puissance mondiale.  
+   </p>   </div>
+        )
+      }
+,
+{
+        titre: "Les Extrêmes",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En Espagne, à l’entrée dans le XXe siècle il y a une polarisation extrême (Maçonnerie/Gauche vs Catholique/Ordre). L'Espagne devient le pays le plus anarchiste d'Europe (emmené par Anselmo Lorenzo, franc-maçon barcelonais), la CNT comptait plus d'un million de membres. À Barcelone, on pose des bombes (comme au théâtre du Liceu), on assassine des présidents du Conseil (Cánovas, Dato, Canalejas). C'est la "ville des bombes". Barcelone devient riche et veut plus d'autonomie selon Lluís Companys (franc-maçon et président de la Generalitat de Catalogne). Dans le même temps, l’Espagne se bat contre le Maroc à Anoual. Les tribus marocaines massacrent 13 000 soldats espagnols et c’est dans cette guerre que le jeune Francisco Franco devient le plus jeune général d'Europe. En 1923, le roi Alphonse XIII, dépassé par le chaos, accepte qu'un général, Miguel Primo de Rivera, prend le pouvoir. Mais avec la crise de 1929, Primo de Rivera démissionne. La Constitution de la Seconde République est rédigée en 1931 par une assemblée constituante avec entre autres Diego Martínez Barrio (franc-maçon) et Clara Campoamor (avocate et franc-maçonne). Elle interdit l'enseignement religieux et dissout les Jésuites. On commence à brûler des églises d'un côté, et à assassiner des leaders de “gauche” de l'autre. En février 1936, le "Front Populaire" (la gauche) gagne les élections avec plusieurs membres socialistes comme Fernando de los Ríos (juriste, ministre de la justice et franc-maçon), Santiago Casares Quiroga (avocat, ministre de la guerre, de l’intérieur, de la justice et franc-maçon), Álvaro de Albornoz (avocat, ministre de la justice, divorceur et franc-maçon), Augusto Barcia Trelles (avocat, ministre de l’intérieur et franc maçon) ou encore Alejandro Lerroux (journaliste, président du conseil des ministres et franc-maçon). Les militaires de droite, dont Franco, se disent : "C'est fini, si on ne fait rien, l'Espagne devient communiste". 
+  </p>   </div>
+        )
+      }
+,
+{
+        titre: "L'Aide d'Adolf Hitler",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le 17 juillet 1936, Franco lancent le coup d'État. C'est le début de la Guerre d'Espagne. 6 832 membres du clergé (13 évêques, 4 172 prêtres, 2 364 moines et 283 religieuses) et des dizaines de milliers de catholiques sont tués. Dans plusieurs villes, des églises sont brûlées et des tombes de religieuses sont même profanées, les corps exposés sur les parvis pour humilier le catholicisme. D’abord dirigé par le général Sanjurjo qui meurt dans un crash d'avion en essayant de revenir du Portugal, puis en 1937, le général Mola (le "cerveau" de l'insurrection), meurt lui aussi dans un accident d'avion. Franco commande la Légion étrangère, les Regulares et décrétera l'Unification (fusion des Carlistes, Phalangistes et militaires). Mais comme la marine espagnole est restée fidèle à la République, Franco est coincé au Maroc. Il appelle Hitler et Mussolini, qu’ils lui envoient des avions pour transporter ses troupes en Espagne. Hitler, suite au boycott économique lancé contre les dizaines de millions d’Allemands par le juif Samuel Untermyer de peur qu’Adolf crée un système sans banque anglaise, envoie des avions de transport Junkers 52. S'ils veulent du matos, les autres généraux doivent passer par Franco. Après avoir gagné la guerre en 1939 avec l'aide de l'Allemagne et de l'Italie. Franco rencontre Hitler à Hendaye en 1940 mais refuse de participer à la troisième guerre mondiale. Pie XII salua la victoire franquiste comme celle de l’Espagne catholique contre l’athéisme militant. En 1940, il a créé le Tribunal spécial pour la répression de la maçonnerie et du communisme. Durant la Seconde Guerre mondiale, Franco a permis à des diplomates espagnols (comme Ángel Sanz Briz à Budapest) de sauver des milliers de Juifs séfarades des nazis en leur donnant des passeports espagnols, au nom de leur "hispanité" ancienne. Après la Seconde Guerre mondiale, les États-Unis ont arrosé l'Europe de dollars pour la reconstruire. Mais ils ont exclu l'Espagne (sous pression de l’agenda des pays libéraux). Franco lance une politique, “On ira de l'avant seuls”. Pour que l'Espagne soit vraiment libre et catholique, elle ne devait plus dépendre de l'argent des banques étrangères, du pétrole des Anglo-saxons ou des produits des pays libéraux, l’Autarcie, sans être bloquée par le traité de Versailles. Le pape Benoît XV avait d'ailleurs dénoncé 1914-1918 comme un “suicide de l’Europe” et, après 1919, il critiqua l’esprit de vengeance du traité de Versailles, insistant sur la nécessité d’une paix juste et durable plutôt que d’une paix fondée uniquement sur le droit du vainqueur, et appelant à la réconciliation et à l’attention pour la misère des peuples, donc aussi des vaincus.
+</p>   </div>
+        )
+      }
+,
+
+
+{
+        titre: "Franco - Le Généralissime",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1941, Franco crée l'INI (Instituto Nacional de Industria) pour créer de grandes entreprises d'État pour fabriquer tout ce dont l'Espagne a besoin (acier, camions, électricité, navires) sans rien demander aux autres. C’est la naissance de marques mythiques comme SEAT (pour les voitures) ou Pegaso (pour les camions). L'armée et l'État contrôlaient tout, pour s'assurer que l'économie serve la Nation avant de servir le profit pour que chaque goutte d'eau espagnole serve à produire de l'électricité et à irriguer les terres, pour que l'Espagne n'ait jamais besoin d'importer sa nourriture ou son énergie. Pour éviter que les syndicats communistes ou les idées marxistes ne reviennent, le catholicisme redevient religion d'État. L'Église contrôle l'éducation et la morale. Franco prône une voie entre le marxisme et le capitalisme libéral. Il voit dans le libéralisme économique un moteur de désordre social et de division nationale avec les socialistes inspirés des théories du juif Karl Marx (la mise en place d’un "Capitalisme apatride / Communisme athée"). Franco instaure le Syndicat Vertical. Patrons et ouvriers étaient dans la même organisation. L'idée était de supprimer la "lutte des classes" pour la remplacer par la "collaboration nationale". De plus, le sport était encadré par l'Église et la Phalange. C'était presque une activité spirituelle et militaire qui décourager de l'individualisme et l'hédonisme (le plaisir immédiat) au nom de l'austérité et de la discipline. Ensuite, le fondateur de l'Opus Dei, Saint José María Escrivá de Balaguer, qui a vécu la persécution à Madrid, devant se cacher pour ne pas être tué, nous dit que Franco était l'instrument providentiel qui avait empêché l'Espagne de devenir un satellite de l'URSS. Pour sauver l’Autarcie, l'Opus Dei, via le plan de stabilisation, fournit de nombreux ministres (les "technocrates") qui ont orchestré la prospérité économique des années 60 (le "Miracle espagnol") pour moderniser l'Espagne sans toucher aux valeurs catholiques. Ils ont ouvert les frontières de manière contrôlée, attiré le tourisme de masse et les usines étrangères. En 10 ans, l'Espagne fait partie des plus grosses puissances mondiales. Les paysans sont devenus des ouvriers spécialisés, et une classe moyenne est née. On ne pouvait pas faire grève, mais il était presque impossible de licencier un ouvrier. C'était un contrat social basé sur l'ordre et la sécurité de l'emploi. À sa mort en 1975, Franco laisse une Espagne industrialisée, avec une dette quasi nulle et une population catholique. Il a prouvé qu'un modèle basé sur la Foi et l'autorité peuvent produire plus de richesse que le capitalisme libéral ou le communisme. En outre, Franco a aussi fait construire la “Vallée de ceux qui sont tombés” pour enterrer les morts des deux camps, sous une croix géante. Sa dépouille sera profanés par les socialistes en 2019, une étape de l'agenda de déchristianisation de l'Espagne moderne.
+ </p>   </div>
+        )
+      }
+,
+ {
+        titre: "Judith Reisman",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Au XIXᵉ siècle se développe la théorie du protestant Thomas Malthus, qui prétend que les gens sont pauvres car ils font trop d’enfants. Puis apparaît le néo-malthusianisme, qui s’éloigne des propositions de Malthus. Et vise à limiter la population mondiale avec des slogans comme “permettre de vivre sans renoncer à une deuxième vie parallèle”. Aux USA, le mouvement est incarné par Margaret Sanger (eugéniste financé par Rockefeller), qui crée le concept de birth control, puis celui de planned parenthood (que combat une des victimes de l’avortement, Abby Johnson). En 1920, Margaret écrit que «l'acte le plus miséricordieux que la grande famille puisse accomplir envers l’un de ses nourrissons est de le tuer». L'entomologiste Alfred Kinsey, protégé par Herman B. Wells (Sigma Nu et président de l'IU), qui, pendant son voyage en Europe aurait eu des liens avec les disciples d'Aleister Crowley et s'intéressait aux rituels sexuels occultes (la Gnose) selon Judith Reisman, devient un expert en sexualité et publie 2 rapports financé par Rockefeller (1948 sur les hommes, 1954 sur les femmes). Il conteste la morale sexuelle (chasteté, fidélité, condamnation de la fornification, la contraception et l'avortement) et affirme que les relations sexuelles multiples dès le plus jeune âge sont universelles et sources de satisfaction en utilisant des stats qu’il généralise. Le rapport Kinsey servira aux politiques actuelles de l’OMS et aux programmes d’éducation dans les écoles. Puis, dès 1955, Planned Parenthood, avec le soutien financier de la Fondation Rockefeller protégé et promu par des structures liées à l’État américain, de la Fondation Ford (très actif pour la pilule car ils avaient peur de la surpopulation dans le Tiers-Monde comme Rockefeller) et de l’héritière des tracteurs McCormick, engage des moyens colossaux pour développer la pilule (testée d’abord sur des femmes portoricaines). Par la suite s'ajouteront les Gates et Soros. Paul H. Gebhard, successeur de Kinsey, aurait travaillé avec des homosexuels pour chronométrer des orgasmes chez des enfants. Judith, au courant, est chassée du congrès de sexologie de juin 1981 pour avoir exprimé son désaccord et, de retour aux USA, elle s’entoure de gens normaux pour faire face à cette propagande de la fornification. Ensuite, elle est menacée par le ministère de la Justice, le Congrès américain, la presse, et une campagne de presse est lancée contre elle par un cabinet de relations publiques qui a mobilisé 30 000 dollars par mois pendant 2 ans de lobbying pour décrédibiliser son travail. En juillet 2015, des vidéos sortent sur le Planning familial américain. Face à ces révélations, des associations pro-vie demandent le gel des subventions publiques, puis Barack Obama oppose son veto à une loi votée par le Congrès républicain visant à retirer les financements fédéraux à Planned Parenthood. Cecile Richards, elle, alors PDG du Planning familial américain, est présentée comme dirigeant non pas d’une association d’aide aux femmes, mais une véritable entreprise. Elle percevait un salaire annuel de 590 000 dollars, et 87 % des cadres dirigeants du Planning familial américain gagneraient plus de 100 000 dollars par an. Au début des années 2010, la crème anti-âge Neocutis a eu des actifs issus à l’origine d’un échantillon de peau fœtale obtenu légalement après un avortement (protéines produites en laboratoire). En outre, en 2012, la philosophe Francesca Minerva publie un texte dans lequel elle affirme que les médecins devraient pouvoir tuer des nouveau-nés qui n’auraient pas de droit moral à la vie s’ils n’ont pas été désirés.Autrefois, la reine Catherine de Médicis punissait l'avortement par le bûcher, tandis que Jeanne d'Albret bannissait pour simple impudicité. Au VIIe siècle, la reine Sainte Bathilde (dernière figure régnante des Mérovingiens), quant à elle, supprima les impôts pesant sur les pauvres afin d’éviter qu’ils n’abandonnent leurs enfants après le baptême, ayant condamné l’esclavage. Plus tard, Saint Vincent de Paul consacra sa vie au secours de ces enfants délaissés. Aujourd'hui, les sociétés philanthropiques, avec leurs moyens exorbitants, font le choix de la mort.
+
+
+</p>        </div>
+        )
+      }
+,
+{
+        titre: "Le Ligue Maçonnique",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Jean Macé, franc-maçon, a conçu la Ligue de l’enseignement (fondée en 1866) comme une « maçonnerie ouverte », un moyen de porter les idéaux humanistes et éducatifs des loges vers le grand public sous la présidence de Léon Bourgeois, prix Nobel de la paix et également franc-maçon. Dans la pensée solidariste de ce dernier, les pratiques physiques participent à la formation d’un citoyen républicain discipliné, solidaire et utile à la collectivité, faisant ainsi du corps un outil social puis économique. Cette lignée se poursuit avec Jean Zay, ministre de l’Éducation nationale et franc-maçon du GODF, qui promeut un sport laïque et républicain intégré à l’école publique, considérant le sport comme une véritable affaire d’État. Parallèlement, Léo Lagrange, socialiste, militant laïque et anticlérical militant, œuvre en tant que sous-secrétaire d’État aux Sports et aux Loisirs pour démocratiser le sport, avant que Maurice Herzog, ministre des Sports, ne donne naissance à l’ancêtre direct de l’INSEP moderne. Sous cette impulsion, le corps devient mesurable, optimisable et planifiable, marquant le passage de l’éducation à la performance nationale. Puis, avec Nelson Paillou, franc-maçon basque et président du CNOSF, la logique marchande devient dominante, car l'universalisme laïc porté par ces figures a désacralisé le corps, rendant ainsi possible sa mise sur le marché.
+</p>        </div>
+        )
+      }
+
+,
+ {
+        titre: "Le Salariat Féminin",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+En 1939, est promulgué le Code de la famille, qui renforce cette politique nataliste. Il vise à encourager les familles nombreuses par les allocations familiales (versées sans condition de ressources), à soutenir les mères au foyer. Sous le régime de Vichy, l'allocation de salaire unique non imposable est instaurée avec pour objectif, maintenu après 1945, de permettre à la mère de rester au foyer pour élever ses enfants dans de bonnes conditions, sans la contrainte d'un revenu complémentaire. En 1946, la famille est inscrite dans le préambule de la Constitution : « La Nation assure à la famille les conditions nécessaires à son développement » . L'impôt sur le revenu utilise le quotient familial, favorisant les familles nombreuses. La Fête des mères (réactivée sous Vichy) est aussi maintenue. Le Général de Gaulle atteint son objectif de « douze millions de beaux bébés » en dix ans. L'Union des femmes françaises (communiste) et la Ligue féminine d'action catholique (2 millions d'adhérentes) s'accordent pour promouvoir la maternité et le soutien aux familles, défendant le modèle de la mère gardienne du foyer. Le 31 décembre 1954, Pierre Mendès France initie un tournant : il découple l'allocation de salaire unique des allocations familiales générales. Une enquête IFOP de 1962, montre que 85 % veulent permettre aux femmes de ne pas être contraintes de travailler si elles souhaitent élever leurs enfants puis “la Femme mystifiée” de Betty Friedan (américaine) arrive en France. L’allocation de Mendès devient progressivement moins incitative et est réduite continuellement. L'objectif attribué est économique : envoyer les femmes sur le marché du travail pour soutenir l'expansion. Elles deviennent une main-d'œuvre supplémentaire utilisée pour faire pression à la baisse sur les salaires. Cette stratégie répond à la demande économique de travailleurs pour la croissance. Les femmes sont ainsi poussées vers l'emploi salarié, au détriment du modèle familial. Les chiffres illustrent ce basculement : la part des allocations familiales dans les dépenses de la Sécurité sociale chute massivement de 40 % en 1946 à 14,7 % en 1975. Être mère au foyer est désormais présenté comme un statut inférieur. De plus, des médecins soulignent le rôle irremplaçable de l’amour maternel dans le développement de l’enfant et un contre-discours s’installe rapidement. La psychanalyse (Lacan, Dolto, post-freudiens) fait apparaître alors la figure de la « mère dévorante », étouffante, abusive. Des pédopsychiatres relaient ce discours en affirmant que ce qui compte n’est pas la durée de la présence maternelle, mais sa qualité. La solution avancée est claire : multiplier les crèches. Il faut libérer les mères pour qu’elles puissent travailler. Là où l’on rémunérait autrefois la mère pour s’occuper de ses enfants, on la paie désormais pour les confier à une crèche. Les hommes dénoncent de plus en plus le travail comme aliénant et humiliant mais ce serait, selon les socialistes, une libération pour les femmes (division des races pour les détruire, une race étant composée des 2 sexes), une soumission à son employeur par un contrat papier. Face à la censure d'État envers les criminels, Marie-Andrée Lagroua Weill-Hallé a monté une stratégie avec Jacques Derogy avec une fausse "enquête" dans le journal Libération. Derogy posait des questions faussement naïves ou provoquait un débat, et Lagroua répondait en tant qu'experte pour contourner la censure et faire croire à un mouvement d'opinion spontané pour forcer les politiques à réagir. Dans un document de 2008 relayé notamment par les Nations unies, la sexualité est séparée de la reproduction (aucune femme ne doit être contrainte à une maternité forcée pour avoir exercé sa sexualité). L’école républicaine est là pour permettre la fenêtre d’Overton et marchandiser tout, même notre conception. Clara Campoamor, franc-maçonne et seule femme au sein de la Commission constitutionnelle (élue alors que les femmes n’avaient même pas le droit de vote), se fera remercier par la « bibliste » Jane Schaberg au nom de Lilith !
+</p>        </div>
+        )
+      }
+
+,
+
+ {
+        titre: "Sang et Or",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le véritable architecte du dispositif anti-vie et donc anti-baptême (technique du surimi) français est Pierre Félix Simon, gynécologue et Grand Maître de la Grande Loge de France. Dès 1953, il se joint en Suisse au groupe Littré, cercle de libres-penseurs visant à introduire la contraception en France. Pierre Simon intègre rapidement la direction de Maternité heureuse. Une fraternelle maçonnique est créée spécifiquement sur le thème du contrôle des naissances. Cette fraternelle réunit des francs-maçons de toutes obédiences, masculines et féminines, de droite comme de gauche. Pierre Simon le reconnaît lui-même : pendant douze à treize ans, lui et ses réseaux ont parcouru la France chaque week-end pour créer des centres de planning familial, en veillant à garder le contrôle de l’ensemble du dispositif. Ils constituent un véritable contre-pouvoir face à l’Ordre des médecins, au point d’imposer leur propre définition de l’éthique médicale. Il veut remplacer la morale chrétienne, qui structure la société française depuis Clovis, par une nouvelle conception de la vie. Le principe fondamental posé est que la vie n’est plus un don de Dieu, mais un matériau que l’on peut gérer, transformer, et même remodeler. À terme, il s’agit de créer une « nouvelle nature humaine » (Fenêtre d’Overton). Désacraliser la vie revient à restituer à l’homme la propriété totale de son corps, comme Prométhée ! Pierre Simon devient le conseiller quasi attitré de plusieurs ministres de la Santé, notamment Robert Boulin, Michel Poniatowski et Simone Veil. Les réseaux franc-maçons orientent les femmes vers le Planning familial (tuer les enfants à naître) par la presse, les syndicats d’instituteurs, la Mutuelle de l’Éducation nationale ou la Ligue de l’enseignement mais les ouvrières mères de familles manquent à l’appel. En 1964, le Dr Pierre Simon assiste à un congrès médical et amène clandestinement dans ses valises des stérilets (dispositif intra-utérin) et les a offerts au planning Familial (illégal). La contraception devient une activité économiquement rentable. Pierre Simon est par ailleurs expert grassement rémunéré par l’industrie pharmaceutique. Il conseille les grandes firmes commercialisant la pilule, les spermicides et les dispositifs contraceptifs. Lorsque l’Ordre des médecins rappelle qu’un praticien n’a pas vocation à prescrire des médicaments à des femmes en bonne santé, Pierre Simon cherche à le discréditer en rappelant que l’Ordre a été institué sous le régime de Vichy. La presse féminine reprend des exagérations en évoquant 5 000 décès annuels alors qu’une étude officielle de l’INED révèle que le nombre réel est de 56 par an. En publiant en 1972 son rapport sur le comportement sexuel des Français (l'équivalent du rapport Kinsey), “méthodologiquement" discutable, Pierre Simon cherchait à influencer. La méthode consiste à habituer l'opinion par l'argument du « tout le monde le fait », créant un sentiment d'anormalité chez ceux qui ne s'y reconnaissent pas (“15% de sodomie par exemple”). L'objectif était de normaliser la dissociation entre sexualité et procréation : la pilule comme norme, et l'avortement comme recours (aucune enquête, aucune justice, on est coupable dès notre conception). Cette stratégie de préparation psychologique de l’opinion est jugée efficace, comme l’illustrent des souvenirs personnels où certaines personnes croyaient qu’une réforme sociétale majeure, comme le mariage homosexuel, était déjà adoptée tant la médiatisation et les manifestations avaient banalisé l’idée avant même son vote. En 1982, Étienne-Émile Baulieu (juif, fils du juif, franc-maçon et président du conseil, Léon Blum) invente la pilule contraceptive et abortive RU 486. Les juges décident de ce qui serait « choquant », selon un contrat social divinisé, décidé par eux-mêmes, qui peut être renégocié tous les jours. Il n’y a plus de « Bien » ou de « Mal » : on peut assassiner un enfant à naître, mais pas prononcer un discours qui aurait « choqué » (« I have no desire to make windows into men’s souls » d’Élisabeth Ire), alors que la justice se basait sur le "cogitationis poenam nemo patitur" de Justinien et le De internis non judicat praetor via le droit canonique : « Au niveau de l’intention et du ressenti, seul Dieu est juge », la justice n’intervenant que dans les actes visibles (les faits matériels). De plus, les prisons n'étaient pas la norme.
+
+</p>        </div>
+        )
+      }
+,
+
+// La "fille aînée" de l’Église catholique de Notre Seigneur Jésus-Christ (le Chemin, la Vérité et La Vie), sous la protection de la Mère de la Vie (la Très Sainte Vierge Marie), dit NON à la Vie et, par réciprocité, persécute les catholiques et détruit l’Amour, l’Ordre et, tout simplement, Dieu (la gnose, l’homme se fait Dieu et se fait donc maître du plus sacré des mystères, la Vie, comme Prométhée sans aucune justice, miséricorde et charité).
+
+ {
+        titre: "Le Génocide Rwandais",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+François de Grossouvre est un acteur central et discret de l’entourage et de l’ascension de François Mitterrand. Leur alliance scellée en 1959 permet à un Mitterrand alors discrédité de reconquérir le pouvoir grâce aux réseaux et aux financements de Grossouvre (issus notamment de la concession Coca-Cola). Pendant trente ans, Grossouvre (franc-maçon) gère tout ce qui ne doit pas apparaître au grand jour : missions sensibles, de diplomatie parallèle, de sécurité personnelle, de logistique privée et même de nombreux secrets privés. Cependant, Au Rwanda, pays à 90 % chrétien, la Belgique a d'abord créé une élite Tutsi en instaurant des cartes d'identité ethniques, avant de renverser son alliance au profit des Hutu en 1959, installant une République qui a progressivement exclu les Tutsi de la société. Dès 1981, lors des apparitions de Kibeho, la Vierge Marie avait prévenu d’un futur « fleuve de sang » et de scènes de décapitations si les cœurs ne changeaient pas, mais ces avertissements prophétiques furent ignorés. Le basculement survient le 6 avril 1994 lorsque l’avion du président Habyarimana est abattu. Dans le même temps, Grossouvre en conflit avec le fils du Président sur les réseaux africains (il aurait été témoin des dérives de la Françafrique, proche de la GLNF, et du rôle de la France dans le meurtre d’Habyarimana), refuse de rendre ses archives et est écarté par le "clan" Mitterrand (les socialistes). Il meurt en avril 1994 dans son bureau de l'Élysée (officiellement suicide). Tandis que la France lance l’Opération Amaryllis pour évacuer les expatriés et les proches du régime, tout en abandonnant cruellement son personnel Tutsi à une mort certaine, les milices Interahamwe et la Garde présidentielle lancent le génocide. Ils éliminent d'abord l'opposition Hutu modérée, dont la Première ministre Agathe Uwilingiyimana, ce qui entraîne le retrait des troupes de l'ONU après le meurtre de dix Casques bleus belges. Pendant 100 jours, le pays devient un abattoir à ciel ouvert. La Radio RTLM déshumanise les Tutsi en les traitant de « cafards » et incite les civils à tuer. Le bilan atteint un million de morts et ne s'arrête que le 4 juillet 1994 grâce à la victoire militaire du FPR de Paul Kagame, provoquant la fuite massive des génocidaires et de millions de Hutu vers le Zaïre dans un chaos humanitaire total.
+</p>        </div>
+        )
+      }
+
+     
+     
+
+
+
+    ]
+  },
+};
+
+interface Props {
+  params: { slug: string };
+}
+
+export default async function HistoireDetailPage(props: { params: Promise<{ slug: string }> }) {
+  const { slug } = await props.params;
+
+  const pageData = histoireData[slug as keyof typeof histoireData];
+
+  if (!pageData) notFound();
+
+
+  return (
+    <div className="min-h-screen bg-parchemin">
+      {/* En-tête */}
+      <section className="relative h-96 bg-gray-900">
+        
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-white w-full px-4">
+          <span className="inline-block bg-or-patine text-white px-4 py-2 rounded-full font-corps text-sm mb-4">
+            {pageData.periode}
+          </span>
+          <h1 className="font-titre text-4xl md:text-5xl mb-4">{pageData.titre}</h1>
+          <p className="font-corps text-xl max-w-2xl mx-auto leading-relaxed">
+            {pageData.resume}
+          </p>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="font-corps text-xl text-gray-700 leading-relaxed text-center italic">
+            {pageData.introduction}
+          </p>
+        </div>
+      </section>
+
+      {/* Sections dépliables */}
+      <section className="py-16 bg-parchemin">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="font-titre text-3xl text-vert-mousse mb-4">
+              Analyse Détaillée
+            </h2>
+            <p className="font-corps text-lg text-brun-terre">
+              Explorez les différents aspects de cette période
+            </p>
+          </div>
+
+          <div className="space-y-6">
+          {pageData.sections?.map((section, index) => (
+  section && (
+    <ExpandableSection
+      key={index}
+      titre={section.titre}
+      enfants={section.contenu}
+      defaultOpen={index === 0}
+    />
+  )
+))}
+
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation */}
+      <section className="py-12 bg-parchemin-fonce">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <a
+            href="/histoire"
+            className="inline-flex items-center font-corps text-brun-terre hover:text-or-patine transition-colors"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Retour à la chronologie
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+/* ✅ Fonction statique possible car ce fichier n’est pas client */
+export function generateStaticParams() {
+  return [
+    { slug: 'antiquite' },
+    { slug: 'haut-moyen' },
+    { slug: 'moyen-age' },
+    { slug: 'aragon' },
+    { slug: 'autre' },
+    { slug: 'souverainete' },
+    { slug: 'union-navarre' },
+  ];
+}
