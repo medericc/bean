@@ -3515,7 +3515,8 @@ Marat, Sergent-Marceau, Panis et Tallien font partie du Comité de surveillance 
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Sous l'impulsion de Danton et de la Commune de Paris, une délégation se présente à la barre de l'Assemblée pour exiger la création d'un outil judiciaire d'exception. Le 17 août 1792, un tribunal criminel est instauré pour juger les « traîtres ». Cette juridiction déploie une justice expéditive : les sentences sont sans appel et aucun recours en cassation n’est autorisé. La cible principale de ce pouvoir est constituée des soutiens de Louis XVI antérieurs à la journée du 10 août. Sont particulièrement visés les signataires des pétitions dites des « 8 000 » et des « 20 000 » (qui protestaient contre l'invasion des Tuileries le 20 juin). Ceux ayant manifesté leur attachement à La Fayette ou au Roi sont déchus de leurs droits civiques et classés comme « suspects ». Ce tournant marque le début d'une exclusion politique radicale : quiconque n'a pas basculé dans le camp insurrectionnel le 10 août perd sa qualité de citoyen. La pression s'étend aux familles : les 15 et 18 août, l'Assemblée décrète l'arrestation des femmes et des enfants d'émigrés. L’objectif est d'utiliser ces proches restés en France comme otages pour contraindre les émigrés au retour afin de les capturer. Le 23 août, Arnaud de Laporte, intendant de la liste civile et seul capable de justifier les dépenses personnelles du Roi, est exécuté. Fin août, sous l'égide de Danton, la Commune ordonne des visites domiciliaires. Paris est bouclée et, entre le 29 et le 31 août, des milliers de personnes sont arrêtées. Les prisons de la capitale (les Carmes, l'Abbaye, la Force) arrivent à saturation. Jean-Lambert Tallien, secrétaire de la Commune, justifie ces mesures par la nécessité de neutraliser les « conspirateurs » de l'intérieur pour assurer le salut de l'État. Le procureur de la Commune, Pierre Manuel, fait fermer les barrières de la ville. Une distinction est opérée entre les prisonniers de droit commun et les « prisonniers politiques » (nobles, catholiques et prêtres réfractaires, ces derniers étant regroupés au couvent des Carmes). Parallèlement, une propagande active diffuse l'idée d'un complot contre-révolutionnaire imminent fomenté depuis les cellules. L'étincelle survient lors du transfert de prêtres réfractaires vers la prison de l'Abbaye. Alors que la nouvelle de la chute de Verdun parvient à Paris, une foule excitée attaque le convoi. Le massacre se généralise alors dans les autres centres de détention (le Châtelet, la Force, les Carmes). Des bandes armées investissent les geôles et exécutent les prisonniers sans distinction. En quelques jours, des milliers de personnes, dont de nombreux prêtres et catholiques, sont massacrées à l'arme blanche. Le cas de la princesse de Lamballe est emblématique de cette violence. Proche de la Reine, qui l'avait pourtant écartée par le passé en raison de ses penchants « féministes » et de son appartenance à la franc-maçonnerie (qu'elle dut quitter), elle refuse de renier son amie devant ses juges. Son procès ne dure que quelques secondes. Déclarée, « ennemie de la République », elle est battue, mutilée, démembrée et ses poils pubiens sont découpés. Sa tête, portée au bout d’une pique, est exhibée sous les fenêtres de Marie-Antoinette, enfermée au Temple. Ce cheminement est utilisé en abondance car la liberté religieuse est garantie par la DDHC et les républicains sont obsédés par la légalité pénale. Le catholicisme est donc criminalisé par un glissement sémantique : pratiquer la religion est vu comme un acte de rébellion contre la République une et indivisible. Le fidèle devient alors un "traître à la patrie", ce qui constitue un crime politique de lèse-nation. À la suite de ces événements, le Comité de surveillance de la Commune (dirigé par Marat, Panis et Sergent) publie une circulaire destinée aux provinces, justifiant les tueries et incitant à l'extension du mouvement. Dans ce climat de chaos, Marat propose le titre de dictateur à Robespierre, il refuse cette voie.
+Sous l'impulsion de Danton et de la Commune de Paris, une délégation se présente à la barre de l'Assemblée pour exiger la création d'un outil judiciaire d'exception. Le 17 août 1792, un tribunal criminel est instauré pour juger les « traîtres ». Cette juridiction déploie une justice expéditive : les sentences sont sans appel et aucun recours en cassation n’est autorisé. La cible principale de ce pouvoir est constituée des soutiens de Louis XVI antérieurs à la journée du 10 août. Sont particulièrement visés les signataires des pétitions dites des « 8 000 » et des « 20 000 » (qui protestaient contre l'invasion des Tuileries le 20 juin). Ceux ayant manifesté leur attachement à La Fayette ou au Roi sont déchus de leurs droits civiques et classés comme « suspects ». Ce tournant marque le début d'une exclusion politique radicale : quiconque n'a pas basculé dans le camp insurrectionnel le 10 août perd sa qualité de citoyen. La pression s'étend aux familles : les 15 et 18 août, l'Assemblée décrète l'arrestation des femmes et des enfants d'émigrés. L’objectif est d'utiliser ces proches restés en France comme otages pour contraindre les émigrés au retour afin de les capturer. Le 23 août, Arnaud de Laporte, intendant de la liste civile et seul capable de justifier les dépenses personnelles du Roi, est exécuté. Fin août, sous l'égide de Danton, la Commune ordonne des visites domiciliaires. Paris est bouclée et, entre le 29 et le 31 août, des milliers de personnes sont arrêtées. Les prisons de la capitale (les Carmes, l'Abbaye, la Force) arrivent à saturation. Jean-Lambert Tallien, secrétaire de la Commune, justifie ces mesures par la nécessité de neutraliser les « conspirateurs » de l'intérieur pour assurer le salut de l'État. Le procureur de la Commune, Pierre Manuel, fait fermer les barrières de la ville. Une distinction est opérée entre les prisonniers de droit commun et les « prisonniers politiques » (nobles, catholiques et prêtres réfractaires, ces derniers étant regroupés au couvent des Carmes). Parallèlement, une propagande active diffuse l'idée d'un complot contre-révolutionnaire imminent fomenté depuis les cellules. L'étincelle survient lors du transfert de prêtres réfractaires vers la prison de l'Abbaye. Alors que la nouvelle de la chute de Verdun parvient à Paris, une foule excitée attaque le convoi. Le massacre se généralise alors dans les autres centres de détention (le Châtelet, la Force, les Carmes). Des bandes armées investissent les geôles et exécutent les prisonniers sans distinction. En quelques jours, des milliers de personnes, dont de nombreux prêtres et catholiques, sont massacrées à l'arme blanche. Le cas de la princesse de Lamballe est emblématique de cette violence. Proche de la Reine, qui l'avait pourtant écartée par le passé en raison de ses penchants « féministes » et de son appartenance à la franc-maçonnerie (qu'elle dut quitter), elle refuse de renier son amie devant ses juges. Son procès ne dure que quelques secondes. Déclarée, « ennemie de la République », elle est battue, mutilée, démembrée et ses poils pubiens sont découpés. Sa tête, portée au bout d’une pique, est exhibée sous les fenêtres de Marie-Antoinette, enfermée au Temple. Ce cheminement est utilisé en abondance car la liberté religieuse est garantie par la DDHC et les républicains sont obsédés par la légalité pénale (dont ils sont les propres architectes). Le catholicisme est donc criminalisé par un glissement sémantique : pratiquer la religion est vu comme un acte de rébellion contre la République une et indivisible. Le fidèle devient alors un "traître à la patrie", ce qui constitue un crime politique de lèse-nation. À la suite de ces événements, le Comité de surveillance de la Commune (dirigé par Marat, Panis et Sergent) publie une circulaire destinée aux provinces, justifiant les tueries et incitant à l'extension du mouvement. Dans ce climat de chaos, Marat propose le titre de dictateur à Robespierre, il refuse cette voie.
+
 
 </p>
           </div>
@@ -3726,7 +3727,24 @@ Au cours du XIXe siècle, et plus particulièrement sous la Troisième Républiq
         </p>   </div>
         )
       }
-,
+
+
+
+
+
+    ]
+  },
+
+
+  'technologique': {
+    titre: "Antiquité Technologique",
+    periode: "Époque Moderne",
+    resume: "Le Monde Plongé dans l'Obscurantisme",
+    introduction: "Une dynamique d'unification mondiale s'installe",
+    image: "/images/histoire/antiquite.jpg",
+    sections: [
+
+      
 {
         titre: "La République Portugaise",
         contenu: (
@@ -3748,22 +3766,7 @@ En 1917, en plein milieu de la Deuxième Guerre mondiale, trois petits bergers v
      </p>   </div>
         )
       }
-
-
-
-
-
-    ]
-  },
-
-
-  'technologique': {
-    titre: "Antiquité Technologique",
-    periode: "Époque Moderne",
-    resume: "Le Monde Plongé dans l'Obscurantisme",
-    introduction: "Une dynamique d'unification mondiale s'installe",
-    image: "/images/histoire/antiquite.jpg",
-    sections: [
+,
 {
         titre: "L'Église Mormone",
         contenu: (
