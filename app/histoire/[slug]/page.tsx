@@ -2767,6 +2767,18 @@ Bodin rompt avec la légitimation miraculeuse incarnée par Jeanne : il définit
           </div>
         )
       },
+       {
+        titre: "La Conférence de Fontainebleau",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Le Colloque de Fontainebleau eut lieu le 4 mai 1600, présidé par le roi Henri II de Béarn. Il opposait le chef protestant Philippe Duplessis-Mornay (surnommé le "pape des Huguenots") à l'évêque catholique et ancien protestant Jacques Davy Du Perron. L'objet du débat était l'ouvrage influent de Mornay, Institution... du saint sacrement de l'Eucharistie en l'Église ancienne (1598), dans lequel il affirmait que la doctrine protestante de l'Eucharistie était conforme à celle de l'Église primitive en s'appuyant sur cinquante-cinq citations des Pères de l'Église. Du Perron accusa publiquement Mornay d'avoir délibérément déformé, tronqué ou mal interprété ces passages. L’examen fut interrompu après la vérification de seulement neuf passages. Le résultat fut jugé désastreux pour Mornay, qui fut incapable de se défendre. Du Perron démontra que Mornay citait les objections initiales des théologiens médiévaux (comme Duns Scot ou Durand de Saint-Pourçain) en les présentant comme leur avis personnel, omettant leur réfutation immédiate, qu’il utilisait des citations tronquées comme celle de Saint Jean Chrysostome, où l'omission des derniers mots changeait le sens du texte en faveur de l'interprétation protestante, et faisait des fausses attributions (Mornay attribuait un texte apocryphe à un Père de l'Église, comme Saint Cyrille, pour lui donner plus d'autorité). Parallèlement, lors de son mariage avec le duc de Bar, Catherine de Bourbon avait vaguement promis de « se faire instruire » dans la foi catholique, tout comme son frère. Son instruction commence (sur ordre d'Henri II de Béarn, désormais convaincu) alors le 7 octobre 1600, le maître d’œuvre étant le cardinal Du Perron. Les protestants craignent que Du Perron ne convainque Catherine, le maréchal de Bouillon (Henri de La Tour d'Auvergne, grand chef protestant et ancien prétendant de Catherine) intervient donc pour saboter la conversion. Il dit à Catherine : « Si vous avez envie de quitter le protestantisme, pas besoin de débat. Si vous ne le voulez pas, ce débat est un piège dangereux pour nos Églises ». Catherine lui répond que son mari prie à genoux pour sa conversion toutes les nuits. De ce fait, le parti calviniste accepte le principe d'une controverse, mais à ses conditions : pas de “un contre un”, car Du Perron est trop fort, ils constituent donc une équipe de cinq de leurs meilleurs théologiens (Daniel Tilenus, François Gordon, Pierre Du Moulin, M. de Beaulieu, M. de Feugeray) et exigent que tout se fasse par mémoires écrits, afin de ne jamais donner à Du Perron l’occasion de montrer sa rhétorique orale, pour « discuter indéfiniment ». Et la stratégie fonctionne : le débat devient une « partie de jeu de paume » interminable. La controverse n’aura donc jamais lieu. Catherine de Bourbon mourra huguenote, se croyant enceinte, elle eut pour dernière phrase : “Sauvez mon fruit”.
+
+
+ </p>
+          </div>
+        )
+      },
       {
         titre: "Lady Mary Bankes et la Royal Society",
         contenu: (
@@ -2929,18 +2941,7 @@ Au XVIIᵉ siècle, la Contre-Réforme marque profondément la Soule, menée par
         )
       },
 
-       {
-        titre: "La Conférence de Fontainebleau",
-        contenu: (
-          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
-            <p>
-Le Colloque de Fontainebleau eut lieu le 4 mai 1600, présidé par le roi Henri II de Béarn. Il opposait le chef protestant Philippe Duplessis-Mornay (surnommé le "pape des Huguenots") à l'évêque catholique et ancien protestant Jacques Davy Du Perron. L'objet du débat était l'ouvrage influent de Mornay, Institution... du saint sacrement de l'Eucharistie en l'Église ancienne (1598), dans lequel il affirmait que la doctrine protestante de l'Eucharistie était conforme à celle de l'Église primitive en s'appuyant sur cinquante-cinq citations des Pères de l'Église. Du Perron accusa publiquement Mornay d'avoir délibérément déformé, tronqué ou mal interprété ces passages. L’examen fut interrompu après la vérification de seulement neuf passages. Le résultat fut jugé désastreux pour Mornay, qui fut incapable de se défendre. Du Perron démontra que Mornay citait les objections initiales des théologiens médiévaux (comme Duns Scot ou Durand de Saint-Pourçain) en les présentant comme leur avis personnel, omettant leur réfutation immédiate, qu’il utilisait des citations tronquées comme celle de Saint Jean Chrysostome, où l'omission des derniers mots changeait le sens du texte en faveur de l'interprétation protestante, et faisait des fausses attributions (Mornay attribuait un texte apocryphe à un Père de l'Église, comme Saint Cyrille, pour lui donner plus d'autorité). Parallèlement, lors de son mariage avec le duc de Bar, Catherine de Bourbon avait vaguement promis de « se faire instruire » dans la foi catholique, tout comme son frère. Son instruction commence (sur ordre d'Henri II de Béarn, désormais convaincu) alors le 7 octobre 1600, le maître d’œuvre étant le cardinal Du Perron. Les protestants craignent que Du Perron ne convainque Catherine, le maréchal de Bouillon (Henri de La Tour d'Auvergne, grand chef protestant et ancien prétendant de Catherine) intervient donc pour saboter la conversion. Il dit à Catherine : « Si vous avez envie de quitter le protestantisme, pas besoin de débat. Si vous ne le voulez pas, ce débat est un piège dangereux pour nos Églises ». Catherine lui répond que son mari prie à genoux pour sa conversion toutes les nuits. De ce fait, le parti calviniste accepte le principe d'une controverse, mais à ses conditions : pas de “un contre un”, car Du Perron est trop fort, ils constituent donc une équipe de cinq de leurs meilleurs théologiens (Daniel Tilenus, François Gordon, Pierre Du Moulin, M. de Beaulieu, M. de Feugeray) et exigent que tout se fasse par mémoires écrits, afin de ne jamais donner à Du Perron l’occasion de montrer sa rhétorique orale, pour « discuter indéfiniment ». Et la stratégie fonctionne : le débat devient une « partie de jeu de paume » interminable. La controverse n’aura donc jamais lieu. Catherine de Bourbon mourra huguenote, se croyant enceinte, elle eut pour dernière phrase : “Sauvez mon fruit”.
-
-
- </p>
-          </div>
-        )
-      },
+      
 
        {
         titre: "Le Roi d'un Hiver",
