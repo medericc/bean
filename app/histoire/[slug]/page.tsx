@@ -3865,7 +3865,7 @@ En 1941, Franco crée l'INI (Instituto Nacional de Industria) pour créer de gra
 ,
 
 {
-        titre: "La Famine du Bengale de 1943",
+        titre: "La Famine du Bengale",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
