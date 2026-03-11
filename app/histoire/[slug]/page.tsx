@@ -3800,6 +3800,19 @@ En 1917, en plein milieu de la Deuxième Guerre mondiale, trois petits bergers v
         )
       }
 ,
+
+{
+        titre: "Guerre des Cristeros",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Après l'indépendance acquise par les francs-maçons (Vicente Guerrero, Nicolas Bravo, Lombardini, le dictateur Antonio López de Santa Anna, Benito Juárez...), Porfirio Díaz (franc-maçon) devient président des États-Unis Mexicains. Mais après la révolution remportée par le franc-maçon Plutarco Elías Calles, ce dernier fait appliquer très strictement les articles anticléricaux de la Constitution mexicaine de 1917 (inspirée du maçon Benito Juárez). Le port de l'habit clérical peut alors être puni d'une amende de 500 pesos, et un prêtre qui critique le gouvernement peut être condamné à cinq ans de prison. Les messes deviennent clandestines, l'importation du vin diminue avec, comme tout bon socialiste, une jolie justification, "il faut moins dépendre des produits importés et encourager la tequila ou le pulque (économie nationale)", alors que dans les faits, c'est pour limiter l'Église qui a besoin de vin. Tout cela dans un pays à 95 % catholique qui aujourd'hui, après cette politique, n'est plus qu'à 78 % catholique et se retrouve dirigé par une juive. Le boycott était lancé par des groupes catholiques (qualifiés de fascistes par les socialistes), mais des "catholiques" aisés le stoppent car cela va contre leurs intérêts économiques. Le père Luis Bátiz Sáinz est tué et s'ensuit une guerre civile, où Saint José Luis Sanchez del Rio sera assassiné le 10 février 1928, à l'âge de 14 ans, après avoir été torturé par ses geôliers pour abjurer sa foi.
+ </p>   </div>
+        )
+      }
+,
+
+
 {
         titre: "Le Génocide Arménien",
         contenu: (
