@@ -8,10 +8,11 @@ export default function Hero() {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
 
+       <Link href="https://www.appcatholique.com/">
           <h1 className="font-titre text-4xl md:text-6xl lg:text-7xl text-vert-mousse mb-6 leading-tight">
             Mémoire du Béarn
           </h1>
-
+</Link>
           <p className="font-corps text-xl md:text-2xl text-brun-terre mb-8 leading-relaxed max-w-3xl mx-auto">
             Des origines antiques aux rois de Navarre, revivez la mémoire du Béarn.
           </p>
