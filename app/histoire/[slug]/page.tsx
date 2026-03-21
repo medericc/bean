@@ -2227,7 +2227,17 @@ Jeanne d’Albret naquit en novembre 1528 à Saint-Germain-en-Laye, fille de Mar
         )
       },
       
+  {
+        titre: "Marguerite de Navarre",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+Dans une atmosphère anti-catholique marquée par l’arrivée de l’Église luthérienne, Marguerite était une écrivaine qui prônait la vertu de la femme (vertueuse, soumise à son mari et respectueuse) et de l'homme (force, fidélité et respect). Elle n’hésitait pas à critiquer le clergé en affirmant qu’il n’y a ni saint ni prêtre intermédiaire, mais qu’on doit s'adresser directement à Dieu, se mettant ainsi au même niveau de foi que la Vierge Marie. Ce mouvement se nomme l’humanisme (qui évoluera vers la Sola Scriptura pour finalement, dans un troisième temps, se passer de Dieu). Bien qu'ils affirment revenir au premier siècle, ils ont en réalité créé un mouvement totalement nouveau. Pendant que François Ier est emprisonné à Pavie, la Sorbonne condamne plusieurs ouvrages. François Ier, qui a signé le concordat de Bologne (gallicisant l’Église de France), est très affecté par la décapitation d’une statue de la Vierge le 1er juin 1528, il défend néanmoins sa sœur devant la Sorbonne. Le 30 août 1533, il s’entretient à Marseille avec le pape au sujet de la menace turque à l’extérieur et des hérétiques à l’intérieur. Le mot « protestant » apparaît pour la première fois en 1529 face à Charles Quint. En France, on n’utilise pas vraiment ce nom et on parlera de « réformés » en lien avec le calvinisme. Les 17 et 18 octobre 1534, l’affaire des Placards éclate : des écrits contre la messe sont affichés jusque sur la porte de la chambre du roi à Blois, une action menée par le Picard Antoine Marcourt (comme Calvin). Le 16 juillet 1535, le roi signe l’édit de Coucy pour apaiser les tensions entre catholiques et hérétiques. Cependant, après la paix avec l’Empire (où la religion du prince devient celle du royaume); il n'a plus besoin des protestants : l'édit de Fontainebleau relance alors la traque des hérétiques.
 
+</p>       </div>
+        )
+      },
+      
 
 
 
