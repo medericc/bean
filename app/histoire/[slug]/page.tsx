@@ -2910,7 +2910,17 @@ En mars 1571, Jeanne d’Albret se félicita du vote des trois États du Béarn,
 
 
 
-
+  {
+        titre: "L'Enfance de Catherine de Bourbon",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Née le 7 février 1559 à Paris, Catherine de Bourbon reçoit un baptême catholique sous l'égide de Henri II avec Catherine de Médicis pour marraine. Marquée par une santé fragile (tuberculose, bronchites) et des malformations physiques qui lui valent le surnom de « petite boiteuse », elle vit une enfance nomade et périlleuse, ne restant « posée » que cinq ans sur treize. Constamment dans le sillage de sa mère Jeanne d’Albret, qui la surprotège après la perte de ses autres enfants. Malgré sa silhouette « grêle » et ses lourds traitements médicaux, elle développe un caractère doux, opposé à l'ironie de son frère. Dès 1567 au château de Pau, Catherine de Bourbon manifeste son rôle politique naissant par sa première signature officielle, avant d'être plongée dans les tourments des guerres de religion qui contraignent sa famille à l'exil à La Rochelle. Marquée par l'influence de sa mère, Jeanne d’Albret, elle reçoit une éducation d'élite, à la fois humaniste et calviniste, développant un goût pour la poésie et une piété inébranlable qu'elle défend avec fermeté face à la cour de Charles IX.  Catherine de Bourbon a concilié une éducation calviniste rigoureuse (musique, psaumes, broderie) avec un goût marqué pour le faste, la gastronomie et la danse, malgré son surnom de « petite boiteuse ». Sous l'autorité de sa gouvernante Mme de Tignonville, elle dirigera une « Maison » de 70 personnes dont le train de vie luxueux (50 000 livres annuelles) dépassera ses revenus et l'obligera à s'endetter pour maintenir son rang. Maintenue comme « otage princière » à la cour des Valois après la mort de sa mère, elle a su affirmer son indépendance en refusant des mariages politiques imposés par Catherine de Médicis (Lorraine, Condé), affirmant ne pas vouloir d'hommes qui ne lui « agréaient pas ».
+   
+        </p>
+          </div>
+        )
+      },
 
 
       {
