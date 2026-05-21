@@ -380,7 +380,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
 
 
        {
-        titre: "Mathilde de Toscane, la \"Nouvelle Débora\"",
+        titre: "Le massacre des Béarnais à Aljubarrota",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -390,7 +390,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
       {
-        titre: "Contexte Historique",
+        titre: "L'ingéniosité Financière de Fébus",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -400,7 +400,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
       {
-        titre: "Mariage et Alliances Politiques",
+        titre: "Les Pillages organisés en Languedoc",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -410,7 +410,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
        {
-        titre: "Contexte Religieux et Appel à la Croisade",
+        titre: "Une Alliance Lucrative pour Fébus",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -421,7 +421,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
        {
-        titre: "Départ en Croisade et Itinéraire",
+        titre: "Mariette, Patronne de la Maison",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -431,7 +431,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
        {
-        titre: "Les Grandes Batailles",
+        titre: "Les Castelbon et la Couronne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -441,7 +441,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
       {
-        titre: "Siège et Prise d’Antioche",
+        titre: "Les Foix Maîtres du Midi",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -451,7 +451,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
        {
-        titre: "Fin de la Croisade et Retour en Béarn",
+        titre: "La succession de François Fébus",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -461,7 +461,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
   {
-        titre: "Fin de la Croisade et Retour en Béarn",
+        titre: "La Pression des Rois Catholiques",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -483,7 +483,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
     sections: [
       
         {
-        titre: "Piété et Réformes religieuses",
+        titre: "La Souveraineté reconnue à Blois",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -494,7 +494,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
       },
 
        {
-        titre: "La Croisade et la Péninsule Ibérique",
+        titre: "La guerre pour la Navarre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -505,7 +505,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
       },
 
        {
-        titre: "Croisade en Espagne et expansion aragonaise",
+        titre: "De Pavie à la Paix des Dames",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -516,7 +516,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
   {
-        titre: "Urraque, la chef de guerre",
+        titre: "La Résistance face à la France",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -526,7 +526,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
         )
       },
        {
-        titre: "Réseaux féodaux et alliances",
+        titre: "Propagande et Pouvoir en Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -537,7 +537,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
       },
 
        {
-        titre: "Rupture entre Urraca et Alphonse Ier",
+        titre: "L'Instruction pour Tous en Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -551,7 +551,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
       
       
       {
-        titre: "Offensives et préparation de Saragosse",
+        titre: "Jeanne d'Albret, Ordre et Morale",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -562,7 +562,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
       },
 
        {
-        titre: "La conquête de Saragosse",
+        titre: "Le Béarn Change de Calendrier",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -573,7 +573,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
       },
 
        {
-        titre: "Prise de Tudèle",
+        titre: "Jeanne Face à la Mort",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -584,7 +584,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
         )
       },
   {
-        titre: "Campagne contre les Almoravides",
+        titre: "Catherine, Gouvernante de Gascogne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -606,7 +606,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Rivalités et Alliances autour des Pyrénées",
+        titre: "L'Éducation Rustique d'Henri IV",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -616,7 +616,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
         )
       },
       {
-        titre: "Crise de Succession en Aragon",
+        titre: "L'Éducation Intellectuelle d'Henri IV",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -625,7 +625,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
           </div>
         )
       },  {
-        titre: "Le Béarn et la Maison de Gabarret",
+        titre: "Les Maximes d'Henri IV",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -635,7 +635,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
         )
       },
       {
-        titre: "Les Chevalières de Tortosa",
+        titre: "L'Avènement de la Monarchie Absolue",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -645,7 +645,7 @@ Henri tente en vain de reconquérir la Haute-Navarre, que Charles Quint refuse t
           </div>
         )
       },  {
-        titre: "Le Béarn dans la Couronne d'Aragon et la Gascogne",
+        titre: "Henri IV Gouverne en Marchant",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -654,7 +654,7 @@ Hostile aux lourdeurs cérémonielles, Henri IV impose un rythme rapide et effic
           </div>
         )
       },  {
-        titre: "Les Tensions avec Toulouse",
+        titre: "La Modernisation de Paris",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -665,7 +665,7 @@ Hostile aux lourdeurs cérémonielles, Henri IV impose un rythme rapide et effic
         )
       },
        {
-        titre: "La Naissance des Moncade-Béarn",
+        titre: "De la Fronde à Versailles",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -687,7 +687,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
     introduction: "Des Peuplicides se mettent en place au nom de la Tolérance",  image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Conflits et alliances Béarn-Bigorre",
+        titre: "La Loge Maçonnique de Pau",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -697,7 +697,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
         )
       },
        {
-        titre: "La Bigorre entre les mains des héritiers",
+        titre: "Le Béarn face à la Révolution",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -707,7 +707,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
         )
       },
       {
-        titre: "Héritage contesté et mainmises étrangères",
+        titre: "La Démocratie Directe au Labourd",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -717,7 +717,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
         )
       },
       {
-        titre: "Entre Aragon et Angleterre : la diplomatie",
+        titre: "La Fin des Libertés du Labourd",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -727,7 +727,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
         )
       },
       {
-        titre: "La rupture progressive avec l’Aragon",
+        titre: "Pierre Hourcastrémé Face à l'Église",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -738,7 +738,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
         )
       },
       {
-        titre: "Gaston VII : For, bastides et révolte",
+        titre: "Le Martyre de Marguerite Rutan",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -750,7 +750,7 @@ Sous la régence, Mazarin veut suspendre le salaire des « robins » (cette nobl
 
 
   {
-        titre: "La 7e croisade",
+        titre: "La Déportation des Villages Basques",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -763,7 +763,7 @@ En avril 1793, Dartigoeyte dénonce le « fanatisme » des Basques — en réact
 
 
        {
-        titre: "Entre vassalité anglaise et autonomie béarnaise",
+        titre: "Guider les âmes vers Dieu",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
