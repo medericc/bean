@@ -813,7 +813,7 @@ const worldData = {
   // },
    
   
-   'eglise': {
+     'eglise': {
     titre: "Naissance de l'Église", 
     periode: "Antiquité",
     resume: "Jésus-Christ vient fonder son Église sur saint Pierre",
@@ -821,7 +821,7 @@ const worldData = {
     image: "/images/histoire/eglise.jpg",
     sections: [
       {
-        titre: "Béarn – Préhistoire et Origines",
+        titre: "La Primauté de Saint Pierre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -831,7 +831,7 @@ const worldData = {
         )
       },
       {
-        titre: "Création de la Vicomté",
+        titre: "Deux Mille Ans de Vérité",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -840,7 +840,7 @@ const worldData = {
         )
       },
        {
-        titre: "Qu’est-ce qu’une Vicomté ?",
+        titre: "Écriture, Tradition et Magistère",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -849,7 +849,7 @@ const worldData = {
         )
       },
        {
-        titre: "Béarn Féodal",
+        titre: "Les Signes Visibles de la Foi",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -857,7 +857,7 @@ const worldData = {
         )
       },
        {
-        titre: "Social",
+        titre: "Marie, Nouvelle Ève et Mère",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -866,7 +866,7 @@ const worldData = {
         )
       },
       {
-        titre: "La France",
+        titre: "De Jérusalem à la Rome Chrétienne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -886,7 +886,7 @@ Tandis qu'Ésaïe prédit le transfert vers une autre nation et que Jérémie an
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Béarn – Préhistoire et Origines",
+        titre: "Sainte Clotilde et Clovis",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -896,7 +896,7 @@ Tandis qu'Ésaïe prédit le transfert vers une autre nation et que Jérémie an
         )
       },
       {
-        titre: "Création de la Vicomté",
+        titre: "Le traité d'Andelot de 587",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -906,7 +906,7 @@ Tandis qu'Ésaïe prédit le transfert vers une autre nation et que Jérémie an
         )
       },
        {
-        titre: "Qu’est-ce qu’une Vicomté ?",
+        titre: "Les Crimes de la Reine Frédégonde",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -916,7 +916,7 @@ Frédégonde provoque la disgrâce de la reine Audovère pour prendre sa place, 
         )
       },
        {
-        titre: "Béarn Féodal",
+        titre: "Sainte Bathilde, l'Esclave devenue Reine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -937,7 +937,7 @@ Frédégonde provoque la disgrâce de la reine Audovère pour prendre sa place, 
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Béarn – Préhistoire et Origines",
+        titre: "La Piété de Sainte Mathilde",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -949,7 +949,7 @@ Fille du comte saxon Théodoric, Mathilde naît vers 895 et grandit au couvent, 
         )
       },
       {
-        titre: "Création de la Vicomté",
+        titre: "La première dramaturge de l'Europe",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -960,7 +960,7 @@ Fille du comte saxon Théodoric, Mathilde naît vers 895 et grandit au couvent, 
         )
       },
        {
-        titre: "Qu’est-ce qu’une Vicomté ?",
+        titre: "Mathilde de Toscane, Chef de Guerre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -971,7 +971,7 @@ Fille de Béatrice de Bar, Mathilde de Toscane reçoit une éducation poussée, 
         )
       },
        {
-        titre: "Béarn Féodal",
+        titre: "Blanche de Castille, Régente Ferme",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -983,11 +983,11 @@ Fille de Béatrice de Bar, Mathilde de Toscane reçoit une éducation poussée, 
         )
       },
        {
-        titre: "Social",
+        titre: "L'Exclusion des Femmes du Trône",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Isabelle de France, reine d'Angleterre et fille de Philippe IV, remarque lors d'un banquet à Londres que deux chevaliers normands, les frères Gauthier et Philippe d'Aunay, arborent des aumônières qu'elle avait offertes à ses belles-sœurs l'année précédente. Le roi ordonne une enquête qui confirme l'adultère prolongé de Marguerite de Bourgogne et Blanche de Bourgogne au sein de la tour de Nesle. Le 19 avril 1314 à Pontoise, les frères d'Aunay sont castrés et décapités, tandis que les princesses sont tondues et jetées au donjon de Château-Gaillard. Elles deviendront les deux reines de France, puis Blanche verra son mariage cassé car la marraine de son mari est sa mère (fait exprès, Médicis était celle de Bourbon avec l'idée de la marier au futur Henri III). Cette crise jette le doute sur la légitimité de la fille de Marguerite. Pour remédier à cela, les femmes sont exclues de la succession royale en 1316 pour éviter qu'une enfant potentiellement bâtarde ne monte sur le trône (théorisée post hoc par la loi salique). C'est une logique de succession qui conduira en 1328 à l'éviction d'Édouard III d'Angleterre au profit de Philippe VI de Valois, devenant l'étincelle du déclenchement de la guerre de Cent Ans. 
+Isabelle de France, reine d'Angleterre et fille de Philippe IV, remarque lors d'un banquet à Londres que deux chevaliers normands, les frères Gauthier et Philippe d'Aunay, arborent des aumônières qu'elle avait offertes à ses belles-sœurs l'année précédente. Le roi ordonne une enquête qui confirme l'adultère prolongé de Marguerite de Bourgogne et Blanche de Bourgogne au sein de la tour de Nesle. Le 19 avril 1314 à Pontoise, les frères d'Aunay sont castrés et décapités, tandis que les princesses sont tondues et jetées au donjon de Château-Gaillard. Elles deviendront les deux reines de France, puis Blanche verra son mariage cassé car la marraine de son mari est sa mère (fait exprès, Médicis était celle de Bourbon avec l'idée de la marier au futur Henri III). Cette crise jette le doute sur la légitimité de la fille de Marguerite. Pour remédier à cela, les femmes sont exclues de la succession royale en 1316 pour éviter qu'une enfant potentiellement bâtarde ne monte sur le trône (théorisée post hoc par la loi salique, en aversion aux anglais). C'est une logique de succession qui conduira en 1328 à l'éviction d'Édouard III d'Angleterre au profit de Philippe VI de Valois, devenant l'étincelle du déclenchement de la guerre de Cent Ans. 
 
 </p>
           </div>
@@ -1004,7 +1004,7 @@ Isabelle de France, reine d'Angleterre et fille de Philippe IV, remarque lors d'
     image: "/images/histoire/antiquite.jpg",
     sections: [
         {
-        titre: "En Angleterre",
+        titre: "La Mission de Jeanne d'Arc",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1016,7 +1016,7 @@ Née vers 1412 à Domrémy ("maison du baptiseur de Clovis"), Jeanne d'Arc, qui 
         )
       },
       {
-        titre: "Action du comte",
+        titre: "Les Succès Militaires de Jeanne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1027,7 +1027,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
       {
-        titre: "Alliance Gasco-Catalane",
+        titre: "Jeanne d'Arc Reine de France",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1039,7 +1039,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
         {
-        titre: "Relations avec l'Espagne",
+        titre: "Le Zèle de Jeanne d'Arc",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1050,7 +1050,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
         {
-        titre: "Mathilde de Toscane, la \"Nouvelle Débora\"",
+        titre: "La Justice Morale d'Isabelle",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1074,7 +1074,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
 
      
       {
-        titre: "Contexte Historique",
+        titre: "L'Autorité de la Reine-Mère",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1085,7 +1085,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
       {
-        titre: "Mariage et Alliances Politiques",
+        titre: "De Médicis aux Idéologies Modernes",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1096,7 +1096,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
        {
-        titre: "Contexte Religieux et Appel à la Croisade",
+        titre: "Les Coulisses de la Diplomatie Anglaise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1107,7 +1107,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
        {
-        titre: "Départ en Croisade et Itinéraire",
+        titre: "Madeleine de Miremont au Combat",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1118,7 +1118,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
        {
-        titre: "Les Grandes Batailles",
+        titre: "Le Scandale de Madame de Montespan",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1128,7 +1128,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
       {
-        titre: "Siège et Prise d’Antioche",
+        titre: "De l'Esclavage à la Mission",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1139,7 +1139,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
        {
-        titre: "Fin de la Croisade et Retour en Béarn",
+        titre: "Les Réseaux d'Influence Européens",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1160,18 +1160,18 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
     sections: [
       
         {
-        titre: "Piété et Réformes religieuses",
+        titre: "La Révolte des Femmes pour le Pain",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-    Turgot, profondément influencé par les théories des physiocrates, fait libéraliser le commerce des grains sous le règne de Louis XVI. Avant cette réforme, les grains ne peuvent être vendus qu’à des moments précis et réglementés sur les marchés, une politique de subsistance conçue afin de permettre d’abord au peuple de se nourrir à un prix juste. Mais avec cette libéralisation économique, des spéculateurs achètent le blé à l’avance, et une grande quantité de grains quitte le royaume vers des régions étrangères où les prix s'avèrent plus élevés, dans le but de maximiser les profits. En conséquence, les prix augmentent fortement à l'intérieur du pays, ce qui déclenche la « guerre des farines ». Le peuple réclame alors avec force le retour de la taxation des grains. Lors de ces émeutes, les femmes qui se lèvent en premier, considérant que l’honneur de leur famille et la survie de leur maison sont bien plus grands que leur propre vie.
+    Turgot, profondément influencé par les physiocrates, fait libéraliser le commerce des grains sous le règne de Louis XVI. Avant cette réforme, les grains ne peuvent être vendus qu’à des moments précis et réglementés sur les marchés, une politique de subsistance conçue afin de permettre d’abord au peuple de se nourrir à un prix juste. Mais avec cette libéralisation économique, des spéculateurs achètent le blé à l’avance, et une grande quantité de grains quitte le royaume vers des régions étrangères où les prix s'avèrent plus élevés, dans le but de maximiser les profits. En conséquence, les prix augmentent fortement à l'intérieur du pays, ce qui déclenche la « guerre des farines ». Le peuple réclame alors avec force le retour de la taxation des grains. Lors de ces émeutes, les femmes qui se lèvent en premier, considérant que l’honneur de leur famille et la survie de leur maison sont bien plus grands que leur propre vie.
   </p>
           </div>
         )
       },
 
        {
-        titre: "La Croisade et la Péninsule Ibérique",
+        titre: "L'Influence des Banques sur la Société",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1182,7 +1182,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
       },
 
        {
-        titre: "Croisade en Espagne et expansion aragonaise",
+        titre: "Le Martyre du Frère Salomon",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1193,7 +1193,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
       {
-        titre: "Rivalités et Alliances autour des Pyrénées",
+        titre: "La Fidélité de l'Abbé Pinot",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1204,7 +1204,7 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
         )
       },
       {
-        titre: "Crise de Succession en Aragon",
+        titre: "Céleste Bulkeley au Combat",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1214,12 +1214,11 @@ Jeanne va trouver le duc d’Alençon et ses lieutenants et leur affirme qu’el
           </div>
         )
       },  {
-        titre: "Le Béarn et la Maison de Gabarret",
+        titre: "Il Faut Raser la Véndée",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-     Le 1er août 1793, la République naissante est en danger. Barère, le franc-maçon tarbais, ordonne d'exterminer les catholiques vendéens, affirmant que « l’humanité ne se plaindra pas, c’est bien d’extirper le mal jusque dans les demeures des royalistes ». Les biens des rebelles de Vendée sont déclarés à la République. Le général Westermann confirme que « les femmes n’enfanteront plus de brigands ». Hommes (pendus et éventrés aux portes), femmes (brûlées vives dans des fours à pain), embryons (empilés), enfants, vieillards, fermes, champs : tout est détruit. Pendant ce temps, la féministe Théroigne de Méricourt est déshabillée, battue et fouettée par d’autres féministes ; Françoise Dupont s’introduit dans des maisons hospitalières pour dénoncer les religieuses (tout signe d’attachement à la religion catholique étant assimilé à un refus de la modernité révolutionnaire) ; et les Bretonnes de toutes classes sociales caillassent des prêtres républicains et se traînent pour faire baptiser leurs enfants par un prêtre réfractaire, à l’instar de Sainte Philippine 
-Duchesne, qui se dévoue auprès des prisonniers et des prêtres réfractaires.
+     Le 1er août 1793, la République naissante est en danger. Barère, le franc-maçon tarbais, ordonne d'exterminer les catholiques vendéens, affirmant que « l’humanité ne se plaindra pas, c’est bien d’extirper le mal jusque dans les demeures des royalistes ». Les biens des rebelles de Vendée sont déclarés à la République. Le général Westermann confirme que « les femmes n’enfanteront plus de brigands ». Hommes (pendus et éventrés aux portes), femmes (brûlées vives dans des fours à pain), embryons (empilés), enfants, vieillards, fermes, champs : tout est détruit. Pendant ce temps, la féministe Théroigne de Méricourt est déshabillée, battue et fouettée par d’autres féministes ; Françoise Dupont s’introduit dans des maisons hospitalières pour dénoncer les religieuses (tout signe d’attachement à la religion catholique étant assimilé à un refus de la modernité révolutionnaire) ; et les Bretonnes de toutes classes sociales caillassent des prêtres républicains et se traînent pour faire baptiser leurs enfants par un prêtre réfractaire, à l’instar de Sainte Philippine Duchesne, qui se dévoue auprès des prisonniers et des prêtres réfractaires.
 
     </p>
           </div>
@@ -1238,7 +1237,7 @@ Duchesne, qui se dévoue auprès des prisonniers et des prêtres réfractaires.
     sections: [
       
       {
-        titre: "Les Chevalières de Tortosa",
+        titre: "Militantes Chrétiennes sous la Révolution",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1248,7 +1247,7 @@ Duchesne, qui se dévoue auprès des prisonniers et des prêtres réfractaires.
           </div>
         )
       },  {
-        titre: "Le Béarn dans la Couronne d'Aragon et la Gascogne",
+        titre: "La Section Féminine de l'Espagne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1257,7 +1256,7 @@ La chute de l'Inquisition espagnole survient lorsque le maçon Joseph Bonaparte 
           </div>
         )
       },  {
-        titre: "Les Tensions avec Toulouse",
+        titre: "Le Calvaire de Marie-Antoinette",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1268,7 +1267,7 @@ La chute de l'Inquisition espagnole survient lorsque le maçon Joseph Bonaparte 
         )
       },
        {
-        titre: "La Naissance des Moncade-Béarn",
+        titre: "La Loire, Baignoire Nationale Républicaine",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1279,7 +1278,7 @@ La Loire a servi de « baignoire nationale » pour la « race maudite » vendée
         )
       },
        {
-        titre: "Conflits et alliances Béarn-Bigorre",
+        titre: "Mourir plutôt que la République",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1289,7 +1288,7 @@ La Loire a servi de « baignoire nationale » pour la « race maudite » vendée
         )
       },
        {
-        titre: "La Bigorre entre les mains des héritiers",
+        titre: "Élisabeth de France, servante de Dieu",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1299,7 +1298,7 @@ Sœur cadette de Louis XVI, Élisabeth de France perd ses parents très jeune et
         )
       },
       {
-        titre: "Héritage contesté et mainmises étrangères",
+        titre: "La Commune et la Semaine Sanglante",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1323,7 +1322,7 @@ Sœur cadette de Louis XVI, Élisabeth de France perd ses parents très jeune et
     sections: [
      
       {
-        titre: "Entre Aragon et Angleterre : la diplomatie",
+        titre: "L'Alliance Israélite et la Franc-Maçonnerie",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1333,7 +1332,7 @@ Sœur cadette de Louis XVI, Élisabeth de France perd ses parents très jeune et
         )
       },
       {
-        titre: "La rupture progressive avec l’Aragon",
+        titre: "La Guerre des Cristeros au Mexique",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1344,7 +1343,7 @@ Sœur cadette de Louis XVI, Élisabeth de France perd ses parents très jeune et
         )
       },
       {
-        titre: "Gaston VII : For, bastides et révolte",
+        titre: "La Mission de Mère Teresa",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1356,7 +1355,7 @@ Mère Teresa entre à l'âge de dix-huit ans chez les Sœurs de Lorette en Irlan
 
 
   {
-        titre: "La 7e croisade",
+        titre: "Chute de la Monarchie au Portugal",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -1369,7 +1368,7 @@ Après le retour de sa famille au Portugal, Pedro reste au Brésil. À l’insta
 
 
        {
-        titre: "Entre vassalité anglaise et autonomie béarnaise",
+        titre: "L'Éducation face à l'État Moderne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
