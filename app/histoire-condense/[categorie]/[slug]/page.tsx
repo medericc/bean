@@ -45,7 +45,7 @@ const histoireData = {
     image: "/images/histoire/eglise.jpg",
     sections: [
       {
-        titre: "Béarn – Préhistoire et Origines",
+        titre: "La Primauté de Saint Pierre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -55,7 +55,7 @@ const histoireData = {
         )
       },
       {
-        titre: "Création de la Vicomté",
+        titre: "Deux Mille Ans de Vérité",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -64,7 +64,7 @@ const histoireData = {
         )
       },
        {
-        titre: "Qu’est-ce qu’une Vicomté ?",
+        titre: "Écriture, Tradition et Magistère",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -73,7 +73,7 @@ const histoireData = {
         )
       },
        {
-        titre: "Béarn Féodal",
+        titre: "Les Signes Visibles de la Foi",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -81,7 +81,7 @@ const histoireData = {
         )
       },
        {
-        titre: "Social",
+        titre: "Marie, Nouvelle Ève et Mère",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -90,7 +90,7 @@ const histoireData = {
         )
       },
       {
-        titre: "La France",
+        titre: "De Jérusalem à la Rome Chrétienne",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -113,7 +113,7 @@ Tandis qu'Ésaïe prédit le transfert vers une autre nation et que Jérémie an
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Béarn – Préhistoire et Origines",
+        titre: "Les Origines Médiévales du Béarn",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -123,7 +123,7 @@ Tandis qu'Ésaïe prédit le transfert vers une autre nation et que Jérémie an
         )
       },
       {
-        titre: "Création de la Vicomté",
+        titre: "L'affirmation des Vicomtes",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -133,7 +133,7 @@ Tandis qu'Ésaïe prédit le transfert vers une autre nation et que Jérémie an
         )
       },
        {
-        titre: "Qu’est-ce qu’une Vicomté ?",
+        titre: "L'Épopée Croisée de Gaston IV",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -143,7 +143,7 @@ En 1085, Gaston IV épouse Talèse d’Aragon, nièce du roi Sanche Ramírez, re
         )
       },
        {
-        titre: "Béarn Féodal",
+        titre: "Gaston IV, seigneur de Saragosse",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -153,7 +153,7 @@ En 1085, Gaston IV épouse Talèse d’Aragon, nièce du roi Sanche Ramírez, re
         )
       },
        {
-        titre: "Social",
+        titre: "Le Béarn sous Tutelle Aragonaise",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -174,7 +174,7 @@ La région de Barcelone faisait partie du royaume des Francs mais le comte Borel
     image: "/images/histoire/antiquite.jpg",
     sections: [
       {
-        titre: "Béarn – Préhistoire et Origines",
+        titre: "Le Béarn face à la Croisade",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -184,7 +184,7 @@ La région de Barcelone faisait partie du royaume des Francs mais le comte Borel
         )
       },
       {
-        titre: "Création de la Vicomté",
+        titre: "Gaston VII face à l'Angleterre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -194,7 +194,7 @@ La région de Barcelone faisait partie du royaume des Francs mais le comte Borel
         )
       },
        {
-        titre: "Qu’est-ce qu’une Vicomté ?",
+        titre: "Jeanne d'Artois et les Fors",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -204,7 +204,7 @@ Jeanne d’Artois ne fut rétablie dans ses droits de curatrice, tutrice et rég
         )
       },
        {
-        titre: "Béarn Féodal",
+        titre: "La Régence d'Aliénor de Comminges",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -214,7 +214,7 @@ Jeanne d’Artois ne fut rétablie dans ses droits de curatrice, tutrice et rég
         )
       },
        {
-        titre: "Social",
+        titre: "Les Campagnes Militaires de Fébus",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -226,7 +226,7 @@ En 1351 Gaston, est nommé lieutenant-général par Charles II, se range à ses 
 
 
         {
-        titre: "Social",
+        titre: "Le Prince Noir débarque à Bordeaux",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -237,7 +237,7 @@ Au début de 1354, un marchand de Sauveterre-de-Béarn, Pélegrin de Fosse, ayan
       },
 
         {
-        titre: "Social",
+        titre: "L'Art de la Neutralité Payante",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -248,7 +248,7 @@ En janvier 1356, Jean le Bon signe des lettres de rémission pour amnistier son 
       },
 
         {
-        titre: "Social",
+        titre: "Fébus écrase la Jacquerie Médiévale",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -260,7 +260,7 @@ Le dauphin Charles est régent du royaume en l'absence de son père, retenu pris
       },
 
         {
-        titre: "Social",
+        titre: "La Grande Victoire de Launac",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -271,7 +271,7 @@ Le dauphin de France nomme lieutenant en Languedoc le comte de Poitiers (son fr�
       },
 
         {
-        titre: "Social",
+        titre: "Fébus esquive le Prince Noir",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -291,7 +291,7 @@ Febus reçoit de l'argent (conserve ces prisonniers jusqu'à recevoir l’intég
     image: "/images/histoire/antiquite.jpg",
     sections: [
         {
-        titre: "En Angleterre",
+        titre: "Le Justicier du Château de Pau",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -302,7 +302,7 @@ Sous le préau de sa vigne à Moncade, près du gave au pied du château de Pau,
         )
       },
       {
-        titre: "Action du comte",
+        titre: "AYolande de Bar, reine-lieutenante",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -312,7 +312,7 @@ Sous le préau de sa vigne à Moncade, près du gave au pied du château de Pau,
         )
       },
       {
-        titre: "Alliance Gasco-Catalane",
+        titre: "Fébus entre France et Angleterre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -322,7 +322,7 @@ Sous le préau de sa vigne à Moncade, près du gave au pied du château de Pau,
         )
       },
         {
-        titre: "Relations avec l'Espagne",
+        titre: "La guerre pour le Comminges",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -332,7 +332,7 @@ Sous le préau de sa vigne à Moncade, près du gave au pied du château de Pau,
         )
       },
       {
-        titre: "Consolidation du pouvoir",
+        titre: "La Mort du Jeune Gaston",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -344,7 +344,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
         )
       },
         {
-        titre: "Politique ecclésiastique et alliances matrimoniales",
+        titre: "La Foi Profonde de Fébus",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -358,7 +358,7 @@ Les sujets béarnais sont fiers du luxe de leur seigneur (les États donneront p
 
 
       {
-        titre: "Expansion territoriale et affirmation du pouvoir",
+        titre: "La Lutte pour le Languedoc",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
