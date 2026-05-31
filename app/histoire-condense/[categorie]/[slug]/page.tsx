@@ -59,7 +59,12 @@ const histoireData = {
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-            Depuis 2000 ans, l’Église tranche les erreurs par ses décisions (comme l'institution des diacres dans Actes 6, le célibat des prêtres en 306, la Bible à la fin du IVe siècle) et ses conciles (du premier à Jérusalem dans Actes 15 vers l’an 50 jusqu'à Vatican II en 1965). Malgré les infiltrations historiques — de Judas aux hommes dénoncés par Saint Pie X qui feignent la foi pour tromper les simples, en passant par le Père de l'Église Saint Irénée visant ceux qui prêchent un autre Christ ou un autre Père de l'Église Saint Cyrille avertissant contre les ministres divisant la foi par calculs séculiers ou encore les abbés de la Révolution —, elle ne se contredit jamais. Malgré la forte consistance des conciles qui se basent sur les Pères de l’Église, qui ont conservé les enseignements du Christ pour discerner la vraie doctrine et les hérésies (gnose dès les Actes avec Simon le Magicien, puis l’islam avec Mahomet, mormonisme avec Smith…), à l’instar de la double prédestination de Calvin, Dieu est comme au centre d’une sphère : il voit tous nos chemins et connaît nos choix sans nous forcer à les faire.           </p>
+        Depuis 2000 ans, l’Église tranche les erreurs par ses décisions (comme l'institution des diacres dans Actes 6, le célibat des prêtres en 306, la Bible à la fin du IVe siècle) et ses conciles (du premier à Jérusalem dans Actes 15 vers l’an 50 jusqu'à Vatican II en 1965). Malgré les infiltrations historiques — de Judas aux hommes dénoncés par Saint Pie X qui feignent la foi pour tromper les simples, en passant par le Père de l'Église Saint Irénée visant ceux qui prêchent un autre Christ, un autre Père de l'Église Saint Cyrille avertissant contre les ministres divisant la foi par calculs séculiers ou les abbés de la Révolution ou encore au XXe siècle, l'archevêque Marcinkus (directeur de la banque du Vatican) impliqué dans le scandale P2 via le maçon Calvi —, elle ne se contredit jamais. Malgré la haute autorité des conciles qui s'appuient sur les Pères de l’Église – gardiens des enseignements du Christ pour distinguer la vraie doctrine des hérésies (telles que la gnose dès les Actes avec Simon le Magicien, l’islam avec Mahomet, le mormonisme avec Smith, ou le donatisme face à un Constantin soucieux de préserver la paix) – et à l’instar de la question de la double prédestination de Calvin (où Dieu, tel le centre d'une sphère, embrasse du regard tous nos chemins et connaît nos choix sans jamais nous y contraindre), il nous incombe de travailler au salut du plus grand nombre, quel que soit le contexte. Pour ce faire, nous devons suivre le phare qu’est l’Église divino-humaine, assurément faible par ses membres, mais dont la foi demeure inébranlable par le sang du Crucifié et sa prière pour le Pape.
+        
+         
+            
+            
+                </p>
           </div>
         )
       },
@@ -1320,7 +1325,7 @@ Le divorce est autorisé par la Révolution, ce qui retire toute valeur au maria
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
  Le 1er août 1793, la République naissante est en danger. Barère, le franc-maçon tarbais, ordonne d'exterminer les catholiques vendéens, affirmant que « l’humanité ne se plaindra pas, c’est bien d’extirper le mal jusque dans les demeures des royalistes ». Les biens des rebelles de Vendée sont déclarés à la République. Le général Westermann confirme que « les femmes n’enfanteront plus de brigands ». Hommes (pendus et éventrés aux portes), femmes (brûlées vives dans des fours à pain), embryons (empilés), enfants, vieillards, fermes, champs : tout est détruit sans discrimination. Pendant ce temps, la féministe Théroigne de Méricourt est déshabillée, battue et fouettée par d’autres féministes ; Françoise Dupont s’introduit dans des maisons hospitalières pour dénoncer les religieuses (tout signe d’attachement à la religion catholique étant assimilé à un refus de la modernité révolutionnaire) ; et les Bretonnes de toutes classes sociales caillassent des prêtres républicains et se traînent pour faire baptiser leurs enfants par un prêtre réfractaire, à l’instar de Sainte Philippine Duchesne, qui se dévoue auprès des prisonniers et des prêtres réfractaires.
- 
+
     </p>
           </div>
         )
