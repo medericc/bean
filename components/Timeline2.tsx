@@ -20,12 +20,7 @@ const periodes: Periode[] = [
   //   slug: 'antiquite',
   // },
 
-  {
-    annee: "Ie-Ve siècle",
-    titre: "Naissance de l'Eglise", 
-    description: "Les Enseignements du Christ",
-    slug: 'eglise',
-  },
+  
   {
     annee: "XIIe-XIVe siècle",
     titre: "Formation du Béarn médiéval", 
