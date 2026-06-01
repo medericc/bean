@@ -1333,8 +1333,8 @@ Le divorce est autorisé par la Révolution, ce qui retire toute valeur au maria
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-       Née à Angers le 14 mai 1753, Céleste Bulkeley épouse en secondes noces William de Bulkeley, un officier tout juste âgé de vingt ans. Lors de la Révolution, Céleste fréquente activement des réseaux de bourgeois et de nobles catholiques qui organisent des messes clandestines et aident les prêtres réfractaires à se cacher. Après la mort du roi, l'insurrection vendéenne éclate : Céleste prend le commandement d'un détachement d'amazones et participe aux combats de l'été 1793. Elle est finalement arrêtée par les troupes républicaines. Cependant, grâce à une fausse déclaration de grossesse de son mari, elle échappe à la guillotine. La République, alors engagée dans le blocus contre les Anglais, n'exécute pas les femmes enceintes, considérant l'enfant dans le ventre comme innocent. Son mari, en revanche, est condamné et guillotiné.
-
+     Née à Angers le 14 mai 1753, Céleste Bulkeley épouse en secondes noces William de Bulkeley, un officier tout juste âgé de vingt ans. Lors de la Révolution, Céleste fréquente activement des réseaux de bourgeois et de nobles catholiques qui organisent des messes clandestines et aident les prêtres réfractaires à se cacher. Après la mort du roi, l'insurrection vendéenne éclate : Céleste prend le commandement d'un détachement d'amazones et participe aux combats de l'été 1793. Après la bataille de Cholet, le général Bonchamps épargnera plusieurs milliers de soldats républicains. Elle est finalement arrêtée par les troupes républicaines. Cependant, grâce à une fausse déclaration de grossesse de son mari, elle échappe à la guillotine. La République, alors engagée dans le blocus contre les Anglais, n'exécute pas les femmes enceintes, considérant l'enfant dans le ventre comme innocent. Son mari, en revanche, est condamné et guillotiné.
+     
    </p>
           </div>
         )
@@ -1387,7 +1387,7 @@ La chute de l'Inquisition espagnole survient lorsque le maçon Joseph Bonaparte 
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
   Neuvième fille de l'impératrice Marie-Thérèse d'Autriche, Marie-Antoinette devient reine de France. Au cours de sa vie, elle adopte un enfant noir qu’elle fait baptiser sous le nom de Jean Amilcar, et elle paie sa pension de ses propres deniers jusqu’à sa mort. Elle verra son mari, Louis XVI, refuser le premier vol humain en montgolfière et demander des animaux à la place. Parmi ses proches, la princesse de Lamballe — qui finit par être massacrée et mutilée par la foule jusque sous les fenêtres de la reine — s’engage en franc-maçonnerie. Marie-Antoinette l’exhorte fermement à s’en éloigner, car elle juge cette influence trop féministe (qu'elle perçoit comme une forme d’impérialisme), souhaitant avant tout la protéger des dérives de son temps. La République lui arrache successivement son mari, le roi Louis XVI (avec appel au peuple refusé car la “Convention représente la Nation” pour les montagnards), puis ses enfants, dont le jeune Louis XVII. Ce dernier, manipulé par le tribunal républicain sous l'effet d'une loi modifiée auparavant, est contraint d'accuser sa propre mère de viol, avant d’être séquestré et laissé pour mort dans une cellule. Le 16 octobre 1793, Marie-Antoinette est conduite à la guillotine (invention du très franc-maçon Joseph Guillotin). Dans sa toute dernière lettre elle accorde son pardon à tous ceux qui lui ont fait du mal et prie Dieu de leur accorder Sa miséricorde.
-  
+
    </p>
           </div>
         )
