@@ -728,9 +728,8 @@ Sous la Régence, Mazarin veut suspendre le salaire des “robins” (noblesse d
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-Le Béarnais Jean-Vincent d’Abbadie de Saint-Castin, descendant de Marguerite de Moncade et devenu orphelin de mère dès le berceau lors d’une épidémie de peste, quitte La Rochelle le 6 mai 1665 pour la Nouvelle-France. Âgé de seulement 13 ans, il embarque comme enseigne, accompagné de son serviteur Regnault Bordenave. Cinq ans plus tard, il gagne Pentagouët — l’actuelle Castine, qui porte aujourd’hui son nom. Dès 1659, un marchand de Boston proposait déjà de déporter les Français de Port-Royal s’ils refusaient de se soumettre, projet qui se réalisera effectivement au siècle suivant. Saint-Castin s’installe ensuite chez les Abénaquis, dans l’actuel Maine, adopte leur mode de vie, épouse la fille du grand chef Pidiansiske et devient un chef et un guerrier respecté parmi eux. Revenu plus tard en Béarn, il ne pourra cependant jamais repartir, le Parlement de Pau étant alors désireux d’affirmer son autonomie face à Louis XIV.
+Le Béarnais Jean-Vincent d’Abbadie de Saint-Castin, descendant de Marguerite de Moncade et devenu orphelin de mère dès le berceau lors d’une épidémie de peste, quitte La Rochelle le 6 mai 1665 pour la Nouvelle-France. Âgé de seulement 13 ans, il embarque comme enseigne, accompagné de son serviteur Regnault Bordenave. Cinq ans plus tard, il gagne Pentagouët — l’actuelle Castine, qui porte aujourd’hui son nom. Dès 1659, un marchand de Boston proposait déjà de déporter les Français de Port-Royal s’ils refusaient de se soumettre, projet qui se réalisera effectivement au siècle suivant. Saint-Castin s’installe ensuite chez les Abénaquis, dans l’actuel Maine, adopte leur mode de vie, épouse la fille du grand chef Pidiansiske et devient un chef et un guerrier respecté parmi eux. Revenu plus tard en Béarn, il ne pourra cependant jamais repartir, le Parlement de Pau étant alors désireux d’affirmer son autonomie face à Louis XIV (qui venait de condamner un projet de Vauban de destruction des provinces).
 
- 
  
   </p>
           </div>
