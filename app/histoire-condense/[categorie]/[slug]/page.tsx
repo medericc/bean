@@ -1554,7 +1554,17 @@ Après les apparitions et les prophéties de Fatima, sœur Lucie confie que « l
       }
       ,
 
-
+{
+        titre: "Le Génocide Arménien",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+ Au début du XXe siècle, après la prise du pouvoir par les Jeunes-Turcs — composé d’Emmanuel Carasso (député juif et franc-maçon), Djemal Pacha (franc-maçon) ou Talaat Pacha (franc-maçon) —, le gouvernement musulman ottoman met en œuvre des arrestations, massacres et déportations massives visant la population chrétienne arménienne. De 1915 à 1920, entre 1 et 1,5 million d'Arméniens périssent sur une population arménienne de l'Empire ottoman estimée à environ 1,5 à 2 millions de personnes.
+ 
+  </p>   </div>
+        )
+      }
+,
 
        {
         titre: "Démocratie en Bas, Monarchie en Haut",
