@@ -596,7 +596,17 @@ Saint Louis voit le rôle du roi comme celui d’un « roi chrétien juste » de
    </div>
         )
       },
+  {
+        titre: "Jeanne et Ses Ennemis",
+        contenu: (
+          <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
+            <p>
+   Après l'assassinat de son mari, Anne d'Este (duchesse de Guise) veut se venger de Coligny, accusé d'avoir commandité le meurtre. Ses recours en justice échouent, jusqu'à la Saint-Barthélemy. En parallèle, Anne est l’ennemie jurée de Jeanne d'Albret au sujet du duc de Nemours. Anne veut l'épouser, tandis que Jeanne défend les droits de sa protégée, Françoise de Rohan. Le jour du mariage d'Anne et de Nemours, Françoise envoie un émissaire pour faire stopper la cérémonie, mais l'homme est roué de coups et jeté en prison. Ce scandale brise définitivement l'amitié entre Jeanne d'Albret et la mère d'Anne d'Este, Renée de Ferrare, qui était sa seule amie au sein de la famille royale. Jeanne était d'ailleurs déjà fâchée avec Marguerite de Nevers qui avait modifié un livre écrit par la mère de Jeanne. En réaction, Jeanne avait fait détruire ces exemplaires et réédité l'ouvrage avec une préface sarcastique envers Marguerite. Un affront que la fille de cette dernière, Henriette de Nevers, ne pardonnera jamais à Jeanne.
 
+         </p>
+          </div>
+        )
+      },
        {
         titre: "Jeanne Face à la Mort",
         contenu: (
