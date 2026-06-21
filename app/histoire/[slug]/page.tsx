@@ -3669,6 +3669,7 @@ John Theophilus Desaguliers (huguenot réfugié en Angleterre) et James Anderson
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
 John Phillips, maçon anglais arrivé à Saint-Pétersbourg dans les années 1730, est le premier porteur officiel de la franc-maçonnerie en Russie. James Keith écossais, officier, puis maréchal au service de la tsarine Élisabeth Petrovna. Franc-maçon actif en Prusse et en Russie. Il contribue à ancrer la maçonnerie militaire dans la noblesse russe. Ivan Yelagin, noble russe, qui devient Grand Maître de la maçonnerie russe à partir de 1772. Reçoit des patentes anglaises et structure les loges selon le modèle anglais. C’est avec Yelagin et Novikov (introducteur en Russie des courants rosicruciens et de la maçonnerie mystique allemande, plus ésotérique que l'anglaise, Catherine II le réprimera par la suite) que la maçonnerie russe devient ésotérique, mystique, kabbalisante et alchimique, influencée par Martinès de Pasqually, Louis-Claude de Saint-Martin, Willermoz, les Rose-Croix allemands, la Kabbale chrétienne héritée de Pico, Reuchlin, Agrippa, Kircher...
+
 </p>
           </div>
         )
