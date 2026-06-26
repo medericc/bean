@@ -8,8 +8,8 @@ export default function Header() {
   // 🧠 Liste des éléments de menu + slugs personnalisés
   const menuItems = [
     { label: 'Accueil', href: '/' },
-    { label: 'Histoire', href: '/histoire' },
-     { label: 'Condensé', href: '/histoire-condense' },
+    // { label: 'Histoire', href: '/histoire' },
+     { label: 'Histoire', href: '/histoire-condense' },
     { label: 'Lignées', href: '/lignees' }, // <-- ici la correction
     // { label: 'Vicomtes', href: '/vicomtes' },
     { label: 'À propos', href: '/a-propos' },
