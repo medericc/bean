@@ -59,7 +59,7 @@ const vicomtesData = {
   "biographie": "Fils de Gaston III, mort avant de régner seul, et marié d’abord à Gisla, il épouse en 1079 Béatrix de Bigorre, avec l’appui du pape Grégoire VII. Partisan de la réforme grégorienne, il réside à Lescar pour pénitence, fonde un prieuré à Morlaàs, favorise l’ordre clunisien et bat monnaie. Il étend son autorité sur la Soule, accorde des franchises à Montory et rattache Saint-Pé à Tarbes. Militairement, il soutient puis affronte Sanche Ramírez d’Aragon, participe aux campagnes pyrénéennes. ",
   "faitsMarquants": [
     "Partisan de la réforme grégorienne et allié du pape Grégoire VII",
-    "Fonde Morlaàs et y introduit l’ordre clunisien",
+    "Fonde Morlaàs, s’impose en Soule et octroie une poblacion à Oloron",
     "Fait battre monnaie, symbole de souveraineté béarnaise",
     "Participe à des campagnes aragonaises, meurt assassiné en 1090"
   ],
@@ -103,7 +103,7 @@ const vicomtesData = {
     "1128 : fondation du prieuré de Sauvelade, rattaché à Sainte-Christine du Somport",
     "1137 : confirmation de ses fiefs par Raymond-Bérenger IV, comte de Barcelone"
   ],
-  alliances: "Mariée à Gaston IV de Béarn ; sœur du roi Sanche Ramírez d’Aragon ; cousine germaine d’Alphonse Ier d’Aragon ; mère de Centulle VI et grand-mère de Pierre III de Gabarret.",
+  alliances: "Mariée à Gaston IV de Béarn ; nièce du roi Sanche Ier d'Aragon ; cousine germaine d’Alphonse Ier d’Aragon ; mère de Centulle VI et grand-mère de Pierre III de Gabarret.",
   contexte: "Talèse évolue à une époque de fortes interactions entre le Béarn, la Navarre et l’Aragon, marquée par la Reconquista et l’influence croissante des dynasties pyrénéennes. Son action contribue à renforcer les liens entre la vicomté béarnaise et la couronne d’Aragon, notamment à travers la religion, la diplomatie et la tutelle féodale.",
   heritage: "Talèse d’Aragon laisse un héritage politique et religieux durable : elle a consolidé les alliances trans-pyrénéennes, fondé des institutions religieuses majeures et transmis au Béarn une tradition d’autonomie alliée à l’influence aragonaise."
 },
@@ -210,7 +210,6 @@ const vicomtesData = {
     "biographie": "Marguerite épousa en 1257 Roger-Bernard III de Foix. À la mort de son père, elle dut défendre sa succession contre sa sœur. Le partage de 1286 lui attribua le Béarn et le Marsan, mais ce testament fut contesté, déclenchant de longues guerres entre Foix-Béarn et Armagnac. Ensuite veuve, elle est administratrice du Béarn et de Foix. Refusant l’arbitrage royal, elle fit appel au pape et au roi d’Angleterre Édouard Iᵉʳ, obtenant son soutien contre les Capétiens. Elle régla aussi les successions familiales en Catalogne et négocia pour restituer les domaines des Moncade à son fils. Marguerite refusa toujours de rendre hommage aux anglais, préservant l’autonomie du Béarn.",
     "faitsMarquants": [
       "Union du Béarn et du comté de Foix par son mariage avec Roger-Bernard III (1287)",
-      "Refus de toute vassalité formelle envers les rois de France et d’Angleterre",
       "Conflit avec son fils Gaston Ier (1312), arbitré en sa faveur par les barons béarnais",
       "Maintien du Béarn comme puissance autonome entre Capétiens, Armagnacs et Plantagenêts"
     ],
@@ -280,11 +279,11 @@ const vicomtesData = {
   "lignee": "Maison de Foix-Béarn",
   "description": "Fils d’Archambaud de Grailly et d’Isabelle de Castelbon, Jean Ier succède à sa mère en 1412 et dirige le Béarn tout en composant avec la France et l’Angleterre. Il maintient la neutralité du Béarn tout en étendant son influence militaire et diplomatique dans le sud de la France.",
   "image": "/jean1-detail.jpg",
-  "biographie": "Jean Ier succède à sa mère Isabelle en 1412, mais il ne dirige pas encore les affaires du pays. Durant la crise franco-anglaise, il change plusieurs fois d’alliance : d’abord avec les Armagnacs, puis les Bourguignons, et enfin avec les Anglais après le traité de Troyes. Lieutenant général de Charles VII en Languedoc et en Guyenne, il refuse de prêter hommage à Henri V pour le Béarn, affirmant son indépendance. Il épouse Jeanne d’Albret en 1422 et reçoit plusieurs domaines, notamment la Bigorre, Lautrec, Mauléon et Guiche. Il signe des traités garantissant la neutralité et la libre circulation commerciale du Béarn avec l’Angleterre. ",
+  "biographie": "Jean Ier succède à sa mère Isabelle en 1412, mais il ne dirige pas encore les affaires du pays. Durant la crise franco-anglaise, il change plusieurs fois d’alliance avec sa mère entre Anglais et Français. Lieutenant général de Charles VII en Languedoc et en Guyenne, il refuse de prêter hommage à Henri V pour le Béarn, affirmant son indépendance. Il épouse Jeanne d’Albret en 1422 et reçoit plusieurs domaines, notamment la Bigorre, Lautrec, Mauléon et Guiche. Il signe des traités garantissant la neutralité et la libre circulation commerciale du Béarn avec l’Angleterre. ",
   "faitsMarquants": [
-   "1420 : Après le traité de Troyes, se rallie aux Anglais sans compromettre la neutralité du Béarn",
+   "Lieutenant général pour les Anglais et les Français et avec ses frères, il tient tout le Midi",
     "1422 : Épouse Jeanne d’Albret et reçoit de nouveaux domaines en Foix et Béarn",
-    "1425 : Maintien de la neutralité commerciale et diplomatique du Béarn avec l’Angleterre",
+    "1425 : Reçoit la Bigorre du Roi de France et des domaines en Catalogne car il est en bon terme avec Aragon et Navarre",
     "1431 : Nouveau traité à Montaner confirmant la neutralité et la prospérité du commerce béarnais",
  ],
   "alliances": "Maison de Grailly, mariage avec Jeanne d’Albret, relations diplomatiques avec la France et l’Angleterre.",
@@ -322,7 +321,7 @@ const vicomtesData = {
   "faitsMarquants": [
     "1502 : Prêt de serment à Louis XII sans mention du Béarn, affirmant l’indépendance de la vicomté",
     "1510-1512 : Défense active de la souveraineté du Béarn contre la France et négociation avec la Castille",
-    "1512 : Perte de la majeure partie de la Navarre au profit des troupes espagnoles, mais maintien partiel de la souveraineté béarnaise",
+    "1512 : Perte de la majeure partie de la Navarre au profit des troupes espagnoles, mais maintien de la souveraineté béarnaise",
 ],
   "alliances": "Maison d'Albret, mariage avec Jean d’Albret, relations diplomatiques avec la France et la Castille.",
   "contexte": "Son règne se déroule dans un contexte de rivalités entre la France et l’Espagne, et de consolidation de la souveraineté béarnaise et navarraise, avec la menace permanente de l’ingérence extérieure.",
@@ -340,7 +339,7 @@ const vicomtesData = {
   "biographie": "Henri II d’Albret est sous la régence de son grand-père Alain jusqu’en 1522. Capturé à la bataille de Pavie en 1525, il s’évade rapidement et poursuit ses réformes, créant notamment le Conseil souverain et la Chambre des comptes à Pau. Entre 1538 et 1547, il renforce la bastide de Navarrenx, suscitant l’inquiétude de Charles Quint. Henri administre le Béarn avec l’aide de sa sœur Anne d’Albret et de Jacques de Foix en son absence, tout en consolidant son territoire et son rôle de refuge pour les protestants. ",
   "faitsMarquants": [
    "1519 : Création du Conseil souverain de Pau, inspiré du modèle navarrais",
-    "1525 : Capturé à la bataille de Pavie contre François Ier, s’évade rapidement",
+    "1525 : Capturé à la bataille de Pavie avec François Ier, s’évade rapidement",
     "1538-1547 : Transformation de Navarrenx en forteresse bastionnée, inquiétant Charles Quint",
     "1551-1552 : Validation et adoption par les États des nouvelles fortifications, imprimé en bearnais",
   ],
@@ -355,14 +354,14 @@ const vicomtesData = {
     "lignee": "Maison de Navarre",
     "description": "Nièce de François Ier et souveraine du Béarn et de la Navarre, elle fit du Béarn un bastion du protestantisme français et défendit farouchement son indépendance.",
     "image": "/febus.jpg",
-    "biographie": "Convertie à la Réforme, elle entreprit d’organiser un État protestant modèle, s’inspirant de Genève. Sa modération, souvent critiquée par les pasteurs, se manifesta dans son refus d’imposer brutalement la Réforme et son attachement à la tolérance. Elle visita l’imprimerie d’Estienne, fit publier des textes de piété destinés à ses enfants et soutint la traduction du Psautier en béarnais et du Nouveau Testament en basque. Habile diplomate, elle négocia directement avec Catherine de Médicis et Charles IX, puis rejoignit Condé et Coligny à La Rochelle, dont elle fit le centre du parti huguenot.",
+    "biographie": "Convertie à la Réforme, elle entreprit d’organiser un État protestant modèle, s’inspirant de Genève. Sa modération, souvent critiquée par les pasteurs, se manifesta dans son refus d’imposer brutalement la Réforme, allant jusqu'à s'infliger des auto-amendes. Elle visita l’imprimerie d’Estienne, fit publier des textes de piété pour ses enfants, soutint la traduction du Psautier en béarnais et du Nouveau Testament en basque. Habile diplomate, elle négocia directement avec Catherine de Médicis et Charles IX, puis rejoignit Condé et Coligny à La Rochelle, dont elle fit le centre du parti huguenot.",
     "faitsMarquants": [
-    "Ordonnances limitant les pratiques catholiques mais sans persécution",
+    "Première école pour tous et première liberté de conscience de l'histoire",
     "Victoire de ses troupes à Orthez (1569) sous le commandement de Montgommery",
     "1571 : Proclamation du calvinisme comme religion officielle du Béarn",
    ],
     "alliances": "Épouse d’Antoine de Bourbon, roi de Navarre ; alliée de Condé, Coligny, Élisabeth et des princes protestants allemands ; en opposition diplomatique constante avec les Guise.",
-    "contexte": "Elle vécut au cœur des guerres de Religion qui déchirèrent la France. Souveraine indépendante, elle défendit l’autonomie du Béarn. Son règne fut marqué par la confrontation entre les partisans de la Réforme et ceux de Rome, dans un Sud-Ouest instable où chaque ville oscillait entre les deux confessions. ",
+    "contexte": "Elle vécut au cœur des guerres civiles du XVIe siècle qui déchirèrent la France. Souveraine indépendante, elle défendit l’autonomie du Béarn. Son règne fut marqué par la confrontation entre les partisans de la Réforme et ceux de Rome, dans un Sud-Ouest instable où chaque ville oscillait entre les deux confessions. ",
     "heritage": " Son œuvre politique et religieuse fit du Béarn un modèle d’État protestant et de tolérance. Protectrice des lettres et des traducteurs, elle contribua à l’essor du basque et du béarnais écrits."
   },
   
