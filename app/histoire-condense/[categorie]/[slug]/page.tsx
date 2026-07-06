@@ -626,7 +626,7 @@ Saint Louis (qui a condamné le livre des Juifs après un procès mené par un J
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
-     Jeanne prépare activement le mariage de son fils lorsque, le 5 juin, elle est prise de fièvre. Elle répète que tout vient de Dieu, ne se plaint jamais et répond « oui » lorsque ses pasteurs lui demandent : « Jésus est ton sauveur, seras-tu purifiée par son sang ? ». Jeanne dit aux femmes près d’elle qu’il ne faut pas pleurer, car Dieu l’appelle vers une vie meilleure, la terre étant pleine de vanités. Elle regrette de ne pas avoir eu le temps de suffisamment les récompenser et exhorte la fille de Madame de Tignonville à rester ferme dans sa foi (bien que cette dernière aura, par la suite, des mœurs catastrophiques).
+     Jeanne prépare activement le mariage de son fils (Médicis se moquait d’elle pendant les négociations) lorsque, le 5 juin, elle est prise de fièvre. Elle répète que tout vient de Dieu, ne se plaint jamais et répond « oui » lorsque ses pasteurs lui demandent : « Jésus est ton sauveur, seras-tu purifiée par son sang ? ». Jeanne dit aux femmes près d’elle qu’il ne faut pas pleurer, car Dieu l’appelle vers une vie meilleure, la terre étant pleine de vanités. Elle regrette de ne pas avoir eu le temps de suffisamment les récompenser et exhorte la fille de Madame de Tignonville à rester ferme dans sa foi (bien que cette dernière aura, par la suite, des mœurs catastrophiques).
      
          </p>
           </div>
