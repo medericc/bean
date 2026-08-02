@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://bearn.vercel.app";
+  const baseUrl = "https://www.histoirebearn.fr/";
 
   return [
     {
@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/histoire`,
+      url: `${baseUrl}/histoire-condense`,
       lastModified: new Date(),
     },
     {
