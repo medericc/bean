@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import ExpandableSection from "./ExpandableSection";
 import type { Metadata } from "next";
 
+
+
 export async function generateMetadata(
   props: {
     params: Promise<{

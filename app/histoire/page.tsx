@@ -1,10 +1,60 @@
 // app/histoire/page.tsx
 import Timeline from '@/components/Timeline';
+import Link from 'next/link';
 
 
 export const metadata = {
   title: "Histoire du Béarn",
 }
+
+
+
+
+type Carte =
+  | {
+      titre: string
+      slug: string
+      icon: string
+    }
+  | {
+      titre: string
+      href: string
+      icon: string
+    }
+
+const cartes : Carte[] = [
+  {
+    titre: 'Saint Augustin sur la prière',
+    slug: 'augustin',
+    icon: '🙏',
+  },
+  {
+    titre: 'Sainte Catherine de Sienne',
+    slug: 'catherine',
+    icon: '🌹',
+  },
+  {
+    titre: 'Sainte Hildegarde et la Vie',
+    slug: 'hildegarde',
+    icon: '🌿',
+  },
+  {
+    titre: "Sainte Thérèse d'Avila",
+    slug: 'therese',
+    icon: '⛪',
+  },
+  {
+    titre: "Saint Thomas d'Aquin",
+    slug: 'thomasdaquin',
+    icon: '📖',
+  },
+ {
+   titre: 'Signification Sponsale',
+    icon: '💍',
+    slug: 'mariage',
+  
+  },
+]
 
 export default function HistoirePage() {
   return (
@@ -80,6 +130,60 @@ export default function HistoirePage() {
           </div>
         </div>
       </section>
+
+{/* THÉOLOGIE */}
+<section className="py-16 bg-parchemin">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <div className="inline-block text-or-patine font-semibold uppercase tracking-[0.2em] mb-3">
+        ✠ Théologie
+      </div>
+
+      <h2 className="font-titre text-4xl text-vert-mousse mb-4">
+        Maîtres spirituels et défenseurs de la Foi
+      </h2>
+
+      <p className="max-w-2xl mx-auto font-corps text-gray-700 leading-relaxed">
+        Découvrez les enseignements des saints, des docteurs de l&apos;Église
+        et des grandes figures de la tradition catholique.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {cartes.map((item) => {
+        const href =
+          "href" in item
+            ? item.href
+            : `culture/theologie/${item.slug}`
+
+        return (
+          <Link
+            key={item.titre}
+            href={href}
+            target={"href" in item ? "_blank" : undefined}
+            rel={"href" in item ? "noopener noreferrer" : undefined}
+            className="group"
+          >
+            <article className="h-full rounded-xl border border-or-patine bg-parchemin-fonce p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <div className="text-4xl mb-5">
+                {item.icon}
+              </div>
+
+              <h3 className="font-titre text-2xl text-brun-terre mb-4 group-hover:text-vert-mousse transition-colors">
+                {item.titre}
+              </h3>
+
+              <span className="font-semibold text-vert-mousse">
+                Découvrir →
+              </span>
+            </article>
+          </Link>
+        )
+      })}
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
