@@ -1,0 +1,91 @@
+
+
+
+
+.catherineHeader {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 1.4rem 0;
+
+  border-bottom:
+    1px solid rgba(244,197,66,.18);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.01)
+    );
+
+  backdrop-filter: blur(12px);
+}
+
+.catherineHeader::before {
+  content: '';
+
+  position: absolute;
+  top: -250px;
+  right: -250px;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244,197,66,.10),
+      transparent 70%
+    );
+}
+
+.catherineHeaderContent {
+  display: flex;
+     align-items: center;
+    justify-content: center;
+    gap: 12rem; 
+     margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.backLink {
+  color: var(--or);
+
+  font-weight: 700;
+
+  transition:
+    transform .25s ease,
+    opacity .25s ease;
+}
+
+.backLink:hover {
+  transform: translateX(-4px);
+  opacity: .8;
+}
+.catherineTitle {
+  margin: 0;
+
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: 800;
+
+  color: var(--or);
+  text-align: center;
+
+ 
+}
+ .catherineHeaderContent2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    margin-bottom: 0.5rem;
+  }
+

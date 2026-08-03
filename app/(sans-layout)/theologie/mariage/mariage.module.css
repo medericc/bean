@@ -1,0 +1,606 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.catherinePage {
+  --violetProfond: #2a0c45;
+  --violetNuit: #14051f;
+
+  --or: #f4c542;
+  --orClair: #ffe9a3;
+
+  --blanc: #ffffff;
+  --creme: #f8f3ea;
+
+  --texte: rgba(255,255,255,.76);
+  --texteDark: #2d1839;
+
+  --shadow:
+    0 25px 60px rgba(0,0,0,.28);
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2a0c45 0%,
+      #14051f 100%
+    );
+
+  overflow: hidden;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.catherineHeader {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 1.4rem 0;
+
+  border-bottom:
+    1px solid rgba(244,197,66,.18);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.01)
+    );
+
+  backdrop-filter: blur(12px);
+}
+
+.catherineHeader::before {
+  content: '';
+
+  position: absolute;
+  top: -250px;
+  right: -250px;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244,197,66,.10),
+      transparent 70%
+    );
+}
+
+.catherineHeaderContent {
+  display: flex;
+     align-items: center;
+    justify-content: center;
+    gap: 12rem; 
+     margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.backLink {
+  color: var(--or);
+
+  font-weight: 700;
+
+  transition:
+    transform .25s ease,
+    opacity .25s ease;
+}
+
+.backLink:hover {
+  transform: translateX(-4px);
+  opacity: .8;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.catherineTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  font-size: clamp(1rem, 4vw, 3rem);
+
+  font-weight: 900;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f4c542 50%,
+      #fff3bf 100%
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.heroSection {
+  position: relative;
+
+  padding: 7rem 0 5rem;
+
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+
+  position: absolute;
+  top: -280px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 900px;
+  height: 900px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244,197,66,.08),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+margin-top: 1rem;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.heroContent h2 {
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  line-height: 1.05;
+  font-weight: 900;
+
+  color: white;
+}
+
+.heroContent p {
+  color: var(--texte);
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  line-height: 1.9;
+}
+
+/* =========================================
+   QUOTE CARD
+========================================= */
+
+.quoteSection {
+  padding: 1rem 0 3rem;
+}
+
+.quoteCard {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(2rem, 5vw, 4rem);
+
+  border-radius: 36px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.04)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.quoteCard::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(244,197,66,.14),
+      transparent 35%
+    );
+}
+
+.quoteEmoji {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+.quoteText {
+  position: relative;
+  z-index: 2;
+
+  color: white;
+
+  font-size: clamp(1.4rem, 3vw, 2rem);
+
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.quoteAuthor {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  margin-top: 1.5rem;
+
+  color: rgba(255,255,255,.62);
+
+  font-weight: 600;
+}
+
+/* =========================================
+   DOCTOR CARD
+========================================= */
+
+.doctorSection {
+  padding: 2rem 0 5rem;
+}
+
+.doctorCard {
+  position: relative;
+
+  overflow: hidden;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: clamp(2rem, 5vw, 3rem);
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.12),
+      rgba(255,255,255,.05)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(16px);
+
+  box-shadow: var(--shadow);
+}
+
+.doctorCard::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(244,197,66,.12),
+      transparent 35%
+    );
+}
+
+.doctorCard h3 {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
+
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+  font-weight: 900;
+}
+
+.doctorCard p {
+  position: relative;
+  z-index: 2;
+
+  color: rgba(255,255,255,.78);
+
+  line-height: 1.95;
+
+  font-size: 1.05rem;
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.sectionTitle {
+  margin-bottom: 4rem;
+
+  text-align: center;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  color: white;
+
+  font-weight: 900;
+}
+
+/* =========================================
+   LEARNING
+========================================= */
+
+.learningSection {
+  padding: 3rem 0 6rem;
+}
+
+.learningGrid{
+  display:grid;
+
+  grid-template-columns:repeat(4,minmax(0,1fr));
+
+  gap:2rem;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.learningCard{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:2.4rem;
+
+  border-radius:30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.09),
+      rgba(255,255,255,.035)
+    );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+      0 18px 40px rgba(0,0,0,.30);
+
+  transition:
+      transform .35s,
+      box-shadow .35s,
+      border-color .35s;
+}
+
+.learningCard::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  top:0;
+
+  height:4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f4c542,
+      #fff3c2,
+      #f4c542
+    );
+
+}
+
+.learningCard::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:-80px;
+  right:-80px;
+
+  width:220px;
+  height:220px;
+
+  border-radius:50%;
+
+  background:
+      radial-gradient(
+      circle,
+      rgba(244,197,66,.08),
+      transparent 70%
+  );
+
+  pointer-events:none;
+}
+.learningCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(244,197,66,.25);
+
+    box-shadow:
+        0 28px 55px rgba(0,0,0,.42);
+
+}
+
+.cardNumber{
+
+    position:absolute;
+
+    right:20px;
+    bottom:10px;
+
+    font-size:4.6rem;
+
+    font-weight:900;
+
+    color:rgba(255,255,255,.045);
+
+    user-select:none;
+
+    line-height:1;
+
+}
+/* =========================================
+   VARIANTS
+========================================= */
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+
+.learningCard p{
+
+    position:relative;
+    z-index:2;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:1.02rem;
+
+    line-height:1.95;
+}
+
+/* =========================================
+   FINAL SECTION
+========================================= */
+
+.finalSection {
+  padding: 2rem 0 7rem;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width:1700px){
+  .learningGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media(max-width:1700px){
+
+  .learningGrid article:last-child{
+    grid-column:auto;
+  }
+
+}
+
+
+
+@media (max-width:768px){
+  .learningGrid{
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width: 768px) {
+
+  .heroSection {
+    padding: 5rem 0 4rem;
+  }
+
+  .learningSection {
+    padding-bottom: 4rem;
+  }
+
+  .learningGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quoteCard,
+  .learningCard,
+  .doctorCard {
+    padding: 2rem;
+  }
+
+}
+
+.catherineHeaderContent2 {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 1100px)  {
+  .catherineHeader {
+    display: none;
+  }
+
+  .catherineHeaderContent2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 2rem 2.6rem; /* ← ajouté */
+margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .backLink2 {
+    color: var(--or);
+    font-weight: 700;
+  }
+}
+
+ .heroSection2 {
+    margin-top:4rem;
+  }
+  @media (max-width: 768px) {
+
+    .heroSection2 {
+    margin-top:1rem;
+  }
+  }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Crimson_Text } from "next/font/google";
 import "./globals.css";
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
@@ -105,9 +106,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-      
+        <Header />
         {children}
-        
+        <Footer />
         <Analytics />
       </body>
     </html>
