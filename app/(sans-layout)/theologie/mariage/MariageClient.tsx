@@ -62,7 +62,7 @@ const teachings =
   <main className={styles.catherinePage}>
   {/* HEADER */}
   <header className={styles.catherineHeader}>
-    <div className={`container ${styles.catherineHeaderContent}`}>
+    <div className={`${styles.container} ${styles.catherineHeaderContent}`}>
       <Link
         href="/histoire-condensee"
         className={styles.backLink}

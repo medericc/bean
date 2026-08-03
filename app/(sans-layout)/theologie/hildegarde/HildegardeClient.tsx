@@ -16,7 +16,7 @@ export default function HildegardePage() {
       <main className="hildegarde-page">
 
        <header className={styles.hildegardeHeader}>
-    <div className={`container ${styles.hildegardeHeaderContent}`}>
+    <div className={`${styles.container} ${styles.hildegardeHeaderContent}`}>
       <Link
         href="/histoire-condensee"
         className={styles.backLink}
@@ -205,7 +205,7 @@ alt="Drapeau de la France"
             </>
   ) : (
     <>
-    Sénte Hildegarde de Bingen coùntemple la badence de l&lsquo;uma coum ûe obre còsmique : lou cos reçèu chic à chic la soûe fòrme, puch Diu que y soùfle l&lsquo;àmne, hoéc biben destinat à counduìse l&lsquo;òmi de cap à la luts, per la prabade dinco l’àdyẹ madu
+    Sénte Hildegarde de Bingen countemple la badence de l&lsquo;uma coum ûe obre cosmique : lou cos reçeu chic à chic la soûe forme, puch Diu y bouhe l&lsquo;amne, hoéc biben destinat à counduìse l&lsquo;òmi de cap à la luts, per la prabade dinco l’àdye madu
           
           
           
@@ -249,11 +249,11 @@ alt="Drapeau de la France"
              <h3>✨ Lou misteri de l&lsquo;àmne e dou cos</h3>
 
               <p>
-              Ta Hildegarde, la councepcioû n’éy pas û sìmplẹ fénomène bioulouyique. Lou cos uma qu&lsquo;éy fourmat chic à chic déns lou bènte de la may, coum ûe tèrre graniu preparade à recébẹ û hoéc biénut de Diu. 
+              Ta Hildegarde, la councepcioû n’éy pas û sìmple fénomène bioulouyique. Lou cos umâ qu&lsquo;éy fourmat chic à chic déns lou bénte de la may, coum ûe tèrre graniu preparade à recébe û hoéc biénut de Diu. 
               </p>
 
               <p>
-         Quoan lou cos éy prèste, Diu que soùfle l&lsquo;àmne : ûe realitat spirituau, lusènte, bibante, coumparàble a ûe sfère de hoéc caminàn tout l&lsquo;uma.
+         Quoan lou cos éy près, Diu bouhe l&lsquo;amne : ûe realitat spirituale, lusènte, bibante, coumparàble a ûe sfère de hoéc caminan tout l&lsquo;umâ.
               </p>  
             
             </>
@@ -466,7 +466,7 @@ alt="Drapeau de la France"
                 </p>
 
                 <p>
-                Lou cos prén fòrme chic à chic graci à la calou mayràne, coum la lèyt debienen roumàdyẹ, car puch os.
+                Lou cos prén forme chic à chic graci à la calou mayràne, coum la lèyt debienen roumàdyẹ, car puch os.
 
                 </p>
 
@@ -828,7 +828,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
               </p>
 
               <p>
-             Toute la bite spirituau counsìste alabéts à decha aquéste luts de-dehéns illumina de nabèth l’amne entière.
+             Toute la bite spirituale counsiste alabéts à decha aquéste luts de-dehéns illumina de nabèth l’amne entière.
               </p>       </>
   )} 
             </div>
