@@ -18,7 +18,7 @@ export default function HildegardePage() {
        <header className={styles.hildegardeHeader}>
     <div className={`container ${styles.hildegardeHeaderContent}`}>
       <Link
-        href="/apprendre/culture"
+        href="/histoire-condensee"
         className={styles.backLink}
       >
         ← Retour
@@ -102,7 +102,7 @@ alt="Drapeau de la France"
         <section className="hero">
       <div className={styles.hildegardeHeaderContent2}>
       <Link
-        href="/apprendre/culture"
+        href="/histoire-condensee"
         className={styles.backLink2}
       >
         ← Retour

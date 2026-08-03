@@ -400,7 +400,7 @@ export default function SaintThomasAquinPage() {
    
    
     <Link
-            href="/apprendre/culture"
+            href="/histoire-condensee"
             style={{
               textDecoration: 'none',
             }}

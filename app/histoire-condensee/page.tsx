@@ -154,7 +154,7 @@ export default function HistoirePage() {
         const href =
           "href" in item
             ? item.href
-            : `culture/theologie/${item.slug}`
+            : `histoire-condensee/theologie/${item.slug}`
 
         return (
           <Link

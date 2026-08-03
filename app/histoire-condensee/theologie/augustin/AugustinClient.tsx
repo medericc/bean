@@ -85,7 +85,7 @@ export default function SaintAugustinPage() {
   }}
 >
   <Link
-    href="/apprendre/culture"
+    href="/histoire-condensee"
     className={styles.backLink}
   >
     ← Retour
@@ -172,7 +172,7 @@ alt="Drapeau de la France"
 
  <div className={styles.catherineHeaderContent2}>
   <Link
-    href="/apprendre/culture"
+    href="/histoire-condensee"
     className={styles.backLink2}
   >
     ← Retour

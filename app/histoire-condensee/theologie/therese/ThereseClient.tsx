@@ -191,7 +191,7 @@ export default function SevenMansionsPage() {
   <div className="mx-auto flex max-w-6xl items-center justify-between">
 
     <Link
-      href="/apprendre/culture"
+      href="/histoire-condensee"
       className="group inline-flex items-center gap-2 rounded-full border border-[#c6a972]/25 bg-white/[0.03] px-5 py-3 text-sm font-medium text-[#f5efe0] transition-all hover:border-[#c6a972]/50 hover:bg-white/[0.06]"
     >
       <span className="transition-transform group-hover:-translate-x-1">

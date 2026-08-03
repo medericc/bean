@@ -64,7 +64,7 @@ const teachings =
   <header className={styles.catherineHeader}>
     <div className={`container ${styles.catherineHeaderContent}`}>
       <Link
-        href="/apprendre/culture"
+        href="/histoire-condensee"
         className={styles.backLink}
       >
         ← Retour
@@ -150,7 +150,7 @@ alt="Drapeau du Béarn"
   
    <div className={styles.catherineHeaderContent2}>
       <Link
-        href="/apprendre/culture"
+        href="/histoire-condensee"
         className={styles.backLink2}
       >
         ← Retour
