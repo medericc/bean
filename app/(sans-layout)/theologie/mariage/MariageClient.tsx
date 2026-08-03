@@ -234,7 +234,7 @@ alt="Drapeau du Béarn"
 
   {/* QUOTE */}
   <section className={styles.quoteSection}>
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.quoteCard}>
         <div className={styles.quoteEmoji}>
           ✉️
@@ -261,7 +261,7 @@ alt="Drapeau du Béarn"
 
   {/* LEARNING */}
   <section className={styles.learningSection}>
-    <div className="container">
+    <div className={styles.container}>
       <h2 className={styles.sectionTitle}> {langue === 'fr'  ?
         'Enseignements spirituels' :   'Ensegnaméns spirituèls' }
       </h2>
@@ -291,7 +291,7 @@ alt="Drapeau du Béarn"
 
   {/* FINAL */}
   <section className={styles.finalSection}>
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.quoteCard}>
         <div className={styles.quoteEmoji}>
           🔥

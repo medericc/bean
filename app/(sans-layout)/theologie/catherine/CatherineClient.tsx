@@ -247,7 +247,7 @@ alt="Drapeau du Béarn"
   
   
   
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.heroContent}>
         <h2> {langue === 'fr' ? (
     <>Une femme simple
@@ -273,7 +273,7 @@ alt="Drapeau du Béarn"
 
   {/* QUOTE */}
   <section className={styles.quoteSection}>
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.quoteCard}>
         <div className={styles.quoteEmoji}>
           ✉️
@@ -297,7 +297,7 @@ alt="Drapeau du Béarn"
 
   {/* DOCTOR */}
   <section className={styles.doctorSection}>
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.doctorCard}>
         <h3> {langue === 'fr'  ?
           'Docteur de l’Église' : 'Douctur de la Glèyse' }
@@ -331,7 +331,7 @@ alt="Drapeau du Béarn"
 
   {/* LEARNING */}
   <section className={styles.learningSection}>
-    <div className="container">
+    <div className={styles.container}>
       <h2 className={styles.sectionTitle}> {langue === 'fr'  ?
         'Enseignements spirituels' :   'Ensegnaméns spirituèls' }
       </h2>
@@ -361,7 +361,7 @@ alt="Drapeau du Béarn"
 
   {/* FINAL */}
   <section className={styles.finalSection}>
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.quoteCard}>
         <div className={styles.quoteEmoji}>
           🔥

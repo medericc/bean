@@ -248,7 +248,7 @@ alt="Drapeau de la France"
     </div>
 
 
-    <div className="container">
+    <div className={styles.container}>
 
       <div className={styles.heroContent}>
 
@@ -281,7 +281,7 @@ alt="Drapeau de la France"
 
   {/* QUOTE */}
   <section className={styles.quoteSection}>
-    <div className="container">
+    <div className={styles.container}>
 
       <div className={styles.quoteCard}>
 
@@ -328,7 +328,7 @@ alt="Drapeau de la France"
 
   {/* LEARNING */}
   <section className={styles.learningSection}>
-    <div className="container">
+    <div className={styles.container}>
 
      <h2 className={styles.sectionTitle}>
   {langue === 'fr'
@@ -377,7 +377,7 @@ alt="Drapeau de la France"
 
   {/* FINAL QUOTE */}
   <section className={styles.finalQuoteSection}>
-    <div className="container">
+    <div className={styles.container}>
 
       <div className={styles.quoteCard}>
 

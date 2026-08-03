@@ -29,7 +29,10 @@
 
   overflow: hidden;
 }
-
+.container {
+  width: min(1400px, calc(100% - 2rem));
+  margin-inline: auto;
+}
 /* =========================================
    HEADER
 ========================================= */

@@ -176,7 +176,7 @@ alt="Drapeau de la France"
     </button>
   </div>
     </div>
-          <div className="container">
+          <div className={styles.container}>
             <div className="hero-card">
               <span className="badge">
                 
@@ -218,7 +218,7 @@ alt="Drapeau de la France"
 
         {/* INTRO */}
         <section className="intro-section">
-          <div className="container">
+          <div className={styles.container}>
             <div className="intro-box">
            
            
@@ -263,7 +263,7 @@ alt="Drapeau de la France"
           </div>
         </section>
  <section className="content-section alt">
-          <div className="container">
+          <div className={styles.container}>
             <div className="grid">
               <div className="card full dark">
             
@@ -425,7 +425,7 @@ alt="Drapeau de la France"
         </section>
         {/* SECTION 1 */}
         <section className="content-section">
-          <div className="container">
+          <div className={styles.container}>
             <div className="grid">
               <div className="card large">
              
@@ -556,7 +556,7 @@ alt="Drapeau de la France"
 
         {/* SECTION 2 */}
            <section className="content-section alt">
-          <div className="container">
+          <div className={styles.container}>
             <div className="card full dark">
        {langue === 'fr' ? (
     <>         <h3>❤️ Le cœur, siège de l’âme</h3>
@@ -610,7 +610,7 @@ alt="Drapeau de la France"
 
         {/* SECTION 3 */}
         <section className="content-section">
-          <div className="container">
+          <div className={styles.container}>
             <div className="grid">
               <div className="card">
             
@@ -716,7 +716,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
 
         {/* SECTION 4 */}
         <section className="content-section alt">
-          <div className="container">
+          <div className={styles.container}>
             <div className="card full dark">
            
             {langue === 'fr' ? (
@@ -784,7 +784,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
 
         {/* FINAL */}
         <section className="final-section">
-          <div className="container">
+          <div className={styles.container}>
             <div className="final-box">
          
            {langue === 'fr' ? (
