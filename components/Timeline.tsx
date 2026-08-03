@@ -212,7 +212,7 @@ export default function Timeline() {
 
                 {/* 🔗 Lien dynamique */}
                 <Link
-                  href={`/histoire-condense/${periode.slug}`}
+                  href={`/histoire-condensee/${periode.slug}`}
                   className="mt-4 inline-block text-or-patine hover:text-brun-terre font-corps font-medium transition-colors"
                 >
                   En savoir plus →

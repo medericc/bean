@@ -220,7 +220,7 @@ export default function Timeline() {
                   </p>
 
                   <Link
-                    href={`/histoire-condense/${
+                    href={`/histoire-condensee/${
   mode === 'bearn'
     ? 'bearn'
     : 'monde'

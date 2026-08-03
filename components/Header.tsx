@@ -9,7 +9,7 @@ export default function Header() {
   const menuItems = [
     { label: 'Accueil', href: '/' },
     // { label: 'Histoire', href: '/histoire' },
-     { label: 'Histoire', href: '/histoire-condense' },
+     { label: 'Histoire', href: '/histoire-condensee' },
     { label: 'Lignées', href: '/lignees' }, // <-- ici la correction
     // { label: 'Vicomtes', href: '/vicomtes' },
     { label: 'À propos', href: '/a-propos' },
