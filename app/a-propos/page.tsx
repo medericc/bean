@@ -2,7 +2,8 @@
 'use client';
 
 import { useState } from 'react';
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 
 // Composant Card pour les ressources
@@ -28,7 +29,7 @@ function ResourceCard({ titre, auteur, type, description, annee, lien, details }
 
   const config = typeConfig[type];
 
-  return ( <> 
+  return ( <>  
     <div className="bg-parchemin rounded-lg border border-or-patine overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
       {/* En-tête de la carte */}
       <div className={`${config.color} text-white p-4`}>
@@ -202,7 +203,8 @@ export default function AProposPage() {
     { nombre: "200+", label: "Documents analysés" }
   ];
 
-  return (
+  return ( <>
+    <Header />
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
       <section className="bg-pierre py-16">
@@ -390,6 +392,6 @@ export default function AProposPage() {
           </div>
         </div>
       </section>
-    </div>
+    </div> <Footer /> </>
   );
 }

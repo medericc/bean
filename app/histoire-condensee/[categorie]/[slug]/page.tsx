@@ -3,7 +3,8 @@
 import { notFound } from "next/navigation";
 import ExpandableSection from "./ExpandableSection";
 import type { Metadata } from "next";
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 
 export async function generateMetadata(
@@ -1699,6 +1700,8 @@ const pageData =
 
 
   return (
+<>
+    <Header />
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
       <section className="relative h-96 bg-gray-900">
@@ -1766,7 +1769,7 @@ const pageData =
           </a>
         </div>
       </section>
-    </div>
+    </div>   <Footer /> </>
   );
 }
 

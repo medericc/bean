@@ -1,6 +1,7 @@
 // app/lignees/[slug]/page.tsx
 export const dynamic = "force-dynamic";
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -153,7 +154,8 @@ export default async function LigneeDetailPage(
     notFound();
   }
 
-  return (
+  return ( <>
+    <Header />
     <div className="min-h-screen bg-parchemin">
       {/* En-tête avec image */}
     <section className="bg-pierre py-16">
@@ -254,7 +256,7 @@ export default async function LigneeDetailPage(
           </div>
         </div>
       </section>
-    </div>
+    </div> <Footer /> </>
   );
 }
 

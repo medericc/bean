@@ -1,6 +1,7 @@
 // app/lignees/page.tsx
 import Card from '@/components/Card';
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 export const metadata = {
   title: "Lignées du Béarn",
 }
@@ -53,7 +54,8 @@ const lignees = [
 ];
 
 export default function LigneesPage() {
-  return (
+  return ( <>
+    <Header />
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
       <section className="bg-pierre py-16">
@@ -117,6 +119,6 @@ export default function LigneesPage() {
           </div>
         </div>
       </section>
-    </div>
+    </div> <Footer /> </>
   );
 }
