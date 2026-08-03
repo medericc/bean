@@ -225,7 +225,7 @@ alt="Drapeau de la France"
          {langue === 'fr' ? (
     <>   
            
-              <h2>✨ Le mystère de l’âme et du corps</h2>
+              <h3>✨ Le mystère de l’âme et du corps</h3>
 
               <p>
                 Pour Hildegarde,
@@ -246,7 +246,7 @@ alt="Drapeau de la France"
   ) : (
     <>     
           
-             <h2>✨ Lou misteri de l&lsquo;àmne e dou cos</h2>
+             <h3>✨ Lou misteri de l&lsquo;àmne e dou cos</h3>
 
               <p>
               Ta Hildegarde, la councepcioû n’éy pas û sìmplẹ fénomène bioulouyique. Lou cos uma qu&lsquo;éy fourmat chic à chic déns lou bènte de la may, coum ûe tèrre graniu preparade à recébẹ û hoéc biénut de Diu. 
