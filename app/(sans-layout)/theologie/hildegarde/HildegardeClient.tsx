@@ -306,17 +306,18 @@ alt="Drapeau de la France"
                 <h3>💞 L&lsquo;empourtance de l&lsquo;unioû dous paréns</h3>
 
         <p>
-         Hildegarde l&lsquo;esplìque de qu&lsquo;ou hìdye qu&lsquo;entertien la calou bitale en rescauhan lou co, alabéts qui la courade qu&lsquo;ou prouteye e qu&lsquo;ou embouloupe.
-          
-        </p>
-
-        <p>
-        Deya déns lou bènte de la may, l&lsquo;amne coumence à desbelha doussemen lous cinc sèns dou maynàdye, coum ûe presénce spirituau qui prepare chic à chic « l&lsquo;òmi de dehore » abans la badence.
+     Hildegarde l‘esplique qu‘ou hìdye entertien la calou bitale en rescauhan lou co, alabéts qui la courade lou proutedye e l’embelope.
 
         </p>
 
         <p>
-       Mé Hildegarde ensìste sustout sus û punt essencioû : l’estat de-dehéns dous paréns au moumén de l&lsquo;acte enfluence pregoundamen lou maynàdye à biéne. Ûe unioû biscude héns la caritat, l&lsquo;amou franc e la pats dou co que faborìse segoun ére la badence d’û èste armounious, abisat e bertuous.
+  Deya déns lou bènte de la may, l‘àmne coumence à desbelha doussemen lous cinc séns dou maynàdye, coum ûe presénce spirituale qui prepare chic à chic « l‘òmi de dehore » abans la badence.
+
+
+        </p>
+
+        <p>
+ Mé Hildegarde ensiste sustout sus û punt substancious : l’estat de-dehéns dous paréns au moumén de l‘acte enfluence pregoundamen lou maynàdye à biéne. Ûe unioû biscude déns la caritat, l‘amou franc e la pats dou co fabourise segoun ére la badence d’û èste armounious, abisat e bertuous.
 
         </p>
            
@@ -395,23 +396,26 @@ alt="Drapeau de la France"
            
            
               <p>
-         Au countràri, ûe councepcioû mercade per l’amarè, lou malìci, lous bìcis ou lou mancat d’amou pot destroubla aquére armounie. Lou maynàdye risque alabéts de pourta ûe complexioû méy mauayside : temperamén escu, de malìci ou bìbes de barreyade.       </p>
+      Au countràri, ûe councepcioû mercade per l’amarè, la malì, lous bìcis ou lou mancat d’amou pot troubla aquére armounie. Lou maynàdye risque alabéts de pourta ûe complexioû méy mauayside : temperamén escu, colere ou coumporteméns de barreyade.
+
+</p>
+        <p>
+ Hildegarde descriu tabé certéns desaploums enter lou pay e la may : si l’amou bertadè abite l’û mé noû l’àute, lou maynàdye poudera bàde méy debìle, ménch stàble ou abé dou mau à trouba la gauyou e l’aploum.
+
+    </p>
 
         <p>
-    Hildegarde descriu tabé certéns desequilibris enter lou pay e la may : si l’amou bertadè abite l’û mé noû l’àute, lou maynàdye poudera bàde méy debìle, ménch stàble ou abé dou mau à trouba la gauyou e l’equilibrì.
+   Que-s yuntat tabé lous periodes de la lûe a las dispausicioûs naturales dou maynàdye : certènes dispausicioûs fabourise l’ourgul ou l’asprou, alabéts qui d’àutes que-n anounceren fidelitat, santat e bounur.
+
+    </p>
+
+        <p>
+    Toutû, arré n’éy pas tout à fèyt estancat. Medich quoan ûe badence sémble mercade per dificultats, Hildegarde afirme que Diu pot encoère transfourma aquéste nature. Coum epices adouban ûe mascadure amare, la force spirituale, ûe bite drète e ûe boune maniere de bìbe pòden goari e tourna aplouma l’uma.
+
         </p>
 
         <p>
-      Que-s yuntat tabé lous mouméns de la lue a las dispousicioûs naturàles dou maynàdye : certènes tempourades que fabourise l’ourgul ou l’asprou, alabéts qui d’àutes que-n anounçaren fidelitat, santat e bounur.
-        </p>
-
-        <p>
-       Toutû, arré n’éy pas tout à fèyt estancat. Medich quoan ûe badence sémble mercade per dificultats, Hildegarde afirme que Diu pot encoère transfourma aquéste nature. Coum epices adouban ûe mascadure amare, la force spirituau, ûe bite drète e ûe boune maniere de bìbe pòden goari e tourna equilibra l’uma.
-
-        </p>
-
-        <p>
-      Atau, maugrat las feblesses ou lous barréys preséns au moumén de la councepcioû, la gràci dibîne demoùre toustém capàble d’ayda, de repara e de counduìse l’uma de cap à méy d’armounie.
+Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepcioû, la gràci dibîne demoure toustém capàble d’ayda, de repara e de counduìse l’uma de cap à méy d’armounie.
 
         </p>
            
