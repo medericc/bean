@@ -57,7 +57,7 @@ const teachings = [
     titleBe: 'L’orientacioû',
   
     textFr: `Il est permis de prier pour la santé (intégrité de l'âme et du corps), l'amitié (l'affection envers les proches) et le nécessaire (nourriture et vêtement) pour maintenir un état convenable sans tomber dans l'excès ou l'orgueil et rester orienté vers 1 seule fin.`,
-    textBe: `Qu'éy permetut de prega ta la santat (integritat de l'àmne e dou cos), l'amistat (l'affecioû dap lous proches) e lou necessàri (mascadure e pélhe) ta tiéne û estat chéns càde déns l'excès ou l'ourgul. Per necessitat ta serbi Diu, ne pas decha la councupisence mia aquéts soégns, e demoura orientat de cap a ûe soule fì.`
+    textBe: `Qu'éy permetut de prega ta la santat (integritat de l'amne e dou cos), l'amistat (l'affecioû dap lous proches) e lou necessàri (mascadure e pélhe) ta tiéne û estat chéns càde déns l'excès ou l'ourgul. Per necessitat ta serbi Diu, ne pas decha la councupisence mia aquéts soégns, e demoura orientat de cap a ûe soule fì.`
    },
   {
     titleFr: 'Le vrai bonheur',

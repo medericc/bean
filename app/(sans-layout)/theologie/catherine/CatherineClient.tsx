@@ -46,7 +46,7 @@ const teachingsB = [
 
 
  
-  `Ne pas jaméy yudya la boulentat dous àutes e ne-s senti aufensat soùnque p'ou qu’aufénse Diu. Si Diu que-t hè senti la doulou d'aquére àmne, qu'éy ta qui-t l'àydis. Medich ûe pensade ourgulhouse hè dou mau au prouchén, qu'ou pribes d'ûe pregàri. Que cau boulé lou salut de las àmnes e ha la boulentat de Diu, noû pas la soûe.`,
+  `Ne pas jaméy yudya la boulentat dous àutes e ne-s senti aufensat soùnque p'ou qu’aufénse Diu. Si Diu que-t hè senti la doulou d'aquére amne, qu'éy ta qui-t l'àydis. Medich ûe pensade ourgulhouse hè dou mau au prouchén, qu'ou pribes d'ûe pregàri. Que cau boulé lou salut de las amnes e ha la boulentat de Diu, noû pas la soûe.`,
 
 
 
@@ -66,7 +66,7 @@ const teachingsB = [
   `Û crestia qui pechque qu'éy méy coupàble qu'û pagâ permou que méy que recebèm, méy que debem rénde. Lou demoun que-ns pot ha càde soùnque si dam lou noùste counsentimen. Diu permet la tentacioû ta que-n proùbim lou noùste amou e grandìm en counechénce de nousàutes. Que cau tira lous soûs ligames dou moùnde ta que Diu entre.`,
 
 
-  `Taus qui ne pòden pas ploura (Diu qu'at hè ta-t empecha de debiéne orgulhous ou de-t acountenta de la toûe emoucioû), qu'éy lou desi ardent dou co qui coùmpte autâ que l'aygue dous oélhs (l'oélh translate ço qu’ou co sén, û co plé d'amou-pròpi da larmes ourgulhouse). La perfeccioû qu'éy de ploura sus lous pecats dou moùnde e la pèrte de las àmnes.`,
+  `Taus qui ne pòden pas ploura (Diu qu'at hè ta-t empecha de debiéne orgulhous ou de-t acountenta de la toûe emoucioû), qu'éy lou desi ardent dou co qui coùmpte autâ que l'aygue dous oélhs (l'oélh translate ço qu’ou co sén, û co plé d'amou-pròpi da larmes ourgulhouse). La perfeccioû qu'éy de ploura sus lous pecats dou moùnde e la pèrte de las amnes.`,
 
 
   `Lous qu’ataquen la Glèyse ne pòden pas touca Diu, mé que perden la gràci, ço qu'ous mie à la pèrte si ne-s repénten pas. Touca a û prèste (ou per despudi), qu'éy aufensat Diu directamén. Lou prèste qu'éy û tresor héns û bachèth de tèrre. Tout lou bê e lou mau que-s hèn per lou prouchén.`,
