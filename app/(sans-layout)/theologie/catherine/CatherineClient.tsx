@@ -34,37 +34,45 @@ const teachingsF = [
 ]
 
 const teachingsB = [
-  `L'amou-pròpi qu'éy lou pousoû dou moùndẹ e que produsech touts lous pecats. Ne pas courridya û pecadou per pòu ou dousseya las soûes frases per counfòrt souciau, qu'éy coum û medecî qui hique û pansamén sus ûe plague pudentisse chéns la neteya. Que poudém médich ha nous-medich la soûe penitence permou qu'aquéste pecat qu'éy soulamen adroumit déns nous.`,
+  `L'amou-pròpi qu'éy lou pousoû dou moùnde e que produsech touts lous pecats. Ne pas courridya û pecadou per pòu ou dousseya las soûes frases per counfor souciau, qu'éy coum û medecî qui hique û pansamén sus ûe plague pudentisse chéns la neteya. Que poudém médich ha nous-medich la soûe penitence permou qu'aquéste pecat qu'éy soulamen adroumit en nous.`,
 
 
-  `Lous pecadous en tentan lous òmis que debiénen lous utìs qui hìquen à l'espròbe e qu'agalharden la bertut dous serbitous de Diu. La bertut déns lou mauaysit qu'a méy de balou que déns la gauyou, coum û yardinè qui pèr lou soû casau e countinue de tribalha la tèrre. Û laïque qui aubedi dap û gran amou qu'a méy de merite qu'û reliyious qui aubedi per abitude.`,
 
-  `Ne-s pot pas segui lou Crist au noùste coumbenénce, que cau segui lou soû camì d'umilitat. Lous pecadous soufèren coum lous sènts mé la loue soufrence n'éy pas utìlẹ. Û petit àctẹ hèyt dap caritat qu'a méy de pés qui doulous subi chéns amou. Ne soufrim pas ta nous-medich, mé per amou ta Diu e per la doulou de bédẹ lous àutẹs-s pèrdẹ.`,
+
+  `Lous pecadous en tentan lous òmis debiénen lous utìs qui hìquen à l'espròbe e qu'agalharden la bertut dous serbitous de Diu. La bertut déns lou mauaysit qu'a méy de balou qui déns la gauyou, coum û yardinè qui pèr lou soû casau e countinue de tribalha la tèrre. Û laïque qui aubedi dap û gran amou qu'a méy de merite qu'û reliyious qu’aubedi per abitude.`,
+
+
+  `Ne-s pot pas segui lou Crist dap la noùste coumbenénce, que cau segui lou soû camì d'umilitat. Lous pecadous soufèren coum lous séns mé la loue soufrénce n'éy pas utìle. Û petit àcte hèyt dap caritat qu'a méy de pés qui doulous subi chéns amou. Ne soufrim pas ta nous-medich, mé per amou ta Diu e per la doulou de béde lous àutes pèrde-s.`,
+
 
  
- 
- 
-  `Ne pas jaméy yudyat la boulentat dous àutẹs e ne-s senti aufensat soùnquẹ p'ou qui aufénse Diu. Si Diu que-t hè senti la doulou d'aquére àmne, qu'éy ta que-t l'àydis. Medich ûe pensade egoïste que hè dou mau au prouchén, qu'ou pribes d'ûe pregàri. Que cau boulé lou salut de las àmnes e ha la boulentat de Diu, noû pas la soûe.`,
+  `Ne pas jaméy yudya la boulentat dous àutes e ne-s senti aufensat soùnque p'ou qu’aufénse Diu. Si Diu que-t hè senti la doulou d'aquére àmne, qu'éy ta qui-t l'àydis. Medich ûe pensade ourgulhouse hè dou mau au prouchén, qu'ou pribes d'ûe pregàri. Que cau boulé lou salut de las àmnes e ha la boulentat de Diu, noû pas la soûe.`,
 
-  `Diu bòu que lou rìche àyi besougn dou pràubẹ e qu'ou saben àyi besougn de l'ignouren. Ta-ns hourça à la caritat. Si abès touts lous talénts, ne-t caleré pas lou moùndẹ e que caderés héns l'ourgul. Diu que-ns emplegue coum las soûes mâs ta desparti lous soûs dats. Si qu'as quàuqu'arré, qu'éy ta-u da au qui n'a pas.`,
 
-  `Si ne-t sèrbes pas de la toûe resoû ta cerca la Bertat, que marches à l'abùglẹ e que bas ayma lou mau en credén qu'éy û bê. Si tournes sourti lou bachèth de la houn ta da à bébẹ aus àutẹs, que-s boéyte bìstẹ. Si qu'ès trìste permou qui ne-t rendém pas lou toû amou, qu'éy qui lou toû amou n'éy pas encoère perfèyt e qu'éy en-clabat sus tu.`,
 
-  `Héns la bite spirituau, lou qui n'abance pas recule. Que cau passa de la pòu dou castic à l'amou de la bertut. Arré ne pot sourti de la mâ de Diu. Que demouren aciu per la misericorde ou debath la soûe yustìci. Si la tentacioû ne-t plats pas, qu'éy la probe de que Diu qu'éy déns tu.`,
 
-  `Diu retìre lou sentimén de la soûe presénce ta-ns empecha de debiénẹ "maynats gastats" qui ne cèrcan soùnquẹ lous douçous spirituaus ta que coumprenìm qui lou pecat qu'éy boéyt e que-ns ne toùrnim ta lou. Coum ûe may qu'arreste d'apoupa lou soû maynat ta qui couménce à minya mascadure. Ne pas s'ayma nous-medich à trabèrs Diu.`,
+  `Diu bòu qu’ou rìche àyi besougn dou pràube e qu'ou sabén àyi besougn de l'ignouren. Ta-ns hourça à la caritat. Si abès touts lous talénts, ne-t caleré pas lou moùnde e que caderés déns l'ourgul. Diu que-ns emplegue coum las soûes mâs ta desparti lous soûs dats. Si qu'as quàuqu'arré, qu'éy ta-u da au qui n'a pas.`,
 
-  
-  
-  
-  `Û crestia qui pechque qu'éy méy coupàble qu'û pagâ permou que méy que recebèm, méy que debem réndẹ. Lou demoun que-ns pot ha càdẹ soùnquẹ si dam lou noùstẹ counsentimen. Diu permet la tentacioû ta que-n proùbim lou noùstẹ amou e grandìm en counechénce de nousàutẹs. Que cau tira lous soûs ligames dou moùndẹ ta que Diu entre.`,
 
-  `Taus qui ne pòdẹn pas ploura (Diu qu'at hè ta-t empecha de debiénẹ orgulhous ou de-t acountenta de la toûe emoucioû), qu'éy lou desi ardent dou co qui coùmpte autâ que l'aygue dous oélhs (l'oélh qu'arrebire ço qui lou co sen, û co plé d'amou-pròpi da larmes egoïstes). La perfeccioû qu'éy de ploura sus lous pecats dou moùndẹ e la pèrtẹ de las àmnes.`,
+  `Si ne-t sèrbes pas de la toûe resoû ta cerca la Bertat, que marches à l'abùgle e que bas ayma lou mau en credén qu'éy û bê. Si tournes sourti lou bachèth de la houn ta da à bébe aus àutes, que-s boéyte bìste. Si qu'ès trìste permou qui ne-t rendém pas lou toû amou, qu'éy qu’ou toû amou n'éy pas encoère perfèyt e qu'éy embarra sus tu.`,
 
-  `Lous qui atàquen la Glèyse ne pòdẹn pas touca Diu, mé que pèrden la gràci, ço qu'ous mie ta la pèrtẹ si ne-s repénten pas. Touca a û prèste (ou per despudi), qu'éy aufensat Diu directamén. Lou prèste qu'éy û tresor héns û bachèth de tèrre. Tout lou bê e lou mau que-s hèn per lou prouchén.`,
 
-  `Diu da à chacû lous secours doun a besougn, qu'éy lou boû e beritàblẹ medecî. Si permé ûe espròbe qu'éy ta la toûe santificacioû. La hàmi, la sét, la pèrte de mounéde, las enhountes, lou rét que pèrmetẹn û but precis : lou salut. La sodomie ou la masturbacioû que soun hàstis, medich lous demouns (per noublesse de nature anyoulique) que-n soun espaurits.`
+  `Déns la bite spirituau, lou qui n'abance pas recule. Que cau passa de la pòu dou castic à l'amou de la bertut. Arré ne pot sourti de la mâ de Diu. Que demouren aciu per la soûe misericorde ou debath la soûe yustìci. Si la tentacioû ne-t plats pas, qu'éy la probe de que Diu qu'éy déns tu.`,
 
+
+  `Diu retìre lou sentimén de la soûe presénce ta-ns empecha de debiéne "maynats gastats" qui ne cèrcan soùnque lous doussous spirituales ta qui coumprenìm qu’ou pecat qu'éy boéyt e que-ns ne toùrnim à lou. Coum ûe may qu'arreste d'apoupa lou soû maynat ta qui couménce à minya mascadure. Ne pas s'ayma nous-medich à trabèrs Diu.`,
+
+
+  `Û crestia qui pechque qu'éy méy coupàble qu'û pagâ permou que méy que recebèm, méy que debem rénde. Lou demoun que-ns pot ha càde soùnque si dam lou noùste counsentimen. Diu permet la tentacioû ta que-n proùbim lou noùste amou e grandìm en counechénce de nousàutes. Que cau tira lous soûs ligames dou moùnde ta que Diu entre.`,
+
+
+  `Taus qui ne pòden pas ploura (Diu qu'at hè ta-t empecha de debiéne orgulhous ou de-t acountenta de la toûe emoucioû), qu'éy lou desi ardent dou co qui coùmpte autâ que l'aygue dous oélhs (l'oélh translate ço qu’ou co sén, û co plé d'amou-pròpi da larmes ourgulhouse). La perfeccioû qu'éy de ploura sus lous pecats dou moùnde e la pèrte de las àmnes.`,
+
+
+  `Lous qu’ataquen la Glèyse ne pòden pas touca Diu, mé que perden la gràci, ço qu'ous mie à la pèrte si ne-s repénten pas. Touca a û prèste (ou per despudi), qu'éy aufensat Diu directamén. Lou prèste qu'éy û tresor héns û bachèth de tèrre. Tout lou bê e lou mau que-s hèn per lou prouchén.`,
+
+
+  `Diu da à chacû lous secours doun qu’a besougn, qu'éy lou boû e beritàble medecî. Si permé ûe espròbe qu'éy ta la toûe santificacioû. La hàmi, la sét, la pèrte de mounéde, las enhountes ou lou rét que permeten û but precis : lou salut. La sodomie ou la masturbacioû que soun hàstis, medich lous demouns (per noublesse de nature anyoulique) que-n soun espaurits.`
 
 
 ]
