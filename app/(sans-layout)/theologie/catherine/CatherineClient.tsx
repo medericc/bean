@@ -60,7 +60,7 @@ const teachingsB = [
   `Déns la bite spirituau, lou qui n'abance pas recule. Que cau passa de la pòu dou castic à l'amou de la bertut. Arré ne pot sourti de la mâ de Diu. Que demouren aciu per la soûe misericorde ou debath la soûe yustìci. Si la tentacioû ne-t plats pas, qu'éy la probe de que Diu qu'éy déns tu.`,
 
 
-  `Diu retìre lou sentimén de la soûe presénce ta-ns empecha de debiéne "maynats gastats" qui ne cèrcan soùnque lous doussous spirituales ta qui coumprenìm qu’ou pecat qu'éy boéyt e que-ns ne toùrnim à lou. Coum ûe may qu'arreste d'apoupa lou soû maynat ta qui couménce à minya mascadure. Ne pas s'ayma nous-medich à trabèrs Diu.`,
+  `Diu retìre lou sentimén de la soûe presénce ta-ns empecha de debiéne "maynats gastats" qui ne cèrcan soùnque lous doussous spirituales ta qui coumprenìm qu’ou pecat qu'éy boéyt e que-ns ne toùrnim à lou. Coum ûe may qu'arreste d'apoupa lou soû maynat ta qui couménce à minya mascadure. Ne pas s'ayma nous-medich à trubès Diu.`,
 
 
   `Û crestia qui pechque qu'éy méy coupàble qu'û pagâ permou que méy que recebèm, méy que debem rénde. Lou demoun que-ns pot ha càde soùnque si dam lou noùste counsentimen. Diu permet la tentacioû ta que-n proùbim lou noùste amou e grandìm en counechénce de nousàutes. Que cau tira lous soûs ligames dou moùnde ta que Diu entre.`,
