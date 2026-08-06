@@ -763,7 +763,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
            </p>
 
               <p>
-            Las bounes obres que la coùbren de luts e d’û esclat menat à l’or. Lou pecat coum la fournicacioû, au countràri, que la coubrèch d’escurade, coum û pousoû arrougagnan de-dehéns.
+            Las bounes obres que la coùbren de luts e d’û esclat semblable à l’or. Lou pecat coum la fournicacioû, au countràri, que la coubrèch d’escurade, coum û pousoû arrougagnan de-dehéns.
 
               </p>
 
