@@ -155,7 +155,7 @@ export default async function LigneeDetailPage(
   }
 
   return ( <>
-    <Header />
+   
     <div className="min-h-screen bg-parchemin">
       {/* En-tête avec image */}
     <section className="bg-pierre py-16">
@@ -256,7 +256,7 @@ export default async function LigneeDetailPage(
           </div>
         </div>
       </section>
-    </div> <Footer /> </>
+    </div>  </>
   );
 }
 

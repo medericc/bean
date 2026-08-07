@@ -204,7 +204,7 @@ export default function AProposPage() {
   ];
 
   return ( <>
-    <Header />
+    
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
       <section className="bg-pierre py-16">
@@ -392,6 +392,6 @@ export default function AProposPage() {
           </div>
         </div>
       </section>
-    </div> <Footer /> </>
+    </div>  </>
   );
 }
