@@ -253,7 +253,7 @@ alt="Drapeau de la France"
               </p>
 
               <p>
-         Quoan lou cos éy près, Diu bouhe l&lsquo;amne : ûe realitat spirituale, lusènte, bibante, coumparàble a ûe sfère de hoéc caminan tout l&lsquo;umâ.
+         Quoan lou cos qu'éy près, Diu bouhe l&lsquo;amne : ûe realitat spirituale, lusènte, bibante, coumparàble a ûe sfère de hoéc caminan tout l&lsquo;umâ.
               </p>  
             
             </>
