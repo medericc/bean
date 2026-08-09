@@ -55,7 +55,7 @@ const lignees = [
 
 export default function LigneesPage() {
   return ( <>
-    <Header />
+
     <div className="min-h-screen bg-parchemin">
       {/* En-tête */}
       <section className="bg-pierre py-16">
@@ -119,6 +119,6 @@ export default function LigneesPage() {
           </div>
         </div>
       </section>
-    </div> <Footer /> </>
+    </div>  </>
   );
 }

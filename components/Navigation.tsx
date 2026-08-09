@@ -8,7 +8,7 @@ export default function Navigation() {
 
   const menuItems = [
     { label: 'Accueil', href: '/' },
-    { label: 'Histoire', href: '/histoire' },
+    { label: 'Histoire', href: '/histoire-condensee' },
     { label: 'Lignées', href: '/lignees' },
     { label: 'Vicomtes', href: '/vicomtes' },
     { label: 'À propos', href: '/a-propos' },

@@ -21,7 +21,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             
             <Link
-              href="/histoire"
+              href="/histoire-condensee"
               className="bg-or-patine text-white px-8 py-4 rounded-lg font-titre text-lg hover:bg-brun-terre transition-colors shadow-lg hover:shadow-xl"
             >
               Explorer l'Histoire

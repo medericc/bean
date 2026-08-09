@@ -33,7 +33,7 @@ export default function NotFound() {
                 🏰 Retour au Château Principal
               </Link>
               <div className="grid grid-cols-2 gap-3">
-                <Link href="/histoire" className="border-2 border-vert-mousse text-vert-mousse font-corps font-medium py-3 px-4 rounded-lg hover:bg-vert-mousse hover:text-white transition-colors text-center">
+                <Link href="/histoire-condensee" className="border-2 border-vert-mousse text-vert-mousse font-corps font-medium py-3 px-4 rounded-lg hover:bg-vert-mousse hover:text-white transition-colors text-center">
                   📜 Chroniques
                 </Link>
                 <Link href="/lignees" className="border-2 border-brun-terre text-brun-terre font-corps font-medium py-3 px-4 rounded-lg hover:bg-brun-terre hover:text-white transition-colors text-center">

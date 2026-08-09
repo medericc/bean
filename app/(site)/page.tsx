@@ -9,7 +9,7 @@ export default function Home() {
       titre: "Histoire Chronologique",
       description: "Parcourez les grandes périodes du Béarn",
       image: "/histoire-cover.jpg",
-      lien: "/histoire",
+      lien: "/histoire-condensee",
       badge: "Timeline"
     },
     {
