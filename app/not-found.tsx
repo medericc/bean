@@ -135,7 +135,7 @@ export default function NotFound() {
               {/* Boutons secondaires en colonne */}
               <div className="space-y-4 lg:space-y-5">
                 <Link
-                  href="/histoire"
+                  href="/histoire-condensee"
                   className="block w-full border-2 border-vert-mousse text-vert-mousse font-corps font-medium 
                            py-3 lg:py-4 xl:py-5 px-8 rounded-xl lg:rounded-2xl
                            hover:bg-vert-mousse hover:text-white transition-colors 
