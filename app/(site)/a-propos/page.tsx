@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
-
 // Composant Card pour les ressources
 interface ResourceCardProps {
   titre: string;

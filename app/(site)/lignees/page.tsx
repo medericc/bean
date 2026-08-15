@@ -3,8 +3,16 @@ import Card from '@/components/Card';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 export const metadata = {
-  title: "Lignées du Béarn",
-}
+  title: "Les Vicomtes de Béarn",
+  description:
+    "Découvrez les vicomtes de Béarn, de Centulle IV à Catherine de Bourbon : grandes lignées, périodes de règne, alliances et histoire de la souveraineté béarnaise.",
+  openGraph: {
+    title: "Les Vicomtes de Béarn",
+    description:
+      "Retrouvez les principaux vicomtes et souverains du Béarn, de la dynastie des Centulle aux Foix-Béarn et aux souverains de Navarre.",
+    type: "website",
+  },
+};
 const lignees = [
   {
     slug: "centulle",
