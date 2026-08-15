@@ -51,7 +51,15 @@ type Carte =
 
 export const metadata = {
   title: "Histoire du Béarn",
-}
+  description:
+    "Découvrez l'histoire du Béarn à travers les siècles : origines, vicomté, grandes lignées, Gaston Fébus, Navarre, Henri IV, Gnoses, Église Catholique, Hérésies, Maçonneries et patrimoine béarnais.",
+  openGraph: {
+    title: "Histoire du Béarn et du Monde",
+    description:
+      "Une histoire du Béarn et du Monde, des origines à Henri IV, à travers les vicomtes, les grandes lignées et les événements qui ont façonné le territoire.",
+    type: "website",
+  },
+};
 
 export default function HistoirePage() {
   return (
