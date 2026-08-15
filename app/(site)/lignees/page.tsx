@@ -3,13 +3,13 @@ import Card from '@/components/Card';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 export const metadata = {
-  title: "Les Vicomtes de Béarn",
+  title: "Lignées du Béarn",
   description:
-    "Découvrez les vicomtes de Béarn, de Centulle IV à Catherine de Bourbon : grandes lignées, périodes de règne, alliances et histoire de la souveraineté béarnaise.",
+    "Découvrez les grandes lignées qui ont gouverné le Béarn : Centulle, Gabarret, Moncade, Foix-Béarn et Navarre, ainsi que leurs héritages.",
   openGraph: {
-    title: "Les Vicomtes de Béarn",
+    title: "Lignées du Béarn",
     description:
-      "Retrouvez les principaux vicomtes et souverains du Béarn, de la dynastie des Centulle aux Foix-Béarn et aux souverains de Navarre.",
+      "Explorez les grandes familles et lignées qui ont marqué l'histoire politique du Béarn.",
     type: "website",
   },
 };
