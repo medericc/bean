@@ -4,16 +4,14 @@ import ThomasClient from './ThomasClient'
 export const metadata: Metadata = {
   title: "Saint Thomas d'Aquin : résumé de la Somme théologique",
   description:
-    "Synthèse des idées de saint Thomas d'Aquin : foi, charité, prudence, justice, morale, passions et théologie.",
-  keywords: [
-    "Saint Thomas d'Aquin",
-    "Somme théologique",
-    "thomisme",
-    "philosophie médiévale",
-    "théologie",
-    "vertus",
-  ],
-};
+    "Découvrez les grandes idées de saint Thomas d'Aquin à travers la Somme théologique : foi, raison, vertus, morale, passions, loi et vie chrétienne.",
+  openGraph: {
+    title: "Saint Thomas d'Aquin : résumé de la Somme théologique",
+    description:
+      "Une synthèse des grandes idées philosophiques et théologiques de saint Thomas d'Aquin.",
+    type: 'article',
+  },
+}
 
 export default function Page() {
   return <ThomasClient />

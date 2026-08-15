@@ -16,7 +16,10 @@ const crimsonText = Crimson_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
+  title: {
+  default: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
+  template: "%s | Mémoire du Béarn",
+},
   description:
     "Explorez l’histoire du Béarn de l’Antiquité à Henri IV. Découvrez les grandes lignées vicomtales – Centulle, Gabarret, Moncade, Foix et Navarre – et plongez dans le patrimoine culturel béarnais.",
   manifest: "/manifest.json",

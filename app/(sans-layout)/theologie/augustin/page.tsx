@@ -1,20 +1,17 @@
 import type { Metadata } from 'next'
 import AugustinClient from './AugustinClient'
 
-export const metadata = {
-  title: 'Saint Augustin et la prière | Culture chrétienne',
+
+export const metadata: Metadata = {
+  title: "Saint Augustin et la prière : enseignements et vie spirituelle",
   description:
-    "Découvrez les enseignements de Saint Augustin sur la prière, la vie éternelle, le désir de Dieu, l'amitié, la santé, la volonté divine et le vrai bonheur.",
-  keywords: [
-    'Saint Augustin',
-    'prière',
-    'enseignement chrétien',
-    'théologie catholique',
-    'docteur de l Église',
-    'vie éternelle',
-    'foi chrétienne',
-    'culture chrétienne',
-  ],
+    "Découvrez les enseignements de saint Augustin sur la prière, le désir de Dieu, la vie éternelle, la volonté divine, l'amitié et le vrai bonheur.",
+  openGraph: {
+    title: "Saint Augustin et la prière : enseignements et vie spirituelle",
+    description:
+      "Explorez la pensée de saint Augustin sur la prière, le désir de Dieu et la recherche du vrai bonheur.",
+    type: 'article',
+  },
 }
 
 export default function Page() {

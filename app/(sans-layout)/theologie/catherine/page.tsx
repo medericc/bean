@@ -1,20 +1,17 @@
 import type { Metadata } from 'next'
 import CatherineClient from './CatherineClient'
 
-export const metadata = {
-  title: 'Sainte Catherine de Sienne | Enseignements spirituels',
-  description:
-    'Découvrez la vie de Sainte Catherine de Sienne, Docteur de l’Église, ses enseignements spirituels, ses lettres au pape et son influence sur l’histoire de l’Église catholique.',
 
-    keywords: [
-    'Sainte Catherine de Sienne',
-    'Catherine de Sienne',
-    'Docteur de l’Église',
-    'théologie catholique',
-    'saints catholiques',
-    'spiritualité chrétienne',
-    'histoire de l’Église',
-  ],
+export const metadata: Metadata = {
+  title: "Sainte Catherine de Sienne : vie et enseignements spirituels",
+  description:
+    "Découvrez la vie de Sainte Catherine de Sienne, Docteur de l'Église, ses enseignements spirituels, ses lettres au pape et son influence dans l'histoire de l'Église.",
+  openGraph: {
+    title: "Sainte Catherine de Sienne : vie et enseignements spirituels",
+    description:
+      "Découvrez la vie, la spiritualité et les principaux enseignements de Sainte Catherine de Sienne.",
+    type: 'article',
+  },
 }
 
 export default function Page() {
