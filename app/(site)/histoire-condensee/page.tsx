@@ -97,7 +97,7 @@ export default function HistoirePage() {
               <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
                 <p>
                   Le Béarn a su préserver son identité à travers les siècles, 
-                  des premiers peuplements à son intégration dans le royaume de France.
+                  des premiers peuplements à sa conquête du royaume de France.
                 </p>
                 <p>
                   Sa position stratégique dans les Pyrénées en a fait un territoire 
