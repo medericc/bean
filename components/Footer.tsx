@@ -42,13 +42,13 @@ export default function Footer() {
           <div>
             <h4 className="font-titre text-lg text-brun-terre mb-4">Contact</h4>
             <p className="font-corps text-gray-700 text-sm mb-2">
-              Suggestions ou questions ?
+              On est actif sur les réseaux !
             </p>
             <a 
-              href="/a-propos" 
+              href="/https://www.instagram.com/toquey_si_gauses/" 
               className="inline-flex items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
             >
-              Nous contacter
+              Notre Instagram
             </a>
           </div>
         </div>
