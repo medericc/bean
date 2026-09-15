@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
     description:
-      "Plongez au cœur de l’histoire du Béarn, des origines antiques aux rois de Navarre. Un site dédié aux vicomtés, lignées et héritages du Béarn.",
+      "Plongez au cœur de l’histoire du Béarn, des origines antiques aux rois de Navarre. Un site dédié aux vicomtes, lignées et héritages du Béarn.",
     url: "https://www.histoirebearn.fr/",
     siteName: "Mémoire du Béarn",
     locale: "fr_FR",
