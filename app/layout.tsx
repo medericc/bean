@@ -103,10 +103,7 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${crimsonText.variable}`}>
       <body className="antialiased bg-background text-foreground font-[var(--font-inter)]">
         {/* JSON-LD Schema.org */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+       
    <GoogleTagManager gtmId="GTM-MQX52KCG" />
 
         <noscript>
@@ -117,7 +114,10 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-     
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
        
         <Analytics />
