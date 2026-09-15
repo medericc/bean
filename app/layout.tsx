@@ -3,7 +3,7 @@ import { Inter, Crimson_Text } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/next";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -107,7 +107,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+   <GoogleTagManager gtmId="GTM-MQX52KCG" />
 
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MQX52KCG"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
      
         {children}
        
