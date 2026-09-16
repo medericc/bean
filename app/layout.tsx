@@ -101,6 +101,10 @@ export default function RootLayout({
 
   return (
     <html lang="fr" className={`${inter.variable} ${crimsonText.variable}`}>
+    
+    <head> <meta name="google-site-verification" content="bkMPmGoEuaRWDYIDy5nqOSICbq_a87ndZAmFouUItWQ" /></head>
+    
+    
       <body className="antialiased bg-background text-foreground font-[var(--font-inter)]">
         {/* JSON-LD Schema.org */}
        
