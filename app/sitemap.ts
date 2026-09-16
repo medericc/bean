@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/histoire-condense`,
+      url: `${baseUrl}/histoire-condensee`,
       lastModified: new Date(),
     },
     {

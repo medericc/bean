@@ -23,18 +23,7 @@ export const metadata: Metadata = {
   description:
     "Explorez l’histoire du Béarn de l’Antiquité à Henri IV. Découvrez les grandes lignées vicomtales – Centulle, Gabarret, Moncade, Foix et Navarre – et plongez dans le patrimoine culturel béarnais.",
   manifest: "/manifest.json",
-  keywords: [
-    "Béarn",
-    "Histoire du Béarn",
-    "Vicomté du Béarn",
-    "Henri IV",
-    "Centulle",
-    "Moncade",
-    "Foix",
-    "Navarre",
-    "Patrimoine",
-    "Culture béarnaise",
-  ],
+
   authors: [{ name: "Mémoire du Béarn" }],
   creator: "Mémoire du Béarn",
   publisher: "Mémoire du Béarn",
