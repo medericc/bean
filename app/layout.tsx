@@ -17,11 +17,11 @@ const crimsonText = Crimson_Text({
 
 export const metadata: Metadata = {
   title: {
-  default: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
+  default: "Mémoire du Béarn – Histoire et politique du Béarn",
   template: "%s | Mémoire du Béarn",
 },
   description:
-    "Explorez l’histoire du Béarn de l’Antiquité à Henri IV. Découvrez les grandes lignées vicomtales – Centulle, Gabarret, Moncade, Foix et Navarre – et plongez dans le patrimoine culturel béarnais.",
+    "L'histoire du Béarn à travers Fébus, Jeanne d'Albret et Gaston le Croisé : comprenez le contexte politique actuel. Découvrez la vicomté, les Fors, les lignées, l'union avec la Navarre, les guerres de Religion, la Révolution et les grandes transformations qui ont façonné la région.",
   manifest: "/manifest.json",
 
   authors: [{ name: "Mémoire du Béarn" }],
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Mémoire du Béarn – Histoire, Lignées et Vicomtés",
+    title: "Mémoire du Béarn – Histoire et politique du Béarn",
     description:
-      "Plongez au cœur de l’histoire du Béarn, des origines antiques aux rois de Navarre. Un site dédié aux vicomtes, lignées et héritages du Béarn.",
+      "Plongez au cœur de l’histoire du Béarn, des origines antiques à aujourd'hui. Un site dédié aux vicomtes, lignées et héritages du Béarn.",
     url: "https://www.histoirebearn.fr/",
     siteName: "Mémoire du Béarn",
     locale: "fr_FR",
