@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Crimson_Text } from "next/font/google";
 import "./globals.css";
-
+import CookieManager from "@/components/CookieManager";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({
@@ -97,16 +97,7 @@ export default function RootLayout({
       <body className="antialiased bg-background text-foreground font-[var(--font-inter)]">
         {/* JSON-LD Schema.org */}
        
-   <GoogleTagManager gtmId="GTM-MQX52KCG" />
-
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MQX52KCG"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+   <CookieManager />
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
