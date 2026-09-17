@@ -25,27 +25,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
    {
-  url: `${baseUrl}/histoire-condensee/theologie/augustin`,
+  url: `${baseUrl}/theologie/augustin`,
   lastModified: new Date(),
 },
 {
-  url: `${baseUrl}/histoire-condensee/theologie/catherine`,
+  url: `${baseUrl}/theologie/catherine`,
   lastModified: new Date(),
 },
 {
-  url: `${baseUrl}/histoire-condensee/theologie/hildegarde`,
+  url: `${baseUrl}/theologie/hildegarde`,
   lastModified: new Date(),
 },
 {
-  url: `${baseUrl}/histoire-condensee/theologie/mariage`,
+  url: `${baseUrl}/theologie/mariage`,
   lastModified: new Date(),
 },
 {
-  url: `${baseUrl}/histoire-condensee/theologie/therese`,
+  url: `${baseUrl}/theologie/therese`,
   lastModified: new Date(),
 },
 {
-  url: `${baseUrl}/histoire-condensee/theologie/thomasdaquin`,
+  url: `${baseUrl}/theologie/thomasdaquin`,
   lastModified: new Date(),
 },
   ];
