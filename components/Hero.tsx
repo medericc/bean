@@ -13,7 +13,7 @@ export default function Hero() {
           </h1>
 
           <p className="font-corps text-xl md:text-2xl text-brun-terre mb-8 leading-relaxed max-w-3xl mx-auto">
-            Des origines antiques aux rois de Navarre, revivez la mémoire du Béarn.
+            Des origines antiques à aujourd'hui, revivez la mémoire du Béarn.
           </p>
 
           {/* Boutons CTA */}
