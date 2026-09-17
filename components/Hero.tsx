@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="text-center max-w-4xl mx-auto">
 
       <h1 className="font-titre text-4xl md:text-6xl lg:text-7xl text-vert-mousse mb-6 leading-tight">
-            Mémoire du Béarn
+            Histoire du Béarn
           </h1>
 
           <p className="font-corps text-xl md:text-2xl text-brun-terre mb-8 leading-relaxed max-w-3xl mx-auto">

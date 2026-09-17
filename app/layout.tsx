@@ -17,16 +17,16 @@ const crimsonText = Crimson_Text({
 
 export const metadata: Metadata = {
   title: {
-  default: "Mémoire du Béarn – Histoire et politique du Béarn",
-  template: "%s | Mémoire du Béarn",
+  default: "Histoire du Béarn – Histoire et politique du Béarn",
+  template: "%s | Histoire du Béarn",
 },
   description:
     "L'histoire du Béarn à travers Fébus, Jeanne d'Albret et Gaston le Croisé : comprenez le contexte politique actuel. Découvrez la vicomté, les Fors, les lignées, l'union avec la Navarre, les guerres de Religion, la Révolution et les grandes transformations qui ont façonné la région.",
   manifest: "/manifest.json",
 
-  authors: [{ name: "Mémoire du Béarn" }],
-  creator: "Mémoire du Béarn",
-  publisher: "Mémoire du Béarn",
+  authors: [{ name: "Histoire du Béarn" }],
+  creator: "Histoire du Béarn",
+  publisher: "Histoire du Béarn",
 
   icons: {
     icon: [
@@ -39,11 +39,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Mémoire du Béarn – Histoire et politique du Béarn",
+    title: "Histoire du Béarn – Histoire et politique du Béarn",
     description:
       "Plongez au cœur de l’histoire du Béarn, des origines antiques à aujourd'hui. Un site dédié aux vicomtes, lignées et héritages du Béarn.",
     url: "https://www.histoirebearn.fr/",
-    siteName: "Mémoire du Béarn",
+    siteName: "Histoire du Béarn",
     locale: "fr_FR",
     type: "website",
     images: [
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mémoire du Béarn – Histoire et lignées",
+        alt: "Histoire du Béarn – Histoire et lignées",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Mémoire du Béarn",
+    title: "Histoire du Béarn",
     description:
       "Découvrez l’histoire, les lignées et le patrimoine du Béarn à travers les siècles.",
     images: ["/og-image.jpg"],
@@ -80,11 +80,11 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Mémoire du Béarn",
+    "name": "Histoire du Béarn",
     "url": "https://www.histoirebearn.fr/",
     "publisher": {
       "@type": "Organization",
-      "name": "Mémoire du Béarn"
+      "name": "Histoire du Béarn"
     }
   };
 

@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="font-titre text-xl text-vert-mousse mb-4">Mémoire du Béarn</h3>
+            <h3 className="font-titre text-xl text-vert-mousse mb-4">Histoire du Béarn</h3>
             <p className="font-corps text-gray-700 text-sm leading-relaxed">
               Découvrez l&apos;histoire fascinante du Béarn, de ses origines antiques 
               à son rattachement à la France.
@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-or-patine/30 mt-8 pt-6 text-center">
           <p className="font-corps text-gray-600 text-sm">
-            © {new Date().getFullYear()} Mémoire du Béarn - Tous droits réservés
+            © {new Date().getFullYear()} Histoire du Béarn - Tous droits réservés
           </p>
         </div>
       </div>

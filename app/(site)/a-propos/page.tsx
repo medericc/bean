@@ -230,7 +230,7 @@ export default function AProposPage() {
             
             <div className="space-y-6 font-corps text-gray-700 leading-relaxed">
               <p>
-                Ce projet &quot;Mémoire du Béarn&quot; est le fruit d&apos;un travail de recherche approfondi 
+                Ce projet &quot;Histoire du Béarn&quot; est le fruit d&apos;un travail de recherche approfondi 
                 s&apos;appuyant sur des sources historiques rigoureuses et des ouvrages de référence 
                 reconnus par la communauté scientifique.
               </p>

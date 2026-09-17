@@ -20,7 +20,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <a href="/" className="font-titre text-2xl md:text-3xl text-vert-mousse hover:text-brun-terre transition-colors">
-            Mémoire du Béarn
+            Histoire du Béarn
           </a>
           
           {/* Menu desktop */}

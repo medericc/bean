@@ -24,7 +24,7 @@ export default function Header() {
             href="/" 
             className="font-titre text-2xl md:text-3xl text-vert-mousse hover:text-or-patine transition-colors"
           >
-            Mémoire du Béarn
+            Histoire du Béarn
           </a>
           
           {/* Menu desktop */}

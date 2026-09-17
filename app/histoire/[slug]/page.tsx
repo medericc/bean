@@ -14,12 +14,12 @@ export async function generateMetadata(
 
   if (!data) {
     return {
-      title: "Page non trouvée – Mémoire du Béarn",
+      title: "Page non trouvée – Histoire du Béarn",
     };
   }
 
   return {
-    title: `${data.titre} – ${data.periode} | Mémoire du Béarn`,
+    title: `${data.titre} – ${data.periode} | Histoire du Béarn`,
   };
 }
 
