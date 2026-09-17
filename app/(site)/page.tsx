@@ -79,11 +79,14 @@ export default function Home() {
       <section className="py-16 bg-parchemin-fonce">
         <div className="container mx-auto px-4 text-center">
           <blockquote className="font-titre text-2xl md:text-3xl text-brun-terre italic max-w-4xl mx-auto leading-relaxed">
-            "Le Béarn, petite patrie aux grandes histoires, où chaque pierre raconte 
-            l'épopée d'un peuple fier de ses montagnes et de sa liberté."
+            "La hargne de Gaston IV le Croisé, la rigueur morale
+      de Jeanne d&apos;Albret, la foi de Saint Gontran, la
+      défense de Catherine de Béarn, la pragmaticité
+      d&apos;Henri d&apos;Albret, la ténacité de Catherine de
+      Bourbon et, si possible, le génie de Fébus."
           </blockquote>
           <p className="font-corps text-lg text-vert-mousse mt-6">
-            - Mémoire du Béarn
+            - Un vrai Béarnais
           </p>
         </div>
       </section>
