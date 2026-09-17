@@ -13,30 +13,42 @@ export default function Footer() {
             </p>
           </div>
           
-         {/* Navigation rapide */}
+    {/* Navigation rapide */}
 <div>
-  <h4 className="font-titre text-lg text-brun-terre mb-4">Explorer</h4>
-  <nav className="flex flex-col space-y-2">
-    {['Histoire', 'Lignées', 'Vicomtes', 'À propos'].map((item) => {
-      const path = item
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "") // enlève les accents
-        .replace('à ', 'a-'); // gère "À propos" -> "a-propos"
+  <h4 className="font-titre text-lg text-brun-terre mb-4">
+    Explorer
+  </h4>
 
-      return (
-        <a
-          key={item}
-          href={`/${path}`}
-          className="font-corps text-gray-700 hover:text-or-patine transition-colors text-sm"
-        >
-          {item}
-        </a>
-      )
-    })}
+  <nav className="flex flex-col space-y-2">
+    <a
+      href="/mentions-legales"
+      className="font-corps text-gray-700 hover:text-or-patine transition-colors text-sm"
+    >
+      Mentions Légales
+    </a>
+
+    <a
+      href="/cookies"
+      className="font-corps text-gray-700 hover:text-or-patine transition-colors text-sm"
+    >
+      Cookies
+    </a>
+
+    <a
+      href="/politique-confidentialite"
+      className="font-corps text-gray-700 hover:text-or-patine transition-colors text-sm"
+    >
+      Politique de Confidentialité
+    </a>
+
+    <a
+      href="/a-propos"
+      className="font-corps text-gray-700 hover:text-or-patine transition-colors text-sm"
+    >
+      À propos
+    </a>
   </nav>
 </div>
-
           
           {/* Contact */}
           <div>
