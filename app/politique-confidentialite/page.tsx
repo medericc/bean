@@ -22,10 +22,10 @@ export default function PolitiqueConfidentialite() {
                 sur ce site est :
               </p>
               <p className="font-corps text-lg text-brun-terre mt-3">
-                <strong>À REMPLIR</strong>
+                <strong>L'éditeur du site Histoire du Béarn</strong>
               </p>
               <p className="font-corps text-lg text-brun-terre mt-2">
-                Contact : <strong>À REMPLIR</strong>
+                Contact : <strong>tairevate@gmail.com</strong>
               </p>
             </section>
 
@@ -94,7 +94,7 @@ export default function PolitiqueConfidentialite() {
                 Vous pouvez exercer vos droits en contactant :
               </p>
               <p className="font-corps text-lg text-brun-terre mt-3">
-                <strong>À REMPLIR</strong>
+                <strong>tairevate@gmail.com</strong>
               </p>
             </section>
 

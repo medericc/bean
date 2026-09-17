@@ -19,10 +19,9 @@ export default function MentionsLegales() {
                 Éditeur du site
               </h2>
               <div className="font-corps text-lg text-brun-terre leading-relaxed space-y-2">
-                <p><strong>Nom :</strong> À REMPLIR</p>
-                <p><strong>Statut :</strong> À REMPLIR</p>
-                <p><strong>Adresse :</strong> À REMPLIR</p>
-                <p><strong>E-mail :</strong> À REMPLIR</p>
+   <p><strong>Nom :</strong> Histoire du Béarn</p>
+<p><strong>Statut :</strong> Site personnel</p>
+<p><strong>E-mail :</strong> tairevate@gmail.com</p>
               </div>
             </section>
 
@@ -48,7 +47,7 @@ export default function MentionsLegales() {
                 Directeur de la publication
               </h2>
               <p className="font-corps text-lg text-brun-terre leading-relaxed">
-                Le directeur de la publication est : <strong>À REMPLIR</strong>.
+                Le directeur de la publication est : <strong> l'éditeur du site</strong>.
               </p>
             </section>
 
@@ -78,7 +77,7 @@ export default function MentionsLegales() {
                 l&apos;éditeur à l&apos;adresse suivante :
               </p>
               <p className="font-corps text-lg text-brun-terre mt-3">
-                <strong>À REMPLIR</strong>
+                <strong>tairevate@gmail.com</strong>
               </p>
             </section>
           </div>
