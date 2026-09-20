@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   template: "%s | Histoire du Béarn",
 },
   description:
-    "L'histoire du Béarn à travers Fébus, Jeanne d'Albret ou Gaston le Croisé : comprenez le contexte politique actuel. Découvrez les seigneurs, les Fors, l'union avec la Navarre, la Religion, la Révolution et les grandes transformations.",
+    "L'histoire du Béarn à travers Fébus, Jeanne d'Albret ou Gaston le Croisé : comprenez le contexte politique actuel. L'union avec la Navarre, la Religion, la Révolution et les grandes transformations.",
  
  
     manifest: "/manifest.json",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Histoire du Béarn – Culture et politique du Béarn",
+    title: "Histoire du Béarn – Culture et politique béarnaise",
     description:
       "Plongez au cœur de l’histoire du Béarn, des origines antiques à aujourd'hui. Un site dédié aux vicomtes, lignées et héritages du Béarn.",
     url: "https://www.histoirebearn.fr/",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Histoire du Béarn",
     description:
-      "Découvrez l’histoire, les lignées et le patrimoine du Béarn à travers les siècles.",
+      "L'histoire du Béarn à travers Fébus, Jeanne d'Albret ou Gaston le Croisé : comprenez le contexte politique actuel. L'union avec la Navarre, la Religion, la Révolution et les grandes transformations.",
     images: ["/og-image.jpg"],
   },
 
