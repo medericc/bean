@@ -17,12 +17,14 @@ const crimsonText = Crimson_Text({
 
 export const metadata: Metadata = {
   title: {
-  default: "Histoire du Béarn – Histoire et politique du Béarn",
+  default: "Histoire du Béarn – Culture et politique du Béarn",
   template: "%s | Histoire du Béarn",
 },
   description:
-    "L'histoire du Béarn à travers Fébus, Jeanne d'Albret et Gaston le Croisé : comprenez le contexte politique actuel. Découvrez la vicomté, les Fors, les lignées, l'union avec la Navarre, les guerres de Religion, la Révolution et les grandes transformations qui ont façonné la région.",
-  manifest: "/manifest.json",
+    "L'histoire du Béarn à travers Fébus, Jeanne d'Albret ou Gaston le Croisé : comprenez le contexte politique actuel. Découvrez les seigneurs, les Fors, l'union avec la Navarre, la Religion, la Révolution et les grandes transformations.",
+ 
+ 
+    manifest: "/manifest.json",
 
   authors: [{ name: "Histoire du Béarn" }],
   creator: "Histoire du Béarn",
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Histoire du Béarn – Histoire et politique du Béarn",
+    title: "Histoire du Béarn – Culture et politique du Béarn",
     description:
       "Plongez au cœur de l’histoire du Béarn, des origines antiques à aujourd'hui. Un site dédié aux vicomtes, lignées et héritages du Béarn.",
     url: "https://www.histoirebearn.fr/",
