@@ -112,7 +112,7 @@ export default function Home() {
                 </p>
 
                 <p className="font-corps text-lg md:text-xl text-brun-terre leading-relaxed">
-                  Si les méthodes évoluent — actuellement par le sophisme autophage du relativisme —, les mécanismes demeurent, soutenus par des instances s'accordant sur les règles du jeu à la manière d'adversaires sportifs, face à l'ordre naturel et catholique, multipliant les justifications par compléments circonstanciels de but frappées d’inanité.
+                  Si les méthodes évoluent — actuellement par le sophisme autophage du relativisme et la destruction de l’efficacité par des barèmes fétichistes émanant de mouvements sous perfusion financière —, les mécanismes demeurent, soutenus par des instances s'accordant sur les règles du jeu à la manière d'adversaires sportifs, face à l'ordre naturel et catholique, multipliant les justifications par compléments circonstanciels de but frappées d’inanité.
                 </p>
 
                 <p className="font-corps text-lg md:text-xl text-brun-terre leading-relaxed">
@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
 
                 <p className="font-corps text-lg md:text-xl text-brun-terre leading-relaxed">
-                  Il convient de suivre les Pères, les Docteurs et les Saints (éprouvés par les erreurs de leur temps comme un papa éprouve son enfant pour qu’il progresse ; ils n’ont pas cédé comme leurs accointances) de l'Église et de consacrer ses dons à Dieu afin de promouvoir un espace public chaste, conscient que ce qui nous entoure façonne notre âme. Enfin, il importe de ne pas ajouter aux malheurs venus des autres un plus grand malheur (la damnation), en orientant toujours nos décisions selon ce que nous souhaitons présenter à Dieu lors de notre jugement individuel — guidant ainsi autrui vers le bien, car approuver un péché (fût-il cautionné par l'État, il n'a aucune valeur juridique) engage notre propre responsabilité.
+                  Il convient de suivre les Pères, les Docteurs et les Saints (éprouvés par les erreurs de leur temps comme un papa éprouve son enfant pour qu’il progresse ; ils n’ont pas cédé comme leurs accointances et ont choisi la grandeur au confort) de l'Église et de consacrer ses dons à Dieu afin de promouvoir un espace public chaste, conscient que ce qui nous entoure façonne notre âme. Enfin, il importe de ne pas ajouter aux malheurs venus des autres un plus grand malheur (la damnation), en orientant toujours nos décisions selon ce que nous souhaitons présenter à Dieu lors de notre jugement individuel — guidant ainsi autrui vers le bien, car approuver un péché (fût-il cautionné par l'État, il n'a aucune valeur juridique) engage notre propre responsabilité.
                 </p>
 
               </div>
