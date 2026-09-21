@@ -17,7 +17,7 @@ const crimsonText = Crimson_Text({
 
 export const metadata: Metadata = {
   title: {
-  default: "Histoire du Béarn – Culture et politique du Béarn",
+  default: "Histoire du Béarn – Culture et politique béarnaise",
   template: "%s | Histoire du Béarn",
 },
   description:
