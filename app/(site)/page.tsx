@@ -112,7 +112,7 @@ export default function Home() {
                 </p>
 
                 <p className="font-corps text-lg md:text-xl text-brun-terre leading-relaxed">
-                  Si les méthodes évoluent — actuellement par le sophisme autophage du relativisme et la destruction de l’efficacité par des barèmes fétichistes émanant de mouvements sous perfusion financière —, les mécanismes demeurent, soutenus par des instances s'accordant sur les règles du jeu à la manière d'adversaires sportifs, face à l'ordre naturel et catholique, multipliant les justifications par compléments circonstanciels de but frappées d’inanité.
+                  Si les méthodes évoluent — actuellement par le sophisme autophage du relativisme imposé et la destruction de l’efficacité par des barèmes fétichistes émanant de mouvements sous perfusion financière —, les mécanismes demeurent, soutenus par des instances s'accordant sur les règles du jeu à la manière d'adversaires sportifs, face à l'ordre naturel et catholique, multipliant les justifications par compléments circonstanciels de but frappées d’inanité.
                 </p>
 
                 <p className="font-corps text-lg md:text-xl text-brun-terre leading-relaxed">
