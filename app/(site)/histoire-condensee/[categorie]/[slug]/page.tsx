@@ -369,7 +369,7 @@ La guerre civile castillane entre Henri de Trastamare et Pierre le Cruel mobilis
         )
       },
         {
-        titre: "La guerre pour le Comminges",
+        titre: "La Guerre pour le Comminges",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -433,7 +433,7 @@ Après la mort de Charles V en septembre 1380, son fils Charles VI, âgé de dou
 
 
        {
-        titre: "Le massacre des Béarnais à Aljubarrota",
+        titre: "Le Massacre des Béarnais à Aljubarrota",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -444,7 +444,7 @@ Jean Ier de Castille, allié de Fébus, revendique le trône, tandis que les Por
         )
       },
       {
-        titre: "L'ingéniosité Financière de Fébus",
+        titre: "L'Ingéniosité Financière de Fébus",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -559,7 +559,7 @@ En 1486-1487, Ferdinand le catholique organise l’encerclement militaire de la 
       },
 
        {
-        titre: "La guerre pour la Navarre",
+        titre: "La Guerre pour la Navarre",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
@@ -943,7 +943,7 @@ Le curé Capuran, prêtre jureur qui a fourni des vases sacrés à la Républiqu
       },
 
        {
-        titre: "Guider les âmes vers Dieu",
+        titre: "Guider les Âmes vers Dieu",
         contenu: (
           <div className="space-y-4 font-corps text-gray-700 leading-relaxed">
             <p>
