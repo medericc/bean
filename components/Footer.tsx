@@ -9,7 +9,7 @@ export default function Footer() {
             <h3 className="font-titre text-xl text-vert-mousse mb-4">Histoire du Béarn</h3>
             <p className="font-corps text-gray-700 text-sm leading-relaxed">
               Découvrez les mémoires du Béarn, de ses origines antiques 
-              à aujourd'hui en passant par les croisades, les hérésies, Fébus, Orthez, Navarrenx, la conquête politique de la France, la maçonnerie ou encore la République.
+              à aujourd'hui en passant par les croisades, les hérésies, Fébus, Orthez, Navarrenx, la conquête politique de la France par le légitimisme, la maçonnerie ou encore la République.
             </p>
           </div>
           
