@@ -51,24 +51,29 @@ export default function Footer() {
 </div>
           
           {/* Contact */}
-          <div>
-            <h4 className="font-titre text-lg text-brun-terre mb-4">Contact</h4>
-            <p className="font-corps text-gray-700 text-sm mb-2">
-              On est actif sur les réseaux !
-            </p>
-            <a 
-              href="/https://www.instagram.com/toquey_si_gauses/" 
-              className="inline-flex items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
-            >
-              Notre Instagram
-            </a>
-                <a 
-              href="/https://www.jadecelerierbearn.com/" 
-              className="inline-flex items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
-            >
-              Leçons de Béarnais
-            </a>
-          </div>
+     <div>
+  <h4 className="font-titre text-lg text-brun-terre mb-4">Contact</h4>
+
+  <p className="font-corps text-gray-700 text-sm mb-2">
+    On est actif sur les réseaux !
+  </p>
+
+  <div className="flex flex-col gap-2">
+    <a
+      href="https://www.instagram.com/toquey_si_gauses/"
+      className="inline-flex items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
+    >
+      Notre Instagram
+    </a>
+
+    <a
+      href="https://www.jadecelerierbearn.com/"
+      className="inline-flex items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
+    >
+      Leçons de Béarnais
+    </a>
+  </div>
+</div>
         
         </div>
         
