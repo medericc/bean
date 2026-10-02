@@ -9,7 +9,7 @@ export default function Footer() {
             <h3 className="font-titre text-xl text-vert-mousse mb-4">Histoire du Béarn</h3>
             <p className="font-corps text-gray-700 text-sm leading-relaxed">
               Découvrez les mémoires du Béarn, de ses origines antiques 
-              à aujourd'hui en passant par la conquête de la France.
+              à aujourd'hui en passant par les croisades, les hérésies, Fébus, Orthez, Navarrenx, la conquête politique de la France, la maçonnerie ou encore la République.
             </p>
           </div>
           
@@ -62,14 +62,14 @@ export default function Footer() {
             >
               Notre Instagram
             </a>
-             
-          </div>
-           <a 
+                <a 
               href="/https://www.jadecelerierbearn.com/" 
               className="inline-flex items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
             >
               Leçons de Béarnais
             </a>
+          </div>
+        
         </div>
         
         {/* Copyright */}
