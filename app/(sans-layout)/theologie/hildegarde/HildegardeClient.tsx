@@ -16,9 +16,9 @@ export default function HildegardePage() {
       <main className="hildegarde-page">
 
        <header className={styles.hildegardeHeader}>
-    <div className={`${styles.container} ${styles.hildegardeHeaderContent}`}>
+    <div className={`container ${styles.hildegardeHeaderContent}`}>
       <Link
-        href="/histoire-condensee"
+        href="/apprendre/culture"
         className={styles.backLink}
       >
         ← Retour
@@ -102,7 +102,7 @@ alt="Drapeau de la France"
         <section className="hero">
       <div className={styles.hildegardeHeaderContent2}>
       <Link
-        href="/histoire-condensee"
+        href="/apprendre/culture"
         className={styles.backLink2}
       >
         ← Retour
@@ -176,7 +176,7 @@ alt="Drapeau de la France"
     </button>
   </div>
     </div>
-          <div className={styles.container}>
+          <div className="container">
             <div className="hero-card">
               <span className="badge">
                 
@@ -205,7 +205,7 @@ alt="Drapeau de la France"
             </>
   ) : (
     <>
-    Sénte Hildegarde de Bingen countemple la badence de l&lsquo;uma coum ûe obre cosmique : lou cos reçeu chic à chic la soûe forme, puch Diu y bouhe l&lsquo;amne, hoéc biben destinat à counduìse l&lsquo;òmi de cap à la luts, per la prabade dinco l’àdye madu
+    Sénte Hildegarde de Bingen coùntemple la badence de l&lsquo;uma coum ûe obre còsmique : lou cos reçèu chic à chic la soûe fòrme, puch Diu que y soùfle l&lsquo;amne, hoéc biben destinat à counduìse l&lsquo;òmi de cap à la luts, per la prabade dinco l’àdye madu
           
           
           
@@ -218,14 +218,14 @@ alt="Drapeau de la France"
 
         {/* INTRO */}
         <section className="intro-section">
-          <div className={styles.container}>
+          <div className="container">
             <div className="intro-box">
            
            
          {langue === 'fr' ? (
     <>   
            
-              <h3>✨ Le mystère de l’âme et du corps</h3>
+              <h2>✨ Le mystère de l’âme et du corps</h2>
 
               <p>
                 Pour Hildegarde,
@@ -246,14 +246,14 @@ alt="Drapeau de la France"
   ) : (
     <>     
           
-             <h3>✨ Lou misteri de l&lsquo;amne e dou cos</h3>
+             <h2>✨ Lou misteri de l&lsquo;amne e dou cos</h2>
 
               <p>
-              Ta Hildegarde, la councepcioû n’éy pas û sìmple fénomène bioulouyique. Lou cos umâ qu&lsquo;éy fourmat chic à chic déns lou bénte de la may, coum ûe tèrre graniu preparade à recébe û hoéc biénut de Diu. 
+              Ta Hildegarde, la councepcioû n’éy pas û sìmple fénomène bioulouyique. Lou cos uma qu&lsquo;éy fourmat chic à chic déns lou bènte de la may, coum ûe tèrre graniu preparade à recébe û hoéc biénut de Diu. 
               </p>
 
               <p>
-         Quoan lou cos qu'éy près, Diu bouhe l&lsquo;amne : ûe realitat spirituale, lusènte, bibante, coumparàble a ûe sfère de hoéc caminan tout l&lsquo;umâ.
+         Quoan lou cos qu&lsquo;éy prèste, Diu que soùfle l&lsquo;amne : ûe realitat spirituau, lusènte, bibante, coumparàble a ûe sfère de hoéc caminàn tout l&lsquo;uma.
               </p>  
             
             </>
@@ -263,7 +263,7 @@ alt="Drapeau de la France"
           </div>
         </section>
  <section className="content-section alt">
-          <div className={styles.container}>
+          <div className="container">
             <div className="grid">
               <div className="card full dark">
             
@@ -311,13 +311,13 @@ alt="Drapeau de la France"
         </p>
 
         <p>
-  Deya déns lou bènte de la may, l‘àmne coumence à desbelha doussemen lous cinc séns dou maynàdye, coum ûe presénce spirituale qui prepare chic à chic « l‘òmi de dehore » abans la badence.
+   Deya déns lou bènte de la may, l‘àmne coumence à desbelha doussemen lous cinc séns dou maynàdye, coum ûe presénce spirituale qui prepare chic à chic « l‘òmi de dehore » abans la badence.
 
 
         </p>
 
         <p>
- Mé Hildegarde ensiste sustout sus û punt substancious : l’estat de-dehéns dous paréns au moumén de l‘acte enfluence pregoundamen lou maynàdye à biéne. Ûe unioû biscude déns la caritat, l‘amou franc e la pats dou co fabourise segoun ére la badence d’û èste armounious, abisat e bertuous.
+    Mé Hildegarde ensiste sustout sus û punt substancious : l’estat de-dehéns dous paréns au moumén de l‘acte enfluence pregoundamen lou maynàdye à biéne. Ûe unioû biscude déns la caritat, l‘amou franc e la pats dou co fabourise segoun ére la badence d’û èste armounious, abisat e bertuous.
 
         </p>
            
@@ -396,18 +396,15 @@ alt="Drapeau de la France"
            
            
               <p>
-      Au countràri, ûe councepcioû mercade per l’amarè, la malì, lous bìcis ou lou mancat d’amou pot troubla aquére armounie. Lou maynàdye risque alabéts de pourta ûe complexioû méy mauayside : temperamén escu, colere ou coumporteméns de barreyade.
-
-</p>
+ Au countràri, ûe councepcioû mercade per l’amarè, la malì, lous bìcis ou lou mancat d’amou pot troubla aquére armounie. Lou maynàdye risque alabéts de pourta ûe complexioû méy mauayside : temperamén escu, colere ou coumporteméns de barreyade.
+    </p>
         <p>
- Hildegarde descriu tabé certéns desaploums enter lou pay e la may : si l’amou bertadè abite l’û mé noû l’àute, lou maynàdye poudera bàde méy debìle, ménch stàble ou abé dou mau à trouba la gauyou e l’aploum.
-
+Hildegarde descriu tabé certéns desaploums enter lou pay e la may : si l’amou bertadè abite l’û mé noû l’àute, lou maynàdye poudera bàde méy debìle, ménch stàble ou abé dou mau à trouba la gauyou e l’aploum.
     </p>
 
         <p>
-   Que-s yuntat tabé lous periodes de la lûe a las dispausicioûs naturales dou maynàdye : certènes dispausicioûs fabourise l’ourgul ou l’asprou, alabéts qui d’àutes que-n anounceren fidelitat, santat e bounur.
-
-    </p>
+  Que-s yuntat tabé lous periodes de la lûe a las dispausicioûs naturales dou maynàdye : certènes dispausicioûs fabourise l’ourgul ou l’asprou, alabéts qui d’àutes que-n anounceren fidelitat, santat e bounur.
+       </p>
 
         <p>
     Toutû, arré n’éy pas tout à fèyt estancat. Medich quoan ûe badence sémble mercade per dificultats, Hildegarde afirme que Diu pot encoère transfourma aquéste nature. Coum epices adouban ûe mascadure amare, la force spirituale, ûe bite drète e ûe boune maniere de bìbe pòden goari e tourna aplouma l’uma.
@@ -415,7 +412,7 @@ alt="Drapeau de la France"
         </p>
 
         <p>
-Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepcioû, la gràci dibîne demoure toustém capàble d’ayda, de repara e de counduìse l’uma de cap à méy d’armounie.
+   Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepcioû, la gràci dibîne demoure toustém capàble d’ayda, de repara e de counduìse l’uma de cap à méy d’armounie.
 
         </p>
            
@@ -429,7 +426,7 @@ Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepci
         </section>
         {/* SECTION 1 */}
         <section className="content-section">
-          <div className={styles.container}>
+          <div className="container">
             <div className="grid">
               <div className="card large">
              
@@ -470,12 +467,12 @@ Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepci
                 </p>
 
                 <p>
-                Lou cos prén forme chic à chic graci à la calou mayrane, coum la lèyt debienen roumàdye, car puch os.
+                Lou cos prén fòrme chic à chic graci à la calou mayrane, coum la lèyt debienen roumàdye, car puch os.
 
                 </p>
 
                 <p>
-                 Û cop aquéste bastìsse preparade, Diu da l’amne. Qu’éy alabéts qu'ou maynàdye coumence à maneya-s héns lou bènte, semblàble a û frut biban debath l’arrous.
+                 Û cop aquéste bastìsse preparade, Diu da l’amne. Qu’éy alabéts qu&lsquo;ou maynàdye coumence à maneya-s héns lou bènte, semblàble a û frut biban debath l’arrous.
                 </p>
           
           
@@ -560,7 +557,7 @@ Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepci
 
         {/* SECTION 2 */}
            <section className="content-section alt">
-          <div className={styles.container}>
+          <div className="container">
             <div className="card full dark">
        {langue === 'fr' ? (
     <>         <h3>❤️ Le cœur, siège de l’âme</h3>
@@ -614,7 +611,7 @@ Atau, maugrat lous flaquès ou lous barréys preséns au moumén de la councepci
 
         {/* SECTION 3 */}
         <section className="content-section">
-          <div className={styles.container}>
+          <div className="container">
             <div className="grid">
               <div className="card">
             
@@ -720,7 +717,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
 
         {/* SECTION 4 */}
         <section className="content-section alt">
-          <div className={styles.container}>
+          <div className="container">
             <div className="card full dark">
            
             {langue === 'fr' ? (
@@ -756,7 +753,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
   ) : (
     <>     
 
-  <h3>🌑 Lou pecat e l'escurade de l’amne</h3>
+  <h3>🌑 Lou pecat e l&lsquo;escurade de l’amne</h3>
 
               <p>
         Las obres umanes dèchen ûe beritable mèrque sus l’amne.
@@ -772,7 +769,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
             </p>
 
               <blockquote>
-            La luts ou l'escurade de l’amne demoustre toute la bertat de l’existénce umane.
+            La luts ou l&lsquo;escurade de l’amne demoustre toute la bertat de l’existénce umane.
 
               </blockquote>
 
@@ -788,7 +785,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
 
         {/* FINAL */}
         <section className="final-section">
-          <div className={styles.container}>
+          <div className="container">
             <div className="final-box">
          
            {langue === 'fr' ? (
@@ -832,7 +829,7 @@ Déns lou maynadè, que sémble a û bouroû debile. Déns la yoenésse, que flo
               </p>
 
               <p>
-             Toute la bite spirituale counsiste alabéts à decha aquéste luts de-dehéns illumina de nabèth l’amne entière.
+             Toute la bite spirituau counsìste alabéts à decha aquéste luts de-dehéns illumina de nabèth l’amne entière.
               </p>       </>
   )} 
             </div>

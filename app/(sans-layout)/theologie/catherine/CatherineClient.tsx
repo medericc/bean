@@ -42,16 +42,16 @@ const teachingsB = [
   `Lous pecadous en tentan lous òmis debiénen lous utìs qui hìquen à l'espròbe e qu'agalharden la bertut dous serbitous de Diu. La bertut déns lou mauaysit qu'a méy de balou qui déns la gauyou, coum û yardinè qui pèr lou soû casau e countinue de tribalha la tèrre. Û laïque qui aubedi dap û gran amou qu'a méy de merite qu'û reliyious qu’aubedi per abitude.`,
 
 
-  `Ne-s pot pas segui lou Crist dap la noùste coumbenénce, que cau segui lou soû camì d'umilitat. Lous pecadous soufèren coum lous séns mé la loue soufrénce n'éy pas utìle. Û petit àcte hèyt dap caritat qu'a méy de pés qui doulous subi chéns amou. Ne soufrim pas ta nous-medich, mé per amou ta Diu e per la doulou de béde lous àutes pèrde-s.`,
+  `Ne-s pot pas segui lou Crist dap la noùste coumbenénce, que cau segui lou soû camì d'umilitat. Lous pecadous que soufèren coum lous séns mé la loue soufrénce n'éy pas utìle. Û petit àcte hèyt dap caritat qu'a méy de pés qui doulous subi chéns amou. Ne soufrim pas ta nous-medich, mé per amou ta Diu e per la doulou de béde lous àutes pèrde-s.`,
 
 
  
-  `Ne pas jaméy yudya la boulentat dous àutes e ne-s senti aufensat soùnque p'ou qu’aufénse Diu. Si Diu que-t hè senti la doulou d'aquére amne, qu'éy ta qui-t l'àydis. Medich ûe pensade ourgulhouse hè dou mau au prouchén, qu'ou pribes d'ûe pregàri. Que cau boulé lou salut de las amnes e ha la boulentat de Diu, noû pas la soûe.`,
+  `Ne pas yaméy yudya la boulentat dous àutes e ne-s senti aufensat soùnque p'ou qu’aufénse Diu. Si Diu que-t hè senti la doulou d'aquére amne, qu'éy ta qui-t l'àydis. Medich ûe pensade ourgulhouse hè dou mau au prouchén, qu'ou pribes d'ûe pregàri. Que cau boulé lou salut de las amnes e ha la boulentat de Diu, noû pas la soûe.`,
 
 
 
 
-  `Diu bòu qu’ou rìche àyi besougn dou pràube e qu'ou sabén àyi besougn de l'ignouren. Ta-ns hourça à la caritat. Si abès touts lous talénts, ne-t caleré pas lou moùnde e que caderés déns l'ourgul. Diu que-ns emplegue coum las soûes mâs ta desparti lous soûs dats. Si qu'as quàuqu'arré, qu'éy ta-u da au qui n'a pas.`,
+  `Diu bòu qu’ou rìche ayi besougn dou pràube e qu'ou sabén ayi besougn de l'ignouren. Ta-ns hourça à la caritat. Si qu'abès touts lous talénts, ne-t caleré pas lou moùnde e que caderés déns l'ourgul. Diu que-ns emplegue coum las soûes mâs ta desparti lous soûs dats. Si qu'as quàuqu'arré, qu'éy ta-u da au qui n'a pas.`,
 
 
   `Si ne-t sèrbes pas de la toûe resoû ta cerca la Bertat, que marches à l'abùgle e que bas ayma lou mau en credén qu'éy û bê. Si tournes sourti lou bachèth de la houn ta da à bébe aus àutes, que-s boéyte bìste. Si qu'ès trìste permou qui ne-t rendém pas lou toû amou, qu'éy qu’ou toû amou n'éy pas encoère perfèyt e qu'éy embarra sus tu.`,
@@ -60,10 +60,10 @@ const teachingsB = [
   `Déns la bite spirituau, lou qui n'abance pas recule. Que cau passa de la pòu dou castic à l'amou de la bertut. Arré ne pot sourti de la mâ de Diu. Que demouren aciu per la soûe misericorde ou debath la soûe yustìci. Si la tentacioû ne-t plats pas, qu'éy la probe de que Diu qu'éy déns tu.`,
 
 
-  `Diu retìre lou sentimén de la soûe presénce ta-ns empecha de debiéne "maynats gastats" qui ne cèrcan soùnque lous doussous spirituales ta qui coumprenìm qu’ou pecat qu'éy boéyt e que-ns ne toùrnim à lou. Coum ûe may qu'arreste d'apoupa lou soû maynat ta qui couménce à minya mascadure. Ne pas s'ayma nous-medich à trubès Diu.`,
+  `Diu que retire lou sentimén de la soûe presénce ta-ns empecha de debiéne "maynats gastats" qui ne cèrcan soùnque lous doussous spirituales ta qui coumprenìm qu’ou pecat qu'éy boéyt e que-ns ne toùrnim à lou. Coum ûe may qu'arreste d'apoupa lou soû maynat ta qui couménce à minya mascadure. Ne pas s'ayma nous-medich à trubès Diu.`,
 
 
-  `Û crestia qui pechque qu'éy méy coupàble qu'û pagâ permou que méy que recebèm, méy que debem rénde. Lou demoun que-ns pot ha càde soùnque si dam lou noùste counsentimen. Diu permet la tentacioû ta que-n proùbim lou noùste amou e grandìm en counechénce de nousàutes. Que cau tira lous soûs ligames dou moùnde ta que Diu entre.`,
+  `Û crestia qui pechque qu'éy méy coupàble qu'û pagâ permou que méy que recebem, méy que debem rénde. Lou demoun que-ns pot ha càde soùnque si dam lou noùste counsentimen. Diu que permet la tentacioû ta que-n proubim lou noùste amou e que grandim en counechénce de nousàutes. Que cau tira lous soûs ligames dou moùnde ta qui Diu qu'entre.`,
 
 
   `Taus qui ne pòden pas ploura (Diu qu'at hè ta-t empecha de debiéne orgulhous ou de-t acountenta de la toûe emoucioû), qu'éy lou desi ardent dou co qui coùmpte autâ que l'aygue dous oélhs (l'oélh translate ço qu’ou co sén, û co plé d'amou-pròpi da larmes ourgulhouse). La perfeccioû qu'éy de ploura sus lous pecats dou moùnde e la pèrte de las amnes.`,
@@ -72,7 +72,7 @@ const teachingsB = [
   `Lous qu’ataquen la Glèyse ne pòden pas touca Diu, mé que perden la gràci, ço qu'ous mie à la pèrte si ne-s repénten pas. Touca a û prèste (ou per despudi), qu'éy aufensat Diu directamén. Lou prèste qu'éy û tresor héns û bachèth de tèrre. Tout lou bê e lou mau que-s hèn per lou prouchén.`,
 
 
-  `Diu da à chacû lous secours doun qu’a besougn, qu'éy lou boû e beritàble medecî. Si permé ûe espròbe qu'éy ta la toûe santificacioû. La hàmi, la sét, la pèrte de mounéde, las enhountes ou lou rét que permeten û but precis : lou salut. La sodomie ou la masturbacioû que soun hàstis, medich lous demouns (per noublesse de nature anyoulique) que-n soun espaurits.`
+  `Diu que da à chacû lous secours doun qu’a besougn, qu'éy lou boû e beritàble medecî. Si permé ûe espròbe qu'éy ta la toûe santificacioû. La hàmi, la sét, la pèrte de mounéde, las enhountes ou lou rét que permeten û but precis : lou salut. La sodomi ou la masturbacioû que soun hàstis, medich lous demouns (per noublesse de nature anyoulique) que-n soun espaurits.`
 
 
 ]
@@ -89,9 +89,9 @@ const teachings =
   <main className={styles.catherinePage}>
   {/* HEADER */}
   <header className={styles.catherineHeader}>
-    <div className={`${styles.container} ${styles.catherineHeaderContent}`}>
+    <div className={`container ${styles.catherineHeaderContent}`}>
       <Link
-        href="/histoire-condensee"
+        href="/apprendre/culture"
         className={styles.backLink}
       >
         ← Retour
@@ -177,7 +177,7 @@ alt="Drapeau du Béarn"
   
    <div className={styles.catherineHeaderContent2}>
       <Link
-        href="/histoire-condensee"
+        href="/apprendre/culture"
         className={styles.backLink2}
       >
         ← Retour
@@ -255,7 +255,7 @@ alt="Drapeau du Béarn"
   
   
   
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.heroContent}>
         <h2> {langue === 'fr' ? (
     <>Une femme simple
@@ -265,7 +265,7 @@ alt="Drapeau du Béarn"
  <>
  Ûe hémble sìmple
           <br />
-          qui parlè aus pouchans 
+          qui parla aus pouchans 
 
 </>
             )}
@@ -273,7 +273,7 @@ alt="Drapeau du Béarn"
 
         <p>  {langue === 'fr'  ?
           'Sainte Catherine de Sienne, simple religieuse laïque dominicaine du XIVe siècle, fut le personnage politique majeur qui fit revenir le pape à Rome.' : 
-          'Sénte Catherine de Sienne, sìmple reliyiouse laïque dominicane dou sècle quatoùrzau, qu\'estou lou persounàdyẹ poulitique màyẹ qui hesou tourna biénẹ lou pape ta Roume.'}
+          'Sénte Catherine de Sienne, sìmple reliyiouse laïque dominicane dou XIVau sècle, qu\'estou lou persounàdye poulitique màye qui hesou tourna biéna lou pape à Roume.'}
         </p>
       </div>
     </div>
@@ -281,7 +281,7 @@ alt="Drapeau du Béarn"
 
   {/* QUOTE */}
   <section className={styles.quoteSection}>
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.quoteCard}>
         <div className={styles.quoteEmoji}>
           ✉️
@@ -292,7 +292,7 @@ alt="Drapeau du Béarn"
 
             {langue === 'fr'  ?
           '« Vous n’avez pas été bien ferme. Je prie pour que vous agissiez en homme viril. Ayez faim du salut de vos brebis. »' :
-           '« Ne p\'èt pas estats proû rèdẹs. Que prègui ta qui pouchquiats ha coum û Òmi. Ayìt hami dou salut de las bòstẹs aulhes. »'}
+           '« Ne p\'èt pas estats proû resoulut. Que prègui ta qui pouchquiats ha coum û Òmi. Ayit hami dou salut de las bòstes aulhes. »'}
         </p>
 
         <span className={styles.quoteAuthor}>
@@ -305,7 +305,7 @@ alt="Drapeau du Béarn"
 
   {/* DOCTOR */}
   <section className={styles.doctorSection}>
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.doctorCard}>
         <h3> {langue === 'fr'  ?
           'Docteur de l’Église' : 'Douctur de la Glèyse' }
@@ -323,13 +323,13 @@ alt="Drapeau du Béarn"
           une sagesse inspirée
           par l’Esprit Saint. </>   ) : (  
  <>  
-    Ûe hémble chéns enstruccioû unibersitàri, chéns n’abé pas jaméy estudiat héns ûe escole de theoulouyìe ni oubèrt de manuau de drét canoun, qu’estou toutû recounéchude coum tout à fèyt counfourme à l’ourtoudoussìe après l’enspeccioû dous soûs escriuts.
+    Ûe hémble chéns enstruccioû unibersitàri, chéns n’abé pas yaméy estudiat héns ûe escole de teoulouyìe ni oubèrt de manuau de drét canoun, qu’estou toutû recounéchude coum tout à fèyt counfourme à l’ourtoudoussìe après l’enspeccioû dous soûs escriuts.
           <br />
           <br />
 
-    La Glèyse que la prouclamade
+    La Glèyse la prouclamade
           Douctur de la Glèyse,
-          recounéchén héns las soûes paraules
+          recounéchén déns las soûes paraules
           ûe sayesse enspirade
           per l’Esprit Sén.   </>  )}
         </p>
@@ -339,7 +339,7 @@ alt="Drapeau du Béarn"
 
   {/* LEARNING */}
   <section className={styles.learningSection}>
-    <div className={styles.container}>
+    <div className="container">
       <h2 className={styles.sectionTitle}> {langue === 'fr'  ?
         'Enseignements spirituels' :   'Ensegnaméns spirituèls' }
       </h2>
@@ -369,7 +369,7 @@ alt="Drapeau du Béarn"
 
   {/* FINAL */}
   <section className={styles.finalSection}>
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.quoteCard}>
         <div className={styles.quoteEmoji}>
           🔥
@@ -380,7 +380,7 @@ alt="Drapeau du Béarn"
          
       {langue === 'fr'  ?    
          
-          '« La Vierge Marie à Sainte Bernadette (souvent malade) : Je ne vous promets pas de vous rendre heureuse dans ce monde, mais dans l’autre. »' : '« La Bièrye Marie à Sénte Bernadette (soubén malaude) : Ne-p prouméti pas de-p réndẹ urouse héns aquéstẹ moùndẹ, mé héns l\'àutẹ. »'
+          '« La Vierge Marie à Sainte Bernadette (souvent malade) : Je ne vous promets pas de vous rendre heureuse dans ce monde, mais dans l’autre. »' : '« La Bièrye Marie à Sénte Bernadette (soubén malaude) : Ne-p prouméti pas de-p rénde urouse déns aquéste moùnde, mé déns l\'àute. »'
   }  </p>
       </div>
     </div>

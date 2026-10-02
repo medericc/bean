@@ -49,7 +49,7 @@ const intro3 = {
   be: {
     title: 'Tresau demoure',
     subtitle: 'Bertut stàble mé encoère emperfèyte',
-    content: "L’amne pot manca d’umilitat, que crét merita méy per las soûes obres mé que-s cau béde coum gouyes chic utìles. L’amne ùmble trobe méy de pats déns la soumìssiou e la sequère qui d’àutes déns las sabous spirituales. Diu tire cops las soûes gràcies ta qui l’amne sént la soûe pròpi misèri e qui sapi couneche-s. Aquére esprabe qu’éy ûe misericorde permou qui amie l’umilitat. Per exémple, ûe persoune rìche qui pér û tros dou soû bé (en en goardan toutû proû) e qui-s-n enquiete, que proube qui n’éy pas prèste à tout quita tau Segnou. Boulé aumenta la soûe fourtune, medich dap bounes entencioûs, qu'empache d'atégne las demoures méy pròchẹs dou gran Réy (ayda lous pràubes). Si ûe leuyère aufénse a l'aunou produisech ûe enquietè qui ne poudem pas amatiga, qu'éy lou sìnne qui n'èm pas encoère tout à fèyt mèste de las soûes passioûs. Qu’abancem per aquéth camì per ûe pregounde umilitat. ",
+    content: "L’amne pot manca d’umilitat, que crét merita méy per las soûes obres mé que-s cau béde coum gouyes chic utìles. L’amne ùmble troube méy de pats déns la soumìssiou e la sequère qui d’àutes déns las sabous spirituales. Diu tire cops las soûes gràcies ta qui l’amne sént la soûe pròpi misèri e qui sapi couneche-s. Aquére esprabe qu’éy ûe misericorde permou qui amie l’umilitat. Per exémple, ûe persoune rìche qui pér û tros dou soû bé (en en goardan toutû proû) e qui-s-n enquiete, que proube qui n’éy pas prèste à tout quita tau Segnou. Boulé aumenta la soûe fourtune, medich dap bounes entencioûs, qu'empache d'atégne las demoures méy pròchẹs dou gran Réy (ayda lous pràubes). Si ûe leuyère aufénse a l'aunou produisech ûe enquietè qui ne poudem pas amatiga, qu'éy lou sìnne qui n'èm pas encoère tout à fèyt mèste de las soûes passioûs. Qu’abancem per aquéth camì per ûe pregounde umilitat. ",
 
 
   },
@@ -84,7 +84,7 @@ const intro5 = {
   be: {
     title: 'Cincau demoure',
     subtitle: 'Unioû de-dehéns e amou dou prouchén',
-    content: "Que cau trouba lou tresor escounut qui-s trobe de-dehéns de nous-medichs. Tout ço qui bedè sus tèrre qu’ou desgrat d'are-enlà. La pats pregounde qui l’amne y trobe bién yùstamén de la boulentat de pourta la soûe crouts. L’amne soufre hòrtamén de béde Diu aufensat e de béde amnes pèrde-s. Sénte Thérèse coumpare la doulou de l’amne à la de Yésu beden lous pecats hèyts coùntre lou soû Pay. Maugrat la bioulénce d'aquéts turméns, l’amne sént û gran plasé à soufri ta ha la boulentat de Diu. Que counsidere lous soûs pròpis maus coum arré en coumparacioû dou soû desi de sauba amnes (l’amou méy hort qui la mort). L’amne ne déu pas demoura enanibe ; que déu tribalha chéns estanca à la counechénce de se-mediche e à l’espiade dous preceptes de Diu. Pùchque ne poudém pas mesura dap securitat lou noùste amou ta Diu, la noùste combersacioû de cap au prouchén sér de miralh ! Ûe persoune qui-s crét sénte déns la pregari mé qui ne pot pas supourta la méndre petite umiliacioû ou critique amuche qui la soûe boulentat n'éy pas determinade, mé soulamén mia per l'imayinacioû. Qu’éy lou desbroumbe de se-medich, ha la boulentat dous autes meylèu que la soûe, medich au prèts dous soûs pròpis dréts ou au prèts de la fatigue. L’amne ne troube pas nade repaus ni déns lous plasés dou moùnde, ni médich déns las doussous spirituales sìmples ; lou soû bol qu'éy méy haut. Que cèrque toustém à ha lou bê aus àutes e à se-mediche. Diu pot permete esprabes ta testa l'amne. Ne pas jaméy hica la soûe ahide en se-medich, que seré ûe houlie. Que cau demanda chéns estanca à Diu de-ns tiéne per la mâ. Berifia si abancem ou si hèm pè-arrè, especiaumén déns l'amou dous ûs ta lous àutes. Ûe amne qu’a recebut aquères gràcies ne pot pas demoura chéns arré ha, feniante ou adroumide ; que déu ha nabèths efòrs ta abança. ",
+    content: "Que cau trouba lou tresor escounut qui-s troube de-dehéns de nous-medichs. Tout ço qui bedè sus tèrre qu’ou desgrat d'are-enlà. La pats pregounde qui l’amne y troube bién yùstamén de la boulentat de pourta la soûe crouts. L’amne soufre hòrtamén de béde Diu aufensat e de béde amnes pèrde-s. Sénte Thérèse coumpare la doulou de l’amne à la de Yésu beden lous pecats hèyts coùntre lou soû Pay. Maugrat la bioulénce d'aquéts turméns, l’amne sént û gran plasé à soufri ta ha la boulentat de Diu. Que counsidere lous soûs pròpis maus coum arré en coumparacioû dou soû desi de sauba amnes (l’amou méy hort qui la mort). L’amne ne déu pas demoura enanibe ; que déu tribalha chéns estanca à la counechénce de se-mediche e à l’espiade dous preceptes de Diu. Pùchque ne poudém pas mesura dap securitat lou noùste amou ta Diu, la noùste combersacioû de cap au prouchén sér de miralh ! Ûe persoune qui-s crét sénte déns la pregari mé qui ne pot pas supourta la méndre petite umiliacioû ou critique amuche qui la soûe boulentat n'éy pas determinade, mé soulamén mia per l'imayinacioû. Qu’éy lou desbroumbe de se-medich, ha la boulentat dous autes meylèu que la soûe, medich au prèts dous soûs pròpis dréts ou au prèts de la fatigue. L’amne ne troube pas nade repaus ni déns lous plasés dou moùnde, ni médich déns las doussous spirituales sìmples ; lou soû bol qu'éy méy haut. Que cèrque toustém à ha lou bê aus àutes e à se-mediche. Diu pot permete esprabes ta testa l'amne. Ne pas jaméy hica la soûe ahide en se-medich, que seré ûe houlie. Que cau demanda chéns estanca à Diu de-ns tiéne per la mâ. Berifia si abancem ou si hèm pè-arrè, especiaumén déns l'amou dous ûs ta lous àutes. Ûe amne qu’a recebut aquères gràcies ne pot pas demoura chéns arré ha, feniante ou adroumide ; que déu ha nabèths efòrs ta abança. ",
 
 
   },
@@ -197,7 +197,7 @@ export default function SevenMansionsPage() {
   <div className="mx-auto flex max-w-6xl items-center justify-between">
 
     <Link
-      href="/histoire-condensee"
+      href="/apprendre/culture"
       className="group inline-flex items-center gap-2 rounded-full border border-[#c6a972]/25 bg-white/[0.03] px-5 py-3 text-sm font-medium text-[#f5efe0] transition-all hover:border-[#c6a972]/50 hover:bg-white/[0.06]"
     >
       <span className="transition-transform group-hover:-translate-x-1">
@@ -464,11 +464,11 @@ alt="Drapeau de la France"
             ) : (  
  <>       
             <p>
-      Thérèse que coumpare l’amne en estat de pecat mortèu a ûe presoû escure, abùgle e mude. Û pecadou qu'éy coum ligat a û pau, en mourin de hàmi au ras de la maschacûre qui ne pot pas touca.
+      Thérèse que coumpare l’amne en estat de pecat mortèu a ûe presoû escure, abùgle e mude. Û pecadou qu&lsquo;éy coum ligat a û pau, en mourin de hàmi au ras de la maschacûre qui ne pot pas touca.
            </p>
 
             <p>
-       Que dit dounc de prega ta aquéres amnes. Ta ûe amne en estat de pecat mortèu, Diu qu'éy toustém au miéy de l’amne, mé lou pecat qu’ayi coum û boèle négre, la luts ne-s pot pas méy béde ni esta recebude.
+       Que dit dounc de prega ta aquéres amnes. Ta ûe amne en estat de pecat mortèu, Diu qu&lsquo;éy toustém au miéy de l’amne, mé lou pecat qu’ayi coum û boèle négre, la luts ne-s pot pas méy béde ni esta recebude.
            </p>
 
             <p>
