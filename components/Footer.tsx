@@ -70,7 +70,7 @@ export default function Footer() {
     href="https://www.jadecelerierbearn.com/"
     className="inline-flex self-start items-center bg-vert-mousse text-white px-4 py-2 rounded hover:bg-or-patine transition-colors text-sm font-corps"
   >
-    Leçons de Béarnais
+    Béarnais Leçons 
   </a>
 </div>
 </div>
