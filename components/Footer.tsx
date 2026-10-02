@@ -52,7 +52,7 @@ export default function Footer() {
           
           {/* Contact */}
      <div>
-  <h4 className="font-titre text-lg text-brun-terre mb-3">Contact</h4>
+  <h4 className="font-titre text-lg text-brun-terre mb-2">Contact</h4>
 
   <p className="font-corps text-gray-700 text-sm mb-2">
     On est actif sur les réseaux !
