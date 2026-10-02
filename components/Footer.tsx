@@ -8,8 +8,8 @@ export default function Footer() {
           <div>
             <h3 className="font-titre text-xl text-vert-mousse mb-4">Histoire du Béarn</h3>
             <p className="font-corps text-gray-700 text-sm leading-relaxed">
-              Découvrez l&apos;histoire fascinante du Béarn, de ses origines antiques 
-              à son rattachement à la France.
+              Découvrez les mémoires du Béarn, de ses origines antiques 
+              à aujourd'hui en passant par la conquête de la France.
             </p>
           </div>
           
