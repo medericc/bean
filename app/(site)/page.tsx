@@ -145,7 +145,7 @@ export default function Home() {
       de Jeanne d&apos;Albret, la foi de Saint Gontran, la
       défense de Catherine de Béarn, la pragmaticité
       d&apos;Henri d&apos;Albret, la ténacité de Catherine de
-      Bourbon et, si possible, le génie de Fébus."
+      Bourbon et, si possible, le génie de Gaston Fébus."
           </blockquote>
           <p className="font-corps text-lg text-vert-mousse mt-6">
             - Un vrai Béarnais
